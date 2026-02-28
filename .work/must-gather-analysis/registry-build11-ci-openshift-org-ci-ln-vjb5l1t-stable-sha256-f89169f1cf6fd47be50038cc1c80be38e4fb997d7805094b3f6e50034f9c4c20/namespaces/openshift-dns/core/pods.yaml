@@ -1,0 +1,5471 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      cluster-autoscaler.kubernetes.io/enable-ds-eviction: "true"
+      k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.19/23"],"mac_address":"0a:58:0a:80:00:13","gateway_ips":["10.128.0.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.128.0.1"},{"dest":"172.30.0.0/16","nextHop":"10.128.0.1"},{"dest":"169.254.0.5/32","nextHop":"10.128.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.0.1"}],"ip_address":"10.128.0.19/23","gateway_ip":"10.128.0.1","role":"primary"}}'
+      k8s.v1.cni.cncf.io/network-status: |-
+        [{
+            "name": "ovn-kubernetes",
+            "interface": "eth0",
+            "ips": [
+                "10.128.0.19"
+            ],
+            "mac": "0a:58:0a:80:00:13",
+            "default": true,
+            "dns": {}
+        }]
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    generateName: dns-default-
+    generation: 1
+    labels:
+      controller-revision-hash: 85f97d6b49
+      dns.operator.openshift.io/daemonset-dns: default
+      pod-template-generation: "1"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.ovn.org/pod-networks: {}
+      manager: ip-10-0-3-203
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:31:59Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:cluster-autoscaler.kubernetes.io/enable-ds-eviction: {}
+            f:target.workload.openshift.io/management: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:controller-revision-hash: {}
+            f:dns.operator.openshift.io/daemonset-dns: {}
+            f:pod-template-generation: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"fcd269f8-e41e-4315-9f20-8de6753b39e9"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:nodeAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"dns"}:
+              .: {}
+              f:args: {}
+              f:command: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:livenessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:initialDelaySeconds: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":5353,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+                k:{"containerPort":5353,"protocol":"UDP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:readinessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:initialDelaySeconds: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:readOnlyRootFilesystem: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/coredns"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/tmp"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+            k:{"name":"kube-rbac-proxy"}:
+              .: {}
+              f:args: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":9154,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:readOnlyRootFilesystem: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/tls/private"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/tmp"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"config-volume"}:
+              .: {}
+              f:configMap:
+                .: {}
+                f:defaultMode: {}
+                f:items: {}
+                f:name: {}
+              f:name: {}
+            k:{"name":"metrics-tls"}:
+              .: {}
+              f:name: {}
+              f:secret:
+                .: {}
+                f:defaultMode: {}
+                f:secretName: {}
+            k:{"name":"tmp-dir"}:
+              .: {}
+              f:emptyDir: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.v1.cni.cncf.io/network-status: {}
+      manager: multus-daemon
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:31:59Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"PodReadyToStartContainers"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:hostIPs: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.128.0.19"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:32:34Z"
+    name: dns-default-4bqn5
+    namespace: openshift-dns
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: dns-default
+      uid: fcd269f8-e41e-4315-9f20-8de6753b39e9
+    resourceVersion: "11966"
+    uid: 56b41c9d-b8bd-47f4-be8e-24a46021d678
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - ip-10-0-3-203.us-west-1.compute.internal
+    containers:
+    - args:
+      - -conf
+      - /etc/coredns/Corefile
+      command:
+      - coredns
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 5
+        httpGet:
+          path: /health
+          port: 8080
+          scheme: HTTP
+        initialDelaySeconds: 60
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
+      name: dns
+      ports:
+      - containerPort: 5353
+        name: dns
+        protocol: UDP
+      - containerPort: 5353
+        name: dns-tcp
+        protocol: TCP
+      readinessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /ready
+          port: 8181
+          scheme: HTTP
+        initialDelaySeconds: 10
+        periodSeconds: 3
+        successThreshold: 1
+        timeoutSeconds: 3
+      resources:
+        requests:
+          cpu: 50m
+          memory: 70Mi
+      securityContext:
+        readOnlyRootFilesystem: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/coredns
+        name: config-volume
+        readOnly: true
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-4tpkx
+        readOnly: true
+    - args:
+      - --logtostderr
+      - --secure-listen-address=:9154
+      - --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+      - --upstream=http://127.0.0.1:9153/
+      - --tls-cert-file=/etc/tls/private/tls.crt
+      - --tls-private-key-file=/etc/tls/private/tls.key
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+      imagePullPolicy: IfNotPresent
+      name: kube-rbac-proxy
+      ports:
+      - containerPort: 9154
+        name: metrics
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 10m
+          memory: 40Mi
+      securityContext:
+        readOnlyRootFilesystem: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/tls/private
+        name: metrics-tls
+        readOnly: true
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-4tpkx
+        readOnly: true
+    dnsPolicy: Default
+    enableServiceLinks: true
+    nodeName: ip-10-0-3-203.us-west-1.compute.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000001000
+    priorityClassName: system-node-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: dns
+    serviceAccountName: dns
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - key: node-role.kubernetes.io/master
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/disk-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/pid-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/unschedulable
+      operator: Exists
+    volumes:
+    - configMap:
+        defaultMode: 420
+        items:
+        - key: Corefile
+          path: Corefile
+        name: dns-default
+      name: config-volume
+    - name: metrics-tls
+      secret:
+        defaultMode: 420
+        secretName: dns-default-metrics-tls
+    - emptyDir: {}
+      name: tmp-dir
+    - name: kube-api-access-4tpkx
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:32:23Z"
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:31:59Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:32:34Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:32:34Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:31:59Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - allocatedResources:
+        cpu: 50m
+        memory: 70Mi
+      containerID: cri-o://0ca9cb7638df10396d78baad9c65a42d59e48d5cdfc04b87a6ddc186e2d1b7a2
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb
+      lastState: {}
+      name: dns
+      ready: true
+      resources:
+        requests:
+          cpu: 50m
+          memory: 70Mi
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:32:23Z"
+      user:
+        linux:
+          gid: 0
+          supplementalGroups:
+          - 0
+          uid: 0
+      volumeMounts:
+      - mountPath: /etc/coredns
+        name: config-volume
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-4tpkx
+        readOnly: true
+        recursiveReadOnly: Disabled
+    - allocatedResources:
+        cpu: 10m
+        memory: 40Mi
+      containerID: cri-o://37bba17621f3868ccea647f44faea30caed639242f76e953cd2b9c4dab125fbd
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+      lastState: {}
+      name: kube-rbac-proxy
+      ready: true
+      resources:
+        requests:
+          cpu: 10m
+          memory: 40Mi
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:32:23Z"
+      user:
+        linux:
+          gid: 65534
+          supplementalGroups:
+          - 65534
+          uid: 65534
+      volumeMounts:
+      - mountPath: /etc/tls/private
+        name: metrics-tls
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-4tpkx
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 10.0.3.203
+    hostIPs:
+    - ip: 10.0.3.203
+    phase: Running
+    podIP: 10.128.0.19
+    podIPs:
+    - ip: 10.128.0.19
+    qosClass: Burstable
+    startTime: "2026-01-28T09:31:59Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      cluster-autoscaler.kubernetes.io/enable-ds-eviction: "true"
+      k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.131.0.9/23"],"mac_address":"0a:58:0a:83:00:09","gateway_ips":["10.131.0.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.131.0.1"},{"dest":"172.30.0.0/16","nextHop":"10.131.0.1"},{"dest":"169.254.0.5/32","nextHop":"10.131.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.131.0.1"}],"ip_address":"10.131.0.9/23","gateway_ip":"10.131.0.1","role":"primary"}}'
+      k8s.v1.cni.cncf.io/network-status: |-
+        [{
+            "name": "ovn-kubernetes",
+            "interface": "eth0",
+            "ips": [
+                "10.131.0.9"
+            ],
+            "mac": "0a:58:0a:83:00:09",
+            "default": true,
+            "dns": {}
+        }]
+    creationTimestamp: "2026-01-28T09:36:47Z"
+    generateName: dns-default-
+    generation: 1
+    labels:
+      controller-revision-hash: 85f97d6b49
+      dns.operator.openshift.io/daemonset-dns: default
+      pod-template-generation: "1"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.ovn.org/pod-networks: {}
+      manager: ip-10-0-78-215
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:36:47Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:cluster-autoscaler.kubernetes.io/enable-ds-eviction: {}
+            f:target.workload.openshift.io/management: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:controller-revision-hash: {}
+            f:dns.operator.openshift.io/daemonset-dns: {}
+            f:pod-template-generation: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"fcd269f8-e41e-4315-9f20-8de6753b39e9"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:nodeAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"dns"}:
+              .: {}
+              f:args: {}
+              f:command: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:livenessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:initialDelaySeconds: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":5353,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+                k:{"containerPort":5353,"protocol":"UDP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:readinessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:initialDelaySeconds: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:readOnlyRootFilesystem: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/coredns"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/tmp"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+            k:{"name":"kube-rbac-proxy"}:
+              .: {}
+              f:args: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":9154,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:readOnlyRootFilesystem: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/tls/private"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/tmp"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"config-volume"}:
+              .: {}
+              f:configMap:
+                .: {}
+                f:defaultMode: {}
+                f:items: {}
+                f:name: {}
+              f:name: {}
+            k:{"name":"metrics-tls"}:
+              .: {}
+              f:name: {}
+              f:secret:
+                .: {}
+                f:defaultMode: {}
+                f:secretName: {}
+            k:{"name":"tmp-dir"}:
+              .: {}
+              f:emptyDir: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:36:47Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.v1.cni.cncf.io/network-status: {}
+      manager: multus-daemon
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:36:48Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"PodReadyToStartContainers"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"PodScheduled"}:
+              f:status: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:hostIPs: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.131.0.9"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:37:11Z"
+    name: dns-default-6hffk
+    namespace: openshift-dns
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: dns-default
+      uid: fcd269f8-e41e-4315-9f20-8de6753b39e9
+    resourceVersion: "16214"
+    uid: 2af56918-e291-405c-8cb2-5d24a818d42f
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - ip-10-0-78-215.us-west-1.compute.internal
+    containers:
+    - args:
+      - -conf
+      - /etc/coredns/Corefile
+      command:
+      - coredns
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 5
+        httpGet:
+          path: /health
+          port: 8080
+          scheme: HTTP
+        initialDelaySeconds: 60
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
+      name: dns
+      ports:
+      - containerPort: 5353
+        name: dns
+        protocol: UDP
+      - containerPort: 5353
+        name: dns-tcp
+        protocol: TCP
+      readinessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /ready
+          port: 8181
+          scheme: HTTP
+        initialDelaySeconds: 10
+        periodSeconds: 3
+        successThreshold: 1
+        timeoutSeconds: 3
+      resources:
+        requests:
+          cpu: 50m
+          memory: 70Mi
+      securityContext:
+        readOnlyRootFilesystem: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/coredns
+        name: config-volume
+        readOnly: true
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-gx92p
+        readOnly: true
+    - args:
+      - --logtostderr
+      - --secure-listen-address=:9154
+      - --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+      - --upstream=http://127.0.0.1:9153/
+      - --tls-cert-file=/etc/tls/private/tls.crt
+      - --tls-private-key-file=/etc/tls/private/tls.key
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+      imagePullPolicy: IfNotPresent
+      name: kube-rbac-proxy
+      ports:
+      - containerPort: 9154
+        name: metrics
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 10m
+          memory: 40Mi
+      securityContext:
+        readOnlyRootFilesystem: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/tls/private
+        name: metrics-tls
+        readOnly: true
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-gx92p
+        readOnly: true
+    dnsPolicy: Default
+    enableServiceLinks: true
+    nodeName: ip-10-0-78-215.us-west-1.compute.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000001000
+    priorityClassName: system-node-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: dns
+    serviceAccountName: dns
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - key: node-role.kubernetes.io/master
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/disk-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/pid-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/unschedulable
+      operator: Exists
+    volumes:
+    - configMap:
+        defaultMode: 420
+        items:
+        - key: Corefile
+          path: Corefile
+        name: dns-default
+      name: config-volume
+    - name: metrics-tls
+      secret:
+        defaultMode: 420
+        secretName: dns-default-metrics-tls
+    - emptyDir: {}
+      name: tmp-dir
+    - name: kube-api-access-gx92p
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:37:00Z"
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:36:48Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:37:11Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:37:11Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:36:47Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - allocatedResources:
+        cpu: 50m
+        memory: 70Mi
+      containerID: cri-o://7453029975b3da2d1348dbe543e1a39d6a58ebbb3cfb4f98bd80c70a5d4d79fa
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb
+      lastState: {}
+      name: dns
+      ready: true
+      resources:
+        requests:
+          cpu: 50m
+          memory: 70Mi
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:36:59Z"
+      user:
+        linux:
+          gid: 0
+          supplementalGroups:
+          - 0
+          uid: 0
+      volumeMounts:
+      - mountPath: /etc/coredns
+        name: config-volume
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-gx92p
+        readOnly: true
+        recursiveReadOnly: Disabled
+    - allocatedResources:
+        cpu: 10m
+        memory: 40Mi
+      containerID: cri-o://3ced5cae9d6e81dd6e47ce2cac1a4d2c928bf2c0ec0b2fdc0299b31c2aff3b06
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+      lastState: {}
+      name: kube-rbac-proxy
+      ready: true
+      resources:
+        requests:
+          cpu: 10m
+          memory: 40Mi
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:36:59Z"
+      user:
+        linux:
+          gid: 65534
+          supplementalGroups:
+          - 65534
+          uid: 65534
+      volumeMounts:
+      - mountPath: /etc/tls/private
+        name: metrics-tls
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-gx92p
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 10.0.78.215
+    hostIPs:
+    - ip: 10.0.78.215
+    phase: Running
+    podIP: 10.131.0.9
+    podIPs:
+    - ip: 10.131.0.9
+    qosClass: Burstable
+    startTime: "2026-01-28T09:36:48Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      cluster-autoscaler.kubernetes.io/enable-ds-eviction: "true"
+      k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.130.0.45/23"],"mac_address":"0a:58:0a:82:00:2d","gateway_ips":["10.130.0.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.130.0.1"},{"dest":"172.30.0.0/16","nextHop":"10.130.0.1"},{"dest":"169.254.0.5/32","nextHop":"10.130.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.130.0.1"}],"ip_address":"10.130.0.45/23","gateway_ip":"10.130.0.1","role":"primary"}}'
+      k8s.v1.cni.cncf.io/network-status: |-
+        [{
+            "name": "ovn-kubernetes",
+            "interface": "eth0",
+            "ips": [
+                "10.130.0.45"
+            ],
+            "mac": "0a:58:0a:82:00:2d",
+            "default": true,
+            "dns": {}
+        }]
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    generateName: dns-default-
+    generation: 1
+    labels:
+      controller-revision-hash: 85f97d6b49
+      dns.operator.openshift.io/daemonset-dns: default
+      pod-template-generation: "1"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.ovn.org/pod-networks: {}
+      manager: ip-10-0-108-54
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:31:59Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:cluster-autoscaler.kubernetes.io/enable-ds-eviction: {}
+            f:target.workload.openshift.io/management: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:controller-revision-hash: {}
+            f:dns.operator.openshift.io/daemonset-dns: {}
+            f:pod-template-generation: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"fcd269f8-e41e-4315-9f20-8de6753b39e9"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:nodeAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"dns"}:
+              .: {}
+              f:args: {}
+              f:command: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:livenessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:initialDelaySeconds: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":5353,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+                k:{"containerPort":5353,"protocol":"UDP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:readinessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:initialDelaySeconds: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:readOnlyRootFilesystem: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/coredns"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/tmp"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+            k:{"name":"kube-rbac-proxy"}:
+              .: {}
+              f:args: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":9154,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:readOnlyRootFilesystem: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/tls/private"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/tmp"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"config-volume"}:
+              .: {}
+              f:configMap:
+                .: {}
+                f:defaultMode: {}
+                f:items: {}
+                f:name: {}
+              f:name: {}
+            k:{"name":"metrics-tls"}:
+              .: {}
+              f:name: {}
+              f:secret:
+                .: {}
+                f:defaultMode: {}
+                f:secretName: {}
+            k:{"name":"tmp-dir"}:
+              .: {}
+              f:emptyDir: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.v1.cni.cncf.io/network-status: {}
+      manager: multus-daemon
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:32:02Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"PodReadyToStartContainers"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:hostIPs: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.130.0.45"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:32:18Z"
+    name: dns-default-bmdsx
+    namespace: openshift-dns
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: dns-default
+      uid: fcd269f8-e41e-4315-9f20-8de6753b39e9
+    resourceVersion: "11472"
+    uid: a704880a-e8bb-458a-9e0c-29e2c77f84d5
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - ip-10-0-108-54.us-west-1.compute.internal
+    containers:
+    - args:
+      - -conf
+      - /etc/coredns/Corefile
+      command:
+      - coredns
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 5
+        httpGet:
+          path: /health
+          port: 8080
+          scheme: HTTP
+        initialDelaySeconds: 60
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
+      name: dns
+      ports:
+      - containerPort: 5353
+        name: dns
+        protocol: UDP
+      - containerPort: 5353
+        name: dns-tcp
+        protocol: TCP
+      readinessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /ready
+          port: 8181
+          scheme: HTTP
+        initialDelaySeconds: 10
+        periodSeconds: 3
+        successThreshold: 1
+        timeoutSeconds: 3
+      resources:
+        requests:
+          cpu: 50m
+          memory: 70Mi
+      securityContext:
+        readOnlyRootFilesystem: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/coredns
+        name: config-volume
+        readOnly: true
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-9rsdw
+        readOnly: true
+    - args:
+      - --logtostderr
+      - --secure-listen-address=:9154
+      - --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+      - --upstream=http://127.0.0.1:9153/
+      - --tls-cert-file=/etc/tls/private/tls.crt
+      - --tls-private-key-file=/etc/tls/private/tls.key
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+      imagePullPolicy: IfNotPresent
+      name: kube-rbac-proxy
+      ports:
+      - containerPort: 9154
+        name: metrics
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 10m
+          memory: 40Mi
+      securityContext:
+        readOnlyRootFilesystem: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/tls/private
+        name: metrics-tls
+        readOnly: true
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-9rsdw
+        readOnly: true
+    dnsPolicy: Default
+    enableServiceLinks: true
+    nodeName: ip-10-0-108-54.us-west-1.compute.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000001000
+    priorityClassName: system-node-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: dns
+    serviceAccountName: dns
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - key: node-role.kubernetes.io/master
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/disk-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/pid-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/unschedulable
+      operator: Exists
+    volumes:
+    - configMap:
+        defaultMode: 420
+        items:
+        - key: Corefile
+          path: Corefile
+        name: dns-default
+      name: config-volume
+    - name: metrics-tls
+      secret:
+        defaultMode: 420
+        secretName: dns-default-metrics-tls
+    - emptyDir: {}
+      name: tmp-dir
+    - name: kube-api-access-9rsdw
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:32:08Z"
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:31:59Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:32:18Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:32:18Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:31:59Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - allocatedResources:
+        cpu: 50m
+        memory: 70Mi
+      containerID: cri-o://98ecd8ef6cff29fbf41ea572689243eb3ddd4d0d1fb145f4aed4c6107f6fd674
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb
+      lastState: {}
+      name: dns
+      ready: true
+      resources:
+        requests:
+          cpu: 50m
+          memory: 70Mi
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:32:08Z"
+      user:
+        linux:
+          gid: 0
+          supplementalGroups:
+          - 0
+          uid: 0
+      volumeMounts:
+      - mountPath: /etc/coredns
+        name: config-volume
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-9rsdw
+        readOnly: true
+        recursiveReadOnly: Disabled
+    - allocatedResources:
+        cpu: 10m
+        memory: 40Mi
+      containerID: cri-o://644eae1864411bb24c94045f330194d206d754d868b36947d8beb04465cc6c14
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+      lastState: {}
+      name: kube-rbac-proxy
+      ready: true
+      resources:
+        requests:
+          cpu: 10m
+          memory: 40Mi
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:32:08Z"
+      user:
+        linux:
+          gid: 65534
+          supplementalGroups:
+          - 65534
+          uid: 65534
+      volumeMounts:
+      - mountPath: /etc/tls/private
+        name: metrics-tls
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-9rsdw
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 10.0.108.54
+    hostIPs:
+    - ip: 10.0.108.54
+    phase: Running
+    podIP: 10.130.0.45
+    podIPs:
+    - ip: 10.130.0.45
+    qosClass: Burstable
+    startTime: "2026-01-28T09:31:59Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      cluster-autoscaler.kubernetes.io/enable-ds-eviction: "true"
+      k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.129.0.18/23"],"mac_address":"0a:58:0a:81:00:12","gateway_ips":["10.129.0.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.129.0.1"},{"dest":"172.30.0.0/16","nextHop":"10.129.0.1"},{"dest":"169.254.0.5/32","nextHop":"10.129.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.129.0.1"}],"ip_address":"10.129.0.18/23","gateway_ip":"10.129.0.1","role":"primary"}}'
+      k8s.v1.cni.cncf.io/network-status: |-
+        [{
+            "name": "ovn-kubernetes",
+            "interface": "eth0",
+            "ips": [
+                "10.129.0.18"
+            ],
+            "mac": "0a:58:0a:81:00:12",
+            "default": true,
+            "dns": {}
+        }]
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    generateName: dns-default-
+    generation: 1
+    labels:
+      controller-revision-hash: 85f97d6b49
+      dns.operator.openshift.io/daemonset-dns: default
+      pod-template-generation: "1"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.ovn.org/pod-networks: {}
+      manager: ip-10-0-102-200
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:31:59Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:cluster-autoscaler.kubernetes.io/enable-ds-eviction: {}
+            f:target.workload.openshift.io/management: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:controller-revision-hash: {}
+            f:dns.operator.openshift.io/daemonset-dns: {}
+            f:pod-template-generation: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"fcd269f8-e41e-4315-9f20-8de6753b39e9"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:nodeAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"dns"}:
+              .: {}
+              f:args: {}
+              f:command: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:livenessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:initialDelaySeconds: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":5353,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+                k:{"containerPort":5353,"protocol":"UDP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:readinessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:initialDelaySeconds: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:readOnlyRootFilesystem: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/coredns"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/tmp"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+            k:{"name":"kube-rbac-proxy"}:
+              .: {}
+              f:args: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":9154,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:readOnlyRootFilesystem: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/tls/private"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/tmp"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"config-volume"}:
+              .: {}
+              f:configMap:
+                .: {}
+                f:defaultMode: {}
+                f:items: {}
+                f:name: {}
+              f:name: {}
+            k:{"name":"metrics-tls"}:
+              .: {}
+              f:name: {}
+              f:secret:
+                .: {}
+                f:defaultMode: {}
+                f:secretName: {}
+            k:{"name":"tmp-dir"}:
+              .: {}
+              f:emptyDir: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.v1.cni.cncf.io/network-status: {}
+      manager: multus-daemon
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:32:01Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"PodReadyToStartContainers"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:hostIPs: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.129.0.18"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:32:18Z"
+    name: dns-default-jcnkp
+    namespace: openshift-dns
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: dns-default
+      uid: fcd269f8-e41e-4315-9f20-8de6753b39e9
+    resourceVersion: "11443"
+    uid: 9bddb4c1-2884-41d6-947f-87fb02197953
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - ip-10-0-102-200.us-west-1.compute.internal
+    containers:
+    - args:
+      - -conf
+      - /etc/coredns/Corefile
+      command:
+      - coredns
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 5
+        httpGet:
+          path: /health
+          port: 8080
+          scheme: HTTP
+        initialDelaySeconds: 60
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
+      name: dns
+      ports:
+      - containerPort: 5353
+        name: dns
+        protocol: UDP
+      - containerPort: 5353
+        name: dns-tcp
+        protocol: TCP
+      readinessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /ready
+          port: 8181
+          scheme: HTTP
+        initialDelaySeconds: 10
+        periodSeconds: 3
+        successThreshold: 1
+        timeoutSeconds: 3
+      resources:
+        requests:
+          cpu: 50m
+          memory: 70Mi
+      securityContext:
+        readOnlyRootFilesystem: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/coredns
+        name: config-volume
+        readOnly: true
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-hzfs7
+        readOnly: true
+    - args:
+      - --logtostderr
+      - --secure-listen-address=:9154
+      - --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+      - --upstream=http://127.0.0.1:9153/
+      - --tls-cert-file=/etc/tls/private/tls.crt
+      - --tls-private-key-file=/etc/tls/private/tls.key
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+      imagePullPolicy: IfNotPresent
+      name: kube-rbac-proxy
+      ports:
+      - containerPort: 9154
+        name: metrics
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 10m
+          memory: 40Mi
+      securityContext:
+        readOnlyRootFilesystem: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/tls/private
+        name: metrics-tls
+        readOnly: true
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-hzfs7
+        readOnly: true
+    dnsPolicy: Default
+    enableServiceLinks: true
+    nodeName: ip-10-0-102-200.us-west-1.compute.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000001000
+    priorityClassName: system-node-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: dns
+    serviceAccountName: dns
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - key: node-role.kubernetes.io/master
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/disk-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/pid-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/unschedulable
+      operator: Exists
+    volumes:
+    - configMap:
+        defaultMode: 420
+        items:
+        - key: Corefile
+          path: Corefile
+        name: dns-default
+      name: config-volume
+    - name: metrics-tls
+      secret:
+        defaultMode: 420
+        secretName: dns-default-metrics-tls
+    - emptyDir: {}
+      name: tmp-dir
+    - name: kube-api-access-hzfs7
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:32:09Z"
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:31:59Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:32:18Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:32:18Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:31:59Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - allocatedResources:
+        cpu: 50m
+        memory: 70Mi
+      containerID: cri-o://5ccc1369a2db509d6e6b61f72f3a7fe08e6a1ae085f5e4896bced5105d1a694e
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb
+      lastState: {}
+      name: dns
+      ready: true
+      resources:
+        requests:
+          cpu: 50m
+          memory: 70Mi
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:32:08Z"
+      user:
+        linux:
+          gid: 0
+          supplementalGroups:
+          - 0
+          uid: 0
+      volumeMounts:
+      - mountPath: /etc/coredns
+        name: config-volume
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-hzfs7
+        readOnly: true
+        recursiveReadOnly: Disabled
+    - allocatedResources:
+        cpu: 10m
+        memory: 40Mi
+      containerID: cri-o://c9fc6b8896df1ef0a253092a37759a188adc59fa3c685f6f5726e14161f6e8c8
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+      lastState: {}
+      name: kube-rbac-proxy
+      ready: true
+      resources:
+        requests:
+          cpu: 10m
+          memory: 40Mi
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:32:09Z"
+      user:
+        linux:
+          gid: 65534
+          supplementalGroups:
+          - 65534
+          uid: 65534
+      volumeMounts:
+      - mountPath: /etc/tls/private
+        name: metrics-tls
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-hzfs7
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 10.0.102.200
+    hostIPs:
+    - ip: 10.0.102.200
+    phase: Running
+    podIP: 10.129.0.18
+    podIPs:
+    - ip: 10.129.0.18
+    qosClass: Burstable
+    startTime: "2026-01-28T09:31:59Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      cluster-autoscaler.kubernetes.io/enable-ds-eviction: "true"
+      k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.2.9/23"],"mac_address":"0a:58:0a:80:02:09","gateway_ips":["10.128.2.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.128.2.1"},{"dest":"172.30.0.0/16","nextHop":"10.128.2.1"},{"dest":"169.254.0.5/32","nextHop":"10.128.2.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.2.1"}],"ip_address":"10.128.2.9/23","gateway_ip":"10.128.2.1","role":"primary"}}'
+      k8s.v1.cni.cncf.io/network-status: |-
+        [{
+            "name": "ovn-kubernetes",
+            "interface": "eth0",
+            "ips": [
+                "10.128.2.9"
+            ],
+            "mac": "0a:58:0a:80:02:09",
+            "default": true,
+            "dns": {}
+        }]
+    creationTimestamp: "2026-01-28T09:42:29Z"
+    generateName: dns-default-
+    generation: 1
+    labels:
+      controller-revision-hash: 85f97d6b49
+      dns.operator.openshift.io/daemonset-dns: default
+      pod-template-generation: "1"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:cluster-autoscaler.kubernetes.io/enable-ds-eviction: {}
+            f:target.workload.openshift.io/management: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:controller-revision-hash: {}
+            f:dns.operator.openshift.io/daemonset-dns: {}
+            f:pod-template-generation: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"fcd269f8-e41e-4315-9f20-8de6753b39e9"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:nodeAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"dns"}:
+              .: {}
+              f:args: {}
+              f:command: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:livenessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:initialDelaySeconds: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":5353,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+                k:{"containerPort":5353,"protocol":"UDP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:readinessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:initialDelaySeconds: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:readOnlyRootFilesystem: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/coredns"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/tmp"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+            k:{"name":"kube-rbac-proxy"}:
+              .: {}
+              f:args: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":9154,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:readOnlyRootFilesystem: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/tls/private"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/tmp"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"config-volume"}:
+              .: {}
+              f:configMap:
+                .: {}
+                f:defaultMode: {}
+                f:items: {}
+                f:name: {}
+              f:name: {}
+            k:{"name":"metrics-tls"}:
+              .: {}
+              f:name: {}
+              f:secret:
+                .: {}
+                f:defaultMode: {}
+                f:secretName: {}
+            k:{"name":"tmp-dir"}:
+              .: {}
+              f:emptyDir: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:42:29Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.ovn.org/pod-networks: {}
+      manager: ip-10-0-101-165
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:42:30Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.v1.cni.cncf.io/network-status: {}
+      manager: multus-daemon
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:42:31Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"PodReadyToStartContainers"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:hostIPs: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.128.2.9"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:42:45Z"
+    name: dns-default-ntdzj
+    namespace: openshift-dns
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: dns-default
+      uid: fcd269f8-e41e-4315-9f20-8de6753b39e9
+    resourceVersion: "21997"
+    uid: d720d603-ef59-4936-b019-474bae5a6445
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - ip-10-0-101-165.us-west-1.compute.internal
+    containers:
+    - args:
+      - -conf
+      - /etc/coredns/Corefile
+      command:
+      - coredns
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 5
+        httpGet:
+          path: /health
+          port: 8080
+          scheme: HTTP
+        initialDelaySeconds: 60
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
+      name: dns
+      ports:
+      - containerPort: 5353
+        name: dns
+        protocol: UDP
+      - containerPort: 5353
+        name: dns-tcp
+        protocol: TCP
+      readinessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /ready
+          port: 8181
+          scheme: HTTP
+        initialDelaySeconds: 10
+        periodSeconds: 3
+        successThreshold: 1
+        timeoutSeconds: 3
+      resources:
+        requests:
+          cpu: 50m
+          memory: 70Mi
+      securityContext:
+        readOnlyRootFilesystem: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/coredns
+        name: config-volume
+        readOnly: true
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-q9m9m
+        readOnly: true
+    - args:
+      - --logtostderr
+      - --secure-listen-address=:9154
+      - --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+      - --upstream=http://127.0.0.1:9153/
+      - --tls-cert-file=/etc/tls/private/tls.crt
+      - --tls-private-key-file=/etc/tls/private/tls.key
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+      imagePullPolicy: IfNotPresent
+      name: kube-rbac-proxy
+      ports:
+      - containerPort: 9154
+        name: metrics
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 10m
+          memory: 40Mi
+      securityContext:
+        readOnlyRootFilesystem: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/tls/private
+        name: metrics-tls
+        readOnly: true
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-q9m9m
+        readOnly: true
+    dnsPolicy: Default
+    enableServiceLinks: true
+    nodeName: ip-10-0-101-165.us-west-1.compute.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000001000
+    priorityClassName: system-node-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: dns
+    serviceAccountName: dns
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - key: node-role.kubernetes.io/master
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/disk-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/pid-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/unschedulable
+      operator: Exists
+    volumes:
+    - configMap:
+        defaultMode: 420
+        items:
+        - key: Corefile
+          path: Corefile
+        name: dns-default
+      name: config-volume
+    - name: metrics-tls
+      secret:
+        defaultMode: 420
+        secretName: dns-default-metrics-tls
+    - emptyDir: {}
+      name: tmp-dir
+    - name: kube-api-access-q9m9m
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:42:35Z"
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:42:30Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:42:45Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:42:45Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:42:30Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - allocatedResources:
+        cpu: 50m
+        memory: 70Mi
+      containerID: cri-o://d6632b68ed84c8307698f49d66d0b3d79511b26a4b12f7f09e3f1b37b8072574
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb
+      lastState: {}
+      name: dns
+      ready: true
+      resources:
+        requests:
+          cpu: 50m
+          memory: 70Mi
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:42:34Z"
+      user:
+        linux:
+          gid: 0
+          supplementalGroups:
+          - 0
+          uid: 0
+      volumeMounts:
+      - mountPath: /etc/coredns
+        name: config-volume
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-q9m9m
+        readOnly: true
+        recursiveReadOnly: Disabled
+    - allocatedResources:
+        cpu: 10m
+        memory: 40Mi
+      containerID: cri-o://58b68f9abd61596e03298113c729c31393b4802d2742939690e42adf3741ced5
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+      lastState: {}
+      name: kube-rbac-proxy
+      ready: true
+      resources:
+        requests:
+          cpu: 10m
+          memory: 40Mi
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:42:34Z"
+      user:
+        linux:
+          gid: 65534
+          supplementalGroups:
+          - 65534
+          uid: 65534
+      volumeMounts:
+      - mountPath: /etc/tls/private
+        name: metrics-tls
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-q9m9m
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 10.0.101.165
+    hostIPs:
+    - ip: 10.0.101.165
+    phase: Running
+    podIP: 10.128.2.9
+    podIPs:
+    - ip: 10.128.2.9
+    qosClass: Burstable
+    startTime: "2026-01-28T09:42:30Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      cluster-autoscaler.kubernetes.io/enable-ds-eviction: "true"
+      k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.129.2.6/23"],"mac_address":"0a:58:0a:81:02:06","gateway_ips":["10.129.2.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.129.2.1"},{"dest":"172.30.0.0/16","nextHop":"10.129.2.1"},{"dest":"169.254.0.5/32","nextHop":"10.129.2.1"},{"dest":"100.64.0.0/16","nextHop":"10.129.2.1"}],"ip_address":"10.129.2.6/23","gateway_ip":"10.129.2.1","role":"primary"}}'
+      k8s.v1.cni.cncf.io/network-status: |-
+        [{
+            "name": "ovn-kubernetes",
+            "interface": "eth0",
+            "ips": [
+                "10.129.2.6"
+            ],
+            "mac": "0a:58:0a:81:02:06",
+            "default": true,
+            "dns": {}
+        }]
+    creationTimestamp: "2026-01-28T09:42:29Z"
+    generateName: dns-default-
+    generation: 1
+    labels:
+      controller-revision-hash: 85f97d6b49
+      dns.operator.openshift.io/daemonset-dns: default
+      pod-template-generation: "1"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:cluster-autoscaler.kubernetes.io/enable-ds-eviction: {}
+            f:target.workload.openshift.io/management: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:controller-revision-hash: {}
+            f:dns.operator.openshift.io/daemonset-dns: {}
+            f:pod-template-generation: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"fcd269f8-e41e-4315-9f20-8de6753b39e9"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:nodeAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"dns"}:
+              .: {}
+              f:args: {}
+              f:command: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:livenessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:initialDelaySeconds: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":5353,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+                k:{"containerPort":5353,"protocol":"UDP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:readinessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:initialDelaySeconds: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:readOnlyRootFilesystem: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/coredns"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/tmp"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+            k:{"name":"kube-rbac-proxy"}:
+              .: {}
+              f:args: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":9154,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:readOnlyRootFilesystem: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/tls/private"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/tmp"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"config-volume"}:
+              .: {}
+              f:configMap:
+                .: {}
+                f:defaultMode: {}
+                f:items: {}
+                f:name: {}
+              f:name: {}
+            k:{"name":"metrics-tls"}:
+              .: {}
+              f:name: {}
+              f:secret:
+                .: {}
+                f:defaultMode: {}
+                f:secretName: {}
+            k:{"name":"tmp-dir"}:
+              .: {}
+              f:emptyDir: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:42:29Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.ovn.org/pod-networks: {}
+      manager: ip-10-0-22-208
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:42:30Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.v1.cni.cncf.io/network-status: {}
+      manager: multus-daemon
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:42:31Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"PodReadyToStartContainers"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:hostIPs: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.129.2.6"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:42:48Z"
+    name: dns-default-wx96s
+    namespace: openshift-dns
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: dns-default
+      uid: fcd269f8-e41e-4315-9f20-8de6753b39e9
+    resourceVersion: "22230"
+    uid: 59d051a5-15ce-4032-ba14-57ea852ab125
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - ip-10-0-22-208.us-west-1.compute.internal
+    containers:
+    - args:
+      - -conf
+      - /etc/coredns/Corefile
+      command:
+      - coredns
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 5
+        httpGet:
+          path: /health
+          port: 8080
+          scheme: HTTP
+        initialDelaySeconds: 60
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
+      name: dns
+      ports:
+      - containerPort: 5353
+        name: dns
+        protocol: UDP
+      - containerPort: 5353
+        name: dns-tcp
+        protocol: TCP
+      readinessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /ready
+          port: 8181
+          scheme: HTTP
+        initialDelaySeconds: 10
+        periodSeconds: 3
+        successThreshold: 1
+        timeoutSeconds: 3
+      resources:
+        requests:
+          cpu: 50m
+          memory: 70Mi
+      securityContext:
+        readOnlyRootFilesystem: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/coredns
+        name: config-volume
+        readOnly: true
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-hcp99
+        readOnly: true
+    - args:
+      - --logtostderr
+      - --secure-listen-address=:9154
+      - --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+      - --upstream=http://127.0.0.1:9153/
+      - --tls-cert-file=/etc/tls/private/tls.crt
+      - --tls-private-key-file=/etc/tls/private/tls.key
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+      imagePullPolicy: IfNotPresent
+      name: kube-rbac-proxy
+      ports:
+      - containerPort: 9154
+        name: metrics
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 10m
+          memory: 40Mi
+      securityContext:
+        readOnlyRootFilesystem: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/tls/private
+        name: metrics-tls
+        readOnly: true
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-hcp99
+        readOnly: true
+    dnsPolicy: Default
+    enableServiceLinks: true
+    nodeName: ip-10-0-22-208.us-west-1.compute.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000001000
+    priorityClassName: system-node-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: dns
+    serviceAccountName: dns
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - key: node-role.kubernetes.io/master
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/disk-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/pid-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/unschedulable
+      operator: Exists
+    volumes:
+    - configMap:
+        defaultMode: 420
+        items:
+        - key: Corefile
+          path: Corefile
+        name: dns-default
+      name: config-volume
+    - name: metrics-tls
+      secret:
+        defaultMode: 420
+        secretName: dns-default-metrics-tls
+    - emptyDir: {}
+      name: tmp-dir
+    - name: kube-api-access-hcp99
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:42:37Z"
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:42:30Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:42:48Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:42:48Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:42:30Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - allocatedResources:
+        cpu: 50m
+        memory: 70Mi
+      containerID: cri-o://8133097f291e38b6e1cef87e07bcfc71dbd2c14ae36a655ad51344b74469e800
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb
+      lastState: {}
+      name: dns
+      ready: true
+      resources:
+        requests:
+          cpu: 50m
+          memory: 70Mi
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:42:36Z"
+      user:
+        linux:
+          gid: 0
+          supplementalGroups:
+          - 0
+          uid: 0
+      volumeMounts:
+      - mountPath: /etc/coredns
+        name: config-volume
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-hcp99
+        readOnly: true
+        recursiveReadOnly: Disabled
+    - allocatedResources:
+        cpu: 10m
+        memory: 40Mi
+      containerID: cri-o://fb319deb5c5d97a3c098cb0870e029c80d7517c328fe902d99d80692d835c696
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+      lastState: {}
+      name: kube-rbac-proxy
+      ready: true
+      resources:
+        requests:
+          cpu: 10m
+          memory: 40Mi
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:42:36Z"
+      user:
+        linux:
+          gid: 65534
+          supplementalGroups:
+          - 65534
+          uid: 65534
+      volumeMounts:
+      - mountPath: /etc/tls/private
+        name: metrics-tls
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-hcp99
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 10.0.22.208
+    hostIPs:
+    - ip: 10.0.22.208
+    phase: Running
+    podIP: 10.129.2.6
+    podIPs:
+    - ip: 10.129.2.6
+    qosClass: Burstable
+    startTime: "2026-01-28T09:42:30Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    generateName: node-resolver-
+    generation: 1
+    labels:
+      controller-revision-hash: 5dcd9f9b8
+      dns.operator.openshift.io/daemonset-node-resolver: ""
+      pod-template-generation: "1"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:target.workload.openshift.io/management: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:controller-revision-hash: {}
+            f:dns.operator.openshift.io/daemonset-node-resolver: {}
+            f:pod-template-generation: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"a599b6e7-c66d-4f11-9cc8-6317fdefd964"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:nodeAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"dns-node-resolver"}:
+              .: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"CLUSTER_DOMAIN"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"NAMESERVER"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"SERVICES"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:privileged: {}
+                f:readOnlyRootFilesystem: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/hosts"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/tmp"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:hostNetwork: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"hosts-file"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"tmp-dir"}:
+              .: {}
+              f:emptyDir: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"PodReadyToStartContainers"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:hostIPs: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.0.102.200"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:32:06Z"
+    name: node-resolver-5lvqn
+    namespace: openshift-dns
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: node-resolver
+      uid: a599b6e7-c66d-4f11-9cc8-6317fdefd964
+    resourceVersion: "11101"
+    uid: 06c78052-644e-4bbd-b2a5-ec97121a8a38
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - ip-10-0-102-200.us-west-1.compute.internal
+    containers:
+    - command:
+      - /bin/bash
+      - -c
+      - |
+        #!/bin/bash
+        set -uo pipefail
+
+        trap 'jobs -p | xargs kill || true; wait; exit 0' TERM
+
+        OPENSHIFT_MARKER="openshift-generated-node-resolver"
+        HOSTS_FILE="/etc/hosts"
+        TEMP_FILE="/tmp/hosts.tmp"
+
+        IFS=', ' read -r -a services <<< "${SERVICES}"
+
+        # Make a temporary file with the old hosts file's attributes.
+        if ! cp -f --attributes-only "${HOSTS_FILE}" "${TEMP_FILE}"; then
+          echo "Failed to preserve hosts file. Exiting."
+          exit 1
+        fi
+
+        while true; do
+          declare -A svc_ips
+          for svc in "${services[@]}"; do
+            # Fetch service IP from cluster dns if present. We make several tries
+            # to do it: IPv4, IPv6, IPv4 over TCP and IPv6 over TCP. The two last ones
+            # are for deployments with Kuryr on older OpenStack (OSP13) - those do not
+            # support UDP loadbalancers and require reaching DNS through TCP.
+            cmds=('dig -t A @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"'
+                  'dig -t AAAA @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"'
+                  'dig -t A +tcp +retry=0 @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"'
+                  'dig -t AAAA +tcp +retry=0 @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"')
+            for i in ${!cmds[*]}
+            do
+              ips=($(eval "${cmds[i]}"))
+              if [[ "$?" -eq 0 && "${#ips[@]}" -ne 0 ]]; then
+                svc_ips["${svc}"]="${ips[@]}"
+                break
+              fi
+            done
+          done
+
+          # Update /etc/hosts only if we get valid service IPs
+          # We will not update /etc/hosts when there is coredns service outage or api unavailability
+          # Stale entries could exist in /etc/hosts if the service is deleted
+          if [[ -n "${svc_ips[*]-}" ]]; then
+            # Build a new hosts file from /etc/hosts with our custom entries filtered out
+            if ! sed --silent "/# ${OPENSHIFT_MARKER}/d; w ${TEMP_FILE}" "${HOSTS_FILE}"; then
+              # Only continue rebuilding the hosts entries if its original content is preserved
+              sleep 60 & wait
+              continue
+            fi
+
+            # Append resolver entries for services
+            rc=0
+            for svc in "${!svc_ips[@]}"; do
+              for ip in ${svc_ips[${svc}]}; do
+                echo "${ip} ${svc} ${svc}.${CLUSTER_DOMAIN} # ${OPENSHIFT_MARKER}" >> "${TEMP_FILE}" || rc=$?
+              done
+            done
+            if [[ $rc -ne 0 ]]; then
+              sleep 60 & wait
+              continue
+            fi
+
+
+            # TODO: Update /etc/hosts atomically to avoid any inconsistent behavior
+            # Replace /etc/hosts with our modified version if needed
+            cmp "${TEMP_FILE}" "${HOSTS_FILE}" || cp -f "${TEMP_FILE}" "${HOSTS_FILE}"
+            # TEMP_FILE is not removed to avoid file create/delete and attributes copy churn
+          fi
+          sleep 60 & wait
+          unset svc_ips
+        done
+      env:
+      - name: SERVICES
+        value: image-registry.openshift-image-registry.svc
+      - name: NAMESERVER
+        value: 172.30.0.10
+      - name: CLUSTER_DOMAIN
+        value: cluster.local
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a
+      imagePullPolicy: IfNotPresent
+      name: dns-node-resolver
+      resources:
+        requests:
+          cpu: 5m
+          memory: 21Mi
+      securityContext:
+        privileged: true
+        readOnlyRootFilesystem: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/hosts
+        name: hosts-file
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-rpc2l
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    hostNetwork: true
+    nodeName: ip-10-0-102-200.us-west-1.compute.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000001000
+    priorityClassName: system-node-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: node-resolver
+    serviceAccountName: node-resolver
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - operator: Exists
+    volumes:
+    - hostPath:
+        path: /etc/hosts
+        type: File
+      name: hosts-file
+    - emptyDir: {}
+      name: tmp-dir
+    - name: kube-api-access-rpc2l
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:32:05Z"
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:31:59Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:32:05Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:32:05Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:31:59Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - allocatedResources:
+        cpu: 5m
+        memory: 21Mi
+      containerID: cri-o://5b1e2b90e92e0b0ebf3928dbc743e5443bc1dd063ec0447995d7a724acf2440d
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a
+      lastState: {}
+      name: dns-node-resolver
+      ready: true
+      resources:
+        requests:
+          cpu: 5m
+          memory: 21Mi
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:32:05Z"
+      user:
+        linux:
+          gid: 0
+          supplementalGroups:
+          - 0
+          uid: 0
+      volumeMounts:
+      - mountPath: /etc/hosts
+        name: hosts-file
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-rpc2l
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 10.0.102.200
+    hostIPs:
+    - ip: 10.0.102.200
+    phase: Running
+    podIP: 10.0.102.200
+    podIPs:
+    - ip: 10.0.102.200
+    qosClass: Burstable
+    startTime: "2026-01-28T09:31:59Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:11Z"
+    generateName: node-resolver-
+    generation: 1
+    labels:
+      controller-revision-hash: 5dcd9f9b8
+      dns.operator.openshift.io/daemonset-node-resolver: ""
+      pod-template-generation: "1"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:target.workload.openshift.io/management: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:controller-revision-hash: {}
+            f:dns.operator.openshift.io/daemonset-node-resolver: {}
+            f:pod-template-generation: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"a599b6e7-c66d-4f11-9cc8-6317fdefd964"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:nodeAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"dns-node-resolver"}:
+              .: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"CLUSTER_DOMAIN"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"NAMESERVER"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"SERVICES"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:privileged: {}
+                f:readOnlyRootFilesystem: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/hosts"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/tmp"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:hostNetwork: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"hosts-file"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"tmp-dir"}:
+              .: {}
+              f:emptyDir: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:36:10Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"PodReadyToStartContainers"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"PodScheduled"}:
+              f:lastTransitionTime: {}
+              f:status: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:hostIPs: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.0.78.215"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:36:34Z"
+    name: node-resolver-8hgs7
+    namespace: openshift-dns
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: node-resolver
+      uid: a599b6e7-c66d-4f11-9cc8-6317fdefd964
+    resourceVersion: "15280"
+    uid: f33f99c5-40ac-4416-844b-8643044f5fb7
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - ip-10-0-78-215.us-west-1.compute.internal
+    containers:
+    - command:
+      - /bin/bash
+      - -c
+      - |
+        #!/bin/bash
+        set -uo pipefail
+
+        trap 'jobs -p | xargs kill || true; wait; exit 0' TERM
+
+        OPENSHIFT_MARKER="openshift-generated-node-resolver"
+        HOSTS_FILE="/etc/hosts"
+        TEMP_FILE="/tmp/hosts.tmp"
+
+        IFS=', ' read -r -a services <<< "${SERVICES}"
+
+        # Make a temporary file with the old hosts file's attributes.
+        if ! cp -f --attributes-only "${HOSTS_FILE}" "${TEMP_FILE}"; then
+          echo "Failed to preserve hosts file. Exiting."
+          exit 1
+        fi
+
+        while true; do
+          declare -A svc_ips
+          for svc in "${services[@]}"; do
+            # Fetch service IP from cluster dns if present. We make several tries
+            # to do it: IPv4, IPv6, IPv4 over TCP and IPv6 over TCP. The two last ones
+            # are for deployments with Kuryr on older OpenStack (OSP13) - those do not
+            # support UDP loadbalancers and require reaching DNS through TCP.
+            cmds=('dig -t A @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"'
+                  'dig -t AAAA @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"'
+                  'dig -t A +tcp +retry=0 @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"'
+                  'dig -t AAAA +tcp +retry=0 @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"')
+            for i in ${!cmds[*]}
+            do
+              ips=($(eval "${cmds[i]}"))
+              if [[ "$?" -eq 0 && "${#ips[@]}" -ne 0 ]]; then
+                svc_ips["${svc}"]="${ips[@]}"
+                break
+              fi
+            done
+          done
+
+          # Update /etc/hosts only if we get valid service IPs
+          # We will not update /etc/hosts when there is coredns service outage or api unavailability
+          # Stale entries could exist in /etc/hosts if the service is deleted
+          if [[ -n "${svc_ips[*]-}" ]]; then
+            # Build a new hosts file from /etc/hosts with our custom entries filtered out
+            if ! sed --silent "/# ${OPENSHIFT_MARKER}/d; w ${TEMP_FILE}" "${HOSTS_FILE}"; then
+              # Only continue rebuilding the hosts entries if its original content is preserved
+              sleep 60 & wait
+              continue
+            fi
+
+            # Append resolver entries for services
+            rc=0
+            for svc in "${!svc_ips[@]}"; do
+              for ip in ${svc_ips[${svc}]}; do
+                echo "${ip} ${svc} ${svc}.${CLUSTER_DOMAIN} # ${OPENSHIFT_MARKER}" >> "${TEMP_FILE}" || rc=$?
+              done
+            done
+            if [[ $rc -ne 0 ]]; then
+              sleep 60 & wait
+              continue
+            fi
+
+
+            # TODO: Update /etc/hosts atomically to avoid any inconsistent behavior
+            # Replace /etc/hosts with our modified version if needed
+            cmp "${TEMP_FILE}" "${HOSTS_FILE}" || cp -f "${TEMP_FILE}" "${HOSTS_FILE}"
+            # TEMP_FILE is not removed to avoid file create/delete and attributes copy churn
+          fi
+          sleep 60 & wait
+          unset svc_ips
+        done
+      env:
+      - name: SERVICES
+        value: image-registry.openshift-image-registry.svc
+      - name: NAMESERVER
+        value: 172.30.0.10
+      - name: CLUSTER_DOMAIN
+        value: cluster.local
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a
+      imagePullPolicy: IfNotPresent
+      name: dns-node-resolver
+      resources:
+        requests:
+          cpu: 5m
+          memory: 21Mi
+      securityContext:
+        privileged: true
+        readOnlyRootFilesystem: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/hosts
+        name: hosts-file
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-9d8hd
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    hostNetwork: true
+    nodeName: ip-10-0-78-215.us-west-1.compute.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000001000
+    priorityClassName: system-node-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: node-resolver
+    serviceAccountName: node-resolver
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - operator: Exists
+    volumes:
+    - hostPath:
+        path: /etc/hosts
+        type: File
+      name: hosts-file
+    - emptyDir: {}
+      name: tmp-dir
+    - name: kube-api-access-9d8hd
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:36:34Z"
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:36:12Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:36:34Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:36:34Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:36:12Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - allocatedResources:
+        cpu: 5m
+        memory: 21Mi
+      containerID: cri-o://8b4d54062177f728061bfba13135bf13ba59060d2ef1f291f82579d55e9dfba0
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a
+      lastState: {}
+      name: dns-node-resolver
+      ready: true
+      resources:
+        requests:
+          cpu: 5m
+          memory: 21Mi
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:36:34Z"
+      user:
+        linux:
+          gid: 0
+          supplementalGroups:
+          - 0
+          uid: 0
+      volumeMounts:
+      - mountPath: /etc/hosts
+        name: hosts-file
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-9d8hd
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 10.0.78.215
+    hostIPs:
+    - ip: 10.0.78.215
+    phase: Running
+    podIP: 10.0.78.215
+    podIPs:
+    - ip: 10.0.78.215
+    qosClass: Burstable
+    startTime: "2026-01-28T09:36:12Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2026-01-28T09:41:49Z"
+    generateName: node-resolver-
+    generation: 1
+    labels:
+      controller-revision-hash: 5dcd9f9b8
+      dns.operator.openshift.io/daemonset-node-resolver: ""
+      pod-template-generation: "1"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:target.workload.openshift.io/management: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:controller-revision-hash: {}
+            f:dns.operator.openshift.io/daemonset-node-resolver: {}
+            f:pod-template-generation: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"a599b6e7-c66d-4f11-9cc8-6317fdefd964"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:nodeAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"dns-node-resolver"}:
+              .: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"CLUSTER_DOMAIN"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"NAMESERVER"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"SERVICES"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:privileged: {}
+                f:readOnlyRootFilesystem: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/hosts"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/tmp"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:hostNetwork: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"hosts-file"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"tmp-dir"}:
+              .: {}
+              f:emptyDir: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:41:49Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"PodReadyToStartContainers"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:hostIPs: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.0.22.208"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:42:15Z"
+    name: node-resolver-cqc85
+    namespace: openshift-dns
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: node-resolver
+      uid: a599b6e7-c66d-4f11-9cc8-6317fdefd964
+    resourceVersion: "20858"
+    uid: 6eb2d225-b124-4f3a-bc7a-9a85c4acf461
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - ip-10-0-22-208.us-west-1.compute.internal
+    containers:
+    - command:
+      - /bin/bash
+      - -c
+      - |
+        #!/bin/bash
+        set -uo pipefail
+
+        trap 'jobs -p | xargs kill || true; wait; exit 0' TERM
+
+        OPENSHIFT_MARKER="openshift-generated-node-resolver"
+        HOSTS_FILE="/etc/hosts"
+        TEMP_FILE="/tmp/hosts.tmp"
+
+        IFS=', ' read -r -a services <<< "${SERVICES}"
+
+        # Make a temporary file with the old hosts file's attributes.
+        if ! cp -f --attributes-only "${HOSTS_FILE}" "${TEMP_FILE}"; then
+          echo "Failed to preserve hosts file. Exiting."
+          exit 1
+        fi
+
+        while true; do
+          declare -A svc_ips
+          for svc in "${services[@]}"; do
+            # Fetch service IP from cluster dns if present. We make several tries
+            # to do it: IPv4, IPv6, IPv4 over TCP and IPv6 over TCP. The two last ones
+            # are for deployments with Kuryr on older OpenStack (OSP13) - those do not
+            # support UDP loadbalancers and require reaching DNS through TCP.
+            cmds=('dig -t A @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"'
+                  'dig -t AAAA @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"'
+                  'dig -t A +tcp +retry=0 @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"'
+                  'dig -t AAAA +tcp +retry=0 @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"')
+            for i in ${!cmds[*]}
+            do
+              ips=($(eval "${cmds[i]}"))
+              if [[ "$?" -eq 0 && "${#ips[@]}" -ne 0 ]]; then
+                svc_ips["${svc}"]="${ips[@]}"
+                break
+              fi
+            done
+          done
+
+          # Update /etc/hosts only if we get valid service IPs
+          # We will not update /etc/hosts when there is coredns service outage or api unavailability
+          # Stale entries could exist in /etc/hosts if the service is deleted
+          if [[ -n "${svc_ips[*]-}" ]]; then
+            # Build a new hosts file from /etc/hosts with our custom entries filtered out
+            if ! sed --silent "/# ${OPENSHIFT_MARKER}/d; w ${TEMP_FILE}" "${HOSTS_FILE}"; then
+              # Only continue rebuilding the hosts entries if its original content is preserved
+              sleep 60 & wait
+              continue
+            fi
+
+            # Append resolver entries for services
+            rc=0
+            for svc in "${!svc_ips[@]}"; do
+              for ip in ${svc_ips[${svc}]}; do
+                echo "${ip} ${svc} ${svc}.${CLUSTER_DOMAIN} # ${OPENSHIFT_MARKER}" >> "${TEMP_FILE}" || rc=$?
+              done
+            done
+            if [[ $rc -ne 0 ]]; then
+              sleep 60 & wait
+              continue
+            fi
+
+
+            # TODO: Update /etc/hosts atomically to avoid any inconsistent behavior
+            # Replace /etc/hosts with our modified version if needed
+            cmp "${TEMP_FILE}" "${HOSTS_FILE}" || cp -f "${TEMP_FILE}" "${HOSTS_FILE}"
+            # TEMP_FILE is not removed to avoid file create/delete and attributes copy churn
+          fi
+          sleep 60 & wait
+          unset svc_ips
+        done
+      env:
+      - name: SERVICES
+        value: image-registry.openshift-image-registry.svc
+      - name: NAMESERVER
+        value: 172.30.0.10
+      - name: CLUSTER_DOMAIN
+        value: cluster.local
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a
+      imagePullPolicy: IfNotPresent
+      name: dns-node-resolver
+      resources:
+        requests:
+          cpu: 5m
+          memory: 21Mi
+      securityContext:
+        privileged: true
+        readOnlyRootFilesystem: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/hosts
+        name: hosts-file
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-l9sbq
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    hostNetwork: true
+    nodeName: ip-10-0-22-208.us-west-1.compute.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000001000
+    priorityClassName: system-node-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: node-resolver
+    serviceAccountName: node-resolver
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - operator: Exists
+    volumes:
+    - hostPath:
+        path: /etc/hosts
+        type: File
+      name: hosts-file
+    - emptyDir: {}
+      name: tmp-dir
+    - name: kube-api-access-l9sbq
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:42:15Z"
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:41:51Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:42:15Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:42:15Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:41:49Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - allocatedResources:
+        cpu: 5m
+        memory: 21Mi
+      containerID: cri-o://1204d842dad35d9c31c583676c00bfa716f147625fdfa12638e388bc20f860e1
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a
+      lastState: {}
+      name: dns-node-resolver
+      ready: true
+      resources:
+        requests:
+          cpu: 5m
+          memory: 21Mi
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:42:14Z"
+      user:
+        linux:
+          gid: 0
+          supplementalGroups:
+          - 0
+          uid: 0
+      volumeMounts:
+      - mountPath: /etc/hosts
+        name: hosts-file
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-l9sbq
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 10.0.22.208
+    hostIPs:
+    - ip: 10.0.22.208
+    phase: Running
+    podIP: 10.0.22.208
+    podIPs:
+    - ip: 10.0.22.208
+    qosClass: Burstable
+    startTime: "2026-01-28T09:41:51Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2026-01-28T09:41:46Z"
+    generateName: node-resolver-
+    generation: 1
+    labels:
+      controller-revision-hash: 5dcd9f9b8
+      dns.operator.openshift.io/daemonset-node-resolver: ""
+      pod-template-generation: "1"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:target.workload.openshift.io/management: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:controller-revision-hash: {}
+            f:dns.operator.openshift.io/daemonset-node-resolver: {}
+            f:pod-template-generation: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"a599b6e7-c66d-4f11-9cc8-6317fdefd964"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:nodeAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"dns-node-resolver"}:
+              .: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"CLUSTER_DOMAIN"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"NAMESERVER"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"SERVICES"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:privileged: {}
+                f:readOnlyRootFilesystem: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/hosts"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/tmp"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:hostNetwork: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"hosts-file"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"tmp-dir"}:
+              .: {}
+              f:emptyDir: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:41:46Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"PodReadyToStartContainers"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:hostIPs: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.0.101.165"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:42:11Z"
+    name: node-resolver-k7g6c
+    namespace: openshift-dns
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: node-resolver
+      uid: a599b6e7-c66d-4f11-9cc8-6317fdefd964
+    resourceVersion: "20750"
+    uid: fc75b133-5390-4d28-9efb-5e9f4ecb0f18
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - ip-10-0-101-165.us-west-1.compute.internal
+    containers:
+    - command:
+      - /bin/bash
+      - -c
+      - |
+        #!/bin/bash
+        set -uo pipefail
+
+        trap 'jobs -p | xargs kill || true; wait; exit 0' TERM
+
+        OPENSHIFT_MARKER="openshift-generated-node-resolver"
+        HOSTS_FILE="/etc/hosts"
+        TEMP_FILE="/tmp/hosts.tmp"
+
+        IFS=', ' read -r -a services <<< "${SERVICES}"
+
+        # Make a temporary file with the old hosts file's attributes.
+        if ! cp -f --attributes-only "${HOSTS_FILE}" "${TEMP_FILE}"; then
+          echo "Failed to preserve hosts file. Exiting."
+          exit 1
+        fi
+
+        while true; do
+          declare -A svc_ips
+          for svc in "${services[@]}"; do
+            # Fetch service IP from cluster dns if present. We make several tries
+            # to do it: IPv4, IPv6, IPv4 over TCP and IPv6 over TCP. The two last ones
+            # are for deployments with Kuryr on older OpenStack (OSP13) - those do not
+            # support UDP loadbalancers and require reaching DNS through TCP.
+            cmds=('dig -t A @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"'
+                  'dig -t AAAA @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"'
+                  'dig -t A +tcp +retry=0 @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"'
+                  'dig -t AAAA +tcp +retry=0 @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"')
+            for i in ${!cmds[*]}
+            do
+              ips=($(eval "${cmds[i]}"))
+              if [[ "$?" -eq 0 && "${#ips[@]}" -ne 0 ]]; then
+                svc_ips["${svc}"]="${ips[@]}"
+                break
+              fi
+            done
+          done
+
+          # Update /etc/hosts only if we get valid service IPs
+          # We will not update /etc/hosts when there is coredns service outage or api unavailability
+          # Stale entries could exist in /etc/hosts if the service is deleted
+          if [[ -n "${svc_ips[*]-}" ]]; then
+            # Build a new hosts file from /etc/hosts with our custom entries filtered out
+            if ! sed --silent "/# ${OPENSHIFT_MARKER}/d; w ${TEMP_FILE}" "${HOSTS_FILE}"; then
+              # Only continue rebuilding the hosts entries if its original content is preserved
+              sleep 60 & wait
+              continue
+            fi
+
+            # Append resolver entries for services
+            rc=0
+            for svc in "${!svc_ips[@]}"; do
+              for ip in ${svc_ips[${svc}]}; do
+                echo "${ip} ${svc} ${svc}.${CLUSTER_DOMAIN} # ${OPENSHIFT_MARKER}" >> "${TEMP_FILE}" || rc=$?
+              done
+            done
+            if [[ $rc -ne 0 ]]; then
+              sleep 60 & wait
+              continue
+            fi
+
+
+            # TODO: Update /etc/hosts atomically to avoid any inconsistent behavior
+            # Replace /etc/hosts with our modified version if needed
+            cmp "${TEMP_FILE}" "${HOSTS_FILE}" || cp -f "${TEMP_FILE}" "${HOSTS_FILE}"
+            # TEMP_FILE is not removed to avoid file create/delete and attributes copy churn
+          fi
+          sleep 60 & wait
+          unset svc_ips
+        done
+      env:
+      - name: SERVICES
+        value: image-registry.openshift-image-registry.svc
+      - name: NAMESERVER
+        value: 172.30.0.10
+      - name: CLUSTER_DOMAIN
+        value: cluster.local
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a
+      imagePullPolicy: IfNotPresent
+      name: dns-node-resolver
+      resources:
+        requests:
+          cpu: 5m
+          memory: 21Mi
+      securityContext:
+        privileged: true
+        readOnlyRootFilesystem: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/hosts
+        name: hosts-file
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-927sh
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    hostNetwork: true
+    nodeName: ip-10-0-101-165.us-west-1.compute.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000001000
+    priorityClassName: system-node-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: node-resolver
+    serviceAccountName: node-resolver
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - operator: Exists
+    volumes:
+    - hostPath:
+        path: /etc/hosts
+        type: File
+      name: hosts-file
+    - emptyDir: {}
+      name: tmp-dir
+    - name: kube-api-access-927sh
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:42:11Z"
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:41:48Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:42:11Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:42:11Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:41:46Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - allocatedResources:
+        cpu: 5m
+        memory: 21Mi
+      containerID: cri-o://4585fd1fa2656654564b7ef5766d852ee657d3ed5bedffafa0c4ab5deec83975
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a
+      lastState: {}
+      name: dns-node-resolver
+      ready: true
+      resources:
+        requests:
+          cpu: 5m
+          memory: 21Mi
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:42:10Z"
+      user:
+        linux:
+          gid: 0
+          supplementalGroups:
+          - 0
+          uid: 0
+      volumeMounts:
+      - mountPath: /etc/hosts
+        name: hosts-file
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-927sh
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 10.0.101.165
+    hostIPs:
+    - ip: 10.0.101.165
+    phase: Running
+    podIP: 10.0.101.165
+    podIPs:
+    - ip: 10.0.101.165
+    qosClass: Burstable
+    startTime: "2026-01-28T09:41:48Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    generateName: node-resolver-
+    generation: 1
+    labels:
+      controller-revision-hash: 5dcd9f9b8
+      dns.operator.openshift.io/daemonset-node-resolver: ""
+      pod-template-generation: "1"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:target.workload.openshift.io/management: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:controller-revision-hash: {}
+            f:dns.operator.openshift.io/daemonset-node-resolver: {}
+            f:pod-template-generation: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"a599b6e7-c66d-4f11-9cc8-6317fdefd964"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:nodeAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"dns-node-resolver"}:
+              .: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"CLUSTER_DOMAIN"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"NAMESERVER"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"SERVICES"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:privileged: {}
+                f:readOnlyRootFilesystem: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/hosts"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/tmp"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:hostNetwork: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"hosts-file"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"tmp-dir"}:
+              .: {}
+              f:emptyDir: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"PodReadyToStartContainers"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:hostIPs: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.0.108.54"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:32:04Z"
+    name: node-resolver-ndnhf
+    namespace: openshift-dns
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: node-resolver
+      uid: a599b6e7-c66d-4f11-9cc8-6317fdefd964
+    resourceVersion: "11012"
+    uid: d9750b08-86f6-4ec3-911c-97090b3cd747
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - ip-10-0-108-54.us-west-1.compute.internal
+    containers:
+    - command:
+      - /bin/bash
+      - -c
+      - |
+        #!/bin/bash
+        set -uo pipefail
+
+        trap 'jobs -p | xargs kill || true; wait; exit 0' TERM
+
+        OPENSHIFT_MARKER="openshift-generated-node-resolver"
+        HOSTS_FILE="/etc/hosts"
+        TEMP_FILE="/tmp/hosts.tmp"
+
+        IFS=', ' read -r -a services <<< "${SERVICES}"
+
+        # Make a temporary file with the old hosts file's attributes.
+        if ! cp -f --attributes-only "${HOSTS_FILE}" "${TEMP_FILE}"; then
+          echo "Failed to preserve hosts file. Exiting."
+          exit 1
+        fi
+
+        while true; do
+          declare -A svc_ips
+          for svc in "${services[@]}"; do
+            # Fetch service IP from cluster dns if present. We make several tries
+            # to do it: IPv4, IPv6, IPv4 over TCP and IPv6 over TCP. The two last ones
+            # are for deployments with Kuryr on older OpenStack (OSP13) - those do not
+            # support UDP loadbalancers and require reaching DNS through TCP.
+            cmds=('dig -t A @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"'
+                  'dig -t AAAA @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"'
+                  'dig -t A +tcp +retry=0 @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"'
+                  'dig -t AAAA +tcp +retry=0 @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"')
+            for i in ${!cmds[*]}
+            do
+              ips=($(eval "${cmds[i]}"))
+              if [[ "$?" -eq 0 && "${#ips[@]}" -ne 0 ]]; then
+                svc_ips["${svc}"]="${ips[@]}"
+                break
+              fi
+            done
+          done
+
+          # Update /etc/hosts only if we get valid service IPs
+          # We will not update /etc/hosts when there is coredns service outage or api unavailability
+          # Stale entries could exist in /etc/hosts if the service is deleted
+          if [[ -n "${svc_ips[*]-}" ]]; then
+            # Build a new hosts file from /etc/hosts with our custom entries filtered out
+            if ! sed --silent "/# ${OPENSHIFT_MARKER}/d; w ${TEMP_FILE}" "${HOSTS_FILE}"; then
+              # Only continue rebuilding the hosts entries if its original content is preserved
+              sleep 60 & wait
+              continue
+            fi
+
+            # Append resolver entries for services
+            rc=0
+            for svc in "${!svc_ips[@]}"; do
+              for ip in ${svc_ips[${svc}]}; do
+                echo "${ip} ${svc} ${svc}.${CLUSTER_DOMAIN} # ${OPENSHIFT_MARKER}" >> "${TEMP_FILE}" || rc=$?
+              done
+            done
+            if [[ $rc -ne 0 ]]; then
+              sleep 60 & wait
+              continue
+            fi
+
+
+            # TODO: Update /etc/hosts atomically to avoid any inconsistent behavior
+            # Replace /etc/hosts with our modified version if needed
+            cmp "${TEMP_FILE}" "${HOSTS_FILE}" || cp -f "${TEMP_FILE}" "${HOSTS_FILE}"
+            # TEMP_FILE is not removed to avoid file create/delete and attributes copy churn
+          fi
+          sleep 60 & wait
+          unset svc_ips
+        done
+      env:
+      - name: SERVICES
+        value: image-registry.openshift-image-registry.svc
+      - name: NAMESERVER
+        value: 172.30.0.10
+      - name: CLUSTER_DOMAIN
+        value: cluster.local
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a
+      imagePullPolicy: IfNotPresent
+      name: dns-node-resolver
+      resources:
+        requests:
+          cpu: 5m
+          memory: 21Mi
+      securityContext:
+        privileged: true
+        readOnlyRootFilesystem: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/hosts
+        name: hosts-file
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-vqs5p
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    hostNetwork: true
+    nodeName: ip-10-0-108-54.us-west-1.compute.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000001000
+    priorityClassName: system-node-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: node-resolver
+    serviceAccountName: node-resolver
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - operator: Exists
+    volumes:
+    - hostPath:
+        path: /etc/hosts
+        type: File
+      name: hosts-file
+    - emptyDir: {}
+      name: tmp-dir
+    - name: kube-api-access-vqs5p
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:32:04Z"
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:31:59Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:32:04Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:32:04Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:31:59Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - allocatedResources:
+        cpu: 5m
+        memory: 21Mi
+      containerID: cri-o://93f3050910c436b36d42ede712292dec7c810f6853ca5fd1bc81f7a8d6baf8a2
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a
+      lastState: {}
+      name: dns-node-resolver
+      ready: true
+      resources:
+        requests:
+          cpu: 5m
+          memory: 21Mi
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:32:03Z"
+      user:
+        linux:
+          gid: 0
+          supplementalGroups:
+          - 0
+          uid: 0
+      volumeMounts:
+      - mountPath: /etc/hosts
+        name: hosts-file
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-vqs5p
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 10.0.108.54
+    hostIPs:
+    - ip: 10.0.108.54
+    phase: Running
+    podIP: 10.0.108.54
+    podIPs:
+    - ip: 10.0.108.54
+    qosClass: Burstable
+    startTime: "2026-01-28T09:31:59Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    generateName: node-resolver-
+    generation: 1
+    labels:
+      controller-revision-hash: 5dcd9f9b8
+      dns.operator.openshift.io/daemonset-node-resolver: ""
+      pod-template-generation: "1"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:target.workload.openshift.io/management: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:controller-revision-hash: {}
+            f:dns.operator.openshift.io/daemonset-node-resolver: {}
+            f:pod-template-generation: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"a599b6e7-c66d-4f11-9cc8-6317fdefd964"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:nodeAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"dns-node-resolver"}:
+              .: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"CLUSTER_DOMAIN"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"NAMESERVER"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"SERVICES"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:privileged: {}
+                f:readOnlyRootFilesystem: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/hosts"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/tmp"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:hostNetwork: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"hosts-file"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"tmp-dir"}:
+              .: {}
+              f:emptyDir: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"PodReadyToStartContainers"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:hostIPs: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.0.3.203"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:32:01Z"
+    name: node-resolver-tqf2n
+    namespace: openshift-dns
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: node-resolver
+      uid: a599b6e7-c66d-4f11-9cc8-6317fdefd964
+    resourceVersion: "10812"
+    uid: f7a34f15-1599-4f39-8c75-2dc31527b20a
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - ip-10-0-3-203.us-west-1.compute.internal
+    containers:
+    - command:
+      - /bin/bash
+      - -c
+      - |
+        #!/bin/bash
+        set -uo pipefail
+
+        trap 'jobs -p | xargs kill || true; wait; exit 0' TERM
+
+        OPENSHIFT_MARKER="openshift-generated-node-resolver"
+        HOSTS_FILE="/etc/hosts"
+        TEMP_FILE="/tmp/hosts.tmp"
+
+        IFS=', ' read -r -a services <<< "${SERVICES}"
+
+        # Make a temporary file with the old hosts file's attributes.
+        if ! cp -f --attributes-only "${HOSTS_FILE}" "${TEMP_FILE}"; then
+          echo "Failed to preserve hosts file. Exiting."
+          exit 1
+        fi
+
+        while true; do
+          declare -A svc_ips
+          for svc in "${services[@]}"; do
+            # Fetch service IP from cluster dns if present. We make several tries
+            # to do it: IPv4, IPv6, IPv4 over TCP and IPv6 over TCP. The two last ones
+            # are for deployments with Kuryr on older OpenStack (OSP13) - those do not
+            # support UDP loadbalancers and require reaching DNS through TCP.
+            cmds=('dig -t A @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"'
+                  'dig -t AAAA @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"'
+                  'dig -t A +tcp +retry=0 @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"'
+                  'dig -t AAAA +tcp +retry=0 @"${NAMESERVER}" +short "${svc}.${CLUSTER_DOMAIN}"|grep -v "^;"')
+            for i in ${!cmds[*]}
+            do
+              ips=($(eval "${cmds[i]}"))
+              if [[ "$?" -eq 0 && "${#ips[@]}" -ne 0 ]]; then
+                svc_ips["${svc}"]="${ips[@]}"
+                break
+              fi
+            done
+          done
+
+          # Update /etc/hosts only if we get valid service IPs
+          # We will not update /etc/hosts when there is coredns service outage or api unavailability
+          # Stale entries could exist in /etc/hosts if the service is deleted
+          if [[ -n "${svc_ips[*]-}" ]]; then
+            # Build a new hosts file from /etc/hosts with our custom entries filtered out
+            if ! sed --silent "/# ${OPENSHIFT_MARKER}/d; w ${TEMP_FILE}" "${HOSTS_FILE}"; then
+              # Only continue rebuilding the hosts entries if its original content is preserved
+              sleep 60 & wait
+              continue
+            fi
+
+            # Append resolver entries for services
+            rc=0
+            for svc in "${!svc_ips[@]}"; do
+              for ip in ${svc_ips[${svc}]}; do
+                echo "${ip} ${svc} ${svc}.${CLUSTER_DOMAIN} # ${OPENSHIFT_MARKER}" >> "${TEMP_FILE}" || rc=$?
+              done
+            done
+            if [[ $rc -ne 0 ]]; then
+              sleep 60 & wait
+              continue
+            fi
+
+
+            # TODO: Update /etc/hosts atomically to avoid any inconsistent behavior
+            # Replace /etc/hosts with our modified version if needed
+            cmp "${TEMP_FILE}" "${HOSTS_FILE}" || cp -f "${TEMP_FILE}" "${HOSTS_FILE}"
+            # TEMP_FILE is not removed to avoid file create/delete and attributes copy churn
+          fi
+          sleep 60 & wait
+          unset svc_ips
+        done
+      env:
+      - name: SERVICES
+        value: image-registry.openshift-image-registry.svc
+      - name: NAMESERVER
+        value: 172.30.0.10
+      - name: CLUSTER_DOMAIN
+        value: cluster.local
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a
+      imagePullPolicy: IfNotPresent
+      name: dns-node-resolver
+      resources:
+        requests:
+          cpu: 5m
+          memory: 21Mi
+      securityContext:
+        privileged: true
+        readOnlyRootFilesystem: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/hosts
+        name: hosts-file
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-fvbrj
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    hostNetwork: true
+    nodeName: ip-10-0-3-203.us-west-1.compute.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000001000
+    priorityClassName: system-node-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: node-resolver
+    serviceAccountName: node-resolver
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - operator: Exists
+    volumes:
+    - hostPath:
+        path: /etc/hosts
+        type: File
+      name: hosts-file
+    - emptyDir: {}
+      name: tmp-dir
+    - name: kube-api-access-fvbrj
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:32:01Z"
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:31:59Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:32:01Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:32:01Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:31:59Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - allocatedResources:
+        cpu: 5m
+        memory: 21Mi
+      containerID: cri-o://511f5654ae4a2089932bad4eecdd81871628587c79a9145ac37b360fc888036a
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a
+      lastState: {}
+      name: dns-node-resolver
+      ready: true
+      resources:
+        requests:
+          cpu: 5m
+          memory: 21Mi
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:32:00Z"
+      user:
+        linux:
+          gid: 0
+          supplementalGroups:
+          - 0
+          uid: 0
+      volumeMounts:
+      - mountPath: /etc/hosts
+        name: hosts-file
+      - mountPath: /tmp
+        name: tmp-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-fvbrj
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 10.0.3.203
+    hostIPs:
+    - ip: 10.0.3.203
+    phase: Running
+    podIP: 10.0.3.203
+    podIPs:
+    - ip: 10.0.3.203
+    qosClass: Burstable
+    startTime: "2026-01-28T09:31:59Z"
+kind: PodList
+metadata:
+  resourceVersion: "35035"

@@ -1,0 +1,40 @@
+2026-01-28T09:40:51.345745089Z + timeout 3m /bin/bash -exuo pipefail -c 'while [ -n "$(ss -Htanop \( sport = 11443 \))" ]; do sleep 1; done'
+2026-01-28T09:40:51.349192835Z ++ ss -Htanop '(' sport = 11443 ')'
+2026-01-28T09:40:51.355692418Z + '[' -n '' ']'
+2026-01-28T09:40:51.356128518Z + exec cluster-kube-scheduler-operator cert-recovery-controller --kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/kube-scheduler-cert-syncer-kubeconfig/kubeconfig --namespace=openshift-kube-scheduler --listen=0.0.0.0:11443 -v=2
+2026-01-28T09:40:51.403352850Z W0128 09:40:51.403232       1 cmd.go:257] Using insecure, self-signed certificates
+2026-01-28T09:40:51.403502084Z I0128 09:40:51.403485       1 crypto.go:594] Generating new CA for cert-recovery-controller-signer@1769593251 cert, and key in /tmp/serving-cert-924915879/serving-signer.crt, /tmp/serving-cert-924915879/serving-signer.key
+2026-01-28T09:40:51.403535435Z Validity period of the certificate for "cert-recovery-controller-signer@1769593251" is unset, resetting to 157680000000000000 years!
+2026-01-28T09:40:52.418825423Z I0128 09:40:52.418739       1 leaderelection.go:121] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2026-01-28T09:40:52.419476817Z I0128 09:40:52.419435       1 observer_polling.go:159] Starting file observer
+2026-01-28T09:40:52.419639441Z I0128 09:40:52.419599       1 envvar.go:172] "Feature gate default state" feature="ClientsPreferCBOR" enabled=false
+2026-01-28T09:40:52.419639441Z I0128 09:40:52.419616       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2026-01-28T09:40:52.419639441Z I0128 09:40:52.419621       1 envvar.go:172] "Feature gate default state" feature="InOrderInformers" enabled=true
+2026-01-28T09:40:52.419639441Z I0128 09:40:52.419625       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2026-01-28T09:40:52.419639441Z I0128 09:40:52.419629       1 envvar.go:172] "Feature gate default state" feature="ClientsAllowCBOR" enabled=false
+2026-01-28T09:40:52.427804021Z I0128 09:40:52.427773       1 builder.go:304] cert-recovery-controller version v0.0.0-master+$Format:%H$-$Format:%H$
+2026-01-28T09:40:52.431769129Z I0128 09:40:52.431744       1 leaderelection.go:257] attempting to acquire leader lease openshift-kube-scheduler/cert-recovery-controller-lock...
+2026-01-28T09:40:52.438830525Z I0128 09:40:52.438787       1 leaderelection.go:271] successfully acquired lease openshift-kube-scheduler/cert-recovery-controller-lock
+2026-01-28T09:40:52.439046970Z I0128 09:40:52.439012       1 event.go:377] Event(v1.ObjectReference{Kind:"Lease", Namespace:"openshift-kube-scheduler", Name:"cert-recovery-controller-lock", UID:"9bc196cf-f971-4ef6-91e7-d425d515b8b3", APIVersion:"coordination.k8s.io/v1", ResourceVersion:"19126", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' ip-10-0-102-200_1ad97056-0d43-4b26-9183-f9333189b860 became leader
+2026-01-28T09:40:52.439711555Z I0128 09:40:52.439671       1 base_controller.go:76] Waiting for caches to sync for kube-scheduler
+2026-01-28T09:40:52.443919388Z I0128 09:40:52.443894       1 reflector.go:430] "Caches populated" type="*v1.Secret" reflector="k8s.io/client-go@v0.33.2/tools/cache/reflector.go:285"
+2026-01-28T09:40:52.448516409Z I0128 09:40:52.446286       1 reflector.go:430] "Caches populated" type="*v1.ConfigMap" reflector="k8s.io/client-go@v0.33.2/tools/cache/reflector.go:285"
+2026-01-28T09:40:52.448516409Z I0128 09:40:52.446805       1 reflector.go:430] "Caches populated" type="operator.openshift.io/v1, Resource=kubeschedulers" reflector="k8s.io/client-go@v0.33.2/tools/cache/reflector.go:285"
+2026-01-28T09:40:52.448516409Z I0128 09:40:52.447370       1 reflector.go:430] "Caches populated" type="*v1.Secret" reflector="k8s.io/client-go@v0.33.2/tools/cache/reflector.go:285"
+2026-01-28T09:40:52.457601490Z I0128 09:40:52.457574       1 reflector.go:430] "Caches populated" type="*v1.ConfigMap" reflector="k8s.io/client-go@v0.33.2/tools/cache/reflector.go:285"
+2026-01-28T09:40:52.539943831Z I0128 09:40:52.539890       1 base_controller.go:82] Caches are synced for kube-scheduler 
+2026-01-28T09:40:52.539943831Z I0128 09:40:52.539920       1 base_controller.go:119] Starting #1 worker of kube-scheduler controller ...
+2026-01-28T09:44:13.764644816Z E0128 09:44:13.758256       1 reflector.go:200] "Failed to watch" err="kubeschedulers.operator.openshift.io is forbidden: User \"system:serviceaccount:openshift-kube-scheduler:localhost-recovery-client\" cannot watch resource \"kubeschedulers\" in API group \"operator.openshift.io\" at the cluster scope" reflector="k8s.io/client-go@v0.33.2/tools/cache/reflector.go:285" type="operator.openshift.io/v1, Resource=kubeschedulers"
+2026-01-28T09:44:31.245890290Z I0128 09:44:31.245853       1 reflector.go:430] "Caches populated" type="operator.openshift.io/v1, Resource=kubeschedulers" reflector="k8s.io/client-go@v0.33.2/tools/cache/reflector.go:285"
+2026-01-28T09:44:31.794174815Z I0128 09:44:31.794124       1 reflector.go:430] "Caches populated" type="*v1.ConfigMap" reflector="k8s.io/client-go@v0.33.2/tools/cache/reflector.go:285"
+2026-01-28T09:44:32.024040691Z I0128 09:44:32.023995       1 reflector.go:430] "Caches populated" type="*v1.Secret" reflector="k8s.io/client-go@v0.33.2/tools/cache/reflector.go:285"
+2026-01-28T09:44:32.287638153Z I0128 09:44:32.287601       1 reflector.go:430] "Caches populated" type="*v1.Secret" reflector="k8s.io/client-go@v0.33.2/tools/cache/reflector.go:285"
+2026-01-28T09:44:38.252734589Z I0128 09:44:38.252687       1 reflector.go:430] "Caches populated" type="*v1.ConfigMap" reflector="k8s.io/client-go@v0.33.2/tools/cache/reflector.go:285"
+2026-01-28T09:46:30.527590528Z E0128 09:46:30.527522       1 leaderelection.go:429] Failed to update lock optimistically: Put "https://localhost:6443/apis/coordination.k8s.io/v1/namespaces/openshift-kube-scheduler/leases/cert-recovery-controller-lock?timeout=1m47s": dial tcp [::1]:6443: connect: connection refused, falling back to slow path
+2026-01-28T09:46:30.528393307Z E0128 09:46:30.528350       1 leaderelection.go:436] error retrieving resource lock openshift-kube-scheduler/cert-recovery-controller-lock: Get "https://localhost:6443/apis/coordination.k8s.io/v1/namespaces/openshift-kube-scheduler/leases/cert-recovery-controller-lock?timeout=1m47s": dial tcp [::1]:6443: connect: connection refused
+2026-01-28T09:46:45.334142875Z E0128 09:46:45.332360       1 reflector.go:200] "Failed to watch" err="secrets is forbidden: User \"system:serviceaccount:openshift-kube-scheduler:localhost-recovery-client\" cannot watch resource \"secrets\" in API group \"\" in the namespace \"openshift-config-managed\"" reflector="k8s.io/client-go@v0.33.2/tools/cache/reflector.go:285" type="*v1.Secret"
+2026-01-28T09:46:59.571914325Z I0128 09:46:59.571866       1 reflector.go:430] "Caches populated" type="*v1.Secret" reflector="k8s.io/client-go@v0.33.2/tools/cache/reflector.go:285"
+2026-01-28T09:47:03.307975247Z I0128 09:47:03.307923       1 reflector.go:430] "Caches populated" type="*v1.Secret" reflector="k8s.io/client-go@v0.33.2/tools/cache/reflector.go:285"
+2026-01-28T09:47:05.349523660Z I0128 09:47:05.349472       1 reflector.go:430] "Caches populated" type="*v1.ConfigMap" reflector="k8s.io/client-go@v0.33.2/tools/cache/reflector.go:285"
+2026-01-28T09:47:10.349524004Z I0128 09:47:10.349464       1 reflector.go:430] "Caches populated" type="operator.openshift.io/v1, Resource=kubeschedulers" reflector="k8s.io/client-go@v0.33.2/tools/cache/reflector.go:285"
+2026-01-28T09:47:11.868111739Z I0128 09:47:11.868039       1 reflector.go:430] "Caches populated" type="*v1.ConfigMap" reflector="k8s.io/client-go@v0.33.2/tools/cache/reflector.go:285"

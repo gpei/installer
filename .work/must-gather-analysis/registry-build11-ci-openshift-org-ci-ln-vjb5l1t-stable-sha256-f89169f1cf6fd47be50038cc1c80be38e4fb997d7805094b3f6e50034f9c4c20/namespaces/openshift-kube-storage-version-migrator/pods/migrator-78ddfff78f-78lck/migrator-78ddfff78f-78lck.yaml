@@ -1,0 +1,386 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.6/23"],"mac_address":"0a:58:0a:80:00:06","gateway_ips":["10.128.0.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.128.0.1"},{"dest":"172.30.0.0/16","nextHop":"10.128.0.1"},{"dest":"169.254.0.5/32","nextHop":"10.128.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.0.1"}],"ip_address":"10.128.0.6/23","gateway_ip":"10.128.0.1","role":"primary"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.6"
+          ],
+          "mac": "0a:58:0a:80:00:06",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/required-scc: nonroot-v2
+    openshift.io/scc: nonroot-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    security.openshift.io/validated-scc-subject-type: serviceaccount
+  creationTimestamp: "2026-01-28T09:30:32Z"
+  generateName: migrator-78ddfff78f-
+  generation: 1
+  labels:
+    app: migrator
+    pod-template-hash: 78ddfff78f
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ip-10-0-3-203
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:30:32Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/required-scc: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"e812c36c-815e-404f-baeb-a3b1ea31487c"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"graceful-termination"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+              f:runAsUser: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+          k:{"name":"migrator"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+              f:runAsUser: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsNonRoot: {}
+          f:seccompProfile:
+            .: {}
+            f:type: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2026-01-28T09:30:32Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:30:32Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.6"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:30:35Z"
+  name: migrator-78ddfff78f-78lck
+  namespace: openshift-kube-storage-version-migrator
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: migrator-78ddfff78f
+    uid: e812c36c-815e-404f-baeb-a3b1ea31487c
+  resourceVersion: "6133"
+  uid: b5ae3c21-5388-4642-84b4-903465766cf7
+spec:
+  containers:
+  - args:
+    - |-
+      trap 'echo "Termination signal received, but ignored. Continuing..."; sleep infinity' TERM
+      migrator "$@" & wait $!
+    - bash
+    - --alsologtostderr
+    - --v=2
+    command:
+    - /bin/bash
+    - -c
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:7035421c98933b1006ada36c6d4be4ea2c84c8805c92063a5cfea283d5145a8c
+    imagePullPolicy: IfNotPresent
+    name: migrator
+    resources:
+      requests:
+        cpu: 10m
+        memory: 200Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsUser: 1001
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-xttw5
+      readOnly: true
+  - args:
+    - |-
+      trap 'echo "Gracefully sleeping for 25s to let another pod start..."; sleep 25; exit' EXIT
+      while true; do echo "Waiting for termination..."; sleep 3600 & wait $!; done
+    command:
+    - /bin/bash
+    - -c
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:7035421c98933b1006ada36c6d4be4ea2c84c8805c92063a5cfea283d5145a8c
+    imagePullPolicy: IfNotPresent
+    name: graceful-termination
+    resources:
+      requests:
+        cpu: 1m
+        memory: 1Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsUser: 1001
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-xttw5
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: ip-10-0-3-203.us-west-1.compute.internal
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    runAsNonRoot: true
+    seLinuxOptions:
+      level: s0:c25,c0
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: kube-storage-version-migrator-sa
+  serviceAccountName: kube-storage-version-migrator-sa
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: kube-api-access-xttw5
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:30:35Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:30:32Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:30:35Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:30:35Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:30:32Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - allocatedResources:
+      cpu: 1m
+      memory: 1Mi
+    containerID: cri-o://ec93b092e4e99d27f453d2c71d7bb639c2c7f0856d78000d8bcd8ecd55e7c778
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:7035421c98933b1006ada36c6d4be4ea2c84c8805c92063a5cfea283d5145a8c
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:7035421c98933b1006ada36c6d4be4ea2c84c8805c92063a5cfea283d5145a8c
+    lastState: {}
+    name: graceful-termination
+    ready: true
+    resources:
+      requests:
+        cpu: 1m
+        memory: 1Mi
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2026-01-28T09:30:34Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        uid: 1001
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-xttw5
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - allocatedResources:
+      cpu: 10m
+      memory: 200Mi
+    containerID: cri-o://5c18b1d9e483e7316701370d1a98df0d60b78941316de4f16a767d9d9323a71f
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:7035421c98933b1006ada36c6d4be4ea2c84c8805c92063a5cfea283d5145a8c
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:7035421c98933b1006ada36c6d4be4ea2c84c8805c92063a5cfea283d5145a8c
+    lastState: {}
+    name: migrator
+    ready: true
+    resources:
+      requests:
+        cpu: 10m
+        memory: 200Mi
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2026-01-28T09:30:34Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        uid: 1001
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-xttw5
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 10.0.3.203
+  hostIPs:
+  - ip: 10.0.3.203
+  phase: Running
+  podIP: 10.128.0.6
+  podIPs:
+  - ip: 10.128.0.6
+  qosClass: Burstable
+  startTime: "2026-01-28T09:30:32Z"

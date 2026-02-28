@@ -1,0 +1,434 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: KubeScheduler
+metadata:
+  annotations:
+    include.release.openshift.io/hypershift: "true"
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2026-01-28T09:25:47Z"
+  generation: 2
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"MissingStaticPodControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: MissingStaticPodController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:35Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"UnsupportedConfigOverridesUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: cluster-kube-scheduler-operator-UnsupportedConfigOverrides
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:35Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"NodeControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:nodeStatuses:
+          k:{"nodeName":"ip-10-0-3-203.us-west-1.compute.internal"}:
+            .: {}
+            f:nodeName: {}
+          k:{"nodeName":"ip-10-0-102-200.us-west-1.compute.internal"}:
+            .: {}
+            f:nodeName: {}
+          k:{"nodeName":"ip-10-0-108-54.us-west-1.compute.internal"}:
+            .: {}
+            f:nodeName: {}
+    manager: kube-scheduler-Node
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:35Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"StaticPodsDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler-StaticPodState
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:35Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"InstallerPodContainerWaitingDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"InstallerPodNetworkingDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"InstallerPodPendingDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler-InstallerState
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:36Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"BackingResourceControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: BackingResourceController-StaticResources
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:37Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ResourceSyncControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler-ResourceSync
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:37Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ConfigObservationDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler-ConfigObserver
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:39Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"KubeControllerManagerStaticResourcesDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: KubeControllerManagerStaticResources-StaticResources
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:45Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"RevisionControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: RevisionController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:53Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"GuardControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: GuardController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:37:28Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:latestAvailableRevision: {}
+    manager: kube-scheduler-RevisionController
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:40:00Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"InstallerControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"NodeInstallerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"NodeInstallerProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"StaticPodsAvailable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:nodeStatuses:
+          k:{"nodeName":"ip-10-0-3-203.us-west-1.compute.internal"}:
+            .: {}
+            f:currentRevision: {}
+            f:lastFailedCount: {}
+            f:lastFailedReason: {}
+            f:lastFailedRevision: {}
+            f:lastFallbackCount: {}
+            f:nodeName: {}
+            f:targetRevision: {}
+          k:{"nodeName":"ip-10-0-102-200.us-west-1.compute.internal"}:
+            .: {}
+            f:currentRevision: {}
+            f:lastFailedCount: {}
+            f:lastFailedReason: {}
+            f:lastFailedRevision: {}
+            f:lastFallbackCount: {}
+            f:nodeName: {}
+            f:targetRevision: {}
+          k:{"nodeName":"ip-10-0-108-54.us-west-1.compute.internal"}:
+            .: {}
+            f:currentRevision: {}
+            f:lastFailedCount: {}
+            f:lastFailedReason: {}
+            f:lastFailedRevision: {}
+            f:lastFallbackCount: {}
+            f:nodeName: {}
+            f:targetRevision: {}
+    manager: kube-scheduler-Installer
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:45:45Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/hypershift: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:release.openshift.io/create-only: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec:
+        .: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:operatorLogLevel: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:25:47Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:observedConfig:
+          .: {}
+          f:servingInfo:
+            .: {}
+            f:cipherSuites: {}
+            f:minTLSVersion: {}
+        f:unsupportedConfigOverrides: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2026-01-28T09:30:39Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"TargetConfigControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:readyReplicas: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:38:23Z"
+  name: cluster
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "25004"
+  uid: 41b72250-0455-4ecf-b572-51d5d0e79699
+spec:
+  logLevel: Normal
+  managementState: Managed
+  observedConfig:
+    servingInfo:
+      cipherSuites:
+      - TLS_AES_128_GCM_SHA256
+      - TLS_AES_256_GCM_SHA384
+      - TLS_CHACHA20_POLY1305_SHA256
+      - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+      - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+      minTLSVersion: VersionTLS12
+  operatorLogLevel: Normal
+  unsupportedConfigOverrides: null
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:30:53Z"
+    reason: AsExpected
+    status: "False"
+    type: RevisionControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:35Z"
+    reason: NoUnsupportedConfigOverrides
+    status: "True"
+    type: UnsupportedConfigOverridesUpgradeable
+  - lastTransitionTime: "2026-01-28T09:30:35Z"
+    reason: AsExpected
+    status: "False"
+    type: MissingStaticPodControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:35Z"
+    status: "False"
+    type: StaticPodsDegraded
+  - lastTransitionTime: "2026-01-28T09:30:54Z"
+    status: "False"
+    type: InstallerControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:35Z"
+    status: "False"
+    type: NodeInstallerDegraded
+  - lastTransitionTime: "2026-01-28T09:45:45Z"
+    message: 3 nodes are at revision 6
+    reason: AllNodesAtLatestRevision
+    status: "False"
+    type: NodeInstallerProgressing
+  - lastTransitionTime: "2026-01-28T09:33:56Z"
+    message: 3 nodes are active; 3 nodes are at revision 6
+    reason: ""
+    status: "True"
+    type: StaticPodsAvailable
+  - lastTransitionTime: "2026-01-28T09:30:35Z"
+    message: All master nodes are ready
+    reason: MasterNodesReady
+    status: "False"
+    type: NodeControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:37:28Z"
+    reason: AsExpected
+    status: "False"
+    type: GuardControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:36Z"
+    status: "False"
+    type: InstallerPodContainerWaitingDegraded
+  - lastTransitionTime: "2026-01-28T09:30:36Z"
+    status: "False"
+    type: InstallerPodNetworkingDegraded
+  - lastTransitionTime: "2026-01-28T09:30:36Z"
+    status: "False"
+    type: InstallerPodPendingDegraded
+  - lastTransitionTime: "2026-01-28T09:30:37Z"
+    status: "False"
+    type: ResourceSyncControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:37Z"
+    reason: AsExpected
+    status: "False"
+    type: BackingResourceControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:39Z"
+    status: "False"
+    type: ConfigObservationDegraded
+  - lastTransitionTime: "2026-01-28T09:30:45Z"
+    reason: AsExpected
+    status: "False"
+    type: KubeControllerManagerStaticResourcesDegraded
+  - lastTransitionTime: "2026-01-28T09:38:23Z"
+    status: "False"
+    type: TargetConfigControllerDegraded
+  latestAvailableRevision: 6
+  nodeStatuses:
+  - currentRevision: 6
+    lastFailedCount: 0
+    lastFailedReason: ""
+    lastFailedRevision: 0
+    lastFallbackCount: 0
+    nodeName: ip-10-0-102-200.us-west-1.compute.internal
+    targetRevision: 0
+  - currentRevision: 6
+    lastFailedCount: 0
+    lastFailedReason: ""
+    lastFailedRevision: 0
+    lastFallbackCount: 0
+    nodeName: ip-10-0-108-54.us-west-1.compute.internal
+    targetRevision: 0
+  - currentRevision: 6
+    lastFailedCount: 0
+    lastFailedReason: ""
+    lastFailedRevision: 0
+    lastFallbackCount: 0
+    nodeName: ip-10-0-3-203.us-west-1.compute.internal
+    targetRevision: 0
+  readyReplicas: 0

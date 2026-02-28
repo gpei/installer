@@ -1,0 +1,63 @@
+---
+apiVersion: v1
+data:
+  ovnkube.conf: |-
+    [default]
+    mtu="8901"
+    cluster-subnets="10.128.0.0/14/23"
+    encap-port="6081"
+    enable-lflow-cache=true
+    lflow-cache-limit-kb=1048576
+    enable-udp-aggregation=true
+    udn-allowed-default-services="default/kubernetes,openshift-dns/dns-default"
+
+    [kubernetes]
+    service-cidrs="172.30.0.0/16"
+    ovn-config-namespace="openshift-ovn-kubernetes"
+    apiserver="https://api-int.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX:6443"
+    host-network-namespace="openshift-host-network"
+    platform-type="AWS"
+    healthz-bind-address="0.0.0.0:10256"
+    dns-service-namespace="openshift-dns"
+    dns-service-name="dns-default"
+
+    [ovnkubernetesfeature]
+    egressip-node-healthcheck-port=9107
+    enable-network-segmentation=true
+    enable-preconfigured-udn-addresses=true
+
+    [gateway]
+    mode=shared
+    nodeport=true
+
+    [logging]
+    libovsdblogfile=/var/log/ovnkube/libovsdb.log
+    logfile-maxsize=100
+    logfile-maxbackups=5
+    logfile-maxage=0
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2026-01-28T09:29:20Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        f:ovnkube.conf: {}
+      f:metadata:
+        f:ownerReferences:
+          k:{"uid":"7763cebb-f1d7-4359-81b8-b55ef9916383"}: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2026-01-28T09:29:20Z"
+  name: ovnkube-config
+  namespace: openshift-ovn-kubernetes
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: 7763cebb-f1d7-4359-81b8-b55ef9916383
+  resourceVersion: "4370"
+  uid: 832c0a12-e9ed-4762-8558-3e3720ac6ba3

@@ -1,0 +1,204 @@
+---
+apiVersion: monitoring.coreos.com/v1
+items:
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    annotations:
+      capability.openshift.io/name: OperatorLifecycleManager
+      include.release.openshift.io/hypershift: "true"
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+    creationTimestamp: "2026-01-28T09:26:00Z"
+    generation: 1
+    labels:
+      app: catalog-operator
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:include.release.openshift.io/hypershift: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+          f:labels:
+            .: {}
+            f:app: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:jobLabel: {}
+          f:namespaceSelector:
+            .: {}
+            f:matchNames: {}
+          f:selector: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2026-01-28T09:26:00Z"
+    name: catalog-operator
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      controller: true
+      kind: ClusterVersion
+      name: version
+      uid: 0370d296-6904-481d-ab90-157c7e5b835a
+    resourceVersion: "1708"
+    uid: 01e31674-c1f6-4948-a51f-d5fd3cf6f158
+  spec:
+    endpoints:
+    - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+      interval: 30s
+      metricRelabelings:
+      - action: drop
+        regex: etcd_(debugging|disk|request|server).*
+        sourceLabels:
+        - __name__
+      port: https-metrics
+      scheme: https
+      tlsConfig:
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        serverName: catalog-operator-metrics.openshift-operator-lifecycle-manager.svc
+    jobLabel: component
+    namespaceSelector:
+      matchNames:
+      - openshift-operator-lifecycle-manager
+    selector:
+      matchLabels:
+        app: catalog-operator
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    annotations:
+      capability.openshift.io/name: OperatorLifecycleManager
+      include.release.openshift.io/hypershift: "true"
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+    creationTimestamp: "2026-01-28T09:25:58Z"
+    generation: 1
+    labels:
+      app: olm-operator
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:include.release.openshift.io/hypershift: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+          f:labels:
+            .: {}
+            f:app: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:jobLabel: {}
+          f:namespaceSelector:
+            .: {}
+            f:matchNames: {}
+          f:selector: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2026-01-28T09:25:58Z"
+    name: olm-operator
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      controller: true
+      kind: ClusterVersion
+      name: version
+      uid: 0370d296-6904-481d-ab90-157c7e5b835a
+    resourceVersion: "1623"
+    uid: a041b9a5-6336-4b39-a9d6-c358a34d2a27
+  spec:
+    endpoints:
+    - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+      interval: 30s
+      metricRelabelings:
+      - action: drop
+        regex: etcd_(debugging|disk|request|server).*
+        sourceLabels:
+        - __name__
+      port: https-metrics
+      scheme: https
+      tlsConfig:
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        serverName: olm-operator-metrics.openshift-operator-lifecycle-manager.svc
+    jobLabel: component
+    namespaceSelector:
+      matchNames:
+      - openshift-operator-lifecycle-manager
+    selector:
+      matchLabels:
+        app: olm-operator
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    annotations:
+      capability.openshift.io/name: OperatorLifecycleManager
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+    creationTimestamp: "2026-01-28T09:26:15Z"
+    generation: 1
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector:
+            .: {}
+            f:matchNames: {}
+          f:selector: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2026-01-28T09:26:15Z"
+    name: package-server-manager-metrics
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      controller: true
+      kind: ClusterVersion
+      name: version
+      uid: 0370d296-6904-481d-ab90-157c7e5b835a
+    resourceVersion: "2391"
+    uid: d1b5dcf7-3098-454a-9b08-534a30a9f238
+  spec:
+    endpoints:
+    - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+      interval: 30s
+      port: metrics
+      scheme: https
+      tlsConfig:
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        serverName: package-server-manager-metrics.openshift-operator-lifecycle-manager.svc
+    namespaceSelector:
+      matchNames:
+      - openshift-operator-lifecycle-manager
+    selector: {}
+kind: ServiceMonitorList
+metadata:
+  continue: ""
+  resourceVersion: "35167"

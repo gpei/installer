@@ -1,0 +1,189 @@
+---
+apiVersion: config.openshift.io/v1
+items:
+- apiVersion: config.openshift.io/v1
+  kind: ClusterVersion
+  metadata:
+    creationTimestamp: "2026-01-28T09:25:16Z"
+    generation: 2
+    managedFields:
+    - apiVersion: config.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          .: {}
+          f:clusterID: {}
+      manager: cluster-bootstrap
+      operation: Update
+      time: "2026-01-28T09:25:16Z"
+    - apiVersion: config.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:availableUpdates: {}
+          f:capabilities:
+            .: {}
+            f:enabledCapabilities: {}
+            f:knownCapabilities: {}
+          f:conditions:
+            .: {}
+            k:{"type":"Available"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Failing"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"ImplicitlyEnabledCapabilities"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Progressing"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"ReleaseAccepted"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"RetrievedUpdates"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Upgradeable"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:desired:
+            .: {}
+            f:image: {}
+            f:version: {}
+          f:history: {}
+          f:observedGeneration: {}
+          f:versionHash: {}
+      manager: cluster-version-operator
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:54:59Z"
+    name: version
+    resourceVersion: "28228"
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  spec:
+    clusterID: 96983e5a-aa89-4958-9381-7fe3039d16f2
+  status:
+    availableUpdates: null
+    capabilities:
+      enabledCapabilities:
+      - Build
+      - CSISnapshot
+      - CloudControllerManager
+      - CloudCredential
+      - Console
+      - DeploymentConfig
+      - ImageRegistry
+      - Ingress
+      - Insights
+      - MachineAPI
+      - NodeTuning
+      - OperatorLifecycleManager
+      - OperatorLifecycleManagerV1
+      - Storage
+      - baremetal
+      - marketplace
+      - openshift-samples
+      knownCapabilities:
+      - Build
+      - CSISnapshot
+      - CloudControllerManager
+      - CloudCredential
+      - Console
+      - DeploymentConfig
+      - ImageRegistry
+      - Ingress
+      - Insights
+      - MachineAPI
+      - NodeTuning
+      - OperatorLifecycleManager
+      - OperatorLifecycleManagerV1
+      - Storage
+      - baremetal
+      - marketplace
+      - openshift-samples
+    conditions:
+    - lastTransitionTime: "2026-01-28T09:25:40Z"
+      message: The update channel has not been configured.
+      reason: NoChannel
+      status: "False"
+      type: RetrievedUpdates
+    - lastTransitionTime: "2026-01-28T09:25:40Z"
+      message: An update is already in progress and the details are in the Progressing
+        condition
+      reason: UpdateInProgress
+      status: "False"
+      type: Upgradeable
+    - lastTransitionTime: "2026-01-28T09:25:40Z"
+      message: Capabilities match configured spec
+      reason: AsExpected
+      status: "False"
+      type: ImplicitlyEnabledCapabilities
+    - lastTransitionTime: "2026-01-28T09:25:40Z"
+      message: Payload loaded version="4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest"
+        image="registry.build11.ci.openshift.org/ci-ln-vjb5l1t/release@sha256:abca08ba97983e78c8649ce5d64a307c1230da2d1129412f02e559fc41ecf4bd"
+        architecture="amd64"
+      reason: PayloadLoaded
+      status: "True"
+      type: ReleaseAccepted
+    - lastTransitionTime: "2026-01-28T09:25:40Z"
+      status: "False"
+      type: Available
+    - lastTransitionTime: "2026-01-28T09:40:29Z"
+      message: |-
+        Multiple errors are preventing progress:
+        * Cluster operator openshift-controller-manager is not available
+        * Could not update role "openshift-controller-manager/prometheus-k8s" (951 of 959): resource may have been deleted
+      reason: MultipleErrors
+      status: "True"
+      type: Failing
+    - lastTransitionTime: "2026-01-28T09:25:40Z"
+      message: 'Unable to apply 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest:
+        an unknown error has occurred: MultipleErrors'
+      reason: MultipleErrors
+      status: "True"
+      type: Progressing
+    desired:
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/release@sha256:abca08ba97983e78c8649ce5d64a307c1230da2d1129412f02e559fc41ecf4bd
+      version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+    history:
+    - completionTime: null
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/release@sha256:abca08ba97983e78c8649ce5d64a307c1230da2d1129412f02e559fc41ecf4bd
+      startedTime: "2026-01-28T09:25:40Z"
+      state: Partial
+      verified: false
+      version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+    observedGeneration: 2
+    versionHash: XA8FPdl66lk=
+kind: ClusterVersionList
+metadata:
+  continue: ""
+  resourceVersion: "34862"

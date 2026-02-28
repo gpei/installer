@@ -1,0 +1,71 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.130.0.24
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-108-54.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: etcd-operator-86dcff847c-dnhnc
+      namespace: openshift-etcd-operator
+      uid: 99f91643-03c3-4ab6-91bc-b45e56edd1c5
+    zone: us-west-1c
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:31:55Z"
+    creationTimestamp: "2026-01-28T09:25:49Z"
+    generateName: metrics-
+    generation: 4
+    labels:
+      app: etcd-operator
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: metrics
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"628e2985-1fb5-40bd-9977-fb0524d4f297"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:55Z"
+    name: metrics-9z9nd
+    namespace: openshift-etcd-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: metrics
+      uid: 628e2985-1fb5-40bd-9977-fb0524d4f297
+    resourceVersion: "9899"
+    uid: 1faa5630-9f00-41b8-b29c-dae45e338ad8
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "35036"

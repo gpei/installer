@@ -1,0 +1,2634 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:03Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: insights-operator-c7975f6f-qbb65
+    namespace: openshift-insights
+    resourceVersion: "4029"
+    uid: 73d760e7-9217-4df6-ba2e-f7c261a80aae
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:03Z"
+  message: '0/3 nodes are available: 3 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+    }. preemption: 0/3 nodes are available: 3 Preemption is not helpful for scheduling.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:03Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:29:03Z"
+    name: insights-operator-c7975f6f-qbb65.188edb0af0dcef40
+    namespace: openshift-insights
+    resourceVersion: "4031"
+    uid: 3fe6e27a-9008-42db-8e08-8729a2a5cb3f
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:08Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: insights-operator-c7975f6f-qbb65
+    namespace: openshift-insights
+    resourceVersion: "4033"
+    uid: 73d760e7-9217-4df6-ba2e-f7c261a80aae
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:08Z"
+  message: Successfully assigned openshift-insights/insights-operator-c7975f6f-qbb65
+    to ip-10-0-108-54.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:30:09Z"
+    name: insights-operator-c7975f6f-qbb65.188edb1a22d8c18f
+    namespace: openshift-insights
+    resourceVersion: "5481"
+    uid: d726905c-76c5-4669-aabd-61f437adc6e9
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:10Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: insights-operator-c7975f6f-qbb65
+    namespace: openshift-insights
+    resourceVersion: "5445"
+    uid: 73d760e7-9217-4df6-ba2e-f7c261a80aae
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:10Z"
+  message: Add eth0 [10.130.0.39/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2026-01-28T09:30:10Z"
+    name: insights-operator-c7975f6f-qbb65.188edb1a85c2e858
+    namespace: openshift-insights
+    resourceVersion: "5570"
+    uid: 4472cf4c-3a7f-4680-850f-b68672485b24
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{insights-operator}
+    kind: Pod
+    name: insights-operator-c7975f6f-qbb65
+    namespace: openshift-insights
+    resourceVersion: "5404"
+    uid: 73d760e7-9217-4df6-ba2e-f7c261a80aae
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:10Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d563f26ef566da43a1c8ab34d29852f477533686074d0adbd29bb98e51195571"
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:10Z"
+    name: insights-operator-c7975f6f-qbb65.188edb1a86fa9e52
+    namespace: openshift-insights
+    resourceVersion: "5573"
+    uid: 76373fe6-a78d-4034-ba83-4c61355edc14
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{insights-operator}
+    kind: Pod
+    name: insights-operator-c7975f6f-qbb65
+    namespace: openshift-insights
+    resourceVersion: "5404"
+    uid: 73d760e7-9217-4df6-ba2e-f7c261a80aae
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:28Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d563f26ef566da43a1c8ab34d29852f477533686074d0adbd29bb98e51195571"
+    in 17.808s (17.808s including waiting). Image size: 516902110 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:28Z"
+    name: insights-operator-c7975f6f-qbb65.188edb1eac6eeb1b
+    namespace: openshift-insights
+    resourceVersion: "5763"
+    uid: 254ead1c-4d27-4298-bbcf-1febb7b39ba6
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{insights-operator}
+    kind: Pod
+    name: insights-operator-c7975f6f-qbb65
+    namespace: openshift-insights
+    resourceVersion: "5404"
+    uid: 73d760e7-9217-4df6-ba2e-f7c261a80aae
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:52Z"
+  message: 'Created container: insights-operator'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:31:52Z"
+    name: insights-operator-c7975f6f-qbb65.188edb1ece39fa1d
+    namespace: openshift-insights
+    resourceVersion: "9704"
+    uid: 29c379aa-5511-4df7-aff2-49cccbdd41fa
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{insights-operator}
+    kind: Pod
+    name: insights-operator-c7975f6f-qbb65
+    namespace: openshift-insights
+    resourceVersion: "5404"
+    uid: 73d760e7-9217-4df6-ba2e-f7c261a80aae
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:52Z"
+  message: Started container insights-operator
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:31:52Z"
+    name: insights-operator-c7975f6f-qbb65.188edb1edc854a60
+    namespace: openshift-insights
+    resourceVersion: "9726"
+    uid: 8bb26b32-1e2d-4765-9448-1ef772b8b146
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:51Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{insights-operator}
+    kind: Pod
+    name: insights-operator-c7975f6f-qbb65
+    namespace: openshift-insights
+    resourceVersion: "5404"
+    uid: 73d760e7-9217-4df6-ba2e-f7c261a80aae
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:51Z"
+  message: Container image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d563f26ef566da43a1c8ab34d29852f477533686074d0adbd29bb98e51195571"
+    already present on machine
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:31:51Z"
+    name: insights-operator-c7975f6f-qbb65.188edb320f101db9
+    namespace: openshift-insights
+    resourceVersion: "9651"
+    uid: 3442653c-46cf-4efb-b673-74c470a7d48d
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 15
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:26:19Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: insights-operator-c7975f6f
+    namespace: openshift-insights
+    resourceVersion: "2638"
+    uid: 19956ad3-daf4-485c-9c07-56690990d6d5
+  kind: Event
+  lastTimestamp: "2026-01-28T09:27:41Z"
+  message: 'Error creating: pods "insights-operator-c7975f6f-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
+    the cluster does not have any nodes'
+  metadata:
+    creationTimestamp: "2026-01-28T09:26:19Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:27:41Z"
+    name: insights-operator-c7975f6f.188edae4c813b724
+    namespace: openshift-insights
+    resourceVersion: "3224"
+    uid: ed41c222-d139-4e7e-bca0-e1862244e005
+  reason: FailedCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:03Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: insights-operator-c7975f6f
+    namespace: openshift-insights
+    resourceVersion: "2642"
+    uid: 19956ad3-daf4-485c-9c07-56690990d6d5
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:03Z"
+  message: 'Created pod: insights-operator-c7975f6f-qbb65'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:03Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:29:03Z"
+    name: insights-operator-c7975f6f.188edb0af0d565e7
+    namespace: openshift-insights
+    resourceVersion: "4030"
+    uid: 54748624-5eca-41e2-8177-17d596e2082d
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:26:19Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: insights-operator
+    namespace: openshift-insights
+    resourceVersion: "2637"
+    uid: c6e6ee77-5dc6-40b4-81ac-ea0221ff56d2
+  kind: Event
+  lastTimestamp: "2026-01-28T09:26:19Z"
+  message: Scaled up replica set insights-operator-c7975f6f from 0 to 1
+  metadata:
+    creationTimestamp: "2026-01-28T09:26:19Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:26:19Z"
+    name: insights-operator.188edae4c7d57a59
+    namespace: openshift-insights
+    resourceVersion: "2639"
+    uid: f617ad3e-dd58-4d3f-8195-a40d86acdab2
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:32Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: insights-operator
+    namespace: openshift-insights
+    uid: c6e6ee77-5dc6-40b4-81ac-ea0221ff56d2
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:32Z"
+  message: FeatureGates updated to featuregates.Features{Enabled:[]v1.FeatureGateName{"AdditionalRoutingCapabilities",
+    "AdminNetworkPolicy", "AlibabaPlatform", "AzureWorkloadIdentity", "BuildCSIVolumes",
+    "CPMSMachineNamePrefix", "ConsolePluginContentSecurityPolicy", "ExternalOIDC",
+    "ExternalOIDCWithUIDAndExtraClaimMappings", "GatewayAPI", "GatewayAPIController",
+    "HighlyAvailableArbiter", "ImageVolume", "IngressControllerLBSubnetsAWS", "KMSv1",
+    "MachineConfigNodes", "ManagedBootImages", "ManagedBootImagesAWS", "MetricsCollectionProfiles",
+    "NetworkDiagnosticsConfig", "NetworkLiveMigration", "NetworkSegmentation", "NewOLM",
+    "PinnedImages", "PreconfiguredUDNAddresses", "ProcMountType", "RouteAdvertisements",
+    "RouteExternalCertificate", "ServiceAccountTokenNodeBinding", "SetEIPForNLBIngressController",
+    "SigstoreImageVerification", "StoragePerformantSecurityPolicy", "UpgradeStatus",
+    "UserNamespacesPodSecurityStandards", "UserNamespacesSupport", "VSphereMultiDisk",
+    "VSphereMultiNetworks"}, Disabled:[]v1.FeatureGateName{"AWSClusterHostedDNS",
+    "AWSClusterHostedDNSInstall", "AWSDedicatedHosts", "AWSServiceLBNetworkSecurityGroup",
+    "AutomatedEtcdBackup", "AzureClusterHostedDNSInstall", "AzureDedicatedHosts",
+    "AzureMultiDisk", "BootImageSkewEnforcement", "BootcNodeManagement", "ClusterAPIInstall",
+    "ClusterAPIInstallIBMCloud", "ClusterMonitoringConfig", "ClusterVersionOperatorConfiguration",
+    "DNSNameResolver", "DualReplica", "DyanmicServiceEndpointIBMCloud", "DynamicResourceAllocation",
+    "EtcdBackendQuota", "EventedPLEG", "Example", "Example2", "ExternalSnapshotMetadata",
+    "GCPClusterHostedDNS", "GCPClusterHostedDNSInstall", "GCPCustomAPIEndpoints",
+    "GCPCustomAPIEndpointsInstall", "ImageModeStatusReporting", "ImageStreamImportMode",
+    "IngressControllerDynamicConfigurationManager", "InsightsConfig", "InsightsConfigAPI",
+    "InsightsOnDemandDataGather", "IrreconcilableMachineConfig", "KMSEncryptionProvider",
+    "MachineAPIMigration", "MachineAPIOperatorDisableMachineHealthCheckController",
+    "ManagedBootImagesAzure", "ManagedBootImagesvSphere", "MaxUnavailableStatefulSet",
+    "MinimumKubeletVersion", "MixedCPUsAllocation", "MultiArchInstallAzure", "MultiDiskSetup",
+    "MutatingAdmissionPolicy", "NewOLMCatalogdAPIV1Metas", "NewOLMOwnSingleNamespace",
+    "NewOLMPreflightPermissionChecks", "NewOLMWebhookProviderOpenshiftServiceCA",
+    "NoRegistryClusterOperations", "NodeSwap", "NutanixMultiSubnets", "OVNObservability",
+    "OpenShiftPodSecurityAdmission", "SELinuxMount", "ShortCertRotation", "SignatureStores",
+    "SigstoreImageVerificationPKI", "TranslateStreamCloseWebsocketRequests", "VSphereConfigurableMaxAllowedBlockVolumesPerNode",
+    "VSphereHostVMGroupZonal", "VSphereMixedNodeEnv", "VolumeAttributesClass", "VolumeGroupSnapshot"}}
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: insights-operator
+      operation: Update
+      time: "2026-01-28T09:30:32Z"
+    name: insights-operator.188edb1fa74c5e90
+    namespace: openshift-insights
+    resourceVersion: "5917"
+    uid: 9abbf431-b700-4ad7-bcf6-7b0cc6464b07
+  reason: FeatureGatesInitialized
+  reportingComponent: openshift-insights-operator
+  reportingInstance: ""
+  source:
+    component: openshift-insights-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:54Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: insights-operator
+    namespace: openshift-insights
+    uid: c6e6ee77-5dc6-40b4-81ac-ea0221ff56d2
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:54Z"
+  message: FeatureGates updated to featuregates.Features{Enabled:[]v1.FeatureGateName{"AdditionalRoutingCapabilities",
+    "AdminNetworkPolicy", "AlibabaPlatform", "AzureWorkloadIdentity", "BuildCSIVolumes",
+    "CPMSMachineNamePrefix", "ConsolePluginContentSecurityPolicy", "ExternalOIDC",
+    "ExternalOIDCWithUIDAndExtraClaimMappings", "GatewayAPI", "GatewayAPIController",
+    "HighlyAvailableArbiter", "ImageVolume", "IngressControllerLBSubnetsAWS", "KMSv1",
+    "MachineConfigNodes", "ManagedBootImages", "ManagedBootImagesAWS", "MetricsCollectionProfiles",
+    "NetworkDiagnosticsConfig", "NetworkLiveMigration", "NetworkSegmentation", "NewOLM",
+    "PinnedImages", "PreconfiguredUDNAddresses", "ProcMountType", "RouteAdvertisements",
+    "RouteExternalCertificate", "ServiceAccountTokenNodeBinding", "SetEIPForNLBIngressController",
+    "SigstoreImageVerification", "StoragePerformantSecurityPolicy", "UpgradeStatus",
+    "UserNamespacesPodSecurityStandards", "UserNamespacesSupport", "VSphereMultiDisk",
+    "VSphereMultiNetworks"}, Disabled:[]v1.FeatureGateName{"AWSClusterHostedDNS",
+    "AWSClusterHostedDNSInstall", "AWSDedicatedHosts", "AWSServiceLBNetworkSecurityGroup",
+    "AutomatedEtcdBackup", "AzureClusterHostedDNSInstall", "AzureDedicatedHosts",
+    "AzureMultiDisk", "BootImageSkewEnforcement", "BootcNodeManagement", "ClusterAPIInstall",
+    "ClusterAPIInstallIBMCloud", "ClusterMonitoringConfig", "ClusterVersionOperatorConfiguration",
+    "DNSNameResolver", "DualReplica", "DyanmicServiceEndpointIBMCloud", "DynamicResourceAllocation",
+    "EtcdBackendQuota", "EventedPLEG", "Example", "Example2", "ExternalSnapshotMetadata",
+    "GCPClusterHostedDNS", "GCPClusterHostedDNSInstall", "GCPCustomAPIEndpoints",
+    "GCPCustomAPIEndpointsInstall", "ImageModeStatusReporting", "ImageStreamImportMode",
+    "IngressControllerDynamicConfigurationManager", "InsightsConfig", "InsightsConfigAPI",
+    "InsightsOnDemandDataGather", "IrreconcilableMachineConfig", "KMSEncryptionProvider",
+    "MachineAPIMigration", "MachineAPIOperatorDisableMachineHealthCheckController",
+    "ManagedBootImagesAzure", "ManagedBootImagesvSphere", "MaxUnavailableStatefulSet",
+    "MinimumKubeletVersion", "MixedCPUsAllocation", "MultiArchInstallAzure", "MultiDiskSetup",
+    "MutatingAdmissionPolicy", "NewOLMCatalogdAPIV1Metas", "NewOLMOwnSingleNamespace",
+    "NewOLMPreflightPermissionChecks", "NewOLMWebhookProviderOpenshiftServiceCA",
+    "NoRegistryClusterOperations", "NodeSwap", "NutanixMultiSubnets", "OVNObservability",
+    "OpenShiftPodSecurityAdmission", "SELinuxMount", "ShortCertRotation", "SignatureStores",
+    "SigstoreImageVerificationPKI", "TranslateStreamCloseWebsocketRequests", "VSphereConfigurableMaxAllowedBlockVolumesPerNode",
+    "VSphereHostVMGroupZonal", "VSphereMixedNodeEnv", "VolumeAttributesClass", "VolumeGroupSnapshot"}}
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:54Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: insights-operator
+      operation: Update
+      time: "2026-01-28T09:31:54Z"
+    name: insights-operator.188edb32acd4164a
+    namespace: openshift-insights
+    resourceVersion: "9789"
+    uid: a94cb020-fb58-4b19-81a7-03254c05a6f8
+  reason: FeatureGatesInitialized
+  reportingComponent: openshift-insights-operator
+  reportingInstance: ""
+  source:
+    component: openshift-insights-operator
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2026-01-28T09:42:30.512592Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: insights-runtime-extractor-8p8nd
+    namespace: openshift-insights
+    resourceVersion: "21184"
+    uid: ca7b7f9d-0e91-4c6d-acd5-3c286ee6a04c
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-insights/insights-runtime-extractor-8p8nd
+    to ip-10-0-22-208.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:30Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:42:30Z"
+    name: insights-runtime-extractor-8p8nd.188edbc6ce3251e1
+    namespace: openshift-insights
+    resourceVersion: "21234"
+    uid: 325a12b4-5250-45a1-a08a-cf3840f8a0e3
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-3-203
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:31Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: insights-runtime-extractor-8p8nd
+    namespace: openshift-insights
+    resourceVersion: "21257"
+    uid: ca7b7f9d-0e91-4c6d-acd5-3c286ee6a04c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:31Z"
+  message: Add eth0 [10.129.2.10/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2026-01-28T09:42:31Z"
+    name: insights-runtime-extractor-8p8nd.188edbc6ff3abb12
+    namespace: openshift-insights
+    resourceVersion: "21281"
+    uid: a23aac43-3657-4b09-9b22-ccfb8da547de
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: insights-runtime-extractor-8p8nd
+    namespace: openshift-insights
+    resourceVersion: "21227"
+    uid: ca7b7f9d-0e91-4c6d-acd5-3c286ee6a04c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:31Z"
+  message: Container image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b"
+    already present on machine
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:31Z"
+    name: insights-runtime-extractor-8p8nd.188edbc700f49154
+    namespace: openshift-insights
+    resourceVersion: "21285"
+    uid: fb0d3d1f-120f-4339-a84e-b626c76bc97a
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: insights-runtime-extractor-8p8nd
+    namespace: openshift-insights
+    resourceVersion: "21227"
+    uid: ca7b7f9d-0e91-4c6d-acd5-3c286ee6a04c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:31Z"
+  message: 'Created container: kube-rbac-proxy'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:31Z"
+    name: insights-runtime-extractor-8p8nd.188edbc7084abb00
+    namespace: openshift-insights
+    resourceVersion: "21300"
+    uid: e89ad6ca-1625-4de5-87f1-11c8b5467ca0
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: insights-runtime-extractor-8p8nd
+    namespace: openshift-insights
+    resourceVersion: "21227"
+    uid: ca7b7f9d-0e91-4c6d-acd5-3c286ee6a04c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:31Z"
+  message: Started container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:31Z"
+    name: insights-runtime-extractor-8p8nd.188edbc70bb1bfc2
+    namespace: openshift-insights
+    resourceVersion: "21304"
+    uid: be2e0f56-470b-43a5-a478-c63fafac45ac
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{exporter}
+    kind: Pod
+    name: insights-runtime-extractor-8p8nd
+    namespace: openshift-insights
+    resourceVersion: "21227"
+    uid: ca7b7f9d-0e91-4c6d-acd5-3c286ee6a04c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:31Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:c92bfedc218768d9d1f78392b68b775022f89df537956b35b1e6feeab24042cd"
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:31Z"
+    name: insights-runtime-extractor-8p8nd.188edbc70bb4f66e
+    namespace: openshift-insights
+    resourceVersion: "21306"
+    uid: 74202f99-9623-4ca0-a950-3eb134f48183
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:35Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{exporter}
+    kind: Pod
+    name: insights-runtime-extractor-8p8nd
+    namespace: openshift-insights
+    resourceVersion: "21227"
+    uid: ca7b7f9d-0e91-4c6d-acd5-3c286ee6a04c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:35Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:c92bfedc218768d9d1f78392b68b775022f89df537956b35b1e6feeab24042cd"
+    in 4.379s (4.379s including waiting). Image size: 400353107 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:35Z"
+    name: insights-runtime-extractor-8p8nd.188edbc810bb7a76
+    namespace: openshift-insights
+    resourceVersion: "21413"
+    uid: 9f248891-1efc-481d-9dd4-002f80c306e4
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{exporter}
+    kind: Pod
+    name: insights-runtime-extractor-8p8nd
+    namespace: openshift-insights
+    resourceVersion: "21227"
+    uid: ca7b7f9d-0e91-4c6d-acd5-3c286ee6a04c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:36Z"
+  message: 'Created container: exporter'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:36Z"
+    name: insights-runtime-extractor-8p8nd.188edbc8180f5d5e
+    namespace: openshift-insights
+    resourceVersion: "21416"
+    uid: 86cc8332-e250-4de0-aff9-82e7111d4043
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{exporter}
+    kind: Pod
+    name: insights-runtime-extractor-8p8nd
+    namespace: openshift-insights
+    resourceVersion: "21227"
+    uid: ca7b7f9d-0e91-4c6d-acd5-3c286ee6a04c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:36Z"
+  message: Started container exporter
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:36Z"
+    name: insights-runtime-extractor-8p8nd.188edbc8193652da
+    namespace: openshift-insights
+    resourceVersion: "21418"
+    uid: c4c4b152-e32d-44f7-a671-f2132e4e33c0
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{extractor}
+    kind: Pod
+    name: insights-runtime-extractor-8p8nd
+    namespace: openshift-insights
+    resourceVersion: "21227"
+    uid: ca7b7f9d-0e91-4c6d-acd5-3c286ee6a04c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:36Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:1c466fb45bd3c74a418a8396a4c9921d21dda976dd74d68542a2bd4540e22a6e"
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:36Z"
+    name: insights-runtime-extractor-8p8nd.188edbc819398fb3
+    namespace: openshift-insights
+    resourceVersion: "21419"
+    uid: f27f6108-3635-4daa-bfff-45bcde17791b
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:38Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{extractor}
+    kind: Pod
+    name: insights-runtime-extractor-8p8nd
+    namespace: openshift-insights
+    resourceVersion: "21227"
+    uid: ca7b7f9d-0e91-4c6d-acd5-3c286ee6a04c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:38Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:1c466fb45bd3c74a418a8396a4c9921d21dda976dd74d68542a2bd4540e22a6e"
+    in 1.934s (1.934s including waiting). Image size: 476185677 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:38Z"
+    name: insights-runtime-extractor-8p8nd.188edbc88c8d570d
+    namespace: openshift-insights
+    resourceVersion: "21531"
+    uid: dfb98884-1aa2-422b-b825-d729fb6bd70c
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:38Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{extractor}
+    kind: Pod
+    name: insights-runtime-extractor-8p8nd
+    namespace: openshift-insights
+    resourceVersion: "21227"
+    uid: ca7b7f9d-0e91-4c6d-acd5-3c286ee6a04c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:38Z"
+  message: 'Created container: extractor'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:38Z"
+    name: insights-runtime-extractor-8p8nd.188edbc8900f2ddf
+    namespace: openshift-insights
+    resourceVersion: "21533"
+    uid: 4dffa70d-69df-46e9-adfc-6b598f78d48a
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:38Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{extractor}
+    kind: Pod
+    name: insights-runtime-extractor-8p8nd
+    namespace: openshift-insights
+    resourceVersion: "21227"
+    uid: ca7b7f9d-0e91-4c6d-acd5-3c286ee6a04c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:38Z"
+  message: Started container extractor
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:38Z"
+    name: insights-runtime-extractor-8p8nd.188edbc890853aa0
+    namespace: openshift-insights
+    resourceVersion: "21534"
+    uid: 84e66099-2cf3-4c77-a96d-f086dea58b7d
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:47Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: insights-runtime-extractor-g8b77
+    namespace: openshift-insights
+    resourceVersion: "15552"
+    uid: b951fa80-bb64-4f97-a70a-3aaf48b2d71c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:47Z"
+  message: Successfully assigned openshift-insights/insights-runtime-extractor-g8b77
+    to ip-10-0-78-215.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:47Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:36:47Z"
+    name: insights-runtime-extractor-g8b77.188edb7700da77a3
+    namespace: openshift-insights
+    resourceVersion: "15599"
+    uid: 9b23f9bc-1cb9-4232-911a-466ce2584741
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2026-01-28T09:36:47.785125Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: insights-runtime-extractor-g8b77
+    namespace: openshift-insights
+    resourceVersion: "15552"
+    uid: b951fa80-bb64-4f97-a70a-3aaf48b2d71c
+  kind: Event
+  lastTimestamp: null
+  message: 'running Bind plugin "DefaultBinder": Operation cannot be fulfilled on
+    pods/binding "insights-runtime-extractor-g8b77": pod insights-runtime-extractor-g8b77
+    is already assigned to node "ip-10-0-78-215.us-west-1.compute.internal"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:47Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:36:47Z"
+    name: insights-runtime-extractor-g8b77.188edb77020c2ef3
+    namespace: openshift-insights
+    resourceVersion: "15593"
+    uid: bb5b8a03-a9b7-4716-83cb-3db20e19c90a
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-108-54
+  source: {}
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:48Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: insights-runtime-extractor-g8b77
+    namespace: openshift-insights
+    resourceVersion: "15616"
+    uid: b951fa80-bb64-4f97-a70a-3aaf48b2d71c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:48Z"
+  message: Add eth0 [10.131.0.11/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2026-01-28T09:36:48Z"
+    name: insights-runtime-extractor-g8b77.188edb77431a14bf
+    namespace: openshift-insights
+    resourceVersion: "15651"
+    uid: 17baba9e-2fe3-4e3d-9eca-0c916a54b5c6
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: insights-runtime-extractor-g8b77
+    namespace: openshift-insights
+    resourceVersion: "15577"
+    uid: b951fa80-bb64-4f97-a70a-3aaf48b2d71c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:48Z"
+  message: Container image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b"
+    already present on machine
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:48Z"
+    name: insights-runtime-extractor-g8b77.188edb77465990cc
+    namespace: openshift-insights
+    resourceVersion: "15655"
+    uid: 60da9dc1-4493-45b8-91d3-5fc949c1db4f
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:49Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: insights-runtime-extractor-g8b77
+    namespace: openshift-insights
+    resourceVersion: "15577"
+    uid: b951fa80-bb64-4f97-a70a-3aaf48b2d71c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:49Z"
+  message: 'Created container: kube-rbac-proxy'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:49Z"
+    name: insights-runtime-extractor-g8b77.188edb774feec278
+    namespace: openshift-insights
+    resourceVersion: "15666"
+    uid: bedf1bcf-f619-4347-9138-0e3f0573798b
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:49Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: insights-runtime-extractor-g8b77
+    namespace: openshift-insights
+    resourceVersion: "15577"
+    uid: b951fa80-bb64-4f97-a70a-3aaf48b2d71c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:49Z"
+  message: Started container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:49Z"
+    name: insights-runtime-extractor-g8b77.188edb77513210bd
+    namespace: openshift-insights
+    resourceVersion: "15667"
+    uid: 0b10bd57-8e69-44af-b68b-0529ec376037
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:49Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{exporter}
+    kind: Pod
+    name: insights-runtime-extractor-g8b77
+    namespace: openshift-insights
+    resourceVersion: "15577"
+    uid: b951fa80-bb64-4f97-a70a-3aaf48b2d71c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:49Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:c92bfedc218768d9d1f78392b68b775022f89df537956b35b1e6feeab24042cd"
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:49Z"
+    name: insights-runtime-extractor-g8b77.188edb7751362901
+    namespace: openshift-insights
+    resourceVersion: "15668"
+    uid: 4f6026f5-512e-4109-983c-04296c0e9f40
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{exporter}
+    kind: Pod
+    name: insights-runtime-extractor-g8b77
+    namespace: openshift-insights
+    resourceVersion: "15577"
+    uid: b951fa80-bb64-4f97-a70a-3aaf48b2d71c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:58Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:c92bfedc218768d9d1f78392b68b775022f89df537956b35b1e6feeab24042cd"
+    in 9.767s (9.767s including waiting). Image size: 400353107 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:58Z"
+    name: insights-runtime-extractor-g8b77.188edb799764015f
+    namespace: openshift-insights
+    resourceVersion: "15916"
+    uid: dd8d1d89-2c07-4c8d-ae5e-be78e094c51c
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{exporter}
+    kind: Pod
+    name: insights-runtime-extractor-g8b77
+    namespace: openshift-insights
+    resourceVersion: "15577"
+    uid: b951fa80-bb64-4f97-a70a-3aaf48b2d71c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:59Z"
+  message: 'Created container: exporter'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:59Z"
+    name: insights-runtime-extractor-g8b77.188edb799fb78ce1
+    namespace: openshift-insights
+    resourceVersion: "15923"
+    uid: ad059149-7a41-4b0c-9ffd-fb19db74ff24
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{exporter}
+    kind: Pod
+    name: insights-runtime-extractor-g8b77
+    namespace: openshift-insights
+    resourceVersion: "15577"
+    uid: b951fa80-bb64-4f97-a70a-3aaf48b2d71c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:59Z"
+  message: Started container exporter
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:59Z"
+    name: insights-runtime-extractor-g8b77.188edb79a47be925
+    namespace: openshift-insights
+    resourceVersion: "15931"
+    uid: f93e6f46-74b7-4b09-bbbb-7c1586531e30
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{extractor}
+    kind: Pod
+    name: insights-runtime-extractor-g8b77
+    namespace: openshift-insights
+    resourceVersion: "15577"
+    uid: b951fa80-bb64-4f97-a70a-3aaf48b2d71c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:59Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:1c466fb45bd3c74a418a8396a4c9921d21dda976dd74d68542a2bd4540e22a6e"
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:59Z"
+    name: insights-runtime-extractor-g8b77.188edb79a47ebc03
+    namespace: openshift-insights
+    resourceVersion: "15932"
+    uid: f51e84f6-db6d-496b-b797-b26ddbd8735b
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:37:01Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{extractor}
+    kind: Pod
+    name: insights-runtime-extractor-g8b77
+    namespace: openshift-insights
+    resourceVersion: "15577"
+    uid: b951fa80-bb64-4f97-a70a-3aaf48b2d71c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:37:01Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:1c466fb45bd3c74a418a8396a4c9921d21dda976dd74d68542a2bd4540e22a6e"
+    in 2.252s (2.252s including waiting). Image size: 476185677 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:37:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:37:01Z"
+    name: insights-runtime-extractor-g8b77.188edb7a2abb3217
+    namespace: openshift-insights
+    resourceVersion: "16012"
+    uid: b239e795-deaa-455c-aea0-da5183631745
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:37:01Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{extractor}
+    kind: Pod
+    name: insights-runtime-extractor-g8b77
+    namespace: openshift-insights
+    resourceVersion: "15577"
+    uid: b951fa80-bb64-4f97-a70a-3aaf48b2d71c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:37:01Z"
+  message: 'Created container: extractor'
+  metadata:
+    creationTimestamp: "2026-01-28T09:37:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:37:01Z"
+    name: insights-runtime-extractor-g8b77.188edb7a2e2d43ee
+    namespace: openshift-insights
+    resourceVersion: "16017"
+    uid: e65ae34e-fc13-48a8-8a74-151cf0a579b5
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:37:01Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{extractor}
+    kind: Pod
+    name: insights-runtime-extractor-g8b77
+    namespace: openshift-insights
+    resourceVersion: "15577"
+    uid: b951fa80-bb64-4f97-a70a-3aaf48b2d71c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:37:01Z"
+  message: Started container extractor
+  metadata:
+    creationTimestamp: "2026-01-28T09:37:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:37:01Z"
+    name: insights-runtime-extractor-g8b77.188edb7a2ece051c
+    namespace: openshift-insights
+    resourceVersion: "16018"
+    uid: 35bba24d-45cf-4f82-a576-b5edd1d1a5d0
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2026-01-28T09:42:30.512180Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: insights-runtime-extractor-vvvkj
+    namespace: openshift-insights
+    resourceVersion: "21171"
+    uid: d7a4addd-a9d8-4e2b-8bab-963e9d4b7e9e
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-insights/insights-runtime-extractor-vvvkj
+    to ip-10-0-101-165.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:30Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:42:30Z"
+    name: insights-runtime-extractor-vvvkj.188edbc6ce2c0512
+    namespace: openshift-insights
+    resourceVersion: "21232"
+    uid: cb7790d9-f1d4-4171-a3f7-0ff1cd29fb3d
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-3-203
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:31Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: insights-runtime-extractor-vvvkj
+    namespace: openshift-insights
+    resourceVersion: "21259"
+    uid: d7a4addd-a9d8-4e2b-8bab-963e9d4b7e9e
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:31Z"
+  message: Add eth0 [10.128.2.7/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2026-01-28T09:42:31Z"
+    name: insights-runtime-extractor-vvvkj.188edbc704bb9426
+    namespace: openshift-insights
+    resourceVersion: "21290"
+    uid: 0c2fc195-20d6-437a-b00a-2c02ee51e6b3
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: insights-runtime-extractor-vvvkj
+    namespace: openshift-insights
+    resourceVersion: "21222"
+    uid: d7a4addd-a9d8-4e2b-8bab-963e9d4b7e9e
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:31Z"
+  message: Container image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b"
+    already present on machine
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:31Z"
+    name: insights-runtime-extractor-vvvkj.188edbc706a6bacd
+    namespace: openshift-insights
+    resourceVersion: "21296"
+    uid: 5f7b4901-308b-4ee7-b8a1-f34ff5e4fb12
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: insights-runtime-extractor-vvvkj
+    namespace: openshift-insights
+    resourceVersion: "21222"
+    uid: d7a4addd-a9d8-4e2b-8bab-963e9d4b7e9e
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:31Z"
+  message: 'Created container: kube-rbac-proxy'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:31Z"
+    name: insights-runtime-extractor-vvvkj.188edbc70b2feebb
+    namespace: openshift-insights
+    resourceVersion: "21302"
+    uid: be1b56a9-d043-42c8-9335-9b829895f973
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: insights-runtime-extractor-vvvkj
+    namespace: openshift-insights
+    resourceVersion: "21222"
+    uid: d7a4addd-a9d8-4e2b-8bab-963e9d4b7e9e
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:31Z"
+  message: Started container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:31Z"
+    name: insights-runtime-extractor-vvvkj.188edbc70bd0aa5f
+    namespace: openshift-insights
+    resourceVersion: "21307"
+    uid: dc3169f3-8ec1-48c2-9060-0d35478dab1e
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{exporter}
+    kind: Pod
+    name: insights-runtime-extractor-vvvkj
+    namespace: openshift-insights
+    resourceVersion: "21222"
+    uid: d7a4addd-a9d8-4e2b-8bab-963e9d4b7e9e
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:31Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:c92bfedc218768d9d1f78392b68b775022f89df537956b35b1e6feeab24042cd"
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:31Z"
+    name: insights-runtime-extractor-vvvkj.188edbc70bd39626
+    namespace: openshift-insights
+    resourceVersion: "21308"
+    uid: 276b94c2-1775-45c0-9c42-0eb4b5b45222
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:33Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{exporter}
+    kind: Pod
+    name: insights-runtime-extractor-vvvkj
+    namespace: openshift-insights
+    resourceVersion: "21222"
+    uid: d7a4addd-a9d8-4e2b-8bab-963e9d4b7e9e
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:33Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:c92bfedc218768d9d1f78392b68b775022f89df537956b35b1e6feeab24042cd"
+    in 1.533s (1.533s including waiting). Image size: 400353107 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:33Z"
+    name: insights-runtime-extractor-vvvkj.188edbc76736ca31
+    namespace: openshift-insights
+    resourceVersion: "21334"
+    uid: 4750ed1f-99f0-4d9c-9e97-ff3701f24f0b
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:33Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{exporter}
+    kind: Pod
+    name: insights-runtime-extractor-vvvkj
+    namespace: openshift-insights
+    resourceVersion: "21222"
+    uid: d7a4addd-a9d8-4e2b-8bab-963e9d4b7e9e
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:33Z"
+  message: 'Created container: exporter'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:33Z"
+    name: insights-runtime-extractor-vvvkj.188edbc76b2a663f
+    namespace: openshift-insights
+    resourceVersion: "21336"
+    uid: 72c6de24-1bab-48a5-96f0-5af9f364bca3
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:33Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{exporter}
+    kind: Pod
+    name: insights-runtime-extractor-vvvkj
+    namespace: openshift-insights
+    resourceVersion: "21222"
+    uid: d7a4addd-a9d8-4e2b-8bab-963e9d4b7e9e
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:33Z"
+  message: Started container exporter
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:33Z"
+    name: insights-runtime-extractor-vvvkj.188edbc76ccbf7c9
+    namespace: openshift-insights
+    resourceVersion: "21337"
+    uid: 039d17ea-93bb-470f-a947-509308901193
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:33Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{extractor}
+    kind: Pod
+    name: insights-runtime-extractor-vvvkj
+    namespace: openshift-insights
+    resourceVersion: "21222"
+    uid: d7a4addd-a9d8-4e2b-8bab-963e9d4b7e9e
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:33Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:1c466fb45bd3c74a418a8396a4c9921d21dda976dd74d68542a2bd4540e22a6e"
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:33Z"
+    name: insights-runtime-extractor-vvvkj.188edbc76cdd09b1
+    namespace: openshift-insights
+    resourceVersion: "21338"
+    uid: 43d182ee-7797-4ad7-839c-38c5c360d59f
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:35Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{extractor}
+    kind: Pod
+    name: insights-runtime-extractor-vvvkj
+    namespace: openshift-insights
+    resourceVersion: "21222"
+    uid: d7a4addd-a9d8-4e2b-8bab-963e9d4b7e9e
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:35Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:1c466fb45bd3c74a418a8396a4c9921d21dda976dd74d68542a2bd4540e22a6e"
+    in 2.373s (2.373s including waiting). Image size: 476185677 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:35Z"
+    name: insights-runtime-extractor-vvvkj.188edbc7fa5b65cf
+    namespace: openshift-insights
+    resourceVersion: "21394"
+    uid: e3fcfcc5-e1c6-4de8-9f4c-0e4be103992d
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:35Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{extractor}
+    kind: Pod
+    name: insights-runtime-extractor-vvvkj
+    namespace: openshift-insights
+    resourceVersion: "21222"
+    uid: d7a4addd-a9d8-4e2b-8bab-963e9d4b7e9e
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:35Z"
+  message: 'Created container: extractor'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:35Z"
+    name: insights-runtime-extractor-vvvkj.188edbc7fd67e2f8
+    namespace: openshift-insights
+    resourceVersion: "21395"
+    uid: 3c83fe60-528a-448a-88c3-87d48f48929e
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:35Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{extractor}
+    kind: Pod
+    name: insights-runtime-extractor-vvvkj
+    namespace: openshift-insights
+    resourceVersion: "21222"
+    uid: d7a4addd-a9d8-4e2b-8bab-963e9d4b7e9e
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:35Z"
+  message: Started container extractor
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:35Z"
+    name: insights-runtime-extractor-vvvkj.188edbc7fde1b460
+    namespace: openshift-insights
+    resourceVersion: "21396"
+    uid: 656349cf-ef60-48e1-885f-51ce9df05342
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:47Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: insights-runtime-extractor
+    namespace: openshift-insights
+    resourceVersion: "9564"
+    uid: 35efe227-3f19-40b9-975f-119c78b8b8f9
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:47Z"
+  message: 'Created pod: insights-runtime-extractor-g8b77'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:47Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:36:47Z"
+    name: insights-runtime-extractor.188edb76faff482e
+    namespace: openshift-insights
+    resourceVersion: "15565"
+    uid: b272e141-6afe-464c-9255-b4c547496112
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:29Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: insights-runtime-extractor
+    namespace: openshift-insights
+    resourceVersion: "16063"
+    uid: 35efe227-3f19-40b9-975f-119c78b8b8f9
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:29Z"
+  message: 'Created pod: insights-runtime-extractor-vvvkj'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:42:29Z"
+    name: insights-runtime-extractor.188edbc69fb4001a
+    namespace: openshift-insights
+    resourceVersion: "21173"
+    uid: cb6a93ed-4fda-4def-a4c1-146dbe9dfaf8
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:29Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: insights-runtime-extractor
+    namespace: openshift-insights
+    resourceVersion: "21175"
+    uid: 35efe227-3f19-40b9-975f-119c78b8b8f9
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:29Z"
+  message: 'Created pod: insights-runtime-extractor-8p8nd'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:42:29Z"
+    name: insights-runtime-extractor.188edbc6a973287a
+    namespace: openshift-insights
+    resourceVersion: "21188"
+    uid: d426b510-df2f-4f78-8e05-5d29982797d4
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "35048"

@@ -1,0 +1,183 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: MachineConfiguration
+metadata:
+  annotations:
+    machineconfiguration.openshift.io/boot-image-updates-opted-in-at: "2026-01-28T09:32:28Z"
+  creationTimestamp: "2026-01-28T09:31:56Z"
+  generation: 1
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:managementState: {}
+    manager: machine-config-operator
+    operation: Apply
+    time: "2026-01-28T09:31:56Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:machineconfiguration.openshift.io/boot-image-updates-opted-in-at: {}
+    manager: machine-config-operator
+    operation: Update
+    time: "2026-01-28T09:32:28Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:managedBootImagesStatus:
+          .: {}
+          f:machineManagers:
+            .: {}
+            k:{"apiGroup":"machine.openshift.io","resource":"machinesets"}:
+              .: {}
+              f:apiGroup: {}
+              f:resource: {}
+              f:selection:
+                .: {}
+                f:mode: {}
+        f:nodeDisruptionPolicyStatus:
+          .: {}
+          f:clusterPolicies:
+            .: {}
+            f:files:
+              .: {}
+              k:{"path":"/etc/containers/policy.json"}:
+                .: {}
+                f:actions: {}
+                f:path: {}
+              k:{"path":"/etc/containers/registries.conf"}:
+                .: {}
+                f:actions: {}
+                f:path: {}
+              k:{"path":"/etc/containers/registries.d"}:
+                .: {}
+                f:actions: {}
+                f:path: {}
+              k:{"path":"/etc/crio/policies"}:
+                .: {}
+                f:actions: {}
+                f:path: {}
+              k:{"path":"/etc/machine-config-daemon/no-reboot/containers-gpg.pub"}:
+                .: {}
+                f:actions: {}
+                f:path: {}
+              k:{"path":"/etc/nmstate/openshift"}:
+                .: {}
+                f:actions: {}
+                f:path: {}
+              k:{"path":"/etc/pki/ca-trust/source/anchors/openshift-config-user-ca-bundle.crt"}:
+                .: {}
+                f:actions: {}
+                f:path: {}
+              k:{"path":"/var/lib/kubelet/config.json"}:
+                .: {}
+                f:actions: {}
+                f:path: {}
+            f:sshkey:
+              .: {}
+              f:actions: {}
+        f:observedGeneration: {}
+    manager: machine-config-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:32:28Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"BootImageUpdateDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"BootImageUpdateProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: machine-config-controller
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:32:52Z"
+  name: cluster
+  resourceVersion: "12319"
+  uid: d145980f-aba7-4fe3-8ad1-c3f4299ac8d6
+spec:
+  logLevel: Normal
+  managementState: Managed
+  operatorLogLevel: Normal
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:32:51Z"
+    message: Reconciled 2 of 2 MAPI MachineSets | Reconciled 0 of 0 CAPI MachineSets
+      | Reconciled 0 of 0 CAPI MachineDeployments
+    reason: MAPIMachineSetUpdated
+    status: "False"
+    type: BootImageUpdateProgressing
+  - lastTransitionTime: "2026-01-28T09:32:50Z"
+    message: 0 Degraded MAPI MachineSets | 0 Degraded CAPI MachineSets | 0 CAPI MachineDeployments
+    reason: MAPIMachineSetUpdated
+    status: "False"
+    type: BootImageUpdateDegraded
+  managedBootImagesStatus:
+    machineManagers:
+    - apiGroup: machine.openshift.io
+      resource: machinesets
+      selection:
+        mode: All
+  nodeDisruptionPolicyStatus:
+    clusterPolicies:
+      files:
+      - actions:
+        - type: None
+        path: /var/lib/kubelet/config.json
+      - actions:
+        - reload:
+            serviceName: crio.service
+          type: Reload
+        path: /etc/machine-config-daemon/no-reboot/containers-gpg.pub
+      - actions:
+        - reload:
+            serviceName: crio.service
+          type: Reload
+        path: /etc/containers/policy.json
+      - actions:
+        - type: Special
+        path: /etc/containers/registries.conf
+      - actions:
+        - reload:
+            serviceName: crio.service
+          type: Reload
+        path: /etc/containers/registries.d
+      - actions:
+        - reload:
+            serviceName: crio.service
+          type: Reload
+        path: /etc/crio/policies
+      - actions:
+        - type: None
+        path: /etc/nmstate/openshift
+      - actions:
+        - restart:
+            serviceName: coreos-update-ca-trust.service
+          type: Restart
+        - restart:
+            serviceName: crio.service
+          type: Restart
+        path: /etc/pki/ca-trust/source/anchors/openshift-config-user-ca-bundle.crt
+      sshkey:
+        actions:
+        - type: None
+  observedGeneration: 1

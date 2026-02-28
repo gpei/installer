@@ -1,0 +1,461 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    openshift.io/required-scc: privileged
+    openshift.io/scc: privileged
+    security.openshift.io/validated-scc-subject-type: serviceaccount
+  creationTimestamp: "2026-01-28T09:32:00Z"
+  generateName: machine-config-daemon-
+  generation: 1
+  labels:
+    controller-revision-hash: 5845f78964
+    k8s-app: machine-config-daemon
+    pod-template-generation: "1"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/required-scc: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:controller-revision-hash: {}
+          f:k8s-app: {}
+          f:pod-template-generation: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"fd48d64e-316a-493c-bdb2-d808304d12a8"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:nodeAffinity:
+            .: {}
+            f:requiredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"kube-rbac-proxy"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9001,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kube-rbac-proxy"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/tls/private"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"machine-config-daemon"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"NODE_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:host: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8798,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostIP: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+              f:readOnlyRootFilesystem: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/rootfs"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:hostPID: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"mcd-auth-proxy-config"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"proxy-tls"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"rootfs"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2026-01-28T09:32:00Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.3.203"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:32:01Z"
+  name: machine-config-daemon-7ddbq
+  namespace: openshift-machine-config-operator
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: DaemonSet
+    name: machine-config-daemon
+    uid: fd48d64e-316a-493c-bdb2-d808304d12a8
+  resourceVersion: "10803"
+  uid: 2f896487-edc6-4544-8765-eded51871519
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchFields:
+          - key: metadata.name
+            operator: In
+            values:
+            - ip-10-0-3-203.us-west-1.compute.internal
+  containers:
+  - args:
+    - start
+    - --payload-version=4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+    command:
+    - /usr/bin/machine-config-daemon
+    env:
+    - name: NODE_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: spec.nodeName
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:f531950bc313d9e80aea72aa532209085d8c1d67017055da1fae01f7ad4ac98b
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        host: 127.0.0.1
+        path: /health
+        port: 8798
+        scheme: HTTP
+      initialDelaySeconds: 120
+      periodSeconds: 30
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: machine-config-daemon
+    ports:
+    - containerPort: 8798
+      hostIP: 127.0.0.1
+      hostPort: 8798
+      name: health
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 20m
+        memory: 50Mi
+    securityContext:
+      privileged: true
+      readOnlyRootFilesystem: false
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /rootfs
+      mountPropagation: HostToContainer
+      name: rootfs
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-5sz5s
+      readOnly: true
+  - args:
+    - --secure-listen-address=0.0.0.0:9001
+    - --config-file=/etc/kube-rbac-proxy/config-file.yaml
+    - --tls-cipher-suites=TLS_AES_128_GCM_SHA256,TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+    - --tls-min-version=VersionTLS12
+    - --upstream=http://127.0.0.1:8797
+    - --logtostderr=true
+    - --tls-cert-file=/etc/tls/private/tls.crt
+    - --tls-private-key-file=/etc/tls/private/tls.key
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+    imagePullPolicy: IfNotPresent
+    name: kube-rbac-proxy
+    ports:
+    - containerPort: 9001
+      hostPort: 9001
+      name: metrics
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 20m
+        memory: 50Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/tls/private
+      name: proxy-tls
+    - mountPath: /etc/kube-rbac-proxy
+      name: mcd-auth-proxy-config
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-5sz5s
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  hostPID: true
+  nodeName: ip-10-0-3-203.us-west-1.compute.internal
+  nodeSelector:
+    kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: machine-config-daemon
+  serviceAccountName: machine-config-daemon
+  terminationGracePeriodSeconds: 600
+  tolerations:
+  - operator: Exists
+  volumes:
+  - hostPath:
+      path: /
+      type: ""
+    name: rootfs
+  - name: proxy-tls
+    secret:
+      defaultMode: 420
+      secretName: proxy-tls
+  - configMap:
+      defaultMode: 420
+      name: kube-rbac-proxy
+    name: mcd-auth-proxy-config
+  - name: kube-api-access-5sz5s
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:32:01Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:32:00Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:32:01Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:32:01Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:32:00Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - allocatedResources:
+      cpu: 20m
+      memory: 50Mi
+    containerID: cri-o://d69f6fbeac116f2f379d9d96ca44c74590e32778821c8bf08391989ae707fce7
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+    lastState: {}
+    name: kube-rbac-proxy
+    ready: true
+    resources:
+      requests:
+        cpu: 20m
+        memory: 50Mi
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2026-01-28T09:32:01Z"
+    user:
+      linux:
+        gid: 65534
+        supplementalGroups:
+        - 65534
+        uid: 65534
+    volumeMounts:
+    - mountPath: /etc/tls/private
+      name: proxy-tls
+    - mountPath: /etc/kube-rbac-proxy
+      name: mcd-auth-proxy-config
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-5sz5s
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - allocatedResources:
+      cpu: 20m
+      memory: 50Mi
+    containerID: cri-o://b57c412cae39008e735a09afb7dea4adcd711f7dce29ae138da566eacb173dad
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:f531950bc313d9e80aea72aa532209085d8c1d67017055da1fae01f7ad4ac98b
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:f531950bc313d9e80aea72aa532209085d8c1d67017055da1fae01f7ad4ac98b
+    lastState: {}
+    name: machine-config-daemon
+    ready: true
+    resources:
+      requests:
+        cpu: 20m
+        memory: 50Mi
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2026-01-28T09:32:01Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        uid: 0
+    volumeMounts:
+    - mountPath: /rootfs
+      name: rootfs
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-5sz5s
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 10.0.3.203
+  hostIPs:
+  - ip: 10.0.3.203
+  phase: Running
+  podIP: 10.0.3.203
+  podIPs:
+  - ip: 10.0.3.203
+  qosClass: Burstable
+  startTime: "2026-01-28T09:32:00Z"

@@ -1,0 +1,67 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+  creationTimestamp: "2026-01-28T09:42:29Z"
+  generation: 1
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"v4.4"}:
+            .: {}
+            f:annotations: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+              f:scheduled: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:42:29Z"
+  name: oauth-proxy
+  namespace: openshift
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "21155"
+  uid: 17cf7a15-e88b-42de-9f74-f996d4c6c989
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:8e7447fa6c870f75dfea7d55cf4a3e9fa42a51354460a25ddbc10e4ac6cb8544
+    generation: 1
+    importPolicy:
+      importMode: PreserveOriginal
+      scheduled: true
+    name: v4.4
+    referencePolicy:
+      type: Source
+status:
+  dockerImageRepository: image-registry.openshift-image-registry.svc:5000/openshift/oauth-proxy

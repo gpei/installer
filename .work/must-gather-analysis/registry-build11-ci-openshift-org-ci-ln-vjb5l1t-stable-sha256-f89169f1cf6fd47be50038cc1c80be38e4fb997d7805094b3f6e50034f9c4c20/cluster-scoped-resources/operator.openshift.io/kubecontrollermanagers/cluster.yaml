@@ -1,0 +1,764 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: KubeControllerManager
+metadata:
+  annotations:
+    include.release.openshift.io/hypershift: "true"
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2026-01-28T09:25:47Z"
+  generation: 3
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"WorkerLatencyProfileDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: WorkerLatencyProfile-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:34Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"WorkerLatencyProfileComplete"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"WorkerLatencyProfileProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager-LatencyProfile
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:34Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"NodeControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:nodeStatuses:
+          k:{"nodeName":"ip-10-0-3-203.us-west-1.compute.internal"}:
+            .: {}
+            f:nodeName: {}
+          k:{"nodeName":"ip-10-0-102-200.us-west-1.compute.internal"}:
+            .: {}
+            f:nodeName: {}
+          k:{"nodeName":"ip-10-0-108-54.us-west-1.compute.internal"}:
+            .: {}
+            f:nodeName: {}
+    manager: kube-controller-manager-Node
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:34Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"UnsupportedConfigOverridesUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager-operator-UnsupportedConfigOverrides
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:34Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"MissingStaticPodControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: MissingStaticPodController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:35Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ConfigObservationDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager-ConfigObserver
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:35Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"InstallerPodContainerWaitingDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"InstallerPodNetworkingDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"InstallerPodPendingDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager-InstallerState
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:37Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"BackingResourceControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: BackingResourceController-StaticResources
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:39Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"KubeControllerManagerStaticResourcesDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: KubeControllerManagerStaticResources-StaticResources
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:50Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ResourceSyncControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager-ResourceSync
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:53Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"RevisionControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: RevisionController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:08Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"StaticPodsDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager-StaticPodState
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:44:24Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:latestAvailableRevision: {}
+    manager: kube-controller-manager-RevisionController
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:45:14Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"GuardControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: GuardController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:47:28Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"InstallerControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"NodeInstallerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"NodeInstallerProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"StaticPodsAvailable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:nodeStatuses:
+          k:{"nodeName":"ip-10-0-3-203.us-west-1.compute.internal"}:
+            .: {}
+            f:currentRevision: {}
+            f:lastFailedCount: {}
+            f:lastFailedReason: {}
+            f:lastFailedRevision: {}
+            f:lastFallbackCount: {}
+            f:nodeName: {}
+            f:targetRevision: {}
+          k:{"nodeName":"ip-10-0-102-200.us-west-1.compute.internal"}:
+            .: {}
+            f:currentRevision: {}
+            f:lastFailedCount: {}
+            f:lastFailedReason: {}
+            f:lastFailedRevision: {}
+            f:lastFailedRevisionErrors: {}
+            f:lastFailedTime: {}
+            f:lastFallbackCount: {}
+            f:nodeName: {}
+            f:targetRevision: {}
+          k:{"nodeName":"ip-10-0-108-54.us-west-1.compute.internal"}:
+            .: {}
+            f:currentRevision: {}
+            f:lastFailedCount: {}
+            f:lastFailedReason: {}
+            f:lastFailedRevision: {}
+            f:lastFallbackCount: {}
+            f:nodeName: {}
+            f:targetRevision: {}
+    manager: kube-controller-manager-Installer
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:49:39Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/hypershift: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:release.openshift.io/create-only: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec:
+        .: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:operatorLogLevel: {}
+        f:useMoreSecureServiceCA: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:25:47Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:observedConfig:
+          .: {}
+          f:extendedArguments:
+            .: {}
+            f:cluster-cidr: {}
+            f:cluster-name: {}
+            f:feature-gates: {}
+            f:service-cluster-ip-range: {}
+          f:featureGates: {}
+          f:serviceServingCert:
+            .: {}
+            f:certFile: {}
+          f:servingInfo:
+            .: {}
+            f:cipherSuites: {}
+            f:minTLSVersion: {}
+        f:unsupportedConfigOverrides: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2026-01-28T09:31:06Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"CertRotation_CSRSigningCert_Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"GarbageCollectorDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"SATokenSignerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"TargetConfigControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Upgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:readyReplicas: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:44:09Z"
+  name: cluster
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "26718"
+  uid: a8f2bd98-9d8b-4d6d-90ed-7d37ba1b26d4
+spec:
+  logLevel: Normal
+  managementState: Managed
+  observedConfig:
+    extendedArguments:
+      cluster-cidr:
+      - 10.128.0.0/14
+      cluster-name:
+      - ci-ln-vjb5l1t-76ef8-snmcd
+      feature-gates:
+      - AdditionalRoutingCapabilities=true
+      - AdminNetworkPolicy=true
+      - AlibabaPlatform=true
+      - AzureWorkloadIdentity=true
+      - BuildCSIVolumes=true
+      - CPMSMachineNamePrefix=true
+      - ConsolePluginContentSecurityPolicy=true
+      - ExternalOIDC=true
+      - ExternalOIDCWithUIDAndExtraClaimMappings=true
+      - GatewayAPI=true
+      - GatewayAPIController=true
+      - HighlyAvailableArbiter=true
+      - ImageVolume=true
+      - IngressControllerLBSubnetsAWS=true
+      - KMSv1=true
+      - MachineConfigNodes=true
+      - ManagedBootImages=true
+      - ManagedBootImagesAWS=true
+      - MetricsCollectionProfiles=true
+      - NetworkDiagnosticsConfig=true
+      - NetworkLiveMigration=true
+      - NetworkSegmentation=true
+      - NewOLM=true
+      - PinnedImages=true
+      - PreconfiguredUDNAddresses=true
+      - ProcMountType=true
+      - RouteAdvertisements=true
+      - RouteExternalCertificate=true
+      - ServiceAccountTokenNodeBinding=true
+      - SetEIPForNLBIngressController=true
+      - SigstoreImageVerification=true
+      - StoragePerformantSecurityPolicy=true
+      - UpgradeStatus=true
+      - UserNamespacesPodSecurityStandards=true
+      - UserNamespacesSupport=true
+      - VSphereMultiDisk=true
+      - VSphereMultiNetworks=true
+      - AWSClusterHostedDNS=false
+      - AWSClusterHostedDNSInstall=false
+      - AWSDedicatedHosts=false
+      - AWSServiceLBNetworkSecurityGroup=false
+      - AutomatedEtcdBackup=false
+      - AzureClusterHostedDNSInstall=false
+      - AzureDedicatedHosts=false
+      - AzureMultiDisk=false
+      - BootImageSkewEnforcement=false
+      - BootcNodeManagement=false
+      - ClusterAPIInstall=false
+      - ClusterAPIInstallIBMCloud=false
+      - ClusterMonitoringConfig=false
+      - ClusterVersionOperatorConfiguration=false
+      - DNSNameResolver=false
+      - DualReplica=false
+      - DyanmicServiceEndpointIBMCloud=false
+      - DynamicResourceAllocation=false
+      - EtcdBackendQuota=false
+      - EventedPLEG=false
+      - Example=false
+      - Example2=false
+      - ExternalSnapshotMetadata=false
+      - GCPClusterHostedDNS=false
+      - GCPClusterHostedDNSInstall=false
+      - GCPCustomAPIEndpoints=false
+      - GCPCustomAPIEndpointsInstall=false
+      - ImageModeStatusReporting=false
+      - ImageStreamImportMode=false
+      - IngressControllerDynamicConfigurationManager=false
+      - InsightsConfig=false
+      - InsightsConfigAPI=false
+      - InsightsOnDemandDataGather=false
+      - IrreconcilableMachineConfig=false
+      - KMSEncryptionProvider=false
+      - MachineAPIMigration=false
+      - MachineAPIOperatorDisableMachineHealthCheckController=false
+      - ManagedBootImagesAzure=false
+      - ManagedBootImagesvSphere=false
+      - MaxUnavailableStatefulSet=false
+      - MinimumKubeletVersion=false
+      - MixedCPUsAllocation=false
+      - MultiArchInstallAzure=false
+      - MultiDiskSetup=false
+      - MutatingAdmissionPolicy=false
+      - NewOLMCatalogdAPIV1Metas=false
+      - NewOLMOwnSingleNamespace=false
+      - NewOLMPreflightPermissionChecks=false
+      - NewOLMWebhookProviderOpenshiftServiceCA=false
+      - NoRegistryClusterOperations=false
+      - NodeSwap=false
+      - NutanixMultiSubnets=false
+      - OVNObservability=false
+      - OpenShiftPodSecurityAdmission=false
+      - SELinuxMount=false
+      - ShortCertRotation=false
+      - SignatureStores=false
+      - SigstoreImageVerificationPKI=false
+      - TranslateStreamCloseWebsocketRequests=false
+      - VSphereConfigurableMaxAllowedBlockVolumesPerNode=false
+      - VSphereHostVMGroupZonal=false
+      - VSphereMixedNodeEnv=false
+      - VolumeAttributesClass=false
+      - VolumeGroupSnapshot=false
+      service-cluster-ip-range:
+      - 172.30.0.0/16
+    featureGates:
+    - AdditionalRoutingCapabilities=true
+    - AdminNetworkPolicy=true
+    - AlibabaPlatform=true
+    - AzureWorkloadIdentity=true
+    - BuildCSIVolumes=true
+    - CPMSMachineNamePrefix=true
+    - ConsolePluginContentSecurityPolicy=true
+    - ExternalOIDC=true
+    - ExternalOIDCWithUIDAndExtraClaimMappings=true
+    - GatewayAPI=true
+    - GatewayAPIController=true
+    - HighlyAvailableArbiter=true
+    - ImageVolume=true
+    - IngressControllerLBSubnetsAWS=true
+    - KMSv1=true
+    - MachineConfigNodes=true
+    - ManagedBootImages=true
+    - ManagedBootImagesAWS=true
+    - MetricsCollectionProfiles=true
+    - NetworkDiagnosticsConfig=true
+    - NetworkLiveMigration=true
+    - NetworkSegmentation=true
+    - NewOLM=true
+    - PinnedImages=true
+    - PreconfiguredUDNAddresses=true
+    - ProcMountType=true
+    - RouteAdvertisements=true
+    - RouteExternalCertificate=true
+    - ServiceAccountTokenNodeBinding=true
+    - SetEIPForNLBIngressController=true
+    - SigstoreImageVerification=true
+    - StoragePerformantSecurityPolicy=true
+    - UpgradeStatus=true
+    - UserNamespacesPodSecurityStandards=true
+    - UserNamespacesSupport=true
+    - VSphereMultiDisk=true
+    - VSphereMultiNetworks=true
+    - AWSClusterHostedDNS=false
+    - AWSClusterHostedDNSInstall=false
+    - AWSDedicatedHosts=false
+    - AWSServiceLBNetworkSecurityGroup=false
+    - AutomatedEtcdBackup=false
+    - AzureClusterHostedDNSInstall=false
+    - AzureDedicatedHosts=false
+    - AzureMultiDisk=false
+    - BootImageSkewEnforcement=false
+    - BootcNodeManagement=false
+    - ClusterAPIInstall=false
+    - ClusterAPIInstallIBMCloud=false
+    - ClusterMonitoringConfig=false
+    - ClusterVersionOperatorConfiguration=false
+    - DNSNameResolver=false
+    - DualReplica=false
+    - DyanmicServiceEndpointIBMCloud=false
+    - DynamicResourceAllocation=false
+    - EtcdBackendQuota=false
+    - EventedPLEG=false
+    - Example=false
+    - Example2=false
+    - ExternalSnapshotMetadata=false
+    - GCPClusterHostedDNS=false
+    - GCPClusterHostedDNSInstall=false
+    - GCPCustomAPIEndpoints=false
+    - GCPCustomAPIEndpointsInstall=false
+    - ImageModeStatusReporting=false
+    - ImageStreamImportMode=false
+    - IngressControllerDynamicConfigurationManager=false
+    - InsightsConfig=false
+    - InsightsConfigAPI=false
+    - InsightsOnDemandDataGather=false
+    - IrreconcilableMachineConfig=false
+    - KMSEncryptionProvider=false
+    - MachineAPIMigration=false
+    - MachineAPIOperatorDisableMachineHealthCheckController=false
+    - ManagedBootImagesAzure=false
+    - ManagedBootImagesvSphere=false
+    - MaxUnavailableStatefulSet=false
+    - MinimumKubeletVersion=false
+    - MixedCPUsAllocation=false
+    - MultiArchInstallAzure=false
+    - MultiDiskSetup=false
+    - MutatingAdmissionPolicy=false
+    - NewOLMCatalogdAPIV1Metas=false
+    - NewOLMOwnSingleNamespace=false
+    - NewOLMPreflightPermissionChecks=false
+    - NewOLMWebhookProviderOpenshiftServiceCA=false
+    - NoRegistryClusterOperations=false
+    - NodeSwap=false
+    - NutanixMultiSubnets=false
+    - OVNObservability=false
+    - OpenShiftPodSecurityAdmission=false
+    - SELinuxMount=false
+    - ShortCertRotation=false
+    - SignatureStores=false
+    - SigstoreImageVerificationPKI=false
+    - TranslateStreamCloseWebsocketRequests=false
+    - VSphereConfigurableMaxAllowedBlockVolumesPerNode=false
+    - VSphereHostVMGroupZonal=false
+    - VSphereMixedNodeEnv=false
+    - VolumeAttributesClass=false
+    - VolumeGroupSnapshot=false
+    serviceServingCert:
+      certFile: /etc/kubernetes/static-pod-resources/configmaps/service-ca/ca-bundle.crt
+    servingInfo:
+      cipherSuites:
+      - TLS_AES_128_GCM_SHA256
+      - TLS_AES_256_GCM_SHA384
+      - TLS_CHACHA20_POLY1305_SHA256
+      - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+      - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+      minTLSVersion: VersionTLS12
+  operatorLogLevel: Normal
+  unsupportedConfigOverrides: null
+  useMoreSecureServiceCA: true
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:30:34Z"
+    reason: NoUnsupportedConfigOverrides
+    status: "True"
+    type: UnsupportedConfigOverridesUpgradeable
+  - lastTransitionTime: "2026-01-28T09:30:34Z"
+    message: All master nodes are ready
+    reason: MasterNodesReady
+    status: "False"
+    type: NodeControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:34Z"
+    reason: AsExpected
+    status: "False"
+    type: GarbageCollectorDegraded
+  - lastTransitionTime: "2026-01-28T09:30:34Z"
+    message: latency profile not set on cluster
+    reason: ProfileEmpty
+    status: "True"
+    type: WorkerLatencyProfileComplete
+  - lastTransitionTime: "2026-01-28T09:30:34Z"
+    reason: ProfileEmpty
+    status: "False"
+    type: WorkerLatencyProfileProgressing
+  - lastTransitionTime: "2026-01-28T09:30:34Z"
+    reason: AsExpected
+    status: "False"
+    type: WorkerLatencyProfileDegraded
+  - lastTransitionTime: "2026-01-28T09:30:35Z"
+    status: "False"
+    type: ConfigObservationDegraded
+  - lastTransitionTime: "2026-01-28T09:31:08Z"
+    reason: AsExpected
+    status: "False"
+    type: RevisionControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:31:09Z"
+    status: "False"
+    type: InstallerControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:35:04Z"
+    status: "False"
+    type: NodeInstallerDegraded
+  - lastTransitionTime: "2026-01-28T09:49:39Z"
+    message: 3 nodes are at revision 7
+    reason: AllNodesAtLatestRevision
+    status: "False"
+    type: NodeInstallerProgressing
+  - lastTransitionTime: "2026-01-28T09:36:03Z"
+    message: 3 nodes are active; 3 nodes are at revision 7
+    reason: ""
+    status: "True"
+    type: StaticPodsAvailable
+  - lastTransitionTime: "2026-01-28T09:47:28Z"
+    reason: AsExpected
+    status: "False"
+    type: GuardControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:35Z"
+    reason: AsExpected
+    status: "False"
+    type: MissingStaticPodControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:37Z"
+    status: "False"
+    type: InstallerPodContainerWaitingDegraded
+  - lastTransitionTime: "2026-01-28T09:30:37Z"
+    status: "False"
+    type: InstallerPodNetworkingDegraded
+  - lastTransitionTime: "2026-01-28T09:30:37Z"
+    status: "False"
+    type: InstallerPodPendingDegraded
+  - lastTransitionTime: "2026-01-28T09:30:38Z"
+    reason: AsExpected
+    status: "False"
+    type: BackingResourceControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:39Z"
+    status: "False"
+    type: SATokenSignerDegraded
+  - lastTransitionTime: "2026-01-28T09:44:24Z"
+    status: "False"
+    type: StaticPodsDegraded
+  - lastTransitionTime: "2026-01-28T09:30:50Z"
+    reason: AsExpected
+    status: "False"
+    type: KubeControllerManagerStaticResourcesDegraded
+  - lastTransitionTime: "2026-01-28T09:30:53Z"
+    status: "False"
+    type: ResourceSyncControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:37:59Z"
+    status: "True"
+    type: Upgradeable
+  - lastTransitionTime: "2026-01-28T09:37:59Z"
+    status: "False"
+    type: TargetConfigControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:38:08Z"
+    status: "False"
+    type: CertRotation_CSRSigningCert_Degraded
+  latestAvailableRevision: 7
+  nodeStatuses:
+  - currentRevision: 7
+    lastFailedCount: 3
+    lastFailedReason: InstallerFailed
+    lastFailedRevision: 4
+    lastFailedRevisionErrors:
+    - |
+      installer: l" ...
+      I0128 09:34:51.526292       1 cmd.go:629] Writing config file "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/kube-controller-manager-pod/version" ...
+      I0128 09:34:51.526406       1 cmd.go:277] Creating directory "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/recycler-config" ...
+      I0128 09:34:51.526427       1 cmd.go:629] Writing config file "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/recycler-config/recycler-pod.yaml" ...
+      I0128 09:34:51.526530       1 cmd.go:277] Creating directory "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/service-ca" ...
+      I0128 09:34:51.526559       1 cmd.go:629] Writing config file "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/service-ca/ca-bundle.crt" ...
+      I0128 09:34:51.526671       1 cmd.go:277] Creating directory "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/serviceaccount-ca" ...
+      I0128 09:34:51.526702       1 cmd.go:629] Writing config file "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/serviceaccount-ca/ca-bundle.crt" ...
+      I0128 09:34:51.526817       1 cmd.go:221] Creating target resource directory "/etc/kubernetes/static-pod-resources/kube-controller-manager-certs" ...
+      I0128 09:34:51.526837       1 cmd.go:229] Getting secrets ...
+      I0128 09:34:51.724051       1 copy.go:32] Got secret openshift-kube-controller-manager/csr-signer
+      I0128 09:34:51.924516       1 copy.go:32] Got secret openshift-kube-controller-manager/kube-controller-manager-client-cert-key
+      I0128 09:34:51.924589       1 cmd.go:242] Getting config maps ...
+      I0128 09:34:52.123811       1 copy.go:60] Got configMap openshift-kube-controller-manager/aggregator-client-ca
+      I0128 09:34:52.324017       1 copy.go:52] Failed to get config map openshift-kube-controller-manager/client-ca: configmaps "client-ca" not found
+      F0128 09:34:52.527664       1 cmd.go:109] failed to copy: configmaps "client-ca" not found
+    lastFailedTime: "2026-01-28T09:34:55Z"
+    lastFallbackCount: 0
+    nodeName: ip-10-0-102-200.us-west-1.compute.internal
+    targetRevision: 0
+  - currentRevision: 7
+    lastFailedCount: 0
+    lastFailedReason: ""
+    lastFailedRevision: 0
+    lastFallbackCount: 0
+    nodeName: ip-10-0-108-54.us-west-1.compute.internal
+    targetRevision: 0
+  - currentRevision: 7
+    lastFailedCount: 0
+    lastFailedReason: ""
+    lastFailedRevision: 0
+    lastFallbackCount: 0
+    nodeName: ip-10-0-3-203.us-west-1.compute.internal
+    targetRevision: 0
+  readyReplicas: 0

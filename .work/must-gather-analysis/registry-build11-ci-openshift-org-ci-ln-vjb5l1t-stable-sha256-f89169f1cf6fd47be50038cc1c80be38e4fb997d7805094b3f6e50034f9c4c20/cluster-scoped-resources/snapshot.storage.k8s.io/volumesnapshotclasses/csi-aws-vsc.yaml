@@ -1,0 +1,26 @@
+---
+apiVersion: snapshot.storage.k8s.io/v1
+deletionPolicy: Delete
+driver: ebs.csi.aws.com
+kind: VolumeSnapshotClass
+metadata:
+  annotations:
+    snapshot.storage.kubernetes.io/is-default-class: "true"
+  creationTimestamp: "2026-01-28T09:32:10Z"
+  generation: 1
+  managedFields:
+  - apiVersion: snapshot.storage.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:deletionPolicy: {}
+      f:driver: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:snapshot.storage.kubernetes.io/is-default-class: {}
+    manager: aws-ebs-csi-driver-operator
+    operation: Update
+    time: "2026-01-28T09:32:10Z"
+  name: csi-aws-vsc
+  resourceVersion: "11297"
+  uid: 8610e499-2381-466e-84d2-3ed11e5538be

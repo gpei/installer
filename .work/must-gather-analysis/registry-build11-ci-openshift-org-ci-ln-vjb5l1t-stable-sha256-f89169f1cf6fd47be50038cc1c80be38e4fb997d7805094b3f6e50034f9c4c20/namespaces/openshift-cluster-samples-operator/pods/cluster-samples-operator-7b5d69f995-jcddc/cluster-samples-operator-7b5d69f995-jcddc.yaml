@@ -1,0 +1,444 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.15/23"],"mac_address":"0a:58:0a:80:00:0f","gateway_ips":["10.128.0.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.128.0.1"},{"dest":"172.30.0.0/16","nextHop":"10.128.0.1"},{"dest":"169.254.0.5/32","nextHop":"10.128.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.0.1"}],"ip_address":"10.128.0.15/23","gateway_ip":"10.128.0.1","role":"primary"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.15"
+          ],
+          "mac": "0a:58:0a:80:00:0f",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/required-scc: restricted-v2
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    security.openshift.io/validated-scc-subject-type: user
+  creationTimestamp: "2026-01-28T09:31:41Z"
+  generateName: cluster-samples-operator-7b5d69f995-
+  generation: 1
+  labels:
+    name: cluster-samples-operator
+    pod-template-hash: 7b5d69f995
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ip-10-0-3-203
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:31:41Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/required-scc: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:name: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"cd070375-f311-4a1e-b46b-529be9443240"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"cluster-samples-operator"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"OPERATOR_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RELEASE_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"WATCH_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":60000,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/secrets"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"cluster-samples-operator-watch"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsNonRoot: {}
+          f:seccompProfile:
+            .: {}
+            f:type: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:shareProcessNamespace: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"samples-operator-tls"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2026-01-28T09:31:41Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:31:42Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.15"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:31:53Z"
+  name: cluster-samples-operator-7b5d69f995-jcddc
+  namespace: openshift-cluster-samples-operator
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: cluster-samples-operator-7b5d69f995
+    uid: cd070375-f311-4a1e-b46b-529be9443240
+  resourceVersion: "9763"
+  uid: 6189947c-3a9d-49a0-bce4-b7ce920ff94f
+spec:
+  containers:
+  - command:
+    - cluster-samples-operator
+    env:
+    - name: WATCH_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: OPERATOR_NAME
+      value: cluster-samples-operator
+    - name: RELEASE_VERSION
+      value: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a88df5e988177c695609c5e2c3907e649c76ae5655493fa2e373e5dee27a5787
+    imagePullPolicy: IfNotPresent
+    name: cluster-samples-operator
+    ports:
+    - containerPort: 60000
+      name: metrics
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsUser: 1000290000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/secrets
+      name: samples-operator-tls
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-6vjm2
+      readOnly: true
+  - args:
+    - --namespace=openshift-cluster-samples-operator
+    - --process-name=cluster-samples-operator
+    - --termination-grace-period=30s
+    - --files=/etc/secrets/tls.crt,/etc/secrets/tls.key
+    command:
+    - cluster-samples-operator-watch
+    - file-watcher-watchdog
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a88df5e988177c695609c5e2c3907e649c76ae5655493fa2e373e5dee27a5787
+    imagePullPolicy: IfNotPresent
+    name: cluster-samples-operator-watch
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsUser: 1000290000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-6vjm2
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: ip-10-0-3-203.us-west-1.compute.internal
+  nodeSelector:
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000290000
+    runAsNonRoot: true
+    seLinuxOptions:
+      level: s0:c17,c9
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: cluster-samples-operator
+  serviceAccountName: cluster-samples-operator
+  shareProcessNamespace: true
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: samples-operator-tls
+    secret:
+      defaultMode: 420
+      secretName: samples-operator-tls
+  - name: kube-api-access-6vjm2
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:31:53Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:31:42Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:31:53Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:31:53Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:31:41Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - allocatedResources:
+      cpu: 10m
+      memory: 50Mi
+    containerID: cri-o://46b1f50bed407d100bb88afbb1e07b16ef8b33dd0e4524da17990f3aae3a13f9
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a88df5e988177c695609c5e2c3907e649c76ae5655493fa2e373e5dee27a5787
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a88df5e988177c695609c5e2c3907e649c76ae5655493fa2e373e5dee27a5787
+    lastState: {}
+    name: cluster-samples-operator
+    ready: true
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2026-01-28T09:31:52Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        - 1000290000
+        uid: 1000290000
+    volumeMounts:
+    - mountPath: /etc/secrets
+      name: samples-operator-tls
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-6vjm2
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - allocatedResources:
+      cpu: 10m
+      memory: 50Mi
+    containerID: cri-o://7611f19a39a1fa3ec48b51b45c62d38ea32e63c5038deeee91bd780c521e3c87
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a88df5e988177c695609c5e2c3907e649c76ae5655493fa2e373e5dee27a5787
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a88df5e988177c695609c5e2c3907e649c76ae5655493fa2e373e5dee27a5787
+    lastState: {}
+    name: cluster-samples-operator-watch
+    ready: true
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2026-01-28T09:31:52Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        - 1000290000
+        uid: 1000290000
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-6vjm2
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 10.0.3.203
+  hostIPs:
+  - ip: 10.0.3.203
+  phase: Running
+  podIP: 10.128.0.15
+  podIPs:
+  - ip: 10.128.0.15
+  qosClass: Burstable
+  startTime: "2026-01-28T09:31:42Z"

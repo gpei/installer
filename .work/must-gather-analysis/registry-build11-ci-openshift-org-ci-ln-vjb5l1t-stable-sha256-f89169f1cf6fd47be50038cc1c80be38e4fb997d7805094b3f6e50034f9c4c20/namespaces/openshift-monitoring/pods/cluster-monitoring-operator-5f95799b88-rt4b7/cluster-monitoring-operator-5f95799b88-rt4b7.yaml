@@ -1,0 +1,416 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.130.0.19/23"],"mac_address":"0a:58:0a:82:00:13","gateway_ips":["10.130.0.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.130.0.1"},{"dest":"172.30.0.0/16","nextHop":"10.130.0.1"},{"dest":"169.254.0.5/32","nextHop":"10.130.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.130.0.1"}],"ip_address":"10.130.0.19/23","gateway_ip":"10.130.0.1","role":"primary"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.130.0.19"
+          ],
+          "mac": "0a:58:0a:82:00:13",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/required-scc: restricted-v2
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    security.openshift.io/validated-scc-subject-type: user
+  creationTimestamp: "2026-01-28T09:28:54Z"
+  generateName: cluster-monitoring-operator-5f95799b88-
+  generation: 1
+  labels:
+    app: cluster-monitoring-operator
+    app.kubernetes.io/name: cluster-monitoring-operator
+    pod-template-hash: 5f95799b88
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/required-scc: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/name: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"81d996f3-a742-4b4b-afe2-36942adbaab7"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"cluster-monitoring-operator"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"RELEASE_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8443,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/cluster-monitoring-operator/telemetry"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/tls/private"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"cluster-monitoring-operator-tls"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"telemetry-config"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2026-01-28T09:28:54Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:28:54Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ip-10-0-108-54
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:30:08Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:31:16Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.130.0.19"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:31:55Z"
+  name: cluster-monitoring-operator-5f95799b88-rt4b7
+  namespace: openshift-monitoring
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: cluster-monitoring-operator-5f95799b88
+    uid: 81d996f3-a742-4b4b-afe2-36942adbaab7
+  resourceVersion: "9870"
+  uid: 9c469337-be39-4704-a464-5c68db5f71fe
+spec:
+  containers:
+  - args:
+    - -namespace=openshift-monitoring
+    - -namespace-user-workload=openshift-user-workload-monitoring
+    - -configmap=cluster-monitoring-config
+    - -release-version=$(RELEASE_VERSION)
+    - -v=2
+    - -cert-file=/etc/tls/private/tls.crt
+    - -key-file=/etc/tls/private/tls.key
+    - -images=prometheus-operator=registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:b985fe559b00bd2ce208766ff7c152678f8748511f7ce08560579284a0c1b6e1
+    - -images=prometheus-config-reloader=registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:c42ed662d1c73a7e41c554aff6279d6460679f8e63fe1f58298d3d245f27b0e5
+    - -images=prometheus-operator-admission-webhook=registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:5928b467e38cce9a970336428d3722f4ce77639e67a3a21b7b4fbf4bb2bf5f48
+    - -images=configmap-reloader=registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e862dc09e931f260c43e31edeba270e4174d5fd032da44ee7268072c28bc19dd
+    - -images=prometheus=registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:852562a69b65e84c454aec7dab14b3addb0df6ccc58133c593708457fc4934b7
+    - -images=alertmanager=registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:117beca810a6438cb30146aafb16c88a7fdeb0d2a595ce709d4df47d552115cf
+    - -images=node-exporter=registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:5f0275578312c055162cdb4468f1f08c09f0776a4d44c5e1d8ee4e9cc56ec3eb
+    - -images=kube-state-metrics=registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:eeeeced0d5466346a4e55ae15ffaf94d1b536673c85e45bdd130018b7d026b31
+    - -images=openshift-state-metrics=registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:b056c0bec20e7b9ed01e3d641c34b87ec81b84e64f8267880e548b3260ff8d29
+    - -images=kube-rbac-proxy=registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+    - -images=telemeter-client=registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:2176c1fee072fecc19c765be4dc9340e4cb009360d2fd8204240652ecaeb73b7
+    - -images=prom-label-proxy=registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:2333e75896298787fb09e4381d8f640d8f445a5c30856634aa193624c74594d2
+    - -images=thanos=registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:b4df16e8c76e8f0d1a81d1356a29dc15230c72dcb9a5dcc12931b8a565ecdeb3
+    - -images=monitoring-plugin=registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:4c35e5d75482b58c8ef656f864a37a5426533737cc155869ae8f8f4812c0daaa
+    - -images=kube-metrics-server=registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:cffe1ed139c1ad34e99127684f184827b11c71df96350b52a69accb245f1b2af
+    env:
+    - name: RELEASE_VERSION
+      value: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:bf063af3d63c18f387deef046b84edd219fde4594cb73257ac44ab602f718b8a
+    imagePullPolicy: IfNotPresent
+    name: cluster-monitoring-operator
+    ports:
+    - containerPort: 8443
+      name: https
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 75Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000460000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/tls/private
+      name: cluster-monitoring-operator-tls
+      readOnly: true
+    - mountPath: /etc/cluster-monitoring-operator/telemetry
+      name: telemetry-config
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-gnfh6
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: ip-10-0-108-54.us-west-1.compute.internal
+  nodeSelector:
+    kubernetes.io/os: linux
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000460000
+    seLinuxOptions:
+      level: s0:c21,c20
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: cluster-monitoring-operator
+  serviceAccountName: cluster-monitoring-operator
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 120
+  volumes:
+  - configMap:
+      defaultMode: 420
+      name: telemetry-config
+    name: telemetry-config
+  - name: cluster-monitoring-operator-tls
+    secret:
+      defaultMode: 420
+      secretName: cluster-monitoring-operator-tls
+  - name: kube-api-access-gnfh6
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:31:55Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:30:08Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:31:55Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:31:55Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:30:08Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - allocatedResources:
+      cpu: 10m
+      memory: 75Mi
+    containerID: cri-o://edfb5bf86a67e68d91a805f76c4eba26f6f8a5170315dc1c0c27197a2cb709a9
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:bf063af3d63c18f387deef046b84edd219fde4594cb73257ac44ab602f718b8a
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:bf063af3d63c18f387deef046b84edd219fde4594cb73257ac44ab602f718b8a
+    lastState: {}
+    name: cluster-monitoring-operator
+    ready: true
+    resources:
+      requests:
+        cpu: 10m
+        memory: 75Mi
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2026-01-28T09:31:54Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        - 1000460000
+        uid: 1000460000
+    volumeMounts:
+    - mountPath: /etc/tls/private
+      name: cluster-monitoring-operator-tls
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /etc/cluster-monitoring-operator/telemetry
+      name: telemetry-config
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-gnfh6
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 10.0.108.54
+  hostIPs:
+  - ip: 10.0.108.54
+  phase: Running
+  podIP: 10.130.0.19
+  podIPs:
+  - ip: 10.130.0.19
+  qosClass: Burstable
+  startTime: "2026-01-28T09:30:08Z"

@@ -1,0 +1,102 @@
+---
+apiVersion: cloudcredential.openshift.io/v1
+kind: CredentialsRequest
+metadata:
+  annotations:
+    capability.openshift.io/name: ImageRegistry+CloudCredential
+    include.release.openshift.io/hypershift: "true"
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2026-01-28T09:25:52Z"
+  generation: 1
+  labels:
+    controller-tools.k8s.io: "1.0"
+  managedFields:
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/hypershift: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:labels:
+          .: {}
+          f:controller-tools.k8s.io: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec:
+        .: {}
+        f:providerSpec:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:permissions: {}
+          f:skipServiceCheck: {}
+        f:secretRef: {}
+        f:serviceAccountNames: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:25:52Z"
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:lastSyncGeneration: {}
+        f:provisioned: {}
+    manager: cloud-credential-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:26:58Z"
+  name: openshift-image-registry-gcs
+  namespace: openshift-cloud-credential-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "2826"
+  uid: fd42be0c-9f1c-42d7-9fa0-ba84e388205d
+spec:
+  providerSpec:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: GCPProviderSpec
+    permissions:
+    - storage.buckets.create
+    - storage.buckets.delete
+    - storage.buckets.get
+    - storage.buckets.list
+    - storage.buckets.createTagBinding
+    - storage.buckets.listEffectiveTags
+    - storage.objects.create
+    - storage.objects.delete
+    - storage.objects.get
+    - storage.objects.list
+    - resourcemanager.tagValueBindings.create
+    - resourcemanager.tagValues.get
+    - resourcemanager.tagValues.list
+    skipServiceCheck: true
+  secretRef:
+    name: installer-cloud-credentials
+    namespace: openshift-image-registry
+  serviceAccountNames:
+  - cluster-image-registry-operator
+  - registry
+status:
+  conditions:
+  - lastProbeTime: "2026-01-28T09:26:58Z"
+    lastTransitionTime: "2026-01-28T09:26:58Z"
+    message: CredentialsRequest is not for platform AWS
+    reason: InfrastructureMismatch
+    status: "True"
+    type: Ignored
+  lastSyncGeneration: 0
+  provisioned: false

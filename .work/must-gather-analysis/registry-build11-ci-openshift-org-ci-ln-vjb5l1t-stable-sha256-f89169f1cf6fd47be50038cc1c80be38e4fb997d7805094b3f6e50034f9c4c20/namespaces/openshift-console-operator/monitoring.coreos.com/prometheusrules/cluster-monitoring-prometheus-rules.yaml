@@ -1,0 +1,71 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  annotations:
+    capability.openshift.io/name: Console
+    include.release.openshift.io/hypershift: "true"
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2026-01-28T09:47:16Z"
+  generation: 1
+  labels:
+    prometheus: k8s
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/hypershift: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:labels:
+          .: {}
+          f:prometheus: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec:
+        .: {}
+        f:groups:
+          .: {}
+          k:{"name":"openshift/console-operator"}:
+            .: {}
+            f:name: {}
+            f:rules: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:47:16Z"
+  name: cluster-monitoring-prometheus-rules
+  namespace: openshift-console-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "25807"
+  uid: 37603f80-0688-4fa2-acb3-86d2a641a2c6
+spec:
+  groups:
+  - name: openshift/console-operator
+    rules:
+    - expr: sum(console_auth_login_requests_total)
+      record: cluster:console_auth_login_requests_total:sum
+    - expr: sum(console_auth_login_successes_total) by (role)
+      record: cluster:console_auth_login_successes_total:sum
+    - expr: sum(console_auth_login_failures_total) by (reason)
+      record: cluster:console_auth_login_failures_total:sum
+    - expr: sum(console_auth_logout_requests_total) by (reason)
+      record: cluster:console_auth_logout_requests_total:sum
+    - expr: max(console_usage_users) by (role)
+      record: cluster:console_usage_users:max
+    - expr: max(console_plugins_info) by (name, state)
+      record: cluster:console_plugins_info:max
+    - expr: max(console_customization_perspectives_info) by (name, state)
+      record: cluster:console_customization_perspectives_info:max

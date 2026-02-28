@@ -1,0 +1,136 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    include.release.openshift.io/hypershift: "true"
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+  creationTimestamp: "2026-01-28T09:25:40Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/hypershift: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:25:40Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+        f:relatedObjects: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:25:41Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"EvaluationConditionsDetected"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Upgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:versions: {}
+    manager: cluster-kube-storage-version-migrator-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:30:35Z"
+  name: kube-storage-version-migrator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "6144"
+  uid: 9759fab7-2789-4e01-a683-0bd8f19333d3
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:30:32Z"
+    message: All is well
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2026-01-28T09:30:35Z"
+    message: All is well
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2026-01-28T09:30:35Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2026-01-28T09:30:32Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
+    type: Upgradeable
+  - lastTransitionTime: "2026-01-28T09:30:32Z"
+    reason: NoData
+    status: Unknown
+    type: EvaluationConditionsDetected
+  extension: null
+  relatedObjects:
+  - group: operator.openshift.io
+    name: cluster
+    resource: kubestorageversionmigrators
+  - group: migration.k8s.io
+    name: ""
+    resource: storageversionmigrations
+  - group: ""
+    name: openshift-kube-storage-version-migrator
+    resource: namespaces
+  - group: ""
+    name: openshift-kube-storage-version-migrator-operator
+    resource: namespaces
+  versions:
+  - name: operator
+    version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest

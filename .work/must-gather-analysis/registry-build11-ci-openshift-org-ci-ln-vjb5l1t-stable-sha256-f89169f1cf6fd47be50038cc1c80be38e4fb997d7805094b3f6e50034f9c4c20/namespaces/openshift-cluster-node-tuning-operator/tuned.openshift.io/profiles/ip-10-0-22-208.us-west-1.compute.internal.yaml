@@ -1,0 +1,78 @@
+---
+apiVersion: tuned.openshift.io/v1
+kind: Profile
+metadata:
+  creationTimestamp: "2026-01-28T09:41:49Z"
+  generation: 2
+  managedFields:
+  - apiVersion: tuned.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"cb9966c0-9cff-493a-8463-35a28a98c887"}: {}
+      f:spec:
+        .: {}
+        f:config:
+          .: {}
+          f:debug: {}
+          f:providerName: {}
+          f:tunedConfig: {}
+          f:tunedProfile: {}
+          f:verbosity: {}
+        f:profile: {}
+    manager: cluster-node-tuning-operator
+    operation: Update
+    time: "2026-01-28T09:41:49Z"
+  - apiVersion: tuned.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:observedGeneration: {}
+        f:tunedProfile: {}
+    manager: cluster-node-tuning-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:42:33Z"
+  name: ip-10-0-22-208.us-west-1.compute.internal
+  namespace: openshift-cluster-node-tuning-operator
+  ownerReferences:
+  - apiVersion: tuned.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Tuned
+    name: default
+    uid: cb9966c0-9cff-493a-8463-35a28a98c887
+  resourceVersion: "21345"
+  uid: e3c84bc7-0aa5-48f8-a3b3-68c27b746fa4
+spec:
+  config:
+    debug: false
+    providerName: aws
+    tunedConfig: {}
+    tunedProfile: openshift-node
+    verbosity: 0
+  profile:
+  - data: |
+      [main]
+      summary=Optimize systems running OpenShift (provider specific parent profile)
+      include=-provider-${f:exec:cat:/var/lib/ocp-tuned/provider},openshift
+    name: openshift
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:42:33Z"
+    message: TuneD profile applied.
+    reason: AsExpected
+    status: "True"
+    type: Applied
+  - lastTransitionTime: "2026-01-28T09:42:33Z"
+    message: 'No error messages observed by applying the TuneD daemon profile, only
+      warning(s). TuneD stderr: '
+    reason: TunedWarning
+    status: "False"
+    type: Degraded
+  observedGeneration: 2
+  tunedProfile: openshift-node

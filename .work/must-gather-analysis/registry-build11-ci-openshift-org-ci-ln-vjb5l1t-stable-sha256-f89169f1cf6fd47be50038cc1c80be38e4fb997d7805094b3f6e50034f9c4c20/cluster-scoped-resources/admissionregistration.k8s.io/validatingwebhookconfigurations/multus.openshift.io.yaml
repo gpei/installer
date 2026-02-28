@@ -1,0 +1,101 @@
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  annotations:
+    service.beta.openshift.io/inject-cabundle: "true"
+  creationTimestamp: "2026-01-28T09:29:15Z"
+  generation: 2
+  labels:
+    app: multus-admission-controller
+  managedFields:
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.beta.openshift.io/inject-cabundle: {}
+        f:labels:
+          f:app: {}
+        f:ownerReferences:
+          k:{"uid":"7763cebb-f1d7-4359-81b8-b55ef9916383"}: {}
+      f:webhooks:
+        k:{"name":"multus-validating-config.k8s.io"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            f:service:
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+          f:matchConditions:
+            k:{"name":"CreateDeleteOrUpdatedSpec"}:
+              .: {}
+              f:expression: {}
+              f:name: {}
+            k:{"name":"IgnoreDefaultOVNKubernetesNAD"}:
+              .: {}
+              f:expression: {}
+              f:name: {}
+          f:name: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2026-01-28T09:29:15Z"
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:webhooks:
+        k:{"name":"multus-validating-config.k8s.io"}:
+          f:clientConfig:
+            f:caBundle: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2026-01-28T09:30:40Z"
+  name: multus.openshift.io
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: 7763cebb-f1d7-4359-81b8-b55ef9916383
+  resourceVersion: "6459"
+  uid: 9853c83a-3675-4024-b7ba-5231108e92ec
+webhooks:
+- admissionReviewVersions:
+  - v1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJRXcwTy9pcFdJYVl3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRjMk9UVTVNall6TlRBZQpGdzB5TmpBeE1qZ3dPVE13TXpSYUZ3MHlPREF6TWpnd09UTXdNelZhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTNOamsxT1RJMk16VXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRQzZEZ0llNFg4czRKa0JKSnJSWDMzNlBpUHh5dkxGOGtLOApsWE1ISGZCbHRzQldsUEpMZ0thM0JJbDdUUTVKYktibzF3T0lwL2hJaFRRbTkvQ1ZaNndUSUh5WFNmRkFLQjZFCnZvdDJWdGxxOTZYcDZOVkxOd3BySG50cXlEbTV2OVdWZG5wY1NqNDFYZmhiYUsxOXlJR3lyRGxQSzhiUFVYSHAKdDlVbFF2c3l4bEFuK2djNVJJR2hPNUtNazdNWm0zZlVyNEJ4TjJKeWhYZW9zblpEV1EyTFY4cDZoQVphZnRTTwpGQk53ZzlvNktJM09LUDdFSWJFcEZONUFHcTVacFpqWnQ0OUlZQzRSeWcyYjBJOHRjV1c4amJsd0ZBTFlxcVJaCk1VK2VYb2V2ZlVsK2VSMC9aNHBrN0ZnQTRIMnU1U1NoYzQzeHFwbXFoVFN5NFhiVlQvU1JBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlNZd1g1WQpWVnZpb1I5OCtqbzkycVhBclR6MTZ6QWZCZ05WSFNNRUdEQVdnQlNZd1g1WVZWdmlvUjk4K2pvOTJxWEFyVHoxCjZ6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFSNlVYd0gwcmlYejRCa2lzNkNCRnZPRi9jNUxLbnFXdlR3UEYKemJqY1ZBUy9Nb0tRdVhqZVVIZXZ0dEMyR0NRSTEwbkJyYUpYUklOSGtVTzVMYVUyVWxBMVh6LzZmaGxGMkJKSwplSmtkaHF3QnFDcjlqa0hKVk1kYW5wZ25TTUNUcitDYVNUM0d3ai80TU1hSHcvRkY4bTQ3VkFkWlJnajNlY0h0CkhGeVBiR0gxb1ZiZklKa2huYmFCcEZMVnllMnVjKzdreGR1MDN4bmo0T1RRbkM3NWpuZzErY21Lc1lnVWd4Q2QKQzAzdFRZOFU5QTlkTVJrTUhpclR1VGpxSXJJQjBoWmFENHhZU01WSFlrZEh4OHNiV3JoOGwvNEM5SUIwalFQRQpXSjJvTU1PaU1qZHlIZmtIZ0tvTDh1QVV6dHpqVGZ3dlg0RUlweFBrNWx5SWdGM3k2dz09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    service:
+      name: multus-admission-controller
+      namespace: openshift-multus
+      path: /validate
+      port: 443
+  failurePolicy: Fail
+  matchConditions:
+  - expression: oldObject == null || object == null || has(object.spec) != has(oldObject.spec)
+      || (has(object.spec) && object.spec != oldObject.spec)
+    name: CreateDeleteOrUpdatedSpec
+  - expression: object == null || object.metadata.namespace != "openshift-ovn-kubernetes"
+      || object.metadata.name != "default"
+    name: IgnoreDefaultOVNKubernetesNAD
+  matchPolicy: Equivalent
+  name: multus-validating-config.k8s.io
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - k8s.cni.cncf.io
+    apiVersions:
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - network-attachment-definitions
+    scope: '*'
+  sideEffects: NoneOnDryRun
+  timeoutSeconds: 30

@@ -1,0 +1,132 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:14Z"
+    labels:
+      app: multus-admission-controller
+      endpoints.kubernetes.io/managed-by: endpoint-controller
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpoints.kubernetes.io/managed-by: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:32:04Z"
+    name: multus-admission-controller
+    namespace: openshift-multus
+    resourceVersion: "11039"
+    uid: fc8b5571-5ef5-4d54-9356-7e0a0bc250aa
+  subsets:
+  - addresses:
+    - ip: 10.128.0.16
+      nodeName: ip-10-0-3-203.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: multus-admission-controller-7d8778c98d-llvc8
+        namespace: openshift-multus
+        uid: abf7fe0b-e254-49fc-8b28-6e7f7aae2e0c
+    - ip: 10.130.0.48
+      nodeName: ip-10-0-108-54.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: multus-admission-controller-7d8778c98d-cxcq9
+        namespace: openshift-multus
+        uid: 5ab0820f-74fa-4e73-abcf-ac1f5c05a883
+    ports:
+    - name: metrics
+      port: 8443
+      protocol: TCP
+    - name: webhook
+      port: 6443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:42:59Z"
+    creationTimestamp: "2026-01-28T09:29:13Z"
+    labels:
+      endpoints.kubernetes.io/managed-by: endpoint-controller
+      service: network-metrics-service
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:endpoints.kubernetes.io/managed-by: {}
+            f:service: {}
+            f:service.kubernetes.io/headless: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:42:59Z"
+    name: network-metrics-service
+    namespace: openshift-multus
+    resourceVersion: "22583"
+    uid: b7129c15-4336-42ee-a375-5514f443fb4e
+  subsets:
+  - addresses:
+    - ip: 10.128.0.3
+      nodeName: ip-10-0-3-203.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: network-metrics-daemon-gm8vn
+        namespace: openshift-multus
+        uid: d9fc5f26-9512-44df-afb5-3353826bea86
+    - ip: 10.128.2.4
+      nodeName: ip-10-0-101-165.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: network-metrics-daemon-rxmjs
+        namespace: openshift-multus
+        uid: 4ddbeb5c-18d4-49fa-8bd5-950c7d6c3d79
+    - ip: 10.129.0.4
+      nodeName: ip-10-0-102-200.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: network-metrics-daemon-xx8tl
+        namespace: openshift-multus
+        uid: 8ff544c5-a31b-46d2-96a5-1d8b269b38e5
+    - ip: 10.129.2.5
+      nodeName: ip-10-0-22-208.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: network-metrics-daemon-2pwhs
+        namespace: openshift-multus
+        uid: 593c720e-9d95-4467-88cd-60588be65e97
+    - ip: 10.130.0.3
+      nodeName: ip-10-0-108-54.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: network-metrics-daemon-wsgb8
+        namespace: openshift-multus
+        uid: b147c7a7-7b6b-4e9d-90df-c24963dca864
+    - ip: 10.131.0.3
+      nodeName: ip-10-0-78-215.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: network-metrics-daemon-zbldf
+        namespace: openshift-multus
+        uid: 9b1f4d6e-afcf-4a02-9a2e-d0f08186e129
+    ports:
+    - name: metrics
+      port: 8443
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "35088"

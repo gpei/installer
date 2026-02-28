@@ -1,0 +1,83 @@
+---
+apiVersion: certificates.k8s.io/v1
+kind: CertificateSigningRequest
+metadata:
+  creationTimestamp: "2026-01-28T09:30:38Z"
+  generateName: system:openshift:openshift-authenticator-
+  labels:
+    authentication.openshift.io/csr: openshift-authenticator
+  managedFields:
+  - apiVersion: certificates.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:authentication.openshift.io/csr: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2026-01-28T09:30:38Z"
+  - apiVersion: certificates.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Approved"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: authentication-operator
+    operation: Update
+    subresource: approval
+    time: "2026-01-28T09:30:38Z"
+  - apiVersion: certificates.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:certificate: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:30:38Z"
+  name: system:openshift:openshift-authenticator-dhl5l
+  resourceVersion: "6341"
+  uid: daaccc1d-47d3-4c2d-8e35-93bff04c3a05
+spec:
+  extra:
+    authentication.kubernetes.io/credential-id:
+    - JTI=de8cdb10-0f28-423f-bde7-5a528cbd33c0
+    authentication.kubernetes.io/node-name:
+    - ip-10-0-108-54.us-west-1.compute.internal
+    authentication.kubernetes.io/node-uid:
+    - 8aee47ee-44d2-43c6-8262-ad6e14a5f14a
+    authentication.kubernetes.io/pod-name:
+    - authentication-operator-7455db8cdd-mtphg
+    authentication.kubernetes.io/pod-uid:
+    - 363ea6e0-b5c6-4318-b056-674f63b4982f
+  groups:
+  - system:serviceaccounts
+  - system:serviceaccounts:openshift-authentication-operator
+  - system:authenticated
+  request: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURSBSRVFVRVNULS0tLS0KTUlJQkRqQ0J0QUlCQURCU01WQXdUZ1lEVlFRREUwZHplWE4wWlcwNmMyVnlkbWxqWldGalkyOTFiblE2YjNCbApibk5vYVdaMExXOWhkWFJvTFdGd2FYTmxjblpsY2pwdmNHVnVjMmhwWm5RdFlYVjBhR1Z1ZEdsallYUnZjakJaCk1CTUdCeXFHU000OUFnRUdDQ3FHU000OUF3RUhBMElBQk5tNkEyejhqWlhQV0hSeGhoWlVRWkpiTGZxYUthZkMKTk5aSmM5dU51TGYwMEFEdGpYNlkwTTFtS3U1K01KU1RBcTBtU0U0YzhzYXh1TGxVWkF3YzZaMmdBREFLQmdncQpoa2pPUFFRREFnTkpBREJHQWlFQXdNTjNWZE5TeWZWVGxwTjBIdDlnU1gvQi9nRThUYWM3ZWZnVWRKRDNYRXNDCklRREs2OEZLZGFNMHFWS29WQWZoYnRPNnpBTy9UU1kvVVRVOGxubVpFcUlvMEE9PQotLS0tLUVORCBDRVJUSUZJQ0FURSBSRVFVRVNULS0tLS0K
+  signerName: kubernetes.io/kube-apiserver-client
+  uid: c1a60f5e-1e2f-4b96-b2aa-5bb23d2f8f0a
+  usages:
+  - digital signature
+  - key encipherment
+  - client auth
+  username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+status:
+  certificate: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNsRENDQVh5Z0F3SUJBZ0lRR1VYWE9IYlBqSEpUQlh4dzZKajNxVEFOQmdrcWhraUc5dzBCQVFzRkFEQXQKTVJJd0VBWURWUVFMRXdsdmNHVnVjMmhwWm5ReEZ6QVZCZ05WQkFNVERtdDFZbVZzWlhRdGMybG5ibVZ5TUI0WApEVEkyTURFeU9EQTVNalV6T0ZvWERUSTJNREV5T1RBNU1UTXdObG93VWpGUU1FNEdBMVVFQXhOSGMzbHpkR1Z0Ck9uTmxjblpwWTJWaFkyTnZkVzUwT205d1pXNXphR2xtZEMxdllYVjBhQzFoY0dselpYSjJaWEk2YjNCbGJuTm8KYVdaMExXRjFkR2hsYm5ScFkyRjBiM0l3V1RBVEJnY3Foa2pPUFFJQkJnZ3Foa2pPUFFNQkJ3TkNBQVRadWdOcwovSTJWejFoMGNZWVdWRUdTV3kzNm1pbW53alRXU1hQYmpiaTM5TkFBN1kxK21ORE5aaXJ1ZmpDVWt3S3RKa2hPCkhQTEdzYmk1VkdRTUhPbWRvMVl3VkRBT0JnTlZIUThCQWY4RUJBTUNCYUF3RXdZRFZSMGxCQXd3Q2dZSUt3WUIKQlFVSEF3SXdEQVlEVlIwVEFRSC9CQUl3QURBZkJnTlZIU01FR0RBV2dCUzNacWY5WjVZUS9wajRwN2ErQWpFTwpPTU5OTHpBTkJna3Foa2lHOXcwQkFRc0ZBQU9DQVFFQVFITkhCQmlzejBwbllqY1NINjhxR0M2L1AweFQ5RGJ3CkUweHJQRGhIZVR0Z20wdmpUaCtXdWtlUUFnT2tack0wYVhOWnY4SUk5d2lzcUFYNGdWOWljVXFnejkvcjlETlcKQjhtdjlXQTVIeXE1QVR4WkVsMXc5VXpUcFc1ZXZrYWdPWjhjN2R3Wmh6SVFBcERwZVdOaWR6V2RLd2dUNXdBRgpiQnN4T1IzSU8ranhwSE9WVlFKWjdkZmcxZWRDR1ZPT05ZdzJVNVBGa2p3a0NINUNnSUo4cWlEdytpWDhvaXZ6ClY5akgyQTVsUmpaa3UvRngzaTZrdmZtQVBDd05xQmtVUkZROGx5L1BQZmVtcEZXdERNeDIvYm9PcEFiQnlEbTkKMTJBQXNLZmJKdEhMYVJldWQ5NUJCOHd2ZzBQeCtMOXc4VVFUenBDbDdKaUlUd3g1WVVBbUtBPT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:30:38Z"
+    lastUpdateTime: "2026-01-28T09:30:38Z"
+    message: Auto-approved CSR "system:openshift:openshift-authenticator-dhl5l"
+    reason: AutoApproved
+    status: "True"
+    type: Approved

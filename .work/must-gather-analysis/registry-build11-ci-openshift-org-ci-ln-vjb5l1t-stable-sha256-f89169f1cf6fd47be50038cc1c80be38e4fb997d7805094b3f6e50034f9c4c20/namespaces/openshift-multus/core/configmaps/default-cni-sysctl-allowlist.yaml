@@ -1,0 +1,51 @@
+---
+apiVersion: v1
+data:
+  allowlist.conf: |-
+    ^net.ipv4.conf.IFNAME.accept_redirects$
+    ^net.ipv4.conf.IFNAME.accept_source_route$
+    ^net.ipv4.conf.IFNAME.arp_accept$
+    ^net.ipv4.conf.IFNAME.arp_notify$
+    ^net.ipv4.conf.IFNAME.disable_policy$
+    ^net.ipv4.conf.IFNAME.secure_redirects$
+    ^net.ipv4.conf.IFNAME.send_redirects$
+    ^net.ipv6.conf.IFNAME.accept_ra$
+    ^net.ipv6.conf.IFNAME.accept_redirects$
+    ^net.ipv6.conf.IFNAME.accept_source_route$
+    ^net.ipv6.conf.IFNAME.arp_accept$
+    ^net.ipv6.conf.IFNAME.arp_notify$
+    ^net.ipv6.neigh.IFNAME.base_reachable_time_ms$
+    ^net.ipv6.neigh.IFNAME.retrans_time_ms$
+kind: ConfigMap
+metadata:
+  annotations:
+    kubernetes.io/description: |
+      Sysctl allowlist for nodes.
+    release.openshift.io/version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+  creationTimestamp: "2026-01-28T09:29:11Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        f:allowlist.conf: {}
+      f:metadata:
+        f:annotations:
+          f:kubernetes.io/description: {}
+          f:release.openshift.io/version: {}
+        f:ownerReferences:
+          k:{"uid":"7763cebb-f1d7-4359-81b8-b55ef9916383"}: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2026-01-28T09:29:11Z"
+  name: default-cni-sysctl-allowlist
+  namespace: openshift-multus
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: 7763cebb-f1d7-4359-81b8-b55ef9916383
+  resourceVersion: "4141"
+  uid: 0520fae6-c2cb-447e-a18c-94c30c4b6646

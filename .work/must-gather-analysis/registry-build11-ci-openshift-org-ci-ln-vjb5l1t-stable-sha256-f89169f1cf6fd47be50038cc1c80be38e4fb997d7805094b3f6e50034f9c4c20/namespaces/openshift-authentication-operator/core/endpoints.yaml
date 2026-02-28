@@ -1,0 +1,48 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:31:55Z"
+    creationTimestamp: "2026-01-28T09:25:49Z"
+    labels:
+      app: authentication-operator
+      endpoints.kubernetes.io/managed-by: endpoint-controller
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpoints.kubernetes.io/managed-by: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:55Z"
+    name: metrics
+    namespace: openshift-authentication-operator
+    resourceVersion: "9852"
+    uid: 842dccdf-82bb-4494-8c22-00b5f35056ad
+  subsets:
+  - addresses:
+    - ip: 10.130.0.15
+      nodeName: ip-10-0-108-54.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: authentication-operator-7455db8cdd-mtphg
+        namespace: openshift-authentication-operator
+        uid: 363ea6e0-b5c6-4318-b056-674f63b4982f
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "34884"

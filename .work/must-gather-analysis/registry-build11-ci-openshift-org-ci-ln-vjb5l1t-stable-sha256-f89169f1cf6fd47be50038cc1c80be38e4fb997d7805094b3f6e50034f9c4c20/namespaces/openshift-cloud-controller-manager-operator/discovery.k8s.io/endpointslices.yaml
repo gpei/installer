@@ -1,0 +1,73 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.0.108.54
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-108-54.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9
+      namespace: openshift-cloud-controller-manager-operator
+      uid: 580d1d3e-7e7b-4f43-a88c-991fedb9047b
+    zone: us-west-1c
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:31:55Z"
+    creationTimestamp: "2026-01-28T09:27:13Z"
+    generateName: cloud-controller-manager-operator-
+    generation: 4
+    labels:
+      app: cloud-manager-operator
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: cloud-controller-manager-operator
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:service.kubernetes.io/headless: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"855ccac8-401b-44ee-96c4-551046a5fda6"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:55Z"
+    name: cloud-controller-manager-operator-5rfsf
+    namespace: openshift-cloud-controller-manager-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: cloud-controller-manager-operator
+      uid: 855ccac8-401b-44ee-96c4-551046a5fda6
+    resourceVersion: "9836"
+    uid: 1ded8fae-49ba-4a1f-aa24-aea7c4f6c9cd
+  ports:
+  - name: https
+    port: 9258
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "34968"

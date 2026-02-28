@@ -1,0 +1,100 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      exclude.release.openshift.io/internal-openshift-hosted: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+      kubernetes.io/description: Expose cluster-version operator metrics to other
+        in-cluster consumers.  Access requires a prometheus-k8s RoleBinding in this
+        namespace.
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1769592635
+      service.beta.openshift.io/serving-cert-secret-name: cluster-version-operator-serving-cert
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1769592635
+    creationTimestamp: "2026-01-28T09:25:36Z"
+    labels:
+      k8s-app: cluster-version-operator
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:exclude.release.openshift.io/internal-openshift-hosted: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+            f:kubernetes.io/description: {}
+            f:service.beta.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:k8s-app: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":9099,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: cluster-bootstrap
+      operation: Update
+      time: "2026-01-28T09:25:36Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2026-01-28T09:27:03Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:30:43Z"
+    name: cluster-version-operator
+    namespace: openshift-cluster-version
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      controller: true
+      kind: ClusterVersion
+      name: version
+      uid: 0370d296-6904-481d-ab90-157c7e5b835a
+    resourceVersion: "6723"
+    uid: 7e959398-ea2f-4a5c-8ba7-9481ca8c5859
+  spec:
+    clusterIP: 172.30.29.6
+    clusterIPs:
+    - 172.30.29.6
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: metrics
+      port: 9099
+      protocol: TCP
+      targetPort: metrics
+    selector:
+      k8s-app: cluster-version-operator
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: ServiceList
+metadata:
+  resourceVersion: "34853"

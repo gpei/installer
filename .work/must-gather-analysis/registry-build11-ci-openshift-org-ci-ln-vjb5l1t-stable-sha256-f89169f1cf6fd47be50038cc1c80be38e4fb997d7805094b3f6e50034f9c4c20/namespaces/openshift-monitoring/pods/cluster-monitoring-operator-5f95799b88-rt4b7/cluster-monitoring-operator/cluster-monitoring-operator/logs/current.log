@@ -1,0 +1,814 @@
+2026-01-28T09:31:54.459254858Z W0128 09:31:54.456316       1 client_config.go:667] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+2026-01-28T09:31:54.459254858Z I0128 09:31:54.457620       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2026-01-28T09:31:54.459254858Z I0128 09:31:54.457634       1 envvar.go:172] "Feature gate default state" feature="ClientsAllowCBOR" enabled=false
+2026-01-28T09:31:54.459254858Z I0128 09:31:54.457639       1 envvar.go:172] "Feature gate default state" feature="ClientsPreferCBOR" enabled=false
+2026-01-28T09:31:54.459254858Z I0128 09:31:54.457644       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2026-01-28T09:31:54.563152709Z I0128 09:31:54.563114       1 simple_featuregate_reader.go:171] Starting feature-gate-detector
+2026-01-28T09:31:54.575450578Z I0128 09:31:54.575424       1 reflector.go:376] Caches populated for *v1.FeatureGate from github.com/openshift/client-go/config/informers/externalversions/factory.go:125
+2026-01-28T09:31:54.576700450Z I0128 09:31:54.576679       1 reflector.go:376] Caches populated for *v1.ClusterVersion from github.com/openshift/client-go/config/informers/externalversions/factory.go:125
+2026-01-28T09:31:54.578274978Z I0128 09:31:54.578239       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'FeatureGatesInitialized' FeatureGates updated to featuregates.Features{Enabled:[]v1.FeatureGateName{"AdditionalRoutingCapabilities", "AdminNetworkPolicy", "AlibabaPlatform", "AzureWorkloadIdentity", "BuildCSIVolumes", "CPMSMachineNamePrefix", "ConsolePluginContentSecurityPolicy", "ExternalOIDC", "ExternalOIDCWithUIDAndExtraClaimMappings", "GatewayAPI", "GatewayAPIController", "HighlyAvailableArbiter", "ImageVolume", "IngressControllerLBSubnetsAWS", "KMSv1", "MachineConfigNodes", "ManagedBootImages", "ManagedBootImagesAWS", "MetricsCollectionProfiles", "NetworkDiagnosticsConfig", "NetworkLiveMigration", "NetworkSegmentation", "NewOLM", "PinnedImages", "PreconfiguredUDNAddresses", "ProcMountType", "RouteAdvertisements", "RouteExternalCertificate", "ServiceAccountTokenNodeBinding", "SetEIPForNLBIngressController", "SigstoreImageVerification", "StoragePerformantSecurityPolicy", "UpgradeStatus", "UserNamespacesPodSecurityStandards", "UserNamespacesSupport", "VSphereMultiDisk", "VSphereMultiNetworks"}, Disabled:[]v1.FeatureGateName{"AWSClusterHostedDNS", "AWSClusterHostedDNSInstall", "AWSDedicatedHosts", "AWSServiceLBNetworkSecurityGroup", "AutomatedEtcdBackup", "AzureClusterHostedDNSInstall", "AzureDedicatedHosts", "AzureMultiDisk", "BootImageSkewEnforcement", "BootcNodeManagement", "ClusterAPIInstall", "ClusterAPIInstallIBMCloud", "ClusterMonitoringConfig", "ClusterVersionOperatorConfiguration", "DNSNameResolver", "DualReplica", "DyanmicServiceEndpointIBMCloud", "DynamicResourceAllocation", "EtcdBackendQuota", "EventedPLEG", "Example", "Example2", "ExternalSnapshotMetadata", "GCPClusterHostedDNS", "GCPClusterHostedDNSInstall", "GCPCustomAPIEndpoints", "GCPCustomAPIEndpointsInstall", "ImageModeStatusReporting", "ImageStreamImportMode", "IngressControllerDynamicConfigurationManager", "InsightsConfig", "InsightsConfigAPI", "InsightsOnDemandDataGather", "IrreconcilableMachineConfig", "KMSEncryptionProvider", "MachineAPIMigration", "MachineAPIOperatorDisableMachineHealthCheckController", "ManagedBootImagesAzure", "ManagedBootImagesvSphere", "MaxUnavailableStatefulSet", "MinimumKubeletVersion", "MixedCPUsAllocation", "MultiArchInstallAzure", "MultiDiskSetup", "MutatingAdmissionPolicy", "NewOLMCatalogdAPIV1Metas", "NewOLMOwnSingleNamespace", "NewOLMPreflightPermissionChecks", "NewOLMWebhookProviderOpenshiftServiceCA", "NoRegistryClusterOperations", "NodeSwap", "NutanixMultiSubnets", "OVNObservability", "OpenShiftPodSecurityAdmission", "SELinuxMount", "ShortCertRotation", "SignatureStores", "SigstoreImageVerificationPKI", "TranslateStreamCloseWebsocketRequests", "VSphereConfigurableMaxAllowedBlockVolumesPerNode", "VSphereHostVMGroupZonal", "VSphereMixedNodeEnv", "VolumeAttributesClass", "VolumeGroupSnapshot"}}
+2026-01-28T09:31:54.657901858Z I0128 09:31:54.657859       1 dynamic_serving_content.go:116] "Loaded a new cert/key pair" name="serving-cert::/etc/tls/private/tls.crt::/etc/tls/private/tls.key"
+2026-01-28T09:31:54.798606691Z I0128 09:31:54.798569       1 reflector.go:376] Caches populated for *v1.ConfigMap from github.com/openshift/cluster-monitoring-operator/pkg/operator/operator.go:569
+2026-01-28T09:31:54.823801447Z I0128 09:31:54.803200       1 reflector.go:376] Caches populated for *v1.ConfigMap from github.com/openshift/cluster-monitoring-operator/pkg/operator/operator.go:566
+2026-01-28T09:31:54.824061050Z I0128 09:31:54.804162       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/cluster-monitoring-config
+2026-01-28T09:31:54.824123783Z I0128 09:31:54.811247       1 reflector.go:376] Caches populated for *v1.ConfigMap from github.com/openshift/cluster-monitoring-operator/pkg/operator/operator.go:569
+2026-01-28T09:31:54.837181489Z I0128 09:31:54.837148       1 reflector.go:376] Caches populated for *v1.Secret from github.com/openshift/cluster-monitoring-operator/pkg/operator/operator.go:569
+2026-01-28T09:31:54.871287797Z I0128 09:31:54.866554       1 reflector.go:376] Caches populated for *v1.ConfigMap from github.com/openshift/cluster-monitoring-operator/pkg/operator/operator.go:569
+2026-01-28T09:31:54.908793263Z I0128 09:31:54.885560       1 reflector.go:376] Caches populated for *v1.CertificateSigningRequest from k8s.io/client-go/informers/factory.go:160
+2026-01-28T09:31:54.909454056Z I0128 09:31:54.886659       1 reflector.go:376] Caches populated for *v1.Secret from k8s.io/client-go/informers/factory.go:160
+2026-01-28T09:31:54.909716418Z I0128 09:31:54.891155       1 reflector.go:376] Caches populated for *v1.ClusterVersion from github.com/openshift/cluster-monitoring-operator/pkg/operator/operator.go:569
+2026-01-28T09:31:54.909863996Z I0128 09:31:54.892014       1 reflector.go:376] Caches populated for *v1.Console from github.com/openshift/cluster-monitoring-operator/pkg/operator/operator.go:569
+2026-01-28T09:31:54.910060155Z I0128 09:31:54.892826       1 reflector.go:376] Caches populated for *v1.APIServer from github.com/openshift/cluster-monitoring-operator/pkg/operator/operator.go:569
+2026-01-28T09:31:54.910204893Z I0128 09:31:54.893887       1 reflector.go:376] Caches populated for *v1.ClusterOperator from github.com/openshift/cluster-monitoring-operator/pkg/operator/operator.go:569
+2026-01-28T09:31:54.910334149Z I0128 09:31:54.893910       1 operator.go:647] Triggering an update due to a change in ClusterOperator.config.openshift.io/ingress
+2026-01-28T09:31:54.910515198Z I0128 09:31:54.909330       1 reflector.go:376] Caches populated for *v1.Infrastructure from github.com/openshift/cluster-monitoring-operator/pkg/operator/operator.go:569
+2026-01-28T09:31:54.940927673Z I0128 09:31:54.940889       1 operator.go:647] Triggering an update due to a change in *v1.Infrastructure/cluster
+2026-01-28T09:31:54.987242265Z I0128 09:31:54.966386       1 operator.go:647] Triggering an update due to a change in *v1.APIServer/cluster
+2026-01-28T09:31:55.034620179Z I0128 09:31:55.031274       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:31:55.943413429Z I0128 09:31:55.943044       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:31:56.364235262Z I0128 09:31:56.364186       1 reflector.go:376] Caches populated for *v1.ConfigMap from github.com/openshift/cluster-monitoring-operator/pkg/operator/operator.go:569
+2026-01-28T09:31:56.459565960Z I0128 09:31:56.450533       1 base_controller.go:76] Waiting for caches to sync for OpenShiftMonitoringTelemeterClientCertRequester
+2026-01-28T09:31:56.459631933Z I0128 09:31:56.459616       1 base_controller.go:82] Caches are synced for OpenShiftMonitoringTelemeterClientCertRequester 
+2026-01-28T09:31:56.459659284Z I0128 09:31:56.459649       1 base_controller.go:119] Starting #1 worker of OpenShiftMonitoringTelemeterClientCertRequester controller ...
+2026-01-28T09:31:56.459724177Z I0128 09:31:56.459713       1 base_controller.go:76] Waiting for caches to sync for OpenShiftMonitoringClientCertRequester
+2026-01-28T09:31:56.459746909Z I0128 09:31:56.459738       1 base_controller.go:82] Caches are synced for OpenShiftMonitoringClientCertRequester 
+2026-01-28T09:31:56.459768670Z I0128 09:31:56.459760       1 base_controller.go:119] Starting #1 worker of OpenShiftMonitoringClientCertRequester controller ...
+2026-01-28T09:31:56.459805261Z I0128 09:31:56.459796       1 base_controller.go:76] Waiting for caches to sync for OpenShiftMonitoringMetricsServerClientCertRequester
+2026-01-28T09:31:56.459827102Z I0128 09:31:56.459818       1 base_controller.go:82] Caches are synced for OpenShiftMonitoringMetricsServerClientCertRequester 
+2026-01-28T09:31:56.459848274Z I0128 09:31:56.459840       1 base_controller.go:119] Starting #1 worker of OpenShiftMonitoringMetricsServerClientCertRequester controller ...
+2026-01-28T09:31:56.459888985Z I0128 09:31:56.459879       1 rule_controller.go:113] Starting alerting rules controller
+2026-01-28T09:31:56.459915077Z I0128 09:31:56.459906       1 shared_informer.go:313] Waiting for caches to sync for AlertingRule controller
+2026-01-28T09:31:56.459945548Z I0128 09:31:56.459937       1 relabel_controller.go:117] Starting alert relabel config controller
+2026-01-28T09:31:56.459967609Z I0128 09:31:56.459959       1 shared_informer.go:313] Waiting for caches to sync for AlertRelabelConfig controller
+2026-01-28T09:31:56.472523601Z I0128 09:31:56.472489       1 annotations.go:31] Updating "openshift.io/owning-component" annotation for metrics-server-client-certs/openshift-monitoring, diff:   string(
+2026-01-28T09:31:56.472523601Z - 	"",
+2026-01-28T09:31:56.472523601Z + 	"Monitoring",
+2026-01-28T09:31:56.472523601Z   )
+2026-01-28T09:31:56.473518140Z I0128 09:31:56.473213       1 annotations.go:31] Updating "openshift.io/owning-component" annotation for metrics-client-certs/openshift-monitoring, diff:   string(
+2026-01-28T09:31:56.473518140Z - 	"",
+2026-01-28T09:31:56.473518140Z + 	"Monitoring",
+2026-01-28T09:31:56.473518140Z   )
+2026-01-28T09:31:56.473995644Z I0128 09:31:56.473977       1 annotations.go:31] Updating "openshift.io/owning-component" annotation for federate-client-certs/openshift-monitoring, diff:   string(
+2026-01-28T09:31:56.473995644Z - 	"",
+2026-01-28T09:31:56.473995644Z + 	"Monitoring",
+2026-01-28T09:31:56.473995644Z   )
+2026-01-28T09:31:56.474897298Z I0128 09:31:56.474877       1 reflector.go:376] Caches populated for *v1.PrometheusRule from github.com/openshift/cluster-monitoring-operator/pkg/alert/rule_controller.go:117
+2026-01-28T09:31:56.475244916Z I0128 09:31:56.475226       1 reflector.go:376] Caches populated for *v1.AlertingRule from github.com/openshift/cluster-monitoring-operator/pkg/alert/rule_controller.go:118
+2026-01-28T09:31:56.475532670Z I0128 09:31:56.475513       1 reflector.go:376] Caches populated for *v1.AlertRelabelConfig from github.com/openshift/cluster-monitoring-operator/pkg/alert/relabel_controller.go:121
+2026-01-28T09:31:56.475709368Z I0128 09:31:56.475686       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'NoValidCertificateFound' No valid client certificate for OpenShiftMonitoringMetricsServerClientCertRequester is found: unable to parse certificate: data does not contain any valid RSA or ECDSA certificates
+2026-01-28T09:31:56.476495117Z I0128 09:31:56.476197       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'NoValidCertificateFound' No valid client certificate for OpenShiftMonitoringClientCertRequester is found: unable to parse certificate: data does not contain any valid RSA or ECDSA certificates
+2026-01-28T09:31:56.476545960Z I0128 09:31:56.476528       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'NoValidCertificateFound' No valid client certificate for OpenShiftMonitoringTelemeterClientCertRequester is found: unable to parse certificate: data does not contain any valid RSA or ECDSA certificates
+2026-01-28T09:31:56.480671944Z I0128 09:31:56.480647       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'CSRCreated' A csr "system:openshift:openshift-monitoring-cxlv5" is created for OpenShiftMonitoringMetricsServerClientCertRequester
+2026-01-28T09:31:56.602964235Z I0128 09:31:56.601394       1 shared_informer.go:320] Caches are synced for AlertingRule controller
+2026-01-28T09:31:56.603042069Z I0128 09:31:56.603007       1 annotations.go:31] Updating "openshift.io/owning-component" annotation for metrics-client-certs/openshift-monitoring, diff:   string(
+2026-01-28T09:31:56.603042069Z - 	"",
+2026-01-28T09:31:56.603042069Z + 	"Monitoring",
+2026-01-28T09:31:56.603042069Z   )
+2026-01-28T09:31:56.603101872Z I0128 09:31:56.601943       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'CSRCreated' A csr "system:openshift:openshift-monitoring-cmxhq" is created for OpenShiftMonitoringClientCertRequester
+2026-01-28T09:31:56.603127423Z I0128 09:31:56.602307       1 reflector.go:376] Caches populated for *v1.Secret from github.com/openshift/cluster-monitoring-operator/pkg/alert/relabel_controller.go:122
+2026-01-28T09:31:56.603320593Z I0128 09:31:56.602333       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'CSRCreated' A csr "system:openshift:openshift-monitoring-f9sws" is created for OpenShiftMonitoringTelemeterClientCertRequester
+2026-01-28T09:31:56.603350014Z I0128 09:31:56.602921       1 annotations.go:31] Updating "openshift.io/owning-component" annotation for metrics-server-client-certs/openshift-monitoring, diff:   string(
+2026-01-28T09:31:56.603350014Z - 	"",
+2026-01-28T09:31:56.603350014Z + 	"Monitoring",
+2026-01-28T09:31:56.603350014Z   )
+2026-01-28T09:31:56.603642729Z I0128 09:31:56.602976       1 annotations.go:31] Updating "openshift.io/owning-component" annotation for federate-client-certs/openshift-monitoring, diff:   string(
+2026-01-28T09:31:56.603642729Z - 	"",
+2026-01-28T09:31:56.603642729Z + 	"Monitoring",
+2026-01-28T09:31:56.603642729Z   )
+2026-01-28T09:31:56.617305395Z I0128 09:31:56.617266       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClientCertificateCreated' A new client certificate for OpenShiftMonitoringMetricsServerClientCertRequester is available
+2026-01-28T09:31:56.618017840Z I0128 09:31:56.618001       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/metrics-server-client-certs
+2026-01-28T09:31:56.618082903Z I0128 09:31:56.618069       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/federate-client-certs
+2026-01-28T09:31:56.621797447Z I0128 09:31:56.621780       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/metrics-client-certs
+2026-01-28T09:31:56.623088611Z I0128 09:31:56.623063       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClientCertificateCreated' A new client certificate for OpenShiftMonitoringClientCertRequester is available
+2026-01-28T09:31:56.641514033Z I0128 09:31:56.629063       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClientCertificateCreated' A new client certificate for OpenShiftMonitoringTelemeterClientCertRequester is available
+2026-01-28T09:31:56.694307175Z I0128 09:31:56.690371       1 shared_informer.go:320] Caches are synced for AlertRelabelConfig controller
+2026-01-28T09:31:56.695323415Z I0128 09:31:56.695190       1 operator.go:830] Updating ClusterOperator status to InProgress.
+2026-01-28T09:31:56.735332675Z I0128 09:31:56.735296       1 tasks.go:49] processing task group 1 of 3
+2026-01-28T09:31:56.754510434Z I0128 09:31:56.754490       1 tasks.go:70] running task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T09:31:56.755389868Z I0128 09:31:56.755373       1 tasks.go:70] running task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T09:31:56.755523284Z I0128 09:31:56.755496       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'SecretCreated' Created Secret/alert-relabel-configs -n openshift-monitoring because it was missing
+2026-01-28T09:31:56.786200812Z I0128 09:31:56.786157       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceAccountCreated' Created ServiceAccount/prometheus-operator -n openshift-monitoring because it was missing
+2026-01-28T09:31:56.842182143Z I0128 09:31:56.825596       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ConfigMapCreated' Created ConfigMap/metrics-client-ca -n openshift-monitoring because it was missing
+2026-01-28T09:31:56.842349861Z I0128 09:31:56.838587       1 tasks.go:76] ran task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T09:31:56.977864406Z I0128 09:31:56.961806       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleCreated' Created ClusterRole.rbac.authorization.k8s.io/prometheus-operator because it was missing
+2026-01-28T09:31:57.133130849Z I0128 09:31:57.133072       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleBindingCreated' Created ClusterRoleBinding.rbac.authorization.k8s.io/prometheus-operator because it was missing
+2026-01-28T09:31:57.182625188Z I0128 09:31:57.182574       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceAccountCreated' Created ServiceAccount/prometheus-operator-admission-webhook -n openshift-monitoring because it was missing
+2026-01-28T09:31:57.197611420Z I0128 09:31:57.197570       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceCreated' Created Service/prometheus-operator-admission-webhook -n openshift-monitoring because it was missing
+2026-01-28T09:31:57.223763363Z I0128 09:31:57.223695       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'PodDisruptionBudgetCreated' Created PodDisruptionBudget.policy/prometheus-operator-admission-webhook -n openshift-monitoring because it was missing
+2026-01-28T09:31:58.262599646Z I0128 09:31:58.262257       1 requestheader_controller.go:255] Loaded a new request header values for RequestHeaderAuthRequestController
+2026-01-28T09:31:58.264877189Z I0128 09:31:58.264829       1 maxinflight.go:139] "Initialized nonMutatingChan" len=400
+2026-01-28T09:31:58.264924271Z I0128 09:31:58.264911       1 maxinflight.go:145] "Initialized mutatingChan" len=200
+2026-01-28T09:31:58.264965003Z I0128 09:31:58.264952       1 maxinflight.go:116] "Set denominator for readonly requests" limit=400
+2026-01-28T09:31:58.264998724Z I0128 09:31:58.264986       1 maxinflight.go:120] "Set denominator for mutating requests" limit=200
+2026-01-28T09:31:58.284129621Z I0128 09:31:58.284085       1 secure_serving.go:57] Forcing use of http/1.1 only
+2026-01-28T09:31:58.284422856Z I0128 09:31:58.284401       1 genericapiserver.go:535] MuxAndDiscoveryComplete has all endpoints registered and discovery information is complete
+2026-01-28T09:31:58.294644931Z I0128 09:31:58.294612       1 tlsconfig.go:203] "Loaded serving cert" certName="serving-cert::/etc/tls/private/tls.crt::/etc/tls/private/tls.key" certDetail="\"*.cluster-monitoring-operator.openshift-monitoring.svc\" [serving] validServingFor=[*.cluster-monitoring-operator.openshift-monitoring.svc,*.cluster-monitoring-operator.openshift-monitoring.svc.cluster.local,cluster-monitoring-operator.openshift-monitoring.svc,cluster-monitoring-operator.openshift-monitoring.svc.cluster.local] issuer=\"openshift-service-serving-signer@1769592635\" (2026-01-28 09:30:51 +0000 UTC to 2028-01-28 09:30:52 +0000 UTC (now=2026-01-28 09:31:58.294559467 +0000 UTC))"
+2026-01-28T09:31:58.294922555Z I0128 09:31:58.294885       1 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1769592718\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1769592715\" (2026-01-28 08:31:54 +0000 UTC to 2027-01-28 08:31:54 +0000 UTC (now=2026-01-28 09:31:58.294865973 +0000 UTC))"
+2026-01-28T09:31:58.296736495Z I0128 09:31:58.296715       1 secure_serving.go:213] Serving securely on [::]:8443
+2026-01-28T09:31:58.296799068Z I0128 09:31:58.296785       1 genericapiserver.go:685] [graceful-termination] waiting for shutdown to be initiated
+2026-01-28T09:31:58.296827579Z I0128 09:31:58.294973       1 requestheader_controller.go:180] Starting RequestHeaderAuthRequestController
+2026-01-28T09:31:58.296859591Z I0128 09:31:58.296848       1 shared_informer.go:313] Waiting for caches to sync for RequestHeaderAuthRequestController
+2026-01-28T09:31:58.296911414Z I0128 09:31:58.296899       1 tlsconfig.go:243] "Starting DynamicServingCertificateController"
+2026-01-28T09:31:58.297390107Z I0128 09:31:58.294991       1 configmap_cafile_content.go:205] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+2026-01-28T09:31:58.297426259Z I0128 09:31:58.295001       1 configmap_cafile_content.go:205] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+2026-01-28T09:31:58.297452490Z I0128 09:31:58.295016       1 dynamic_serving_content.go:135] "Starting controller" name="serving-cert::/etc/tls/private/tls.crt::/etc/tls/private/tls.key"
+2026-01-28T09:31:58.297607078Z I0128 09:31:58.297592       1 shared_informer.go:313] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+2026-01-28T09:31:58.297640940Z I0128 09:31:58.297631       1 shared_informer.go:313] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+2026-01-28T09:31:58.298261450Z I0128 09:31:58.298241       1 reflector.go:376] Caches populated for *v1.ConfigMap from k8s.io/apiserver/pkg/authentication/request/headerrequest/requestheader_controller.go:183
+2026-01-28T09:31:58.313803110Z I0128 09:31:58.313766       1 reflector.go:376] Caches populated for *v1.ConfigMap from k8s.io/apiserver/pkg/server/dynamiccertificates/configmap_cafile_content.go:209
+2026-01-28T09:31:58.314139436Z I0128 09:31:58.314118       1 reflector.go:376] Caches populated for *v1.ConfigMap from k8s.io/apiserver/pkg/server/dynamiccertificates/configmap_cafile_content.go:209
+2026-01-28T09:31:58.398147263Z I0128 09:31:58.398106       1 shared_informer.go:320] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+2026-01-28T09:31:58.398255388Z I0128 09:31:58.398242       1 shared_informer.go:320] Caches are synced for RequestHeaderAuthRequestController
+2026-01-28T09:31:58.398365474Z I0128 09:31:58.398353       1 shared_informer.go:320] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+2026-01-28T09:31:58.398549423Z I0128 09:31:58.398531       1 tlsconfig.go:181] "Loaded client CA" index=0 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"aggregator-signer\" [] issuer=\"<self>\" (2026-01-28 09:13:04 +0000 UTC to 2026-01-29 09:13:04 +0000 UTC (now=2026-01-28 09:31:58.3984972 +0000 UTC))"
+2026-01-28T09:31:58.398985074Z I0128 09:31:58.398968       1 tlsconfig.go:203] "Loaded serving cert" certName="serving-cert::/etc/tls/private/tls.crt::/etc/tls/private/tls.key" certDetail="\"*.cluster-monitoring-operator.openshift-monitoring.svc\" [serving] validServingFor=[*.cluster-monitoring-operator.openshift-monitoring.svc,*.cluster-monitoring-operator.openshift-monitoring.svc.cluster.local,cluster-monitoring-operator.openshift-monitoring.svc,cluster-monitoring-operator.openshift-monitoring.svc.cluster.local] issuer=\"openshift-service-serving-signer@1769592635\" (2026-01-28 09:30:51 +0000 UTC to 2028-01-28 09:30:52 +0000 UTC (now=2026-01-28 09:31:58.398948232 +0000 UTC))"
+2026-01-28T09:31:58.399234837Z I0128 09:31:58.399220       1 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1769592718\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1769592715\" (2026-01-28 08:31:54 +0000 UTC to 2027-01-28 08:31:54 +0000 UTC (now=2026-01-28 09:31:58.399203365 +0000 UTC))"
+2026-01-28T09:31:58.399409845Z I0128 09:31:58.399394       1 tlsconfig.go:181] "Loaded client CA" index=0 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"admin-kubeconfig-signer\" [] issuer=\"<self>\" (2026-01-28 09:13:02 +0000 UTC to 2036-01-26 09:13:02 +0000 UTC (now=2026-01-28 09:31:58.399379444 +0000 UTC))"
+2026-01-28T09:31:58.399449837Z I0128 09:31:58.399440       1 tlsconfig.go:181] "Loaded client CA" index=1 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kubelet-signer\" [] issuer=\"<self>\" (2026-01-28 09:13:06 +0000 UTC to 2026-01-29 09:13:06 +0000 UTC (now=2026-01-28 09:31:58.399427736 +0000 UTC))"
+2026-01-28T09:31:58.399484229Z I0128 09:31:58.399474       1 tlsconfig.go:181] "Loaded client CA" index=2 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kube-control-plane-signer\" [] issuer=\"<self>\" (2026-01-28 09:13:06 +0000 UTC to 2027-01-28 09:13:06 +0000 UTC (now=2026-01-28 09:31:58.399464308 +0000 UTC))"
+2026-01-28T09:31:58.399518791Z I0128 09:31:58.399509       1 tlsconfig.go:181] "Loaded client CA" index=3 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kube-apiserver-to-kubelet-signer\" [] issuer=\"<self>\" (2026-01-28 09:13:07 +0000 UTC to 2027-01-28 09:13:07 +0000 UTC (now=2026-01-28 09:31:58.39949834 +0000 UTC))"
+2026-01-28T09:31:58.400964892Z I0128 09:31:58.399543       1 tlsconfig.go:181] "Loaded client CA" index=4 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kubelet-bootstrap-kubeconfig-signer\" [] issuer=\"<self>\" (2026-01-28 09:13:03 +0000 UTC to 2036-01-26 09:13:03 +0000 UTC (now=2026-01-28 09:31:58.399533161 +0000 UTC))"
+2026-01-28T09:31:58.401068557Z I0128 09:31:58.401051       1 tlsconfig.go:181] "Loaded client CA" index=5 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"aggregator-signer\" [] issuer=\"<self>\" (2026-01-28 09:13:04 +0000 UTC to 2026-01-29 09:13:04 +0000 UTC (now=2026-01-28 09:31:58.401006764 +0000 UTC))"
+2026-01-28T09:31:58.401319980Z I0128 09:31:58.401303       1 tlsconfig.go:203] "Loaded serving cert" certName="serving-cert::/etc/tls/private/tls.crt::/etc/tls/private/tls.key" certDetail="\"*.cluster-monitoring-operator.openshift-monitoring.svc\" [serving] validServingFor=[*.cluster-monitoring-operator.openshift-monitoring.svc,*.cluster-monitoring-operator.openshift-monitoring.svc.cluster.local,cluster-monitoring-operator.openshift-monitoring.svc,cluster-monitoring-operator.openshift-monitoring.svc.cluster.local] issuer=\"openshift-service-serving-signer@1769592635\" (2026-01-28 09:30:51 +0000 UTC to 2028-01-28 09:30:52 +0000 UTC (now=2026-01-28 09:31:58.401285648 +0000 UTC))"
+2026-01-28T09:31:58.401609014Z I0128 09:31:58.401592       1 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1769592718\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1769592715\" (2026-01-28 08:31:54 +0000 UTC to 2027-01-28 08:31:54 +0000 UTC (now=2026-01-28 09:31:58.401575102 +0000 UTC))"
+2026-01-28T09:32:10.705514161Z I0128 09:32:10.704804       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:32:40.707686907Z I0128 09:32:40.707160       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:32:55.699036979Z I0128 09:32:55.698985       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:32:55.730060327Z I0128 09:32:55.729991       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:33:25.731846437Z I0128 09:33:25.731673       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:34:10.699710457Z I0128 09:34:10.697536       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:34:40.698815027Z I0128 09:34:40.698762       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:35:53.582505102Z I0128 09:35:53.582443       1 tlsconfig.go:181] "Loaded client CA" index=0 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"admin-kubeconfig-signer\" [] issuer=\"<self>\" (2026-01-28 09:13:02 +0000 UTC to 2036-01-26 09:13:02 +0000 UTC (now=2026-01-28 09:35:53.582400157 +0000 UTC))"
+2026-01-28T09:35:53.582505102Z I0128 09:35:53.582482       1 tlsconfig.go:181] "Loaded client CA" index=1 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kubelet-signer\" [] issuer=\"<self>\" (2026-01-28 09:13:06 +0000 UTC to 2026-01-29 09:13:06 +0000 UTC (now=2026-01-28 09:35:53.58246728 +0000 UTC))"
+2026-01-28T09:35:53.582534803Z I0128 09:35:53.582500       1 tlsconfig.go:181] "Loaded client CA" index=2 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kube-control-plane-signer\" [] issuer=\"<self>\" (2026-01-28 09:13:06 +0000 UTC to 2027-01-28 09:13:06 +0000 UTC (now=2026-01-28 09:35:53.582488991 +0000 UTC))"
+2026-01-28T09:35:53.582534803Z I0128 09:35:53.582518       1 tlsconfig.go:181] "Loaded client CA" index=3 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kube-apiserver-to-kubelet-signer\" [] issuer=\"<self>\" (2026-01-28 09:13:07 +0000 UTC to 2027-01-28 09:13:07 +0000 UTC (now=2026-01-28 09:35:53.582507242 +0000 UTC))"
+2026-01-28T09:35:53.582546694Z I0128 09:35:53.582534       1 tlsconfig.go:181] "Loaded client CA" index=4 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kubelet-bootstrap-kubeconfig-signer\" [] issuer=\"<self>\" (2026-01-28 09:13:03 +0000 UTC to 2036-01-26 09:13:03 +0000 UTC (now=2026-01-28 09:35:53.582524163 +0000 UTC))"
+2026-01-28T09:35:53.582565095Z I0128 09:35:53.582550       1 tlsconfig.go:181] "Loaded client CA" index=5 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kube-csr-signer_@1769592636\" [] issuer=\"kubelet-signer\" (2026-01-28 09:30:35 +0000 UTC to 2026-01-29 09:13:06 +0000 UTC (now=2026-01-28 09:35:53.582540644 +0000 UTC))"
+2026-01-28T09:35:53.582577946Z I0128 09:35:53.582569       1 tlsconfig.go:181] "Loaded client CA" index=6 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"openshift-kube-apiserver-operator_node-system-admin-signer@1769592635\" [] issuer=\"<self>\" (2026-01-28 09:30:35 +0000 UTC to 2029-01-27 09:30:36 +0000 UTC (now=2026-01-28 09:35:53.582556465 +0000 UTC))"
+2026-01-28T09:35:53.582616588Z I0128 09:35:53.582586       1 tlsconfig.go:181] "Loaded client CA" index=7 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"aggregator-signer\" [] issuer=\"<self>\" (2026-01-28 09:13:04 +0000 UTC to 2026-01-29 09:13:04 +0000 UTC (now=2026-01-28 09:35:53.582575935 +0000 UTC))"
+2026-01-28T09:35:53.583882511Z I0128 09:35:53.583856       1 operator.go:678] Triggering an update due to ConfigMap or Secret: kube-system/extension-apiserver-authentication
+2026-01-28T09:35:53.584040029Z I0128 09:35:53.584005       1 tlsconfig.go:203] "Loaded serving cert" certName="serving-cert::/etc/tls/private/tls.crt::/etc/tls/private/tls.key" certDetail="\"*.cluster-monitoring-operator.openshift-monitoring.svc\" [serving] validServingFor=[*.cluster-monitoring-operator.openshift-monitoring.svc,*.cluster-monitoring-operator.openshift-monitoring.svc.cluster.local,cluster-monitoring-operator.openshift-monitoring.svc,cluster-monitoring-operator.openshift-monitoring.svc.cluster.local] issuer=\"openshift-service-serving-signer@1769592635\" (2026-01-28 09:30:51 +0000 UTC to 2028-01-28 09:30:52 +0000 UTC (now=2026-01-28 09:35:53.583981726 +0000 UTC))"
+2026-01-28T09:35:53.584287451Z I0128 09:35:53.584262       1 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1769592718\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1769592715\" (2026-01-28 08:31:54 +0000 UTC to 2027-01-28 08:31:54 +0000 UTC (now=2026-01-28 09:35:53.584245409 +0000 UTC))"
+2026-01-28T09:36:03.339541513Z I0128 09:36:03.336996       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:36:25.695321002Z I0128 09:36:25.695273       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:36:57.239498854Z W0128 09:36:57.239436       1 tasks.go:73] task 2 of 2: UpdatingPrometheusOperator failed: reconciling Prometheus Operator Admission Webhook Deployment failed: creating Deployment object failed: waiting for DeploymentRollout of openshift-monitoring/prometheus-operator-admission-webhook: context deadline exceeded: got 2 unavailable replicas
+2026-01-28T09:36:57.239498854Z I0128 09:36:57.239484       1 operator.go:875] 1 reconciliation(s) failed, 3 more attempt(s) will be made before reporting failures.
+2026-01-28T09:36:57.239601539Z E0128 09:36:57.239496       1 operator.go:706] Syncing "openshift-monitoring/cluster-monitoring-config" failed
+2026-01-28T09:36:57.239601539Z E0128 09:36:57.239519       1 operator.go:707] "Unhandled Error" err="sync \"openshift-monitoring/cluster-monitoring-config\" failed: cluster monitoring update failed (reason: UpdatingPrometheusOperatorFailed)" logger="UnhandledError"
+2026-01-28T09:36:57.253390265Z I0128 09:36:57.253341       1 operator.go:830] Updating ClusterOperator status to InProgress.
+2026-01-28T09:36:57.255337742Z I0128 09:36:57.255312       1 tasks.go:49] processing task group 1 of 3
+2026-01-28T09:36:57.255385394Z I0128 09:36:57.255339       1 tasks.go:70] running task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T09:36:57.255385394Z I0128 09:36:57.255366       1 tasks.go:70] running task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T09:36:57.264109448Z I0128 09:36:57.264068       1 core.go:352] ConfigMap "openshift-monitoring/metrics-client-ca" changes: {"apiVersion":"v1","data":{"client-ca.crt":"-----BEGIN CERTIFICATE-----\nMIIDMDCCAhigAwIBAgIIXpkJmqJgCLowDQYJKoZIhvcNAQELBQAwNjESMBAGA1UE\nCxMJb3BlbnNoaWZ0MSAwHgYDVQQDExdhZG1pbi1rdWJlY29uZmlnLXNpZ25lcjAe\nFw0yNjAxMjgwOTEzMDJaFw0zNjAxMjYwOTEzMDJaMDYxEjAQBgNVBAsTCW9wZW5z\naGlmdDEgMB4GA1UEAxMXYWRtaW4ta3ViZWNvbmZpZy1zaWduZXIwggEiMA0GCSqG\nSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCyFu60t/3ZVG0KUqbhYM1/rvLsKvLsWtx4\nHgigWiEPuTmp/OCOqS0e5wc0Ltlh3N5mIorlT78TmLdWtw88LLDqa8XH+t+0IeSN\n++GaUHbILgXhYCBsFUX5ybDaEpVTbRoRa5SPLFtk+RE0GO+wlTPwk5a3yCwekD/V\nKxzaYDs2KLr1SqHNAmrdcEKhmekcpYmtJl9DPgotCA4v6N2Zy95TNPi0FFagJvXJ\n5dOSPUQIQBB3e5uOU88T4f/sROCxB08HpzqRPNCTn82TMRSp0fWt9/vMlCbYmj05\ndaYJ3Do2AQa3R5ntE6KotfU4/6R2MG+CfoIPU/53WfMWCeVh1YCvAgMBAAGjQjBA\nMA4GA1UdDwEB/wQEAwICpDAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBSLr/lJ\n5LfMmgl7ULi0fYEioWApsTANBgkqhkiG9w0BAQsFAAOCAQEAcTmTu/LoQFHgREaE\nhWbSnsgOr6mHV9e/FZm0lO87AG9HzXMQ5w5/4GohcFgqIetKRkfhLzkLYrYt6yAA\niLUYWPNapRZLrTKFkpD4QyQHoJWfVq+S0V8gIsfyku3lgAnjKc4WZvir+cyIVbP4\n5EGEgEK38gElMSv57IxkMEtBrlNTYkcQPg9xdl/+D3+4sh9ZjXfnbws7jHVKonnQ\nE4EdXiHfmHoMXKMxGwt4ZmC6KklvxmJAGl6LiQOYm+wh9xV6zh+LIeSGpC6ws8g9\nuf/R0DfdSzBKR8p2op1OrL3ozinenZIUBMbu47Kkxb5Z7dlk2+rVj1UHrOjIGCEI\ns85VLA==\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIDHjCCAgagAwIBAgIIFPj9875lkmwwDQYJKoZIhvcNAQELBQAwLTESMBAGA1UE\nCxMJb3BlbnNoaWZ0MRcwFQYDVQQDEw5rdWJlbGV0LXNpZ25lcjAeFw0yNjAxMjgw\nOTEzMDZaFw0yNjAxMjkwOTEzMDZaMC0xEjAQBgNVBAsTCW9wZW5zaGlmdDEXMBUG\nA1UEAxMOa3ViZWxldC1zaWduZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK\nAoIBAQDZ2WemBDU6iG0kAVH9ig0Az4awRvXYS17KPP7U00Ne79tQD660cGFHQo6M\nPAiy7lwQmAYWseowNbpEXYB7QVEoRkZYf0BZCv0q33qY/QtBT1NPcI5VS+/ivpPw\nDlgUSW7UbcquWj7WneMsWLGSyPN7etydcDEDW9dsBO3mcrDKO2oX+RHdyEeK7zhy\n3zEV+qFuDowDvwj6LNGD1jfFKj+bDBHR0BZk/5uAZLjejBquE+klWpe3o0xbqznf\ngdVHRhQJYE/Oty6zY8CXvFtdDQFHEE4S0A5146XND5vBVMGv60x1zEzn36pUuQH9\n6D/I3OoOzLXUNWIl25jRbVtLdbENAgMBAAGjQjBAMA4GA1UdDwEB/wQEAwICpDAP\nBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBS3Zqf9Z5YQ/pj4p7a+AjEOOMNNLzAN\nBgkqhkiG9w0BAQsFAAOCAQEAkK1M/jdJdVeYpbMU67hfM5865650jpBtAWX5+CVE\nz3dsiVorb9kNyVOwiVq1NKc7ohcD1Y5L79YdugVgiuPSdRj6Ml20P/Vk+6WhO6dn\nbivhd8Pkk2918fyGTUeBiLr/SLq2qvjOw75Fdl5oBv1CWlDFUvwxfmO+D4anLjFe\nimUC+YWmcIz0PmJGb0b5vMhCMueycrwN1Lyas6ADtvYFgs+jwu++Brxp5b3ogf9k\nFpoAW+Z1TURIFZADnCXt3r2cJ+XAGX+sfhNyqxmn4mjEZgtqBXZoLsbk0ZM5fk4e\nJllt2kon3/I7UlKFgZwhoVMPOYf4hkWLTU2jqXtuht9XuA==\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIDNDCCAhygAwIBAgIID7OG24QXZa0wDQYJKoZIhvcNAQELBQAwODESMBAGA1UE\nCxMJb3BlbnNoaWZ0MSIwIAYDVQQDExlrdWJlLWNvbnRyb2wtcGxhbmUtc2lnbmVy\nMB4XDTI2MDEyODA5MTMwNloXDTI3MDEyODA5MTMwNlowODESMBAGA1UECxMJb3Bl\nbnNoaWZ0MSIwIAYDVQQDExlrdWJlLWNvbnRyb2wtcGxhbmUtc2lnbmVyMIIBIjAN\nBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuI3b7ntfq9dECE4aAov7+IAtyIWr\n4e5BizBsGV2iz0Is5qv+mtjfXUYisTmKiiIpjYFK7SoN94cekW5wjmuNAOYdbj5s\nTxrgz9aRDE9stFPim7qGRR5r2/I2yArtdTW8pcJ2pfEJVtvQs2IOd3iIpGqDTYs8\nmg7Ag/07nR7LKBX1B79PuxYUriE51l1b6cqxF6dNuzJlt0E6V3QQLLmYiGubT6Il\ntMlc7v7ohhzfwEDkv57ALUIZ2FsLdnB4zFcfNHwD1yJgpm88uLOQrwc7SWZIpi8q\nrt+VmXqzHKLXs5V6x7T4lbt8xnCTUzxKx30MpRoU0mB8xb46zQdfJNoovwIDAQAB\no0IwQDAOBgNVHQ8BAf8EBAMCAqQwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQU\nZ3K5EB3rzLD5T5WGVyKG5VaLY5EwDQYJKoZIhvcNAQELBQADggEBABCzFTJs+gnV\nNWcsIoIU4aIp+e2HexpAxseFV6z8YH5bnpDT9xNQCbdBYbZIJLAdm4488gXtMQjn\nzts/GFdEHyNA5hc60/NnccOfEAIsRgSFLKwfmfOogw6Bn/P5/vqdapZOmCkfyQkP\noDIMs/x3XRYgQmZ4IsP0y+RgsaMmB1JNkYIcj6jSnp9SLQfMllZ9QDfX3iMg0kMK\nLlIHGfKDwkh5Z/wwJvR2QxBSBT+O0q4EsrdBvjXRHOUjW5XdEwDz4UXn4R/y4cAJ\nWu1n6wS4YXZrMXfhKm181mBY8KAd1srxFtzZpte7AqviVLI7Mm2D3aosWyvKiXCl\nY+dcu8+aXOs=\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIDQjCCAiqgAwIBAgIIYsEyrdDqrRIwDQYJKoZIhvcNAQELBQAwPzESMBAGA1UE\nCxMJb3BlbnNoaWZ0MSkwJwYDVQQDEyBrdWJlLWFwaXNlcnZlci10by1rdWJlbGV0\nLXNpZ25lcjAeFw0yNjAxMjgwOTEzMDdaFw0yNzAxMjgwOTEzMDdaMD8xEjAQBgNV\nBAsTCW9wZW5zaGlmdDEpMCcGA1UEAxMga3ViZS1hcGlzZXJ2ZXItdG8ta3ViZWxl\ndC1zaWduZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDqA0jDdSse\niY6S4LkTZbtgoYb6WJCUol9+k5SZi5Tr0FakHRlmrsNAkX2zZ6YzgoOSenTLNfs/\n5LRl0QMLRs3lql3BPU7c/TffWeHaVCx+U1ABBGpogOYOFI/V04xK1PciNZ9liLVe\nHqEA6mHdpnREJo1WRBVNo2TU13VUoBfwyT4Z+L/IzzS3Ze14Cy+zvc62CLDqitD7\na1KYQ+WSuzUw1EX+kDL04EJMlhpeRj6ugE4Oh9gklxRcjJx6fx1uWyIXeIiq/zgN\nqfkPwwC4L/7+GP+N/N3K1s1UkMwpKZa2dk8pYVP/g0AmiJvLJOFgzw4Lxe8ky6K0\nm9kWlbsDWzrxAgMBAAGjQjBAMA4GA1UdDwEB/wQEAwICpDAPBgNVHRMBAf8EBTAD\nAQH/MB0GA1UdDgQWBBTWRZqeNEnlOC75jq6F0nfvGhpJtDANBgkqhkiG9w0BAQsF\nAAOCAQEAH+Uai11uPOxkWbRGvvZz6V8xGrYfZ0kSOGWQysfGeeJfFQtpD32W5BFn\nrMc3m+sEjQH3GG+8Yw3BDVsPNDC5lTsHSNqs0wSNdYfLdtpJ8ajyG4ksc2faTNiE\nUZvuX0SYZsxUUO3HbZeGiq0qz9d+KU/qj7ZXHWkLfVxWty7zF1iXWpq9JeHGRHhj\ng7Oe3nUe8xCfx14N82y/qVRBMtGGnr5VllF/akXDEs8T78wS1ARBmOvgbi6Agbgr\nacQszkkWiSWrMwJFWFuS/RzpWIToDVTfLr6IfjU+s9KmGHxfCugBtF8TwLmFmJ4Q\nj5LumAzqCwiBxf+2Di+wSYahjAJDOg==\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIDSDCCAjCgAwIBAgIIHILe2Xjf9cgwDQYJKoZIhvcNAQELBQAwQjESMBAGA1UE\nCxMJb3BlbnNoaWZ0MSwwKgYDVQQDEyNrdWJlbGV0LWJvb3RzdHJhcC1rdWJlY29u\nZmlnLXNpZ25lcjAeFw0yNjAxMjgwOTEzMDNaFw0zNjAxMjYwOTEzMDNaMEIxEjAQ\nBgNVBAsTCW9wZW5zaGlmdDEsMCoGA1UEAxMja3ViZWxldC1ib290c3RyYXAta3Vi\nZWNvbmZpZy1zaWduZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDM\nwKQNzuI+utFfLFPNtOQ4HEm6ay/RgfGucd1kHSEB5g6vTAlCdpT3yg+/wxYcdWxi\nq+x0A1RBcw0gFTEHUBAg0exu3HxPVsjNLSDANc/OMLCvpw0pB4PMHglC5O76ncMc\n5TvxFffj+d1S5AY32xIVX2ZBCbBqSriJS4Bq991bKFFjogAeKFbqz0rolx5/LZxO\n385oXbzBGb0EDuoqaOYRwfjIA4N0LY9y8EZbSdXVNe47zSpmhGczEsPMA6+gXgx6\nPn8tkFXEpOiUJxO5W6PmBuyuvn/VysVR6zKP6NfYQv0MhNs50Uitj5C9ftwafLdf\n/1A7vmEPLDosVyQxK2hJAgMBAAGjQjBAMA4GA1UdDwEB/wQEAwICpDAPBgNVHRMB\nAf8EBTADAQH/MB0GA1UdDgQWBBQ8bzRI+rnHAm9kA33SVZsLbAojRzANBgkqhkiG\n9w0BAQsFAAOCAQEAOKigdscTstMj4u9/KA4ODFYGcMYRJA6yueUWk8uNv2s3vXSp\nCVcmOXgelZvw8gTieE+yKStkkozgZZfRX9ssdSMJL7n3HuIJn47of/W8WFmh+qOd\ndpzSi+xUu0AFiHm1KbQK461tfywxFXwBW3bqzV7pe4IuA5WU+m9GCzlr8l/tV2VO\n/q0tWPw9lXCRc8AjkMTlDnNRkVBIngJSisAYU6MycAnXOQnNWMcwtdjLYAWp7YJA\nqZLyXmVwI/Sz2Uqsg6qIDLaum3oWLk8aJEZqhxI3crZ5elWvqSZgo6I3X25k+GrI\nHhMJrTxOHD8JKypDXfbvwd8vFA+swiZprSJPAQ==\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIDODCCAiCgAwIBAgIIM55qw5M2fZAwDQYJKoZIhvcNAQELBQAwLTESMBAGA1UE\nCxMJb3BlbnNoaWZ0MRcwFQYDVQQDEw5rdWJlbGV0LXNpZ25lcjAeFw0yNjAxMjgw\nOTMwMzVaFw0yNjAxMjkwOTEzMDZaMCYxJDAiBgNVBAMMG2t1YmUtY3NyLXNpZ25l\ncl9AMTc2OTU5MjYzNjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMKd\nB5GTISivgp4DcdLZK/WJMQPKxc2/D4Z24BzrvBLRjPSYS5sCqVudoVgzHDldgP9p\nHLtJOcd8slX3BpaDuB+u3FGxwbz7zRad977ahi+iTVxOUyNPbXu3T8asFWRguPgZ\nEBTvQHjU3QPZX4fgt/tctPKq0CeeW2wJd4alwJLcu7ujtJjJ2oXN/R3a0+uwsK8O\nHn/vtby8ouapUimGyOuAN0rqAYmq5YHcnZOnJ8wmG9I2UJGspVputk5ulJNbEU2m\nd1Hy8cRrq9NJgsaiWYv1rL1i68GZmBE3KlIaDu3sAzZuz9smpWAmi9EUzot84PoJ\nw8o3YAucLbyJoUiYX88CAwEAAaNjMGEwDgYDVR0PAQH/BAQDAgKkMA8GA1UdEwEB\n/wQFMAMBAf8wHQYDVR0OBBYEFD4aww1WHBcW76tDefcyc9+bxNb6MB8GA1UdIwQY\nMBaAFLdmp/1nlhD+mPintr4CMQ44w00vMA0GCSqGSIb3DQEBCwUAA4IBAQAhjPRD\n/SW+/jF9qia8BxX6jDDbFG0duNTSQI5RvZnLgNbsK/MnL2SmSVQC6jb2oVjNC0dA\nTUFO0//lGqC6NeUC1ismbj88yCGfVPnNg0/gkdCxQhq6wy7y3efEbXxocQ0EAuZb\n3kKJaVcNZyBkYhRkb1z8VPZemN8DAGiJV7hCfplfo+qyNwA/fWNj/11MgsnvyfL7\noxsd4e7rGM7FAxrImmJrYnIXX6gmzhYDkF0Sylh4F30c2KTVb6ywLwKmVvORg6lc\n8hFyR5Esrs9X1QNI9j3Guha40X7pNct5MtKSaya2fd10tUQsQ5oT8Y8oYZivZhj/\nWSwP/N+irVM5q51O\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIDhTCCAm2gAwIBAgIIIgZQ42uNBewwDQYJKoZIhvcNAQELBQAwUDFOMEwGA1UE\nAwxFb3BlbnNoaWZ0LWt1YmUtYXBpc2VydmVyLW9wZXJhdG9yX25vZGUtc3lzdGVt\nLWFkbWluLXNpZ25lckAxNzY5NTkyNjM1MB4XDTI2MDEyODA5MzAzNVoXDTI5MDEy\nNzA5MzAzNlowUDFOMEwGA1UEAwxFb3BlbnNoaWZ0LWt1YmUtYXBpc2VydmVyLW9w\nZXJhdG9yX25vZGUtc3lzdGVtLWFkbWluLXNpZ25lckAxNzY5NTkyNjM1MIIBIjAN\nBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtj5xlwA/duauMhYv/AkxLaJfCtDs\nbk/4mudsL+Cju0Hslx0IKMxBzp/XZo7MA6lA9HXyBz+P73PoqRVzaob6wLr8suRj\nshJ9xe9IG5OdUo5AyN0armcElQdt0mdCtLOTLKaNZWqxvVrAAL4hpspaMfQ29M6A\n2RxktOQBxP/CRVtZxNuSJBGxktwVLYMz0HjsyB67s/7bWOa3nhQBexPvlWkvK5DA\n6Q35j/wzjx2de/qs70gOAjj/pyKdVoDQA5lX3ST9X2tHttUJF+Z3wYr6MaL/nRUg\nxdeW9yYQyJe2Xs592FSGjMnHCV+Oyoso8d7E0t/6ydxsXQ9YEtYrcPb4WwIDAQAB\no2MwYTAOBgNVHQ8BAf8EBAMCAqQwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQU\np1+uwt6i0z0MKMU1V8Qjl/GHovgwHwYDVR0jBBgwFoAUp1+uwt6i0z0MKMU1V8Qj\nl/GHovgwDQYJKoZIhvcNAQELBQADggEBAFmcdZzDg6A/srtUgAT9vzS3IKFErPqo\naZAcE2QOV2q5vJBFllJvspuoaaetJigsJxaz3R09vtMHp+u+LqA14N6TZfzCPbLL\nLk8F0lOVVeaiseJ+LWRBIo3O545izqdZJhnot5OUWou6MHwn6xNXALrwyKoE4VHt\nRcHc8Dul0Dvabi2ZKjINPUxJk1LQCSWRC+JvggnRamKizyVr4c5NpzWmdOBaljml\nsoDO5qZnh7g397kHY9oND3F77jAt+oEUpea/2bcxPKA1dppl7406SMnaNUQL/+68\ng3pMkVEOzV4RNcv30yI8pbAvry1R6v7rWU3yu9U3xKVc6Mk76bNumv4=\n-----END CERTIFICATE-----\n"},"kind":"ConfigMap","metadata":{"creationTimestamp":null,"managedFields":null,"resourceVersion":null,"uid":null}}
+2026-01-28T09:36:57.264321049Z I0128 09:36:57.264267       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ConfigMapUpdated' Updated ConfigMap/metrics-client-ca -n openshift-monitoring:
+2026-01-28T09:36:57.264321049Z cause by changes in data.client-ca.crt
+2026-01-28T09:36:57.265797532Z I0128 09:36:57.265768       1 tasks.go:76] ran task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T09:39:25.703097556Z I0128 09:39:25.702183       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:39:36.614777841Z I0128 09:39:36.614710       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:39:59.501773333Z I0128 09:39:59.501712       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:39:59.559074559Z I0128 09:39:59.548216       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:39:59.610402167Z I0128 09:39:59.603373       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:39:59.654068022Z I0128 09:39:59.654000       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:39:59.677720935Z I0128 09:39:59.673834       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:39:59.729837902Z I0128 09:39:59.728956       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:39:59.729837902Z I0128 09:39:59.728982       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:40:14.504445572Z I0128 09:40:14.504405       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:40:14.520240771Z I0128 09:40:14.520202       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:40:14.540807717Z I0128 09:40:14.540635       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:40:29.507583586Z I0128 09:40:29.507274       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:41:04.524170864Z I0128 09:41:04.524128       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:41:04.556862355Z I0128 09:41:04.556820       1 operator.go:647] Triggering an update due to a change in *v1.Infrastructure/cluster
+2026-01-28T09:41:04.561280584Z I0128 09:41:04.561241       1 operator.go:647] Triggering an update due to a change in *v1.APIServer/cluster
+2026-01-28T09:41:29.499747703Z I0128 09:41:29.497536       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:41:57.279200945Z W0128 09:41:57.279163       1 tasks.go:73] task 2 of 2: UpdatingPrometheusOperator failed: reconciling Prometheus Operator Admission Webhook Deployment failed: updating Deployment object failed: waiting for DeploymentRollout of openshift-monitoring/prometheus-operator-admission-webhook: context deadline exceeded: got 1 unavailable replicas
+2026-01-28T09:41:57.279237967Z I0128 09:41:57.279202       1 operator.go:875] 2 reconciliation(s) failed, 2 more attempt(s) will be made before reporting failures.
+2026-01-28T09:41:57.279237967Z E0128 09:41:57.279211       1 operator.go:706] Syncing "openshift-monitoring/cluster-monitoring-config" failed
+2026-01-28T09:41:57.279237967Z E0128 09:41:57.279226       1 operator.go:707] "Unhandled Error" err="sync \"openshift-monitoring/cluster-monitoring-config\" failed: cluster monitoring update failed (reason: UpdatingPrometheusOperatorFailed)" logger="UnhandledError"
+2026-01-28T09:41:57.291978102Z I0128 09:41:57.291952       1 operator.go:830] Updating ClusterOperator status to InProgress.
+2026-01-28T09:41:57.293945970Z I0128 09:41:57.293922       1 tasks.go:49] processing task group 1 of 3
+2026-01-28T09:41:57.293984742Z I0128 09:41:57.293959       1 tasks.go:70] running task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T09:41:57.293984742Z I0128 09:41:57.293968       1 tasks.go:70] running task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T09:41:57.299981301Z I0128 09:41:57.299955       1 tasks.go:76] ran task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T09:42:14.496327262Z I0128 09:42:14.496283       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:42:37.333116563Z I0128 09:42:37.333071       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ValidatingWebhookConfigurationCreated' Created ValidatingWebhookConfiguration.admissionregistration.k8s.io/prometheusrules.openshift.io because it was missing
+2026-01-28T09:42:37.362440424Z I0128 09:42:37.362397       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ValidatingWebhookConfigurationCreated' Created ValidatingWebhookConfiguration.admissionregistration.k8s.io/alertmanagerconfigs.openshift.io because it was missing
+2026-01-28T09:42:37.401304750Z I0128 09:42:37.400499       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceCreated' Created Service/prometheus-operator -n openshift-monitoring because it was missing
+2026-01-28T09:42:37.503761134Z W0128 09:42:37.503726       1 warnings.go:70] spec.template.spec.nodeSelector[node-role.kubernetes.io/master]: use "node-role.kubernetes.io/control-plane" instead
+2026-01-28T09:42:42.539613392Z I0128 09:42:42.539530       1 tasks.go:76] ran task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T09:42:42.539613392Z I0128 09:42:42.539559       1 tasks.go:49] processing task group 2 of 3
+2026-01-28T09:42:42.539613392Z I0128 09:42:42.539588       1 tasks.go:70] running task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T09:42:42.539613392Z I0128 09:42:42.539602       1 tasks.go:70] running task 7 of 15: UpdatingMetricsServer
+2026-01-28T09:42:42.539653374Z I0128 09:42:42.539619       1 tasks.go:70] running task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T09:42:42.539653374Z I0128 09:42:42.539631       1 tasks.go:70] running task 2 of 15: UpdatingPrometheus
+2026-01-28T09:42:42.539653374Z I0128 09:42:42.539640       1 tasks.go:70] running task 3 of 15: UpdatingAlertmanager
+2026-01-28T09:42:42.539786991Z I0128 09:42:42.539766       1 tasks.go:70] running task 4 of 15: UpdatingNodeExporter
+2026-01-28T09:42:42.539950599Z I0128 09:42:42.539932       1 tasks.go:70] running task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T09:42:42.540133048Z I0128 09:42:42.540112       1 tasks.go:70] running task 8 of 15: UpdatingTelemeterClient
+2026-01-28T09:42:42.540196541Z I0128 09:42:42.540169       1 tasks.go:70] running task 9 of 15: UpdatingThanosQuerier
+2026-01-28T09:42:42.540196541Z I0128 09:42:42.540186       1 tasks.go:70] running task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T09:42:42.540215552Z I0128 09:42:42.540199       1 tasks.go:70] running task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T09:42:42.540215552Z I0128 09:42:42.540208       1 tasks.go:70] running task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T09:42:42.540228373Z I0128 09:42:42.540218       1 tasks.go:70] running task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T09:42:42.540253404Z I0128 09:42:42.540230       1 tasks.go:70] running task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T09:42:42.540266235Z I0128 09:42:42.540252       1 tasks.go:70] running task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T09:42:42.562937924Z I0128 09:42:42.562475       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceAccountCreated' Created ServiceAccount/openshift-state-metrics -n openshift-monitoring because it was missing
+2026-01-28T09:42:42.562937924Z I0128 09:42:42.562498       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceAccountCreated' Created ServiceAccount/kube-state-metrics -n openshift-monitoring because it was missing
+2026-01-28T09:42:42.575858528Z I0128 09:42:42.575799       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceAccountCreated' Created ServiceAccount/node-exporter -n openshift-monitoring because it was missing
+2026-01-28T09:42:42.589556410Z I0128 09:42:42.589511       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceCreated' Created Service/thanos-querier -n openshift-monitoring because it was missing
+2026-01-28T09:42:42.596195201Z I0128 09:42:42.596159       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ConfigMapCreated' Created ConfigMap/kubelet-serving-ca-bundle -n openshift-monitoring because it was missing
+2026-01-28T09:42:42.645172191Z I0128 09:42:42.645109       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleCreated' Created ClusterRole.rbac.authorization.k8s.io/monitoring-edit because it was missing
+2026-01-28T09:42:42.680218227Z I0128 09:42:42.679995       1 tasks.go:76] ran task 8 of 15: UpdatingTelemeterClient
+2026-01-28T09:42:42.680218227Z I0128 09:42:42.680056       1 tasks.go:76] ran task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T09:42:42.695593162Z I0128 09:42:42.693253       1 tasks.go:76] ran task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T09:42:42.711212340Z I0128 09:42:42.710697       1 tasks.go:76] ran task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T09:42:42.732934253Z I0128 09:42:42.732838       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleCreated' Created ClusterRole.rbac.authorization.k8s.io/openshift-state-metrics because it was missing
+2026-01-28T09:42:42.736863858Z I0128 09:42:42.736834       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleCreated' Created ClusterRole.rbac.authorization.k8s.io/prometheus-k8s because it was missing
+2026-01-28T09:42:42.742244416Z I0128 09:42:42.742213       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleCreated' Created ClusterRole.rbac.authorization.k8s.io/node-exporter because it was missing
+2026-01-28T09:42:42.751465856Z I0128 09:42:42.751324       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleCreated' Created ClusterRole.rbac.authorization.k8s.io/kube-state-metrics because it was missing
+2026-01-28T09:42:42.802501498Z I0128 09:42:42.799957       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleBindingCreated' Created ClusterRoleBinding.rbac.authorization.k8s.io/prometheus-k8s because it was missing
+2026-01-28T09:42:42.804796993Z I0128 09:42:42.804764       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleCreated' Created ClusterRole.rbac.authorization.k8s.io/alert-routing-edit because it was missing
+2026-01-28T09:42:42.804883577Z I0128 09:42:42.804865       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleBindingCreated' Created ClusterRoleBinding.rbac.authorization.k8s.io/openshift-state-metrics because it was missing
+2026-01-28T09:42:42.810492126Z I0128 09:42:42.810453       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleBindingCreated' Created ClusterRoleBinding.rbac.authorization.k8s.io/node-exporter because it was missing
+2026-01-28T09:42:42.821101045Z I0128 09:42:42.821006       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceCreated' Created Service/openshift-state-metrics -n openshift-monitoring because it was missing
+2026-01-28T09:42:42.824183668Z I0128 09:42:42.824157       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceAccountCreated' Created ServiceAccount/metrics-server -n openshift-monitoring because it was missing
+2026-01-28T09:42:42.846599805Z I0128 09:42:42.846463       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceCreated' Created Service/node-exporter -n openshift-monitoring because it was missing
+2026-01-28T09:42:42.864107407Z I0128 09:42:42.864066       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ConfigMapCreated' Created ConfigMap/node-exporter-accelerators-collector-config -n openshift-monitoring because it was missing
+2026-01-28T09:42:42.880270742Z I0128 09:42:42.880221       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleBindingCreated' Created ClusterRoleBinding.rbac.authorization.k8s.io/kube-state-metrics because it was missing
+2026-01-28T09:42:42.910705249Z I0128 09:42:42.910591       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceCreated' Created Service/kube-state-metrics -n openshift-monitoring because it was missing
+2026-01-28T09:42:42.918700647Z I0128 09:42:42.918078       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleCreated' Created ClusterRole.rbac.authorization.k8s.io/system:metrics-server because it was missing
+2026-01-28T09:42:42.931893434Z I0128 09:42:42.931281       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ConfigMapCreated' Created ConfigMap/kube-state-metrics-custom-resource-state-configmap -n openshift-monitoring because it was missing
+2026-01-28T09:42:42.967311538Z I0128 09:42:42.965563       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleCreated' Created ClusterRole.rbac.authorization.k8s.io/cluster-monitoring-view because it was missing
+2026-01-28T09:42:43.080721168Z I0128 09:42:43.080655       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleBindingCreated' Created ClusterRoleBinding.rbac.authorization.k8s.io/system:metrics-server because it was missing
+2026-01-28T09:42:43.141331907Z I0128 09:42:43.141278       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleCreated' Created ClusterRole.rbac.authorization.k8s.io/system:aggregated-metrics-reader because it was missing
+2026-01-28T09:42:43.200005520Z I0128 09:42:43.199894       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleBindingCreated' Created ClusterRoleBinding.rbac.authorization.k8s.io/metrics-server:system:auth-delegator because it was missing
+2026-01-28T09:42:43.208514084Z I0128 09:42:43.208468       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleCreated' Created ClusterRole.rbac.authorization.k8s.io/pod-metrics-reader because it was missing
+2026-01-28T09:42:43.289101909Z I0128 09:42:43.288959       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleCreated' Created ClusterRole.rbac.authorization.k8s.io/monitoring-rules-edit because it was missing
+2026-01-28T09:42:43.302648314Z I0128 09:42:43.302606       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RoleBindingCreated' Created RoleBinding.rbac.authorization.k8s.io/metrics-server-auth-reader -n kube-system because it was missing
+2026-01-28T09:42:43.324635409Z I0128 09:42:43.324541       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceCreated' Created Service/metrics-server -n openshift-monitoring because it was missing
+2026-01-28T09:42:43.406646275Z I0128 09:42:43.406592       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleCreated' Created ClusterRole.rbac.authorization.k8s.io/monitoring-rules-view because it was missing
+2026-01-28T09:42:43.487822418Z I0128 09:42:43.487769       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RoleCreated' Created Role.rbac.authorization.k8s.io/user-workload-monitoring-config-edit -n openshift-user-workload-monitoring because it was missing
+2026-01-28T09:42:43.586314735Z I0128 09:42:43.586260       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'PodDisruptionBudgetCreated' Created PodDisruptionBudget.policy/alertmanager-main -n openshift-monitoring because it was missing
+2026-01-28T09:42:43.588625650Z I0128 09:42:43.588595       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RoleCreated' Created Role.rbac.authorization.k8s.io/monitoring-alertmanager-api-reader -n openshift-user-workload-monitoring because it was missing
+2026-01-28T09:42:43.687138197Z I0128 09:42:43.687081       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'SecretCreated' Created Secret/thanos-querier-kube-rbac-proxy-web -n openshift-monitoring because it was missing
+2026-01-28T09:42:43.699641200Z I0128 09:42:43.699594       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceAccountCreated' Created ServiceAccount/thanos-querier -n openshift-monitoring because it was missing
+2026-01-28T09:42:43.734351560Z I0128 09:42:43.734303       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleCreated' Created ClusterRole.rbac.authorization.k8s.io/alertmanager-main because it was missing
+2026-01-28T09:42:43.734415163Z I0128 09:42:43.734389       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RoleCreated' Created Role.rbac.authorization.k8s.io/monitoring-alertmanager-api-writer -n openshift-user-workload-monitoring because it was missing
+2026-01-28T09:42:43.784797523Z I0128 09:42:43.784560       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleCreated' Created ClusterRole.rbac.authorization.k8s.io/thanos-querier because it was missing
+2026-01-28T09:42:43.787690617Z I0128 09:42:43.787653       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleBindingCreated' Created ClusterRoleBinding.rbac.authorization.k8s.io/alertmanager-main because it was missing
+2026-01-28T09:42:43.794427352Z I0128 09:42:43.794379       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceAccountCreated' Created ServiceAccount/alertmanager-main -n openshift-monitoring because it was missing
+2026-01-28T09:42:43.816796417Z I0128 09:42:43.816751       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceCreated' Created Service/alertmanager-main -n openshift-monitoring because it was missing
+2026-01-28T09:42:43.849039213Z I0128 09:42:43.848831       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ConfigMapCreated' Created ConfigMap/alertmanager-trusted-ca-bundle -n openshift-monitoring because it was missing
+2026-01-28T09:42:43.850900186Z I0128 09:42:43.850862       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/alertmanager-trusted-ca-bundle
+2026-01-28T09:42:43.854165908Z I0128 09:42:43.854120       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RoleCreated' Created Role.rbac.authorization.k8s.io/monitoring-alertmanager-edit -n openshift-monitoring because it was missing
+2026-01-28T09:42:43.934123321Z I0128 09:42:43.934050       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/alertmanager-trusted-ca-bundle
+2026-01-28T09:42:43.949518548Z I0128 09:42:43.949184       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleBindingCreated' Created ClusterRoleBinding.rbac.authorization.k8s.io/thanos-querier because it was missing
+2026-01-28T09:42:44.008515918Z I0128 09:42:44.007971       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RoleCreated' Created Role.rbac.authorization.k8s.io/monitoring-alertmanager-view -n openshift-monitoring because it was missing
+2026-01-28T09:42:44.125804830Z I0128 09:42:44.125725       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RoleCreated' Created Role.rbac.authorization.k8s.io/cluster-monitoring-metrics-api -n openshift-monitoring because it was missing
+2026-01-28T09:42:44.502293679Z I0128 09:42:44.501741       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:42:44.718444483Z I0128 09:42:44.718397       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'SecretCreated' Created Secret/kube-rbac-proxy -n openshift-monitoring because it was missing
+2026-01-28T09:42:44.735791932Z I0128 09:42:44.735472       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'SecretCreated' Created Secret/prometheus-k8s-kube-rbac-proxy-web -n openshift-monitoring because it was missing
+2026-01-28T09:42:44.757823541Z I0128 09:42:44.754798       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceAccountCreated' Created ServiceAccount/prometheus-k8s -n openshift-monitoring because it was missing
+2026-01-28T09:42:45.017229096Z I0128 09:42:45.017166       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RoleBindingCreated' Created RoleBinding.rbac.authorization.k8s.io/alertmanager-prometheusk8s -n openshift-monitoring because it was missing
+2026-01-28T09:42:45.109669149Z I0128 09:42:45.109615       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RoleCreated' Created Role.rbac.authorization.k8s.io/prometheus-k8s-config -n openshift-monitoring because it was missing
+2026-01-28T09:42:45.204513342Z I0128 09:42:45.203583       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RoleCreated' Created Role.rbac.authorization.k8s.io/prometheus-k8s -n default because it was missing
+2026-01-28T09:42:45.305231055Z I0128 09:42:45.305158       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RoleCreated' Created Role.rbac.authorization.k8s.io/prometheus-k8s -n kube-system because it was missing
+2026-01-28T09:42:45.432762395Z I0128 09:42:45.430174       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RoleCreated' Created Role.rbac.authorization.k8s.io/prometheus-k8s -n openshift-monitoring because it was missing
+2026-01-28T09:42:45.525179367Z I0128 09:42:45.524394       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RoleCreated' Created Role.rbac.authorization.k8s.io/prometheus-k8s -n openshift-user-workload-monitoring because it was missing
+2026-01-28T09:42:45.571783313Z I0128 09:42:45.570828       1 tasks.go:76] ran task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T09:42:45.571783313Z I0128 09:42:45.571631       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'SecretCreated' Created Secret/grpc-tls -n openshift-monitoring because it was missing
+2026-01-28T09:42:45.572765421Z I0128 09:42:45.572619       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/grpc-tls
+2026-01-28T09:42:45.613703227Z I0128 09:42:45.613350       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RoleBindingCreated' Created RoleBinding.rbac.authorization.k8s.io/prometheus-k8s -n default because it was missing
+2026-01-28T09:42:45.714237081Z I0128 09:42:45.714198       1 tasks.go:76] ran task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T09:42:45.720471579Z I0128 09:42:45.720431       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RoleBindingCreated' Created RoleBinding.rbac.authorization.k8s.io/prometheus-k8s -n kube-system because it was missing
+2026-01-28T09:42:45.821139580Z I0128 09:42:45.821072       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RoleBindingCreated' Created RoleBinding.rbac.authorization.k8s.io/prometheus-k8s -n openshift-monitoring because it was missing
+2026-01-28T09:42:45.900626353Z I0128 09:42:45.900583       1 tasks.go:76] ran task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T09:42:45.923975108Z I0128 09:42:45.923914       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RoleBindingCreated' Created RoleBinding.rbac.authorization.k8s.io/prometheus-k8s -n openshift-user-workload-monitoring because it was missing
+2026-01-28T09:42:45.961134276Z I0128 09:42:45.960395       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'SecretCreated' Created Secret/thanos-querier-grpc-tls-8n9c555l9i22s -n openshift-monitoring because it was missing
+2026-01-28T09:42:46.028481138Z I0128 09:42:46.028427       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RoleBindingCreated' Created RoleBinding.rbac.authorization.k8s.io/prometheus-k8s-config -n openshift-monitoring because it was missing
+2026-01-28T09:42:46.102067509Z I0128 09:42:46.093964       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceCreated' Created Service/prometheus-k8s -n openshift-monitoring because it was missing
+2026-01-28T09:42:46.126276657Z I0128 09:42:46.125433       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceCreated' Created Service/prometheus-k8s-thanos-sidecar -n openshift-monitoring because it was missing
+2026-01-28T09:42:46.352233376Z I0128 09:42:46.350563       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ConfigMapCreated' Created ConfigMap/metrics-server-audit-profiles -n openshift-monitoring because it was missing
+2026-01-28T09:42:46.614569576Z I0128 09:42:46.614519       1 tasks.go:76] ran task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T09:42:46.971888644Z I0128 09:42:46.971840       1 tasks.go:76] ran task 4 of 15: UpdatingNodeExporter
+2026-01-28T09:42:47.363782653Z I0128 09:42:47.363714       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'SecretCreated' Created Secret/metrics-server-2qf2fqulnjrd -n openshift-monitoring because it was missing
+2026-01-28T09:42:47.586358045Z I0128 09:42:47.586296       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceAccountCreated' Created ServiceAccount/monitoring-plugin -n openshift-monitoring because it was missing
+2026-01-28T09:42:47.602704394Z I0128 09:42:47.602670       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceCreated' Created Service/monitoring-plugin -n openshift-monitoring because it was missing
+2026-01-28T09:42:48.026125363Z I0128 09:42:48.026083       1 tasks.go:76] ran task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T09:42:49.148859971Z I0128 09:42:49.148798       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'SecretCreated' Created Secret/prometheus-k8s-grpc-tls-8699h5sthllio -n openshift-monitoring because it was missing
+2026-01-28T09:42:49.162209612Z I0128 09:42:49.162174       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'PodDisruptionBudgetCreated' Created PodDisruptionBudget.policy/prometheus-k8s -n openshift-monitoring because it was missing
+2026-01-28T09:42:49.173861788Z I0128 09:42:49.173807       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ConfigMapCreated' Created ConfigMap/prometheus-trusted-ca-bundle -n openshift-monitoring because it was missing
+2026-01-28T09:42:49.180787591Z I0128 09:42:49.180739       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'SecretCreated' Created Secret/prometheus-k8s-additional-alertmanager-configs -n openshift-monitoring because it was missing
+2026-01-28T09:42:52.649449425Z I0128 09:42:52.649408       1 tasks.go:76] ran task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T09:42:52.651059075Z I0128 09:42:52.649619       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'PodDisruptionBudgetCreated' Created PodDisruptionBudget.policy/monitoring-plugin -n openshift-monitoring because it was missing
+2026-01-28T09:43:00.010911549Z I0128 09:43:00.010852       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'PodDisruptionBudgetCreated' Created PodDisruptionBudget.policy/thanos-querier-pdb -n openshift-monitoring because it was missing
+2026-01-28T09:43:00.035833882Z I0128 09:43:00.035792       1 tasks.go:76] ran task 9 of 15: UpdatingThanosQuerier
+2026-01-28T09:43:16.405854315Z I0128 09:43:16.405808       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'PodDisruptionBudgetCreated' Created PodDisruptionBudget.policy/metrics-server -n openshift-monitoring because it was missing
+2026-01-28T09:43:16.416660133Z I0128 09:43:16.416424       1 tasks.go:76] ran task 7 of 15: UpdatingMetricsServer
+2026-01-28T09:43:16.416693525Z I0128 09:43:16.416664       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'APIServiceCreated' Created APIService.apiregistration.k8s.io/v1beta1.metrics.k8s.io because it was missing
+2026-01-28T09:43:23.907635083Z I0128 09:43:23.907594       1 tasks.go:76] ran task 3 of 15: UpdatingAlertmanager
+2026-01-28T09:43:42.658651165Z I0128 09:43:42.658608       1 operator.go:647] Triggering an update due to a change in *v1.Console/cluster
+2026-01-28T09:44:09.219854680Z I0128 09:44:09.219801       1 tasks.go:76] ran task 2 of 15: UpdatingPrometheus
+2026-01-28T09:44:09.219854680Z I0128 09:44:09.219832       1 tasks.go:49] processing task group 3 of 3
+2026-01-28T09:44:09.219854680Z I0128 09:44:09.219846       1 tasks.go:70] running task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T09:44:09.253915899Z I0128 09:44:09.253865       1 tasks.go:76] ran task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T09:44:09.254437435Z I0128 09:44:09.254418       1 operator.go:851] Updating ClusterOperator status to done.
+2026-01-28T09:44:09.254597273Z I0128 09:44:09.254360       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ConfigMapCreated' Created ConfigMap/monitoring-shared-config -n openshift-config-managed because it was missing
+2026-01-28T09:44:09.465442946Z I0128 09:44:09.465397       1 operator.go:830] Updating ClusterOperator status to InProgress.
+2026-01-28T09:44:09.477603013Z I0128 09:44:09.477564       1 tasks.go:49] processing task group 1 of 3
+2026-01-28T09:44:09.477672186Z I0128 09:44:09.477659       1 tasks.go:70] running task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T09:44:09.477981362Z I0128 09:44:09.477964       1 tasks.go:70] running task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T09:44:09.508459711Z I0128 09:44:09.508420       1 tasks.go:76] ran task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T09:44:10.589206252Z I0128 09:44:10.589151       1 admissionregistration.go:144] ValidatingWebhookConfiguration "/prometheusrules.openshift.io" changes: {"webhooks":[{"admissionReviewVersions":["v1"],"clientConfig":{"caBundle":"LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJRXcwTy9pcFdJYVl3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRjMk9UVTVNall6TlRBZQpGdzB5TmpBeE1qZ3dPVE13TXpSYUZ3MHlPREF6TWpnd09UTXdNelZhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTNOamsxT1RJMk16VXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRQzZEZ0llNFg4czRKa0JKSnJSWDMzNlBpUHh5dkxGOGtLOApsWE1ISGZCbHRzQldsUEpMZ0thM0JJbDdUUTVKYktibzF3T0lwL2hJaFRRbTkvQ1ZaNndUSUh5WFNmRkFLQjZFCnZvdDJWdGxxOTZYcDZOVkxOd3BySG50cXlEbTV2OVdWZG5wY1NqNDFYZmhiYUsxOXlJR3lyRGxQSzhiUFVYSHAKdDlVbFF2c3l4bEFuK2djNVJJR2hPNUtNazdNWm0zZlVyNEJ4TjJKeWhYZW9zblpEV1EyTFY4cDZoQVphZnRTTwpGQk53ZzlvNktJM09LUDdFSWJFcEZONUFHcTVacFpqWnQ0OUlZQzRSeWcyYjBJOHRjV1c4amJsd0ZBTFlxcVJaCk1VK2VYb2V2ZlVsK2VSMC9aNHBrN0ZnQTRIMnU1U1NoYzQzeHFwbXFoVFN5NFhiVlQvU1JBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlNZd1g1WQpWVnZpb1I5OCtqbzkycVhBclR6MTZ6QWZCZ05WSFNNRUdEQVdnQlNZd1g1WVZWdmlvUjk4K2pvOTJxWEFyVHoxCjZ6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFSNlVYd0gwcmlYejRCa2lzNkNCRnZPRi9jNUxLbnFXdlR3UEYKemJqY1ZBUy9Nb0tRdVhqZVVIZXZ0dEMyR0NRSTEwbkJyYUpYUklOSGtVTzVMYVUyVWxBMVh6LzZmaGxGMkJKSwplSmtkaHF3QnFDcjlqa0hKVk1kYW5wZ25TTUNUcitDYVNUM0d3ai80TU1hSHcvRkY4bTQ3VkFkWlJnajNlY0h0CkhGeVBiR0gxb1ZiZklKa2huYmFCcEZMVnllMnVjKzdreGR1MDN4bmo0T1RRbkM3NWpuZzErY21Lc1lnVWd4Q2QKQzAzdFRZOFU5QTlkTVJrTUhpclR1VGpxSXJJQjBoWmFENHhZU01WSFlrZEh4OHNiV3JoOGwvNEM5SUIwalFQRQpXSjJvTU1PaU1qZHlIZmtIZ0tvTDh1QVV6dHpqVGZ3dlg0RUlweFBrNWx5SWdGM3k2dz09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K","service":{"name":"prometheus-operator-admission-webhook","namespace":"openshift-monitoring","path":"/admission-prometheusrules/validate","port":8443}},"failurePolicy":"Ignore","name":"prometheusrules.openshift.io","rules":[{"apiGroups":["monitoring.coreos.com"],"apiVersions":["v1"],"operations":["CREATE","UPDATE"],"resources":["prometheusrules"],"scope":"Namespaced"}],"sideEffects":"None","timeoutSeconds":5}]}
+2026-01-28T09:44:10.592669024Z I0128 09:44:10.592629       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ValidatingWebhookConfigurationUpdated' Updated ValidatingWebhookConfiguration.admissionregistration.k8s.io/prometheusrules.openshift.io because it changed
+2026-01-28T09:44:10.598992520Z I0128 09:44:10.598951       1 admissionregistration.go:144] ValidatingWebhookConfiguration "/alertmanagerconfigs.openshift.io" changes: {"webhooks":[{"admissionReviewVersions":["v1"],"clientConfig":{"caBundle":"LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJRXcwTy9pcFdJYVl3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRjMk9UVTVNall6TlRBZQpGdzB5TmpBeE1qZ3dPVE13TXpSYUZ3MHlPREF6TWpnd09UTXdNelZhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTNOamsxT1RJMk16VXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRQzZEZ0llNFg4czRKa0JKSnJSWDMzNlBpUHh5dkxGOGtLOApsWE1ISGZCbHRzQldsUEpMZ0thM0JJbDdUUTVKYktibzF3T0lwL2hJaFRRbTkvQ1ZaNndUSUh5WFNmRkFLQjZFCnZvdDJWdGxxOTZYcDZOVkxOd3BySG50cXlEbTV2OVdWZG5wY1NqNDFYZmhiYUsxOXlJR3lyRGxQSzhiUFVYSHAKdDlVbFF2c3l4bEFuK2djNVJJR2hPNUtNazdNWm0zZlVyNEJ4TjJKeWhYZW9zblpEV1EyTFY4cDZoQVphZnRTTwpGQk53ZzlvNktJM09LUDdFSWJFcEZONUFHcTVacFpqWnQ0OUlZQzRSeWcyYjBJOHRjV1c4amJsd0ZBTFlxcVJaCk1VK2VYb2V2ZlVsK2VSMC9aNHBrN0ZnQTRIMnU1U1NoYzQzeHFwbXFoVFN5NFhiVlQvU1JBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlNZd1g1WQpWVnZpb1I5OCtqbzkycVhBclR6MTZ6QWZCZ05WSFNNRUdEQVdnQlNZd1g1WVZWdmlvUjk4K2pvOTJxWEFyVHoxCjZ6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFSNlVYd0gwcmlYejRCa2lzNkNCRnZPRi9jNUxLbnFXdlR3UEYKemJqY1ZBUy9Nb0tRdVhqZVVIZXZ0dEMyR0NRSTEwbkJyYUpYUklOSGtVTzVMYVUyVWxBMVh6LzZmaGxGMkJKSwplSmtkaHF3QnFDcjlqa0hKVk1kYW5wZ25TTUNUcitDYVNUM0d3ai80TU1hSHcvRkY4bTQ3VkFkWlJnajNlY0h0CkhGeVBiR0gxb1ZiZklKa2huYmFCcEZMVnllMnVjKzdreGR1MDN4bmo0T1RRbkM3NWpuZzErY21Lc1lnVWd4Q2QKQzAzdFRZOFU5QTlkTVJrTUhpclR1VGpxSXJJQjBoWmFENHhZU01WSFlrZEh4OHNiV3JoOGwvNEM5SUIwalFQRQpXSjJvTU1PaU1qZHlIZmtIZ0tvTDh1QVV6dHpqVGZ3dlg0RUlweFBrNWx5SWdGM3k2dz09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K","service":{"name":"prometheus-operator-admission-webhook","namespace":"openshift-monitoring","path":"/admission-alertmanagerconfigs/validate","port":8443}},"failurePolicy":"Ignore","name":"alertmanagerconfigs.openshift.io","rules":[{"apiGroups":["monitoring.coreos.com"],"apiVersions":["v1alpha1"],"operations":["CREATE","UPDATE"],"resources":["alertmanagerconfigs"],"scope":"Namespaced"}],"sideEffects":"None","timeoutSeconds":5}]}
+2026-01-28T09:44:10.602849652Z I0128 09:44:10.602818       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"5ded461d-dec4-438d-9a5d-e9f8f38a7645", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ValidatingWebhookConfigurationUpdated' Updated ValidatingWebhookConfiguration.admissionregistration.k8s.io/alertmanagerconfigs.openshift.io because it changed
+2026-01-28T09:44:12.655591200Z I0128 09:44:12.655508       1 tasks.go:76] ran task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T09:44:12.655671214Z I0128 09:44:12.655657       1 tasks.go:49] processing task group 2 of 3
+2026-01-28T09:44:12.655738827Z I0128 09:44:12.655712       1 tasks.go:70] running task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T09:44:12.655796240Z I0128 09:44:12.655750       1 tasks.go:70] running task 7 of 15: UpdatingMetricsServer
+2026-01-28T09:44:12.655970689Z I0128 09:44:12.655946       1 tasks.go:70] running task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T09:44:12.656016871Z I0128 09:44:12.656003       1 tasks.go:70] running task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T09:44:12.656194760Z I0128 09:44:12.655947       1 tasks.go:70] running task 9 of 15: UpdatingThanosQuerier
+2026-01-28T09:44:12.656296855Z I0128 09:44:12.656277       1 tasks.go:70] running task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T09:44:12.657583909Z I0128 09:44:12.656590       1 tasks.go:70] running task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T09:44:12.657583909Z I0128 09:44:12.655725       1 tasks.go:70] running task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T09:44:12.657583909Z I0128 09:44:12.655715       1 tasks.go:70] running task 2 of 15: UpdatingPrometheus
+2026-01-28T09:44:12.657583909Z I0128 09:44:12.655736       1 tasks.go:70] running task 3 of 15: UpdatingAlertmanager
+2026-01-28T09:44:12.657583909Z I0128 09:44:12.655740       1 tasks.go:70] running task 4 of 15: UpdatingNodeExporter
+2026-01-28T09:44:12.657583909Z I0128 09:44:12.655732       1 tasks.go:70] running task 8 of 15: UpdatingTelemeterClient
+2026-01-28T09:44:12.657583909Z I0128 09:44:12.655744       1 tasks.go:70] running task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T09:44:12.657583909Z I0128 09:44:12.657571       1 tasks.go:70] running task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T09:44:12.660091144Z I0128 09:44:12.655747       1 tasks.go:70] running task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T09:44:12.777452806Z I0128 09:44:12.777389       1 tasks.go:76] ran task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T09:44:12.797468354Z I0128 09:44:12.796877       1 tasks.go:76] ran task 8 of 15: UpdatingTelemeterClient
+2026-01-28T09:44:12.797468354Z I0128 09:44:12.796964       1 tasks.go:76] ran task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T09:44:12.805458643Z I0128 09:44:12.805425       1 tasks.go:76] ran task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T09:44:12.855131210Z I0128 09:44:12.855091       1 tasks.go:76] ran task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T09:44:13.826058434Z I0128 09:44:13.822902       1 tasks.go:76] ran task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T09:44:13.831757608Z I0128 09:44:13.830472       1 tasks.go:76] ran task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T09:44:13.845489463Z I0128 09:44:13.845455       1 tasks.go:76] ran task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T09:44:13.848760326Z I0128 09:44:13.848734       1 tasks.go:76] ran task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T09:44:13.868246138Z I0128 09:44:13.868177       1 tasks.go:76] ran task 4 of 15: UpdatingNodeExporter
+2026-01-28T09:44:15.803713868Z I0128 09:44:15.803676       1 tasks.go:76] ran task 9 of 15: UpdatingThanosQuerier
+2026-01-28T09:44:17.839453767Z I0128 09:44:17.839413       1 tasks.go:76] ran task 7 of 15: UpdatingMetricsServer
+2026-01-28T09:44:18.713274359Z I0128 09:44:18.713211       1 tasks.go:76] ran task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T09:44:44.503171909Z I0128 09:44:44.498322       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:45:33.861004982Z I0128 09:45:33.860957       1 tasks.go:76] ran task 3 of 15: UpdatingAlertmanager
+2026-01-28T09:46:47.982082854Z I0128 09:46:47.981993       1 tasks.go:76] ran task 2 of 15: UpdatingPrometheus
+2026-01-28T09:46:47.982082854Z I0128 09:46:47.982064       1 tasks.go:49] processing task group 3 of 3
+2026-01-28T09:46:47.982082854Z I0128 09:46:47.982075       1 tasks.go:70] running task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T09:46:48.005618445Z I0128 09:46:48.005586       1 tasks.go:76] ran task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T09:46:48.005618445Z I0128 09:46:48.005612       1 operator.go:851] Updating ClusterOperator status to done.
+2026-01-28T09:46:48.026970567Z I0128 09:46:48.026930       1 operator.go:830] Updating ClusterOperator status to InProgress.
+2026-01-28T09:46:48.029092122Z I0128 09:46:48.029065       1 tasks.go:49] processing task group 1 of 3
+2026-01-28T09:46:48.029092122Z I0128 09:46:48.029087       1 tasks.go:70] running task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T09:46:48.029119654Z I0128 09:46:48.029108       1 tasks.go:70] running task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T09:46:48.037349253Z I0128 09:46:48.037321       1 tasks.go:76] ran task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T09:46:51.120885632Z I0128 09:46:51.120834       1 tasks.go:76] ran task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T09:46:51.120885632Z I0128 09:46:51.120868       1 tasks.go:49] processing task group 2 of 3
+2026-01-28T09:46:51.120956286Z I0128 09:46:51.120886       1 tasks.go:70] running task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T09:46:51.120956286Z I0128 09:46:51.120895       1 tasks.go:70] running task 7 of 15: UpdatingMetricsServer
+2026-01-28T09:46:51.121034120Z I0128 09:46:51.120988       1 tasks.go:70] running task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T09:46:51.121034120Z I0128 09:46:51.120996       1 tasks.go:70] running task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T09:46:51.121161076Z I0128 09:46:51.121141       1 tasks.go:70] running task 8 of 15: UpdatingTelemeterClient
+2026-01-28T09:46:51.121283312Z I0128 09:46:51.121253       1 tasks.go:70] running task 4 of 15: UpdatingNodeExporter
+2026-01-28T09:46:51.121316614Z I0128 09:46:51.121307       1 tasks.go:70] running task 2 of 15: UpdatingPrometheus
+2026-01-28T09:46:51.123764166Z I0128 09:46:51.121505       1 tasks.go:70] running task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T09:46:51.123764166Z I0128 09:46:51.121601       1 tasks.go:70] running task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T09:46:51.123764166Z I0128 09:46:51.121776       1 tasks.go:70] running task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T09:46:51.123764166Z I0128 09:46:51.121834       1 tasks.go:70] running task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T09:46:51.123764166Z I0128 09:46:51.122348       1 tasks.go:70] running task 9 of 15: UpdatingThanosQuerier
+2026-01-28T09:46:51.123764166Z I0128 09:46:51.122907       1 tasks.go:70] running task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T09:46:51.123764166Z I0128 09:46:51.120990       1 tasks.go:70] running task 3 of 15: UpdatingAlertmanager
+2026-01-28T09:46:51.123764166Z I0128 09:46:51.123520       1 tasks.go:70] running task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T09:46:51.173295139Z I0128 09:46:51.173168       1 tasks.go:76] ran task 8 of 15: UpdatingTelemeterClient
+2026-01-28T09:46:51.175745872Z I0128 09:46:51.175725       1 tasks.go:76] ran task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T09:46:51.186622683Z I0128 09:46:51.186589       1 tasks.go:76] ran task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T09:46:51.201435159Z I0128 09:46:51.201397       1 tasks.go:76] ran task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T09:46:51.229962209Z I0128 09:46:51.229923       1 tasks.go:76] ran task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T09:46:52.185201670Z I0128 09:46:52.185107       1 tasks.go:76] ran task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T09:46:52.220172470Z I0128 09:46:52.220117       1 tasks.go:76] ran task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T09:46:52.221947298Z I0128 09:46:52.221910       1 tasks.go:76] ran task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T09:46:52.227234801Z I0128 09:46:52.227192       1 tasks.go:76] ran task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T09:46:52.235903952Z I0128 09:46:52.235882       1 tasks.go:76] ran task 4 of 15: UpdatingNodeExporter
+2026-01-28T09:46:54.271618325Z I0128 09:46:54.271575       1 tasks.go:76] ran task 9 of 15: UpdatingThanosQuerier
+2026-01-28T09:46:54.828812274Z I0128 09:46:54.828766       1 operator.go:678] Triggering an update due to ConfigMap or Secret: kube-system/extension-apiserver-authentication
+2026-01-28T09:46:54.828947080Z I0128 09:46:54.828815       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/cluster-monitoring-config
+2026-01-28T09:46:54.829018084Z I0128 09:46:54.829003       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/alertmanager-trusted-ca-bundle
+2026-01-28T09:46:54.846425420Z I0128 09:46:54.846391       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/grpc-tls
+2026-01-28T09:46:54.846425420Z I0128 09:46:54.846414       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/metrics-server-client-certs
+2026-01-28T09:46:54.846467752Z I0128 09:46:54.846434       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/metrics-client-certs
+2026-01-28T09:46:54.846516085Z I0128 09:46:54.846496       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/federate-client-certs
+2026-01-28T09:46:54.910847915Z I0128 09:46:54.910797       1 operator.go:647] Triggering an update due to a change in *v1.Infrastructure/cluster
+2026-01-28T09:46:54.910941279Z I0128 09:46:54.910928       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:46:54.911794042Z I0128 09:46:54.911774       1 operator.go:647] Triggering an update due to a change in *v1.Console/cluster
+2026-01-28T09:46:54.911866645Z I0128 09:46:54.911854       1 operator.go:647] Triggering an update due to a change in *v1.APIServer/cluster
+2026-01-28T09:46:56.228471924Z I0128 09:46:56.228433       1 tasks.go:76] ran task 7 of 15: UpdatingMetricsServer
+2026-01-28T09:46:56.377244645Z I0128 09:46:56.377174       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-config-managed/kubelet-serving-ca
+2026-01-28T09:46:57.168726410Z I0128 09:46:57.168687       1 tasks.go:76] ran task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T09:47:02.255597620Z I0128 09:47:02.255556       1 tasks.go:76] ran task 3 of 15: UpdatingAlertmanager
+2026-01-28T09:47:06.370912672Z I0128 09:47:06.370867       1 tasks.go:76] ran task 2 of 15: UpdatingPrometheus
+2026-01-28T09:47:06.370992926Z I0128 09:47:06.370979       1 tasks.go:49] processing task group 3 of 3
+2026-01-28T09:47:06.371082691Z I0128 09:47:06.371017       1 tasks.go:70] running task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T09:47:06.397051333Z I0128 09:47:06.396991       1 tasks.go:76] ran task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T09:47:06.397085475Z I0128 09:47:06.397075       1 operator.go:851] Updating ClusterOperator status to done.
+2026-01-28T09:47:06.425899599Z I0128 09:47:06.425868       1 operator.go:830] Updating ClusterOperator status to InProgress.
+2026-01-28T09:47:06.430193753Z I0128 09:47:06.430161       1 tasks.go:49] processing task group 1 of 3
+2026-01-28T09:47:06.430232105Z I0128 09:47:06.430191       1 tasks.go:70] running task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T09:47:06.430245115Z I0128 09:47:06.430228       1 tasks.go:70] running task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T09:47:06.445855262Z I0128 09:47:06.445482       1 tasks.go:76] ran task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T09:47:09.546453471Z I0128 09:47:09.546396       1 tasks.go:76] ran task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T09:47:09.546453471Z I0128 09:47:09.546423       1 tasks.go:49] processing task group 2 of 3
+2026-01-28T09:47:09.546453471Z I0128 09:47:09.546442       1 tasks.go:70] running task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T09:47:09.546492153Z I0128 09:47:09.546461       1 tasks.go:70] running task 7 of 15: UpdatingMetricsServer
+2026-01-28T09:47:09.546492153Z I0128 09:47:09.546482       1 tasks.go:70] running task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T09:47:09.547758936Z I0128 09:47:09.546611       1 tasks.go:70] running task 8 of 15: UpdatingTelemeterClient
+2026-01-28T09:47:09.547758936Z I0128 09:47:09.546811       1 tasks.go:70] running task 4 of 15: UpdatingNodeExporter
+2026-01-28T09:47:09.547758936Z I0128 09:47:09.547062       1 tasks.go:70] running task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T09:47:09.547758936Z I0128 09:47:09.547218       1 tasks.go:70] running task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T09:47:09.547758936Z I0128 09:47:09.547282       1 tasks.go:70] running task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T09:47:09.547758936Z I0128 09:47:09.547434       1 tasks.go:70] running task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T09:47:09.547758936Z I0128 09:47:09.547634       1 tasks.go:70] running task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T09:47:09.547758936Z I0128 09:47:09.547694       1 tasks.go:70] running task 9 of 15: UpdatingThanosQuerier
+2026-01-28T09:47:09.550447060Z I0128 09:47:09.548015       1 tasks.go:70] running task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T09:47:09.550447060Z I0128 09:47:09.548104       1 tasks.go:70] running task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T09:47:09.550447060Z I0128 09:47:09.548328       1 tasks.go:70] running task 2 of 15: UpdatingPrometheus
+2026-01-28T09:47:09.550739485Z I0128 09:47:09.550711       1 tasks.go:70] running task 3 of 15: UpdatingAlertmanager
+2026-01-28T09:47:09.587833101Z I0128 09:47:09.586562       1 tasks.go:76] ran task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T09:47:09.593677562Z I0128 09:47:09.593648       1 tasks.go:76] ran task 8 of 15: UpdatingTelemeterClient
+2026-01-28T09:47:09.614864976Z I0128 09:47:09.614815       1 tasks.go:76] ran task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T09:47:09.626247673Z I0128 09:47:09.626216       1 tasks.go:76] ran task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T09:47:09.652035686Z I0128 09:47:09.651985       1 tasks.go:76] ran task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T09:47:10.601926153Z I0128 09:47:10.601870       1 tasks.go:76] ran task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T09:47:10.630212201Z I0128 09:47:10.630129       1 tasks.go:76] ran task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T09:47:10.637848351Z I0128 09:47:10.637800       1 tasks.go:76] ran task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T09:47:10.639532615Z I0128 09:47:10.639499       1 tasks.go:76] ran task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T09:47:10.661712809Z I0128 09:47:10.661685       1 tasks.go:76] ran task 4 of 15: UpdatingNodeExporter
+2026-01-28T09:47:12.677007322Z I0128 09:47:12.676966       1 tasks.go:76] ran task 9 of 15: UpdatingThanosQuerier
+2026-01-28T09:47:14.652291433Z I0128 09:47:14.652010       1 tasks.go:76] ran task 7 of 15: UpdatingMetricsServer
+2026-01-28T09:47:15.591269787Z I0128 09:47:15.591229       1 tasks.go:76] ran task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T09:47:20.673042857Z I0128 09:47:20.672977       1 tasks.go:76] ran task 3 of 15: UpdatingAlertmanager
+2026-01-28T09:47:24.793452034Z I0128 09:47:24.793412       1 tasks.go:76] ran task 2 of 15: UpdatingPrometheus
+2026-01-28T09:47:24.793491956Z I0128 09:47:24.793469       1 tasks.go:49] processing task group 3 of 3
+2026-01-28T09:47:24.793491956Z I0128 09:47:24.793479       1 tasks.go:70] running task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T09:47:24.821589214Z I0128 09:47:24.821534       1 tasks.go:76] ran task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T09:47:24.821589214Z I0128 09:47:24.821569       1 operator.go:851] Updating ClusterOperator status to done.
+2026-01-28T09:47:29.498003544Z I0128 09:47:29.497965       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:47:29.523935885Z I0128 09:47:29.523902       1 operator.go:830] Updating ClusterOperator status to InProgress.
+2026-01-28T09:47:29.528617948Z I0128 09:47:29.528582       1 tasks.go:49] processing task group 1 of 3
+2026-01-28T09:47:29.528617948Z I0128 09:47:29.528608       1 tasks.go:70] running task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T09:47:29.528650369Z I0128 09:47:29.528625       1 tasks.go:70] running task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T09:47:29.540171053Z I0128 09:47:29.539866       1 tasks.go:76] ran task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T09:47:32.656999850Z I0128 09:47:32.656950       1 tasks.go:76] ran task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T09:47:32.656999850Z I0128 09:47:32.656985       1 tasks.go:49] processing task group 2 of 3
+2026-01-28T09:47:32.657062804Z I0128 09:47:32.657010       1 tasks.go:70] running task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T09:47:32.657062804Z I0128 09:47:32.657015       1 tasks.go:70] running task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T09:47:32.657081884Z I0128 09:47:32.657073       1 tasks.go:70] running task 3 of 15: UpdatingAlertmanager
+2026-01-28T09:47:32.657122936Z I0128 09:47:32.657107       1 tasks.go:70] running task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T09:47:32.657199100Z I0128 09:47:32.657177       1 tasks.go:70] running task 4 of 15: UpdatingNodeExporter
+2026-01-28T09:47:32.657284964Z I0128 09:47:32.657264       1 tasks.go:70] running task 2 of 15: UpdatingPrometheus
+2026-01-28T09:47:32.657419181Z I0128 09:47:32.657396       1 tasks.go:70] running task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T09:47:32.657479534Z I0128 09:47:32.657443       1 tasks.go:70] running task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T09:47:32.657554218Z I0128 09:47:32.657537       1 tasks.go:70] running task 8 of 15: UpdatingTelemeterClient
+2026-01-28T09:47:32.657637122Z I0128 09:47:32.657616       1 tasks.go:70] running task 7 of 15: UpdatingMetricsServer
+2026-01-28T09:47:32.657975519Z I0128 09:47:32.657952       1 tasks.go:70] running task 9 of 15: UpdatingThanosQuerier
+2026-01-28T09:47:32.658013541Z I0128 09:47:32.657994       1 tasks.go:70] running task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T09:47:32.658134597Z I0128 09:47:32.658113       1 tasks.go:70] running task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T09:47:32.658446492Z I0128 09:47:32.658422       1 tasks.go:70] running task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T09:47:32.658726486Z I0128 09:47:32.658685       1 tasks.go:70] running task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T09:47:32.707709513Z I0128 09:47:32.707665       1 tasks.go:76] ran task 8 of 15: UpdatingTelemeterClient
+2026-01-28T09:47:32.711182776Z I0128 09:47:32.711159       1 tasks.go:76] ran task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T09:47:32.751366925Z I0128 09:47:32.751339       1 tasks.go:76] ran task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T09:47:32.753230288Z I0128 09:47:32.753204       1 tasks.go:76] ran task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T09:47:32.773386491Z I0128 09:47:32.773363       1 tasks.go:76] ran task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T09:47:33.722489680Z I0128 09:47:33.722347       1 tasks.go:76] ran task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T09:47:33.764578874Z I0128 09:47:33.764510       1 tasks.go:76] ran task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T09:47:33.780398621Z I0128 09:47:33.780363       1 tasks.go:76] ran task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T09:47:33.781272395Z I0128 09:47:33.781251       1 tasks.go:76] ran task 4 of 15: UpdatingNodeExporter
+2026-01-28T09:47:33.791639131Z I0128 09:47:33.791604       1 tasks.go:76] ran task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T09:47:35.789305397Z I0128 09:47:35.789256       1 tasks.go:76] ran task 9 of 15: UpdatingThanosQuerier
+2026-01-28T09:47:37.768743762Z I0128 09:47:37.768698       1 tasks.go:76] ran task 7 of 15: UpdatingMetricsServer
+2026-01-28T09:47:38.721361197Z I0128 09:47:38.721324       1 tasks.go:76] ran task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T09:47:43.783284912Z I0128 09:47:43.783247       1 tasks.go:76] ran task 3 of 15: UpdatingAlertmanager
+2026-01-28T09:47:47.973593084Z I0128 09:47:47.973535       1 tasks.go:76] ran task 2 of 15: UpdatingPrometheus
+2026-01-28T09:47:47.973593084Z I0128 09:47:47.973571       1 tasks.go:49] processing task group 3 of 3
+2026-01-28T09:47:47.973640046Z I0128 09:47:47.973584       1 tasks.go:70] running task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T09:47:48.000360457Z I0128 09:47:48.000333       1 tasks.go:76] ran task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T09:47:48.000394268Z I0128 09:47:48.000367       1 operator.go:851] Updating ClusterOperator status to done.
+2026-01-28T09:47:52.988443529Z I0128 09:47:52.988397       1 reflector.go:376] Caches populated for *v1.AlertingRule from github.com/openshift/cluster-monitoring-operator/pkg/alert/rule_controller.go:118
+2026-01-28T09:48:45.321361278Z I0128 09:48:45.321313       1 reflector.go:376] Caches populated for *v1.AlertRelabelConfig from github.com/openshift/cluster-monitoring-operator/pkg/alert/relabel_controller.go:121
+2026-01-28T09:50:27.850761650Z I0128 09:50:27.850726       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:50:27.865529547Z I0128 09:50:27.865493       1 operator.go:647] Triggering an update due to a change in *v1.APIServer/cluster
+2026-01-28T09:50:27.910814987Z I0128 09:50:27.910778       1 operator.go:647] Triggering an update due to a change in *v1.Infrastructure/cluster
+2026-01-28T09:50:28.045217053Z I0128 09:50:28.045164       1 operator.go:830] Updating ClusterOperator status to InProgress.
+2026-01-28T09:50:28.048366828Z I0128 09:50:28.048337       1 tasks.go:49] processing task group 1 of 3
+2026-01-28T09:50:28.048395610Z I0128 09:50:28.048363       1 tasks.go:70] running task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T09:50:28.048395610Z I0128 09:50:28.048376       1 tasks.go:70] running task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T09:50:28.058058135Z I0128 09:50:28.057712       1 tasks.go:76] ran task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T09:50:31.179281853Z I0128 09:50:31.179243       1 tasks.go:76] ran task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T09:50:31.179348507Z I0128 09:50:31.179337       1 tasks.go:49] processing task group 2 of 3
+2026-01-28T09:50:31.179410410Z I0128 09:50:31.179399       1 tasks.go:70] running task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T09:50:31.180282962Z I0128 09:50:31.180264       1 tasks.go:70] running task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T09:50:31.180644750Z I0128 09:50:31.180334       1 tasks.go:70] running task 4 of 15: UpdatingNodeExporter
+2026-01-28T09:50:31.180987437Z I0128 09:50:31.180338       1 tasks.go:70] running task 2 of 15: UpdatingPrometheus
+2026-01-28T09:50:31.181241730Z I0128 09:50:31.180343       1 tasks.go:70] running task 3 of 15: UpdatingAlertmanager
+2026-01-28T09:50:31.181490262Z I0128 09:50:31.180350       1 tasks.go:70] running task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T09:50:31.181639469Z I0128 09:50:31.180352       1 tasks.go:70] running task 9 of 15: UpdatingThanosQuerier
+2026-01-28T09:50:31.182070601Z I0128 09:50:31.180355       1 tasks.go:70] running task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T09:50:31.183194386Z I0128 09:50:31.180361       1 tasks.go:70] running task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T09:50:31.183572044Z I0128 09:50:31.180364       1 tasks.go:70] running task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T09:50:31.184372484Z I0128 09:50:31.180370       1 tasks.go:70] running task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T09:50:31.184581734Z I0128 09:50:31.180373       1 tasks.go:70] running task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T09:50:31.184783594Z I0128 09:50:31.180379       1 tasks.go:70] running task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T09:50:31.184989944Z I0128 09:50:31.180394       1 tasks.go:70] running task 7 of 15: UpdatingMetricsServer
+2026-01-28T09:50:31.185335731Z I0128 09:50:31.180419       1 tasks.go:70] running task 8 of 15: UpdatingTelemeterClient
+2026-01-28T09:50:31.261200086Z I0128 09:50:31.261157       1 tasks.go:76] ran task 8 of 15: UpdatingTelemeterClient
+2026-01-28T09:50:31.263799614Z I0128 09:50:31.263781       1 tasks.go:76] ran task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T09:50:31.280676495Z I0128 09:50:31.280636       1 tasks.go:76] ran task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T09:50:31.298177077Z I0128 09:50:31.295949       1 tasks.go:76] ran task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T09:50:31.332651184Z I0128 09:50:31.332401       1 tasks.go:76] ran task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T09:50:32.259904272Z I0128 09:50:32.259861       1 tasks.go:76] ran task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T09:50:32.267848894Z I0128 09:50:32.267799       1 tasks.go:76] ran task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T09:50:32.274849178Z I0128 09:50:32.274829       1 tasks.go:76] ran task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T09:50:32.292146450Z I0128 09:50:32.292122       1 tasks.go:76] ran task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T09:50:32.312296132Z I0128 09:50:32.312261       1 tasks.go:76] ran task 4 of 15: UpdatingNodeExporter
+2026-01-28T09:50:34.305413065Z I0128 09:50:34.305374       1 tasks.go:76] ran task 9 of 15: UpdatingThanosQuerier
+2026-01-28T09:50:36.315150150Z I0128 09:50:36.315101       1 tasks.go:76] ran task 7 of 15: UpdatingMetricsServer
+2026-01-28T09:50:37.226691255Z I0128 09:50:37.226655       1 tasks.go:76] ran task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T09:50:42.328285107Z I0128 09:50:42.327389       1 tasks.go:76] ran task 3 of 15: UpdatingAlertmanager
+2026-01-28T09:50:46.461251811Z I0128 09:50:46.461208       1 tasks.go:76] ran task 2 of 15: UpdatingPrometheus
+2026-01-28T09:50:46.461251811Z I0128 09:50:46.461239       1 tasks.go:49] processing task group 3 of 3
+2026-01-28T09:50:46.461293173Z I0128 09:50:46.461249       1 tasks.go:70] running task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T09:50:46.486296174Z I0128 09:50:46.486232       1 tasks.go:76] ran task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T09:50:46.486296174Z I0128 09:50:46.486280       1 operator.go:851] Updating ClusterOperator status to done.
+2026-01-28T09:50:46.512103335Z I0128 09:50:46.512073       1 operator.go:830] Updating ClusterOperator status to InProgress.
+2026-01-28T09:50:46.515577298Z I0128 09:50:46.515553       1 tasks.go:49] processing task group 1 of 3
+2026-01-28T09:50:46.515607649Z I0128 09:50:46.515576       1 tasks.go:70] running task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T09:50:46.515607649Z I0128 09:50:46.515590       1 tasks.go:70] running task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T09:50:46.525100530Z I0128 09:50:46.524992       1 tasks.go:76] ran task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T09:50:49.608485816Z I0128 09:50:49.608431       1 tasks.go:76] ran task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T09:50:49.608485816Z I0128 09:50:49.608460       1 tasks.go:49] processing task group 2 of 3
+2026-01-28T09:50:49.608541189Z I0128 09:50:49.608481       1 tasks.go:70] running task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T09:50:49.608541189Z I0128 09:50:49.608491       1 tasks.go:70] running task 7 of 15: UpdatingMetricsServer
+2026-01-28T09:50:49.608586921Z I0128 09:50:49.608556       1 tasks.go:70] running task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T09:50:49.608821193Z I0128 09:50:49.608796       1 tasks.go:70] running task 4 of 15: UpdatingNodeExporter
+2026-01-28T09:50:49.608901147Z I0128 09:50:49.608882       1 tasks.go:70] running task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T09:50:49.609134029Z I0128 09:50:49.609087       1 tasks.go:70] running task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T09:50:49.609244514Z I0128 09:50:49.609182       1 tasks.go:70] running task 8 of 15: UpdatingTelemeterClient
+2026-01-28T09:50:49.609323188Z I0128 09:50:49.609306       1 tasks.go:70] running task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T09:50:49.609422153Z I0128 09:50:49.609401       1 tasks.go:70] running task 3 of 15: UpdatingAlertmanager
+2026-01-28T09:50:49.609480636Z I0128 09:50:49.609459       1 tasks.go:70] running task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T09:50:49.609582681Z I0128 09:50:49.609564       1 tasks.go:70] running task 9 of 15: UpdatingThanosQuerier
+2026-01-28T09:50:49.609633733Z I0128 09:50:49.609610       1 tasks.go:70] running task 2 of 15: UpdatingPrometheus
+2026-01-28T09:50:49.609959110Z I0128 09:50:49.609935       1 tasks.go:70] running task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T09:50:49.610126048Z I0128 09:50:49.610107       1 tasks.go:70] running task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T09:50:49.610249484Z I0128 09:50:49.610225       1 tasks.go:70] running task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T09:50:49.670245242Z I0128 09:50:49.670185       1 tasks.go:76] ran task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T09:50:49.674283672Z I0128 09:50:49.673764       1 tasks.go:76] ran task 8 of 15: UpdatingTelemeterClient
+2026-01-28T09:50:49.688481847Z I0128 09:50:49.688433       1 tasks.go:76] ran task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T09:50:49.715990482Z I0128 09:50:49.715937       1 tasks.go:76] ran task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T09:50:49.749121397Z I0128 09:50:49.749075       1 tasks.go:76] ran task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T09:50:50.986412299Z I0128 09:50:50.986356       1 tasks.go:76] ran task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T09:50:51.032098321Z I0128 09:50:51.031922       1 tasks.go:76] ran task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T09:50:51.040139319Z I0128 09:50:51.040100       1 tasks.go:76] ran task 4 of 15: UpdatingNodeExporter
+2026-01-28T09:50:51.055268548Z I0128 09:50:51.053113       1 tasks.go:76] ran task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T09:50:51.112755595Z I0128 09:50:51.112694       1 tasks.go:76] ran task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T09:50:53.096184677Z I0128 09:50:53.096138       1 tasks.go:76] ran task 9 of 15: UpdatingThanosQuerier
+2026-01-28T09:50:55.039837110Z I0128 09:50:55.039742       1 tasks.go:76] ran task 7 of 15: UpdatingMetricsServer
+2026-01-28T09:50:55.652666365Z I0128 09:50:55.652623       1 tasks.go:76] ran task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T09:51:01.125889369Z I0128 09:51:01.125851       1 tasks.go:76] ran task 3 of 15: UpdatingAlertmanager
+2026-01-28T09:51:05.102179951Z I0128 09:51:05.102140       1 tasks.go:76] ran task 2 of 15: UpdatingPrometheus
+2026-01-28T09:51:05.102179951Z I0128 09:51:05.102171       1 tasks.go:49] processing task group 3 of 3
+2026-01-28T09:51:05.102227053Z I0128 09:51:05.102184       1 tasks.go:70] running task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T09:51:05.132422588Z I0128 09:51:05.132373       1 tasks.go:76] ran task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T09:51:05.132471041Z I0128 09:51:05.132418       1 operator.go:851] Updating ClusterOperator status to done.
+2026-01-28T09:54:59.499685030Z I0128 09:54:59.499632       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T09:54:59.524740543Z I0128 09:54:59.524693       1 operator.go:830] Updating ClusterOperator status to InProgress.
+2026-01-28T09:54:59.531434675Z I0128 09:54:59.531405       1 tasks.go:49] processing task group 1 of 3
+2026-01-28T09:54:59.531526200Z I0128 09:54:59.531511       1 tasks.go:70] running task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T09:54:59.531832335Z I0128 09:54:59.531815       1 tasks.go:70] running task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T09:54:59.548860969Z I0128 09:54:59.548823       1 tasks.go:76] ran task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T09:55:02.624192010Z I0128 09:55:02.624149       1 tasks.go:76] ran task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T09:55:02.624192010Z I0128 09:55:02.624178       1 tasks.go:49] processing task group 2 of 3
+2026-01-28T09:55:02.624232182Z I0128 09:55:02.624202       1 tasks.go:70] running task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T09:55:02.624232182Z I0128 09:55:02.624212       1 tasks.go:70] running task 7 of 15: UpdatingMetricsServer
+2026-01-28T09:55:02.624269194Z I0128 09:55:02.624244       1 tasks.go:70] running task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T09:55:02.624474744Z I0128 09:55:02.624456       1 tasks.go:70] running task 8 of 15: UpdatingTelemeterClient
+2026-01-28T09:55:02.624607040Z I0128 09:55:02.624584       1 tasks.go:70] running task 4 of 15: UpdatingNodeExporter
+2026-01-28T09:55:02.624945517Z I0128 09:55:02.624922       1 tasks.go:70] running task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T09:55:02.625148837Z I0128 09:55:02.625124       1 tasks.go:70] running task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T09:55:02.625199240Z I0128 09:55:02.625178       1 tasks.go:70] running task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T09:55:02.625381729Z I0128 09:55:02.625360       1 tasks.go:70] running task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T09:55:02.625594359Z I0128 09:55:02.625574       1 tasks.go:70] running task 2 of 15: UpdatingPrometheus
+2026-01-28T09:55:02.625756957Z I0128 09:55:02.625732       1 tasks.go:70] running task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T09:55:02.627932075Z I0128 09:55:02.625859       1 tasks.go:70] running task 9 of 15: UpdatingThanosQuerier
+2026-01-28T09:55:02.627932075Z I0128 09:55:02.626085       1 tasks.go:70] running task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T09:55:02.633570035Z I0128 09:55:02.626095       1 tasks.go:70] running task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T09:55:02.633570035Z I0128 09:55:02.626520       1 tasks.go:70] running task 3 of 15: UpdatingAlertmanager
+2026-01-28T09:55:02.666425135Z I0128 09:55:02.666343       1 tasks.go:76] ran task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T09:55:02.678792768Z I0128 09:55:02.678755       1 tasks.go:76] ran task 8 of 15: UpdatingTelemeterClient
+2026-01-28T09:55:02.690694118Z I0128 09:55:02.690537       1 tasks.go:76] ran task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T09:55:02.706965886Z I0128 09:55:02.706924       1 tasks.go:76] ran task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T09:55:02.727923555Z I0128 09:55:02.727886       1 tasks.go:76] ran task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T09:55:03.686103106Z I0128 09:55:03.686010       1 tasks.go:76] ran task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T09:55:03.696094261Z I0128 09:55:03.695995       1 tasks.go:76] ran task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T09:55:03.699828686Z I0128 09:55:03.699688       1 tasks.go:76] ran task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T09:55:03.711683724Z I0128 09:55:03.711638       1 tasks.go:76] ran task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T09:55:03.745286741Z I0128 09:55:03.745242       1 tasks.go:76] ran task 4 of 15: UpdatingNodeExporter
+2026-01-28T09:55:05.726733460Z I0128 09:55:05.726690       1 tasks.go:76] ran task 9 of 15: UpdatingThanosQuerier
+2026-01-28T09:55:07.714751234Z I0128 09:55:07.714706       1 tasks.go:76] ran task 7 of 15: UpdatingMetricsServer
+2026-01-28T09:55:08.669567279Z I0128 09:55:08.669513       1 tasks.go:76] ran task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T09:55:13.750540786Z I0128 09:55:13.750475       1 tasks.go:76] ran task 3 of 15: UpdatingAlertmanager
+2026-01-28T09:55:17.849540868Z I0128 09:55:17.849494       1 tasks.go:76] ran task 2 of 15: UpdatingPrometheus
+2026-01-28T09:55:17.849540868Z I0128 09:55:17.849521       1 tasks.go:49] processing task group 3 of 3
+2026-01-28T09:55:17.849540868Z I0128 09:55:17.849529       1 tasks.go:70] running task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T09:55:17.873442822Z I0128 09:55:17.873412       1 tasks.go:76] ran task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T09:55:17.873488885Z I0128 09:55:17.873447       1 operator.go:851] Updating ClusterOperator status to done.
+2026-01-28T10:01:54.829873605Z I0128 10:01:54.829786       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/alertmanager-trusted-ca-bundle
+2026-01-28T10:01:54.829873605Z I0128 10:01:54.829796       1 operator.go:678] Triggering an update due to ConfigMap or Secret: kube-system/extension-apiserver-authentication
+2026-01-28T10:01:54.829873605Z I0128 10:01:54.829846       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/cluster-monitoring-config
+2026-01-28T10:01:54.846359687Z I0128 10:01:54.846310       1 operator.go:830] Updating ClusterOperator status to InProgress.
+2026-01-28T10:01:54.846568817Z I0128 10:01:54.846518       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/federate-client-certs
+2026-01-28T10:01:54.846568817Z I0128 10:01:54.846549       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/grpc-tls
+2026-01-28T10:01:54.846568817Z I0128 10:01:54.846559       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/metrics-server-client-certs
+2026-01-28T10:01:54.846635111Z I0128 10:01:54.846594       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/metrics-client-certs
+2026-01-28T10:01:54.848733305Z I0128 10:01:54.848708       1 tasks.go:49] processing task group 1 of 3
+2026-01-28T10:01:54.848759827Z I0128 10:01:54.848735       1 tasks.go:70] running task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T10:01:54.848759827Z I0128 10:01:54.848751       1 tasks.go:70] running task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T10:01:54.856144475Z I0128 10:01:54.856106       1 tasks.go:76] ran task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T10:01:54.911580848Z I0128 10:01:54.911541       1 operator.go:647] Triggering an update due to a change in *v1.Infrastructure/cluster
+2026-01-28T10:01:54.911657832Z I0128 10:01:54.911559       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T10:01:54.911874372Z I0128 10:01:54.911845       1 operator.go:647] Triggering an update due to a change in *v1.Console/cluster
+2026-01-28T10:01:54.911903704Z I0128 10:01:54.911875       1 operator.go:647] Triggering an update due to a change in *v1.APIServer/cluster
+2026-01-28T10:01:56.378366043Z I0128 10:01:56.378299       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-config-managed/kubelet-serving-ca
+2026-01-28T10:01:57.924738326Z I0128 10:01:57.924694       1 tasks.go:76] ran task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T10:01:57.924738326Z I0128 10:01:57.924720       1 tasks.go:49] processing task group 2 of 3
+2026-01-28T10:01:57.924793599Z I0128 10:01:57.924747       1 tasks.go:70] running task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T10:01:57.924793599Z I0128 10:01:57.924755       1 tasks.go:70] running task 9 of 15: UpdatingThanosQuerier
+2026-01-28T10:01:57.924793599Z I0128 10:01:57.924763       1 tasks.go:70] running task 8 of 15: UpdatingTelemeterClient
+2026-01-28T10:01:57.926537585Z I0128 10:01:57.924749       1 tasks.go:70] running task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T10:01:57.926537585Z I0128 10:01:57.925212       1 tasks.go:70] running task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T10:01:57.926537585Z I0128 10:01:57.925886       1 tasks.go:70] running task 4 of 15: UpdatingNodeExporter
+2026-01-28T10:01:57.926537585Z I0128 10:01:57.926268       1 tasks.go:70] running task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T10:01:57.926537585Z I0128 10:01:57.926287       1 tasks.go:70] running task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T10:01:57.926537585Z I0128 10:01:57.926508       1 tasks.go:70] running task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T10:01:57.926642811Z I0128 10:01:57.926617       1 tasks.go:70] running task 7 of 15: UpdatingMetricsServer
+2026-01-28T10:01:57.926762587Z I0128 10:01:57.926727       1 tasks.go:70] running task 2 of 15: UpdatingPrometheus
+2026-01-28T10:01:57.926930775Z I0128 10:01:57.926906       1 tasks.go:70] running task 3 of 15: UpdatingAlertmanager
+2026-01-28T10:01:57.926987578Z I0128 10:01:57.926961       1 tasks.go:70] running task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T10:01:57.927092333Z I0128 10:01:57.927040       1 tasks.go:70] running task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T10:01:57.927329245Z I0128 10:01:57.927305       1 tasks.go:70] running task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T10:01:57.985439251Z I0128 10:01:57.985285       1 tasks.go:76] ran task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T10:01:57.989133195Z I0128 10:01:57.988526       1 tasks.go:76] ran task 8 of 15: UpdatingTelemeterClient
+2026-01-28T10:01:58.002437819Z I0128 10:01:58.002398       1 tasks.go:76] ran task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T10:01:58.011204865Z I0128 10:01:58.011171       1 tasks.go:76] ran task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T10:01:58.041785320Z I0128 10:01:58.041750       1 tasks.go:76] ran task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T10:01:59.005132294Z I0128 10:01:59.005073       1 tasks.go:76] ran task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T10:01:59.024542311Z I0128 10:01:59.024500       1 tasks.go:76] ran task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T10:01:59.034824554Z I0128 10:01:59.034777       1 tasks.go:76] ran task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T10:01:59.035611933Z I0128 10:01:59.035549       1 tasks.go:76] ran task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T10:01:59.046380810Z I0128 10:01:59.046352       1 tasks.go:76] ran task 4 of 15: UpdatingNodeExporter
+2026-01-28T10:02:01.059239842Z I0128 10:02:01.059192       1 tasks.go:76] ran task 9 of 15: UpdatingThanosQuerier
+2026-01-28T10:02:03.033861269Z I0128 10:02:03.033794       1 tasks.go:76] ran task 7 of 15: UpdatingMetricsServer
+2026-01-28T10:02:03.971584295Z I0128 10:02:03.971539       1 tasks.go:76] ran task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T10:02:09.119132528Z I0128 10:02:09.119075       1 tasks.go:76] ran task 3 of 15: UpdatingAlertmanager
+2026-01-28T10:02:13.165574565Z I0128 10:02:13.165536       1 tasks.go:76] ran task 2 of 15: UpdatingPrometheus
+2026-01-28T10:02:13.165574565Z I0128 10:02:13.165565       1 tasks.go:49] processing task group 3 of 3
+2026-01-28T10:02:13.165619358Z I0128 10:02:13.165577       1 tasks.go:70] running task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T10:02:13.190597302Z I0128 10:02:13.190551       1 tasks.go:76] ran task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T10:02:13.190597302Z I0128 10:02:13.190583       1 operator.go:851] Updating ClusterOperator status to done.
+2026-01-28T10:02:13.210798778Z I0128 10:02:13.210761       1 operator.go:830] Updating ClusterOperator status to InProgress.
+2026-01-28T10:02:13.213123524Z I0128 10:02:13.213077       1 tasks.go:49] processing task group 1 of 3
+2026-01-28T10:02:13.213123524Z I0128 10:02:13.213101       1 tasks.go:70] running task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T10:02:13.213150146Z I0128 10:02:13.213116       1 tasks.go:70] running task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T10:02:13.219222128Z I0128 10:02:13.219195       1 tasks.go:76] ran task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T10:02:16.292453959Z I0128 10:02:16.292407       1 tasks.go:76] ran task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T10:02:16.292453959Z I0128 10:02:16.292432       1 tasks.go:49] processing task group 2 of 3
+2026-01-28T10:02:16.292507562Z I0128 10:02:16.292450       1 tasks.go:70] running task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T10:02:16.292507562Z I0128 10:02:16.292460       1 tasks.go:70] running task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T10:02:16.292507562Z I0128 10:02:16.292496       1 tasks.go:70] running task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T10:02:16.293483611Z I0128 10:02:16.292557       1 tasks.go:70] running task 8 of 15: UpdatingTelemeterClient
+2026-01-28T10:02:16.293483611Z I0128 10:02:16.292657       1 tasks.go:70] running task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T10:02:16.293483611Z I0128 10:02:16.292866       1 tasks.go:70] running task 2 of 15: UpdatingPrometheus
+2026-01-28T10:02:16.293483611Z I0128 10:02:16.293059       1 tasks.go:70] running task 3 of 15: UpdatingAlertmanager
+2026-01-28T10:02:16.293483611Z I0128 10:02:16.293153       1 tasks.go:70] running task 4 of 15: UpdatingNodeExporter
+2026-01-28T10:02:16.293483611Z I0128 10:02:16.293346       1 tasks.go:70] running task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T10:02:16.293483611Z I0128 10:02:16.293472       1 tasks.go:70] running task 7 of 15: UpdatingMetricsServer
+2026-01-28T10:02:16.293650119Z I0128 10:02:16.293634       1 tasks.go:70] running task 9 of 15: UpdatingThanosQuerier
+2026-01-28T10:02:16.293818587Z I0128 10:02:16.293796       1 tasks.go:70] running task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T10:02:16.293967145Z I0128 10:02:16.293946       1 tasks.go:70] running task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T10:02:16.294174445Z I0128 10:02:16.294156       1 tasks.go:70] running task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T10:02:16.294264259Z I0128 10:02:16.294250       1 tasks.go:70] running task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T10:02:16.332839101Z I0128 10:02:16.332796       1 tasks.go:76] ran task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T10:02:16.340478232Z I0128 10:02:16.340405       1 tasks.go:76] ran task 8 of 15: UpdatingTelemeterClient
+2026-01-28T10:02:16.358531321Z I0128 10:02:16.358483       1 tasks.go:76] ran task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T10:02:16.372431094Z I0128 10:02:16.372381       1 tasks.go:76] ran task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T10:02:16.400393757Z I0128 10:02:16.400357       1 tasks.go:76] ran task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T10:02:17.343729575Z I0128 10:02:17.343680       1 tasks.go:76] ran task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T10:02:17.362834047Z I0128 10:02:17.362514       1 tasks.go:76] ran task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T10:02:17.377047025Z I0128 10:02:17.376985       1 tasks.go:76] ran task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T10:02:17.377215023Z I0128 10:02:17.377194       1 tasks.go:76] ran task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T10:02:17.398746806Z I0128 10:02:17.398706       1 tasks.go:76] ran task 4 of 15: UpdatingNodeExporter
+2026-01-28T10:02:19.388397442Z I0128 10:02:19.388351       1 tasks.go:76] ran task 9 of 15: UpdatingThanosQuerier
+2026-01-28T10:02:21.395372751Z I0128 10:02:21.395318       1 tasks.go:76] ran task 7 of 15: UpdatingMetricsServer
+2026-01-28T10:02:22.328610846Z I0128 10:02:22.328556       1 tasks.go:76] ran task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T10:02:27.393568247Z I0128 10:02:27.392960       1 tasks.go:76] ran task 3 of 15: UpdatingAlertmanager
+2026-01-28T10:02:31.512876965Z I0128 10:02:31.512835       1 tasks.go:76] ran task 2 of 15: UpdatingPrometheus
+2026-01-28T10:02:31.512932058Z I0128 10:02:31.512872       1 tasks.go:49] processing task group 3 of 3
+2026-01-28T10:02:31.512932058Z I0128 10:02:31.512886       1 tasks.go:70] running task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T10:02:31.537690458Z I0128 10:02:31.537656       1 tasks.go:76] ran task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T10:02:31.537728899Z I0128 10:02:31.537693       1 operator.go:851] Updating ClusterOperator status to done.
+2026-01-28T10:16:54.830392128Z I0128 10:16:54.830275       1 operator.go:678] Triggering an update due to ConfigMap or Secret: kube-system/extension-apiserver-authentication
+2026-01-28T10:16:54.830392128Z I0128 10:16:54.830301       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/cluster-monitoring-config
+2026-01-28T10:16:54.830392128Z I0128 10:16:54.830319       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/alertmanager-trusted-ca-bundle
+2026-01-28T10:16:54.845460870Z I0128 10:16:54.845426       1 operator.go:830] Updating ClusterOperator status to InProgress.
+2026-01-28T10:16:54.847728752Z I0128 10:16:54.847695       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/federate-client-certs
+2026-01-28T10:16:54.847798866Z I0128 10:16:54.847788       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/grpc-tls
+2026-01-28T10:16:54.847810547Z I0128 10:16:54.847797       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/metrics-server-client-certs
+2026-01-28T10:16:54.847825217Z I0128 10:16:54.847816       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-monitoring/metrics-client-certs
+2026-01-28T10:16:54.847864359Z I0128 10:16:54.847844       1 tasks.go:49] processing task group 1 of 3
+2026-01-28T10:16:54.847945323Z I0128 10:16:54.847913       1 tasks.go:70] running task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T10:16:54.848066229Z I0128 10:16:54.847999       1 tasks.go:70] running task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T10:16:54.856010315Z I0128 10:16:54.855982       1 tasks.go:76] ran task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T10:16:54.912305310Z I0128 10:16:54.912255       1 operator.go:647] Triggering an update due to a change in *v1.Infrastructure/cluster
+2026-01-28T10:16:54.912305310Z I0128 10:16:54.912276       1 operator.go:647] Triggering an update due to a change in *v1.ClusterVersion/version
+2026-01-28T10:16:54.912305310Z I0128 10:16:54.912293       1 operator.go:647] Triggering an update due to a change in *v1.Console/cluster
+2026-01-28T10:16:54.912350143Z I0128 10:16:54.912302       1 operator.go:647] Triggering an update due to a change in *v1.APIServer/cluster
+2026-01-28T10:16:56.379374888Z I0128 10:16:56.379305       1 operator.go:678] Triggering an update due to ConfigMap or Secret: openshift-config-managed/kubelet-serving-ca
+2026-01-28T10:16:57.930851771Z I0128 10:16:57.930807       1 tasks.go:76] ran task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T10:16:57.930851771Z I0128 10:16:57.930838       1 tasks.go:49] processing task group 2 of 3
+2026-01-28T10:16:57.930892093Z I0128 10:16:57.930871       1 tasks.go:70] running task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T10:16:57.930931535Z I0128 10:16:57.930907       1 tasks.go:70] running task 7 of 15: UpdatingMetricsServer
+2026-01-28T10:16:57.931329525Z I0128 10:16:57.931309       1 tasks.go:70] running task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T10:16:57.933092493Z I0128 10:16:57.931504       1 tasks.go:70] running task 2 of 15: UpdatingPrometheus
+2026-01-28T10:16:57.933092493Z I0128 10:16:57.931688       1 tasks.go:70] running task 3 of 15: UpdatingAlertmanager
+2026-01-28T10:16:57.933092493Z I0128 10:16:57.931728       1 tasks.go:70] running task 8 of 15: UpdatingTelemeterClient
+2026-01-28T10:16:57.933092493Z I0128 10:16:57.931791       1 tasks.go:70] running task 4 of 15: UpdatingNodeExporter
+2026-01-28T10:16:57.933092493Z I0128 10:16:57.932127       1 tasks.go:70] running task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T10:16:57.933092493Z I0128 10:16:57.932316       1 tasks.go:70] running task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T10:16:57.933092493Z I0128 10:16:57.932472       1 tasks.go:70] running task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T10:16:57.933092493Z I0128 10:16:57.932657       1 tasks.go:70] running task 9 of 15: UpdatingThanosQuerier
+2026-01-28T10:16:57.933092493Z I0128 10:16:57.932768       1 tasks.go:70] running task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T10:16:57.933134065Z I0128 10:16:57.933113       1 tasks.go:70] running task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T10:16:57.934523214Z I0128 10:16:57.933704       1 tasks.go:70] running task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T10:16:57.934523214Z I0128 10:16:57.934117       1 tasks.go:70] running task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T10:16:57.988964777Z I0128 10:16:57.988913       1 tasks.go:76] ran task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T10:16:57.991578937Z I0128 10:16:57.991539       1 tasks.go:76] ran task 8 of 15: UpdatingTelemeterClient
+2026-01-28T10:16:57.999329043Z I0128 10:16:57.998730       1 tasks.go:76] ran task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T10:16:58.016482048Z I0128 10:16:58.016447       1 tasks.go:76] ran task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T10:16:58.038174909Z I0128 10:16:58.038149       1 tasks.go:76] ran task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T10:16:59.008913289Z I0128 10:16:59.008862       1 tasks.go:76] ran task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T10:16:59.009297748Z I0128 10:16:59.009267       1 tasks.go:76] ran task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T10:16:59.027602300Z I0128 10:16:59.027540       1 tasks.go:76] ran task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T10:16:59.028292495Z I0128 10:16:59.028272       1 tasks.go:76] ran task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T10:16:59.045178716Z I0128 10:16:59.044973       1 tasks.go:76] ran task 4 of 15: UpdatingNodeExporter
+2026-01-28T10:17:01.050485973Z I0128 10:17:01.050444       1 tasks.go:76] ran task 9 of 15: UpdatingThanosQuerier
+2026-01-28T10:17:03.029866551Z I0128 10:17:03.029821       1 tasks.go:76] ran task 7 of 15: UpdatingMetricsServer
+2026-01-28T10:17:03.984613263Z I0128 10:17:03.984561       1 tasks.go:76] ran task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T10:17:09.044825815Z I0128 10:17:09.044771       1 tasks.go:76] ran task 3 of 15: UpdatingAlertmanager
+2026-01-28T10:17:13.135090637Z I0128 10:17:13.135040       1 tasks.go:76] ran task 2 of 15: UpdatingPrometheus
+2026-01-28T10:17:13.135090637Z I0128 10:17:13.135073       1 tasks.go:49] processing task group 3 of 3
+2026-01-28T10:17:13.135090637Z I0128 10:17:13.135082       1 tasks.go:70] running task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T10:17:13.160813009Z I0128 10:17:13.160772       1 tasks.go:76] ran task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T10:17:13.160813009Z I0128 10:17:13.160802       1 operator.go:851] Updating ClusterOperator status to done.
+2026-01-28T10:17:13.177624086Z I0128 10:17:13.177594       1 operator.go:830] Updating ClusterOperator status to InProgress.
+2026-01-28T10:17:13.179891749Z I0128 10:17:13.179867       1 tasks.go:49] processing task group 1 of 3
+2026-01-28T10:17:13.179921040Z I0128 10:17:13.179889       1 tasks.go:70] running task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T10:17:13.179921040Z I0128 10:17:13.179905       1 tasks.go:70] running task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T10:17:13.185401243Z I0128 10:17:13.185371       1 tasks.go:76] ran task 1 of 2: UpdatingMetricsScrapingClientCA
+2026-01-28T10:17:16.257631156Z I0128 10:17:16.257585       1 tasks.go:76] ran task 2 of 2: UpdatingPrometheusOperator
+2026-01-28T10:17:16.257631156Z I0128 10:17:16.257612       1 tasks.go:49] processing task group 2 of 3
+2026-01-28T10:17:16.257680278Z I0128 10:17:16.257634       1 tasks.go:70] running task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T10:17:16.257680278Z I0128 10:17:16.257649       1 tasks.go:70] running task 9 of 15: UpdatingThanosQuerier
+2026-01-28T10:17:16.257680278Z I0128 10:17:16.257655       1 tasks.go:70] running task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T10:17:16.257889349Z I0128 10:17:16.257868       1 tasks.go:70] running task 2 of 15: UpdatingPrometheus
+2026-01-28T10:17:16.258093849Z I0128 10:17:16.258074       1 tasks.go:70] running task 3 of 15: UpdatingAlertmanager
+2026-01-28T10:17:16.258145181Z I0128 10:17:16.258125       1 tasks.go:70] running task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T10:17:16.258266587Z I0128 10:17:16.258107       1 tasks.go:70] running task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T10:17:16.258442466Z I0128 10:17:16.258415       1 tasks.go:70] running task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T10:17:16.258505209Z I0128 10:17:16.258112       1 tasks.go:70] running task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T10:17:16.258640146Z I0128 10:17:16.258117       1 tasks.go:70] running task 7 of 15: UpdatingMetricsServer
+2026-01-28T10:17:16.258747811Z I0128 10:17:16.258724       1 tasks.go:70] running task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T10:17:16.258934531Z I0128 10:17:16.258907       1 tasks.go:70] running task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T10:17:16.259108180Z I0128 10:17:16.258997       1 tasks.go:70] running task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T10:17:16.259232746Z I0128 10:17:16.258120       1 tasks.go:70] running task 8 of 15: UpdatingTelemeterClient
+2026-01-28T10:17:16.259371553Z I0128 10:17:16.257649       1 tasks.go:70] running task 4 of 15: UpdatingNodeExporter
+2026-01-28T10:17:16.309216876Z I0128 10:17:16.308926       1 tasks.go:76] ran task 12 of 15: UpdatingUserWorkloadPrometheusOperator
+2026-01-28T10:17:16.312885799Z I0128 10:17:16.312818       1 tasks.go:76] ran task 8 of 15: UpdatingTelemeterClient
+2026-01-28T10:17:16.320150681Z I0128 10:17:16.320113       1 tasks.go:76] ran task 14 of 15: UpdatingUserWorkloadAlertmanager
+2026-01-28T10:17:16.335801451Z I0128 10:17:16.335764       1 tasks.go:76] ran task 10 of 15: UpdatingControlPlaneComponents
+2026-01-28T10:17:16.358299862Z I0128 10:17:16.358258       1 tasks.go:76] ran task 1 of 15: UpdatingClusterMonitoringOperatorDeps
+2026-01-28T10:17:17.316187962Z I0128 10:17:17.315936       1 tasks.go:76] ran task 6 of 15: UpdatingOpenshiftStateMetrics
+2026-01-28T10:17:17.354987886Z I0128 10:17:17.354517       1 tasks.go:76] ran task 13 of 15: UpdatingUserWorkloadPrometheus
+2026-01-28T10:17:17.406448050Z I0128 10:17:17.406388       1 tasks.go:76] ran task 15 of 15: UpdatingUserWorkloadThanosRuler
+2026-01-28T10:17:17.443676595Z I0128 10:17:17.441431       1 tasks.go:76] ran task 5 of 15: UpdatingKubeStateMetrics
+2026-01-28T10:17:17.454098625Z I0128 10:17:17.450793       1 tasks.go:76] ran task 4 of 15: UpdatingNodeExporter
+2026-01-28T10:17:19.384395609Z I0128 10:17:19.384342       1 tasks.go:76] ran task 9 of 15: UpdatingThanosQuerier
+2026-01-28T10:17:21.381758885Z I0128 10:17:21.381718       1 tasks.go:76] ran task 7 of 15: UpdatingMetricsServer
+2026-01-28T10:17:22.306550396Z I0128 10:17:22.306509       1 tasks.go:76] ran task 11 of 15: UpdatingConsolePluginComponents
+2026-01-28T10:17:27.474187324Z I0128 10:17:27.474140       1 tasks.go:76] ran task 3 of 15: UpdatingAlertmanager
+2026-01-28T10:17:31.511783197Z I0128 10:17:31.511735       1 tasks.go:76] ran task 2 of 15: UpdatingPrometheus
+2026-01-28T10:17:31.511783197Z I0128 10:17:31.511765       1 tasks.go:49] processing task group 3 of 3
+2026-01-28T10:17:31.511783197Z I0128 10:17:31.511776       1 tasks.go:70] running task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T10:17:31.534807436Z I0128 10:17:31.534767       1 tasks.go:76] ran task 1 of 1: UpdatingConfigurationSharing
+2026-01-28T10:17:31.534807436Z I0128 10:17:31.534801       1 operator.go:851] Updating ClusterOperator status to done.

@@ -1,0 +1,412 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:36Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: service-ca-59d858b8c5-jkhh8
+    namespace: openshift-service-ca
+    resourceVersion: "6223"
+    uid: 94b0fbe4-ae2c-4b08-91a9-130e5661f72a
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:36Z"
+  message: Successfully assigned openshift-service-ca/service-ca-59d858b8c5-jkhh8
+    to ip-10-0-102-200.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:30:36Z"
+    name: service-ca-59d858b8c5-jkhh8.188edb2089e9f4cd
+    namespace: openshift-service-ca
+    resourceVersion: "6231"
+    uid: ee0c20ee-5e0c-45d7-a070-1627a2a72388
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:36Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: service-ca-59d858b8c5-jkhh8
+    namespace: openshift-service-ca
+    resourceVersion: "6235"
+    uid: 94b0fbe4-ae2c-4b08-91a9-130e5661f72a
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:36Z"
+  message: Add eth0 [10.129.0.6/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2026-01-28T09:30:36Z"
+    name: service-ca-59d858b8c5-jkhh8.188edb20a25f1270
+    namespace: openshift-service-ca
+    resourceVersion: "6256"
+    uid: 92ed0a86-0c09-432a-8732-8db9835ae156
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{service-ca-controller}
+    kind: Pod
+    name: service-ca-59d858b8c5-jkhh8
+    namespace: openshift-service-ca
+    resourceVersion: "6226"
+    uid: 94b0fbe4-ae2c-4b08-91a9-130e5661f72a
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:36Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:c38fdb4e629c6abe3ec3202c84381d0d383cb706b82d485867e518bf96d2ae1e"
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:36Z"
+    name: service-ca-59d858b8c5-jkhh8.188edb20a35d9c7f
+    namespace: openshift-service-ca
+    resourceVersion: "6259"
+    uid: 468ad08e-e2ed-48ae-9c75-de1b5829bf69
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:38Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{service-ca-controller}
+    kind: Pod
+    name: service-ca-59d858b8c5-jkhh8
+    namespace: openshift-service-ca
+    resourceVersion: "6226"
+    uid: 94b0fbe4-ae2c-4b08-91a9-130e5661f72a
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:38Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:c38fdb4e629c6abe3ec3202c84381d0d383cb706b82d485867e518bf96d2ae1e"
+    in 2.124s (2.124s including waiting). Image size: 520154559 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:38Z"
+    name: service-ca-59d858b8c5-jkhh8.188edb2121fe810e
+    namespace: openshift-service-ca
+    resourceVersion: "6381"
+    uid: eafaebc0-8ddc-47ed-a212-d8bec5385aa5
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:39Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{service-ca-controller}
+    kind: Pod
+    name: service-ca-59d858b8c5-jkhh8
+    namespace: openshift-service-ca
+    resourceVersion: "6226"
+    uid: 94b0fbe4-ae2c-4b08-91a9-130e5661f72a
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:39Z"
+  message: 'Created container: service-ca-controller'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:39Z"
+    name: service-ca-59d858b8c5-jkhh8.188edb212540d231
+    namespace: openshift-service-ca
+    resourceVersion: "6386"
+    uid: 4e1c286a-412f-4215-b9ac-6d2e5c26aa49
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:39Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{service-ca-controller}
+    kind: Pod
+    name: service-ca-59d858b8c5-jkhh8
+    namespace: openshift-service-ca
+    resourceVersion: "6226"
+    uid: 94b0fbe4-ae2c-4b08-91a9-130e5661f72a
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:39Z"
+  message: Started container service-ca-controller
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:39Z"
+    name: service-ca-59d858b8c5-jkhh8.188edb2125aca1b4
+    namespace: openshift-service-ca
+    resourceVersion: "6387"
+    uid: 2785bd23-5f52-4cdc-b7a3-69e1c7133ca5
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:36Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: service-ca-59d858b8c5
+    namespace: openshift-service-ca
+    resourceVersion: "6219"
+    uid: e1d91c10-86fe-484c-a682-ab6b74e478fc
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:36Z"
+  message: 'Created pod: service-ca-59d858b8c5-jkhh8'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:30:36Z"
+    name: service-ca-59d858b8c5.188edb20899f4321
+    namespace: openshift-service-ca
+    resourceVersion: "6227"
+    uid: 08c1f7fd-9ea4-4a6f-a99c-4d60372e4705
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:40Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: service-ca-controller-lock
+    namespace: openshift-service-ca
+    resourceVersion: "6449"
+    uid: 29c96c46-1159-4369-89f2-1aac3934b439
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:40Z"
+  message: service-ca-59d858b8c5-jkhh8_f3b13465-ec18-42f3-8f8b-10af91b19bd7 became
+    leader
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:30:40Z"
+    name: service-ca-controller-lock.188edb2160d8861e
+    namespace: openshift-service-ca
+    resourceVersion: "6450"
+    uid: 1988c1f8-9cd0-47f4-838c-55226c672fd2
+  reason: LeaderElection
+  reportingComponent: service-ca-controller
+  reportingInstance: ""
+  source:
+    component: service-ca-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:36Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca
+    namespace: openshift-service-ca
+    resourceVersion: "6217"
+    uid: c015a8a3-1fd7-46e4-9446-e95b41f831dc
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:36Z"
+  message: Scaled up replica set service-ca-59d858b8c5 from 0 to 1
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:30:36Z"
+    name: service-ca.188edb2088ffd72a
+    namespace: openshift-service-ca
+    resourceVersion: "6221"
+    uid: e32e8c02-7008-4067-b5e8-8d94e07ba186
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "35170"

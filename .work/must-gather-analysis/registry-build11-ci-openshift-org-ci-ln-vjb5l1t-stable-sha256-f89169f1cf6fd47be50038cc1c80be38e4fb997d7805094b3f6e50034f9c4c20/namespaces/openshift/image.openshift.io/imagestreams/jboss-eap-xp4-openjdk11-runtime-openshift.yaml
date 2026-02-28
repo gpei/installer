@@ -1,0 +1,115 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/display-name: JBoss EAP XP 4.0 with OpenJDK11 (Runtime Image)
+    openshift.io/provider-display-name: Red Hat
+    samples.operator.openshift.io/version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+    version: "4.0"
+  creationTimestamp: "2026-01-28T09:42:08Z"
+  generation: 1
+  labels:
+    samples.operator.openshift.io/managed: "true"
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/display-name: {}
+          f:openshift.io/provider-display-name: {}
+          f:samples.operator.openshift.io/version: {}
+          f:version: {}
+        f:labels:
+          .: {}
+          f:samples.operator.openshift.io/managed: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"4.0"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:supports: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"latest"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:supports: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-samples-operator
+    operation: Update
+    time: "2026-01-28T09:42:08Z"
+  name: jboss-eap-xp4-openjdk11-runtime-openshift
+  namespace: openshift
+  resourceVersion: "20571"
+  uid: 097ec3c4-37d8-4f07-b8f3-ac8f87d516b9
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations:
+      description: Runtime image for JBoss EAP expansion pack 4.0 to run Microservices
+        applications on RHEL8 with OpenJDK11.
+      iconClass: icon-eap
+      openshift.io/display-name: JBoss EAP XP 4.0 with OpenJDK11 (Runtime Image)
+      supports: eap-xp:4,javaee:8,java:11
+      tags: runtime,eap-xp,javaee,java,jboss,hidden
+      version: "4.0"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/jboss-eap-7/eap-xp4-openjdk11-runtime-openshift-rhel8:4.0
+    generation: 1
+    importPolicy:
+      importMode: Legacy
+    name: "4.0"
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Runtime image for JBoss EAP expansion pack 4.0 to run Microservices
+        applications on RHEL8 with OpenJDK11.
+      iconClass: icon-eap
+      openshift.io/display-name: JBoss EAP XP 4.0 with OpenJDK11 (Runtime Image)
+      supports: eap-xp:4,javaee:8,java:11
+      tags: runtime,eap-xp,javaee,java,jboss,hidden
+      version: latest
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/jboss-eap-7/eap-xp4-openjdk11-runtime-openshift-rhel8:latest
+    generation: 1
+    importPolicy:
+      importMode: Legacy
+    name: latest
+    referencePolicy:
+      type: Local
+status:
+  dockerImageRepository: image-registry.openshift-image-registry.svc:5000/openshift/jboss-eap-xp4-openjdk11-runtime-openshift

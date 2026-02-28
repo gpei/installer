@@ -1,0 +1,55 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  creationTimestamp: "2026-01-28T09:42:42Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/component: controller
+    app.kubernetes.io/managed-by: cluster-monitoring-operator
+    app.kubernetes.io/name: prometheus-operator
+    app.kubernetes.io/part-of: openshift-monitoring
+    app.kubernetes.io/version: 0.85.0
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+      f:spec:
+        .: {}
+        f:endpoints: {}
+        f:namespaceSelector: {}
+        f:scrapeClass: {}
+        f:selector: {}
+    manager: operator
+    operation: Update
+    time: "2026-01-28T09:42:42Z"
+  name: prometheus-operator
+  namespace: openshift-monitoring
+  resourceVersion: "21590"
+  uid: 090c9319-afdd-4507-9eff-fd0256ec8ce0
+spec:
+  endpoints:
+  - honorLabels: true
+    port: https
+    scheme: https
+    tlsConfig:
+      ca: {}
+      cert: {}
+      insecureSkipVerify: false
+      serverName: prometheus-operator.openshift-monitoring.svc
+  namespaceSelector: {}
+  scrapeClass: tls-client-certificate-auth
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/name: prometheus-operator
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 0.85.0

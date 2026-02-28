@@ -1,0 +1,92 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  annotations:
+    capability.openshift.io/name: ImageRegistry
+    include.release.openshift.io/hypershift: "true"
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2026-01-28T09:42:27Z"
+  generation: 1
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/hypershift: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec:
+        .: {}
+        f:groups:
+          .: {}
+          k:{"name":"pvc-problem-detector.rules"}:
+            .: {}
+            f:name: {}
+            f:rules: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:42:27Z"
+  name: image-registry-operator-alerts
+  namespace: openshift-image-registry
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "21128"
+  uid: 4fc19eab-a902-4474-a85c-ef9d9671f1d6
+spec:
+  groups:
+  - name: pvc-problem-detector.rules
+    rules:
+    - alert: ImageRegistryStorageReadOnly
+      annotations:
+        description: The image registry storage is read-only. Read-only storage affects
+          direct pushes to the image registry, and pull-through proxy caching. In
+          the case of pull-through proxy caching, read-only storage is particularly
+          important because without it the image registry won't be actually caching
+          anything. Please verify your backing storage solution and make sure the
+          volume mounted on the image-registry pods is writable to avoid potential
+          outages.
+        message: The image registry storage is read-only and no images will be committed
+          to storage.
+        runbook_url: https://github.com/openshift/runbooks/blob/master/alerts/cluster-image-registry-operator/ImageRegistryStorageReadOnly.md
+        summary: The image registry storage is read-only and no images will be committed
+          to storage.
+      expr: sum without(instance, pod, operation) (rate(imageregistry_storage_errors_total{code="READ_ONLY_FILESYSTEM"}[5m]))
+        > 0
+      for: 10m
+      labels:
+        kubernetes_operator_part_of: image-registry
+        severity: warning
+    - alert: ImageRegistryStorageFull
+      annotations:
+        description: The image registry storage disk is full. A full disk affects
+          direct pushes to the image registry, and pull-through proxy caching. In
+          the case of pull-through proxy caching, disk space is particularly important
+          because without it the image registry won't be actually caching anything.
+          Please verify your backing storage solution and make sure the volume mounted
+          on the image-registry pods have enough free disk space to avoid potential
+          outages.
+        message: The image registry storage disk is full and no images will be committed
+          to storage.
+        runbook_url: https://github.com/openshift/runbooks/blob/master/alerts/cluster-image-registry-operator/ImageRegistryStorageFull.md
+        summary: The image registry storage disk is full and no images will be committed
+          to storage.
+      expr: sum without(instance, pod, operation) (rate(imageregistry_storage_errors_total{code="DEVICE_OUT_OF_SPACE"}[5m]))
+        > 0
+      for: 10m
+      labels:
+        kubernetes_operator_part_of: image-registry
+        severity: warning

@@ -1,0 +1,729 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    imageregistry.operator.openshift.io/dependencies-checksum: sha256:2a04e53c684934a703ffe0888f9f2ca32a4e097f909a997e345d567b7d216151
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.2.8/23"],"mac_address":"0a:58:0a:80:02:08","gateway_ips":["10.128.2.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.128.2.1"},{"dest":"172.30.0.0/16","nextHop":"10.128.2.1"},{"dest":"169.254.0.5/32","nextHop":"10.128.2.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.2.1"}],"ip_address":"10.128.2.8/23","gateway_ip":"10.128.2.1","role":"primary"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.2.8"
+          ],
+          "mac": "0a:58:0a:80:02:08",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/required-scc: restricted-v2
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    security.openshift.io/validated-scc-subject-type: user
+  creationTimestamp: "2026-01-28T09:41:57Z"
+  generateName: image-registry-68cdbcc958-
+  generation: 1
+  labels:
+    docker-registry: default
+    pod-template-hash: 68cdbcc958
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:imageregistry.operator.openshift.io/dependencies-checksum: {}
+          f:openshift.io/required-scc: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:docker-registry: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"2f93ca4e-93bf-42f2-84e1-1cd24eb1fba8"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:podAntiAffinity:
+            .: {}
+            f:requiredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"registry"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"REGISTRY_HEALTH_STORAGEDRIVER_ENABLED"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REGISTRY_HEALTH_STORAGEDRIVER_INTERVAL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REGISTRY_HEALTH_STORAGEDRIVER_THRESHOLD"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REGISTRY_HTTP_ADDR"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REGISTRY_HTTP_NET"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REGISTRY_HTTP_SECRET"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REGISTRY_HTTP_TLS_CERTIFICATE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REGISTRY_HTTP_TLS_KEY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REGISTRY_LOG_LEVEL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REGISTRY_OPENSHIFT_METRICS_ENABLED"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REGISTRY_OPENSHIFT_QUOTA_ENABLED"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REGISTRY_OPENSHIFT_SERVER_ADDR"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REGISTRY_STORAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REGISTRY_STORAGE_CACHE_BLOBDESCRIPTOR"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REGISTRY_STORAGE_DELETE_ENABLED"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REGISTRY_STORAGE_S3_BUCKET"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REGISTRY_STORAGE_S3_CREDENTIALSCONFIGPATH"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REGISTRY_STORAGE_S3_ENCRYPT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REGISTRY_STORAGE_S3_FORCEPATHSTYLE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REGISTRY_STORAGE_S3_REGION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REGISTRY_STORAGE_S3_USEDUALSTACK"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:lifecycle:
+              .: {}
+              f:preStop:
+                .: {}
+                f:exec:
+                  .: {}
+                  f:command: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":5000,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:readOnlyRootFilesystem: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/pki/ca-trust/extracted"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/pki/ca-trust/source/anchors"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/secrets"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/usr/share/pki/ca-trust-source"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/lib/kubelet/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/secrets/cloud"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/var/run/secrets/openshift/serviceaccount"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:fsGroup: {}
+          f:fsGroupChangePolicy: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:topologySpreadConstraints:
+          .: {}
+          k:{"topologyKey":"kubernetes.io/hostname","whenUnsatisfiable":"DoNotSchedule"}:
+            .: {}
+            f:labelSelector: {}
+            f:maxSkew: {}
+            f:topologyKey: {}
+            f:whenUnsatisfiable: {}
+          k:{"topologyKey":"node-role.kubernetes.io/worker","whenUnsatisfiable":"DoNotSchedule"}:
+            .: {}
+            f:labelSelector: {}
+            f:maxSkew: {}
+            f:topologyKey: {}
+            f:whenUnsatisfiable: {}
+          k:{"topologyKey":"topology.kubernetes.io/zone","whenUnsatisfiable":"DoNotSchedule"}:
+            .: {}
+            f:labelSelector: {}
+            f:maxSkew: {}
+            f:topologyKey: {}
+            f:whenUnsatisfiable: {}
+        f:volumes:
+          .: {}
+          k:{"name":"bound-sa-token"}:
+            .: {}
+            f:name: {}
+            f:projected:
+              .: {}
+              f:defaultMode: {}
+              f:sources: {}
+          k:{"name":"ca-trust-extracted"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+          k:{"name":"image-registry-private-configuration"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:optional: {}
+              f:secretName: {}
+          k:{"name":"installation-pull-secrets"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:optional: {}
+              f:secretName: {}
+          k:{"name":"registry-certificates"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"registry-tls"}:
+            .: {}
+            f:name: {}
+            f:projected:
+              .: {}
+              f:defaultMode: {}
+              f:sources: {}
+          k:{"name":"trusted-ca"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:name: {}
+              f:optional: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2026-01-28T09:41:57Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:41:57Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ip-10-0-101-165
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:42:30Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:42:31Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.2.8"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:42:52Z"
+  name: image-registry-68cdbcc958-rntrp
+  namespace: openshift-image-registry
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: image-registry-68cdbcc958
+    uid: 2f93ca4e-93bf-42f2-84e1-1cd24eb1fba8
+  resourceVersion: "22417"
+  uid: af084b07-7a06-42b9-b86c-dd69401ef6bd
+spec:
+  affinity:
+    podAntiAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchLabels:
+            docker-registry: default
+        namespaces:
+        - openshift-image-registry
+        topologyKey: kubernetes.io/hostname
+  containers:
+  - command:
+    - /bin/sh
+    - -c
+    - mkdir -p /etc/pki/ca-trust/extracted/edk2 /etc/pki/ca-trust/extracted/java /etc/pki/ca-trust/extracted/openssl
+      /etc/pki/ca-trust/extracted/pem && update-ca-trust extract --output /etc/pki/ca-trust/extracted/
+      && exec /usr/bin/dockerregistry
+    env:
+    - name: REGISTRY_STORAGE
+      value: s3
+    - name: REGISTRY_STORAGE_S3_BUCKET
+      value: ci-ln-vjb5l1t-76ef8-snmcd-image-registry-us-west-1-pcrcwvniufb
+    - name: REGISTRY_STORAGE_S3_REGION
+      value: us-west-1
+    - name: REGISTRY_STORAGE_S3_ENCRYPT
+      value: "true"
+    - name: REGISTRY_STORAGE_S3_FORCEPATHSTYLE
+      value: "true"
+    - name: REGISTRY_STORAGE_S3_CREDENTIALSCONFIGPATH
+      value: /var/run/secrets/cloud/credentials
+    - name: REGISTRY_STORAGE_S3_USEDUALSTACK
+      value: "true"
+    - name: REGISTRY_HTTP_ADDR
+      value: :5000
+    - name: REGISTRY_HTTP_NET
+      value: tcp
+    - name: REGISTRY_HTTP_SECRET
+      value: 6d4ea963a10841e1ff63910f5810b686396808d7812c9e293848e46f3b2ddb9b7be495831ef1a576aff78d008228cc9e378fdf39b29e6c56c032d06b5b50fc49
+    - name: REGISTRY_LOG_LEVEL
+      value: info
+    - name: REGISTRY_OPENSHIFT_QUOTA_ENABLED
+      value: "true"
+    - name: REGISTRY_STORAGE_CACHE_BLOBDESCRIPTOR
+      value: inmemory
+    - name: REGISTRY_STORAGE_DELETE_ENABLED
+      value: "true"
+    - name: REGISTRY_HEALTH_STORAGEDRIVER_ENABLED
+      value: "true"
+    - name: REGISTRY_HEALTH_STORAGEDRIVER_INTERVAL
+      value: 10s
+    - name: REGISTRY_HEALTH_STORAGEDRIVER_THRESHOLD
+      value: "1"
+    - name: REGISTRY_OPENSHIFT_METRICS_ENABLED
+      value: "true"
+    - name: REGISTRY_OPENSHIFT_SERVER_ADDR
+      value: image-registry.openshift-image-registry.svc:5000
+    - name: REGISTRY_HTTP_TLS_CERTIFICATE
+      value: /etc/secrets/tls.crt
+    - name: REGISTRY_HTTP_TLS_KEY
+      value: /etc/secrets/tls.key
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:794f3e12469556df772c9409466e331e5cc6e2a58248ac68657575d78fec847f
+    imagePullPolicy: IfNotPresent
+    lifecycle:
+      preStop:
+        exec:
+          command:
+          - sleep
+          - "25"
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: 5000
+        scheme: HTTPS
+      initialDelaySeconds: 5
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    name: registry
+    ports:
+    - containerPort: 5000
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: 5000
+        scheme: HTTPS
+      initialDelaySeconds: 15
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    resources:
+      requests:
+        cpu: 100m
+        memory: 256Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      readOnlyRootFilesystem: true
+      runAsNonRoot: true
+      runAsUser: 1000310000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/secrets/cloud
+      name: image-registry-private-configuration
+      readOnly: true
+    - mountPath: /etc/secrets
+      name: registry-tls
+    - mountPath: /etc/pki/ca-trust/extracted
+      name: ca-trust-extracted
+    - mountPath: /etc/pki/ca-trust/source/anchors
+      name: registry-certificates
+    - mountPath: /usr/share/pki/ca-trust-source
+      name: trusted-ca
+    - mountPath: /var/lib/kubelet/
+      name: installation-pull-secrets
+    - mountPath: /var/run/secrets/openshift/serviceaccount
+      name: bound-sa-token
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-qrttk
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: ip-10-0-101-165.us-west-1.compute.internal
+  nodeSelector:
+    kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000310000
+    fsGroupChangePolicy: OnRootMismatch
+    seLinuxOptions:
+      level: s0:c18,c2
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: registry
+  serviceAccountName: registry
+  terminationGracePeriodSeconds: 55
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  topologySpreadConstraints:
+  - labelSelector:
+      matchLabels:
+        docker-registry: default
+    maxSkew: 1
+    topologyKey: kubernetes.io/hostname
+    whenUnsatisfiable: DoNotSchedule
+  - labelSelector:
+      matchLabels:
+        docker-registry: default
+    maxSkew: 1
+    topologyKey: node-role.kubernetes.io/worker
+    whenUnsatisfiable: DoNotSchedule
+  - labelSelector:
+      matchLabels:
+        docker-registry: default
+    maxSkew: 1
+    topologyKey: topology.kubernetes.io/zone
+    whenUnsatisfiable: DoNotSchedule
+  volumes:
+  - name: image-registry-private-configuration
+    secret:
+      defaultMode: 420
+      optional: false
+      secretName: image-registry-private-configuration
+  - name: registry-tls
+    projected:
+      defaultMode: 420
+      sources:
+      - secret:
+          name: image-registry-tls
+  - emptyDir: {}
+    name: ca-trust-extracted
+  - configMap:
+      defaultMode: 420
+      name: image-registry-certificates
+    name: registry-certificates
+  - configMap:
+      defaultMode: 420
+      items:
+      - key: ca-bundle.crt
+        path: anchors/ca-bundle.crt
+      name: trusted-ca
+      optional: true
+    name: trusted-ca
+  - name: installation-pull-secrets
+    secret:
+      defaultMode: 420
+      items:
+      - key: .dockerconfigjson
+        path: config.json
+      optional: true
+      secretName: installation-pull-secrets
+  - name: bound-sa-token
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          audience: openshift
+          expirationSeconds: 3600
+          path: token
+  - name: kube-api-access-qrttk
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:42:31Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:42:30Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:42:52Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:42:52Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:42:30Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - allocatedResources:
+      cpu: 100m
+      memory: 256Mi
+    containerID: cri-o://5b923c69e08589392c6f493020ca75d1ee6b5aad524c9997244b7b714e085da2
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:794f3e12469556df772c9409466e331e5cc6e2a58248ac68657575d78fec847f
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:794f3e12469556df772c9409466e331e5cc6e2a58248ac68657575d78fec847f
+    lastState: {}
+    name: registry
+    ready: true
+    resources:
+      requests:
+        cpu: 100m
+        memory: 256Mi
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2026-01-28T09:42:31Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        - 1000310000
+        uid: 1000310000
+    volumeMounts:
+    - mountPath: /var/run/secrets/cloud
+      name: image-registry-private-configuration
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /etc/secrets
+      name: registry-tls
+    - mountPath: /etc/pki/ca-trust/extracted
+      name: ca-trust-extracted
+    - mountPath: /etc/pki/ca-trust/source/anchors
+      name: registry-certificates
+    - mountPath: /usr/share/pki/ca-trust-source
+      name: trusted-ca
+    - mountPath: /var/lib/kubelet/
+      name: installation-pull-secrets
+    - mountPath: /var/run/secrets/openshift/serviceaccount
+      name: bound-sa-token
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-qrttk
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 10.0.101.165
+  hostIPs:
+  - ip: 10.0.101.165
+  phase: Running
+  podIP: 10.128.2.8
+  podIPs:
+  - ip: 10.128.2.8
+  qosClass: Burstable
+  startTime: "2026-01-28T09:42:30Z"

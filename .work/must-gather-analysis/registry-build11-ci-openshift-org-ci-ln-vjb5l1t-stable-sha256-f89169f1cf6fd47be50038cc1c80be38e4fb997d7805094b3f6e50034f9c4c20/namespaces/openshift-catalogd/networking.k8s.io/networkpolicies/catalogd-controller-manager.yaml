@@ -1,0 +1,39 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  creationTimestamp: "2026-01-28T09:31:11Z"
+  generation: 1
+  managedFields:
+  - apiVersion: networking.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:egress: {}
+        f:ingress: {}
+        f:podSelector: {}
+        f:policyTypes: {}
+    manager: cluster-olm-operator
+    operation: Update
+    time: "2026-01-28T09:31:11Z"
+  name: catalogd-controller-manager
+  namespace: openshift-catalogd
+  resourceVersion: "8415"
+  uid: 11e9a6f8-dc96-4dda-beb4-dbf97888d485
+spec:
+  egress:
+  - {}
+  ingress:
+  - ports:
+    - port: 7443
+      protocol: TCP
+    - port: 8443
+      protocol: TCP
+    - port: 9443
+      protocol: TCP
+  podSelector:
+    matchLabels:
+      control-plane: catalogd-controller-manager
+  policyTypes:
+  - Ingress
+  - Egress

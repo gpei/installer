@@ -1,0 +1,108 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    capability.openshift.io/name: OperatorLifecycleManager
+    include.release.openshift.io/hypershift: "true"
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+  creationTimestamp: "2026-01-28T09:25:40Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/hypershift: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:25:40Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+        f:relatedObjects: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:25:41Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Upgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:versions: {}
+    manager: olm
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:31:57Z"
+  name: operator-lifecycle-manager
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "10198"
+  uid: 02a31bba-7f06-42bf-b08e-95ac43e548b7
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:31:57Z"
+    message: Deployed 4.20.0-202601161812.p2.g0d95a7e.assembly.stream.el9-0d95a7e
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2026-01-28T09:31:57Z"
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2026-01-28T09:31:57Z"
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2026-01-28T09:31:57Z"
+    status: "True"
+    type: Upgradeable
+  extension: null
+  relatedObjects:
+  - group: operators.coreos.com
+    name: packageserver
+    namespace: openshift-operator-lifecycle-manager
+    resource: clusterserviceversions
+  versions:
+  - name: operator
+    version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+  - name: operator-lifecycle-manager
+    version: 4.20.0-202601161812.p2.g0d95a7e.assembly.stream.el9-0d95a7e

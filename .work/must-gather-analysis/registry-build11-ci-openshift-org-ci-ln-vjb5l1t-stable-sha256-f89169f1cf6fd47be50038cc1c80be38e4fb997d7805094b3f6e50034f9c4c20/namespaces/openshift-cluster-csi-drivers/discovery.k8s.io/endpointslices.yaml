@@ -1,0 +1,96 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.0.14
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-3-203.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: aws-ebs-csi-driver-controller-5cbc97cfdb-pct52
+      namespace: openshift-cluster-csi-drivers
+      uid: a42ac734-4359-4bff-9838-cddee313d9bd
+    zone: us-west-1a
+  - addresses:
+    - 10.130.0.49
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-108-54.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: aws-ebs-csi-driver-controller-5cbc97cfdb-cf4f6
+      namespace: openshift-cluster-csi-drivers
+      uid: 46c9914e-ca62-407a-876b-0ad029b0285f
+    zone: us-west-1c
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:33:01Z"
+    creationTimestamp: "2026-01-28T09:31:12Z"
+    generateName: aws-ebs-csi-driver-controller-metrics-
+    generation: 11
+    labels:
+      app: aws-ebs-csi-driver-controller-metrics
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: aws-ebs-csi-driver-controller-metrics
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f2752d39-1c69-469e-bb41-9144ac7ec4ee"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:33:01Z"
+    name: aws-ebs-csi-driver-controller-metrics-flc29
+    namespace: openshift-cluster-csi-drivers
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: aws-ebs-csi-driver-controller-metrics
+      uid: f2752d39-1c69-469e-bb41-9144ac7ec4ee
+    resourceVersion: "12441"
+    uid: bb9b51fd-1e1b-4a50-8137-1d11d54a31d5
+  ports:
+  - name: attacher-m
+    port: 9203
+    protocol: TCP
+  - name: snapshotter-m
+    port: 9205
+    protocol: TCP
+  - name: provisioner-m
+    port: 9202
+    protocol: TCP
+  - name: driver-m
+    port: 9201
+    protocol: TCP
+  - name: resizer-m
+    port: 9204
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "35173"

@@ -1,0 +1,25 @@
+2026-01-28T09:29:59.621127335Z + [[ -f /env/_master ]]
+2026-01-28T09:29:59.621127335Z + . /ovnkube-lib/ovnkube-lib.sh
+2026-01-28T09:29:59.621194366Z ++ set -x
+2026-01-28T09:29:59.621194366Z ++ K8S_NODE=
+2026-01-28T09:29:59.621234367Z ++ [[ -n '' ]]
+2026-01-28T09:29:59.621234367Z ++ northd_pidfile=/var/run/ovn/ovn-northd.pid
+2026-01-28T09:29:59.621247157Z ++ controller_pidfile=/var/run/ovn/ovn-controller.pid
+2026-01-28T09:29:59.621247157Z ++ controller_logfile=/var/log/ovn/acl-audit-log.log
+2026-01-28T09:29:59.621257748Z ++ vswitch_dbsock=/var/run/openvswitch/db.sock
+2026-01-28T09:29:59.621257748Z ++ nbdb_pidfile=/var/run/ovn/ovnnb_db.pid
+2026-01-28T09:29:59.621267648Z ++ nbdb_sock=/var/run/ovn/ovnnb_db.sock
+2026-01-28T09:29:59.621277198Z ++ nbdb_ctl=/var/run/ovn/ovnnb_db.ctl
+2026-01-28T09:29:59.621277198Z ++ sbdb_pidfile=/var/run/ovn/ovnsb_db.pid
+2026-01-28T09:29:59.621287069Z ++ sbdb_sock=/var/run/ovn/ovnsb_db.sock
+2026-01-28T09:29:59.621287069Z ++ sbdb_ctl=/var/run/ovn/ovnsb_db.ctl
+2026-01-28T09:29:59.622292921Z + trap quit-sbdb TERM INT
+2026-01-28T09:29:59.622312042Z + start-sbdb info
+2026-01-28T09:29:59.622312042Z + local log_level=info
+2026-01-28T09:29:59.622324662Z + [[ 1 -ne 1 ]]
+2026-01-28T09:29:59.622516226Z + wait 3785
+2026-01-28T09:29:59.622622779Z + exec /usr/share/ovn/scripts/ovn-ctl --no-monitor --db-sb-sock=/var/run/ovn/ovnsb_db.sock '--ovn-sb-log=-vconsole:info -vfile:off -vPATTERN:console:%D{%Y-%m-%dT%H:%M:%S.###Z}|%05N|%c%T|%p|%m' run_sb_ovsdb
+2026-01-28T09:29:59.692728449Z 2026-01-28T09:29:59.692Z|00001|vlog|INFO|opened log file /var/log/ovn/ovsdb-server-sb.log
+2026-01-28T09:29:59.703486143Z 2026-01-28T09:29:59.703Z|00002|ovsdb_server|INFO|ovsdb-server (Open vSwitch) 3.5.2-51.el9fdp
+2026-01-28T09:30:09.706339739Z 2026-01-28T09:30:09.706Z|00003|memory|INFO|15760 kB peak resident set size after 10.0 seconds
+2026-01-28T09:30:09.706567404Z 2026-01-28T09:30:09.706Z|00004|memory|INFO|atoms:12240 cells:11801 json-caches:2 monitors:5 n-weak-refs:82 sessions:3

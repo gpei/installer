@@ -1,0 +1,175 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    capability.openshift.io/name: Storage
+    include.release.openshift.io/hypershift: "true"
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2026-01-28T09:25:40Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/hypershift: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:25:40Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:25:40Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"EvaluationConditionsDetected"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Upgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: cluster-storage-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:42:21Z"
+  name: storage
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "20988"
+  uid: 3e2ef87e-1c12-4632-8288-c613e92bf1b5
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:31:05Z"
+    message: 'AWSEBSCSIDriverOperatorCRDegraded: All is well'
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2026-01-28T09:42:21Z"
+    message: |-
+      VolumeDataSourceValidatorDeploymentControllerProgressing: Deployment is not progressing
+      AWSEBSCSIDriverOperatorCRProgressing: AWSEBSDriverControllerServiceControllerProgressing: Deployment is not progressing
+      AWSEBSCSIDriverOperatorCRProgressing: AWSEBSDriverNodeServiceControllerProgressing: DaemonSet is not progressing
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2026-01-28T09:32:10Z"
+    message: |-
+      DefaultStorageClassControllerAvailable: StorageClass provided by supplied CSI Driver instead of the cluster-storage-operator
+      AWSEBSCSIDriverOperatorCRAvailable: AWSEBSDriverControllerServiceControllerAvailable: Deployment is available
+      AWSEBSCSIDriverOperatorCRAvailable: AWSEBSDriverNodeServiceControllerAvailable: DaemonSet is available
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2026-01-28T09:31:08Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
+    type: Upgradeable
+  - lastTransitionTime: "2026-01-28T09:31:05Z"
+    reason: NoData
+    status: Unknown
+    type: EvaluationConditionsDetected
+  extension: null
+  relatedObjects:
+  - group: ""
+    name: aws-ebs-csi-driver-operator
+    namespace: openshift-cluster-csi-drivers
+    resource: serviceaccounts
+  - group: rbac.authorization.k8s.io
+    name: aws-ebs-csi-driver-operator-role
+    namespace: openshift-cluster-csi-drivers
+    resource: roles
+  - group: rbac.authorization.k8s.io
+    name: aws-ebs-csi-driver-operator-rolebinding
+    namespace: openshift-cluster-csi-drivers
+    resource: rolebindings
+  - group: rbac.authorization.k8s.io
+    name: aws-ebs-csi-driver-operator-clusterrole
+    resource: clusterroles
+  - group: rbac.authorization.k8s.io
+    name: aws-ebs-csi-driver-operator-clusterrolebinding
+    resource: clusterrolebindings
+  - group: rbac.authorization.k8s.io
+    name: aws-ebs-csi-driver-operator-aws-config-role
+    namespace: openshift-config-managed
+    resource: roles
+  - group: rbac.authorization.k8s.io
+    name: aws-ebs-csi-driver-operator-aws-config-clusterrolebinding
+    namespace: openshift-config-managed
+    resource: rolebindings
+  - group: operator.openshift.io
+    name: ebs.csi.aws.com
+    resource: clustercsidrivers
+  - group: ""
+    name: openshift-cluster-storage-operator
+    resource: namespaces
+  - group: ""
+    name: openshift-cluster-csi-drivers
+    resource: namespaces
+  - group: operator.openshift.io
+    name: cluster
+    resource: storages
+  - group: rbac.authorization.k8s.io
+    name: cluster-storage-operator-role
+    resource: clusterrolebindings
+  versions:
+  - name: operator
+    version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest

@@ -1,0 +1,40 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: "2026-01-28T09:29:22Z"
+  labels:
+    rbac.authorization.k8s.io/aggregate-to-edit: "true"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:rbac.authorization.k8s.io/aggregate-to-edit: {}
+        f:ownerReferences:
+          k:{"uid":"7763cebb-f1d7-4359-81b8-b55ef9916383"}: {}
+      f:rules: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2026-01-28T09:29:22Z"
+  name: openshift-ovn-kubernetes-udn-editor
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: 7763cebb-f1d7-4359-81b8-b55ef9916383
+  resourceVersion: "4399"
+  uid: c0e1a6c2-38a1-46af-9772-bc7333648410
+rules:
+- apiGroups:
+  - k8s.ovn.org
+  resources:
+  - userdefinednetworks
+  verbs:
+  - create
+  - update
+  - patch
+  - delete

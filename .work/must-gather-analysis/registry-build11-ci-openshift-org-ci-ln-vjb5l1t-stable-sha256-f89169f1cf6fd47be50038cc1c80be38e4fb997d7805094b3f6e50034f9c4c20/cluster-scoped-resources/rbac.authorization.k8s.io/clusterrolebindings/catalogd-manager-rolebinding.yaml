@@ -1,0 +1,33 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  creationTimestamp: "2026-01-28T09:31:10Z"
+  labels:
+    app.kubernetes.io/name: catalogd
+    app.kubernetes.io/part-of: olm
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+      f:roleRef: {}
+      f:subjects: {}
+    manager: cluster-olm-operator
+    operation: Update
+    time: "2026-01-28T09:31:10Z"
+  name: catalogd-manager-rolebinding
+  resourceVersion: "8334"
+  uid: 2834ccd0-6915-4632-bd89-829694506acb
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: catalogd-manager-role
+subjects:
+- kind: ServiceAccount
+  name: catalogd-controller-manager
+  namespace: openshift-catalogd

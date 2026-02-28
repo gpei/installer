@@ -1,0 +1,84 @@
+---
+apiVersion: machine.openshift.io/v1beta1
+kind: MachineHealthCheck
+metadata:
+  annotations:
+    capability.openshift.io/name: MachineAPI
+    exclude.release.openshift.io/internal-openshift-hosted: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+  creationTimestamp: "2026-01-28T09:42:07Z"
+  generation: 1
+  labels:
+    api: clusterapi
+    k8s-app: termination-handler
+  managedFields:
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:exclude.release.openshift.io/internal-openshift-hosted: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+        f:labels:
+          .: {}
+          f:api: {}
+          f:k8s-app: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec:
+        .: {}
+        f:maxUnhealthy: {}
+        f:nodeStartupTimeout: {}
+        f:selector: {}
+        f:unhealthyConditions: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:42:07Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions:
+          .: {}
+          k:{"type":"RemediationAllowed"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:currentHealthy: {}
+        f:expectedMachines: {}
+    manager: machine-healthcheck
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:42:07Z"
+  name: machine-api-termination-handler
+  namespace: openshift-machine-api
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "20469"
+  uid: 41424db4-7622-4656-a754-c44d7c3b7a84
+spec:
+  maxUnhealthy: 100%
+  nodeStartupTimeout: "0"
+  selector:
+    matchLabels:
+      machine.openshift.io/interruptible-instance: ""
+  unhealthyConditions:
+  - status: "True"
+    timeout: 0s
+    type: Terminating
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:42:07Z"
+    status: "True"
+    type: RemediationAllowed
+  currentHealthy: 0
+  expectedMachines: 0

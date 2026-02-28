@@ -1,0 +1,296 @@
+2026-01-28T09:31:05.680916932Z time="2026-01-28T09:31:05Z" level=info msg="setting up client for manager"
+2026-01-28T09:31:05.684314980Z time="2026-01-28T09:31:05Z" level=info msg="generated leader election ID" id=726ebf4f-7e97-4511-ac0d-77ec855c023a
+2026-01-28T09:31:05.684846946Z I0128 09:31:05.684825       1 leaderelection.go:257] attempting to acquire leader lease openshift-cloud-credential-operator/cloud-credential-operator-leader...
+2026-01-28T09:31:05.692926226Z time="2026-01-28T09:31:05Z" level=info msg="current leader: 4a381c7c-a970-41ea-96bc-11a6db421db3"
+2026-01-28T09:40:12.065682447Z I0128 09:40:12.065273       1 leaderelection.go:271] successfully acquired lease openshift-cloud-credential-operator/cloud-credential-operator-leader
+2026-01-28T09:40:12.065723019Z time="2026-01-28T09:40:12Z" level=info msg="became leader" id=726ebf4f-7e97-4511-ac0d-77ec855c023a
+2026-01-28T09:40:12.066995181Z time="2026-01-28T09:40:12Z" level=info msg="checking prerequisites"
+2026-01-28T09:40:12.068253394Z time="2026-01-28T09:40:12Z" level=info msg="setting up scheme"
+2026-01-28T09:40:12.129604842Z time="2026-01-28T09:40:12Z" level=info msg="filtering the set of secrets we watch"
+2026-01-28T09:40:12.129604842Z time="2026-01-28T09:40:12Z" level=info msg="adding label selector cloudcredential.openshift.io/credentials-request=true to cache options for Secrets"
+2026-01-28T09:40:12.129604842Z time="2026-01-28T09:40:12Z" level=info msg="setting up managers"
+2026-01-28T09:40:12.137853259Z time="2026-01-28T09:40:12Z" level=info msg="setting up field selector for root credential Secret" selector="metadata.namespace=kube-system,metadata.name=aws-creds"
+2026-01-28T09:40:12.146834273Z time="2026-01-28T09:40:12Z" level=info msg="registering components"
+2026-01-28T09:40:12.146834273Z time="2026-01-28T09:40:12Z" level=info msg="setting up scheme"
+2026-01-28T09:40:12.147085025Z time="2026-01-28T09:40:12Z" level=info msg="setting up scheme"
+2026-01-28T09:40:12.147180510Z time="2026-01-28T09:40:12Z" level=info msg="setting up controllers"
+2026-01-28T09:40:12.147490105Z time="2026-01-28T09:40:12Z" level=info msg="setting up scheme"
+2026-01-28T09:40:12.155754403Z time="2026-01-28T09:40:12Z" level=info msg="Setting up secret annotator. Platform Type is AWS"
+2026-01-28T09:40:12.156693220Z time="2026-01-28T09:40:12Z" level=info msg="setting up scheme"
+2026-01-28T09:40:12.171221557Z time="2026-01-28T09:40:12Z" level=info msg="setting up pod identity controller" controller=pod-identity platform=AWS
+2026-01-28T09:40:12.187797015Z time="2026-01-28T09:40:12Z" level=info msg="setting up scheme"
+2026-01-28T09:40:12.196289924Z time="2026-01-28T09:40:12Z" level=info msg="setting up scheme"
+2026-01-28T09:40:12.208209473Z time="2026-01-28T09:40:12Z" level=info msg="initializing AWS actuator"
+2026-01-28T09:40:12.208251395Z time="2026-01-28T09:40:12Z" level=info msg="starting the managers"
+2026-01-28T09:40:12.208511418Z time="2026-01-28T09:40:12Z" level=info msg="started metrics calculator goroutine" controller=metrics
+2026-01-28T09:40:12.208538799Z time="2026-01-28T09:40:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T09:40:12.310887282Z time="2026-01-28T09:40:12Z" level=info msg="reconcile complete" controller=metrics elapsed=102.325891ms
+2026-01-28T09:40:12.311534144Z time="2026-01-28T09:40:12Z" level=info msg="validating cloud cred secret" controller=secretannotator
+2026-01-28T09:40:12.311873930Z time="2026-01-28T09:40:12Z" level=info msg="requeueing all CredentialsRequests"
+2026-01-28T09:40:12.312128893Z time="2026-01-28T09:40:12Z" level=info msg="reconciling clusteroperator status"
+2026-01-28T09:40:12.312945893Z time="2026-01-28T09:40:12Z" level=info msg="observed admin cloud credential secret event" namespace=kube-system secret=aws-creds
+2026-01-28T09:40:12.312945893Z time="2026-01-28T09:40:12Z" level=info msg="requeueing all CredentialsRequests"
+2026-01-28T09:40:12.314950032Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-controller-manager/nutanix-credentials namespace=openshift-cloud-controller-manager
+2026-01-28T09:40:12.314977343Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-controller-manager/openstack-cloud-credentials namespace=openshift-cloud-controller-manager
+2026-01-28T09:40:12.314977343Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-controller-manager/vsphere-cloud-credentials namespace=openshift-cloud-controller-manager
+2026-01-28T09:40:12.315014625Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-controller-manager/ibm-cloud-credentials namespace=openshift-cloud-controller-manager
+2026-01-28T09:40:12.315066908Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-controller-manager/ibm-cloud-credentials namespace=openshift-cloud-controller-manager
+2026-01-28T09:40:12.315092079Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-controller-manager/azure-cloud-credentials namespace=openshift-cloud-controller-manager
+2026-01-28T09:40:12.315165533Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-controller-manager/gcp-ccm-cloud-credentials namespace=openshift-cloud-controller-manager
+2026-01-28T09:40:12.316207324Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-credential-operator/cloud-credential-operator-gcp-ro-creds namespace=openshift-cloud-credential-operator
+2026-01-28T09:40:12.318127609Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-ingress-operator/cloud-credentials namespace=openshift-ingress-operator
+2026-01-28T09:40:12.318152220Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-ingress-operator/cloud-credentials namespace=openshift-ingress-operator
+2026-01-28T09:40:12.321852263Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-network-operator/installer-cloud-credentials namespace=openshift-network-operator
+2026-01-28T09:40:12.322288044Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/azure-file-credentials namespace=openshift-cluster-csi-drivers
+2026-01-28T09:40:12.322288044Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/ibm-powervs-cloud-credentials namespace=openshift-cluster-csi-drivers
+2026-01-28T09:40:12.322288044Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/ovirt-credentials namespace=openshift-cluster-csi-drivers
+2026-01-28T09:40:12.322288044Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/vmware-vsphere-cloud-credentials namespace=openshift-cluster-csi-drivers
+2026-01-28T09:40:12.322313656Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/openstack-cloud-credentials namespace=openshift-cluster-csi-drivers
+2026-01-28T09:40:12.322313656Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/gcp-pd-cloud-credentials namespace=openshift-cluster-csi-drivers
+2026-01-28T09:40:12.322313656Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/azure-disk-credentials namespace=openshift-cluster-csi-drivers
+2026-01-28T09:40:12.322334317Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/manila-cloud-credentials namespace=openshift-cluster-csi-drivers
+2026-01-28T09:40:12.322334317Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/ibm-cloud-credentials namespace=openshift-cluster-csi-drivers
+2026-01-28T09:40:12.322967648Z I0128 09:40:12.322927       1 event.go:377] Event(v1.ObjectReference{Kind:"deployment", Namespace:"openshift-cloud-credential-operator", Name:"cloud-credential-operator", UID:"", APIVersion:"", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceAccountCreated' Created ServiceAccount/pod-identity-webhook -n openshift-cloud-credential-operator because it was missing
+2026-01-28T09:40:12.323938406Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-image-registry/installer-cloud-credentials namespace=openshift-image-registry
+2026-01-28T09:40:12.323938406Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-image-registry/installer-cloud-credentials namespace=openshift-image-registry
+2026-01-28T09:40:12.323963627Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-image-registry/installer-cloud-credentials namespace=openshift-image-registry
+2026-01-28T09:40:12.323963627Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-image-registry/installer-cloud-credentials namespace=openshift-image-registry
+2026-01-28T09:40:12.323963627Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-image-registry/installer-cloud-credentials namespace=openshift-image-registry
+2026-01-28T09:40:12.325190028Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/nutanix-credentials namespace=openshift-machine-api
+2026-01-28T09:40:12.325190028Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/ibmcloud-credentials namespace=openshift-machine-api
+2026-01-28T09:40:12.325215689Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/openstack-cloud-credentials namespace=openshift-machine-api
+2026-01-28T09:40:12.325215689Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/vsphere-cloud-credentials namespace=openshift-machine-api
+2026-01-28T09:40:12.325215689Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/gcp-cloud-credentials namespace=openshift-machine-api
+2026-01-28T09:40:12.325215689Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/azure-cloud-credentials namespace=openshift-machine-api
+2026-01-28T09:40:12.325215689Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/powervs-credentials namespace=openshift-machine-api
+2026-01-28T09:40:12.327976745Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-network-config-controller/cloud-credentials namespace=openshift-cloud-network-config-controller
+2026-01-28T09:40:12.327976745Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-network-config-controller/cloud-credentials namespace=openshift-cloud-network-config-controller
+2026-01-28T09:40:12.327976745Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-network-config-controller/cloud-credentials namespace=openshift-cloud-network-config-controller
+2026-01-28T09:40:12.328747123Z time="2026-01-28T09:40:12Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-storage-operator/vsphere-cloud-credentials namespace=openshift-cluster-storage-operator
+2026-01-28T09:40:12.332540130Z I0128 09:40:12.332266       1 event.go:377] Event(v1.ObjectReference{Kind:"deployment", Namespace:"openshift-cloud-credential-operator", Name:"cloud-credential-operator", UID:"", APIVersion:"", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleCreated' Created ClusterRole.rbac.authorization.k8s.io/pod-identity-webhook because it was missing
+2026-01-28T09:40:12.351165900Z I0128 09:40:12.351114       1 event.go:377] Event(v1.ObjectReference{Kind:"deployment", Namespace:"openshift-cloud-credential-operator", Name:"cloud-credential-operator", UID:"", APIVersion:"", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RoleCreated' Created Role.rbac.authorization.k8s.io/pod-identity-webhook -n openshift-cloud-credential-operator because it was missing
+2026-01-28T09:40:12.361217516Z I0128 09:40:12.361072       1 event.go:377] Event(v1.ObjectReference{Kind:"deployment", Namespace:"openshift-cloud-credential-operator", Name:"cloud-credential-operator", UID:"", APIVersion:"", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClusterRoleBindingCreated' Created ClusterRoleBinding.rbac.authorization.k8s.io/pod-identity-webhook because it was missing
+2026-01-28T09:40:12.373047100Z I0128 09:40:12.372965       1 event.go:377] Event(v1.ObjectReference{Kind:"deployment", Namespace:"openshift-cloud-credential-operator", Name:"cloud-credential-operator", UID:"", APIVersion:"", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RoleBindingCreated' Created RoleBinding.rbac.authorization.k8s.io/pod-identity-webhook -n openshift-cloud-credential-operator because it was missing
+2026-01-28T09:40:12.397231574Z I0128 09:40:12.396319       1 event.go:377] Event(v1.ObjectReference{Kind:"deployment", Namespace:"openshift-cloud-credential-operator", Name:"cloud-credential-operator", UID:"", APIVersion:"", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceCreated' Created Service/pod-identity-webhook -n openshift-cloud-credential-operator because it was missing
+2026-01-28T09:40:12.397328919Z time="2026-01-28T09:40:12Z" level=info msg="*v1.ServiceAccount reconciled successfully" controller=pod-identity platform=AWS
+2026-01-28T09:40:12.397367521Z time="2026-01-28T09:40:12Z" level=info msg="*v1.ClusterRole reconciled successfully" controller=pod-identity platform=AWS
+2026-01-28T09:40:12.397400132Z time="2026-01-28T09:40:12Z" level=info msg="*v1.Role reconciled successfully" controller=pod-identity platform=AWS
+2026-01-28T09:40:12.397435184Z time="2026-01-28T09:40:12Z" level=info msg="*v1.ClusterRoleBinding reconciled successfully" controller=pod-identity platform=AWS
+2026-01-28T09:40:12.397468856Z time="2026-01-28T09:40:12Z" level=info msg="*v1.RoleBinding reconciled successfully" controller=pod-identity platform=AWS
+2026-01-28T09:40:12.397502568Z time="2026-01-28T09:40:12Z" level=info msg="*v1.Service reconciled successfully" controller=pod-identity platform=AWS
+2026-01-28T09:40:12.416839052Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-problem-detector
+2026-01-28T09:40:12.418946786Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/aws-ebs-csi-driver-operator
+2026-01-28T09:40:12.419184058Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-ccm
+2026-01-28T09:40:12.419364357Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-azure
+2026-01-28T09:40:12.419606659Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-aws
+2026-01-28T09:40:12.419881082Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-gcp
+2026-01-28T09:40:12.420102943Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ovirt-csi-driver-operator
+2026-01-28T09:40:12.420230300Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-openstack
+2026-01-28T09:40:12.420347475Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-azure
+2026-01-28T09:40:12.421102753Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-nutanix-cloud-controller-manager
+2026-01-28T09:40:12.421248730Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vmware-vsphere-csi-driver-operator
+2026-01-28T09:40:12.421402357Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openstack-cinder-csi-driver-operator
+2026-01-28T09:40:12.421545315Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-iam-ro
+2026-01-28T09:40:12.421711493Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-openstack
+2026-01-28T09:40:12.421891582Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-pd-csi-driver-operator
+2026-01-28T09:40:12.422081671Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-azure
+2026-01-28T09:40:12.422226998Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-powervs
+2026-01-28T09:40:12.423941093Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-openstack-cloud-controller-manager
+2026-01-28T09:40:12.423941093Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-cloud-controller-manager
+2026-01-28T09:40:12.423941093Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-disk-csi-driver-operator
+2026-01-28T09:40:12.423941093Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/manila-csi-driver-operator
+2026-01-28T09:40:12.423941093Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-gcp
+2026-01-28T09:40:12.423941093Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos
+2026-01-28T09:40:12.423941093Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-nutanix
+2026-01-28T09:40:12.425261888Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-powervs-cloud-controller-manager
+2026-01-28T09:40:12.425261888Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-azure
+2026-01-28T09:40:12.425261888Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ibm-cloud-controller-manager
+2026-01-28T09:40:12.425261888Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-ibmcloud
+2026-01-28T09:40:12.425261888Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-openstack
+2026-01-28T09:40:12.425261888Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-vsphere
+2026-01-28T09:40:12.426079628Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-gcp-ro-creds
+2026-01-28T09:40:12.426079628Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-vpc-block-csi-driver-operator
+2026-01-28T09:40:12.426079628Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/manila-csi-drivers
+2026-01-28T09:40:12.426079628Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-gcp
+2026-01-28T09:40:12.426079628Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-aws
+2026-01-28T09:40:12.426585173Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry
+2026-01-28T09:40:12.434164747Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-gcs
+2026-01-28T09:40:12.434164747Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress
+2026-01-28T09:40:12.434164747Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-network
+2026-01-28T09:40:12.434164747Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-file-csi-driver-operator
+2026-01-28T09:40:12.434164747Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-powervs-block-csi-driver-operator
+2026-01-28T09:40:12.434164747Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-azure-cloud-controller-manager
+2026-01-28T09:40:12.434164747Z time="2026-01-28T09:40:12Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos-powervs
+2026-01-28T09:40:12.446657634Z I0128 09:40:12.446541       1 warnings.go:110] "Warning: spec.template.spec.nodeSelector[node-role.kubernetes.io/master]: use \"node-role.kubernetes.io/control-plane\" instead"
+2026-01-28T09:40:12.451372927Z time="2026-01-28T09:40:12Z" level=info msg="Deployment reconciled successfully" controller=pod-identity platform=AWS
+2026-01-28T09:40:12.452925444Z I0128 09:40:12.452892       1 event.go:377] Event(v1.ObjectReference{Kind:"deployment", Namespace:"openshift-cloud-credential-operator", Name:"cloud-credential-operator", UID:"", APIVersion:"", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'DeploymentCreated' Created Deployment.apps/pod-identity-webhook -n openshift-cloud-credential-operator because it was missing
+2026-01-28T09:40:12.468122124Z time="2026-01-28T09:40:12Z" level=info msg="MutatingWebhookConfiguration reconciled successfully" controller=pod-identity platform=AWS
+2026-01-28T09:40:12.468582377Z I0128 09:40:12.468552       1 event.go:377] Event(v1.ObjectReference{Kind:"deployment", Namespace:"openshift-cloud-credential-operator", Name:"cloud-credential-operator", UID:"", APIVersion:"", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'MutatingWebhookConfigurationCreated' Created MutatingWebhookConfiguration.admissionregistration.k8s.io/pod-identity-webhook because it was missing
+2026-01-28T09:40:12.495871914Z time="2026-01-28T09:40:12Z" level=info msg="PodDisruptionBudget reconciled successfully" controller=pod-identity platform=AWS
+2026-01-28T09:40:12.495871914Z I0128 09:40:12.493941       1 event.go:377] Event(v1.ObjectReference{Kind:"deployment", Namespace:"openshift-cloud-credential-operator", Name:"cloud-credential-operator", UID:"", APIVersion:"", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'PodDisruptionBudgetCreated' Created PodDisruptionBudget.policy/pod-identity-webhook -n openshift-cloud-credential-operator because it was missing
+2026-01-28T09:40:12.519402806Z time="2026-01-28T09:40:12Z" level=info msg="Cluster has not successfully completed an installation/upgrade yet"
+2026-01-28T09:40:12.528200020Z time="2026-01-28T09:40:12Z" level=info msg="version has changed, updating progressing condition lastTransitionTime" controller=status new="[{operator 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest}]" old="[{operator }]"
+2026-01-28T09:40:12.551383174Z time="2026-01-28T09:40:12Z" level=info msg="clusteroperator status updated" controller=status
+2026-01-28T09:40:12.551383174Z time="2026-01-28T09:40:12Z" level=info msg="reconciling clusteroperator status"
+2026-01-28T09:40:12.551383174Z time="2026-01-28T09:40:12Z" level=info msg="Cluster has not successfully completed an installation/upgrade yet"
+2026-01-28T09:40:12.972644801Z time="2026-01-28T09:40:12Z" level=info msg="Verified cloud creds can be used for minting new creds" controller=secretannotator
+2026-01-28T09:40:12.976499391Z time="2026-01-28T09:40:12Z" level=info msg="validating cloud cred secret" controller=secretannotator
+2026-01-28T09:40:13.126219872Z time="2026-01-28T09:40:13Z" level=info msg="MutatingWebhookConfiguration reconciled successfully" controller=pod-identity platform=AWS
+2026-01-28T09:40:13.126219872Z I0128 09:40:13.126185       1 event.go:377] Event(v1.ObjectReference{Kind:"deployment", Namespace:"openshift-cloud-credential-operator", Name:"cloud-credential-operator", UID:"", APIVersion:"", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'MutatingWebhookConfigurationUpdated' Updated MutatingWebhookConfiguration.admissionregistration.k8s.io/pod-identity-webhook because it changed
+2026-01-28T09:40:13.291636078Z time="2026-01-28T09:40:13Z" level=info msg="Verified cloud creds can be used for minting new creds" controller=secretannotator
+2026-01-28T09:42:12.312571046Z time="2026-01-28T09:42:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T09:42:12.312755615Z time="2026-01-28T09:42:12Z" level=info msg="reconcile complete" controller=metrics elapsed="964.128µs"
+2026-01-28T09:44:12.312864170Z time="2026-01-28T09:44:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T09:44:12.313751714Z time="2026-01-28T09:44:12Z" level=info msg="reconcile complete" controller=metrics elapsed="939.356µs"
+2026-01-28T09:45:12.543820301Z time="2026-01-28T09:45:12Z" level=info msg="reconciling clusteroperator status"
+2026-01-28T09:45:12.544116015Z time="2026-01-28T09:45:12Z" level=info msg="Cluster has not successfully completed an installation/upgrade yet"
+2026-01-28T09:46:12.314718087Z time="2026-01-28T09:46:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T09:46:12.315462534Z time="2026-01-28T09:46:12Z" level=info msg="reconcile complete" controller=metrics elapsed="833.011µs"
+2026-01-28T09:48:12.316217258Z time="2026-01-28T09:48:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T09:48:12.317105252Z time="2026-01-28T09:48:12Z" level=info msg="reconcile complete" controller=metrics elapsed="947.557µs"
+2026-01-28T09:50:12.317749953Z time="2026-01-28T09:50:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T09:50:12.318449957Z time="2026-01-28T09:50:12Z" level=info msg="reconcile complete" controller=metrics elapsed="761.637µs"
+2026-01-28T09:50:12.545137508Z time="2026-01-28T09:50:12Z" level=info msg="reconciling clusteroperator status"
+2026-01-28T09:50:12.545458063Z time="2026-01-28T09:50:12Z" level=info msg="Cluster has not successfully completed an installation/upgrade yet"
+2026-01-28T09:50:29.506830418Z time="2026-01-28T09:50:29Z" level=info msg="reconciling clusteroperator status"
+2026-01-28T09:50:29.506989476Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/aws-ebs-csi-driver-operator
+2026-01-28T09:50:29.507519932Z time="2026-01-28T09:50:29Z" level=info msg="Cluster has not successfully completed an installation/upgrade yet"
+2026-01-28T09:50:29.507678810Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-disk-csi-driver-operator
+2026-01-28T09:50:29.507929483Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-file-csi-driver-operator
+2026-01-28T09:50:29.508124892Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-gcp-ro-creds
+2026-01-28T09:50:29.508275789Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-iam-ro
+2026-01-28T09:50:29.508275789Z time="2026-01-28T09:50:29Z" level=info msg="reconciling clusteroperator status"
+2026-01-28T09:50:29.508440908Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-powervs-block-csi-driver-operator
+2026-01-28T09:50:29.508475859Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-vpc-block-csi-driver-operator
+2026-01-28T09:50:29.508546903Z time="2026-01-28T09:50:29Z" level=info msg="Cluster has not successfully completed an installation/upgrade yet"
+2026-01-28T09:50:29.508569394Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/manila-csi-driver-operator
+2026-01-28T09:50:29.508694960Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/manila-csi-drivers
+2026-01-28T09:50:29.508793625Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-azure-cloud-controller-manager
+2026-01-28T09:50:29.508894700Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-aws
+2026-01-28T09:50:29.508983204Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-azure
+2026-01-28T09:50:29.509095160Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-gcp
+2026-01-28T09:50:29.509193674Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-openstack
+2026-01-28T09:50:29.509296320Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-ccm
+2026-01-28T09:50:29.509407315Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-pd-csi-driver-operator
+2026-01-28T09:50:29.509508590Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ibm-cloud-controller-manager
+2026-01-28T09:50:29.509615285Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry
+2026-01-28T09:50:29.509704270Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-azure
+2026-01-28T09:50:29.509868758Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-gcs
+2026-01-28T09:50:29.509976703Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos
+2026-01-28T09:50:29.510092109Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos-powervs
+2026-01-28T09:50:29.510205135Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-openstack
+2026-01-28T09:50:29.510301689Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress
+2026-01-28T09:50:29.510371523Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-azure
+2026-01-28T09:50:29.510461997Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-gcp
+2026-01-28T09:50:29.510545191Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-aws
+2026-01-28T09:50:29.510620665Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-azure
+2026-01-28T09:50:29.510715409Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-gcp
+2026-01-28T09:50:29.510802284Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-ibmcloud
+2026-01-28T09:50:29.510913289Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-nutanix
+2026-01-28T09:50:29.510990923Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-openstack
+2026-01-28T09:50:29.511134150Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-powervs
+2026-01-28T09:50:29.511284717Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-vsphere
+2026-01-28T09:50:29.511383102Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-network
+2026-01-28T09:50:29.511475637Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-nutanix-cloud-controller-manager
+2026-01-28T09:50:29.511564621Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-openstack-cloud-controller-manager
+2026-01-28T09:50:29.511646315Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-powervs-cloud-controller-manager
+2026-01-28T09:50:29.511793453Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vmware-vsphere-csi-driver-operator
+2026-01-28T09:50:29.511866056Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-cloud-controller-manager
+2026-01-28T09:50:29.511960901Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-problem-detector
+2026-01-28T09:50:29.512077367Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openstack-cinder-csi-driver-operator
+2026-01-28T09:50:29.512168161Z time="2026-01-28T09:50:29Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ovirt-csi-driver-operator
+2026-01-28T09:50:30.283811829Z time="2026-01-28T09:50:30Z" level=info msg="reconciling clusteroperator status"
+2026-01-28T09:50:30.284044691Z time="2026-01-28T09:50:30Z" level=info msg="requeueing all CredentialsRequests"
+2026-01-28T09:50:30.284304684Z time="2026-01-28T09:50:30Z" level=info msg="validating cloud cred secret" controller=secretannotator
+2026-01-28T09:50:30.284478872Z time="2026-01-28T09:50:30Z" level=info msg="requeueing all CredentialsRequests"
+2026-01-28T09:50:30.284553846Z time="2026-01-28T09:50:30Z" level=info msg="Cluster has not successfully completed an installation/upgrade yet"
+2026-01-28T09:50:30.284621229Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-vpc-block-csi-driver-operator
+2026-01-28T09:50:30.284809628Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/manila-csi-drivers
+2026-01-28T09:50:30.284931544Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-gcp
+2026-01-28T09:50:30.285179807Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-aws
+2026-01-28T09:50:30.285420398Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry
+2026-01-28T09:50:30.285587356Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-gcs
+2026-01-28T09:50:30.285758535Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress
+2026-01-28T09:50:30.285927403Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-network
+2026-01-28T09:50:30.286178816Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-file-csi-driver-operator
+2026-01-28T09:50:30.286377406Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-powervs-block-csi-driver-operator
+2026-01-28T09:50:30.286495901Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-azure-cloud-controller-manager
+2026-01-28T09:50:30.286602757Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos-powervs
+2026-01-28T09:50:30.286723803Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-problem-detector
+2026-01-28T09:50:30.286840948Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/aws-ebs-csi-driver-operator
+2026-01-28T09:50:30.286935783Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-ccm
+2026-01-28T09:50:30.287124262Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-azure
+2026-01-28T09:50:30.287254439Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-aws
+2026-01-28T09:50:30.287365414Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-gcp
+2026-01-28T09:50:30.287504661Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ovirt-csi-driver-operator
+2026-01-28T09:50:30.287597816Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-openstack
+2026-01-28T09:50:30.287747963Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-azure
+2026-01-28T09:50:30.287871569Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-nutanix-cloud-controller-manager
+2026-01-28T09:50:30.287969214Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vmware-vsphere-csi-driver-operator
+2026-01-28T09:50:30.288124521Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openstack-cinder-csi-driver-operator
+2026-01-28T09:50:30.288283599Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-iam-ro
+2026-01-28T09:50:30.288375084Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-openstack
+2026-01-28T09:50:30.288496360Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-pd-csi-driver-operator
+2026-01-28T09:50:30.288603455Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-azure
+2026-01-28T09:50:30.288714041Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-powervs
+2026-01-28T09:50:30.288842637Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-openstack-cloud-controller-manager
+2026-01-28T09:50:30.288945902Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-cloud-controller-manager
+2026-01-28T09:50:30.289077438Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-disk-csi-driver-operator
+2026-01-28T09:50:30.289226726Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/manila-csi-driver-operator
+2026-01-28T09:50:30.289344381Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-gcp
+2026-01-28T09:50:30.289670548Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos
+2026-01-28T09:50:30.289822365Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-nutanix
+2026-01-28T09:50:30.290118840Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-powervs-cloud-controller-manager
+2026-01-28T09:50:30.290232845Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-azure
+2026-01-28T09:50:30.290404404Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ibm-cloud-controller-manager
+2026-01-28T09:50:30.290502078Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-ibmcloud
+2026-01-28T09:50:30.290615414Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-openstack
+2026-01-28T09:50:30.290760131Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-vsphere
+2026-01-28T09:50:30.290941400Z time="2026-01-28T09:50:30Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-gcp-ro-creds
+2026-01-28T09:50:30.925060938Z time="2026-01-28T09:50:30Z" level=info msg="Verified cloud creds can be used for minting new creds" controller=secretannotator
+2026-01-28T09:52:12.319148414Z time="2026-01-28T09:52:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T09:52:12.319862950Z time="2026-01-28T09:52:12Z" level=info msg="reconcile complete" controller=metrics elapsed="760.057µs"
+2026-01-28T09:54:12.320515484Z time="2026-01-28T09:54:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T09:54:12.321252511Z time="2026-01-28T09:54:12Z" level=info msg="reconcile complete" controller=metrics elapsed="792.499µs"
+2026-01-28T09:55:12.546187766Z time="2026-01-28T09:55:12Z" level=info msg="reconciling clusteroperator status"
+2026-01-28T09:55:12.546445388Z time="2026-01-28T09:55:12Z" level=info msg="Cluster has not successfully completed an installation/upgrade yet"
+2026-01-28T09:56:12.322117733Z time="2026-01-28T09:56:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T09:56:12.322680260Z time="2026-01-28T09:56:12Z" level=info msg="reconcile complete" controller=metrics elapsed="637.051µs"
+2026-01-28T09:58:12.322904088Z time="2026-01-28T09:58:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T09:58:12.323597972Z time="2026-01-28T09:58:12Z" level=info msg="reconcile complete" controller=metrics elapsed="781.799µs"
+2026-01-28T10:00:12.324467403Z time="2026-01-28T10:00:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T10:00:12.325111706Z time="2026-01-28T10:00:12Z" level=info msg="reconcile complete" controller=metrics elapsed="725.206µs"
+2026-01-28T10:00:12.547839018Z time="2026-01-28T10:00:12Z" level=info msg="reconciling clusteroperator status"
+2026-01-28T10:00:12.548154674Z time="2026-01-28T10:00:12Z" level=info msg="Cluster has not successfully completed an installation/upgrade yet"
+2026-01-28T10:02:12.326251849Z time="2026-01-28T10:02:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T10:02:12.326962785Z time="2026-01-28T10:02:12Z" level=info msg="reconcile complete" controller=metrics elapsed="778.538µs"
+2026-01-28T10:04:12.327872103Z time="2026-01-28T10:04:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T10:04:12.328605789Z time="2026-01-28T10:04:12Z" level=info msg="reconcile complete" controller=metrics elapsed="801.79µs"
+2026-01-28T10:05:12.548935252Z time="2026-01-28T10:05:12Z" level=info msg="reconciling clusteroperator status"
+2026-01-28T10:05:12.549282830Z time="2026-01-28T10:05:12Z" level=info msg="Cluster has not successfully completed an installation/upgrade yet"
+2026-01-28T10:06:12.329000565Z time="2026-01-28T10:06:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T10:06:12.329721081Z time="2026-01-28T10:06:12Z" level=info msg="reconcile complete" controller=metrics elapsed="788.84µs"
+2026-01-28T10:08:12.330056289Z time="2026-01-28T10:08:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T10:08:12.330712121Z time="2026-01-28T10:08:12Z" level=info msg="reconcile complete" controller=metrics elapsed="738.186µs"
+2026-01-28T10:10:12.331244716Z time="2026-01-28T10:10:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T10:10:12.331818625Z time="2026-01-28T10:10:12Z" level=info msg="reconcile complete" controller=metrics elapsed="640.103µs"
+2026-01-28T10:10:12.550629954Z time="2026-01-28T10:10:12Z" level=info msg="reconciling clusteroperator status"
+2026-01-28T10:10:12.550908418Z time="2026-01-28T10:10:12Z" level=info msg="Cluster has not successfully completed an installation/upgrade yet"
+2026-01-28T10:12:12.332132822Z time="2026-01-28T10:12:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T10:12:12.333123081Z time="2026-01-28T10:12:12Z" level=info msg="reconcile complete" controller=metrics elapsed=1.149577ms
+2026-01-28T10:14:12.333680869Z time="2026-01-28T10:14:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T10:14:12.334498990Z time="2026-01-28T10:14:12Z" level=info msg="reconcile complete" controller=metrics elapsed="897.804µs"
+2026-01-28T10:15:12.552260034Z time="2026-01-28T10:15:12Z" level=info msg="reconciling clusteroperator status"
+2026-01-28T10:15:12.552544678Z time="2026-01-28T10:15:12Z" level=info msg="Cluster has not successfully completed an installation/upgrade yet"
+2026-01-28T10:16:12.335379459Z time="2026-01-28T10:16:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T10:16:12.335998330Z time="2026-01-28T10:16:12Z" level=info msg="reconcile complete" controller=metrics elapsed="709.146µs"
+2026-01-28T10:18:12.337147577Z time="2026-01-28T10:18:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T10:18:12.337839252Z time="2026-01-28T10:18:12Z" level=info msg="reconcile complete" controller=metrics elapsed="753.128µs"
+2026-01-28T10:20:12.338978850Z time="2026-01-28T10:20:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T10:20:12.340068744Z time="2026-01-28T10:20:12Z" level=info msg="reconcile complete" controller=metrics elapsed=1.185719ms
+2026-01-28T10:20:12.553197384Z time="2026-01-28T10:20:12Z" level=info msg="reconciling clusteroperator status"
+2026-01-28T10:20:12.553483909Z time="2026-01-28T10:20:12Z" level=info msg="Cluster has not successfully completed an installation/upgrade yet"
+2026-01-28T10:22:12.340556780Z time="2026-01-28T10:22:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T10:22:12.341224133Z time="2026-01-28T10:22:12Z" level=info msg="reconcile complete" controller=metrics elapsed="710.554µs"
+2026-01-28T10:24:12.342161044Z time="2026-01-28T10:24:12Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2026-01-28T10:24:12.342905902Z time="2026-01-28T10:24:12Z" level=info msg="reconcile complete" controller=metrics elapsed="805.14µs"

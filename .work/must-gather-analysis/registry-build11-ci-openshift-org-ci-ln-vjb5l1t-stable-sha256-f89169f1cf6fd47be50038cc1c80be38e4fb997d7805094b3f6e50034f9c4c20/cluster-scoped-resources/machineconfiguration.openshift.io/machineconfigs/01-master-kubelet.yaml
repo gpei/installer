@@ -1,0 +1,107 @@
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+    annotations:
+        machineconfiguration.openshift.io/generated-by-controller-version: 4593e456f3b51f4c6c458c00752e38f2687baedc
+    creationTimestamp: "2026-01-28T09:32:25Z"
+    generation: 1
+    labels:
+        machineconfiguration.openshift.io/role: master
+    managedFields:
+        - apiVersion: machineconfiguration.openshift.io/v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:metadata:
+                f:annotations:
+                    .: {}
+                    f:machineconfiguration.openshift.io/generated-by-controller-version: {}
+                f:labels:
+                    .: {}
+                    f:machineconfiguration.openshift.io/role: {}
+                f:ownerReferences:
+                    .: {}
+                    k:{"uid":"dc0c134b-26eb-4fe6-9312-d207cc20003f"}: {}
+            f:spec:
+                .: {}
+                f:baseOSExtensionsContainerImage: {}
+                f:config:
+                    .: {}
+                    f:ignition:
+                        .: {}
+                        f:version: {}
+                    f:storage:
+                        .: {}
+                        f:files: {}
+                    f:systemd:
+                        .: {}
+                        f:units: {}
+                f:fips: {}
+                f:kernelArguments: {}
+                f:kernelType: {}
+                f:osImageURL: {}
+          manager: machine-config-controller
+          operation: Update
+          time: "2026-01-28T09:32:25Z"
+    name: 01-master-kubelet
+    ownerReferences:
+        - apiVersion: machineconfiguration.openshift.io/v1
+          blockOwnerDeletion: true
+          controller: true
+          kind: ControllerConfig
+          name: machine-config-controller
+          uid: dc0c134b-26eb-4fe6-9312-d207cc20003f
+    resourceVersion: "11726"
+    uid: 44df923d-76bc-444e-968d-5723c9ccc453
+spec:
+    baseOSExtensionsContainerImage: ""
+    config:
+        ignition:
+            version: 3.5.0
+        storage:
+            files:
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 27
+                  mode: 420
+                  overwrite: true
+                  path: /etc/kubernetes/cloud.conf
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 297
+                  mode: 420
+                  overwrite: true
+                  path: /etc/kubernetes/crio-metrics-proxy.cfg
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 4297
+                  mode: 420
+                  overwrite: true
+                  path: /etc/kubernetes/manifests/criometricsproxy.yaml
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 1366
+                  mode: 420
+                  overwrite: true
+                  path: /etc/kubernetes/kubelet.conf
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 191
+                  mode: 493
+                  overwrite: true
+                  path: /usr/local/bin/kubenswrapper
+        systemd:
+            units:
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 316
+                  enabled: true
+                  name: kubelet-cleanup.service
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 1988
+                  enabled: true
+                  name: kubelet.service
+    fips: false
+    kernelArguments: null
+    kernelType: ""
+    osImageURL: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:56380161baf19863b676fb94aacaae253df853c437df18d00e447f36c895b794

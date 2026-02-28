@@ -1,0 +1,1170 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    cluster-autoscaler.kubernetes.io/enable-ds-eviction: "false"
+  creationTimestamp: "2026-01-28T09:29:12Z"
+  generateName: multus-additional-cni-plugins-
+  generation: 1
+  labels:
+    app: multus-additional-cni-plugins
+    component: network
+    controller-revision-hash: 589dff457c
+    openshift.io/component: network
+    pod-template-generation: "1"
+    type: infra
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:cluster-autoscaler.kubernetes.io/enable-ds-eviction: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:component: {}
+          f:controller-revision-hash: {}
+          f:openshift.io/component: {}
+          f:pod-template-generation: {}
+          f:type: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"1906a63e-229c-4143-927b-d8346e31caad"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:nodeAffinity:
+            .: {}
+            f:requiredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"kube-multus-additional-cni-plugins"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:initContainers:
+          .: {}
+          k:{"name":"bond-cni-plugin"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"DEFAULT_SOURCE_DIRECTORY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RHEL8_SOURCE_DIRECTORY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RHEL9_SOURCE_DIRECTORY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/entrypoint"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/host/etc/os-release"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/host/opt/cni/bin"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"cni-plugins"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"DEFAULT_SOURCE_DIRECTORY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RHEL8_SOURCE_DIRECTORY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RHEL9_SOURCE_DIRECTORY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/entrypoint"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/host/etc/cni/tuning/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/host/etc/os-release"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/host/opt/cni/bin"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/sysctls"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"egress-router-binary-copy"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"DEFAULT_SOURCE_DIRECTORY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RHEL8_SOURCE_DIRECTORY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RHEL9_SOURCE_DIRECTORY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/entrypoint"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/host/etc/os-release"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/host/opt/cni/bin"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"routeoverride-cni"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"DEFAULT_SOURCE_DIRECTORY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RHEL8_SOURCE_DIRECTORY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RHEL9_SOURCE_DIRECTORY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/entrypoint"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/host/etc/os-release"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/host/opt/cni/bin"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"whereabouts-cni"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"CNI_BIN_DIR"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"CNI_CONF_DIR"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"KUBERNETES_SERVICE_HOST"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"KUBERNETES_SERVICE_PORT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NODENAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"SLEEP"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"WHEREABOUTS_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/whereabouts/config"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/host/etc/cni/net.d"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/host/opt/cni/bin"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"whereabouts-cni-bincopy"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"DEFAULT_SOURCE_DIRECTORY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RHEL8_SOURCE_DIRECTORY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RHEL9_SOURCE_DIRECTORY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/entrypoint"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/host/etc/os-release"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/host/opt/cni/bin"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"cni-binary-copy"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"cni-sysctl-allowlist"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"cnibin"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"multus-cni-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"os-release"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"system-cni-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"tuning-conf-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"whereabouts-flatfile-configmap"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2026-01-28T09:29:12Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:initContainerStatuses: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.3.203"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:29:53Z"
+  name: multus-additional-cni-plugins-t95k2
+  namespace: openshift-multus
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: DaemonSet
+    name: multus-additional-cni-plugins
+    uid: 1906a63e-229c-4143-927b-d8346e31caad
+  resourceVersion: "5111"
+  uid: 837d1a89-efc9-4cca-9c91-8f6b35c5e473
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchFields:
+          - key: metadata.name
+            operator: In
+            values:
+            - ip-10-0-3-203.us-west-1.compute.internal
+  containers:
+  - args:
+    - |
+      trap : TERM INT; sleep infinity & wait
+    command:
+    - /bin/bash
+    - -ec
+    - --
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:0cca4df2e32bbccd8d4fbb9dfa9e5da38cce49566dbfdd95bfb29622cba642cd
+    imagePullPolicy: IfNotPresent
+    name: kube-multus-additional-cni-plugins
+    resources:
+      requests:
+        cpu: 10m
+        memory: 10Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-rhd5m
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  initContainers:
+  - command:
+    - /entrypoint/cnibincopy.sh
+    env:
+    - name: RHEL8_SOURCE_DIRECTORY
+      value: /usr/src/egress-router-cni/rhel8/bin/
+    - name: RHEL9_SOURCE_DIRECTORY
+      value: /usr/src/egress-router-cni/rhel9/bin/
+    - name: DEFAULT_SOURCE_DIRECTORY
+      value: /usr/src/egress-router-cni/bin/
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a91e3de8081f371c9ff9f2f16619d915621264378f0c861e2ba1366f10053cb1
+    imagePullPolicy: IfNotPresent
+    name: egress-router-binary-copy
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /entrypoint
+      name: cni-binary-copy
+    - mountPath: /host/opt/cni/bin
+      name: cnibin
+    - mountPath: /host/etc/os-release
+      name: os-release
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-rhd5m
+      readOnly: true
+  - command:
+    - /bin/bash
+    - -c
+    - /entrypoint/cnibincopy.sh && cp -n /sysctls/allowlist.conf /host/etc/cni/tuning/
+    env:
+    - name: RHEL8_SOURCE_DIRECTORY
+      value: /usr/src/plugins/rhel8/bin/
+    - name: RHEL9_SOURCE_DIRECTORY
+      value: /usr/src/plugins/rhel9/bin/
+    - name: DEFAULT_SOURCE_DIRECTORY
+      value: /usr/src/plugins/bin/
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:7e0645fdd4a85c0bfda5083073b9fb5a0510dae53714eefeee2c6ba91826b831
+    imagePullPolicy: IfNotPresent
+    name: cni-plugins
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /entrypoint
+      name: cni-binary-copy
+    - mountPath: /host/opt/cni/bin
+      name: cnibin
+    - mountPath: /host/etc/os-release
+      name: os-release
+      readOnly: true
+    - mountPath: /host/etc/cni/tuning/
+      name: tuning-conf-dir
+    - mountPath: /sysctls
+      name: cni-sysctl-allowlist
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-rhd5m
+      readOnly: true
+  - command:
+    - /entrypoint/cnibincopy.sh
+    env:
+    - name: RHEL8_SOURCE_DIRECTORY
+      value: /bondcni/rhel8/
+    - name: RHEL9_SOURCE_DIRECTORY
+      value: /bondcni/rhel9/
+    - name: DEFAULT_SOURCE_DIRECTORY
+      value: /bondcni/rhel9/
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:454733fd181aace8613cae5f7cf9fcd2de5611445eeb0a78140e6ece467d123c
+    imagePullPolicy: IfNotPresent
+    name: bond-cni-plugin
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /entrypoint
+      name: cni-binary-copy
+    - mountPath: /host/opt/cni/bin
+      name: cnibin
+    - mountPath: /host/etc/os-release
+      name: os-release
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-rhd5m
+      readOnly: true
+  - command:
+    - /entrypoint/cnibincopy.sh
+    env:
+    - name: RHEL8_SOURCE_DIRECTORY
+      value: /usr/src/route-override/rhel8/bin/
+    - name: RHEL9_SOURCE_DIRECTORY
+      value: /usr/src/route-override/rhel9/bin/
+    - name: DEFAULT_SOURCE_DIRECTORY
+      value: /usr/src/route-override/bin/
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:5521bde2b6ea859e756b1e38fafd336461e31f852e9d702256343b5813bce97c
+    imagePullPolicy: IfNotPresent
+    name: routeoverride-cni
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /entrypoint
+      name: cni-binary-copy
+    - mountPath: /host/opt/cni/bin
+      name: cnibin
+    - mountPath: /host/etc/os-release
+      name: os-release
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-rhd5m
+      readOnly: true
+  - command:
+    - /entrypoint/cnibincopy.sh
+    env:
+    - name: RHEL8_SOURCE_DIRECTORY
+      value: /usr/src/whereabouts/rhel8/bin/
+    - name: RHEL9_SOURCE_DIRECTORY
+      value: /usr/src/whereabouts/rhel9/bin/
+    - name: DEFAULT_SOURCE_DIRECTORY
+      value: /usr/src/whereabouts/bin/
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:b76ef910c8a1cb86aa50b11f659bb7dd777fb2f506ca92861d804f0234bcd832
+    imagePullPolicy: IfNotPresent
+    name: whereabouts-cni-bincopy
+    resources:
+      requests:
+        cpu: 10m
+        memory: 10Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /entrypoint
+      name: cni-binary-copy
+    - mountPath: /host/opt/cni/bin
+      name: cnibin
+    - mountPath: /host/etc/os-release
+      name: os-release
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-rhd5m
+      readOnly: true
+  - command:
+    - /bin/sh
+    - -c
+    - |
+      #!/bin/sh
+
+      set -u -e
+
+      CNI_BIN_DIR=${CNI_BIN_DIR:-"/host/opt/cni/bin/"}
+      WHEREABOUTS_KUBECONFIG_FILE_HOST=${WHEREABOUTS_KUBECONFIG_FILE_HOST:-"/etc/cni/net.d/whereabouts.d/whereabouts.kubeconfig"}
+      CNI_CONF_DIR=${CNI_CONF_DIR:-"/host/etc/kubernetes/cni/net.d"}
+      WHEREABOUTS_RECONCILER_CRON=${WHEREABOUTS_RECONCILER_CRON:-30 4 * * *}
+
+      # Make a whereabouts.d directory (for our kubeconfig)
+
+      mkdir -p $CNI_CONF_DIR/whereabouts.d
+      WHEREABOUTS_KUBECONFIG=$CNI_CONF_DIR/whereabouts.d/whereabouts.kubeconfig
+      WHEREABOUTS_CONF_FILE=$CNI_CONF_DIR/whereabouts.d/whereabouts.conf
+      WHEREABOUTS_KUBECONFIG_LITERAL=$(echo "$WHEREABOUTS_KUBECONFIG" | sed -e s'|/host||')
+
+      # Write the nodename to the whereabouts.d directory for standardized hostname reference across cloud providers
+      echo $NODENAME > $CNI_CONF_DIR/whereabouts.d/nodename
+
+      SERVICE_ACCOUNT_PATH=/var/run/secrets/kubernetes.io/serviceaccount
+      KUBE_CA_FILE=${KUBE_CA_FILE:-$SERVICE_ACCOUNT_PATH/ca.crt}
+      SERVICE_ACCOUNT_TOKEN=$(cat $SERVICE_ACCOUNT_PATH/token)
+      SERVICE_ACCOUNT_TOKEN_PATH=$SERVICE_ACCOUNT_PATH/token
+      SKIP_TLS_VERIFY=${SKIP_TLS_VERIFY:-false}
+
+
+      function log()
+      {
+          echo "$(date -Iseconds) ${1}"
+      }
+
+      function error()
+      {
+          log "ERR:  {$1}"
+      }
+
+      function warn()
+      {
+          log "WARN: {$1}"
+      }
+
+
+      function generateKubeConfig {
+      # Check if we're running as a k8s pod.
+      if [ -f "$SERVICE_ACCOUNT_PATH/token" ]; then
+        # We're running as a k8d pod - expect some variables.
+        if [ -z ${KUBERNETES_SERVICE_HOST} ]; then
+          error "KUBERNETES_SERVICE_HOST not set"; exit 1;
+        fi
+        if [ -z ${KUBERNETES_SERVICE_PORT} ]; then
+          error "KUBERNETES_SERVICE_PORT not set"; exit 1;
+        fi
+
+        if [ "$SKIP_TLS_VERIFY" == "true" ]; then
+          TLS_CFG="insecure-skip-tls-verify: true"
+        elif [ -f "$KUBE_CA_FILE" ]; then
+          TLS_CFG="certificate-authority-data: $(cat $KUBE_CA_FILE | base64 | tr -d '\n')"
+        fi
+
+        # Kubernetes service address must be wrapped if it is IPv6 address
+        KUBERNETES_SERVICE_HOST_WRAP=$KUBERNETES_SERVICE_HOST
+        if [ "$KUBERNETES_SERVICE_HOST_WRAP" != "${KUBERNETES_SERVICE_HOST_WRAP#*:[0-9a-fA-F]}" ]; then
+          KUBERNETES_SERVICE_HOST_WRAP=\[$KUBERNETES_SERVICE_HOST_WRAP\]
+        fi
+
+        # Write a kubeconfig file for the CNI plugin.  Do this
+        # to skip TLS verification for now.  We should eventually support
+        # writing more complete kubeconfig files. This is only used
+        # if the provided CNI network config references it.
+        touch $WHEREABOUTS_KUBECONFIG
+        chmod ${KUBECONFIG_MODE:-600} $WHEREABOUTS_KUBECONFIG
+        cat > $WHEREABOUTS_KUBECONFIG <<EOF
+      # Kubeconfig file for the Whereabouts CNI plugin.
+      apiVersion: v1
+      kind: Config
+      clusters:
+      - name: local
+        cluster:
+          server: ${KUBERNETES_SERVICE_PROTOCOL:-https}://${KUBERNETES_SERVICE_HOST_WRAP}:${KUBERNETES_SERVICE_PORT}
+          $TLS_CFG
+      users:
+      - name: whereabouts
+        user:
+          token: "${SERVICE_ACCOUNT_TOKEN}"
+      contexts:
+      - name: whereabouts-context
+        context:
+          cluster: local
+          user: whereabouts
+          namespace: ${WHEREABOUTS_NAMESPACE}
+      current-context: whereabouts-context
+      EOF
+
+      # Copy the config from ConfigMap to the desired directory
+      cp /etc/whereabouts/config/whereabouts.conf $WHEREABOUTS_CONF_FILE
+      chmod 600 $WHEREABOUTS_CONF_FILE
+
+      else
+        warn "Doesn't look like we're running in a kubernetes environment (no serviceaccount token)"
+      fi
+
+      }
+
+      function generateWhereaboutsConf {
+
+        touch $WHEREABOUTS_CONF_FILE
+        chmod ${KUBECONFIG_MODE:-600} $WHEREABOUTS_CONF_FILE
+        cat > $WHEREABOUTS_CONF_FILE <<EOF
+      {
+        "datastore": "kubernetes",
+        "kubernetes": {
+          "kubeconfig": "${WHEREABOUTS_KUBECONFIG_LITERAL}"
+        },
+        "reconciler_cron_expression": "${WHEREABOUTS_RECONCILER_CRON}"
+      }
+      EOF
+
+      }
+
+      generateKubeConfig
+      # ------------------ end Generate a "kube-config"
+
+      # ----------------- Generate a whereabouts conf
+      # removed because we have the configmap
+      #generateWhereaboutsConf
+      # ---------------- End generate a whereabouts conf
+
+
+      # copy whereabouts to the cni bin dir
+      # SKIPPED DUE TO FIPS COPY.
+      # cp -f /whereabouts $CNI_BIN_DIR
+
+      # ---------------------- end generate a "kube-config".
+
+      # Unless told otherwise, sleep forever.
+      # This prevents Kubernetes from restarting the pod repeatedly.
+      should_sleep=${SLEEP:-"true"}
+      echo "Done configuring CNI.  Sleep=$should_sleep"
+      while [ "$should_sleep" == "true"  ]; do
+          sleep 1000000000000
+      done
+    env:
+    - name: NODENAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: spec.nodeName
+    - name: KUBERNETES_SERVICE_PORT
+      value: "6443"
+    - name: KUBERNETES_SERVICE_HOST
+      value: api-int.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    - name: CNI_BIN_DIR
+      value: /host/opt/cni/bin/
+    - name: CNI_CONF_DIR
+      value: /host/etc/cni/net.d
+    - name: SLEEP
+      value: "false"
+    - name: WHEREABOUTS_NAMESPACE
+      value: openshift-multus
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:b76ef910c8a1cb86aa50b11f659bb7dd777fb2f506ca92861d804f0234bcd832
+    imagePullPolicy: IfNotPresent
+    name: whereabouts-cni
+    resources:
+      requests:
+        cpu: 10m
+        memory: 10Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /host/opt/cni/bin
+      name: cnibin
+    - mountPath: /host/etc/cni/net.d
+      name: system-cni-dir
+    - mountPath: /etc/whereabouts/config
+      name: whereabouts-flatfile-configmap
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-rhd5m
+      readOnly: true
+  nodeName: ip-10-0-3-203.us-west-1.compute.internal
+  nodeSelector:
+    kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: multus-ancillary-tools
+  serviceAccountName: multus-ancillary-tools
+  terminationGracePeriodSeconds: 10
+  tolerations:
+  - operator: Exists
+  volumes:
+  - hostPath:
+      path: /etc/kubernetes/cni/net.d
+      type: ""
+    name: system-cni-dir
+  - hostPath:
+      path: /var/run/multus/cni/net.d
+      type: ""
+    name: multus-cni-dir
+  - hostPath:
+      path: /var/lib/cni/bin
+      type: ""
+    name: cnibin
+  - hostPath:
+      path: /etc/os-release
+      type: File
+    name: os-release
+  - configMap:
+      defaultMode: 484
+      name: cni-copy-resources
+    name: cni-binary-copy
+  - hostPath:
+      path: /etc/cni/tuning/
+      type: DirectoryOrCreate
+    name: tuning-conf-dir
+  - configMap:
+      defaultMode: 484
+      name: default-cni-sysctl-allowlist
+    name: cni-sysctl-allowlist
+  - configMap:
+      defaultMode: 420
+      name: whereabouts-flatfile-config
+    name: whereabouts-flatfile-configmap
+  - name: kube-api-access-rhd5m
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:29:16Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:29:52Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:29:53Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:29:53Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:29:12Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - allocatedResources:
+      cpu: 10m
+      memory: 10Mi
+    containerID: cri-o://6f5b68f9fa2e490cd67cd3a86e087744f5ef9913fd944b46140ad49bf29b53b6
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:0cca4df2e32bbccd8d4fbb9dfa9e5da38cce49566dbfdd95bfb29622cba642cd
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:0cca4df2e32bbccd8d4fbb9dfa9e5da38cce49566dbfdd95bfb29622cba642cd
+    lastState: {}
+    name: kube-multus-additional-cni-plugins
+    ready: true
+    resources:
+      requests:
+        cpu: 10m
+        memory: 10Mi
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2026-01-28T09:29:52Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        uid: 0
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-rhd5m
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 10.0.3.203
+  hostIPs:
+  - ip: 10.0.3.203
+  initContainerStatuses:
+  - containerID: cri-o://f836777f3abf2d9ce76f0ed4a1a78398b7070681b753edbbfd70387e7cdcc5a0
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a91e3de8081f371c9ff9f2f16619d915621264378f0c861e2ba1366f10053cb1
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a91e3de8081f371c9ff9f2f16619d915621264378f0c861e2ba1366f10053cb1
+    lastState: {}
+    name: egress-router-binary-copy
+    ready: true
+    resources: {}
+    restartCount: 0
+    started: false
+    state:
+      terminated:
+        containerID: cri-o://f836777f3abf2d9ce76f0ed4a1a78398b7070681b753edbbfd70387e7cdcc5a0
+        exitCode: 0
+        finishedAt: "2026-01-28T09:29:15Z"
+        reason: Completed
+        startedAt: "2026-01-28T09:29:15Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        uid: 0
+    volumeMounts:
+    - mountPath: /entrypoint
+      name: cni-binary-copy
+    - mountPath: /host/opt/cni/bin
+      name: cnibin
+    - mountPath: /host/etc/os-release
+      name: os-release
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-rhd5m
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - containerID: cri-o://888ef241c0764eafc6a31108972720c37ffbac948496649ef0e1ae7b38d1c520
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:7e0645fdd4a85c0bfda5083073b9fb5a0510dae53714eefeee2c6ba91826b831
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:7e0645fdd4a85c0bfda5083073b9fb5a0510dae53714eefeee2c6ba91826b831
+    lastState: {}
+    name: cni-plugins
+    ready: true
+    resources: {}
+    restartCount: 0
+    started: false
+    state:
+      terminated:
+        containerID: cri-o://888ef241c0764eafc6a31108972720c37ffbac948496649ef0e1ae7b38d1c520
+        exitCode: 0
+        finishedAt: "2026-01-28T09:29:25Z"
+        reason: Completed
+        startedAt: "2026-01-28T09:29:25Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        uid: 0
+    volumeMounts:
+    - mountPath: /entrypoint
+      name: cni-binary-copy
+    - mountPath: /host/opt/cni/bin
+      name: cnibin
+    - mountPath: /host/etc/os-release
+      name: os-release
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /host/etc/cni/tuning/
+      name: tuning-conf-dir
+    - mountPath: /sysctls
+      name: cni-sysctl-allowlist
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-rhd5m
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - containerID: cri-o://a44033f7c162269a912e476e6655101a6b7b416313c048701c79274458f5be7d
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:454733fd181aace8613cae5f7cf9fcd2de5611445eeb0a78140e6ece467d123c
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:454733fd181aace8613cae5f7cf9fcd2de5611445eeb0a78140e6ece467d123c
+    lastState: {}
+    name: bond-cni-plugin
+    ready: true
+    resources: {}
+    restartCount: 0
+    started: false
+    state:
+      terminated:
+        containerID: cri-o://a44033f7c162269a912e476e6655101a6b7b416313c048701c79274458f5be7d
+        exitCode: 0
+        finishedAt: "2026-01-28T09:29:28Z"
+        reason: Completed
+        startedAt: "2026-01-28T09:29:28Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        uid: 0
+    volumeMounts:
+    - mountPath: /entrypoint
+      name: cni-binary-copy
+    - mountPath: /host/opt/cni/bin
+      name: cnibin
+    - mountPath: /host/etc/os-release
+      name: os-release
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-rhd5m
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - containerID: cri-o://d86579379a3230d9fcedda2caa764589affc7503cf03e96f6e7b12f166470329
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:5521bde2b6ea859e756b1e38fafd336461e31f852e9d702256343b5813bce97c
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:5521bde2b6ea859e756b1e38fafd336461e31f852e9d702256343b5813bce97c
+    lastState: {}
+    name: routeoverride-cni
+    ready: true
+    resources: {}
+    restartCount: 0
+    started: false
+    state:
+      terminated:
+        containerID: cri-o://d86579379a3230d9fcedda2caa764589affc7503cf03e96f6e7b12f166470329
+        exitCode: 0
+        finishedAt: "2026-01-28T09:29:31Z"
+        reason: Completed
+        startedAt: "2026-01-28T09:29:31Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        uid: 0
+    volumeMounts:
+    - mountPath: /entrypoint
+      name: cni-binary-copy
+    - mountPath: /host/opt/cni/bin
+      name: cnibin
+    - mountPath: /host/etc/os-release
+      name: os-release
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-rhd5m
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - allocatedResources:
+      cpu: 10m
+      memory: 10Mi
+    containerID: cri-o://03070d4fdd47f1f2fc04e3483070ae736228e04ae3b0242b0920f9f020552df3
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:b76ef910c8a1cb86aa50b11f659bb7dd777fb2f506ca92861d804f0234bcd832
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:b76ef910c8a1cb86aa50b11f659bb7dd777fb2f506ca92861d804f0234bcd832
+    lastState: {}
+    name: whereabouts-cni-bincopy
+    ready: true
+    resources:
+      requests:
+        cpu: 10m
+        memory: 10Mi
+    restartCount: 0
+    started: false
+    state:
+      terminated:
+        containerID: cri-o://03070d4fdd47f1f2fc04e3483070ae736228e04ae3b0242b0920f9f020552df3
+        exitCode: 0
+        finishedAt: "2026-01-28T09:29:50Z"
+        reason: Completed
+        startedAt: "2026-01-28T09:29:50Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        uid: 0
+    volumeMounts:
+    - mountPath: /entrypoint
+      name: cni-binary-copy
+    - mountPath: /host/opt/cni/bin
+      name: cnibin
+    - mountPath: /host/etc/os-release
+      name: os-release
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-rhd5m
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - allocatedResources:
+      cpu: 10m
+      memory: 10Mi
+    containerID: cri-o://124f831a015e3ba77b98f8cadc792babc5b177db0f1e85c3b96ebd1c715820b5
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:b76ef910c8a1cb86aa50b11f659bb7dd777fb2f506ca92861d804f0234bcd832
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:b76ef910c8a1cb86aa50b11f659bb7dd777fb2f506ca92861d804f0234bcd832
+    lastState: {}
+    name: whereabouts-cni
+    ready: true
+    resources:
+      requests:
+        cpu: 10m
+        memory: 10Mi
+    restartCount: 0
+    started: false
+    state:
+      terminated:
+        containerID: cri-o://124f831a015e3ba77b98f8cadc792babc5b177db0f1e85c3b96ebd1c715820b5
+        exitCode: 0
+        finishedAt: "2026-01-28T09:29:51Z"
+        reason: Completed
+        startedAt: "2026-01-28T09:29:51Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        uid: 0
+    volumeMounts:
+    - mountPath: /host/opt/cni/bin
+      name: cnibin
+    - mountPath: /host/etc/cni/net.d
+      name: system-cni-dir
+    - mountPath: /etc/whereabouts/config
+      name: whereabouts-flatfile-configmap
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-rhd5m
+      readOnly: true
+      recursiveReadOnly: Disabled
+  phase: Running
+  podIP: 10.0.3.203
+  podIPs:
+  - ip: 10.0.3.203
+  qosClass: Burstable
+  startTime: "2026-01-28T09:29:12Z"

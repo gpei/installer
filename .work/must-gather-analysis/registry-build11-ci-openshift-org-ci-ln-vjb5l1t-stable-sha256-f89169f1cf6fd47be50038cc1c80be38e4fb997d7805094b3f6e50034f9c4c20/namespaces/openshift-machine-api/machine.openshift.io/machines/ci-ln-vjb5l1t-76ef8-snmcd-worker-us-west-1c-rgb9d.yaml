@@ -1,0 +1,238 @@
+---
+apiVersion: machine.openshift.io/v1beta1
+kind: Machine
+metadata:
+  annotations:
+    machine.openshift.io/instance-state: running
+  creationTimestamp: "2026-01-28T09:32:23Z"
+  finalizers:
+  - machine.machine.openshift.io
+  generateName: ci-ln-vjb5l1t-76ef8-snmcd-worker-us-west-1c-
+  generation: 2
+  labels:
+    machine.openshift.io/cluster-api-cluster: ci-ln-vjb5l1t-76ef8-snmcd
+    machine.openshift.io/cluster-api-machine-role: worker
+    machine.openshift.io/cluster-api-machine-type: worker
+    machine.openshift.io/cluster-api-machineset: ci-ln-vjb5l1t-76ef8-snmcd-worker-us-west-1c
+    machine.openshift.io/instance-type: m6a.xlarge
+    machine.openshift.io/region: us-west-1
+    machine.openshift.io/zone: us-west-1c
+  managedFields:
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:machine.openshift.io/cluster-api-cluster: {}
+          f:machine.openshift.io/cluster-api-machine-role: {}
+          f:machine.openshift.io/cluster-api-machine-type: {}
+          f:machine.openshift.io/cluster-api-machineset: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d3b592b2-80ad-43f2-aeea-78640a8a6b7a"}: {}
+      f:spec:
+        .: {}
+        f:lifecycleHooks: {}
+        f:metadata: {}
+        f:providerSpec:
+          .: {}
+          f:value:
+            .: {}
+            f:ami:
+              .: {}
+              f:id: {}
+            f:apiVersion: {}
+            f:blockDevices: {}
+            f:capacityReservationId: {}
+            f:credentialsSecret:
+              .: {}
+              f:name: {}
+            f:deviceIndex: {}
+            f:iamInstanceProfile:
+              .: {}
+              f:id: {}
+            f:instanceType: {}
+            f:kind: {}
+            f:metadata:
+              .: {}
+              f:creationTimestamp: {}
+            f:metadataServiceOptions: {}
+            f:placement:
+              .: {}
+              f:availabilityZone: {}
+              f:region: {}
+            f:securityGroups: {}
+            f:subnet:
+              .: {}
+              f:filters: {}
+            f:tags: {}
+            f:userDataSecret:
+              .: {}
+              f:name: {}
+    manager: machineset-controller
+    operation: Update
+    time: "2026-01-28T09:32:23Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:machine.openshift.io/instance-state: {}
+        f:finalizers:
+          .: {}
+          v:"machine.machine.openshift.io": {}
+        f:labels:
+          f:machine.openshift.io/instance-type: {}
+          f:machine.openshift.io/region: {}
+          f:machine.openshift.io/zone: {}
+      f:spec:
+        f:providerID: {}
+    manager: machine-controller-manager
+    operation: Update
+    time: "2026-01-28T09:33:21Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:addresses: {}
+        f:conditions:
+          .: {}
+          k:{"type":"Drainable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"InstanceExists"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Terminable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:phase: {}
+        f:providerStatus:
+          .: {}
+          f:conditions: {}
+          f:instanceId: {}
+          f:instanceState: {}
+    manager: machine-controller-manager
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:41:46Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:lastUpdated: {}
+        f:nodeRef: {}
+    manager: nodelink-controller
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:42:29Z"
+  name: ci-ln-vjb5l1t-76ef8-snmcd-worker-us-west-1c-rgb9d
+  namespace: openshift-machine-api
+  ownerReferences:
+  - apiVersion: machine.openshift.io/v1beta1
+    blockOwnerDeletion: true
+    controller: true
+    kind: MachineSet
+    name: ci-ln-vjb5l1t-76ef8-snmcd-worker-us-west-1c
+    uid: d3b592b2-80ad-43f2-aeea-78640a8a6b7a
+  resourceVersion: "21162"
+  uid: a34da133-b32d-4a40-896e-67430a3d5763
+spec:
+  lifecycleHooks: {}
+  metadata: {}
+  providerID: aws:///us-west-1c/i-039c1b44e22269044
+  providerSpec:
+    value:
+      ami:
+        id: ami-07680a1b8de089d13
+      apiVersion: machine.openshift.io/v1beta1
+      blockDevices:
+      - ebs:
+          encrypted: true
+          iops: 0
+          kmsKey:
+            arn: ""
+          volumeSize: 120
+          volumeType: gp3
+      capacityReservationId: ""
+      credentialsSecret:
+        name: aws-cloud-credentials
+      deviceIndex: 0
+      iamInstanceProfile:
+        id: ci-ln-vjb5l1t-76ef8-snmcd-worker-profile
+      instanceType: m6a.xlarge
+      kind: AWSMachineProviderConfig
+      metadata:
+        creationTimestamp: null
+      metadataServiceOptions: {}
+      placement:
+        availabilityZone: us-west-1c
+        region: us-west-1
+      securityGroups:
+      - filters:
+        - name: tag:Name
+          values:
+          - ci-ln-vjb5l1t-76ef8-snmcd-node
+      - filters:
+        - name: tag:Name
+          values:
+          - ci-ln-vjb5l1t-76ef8-snmcd-lb
+      subnet:
+        filters:
+        - name: tag:Name
+          values:
+          - ci-ln-vjb5l1t-76ef8-snmcd-subnet-private-us-west-1c
+      tags:
+      - name: kubernetes.io/cluster/ci-ln-vjb5l1t-76ef8-snmcd
+        value: owned
+      - name: ci-nat-replace
+        value: "true"
+      - name: clusterName
+        value: ci-ln-vjb5l1t-76ef8
+      - name: expirationDate
+        value: 2026-01-28T17:11+00:00
+      userDataSecret:
+        name: worker-user-data
+status:
+  addresses:
+  - address: 10.0.101.165
+    type: InternalIP
+  - address: ip-10-0-101-165.us-west-1.compute.internal
+    type: InternalDNS
+  - address: ip-10-0-101-165.us-west-1.compute.internal
+    type: Hostname
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:32:49Z"
+    status: "True"
+    type: Drainable
+  - lastTransitionTime: "2026-01-28T09:33:31Z"
+    status: "True"
+    type: InstanceExists
+  - lastTransitionTime: "2026-01-28T09:32:49Z"
+    status: "True"
+    type: Terminable
+  lastUpdated: "2026-01-28T09:42:29Z"
+  nodeRef:
+    kind: Node
+    name: ip-10-0-101-165.us-west-1.compute.internal
+    uid: b0fef558-e9cb-478b-80f8-c8c43c81a878
+  phase: Running
+  providerStatus:
+    conditions:
+    - lastTransitionTime: "2026-01-28T09:32:55Z"
+      message: Machine successfully created
+      reason: MachineCreationSucceeded
+      status: "True"
+      type: MachineCreation
+    instanceId: i-039c1b44e22269044
+    instanceState: running

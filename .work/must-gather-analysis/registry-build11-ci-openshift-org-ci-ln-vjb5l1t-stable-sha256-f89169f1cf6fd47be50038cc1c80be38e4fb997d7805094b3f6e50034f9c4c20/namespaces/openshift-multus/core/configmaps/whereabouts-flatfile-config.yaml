@@ -1,0 +1,39 @@
+---
+apiVersion: v1
+data:
+  whereabouts.conf: |
+    {
+      "datastore": "kubernetes",
+      "kubernetes": {
+        "kubeconfig": "/etc/kubernetes/cni/net.d/whereabouts.d/whereabouts.kubeconfig"
+      },
+      "reconciler_cron_expression": "30 4 * * *",
+      "log_level": "verbose",
+      "configuration_path": "/etc/kubernetes/cni/net.d/whereabouts.d"
+    }
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2026-01-28T09:29:12Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        f:whereabouts.conf: {}
+      f:metadata:
+        f:ownerReferences:
+          k:{"uid":"7763cebb-f1d7-4359-81b8-b55ef9916383"}: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2026-01-28T09:29:12Z"
+  name: whereabouts-flatfile-config
+  namespace: openshift-multus
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: 7763cebb-f1d7-4359-81b8-b55ef9916383
+  resourceVersion: "4147"
+  uid: 745b0cb3-4341-4a05-8ee3-76198d3f08e8

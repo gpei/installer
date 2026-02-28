@@ -1,0 +1,18 @@
+2026-01-28T09:29:44.931810396Z + [[ -f /env/_master ]]
+2026-01-28T09:29:44.931935129Z + ho_enable=--enable-hybrid-overlay
+2026-01-28T09:29:44.932409169Z ++ date '+%m%d %H:%M:%S.%N'
+2026-01-28T09:29:44.934633648Z + echo 'I0128 09:29:44.934184848 - network-node-identity - start webhook'
+2026-01-28T09:29:44.934683309Z I0128 09:29:44.934184848 - network-node-identity - start webhook
+2026-01-28T09:29:44.934790421Z + exec /usr/bin/ovnkube-identity --k8s-apiserver=https://api-int.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX:6443 --webhook-cert-dir=/etc/webhook-cert --webhook-host=127.0.0.1 --webhook-port=9743 --enable-hybrid-overlay --enable-interconnect --disable-approver --extra-allowed-user=system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-control-plane --wait-for-kubernetes-api=200s --pod-admission-conditions=/var/run/ovnkube-identity-config/additional-pod-admission-cond.json --loglevel=2
+2026-01-28T09:29:44.970449978Z I0128 09:29:44.969950       1 ovnkubeidentity.go:133] Config: {kubeconfig: apiServer:https://api-int.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX:6443 logLevel:2 port:9743 host:127.0.0.1 certDir:/etc/webhook-cert metricsAddress:0 leaseNamespace: enableInterconnect:true enableHybridOverlay:true disableWebhook:false disableApprover:true waitForKAPIDuration:200000000000 localKAPIPort:6443 extraAllowedUsers:{slice:[system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-control-plane] separator:{sep: disabled:false customized:false} hasBeenSet:true keepSpace:false} csrAcceptanceConditionFile: csrAcceptanceConditions:[] podAdmissionConditionFile:/var/run/ovnkube-identity-config/additional-pod-admission-cond.json podAdmissionConditions:[]}
+2026-01-28T09:29:44.970449978Z W0128 09:29:44.970384       1 client_config.go:667] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+2026-01-28T09:29:44.970823406Z I0128 09:29:44.970802       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2026-01-28T09:29:44.970859427Z I0128 09:29:44.970849       1 envvar.go:172] "Feature gate default state" feature="ClientsAllowCBOR" enabled=false
+2026-01-28T09:29:44.970885498Z I0128 09:29:44.970876       1 envvar.go:172] "Feature gate default state" feature="ClientsPreferCBOR" enabled=false
+2026-01-28T09:29:44.970910288Z I0128 09:29:44.970901       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2026-01-28T09:29:44.970933619Z I0128 09:29:44.970925       1 envvar.go:172] "Feature gate default state" feature="InOrderInformers" enabled=true
+2026-01-28T09:29:44.971405649Z I0128 09:29:44.971388       1 ovnkubeidentity.go:352] Waiting for caches to sync
+2026-01-28T09:29:44.990547046Z I0128 09:29:44.990396       1 reflector.go:430] "Caches populated" type="*v1.Node" reflector="k8s.io/client-go/informers/factory.go:160"
+2026-01-28T09:29:45.076798866Z I0128 09:29:45.076756       1 certwatcher.go:211] "Updated current TLS certificate" logger="controller-runtime.certwatcher"
+2026-01-28T09:29:45.077290617Z I0128 09:29:45.077271       1 ovnkubeidentity.go:431] Starting the webhook server
+2026-01-28T09:29:45.077601023Z I0128 09:29:45.077583       1 certwatcher.go:133] "Starting certificate poll+watcher" logger="controller-runtime.certwatcher" interval="10s"

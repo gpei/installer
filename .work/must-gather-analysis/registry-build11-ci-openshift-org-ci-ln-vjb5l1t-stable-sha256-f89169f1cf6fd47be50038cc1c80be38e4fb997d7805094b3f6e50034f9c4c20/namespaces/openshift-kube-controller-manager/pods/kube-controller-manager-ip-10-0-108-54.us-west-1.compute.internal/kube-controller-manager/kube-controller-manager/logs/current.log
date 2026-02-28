@@ -1,0 +1,349 @@
+2026-01-28T09:47:18.370109652Z + timeout 3m /bin/bash -exuo pipefail -c 'while [ -n "$(ss -Htanop \( sport = 10257 \))" ]; do sleep 1; done'
+2026-01-28T09:47:18.373511901Z ++ ss -Htanop '(' sport = 10257 ')'
+2026-01-28T09:47:18.383369422Z + '[' -n '' ']'
+2026-01-28T09:47:18.383757681Z + '[' -f /etc/kubernetes/static-pod-certs/configmaps/trusted-ca-bundle/ca-bundle.crt ']'
+2026-01-28T09:47:18.383773712Z + echo 'Copying system trust bundle'
+2026-01-28T09:47:18.383785122Z Copying system trust bundle
+2026-01-28T09:47:18.383795023Z + cp -f /etc/kubernetes/static-pod-certs/configmaps/trusted-ca-bundle/ca-bundle.crt /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem
+2026-01-28T09:47:18.386622333Z + '[' -f /etc/kubernetes/static-pod-resources/configmaps/cloud-config/ca-bundle.pem ']'
+2026-01-28T09:47:18.387162811Z + exec hyperkube kube-controller-manager --openshift-config=/etc/kubernetes/static-pod-resources/configmaps/config/config.yaml --kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/controller-manager-kubeconfig/kubeconfig --authentication-kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/controller-manager-kubeconfig/kubeconfig --authorization-kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/controller-manager-kubeconfig/kubeconfig --client-ca-file=/etc/kubernetes/static-pod-certs/configmaps/client-ca/ca-bundle.crt --requestheader-client-ca-file=/etc/kubernetes/static-pod-certs/configmaps/aggregator-client-ca/ca-bundle.crt -v=2 --tls-cert-file=/etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.crt --tls-private-key-file=/etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.key --allocate-node-cidrs=false --cert-dir=/var/run/kubernetes --cloud-provider=external --cluster-cidr=10.128.0.0/14 --cluster-name=ci-ln-vjb5l1t-76ef8-snmcd --cluster-signing-cert-file=/etc/kubernetes/static-pod-certs/secrets/csr-signer/tls.crt --cluster-signing-duration=720h --cluster-signing-key-file=/etc/kubernetes/static-pod-certs/secrets/csr-signer/tls.key '--controllers=*' --controllers=-bootstrapsigner --controllers=-tokencleaner --controllers=-ttl --controllers=selinux-warning-controller --enable-dynamic-provisioning=true --feature-gates=AWSClusterHostedDNS=false --feature-gates=AWSClusterHostedDNSInstall=false --feature-gates=AWSDedicatedHosts=false --feature-gates=AWSServiceLBNetworkSecurityGroup=false --feature-gates=AdditionalRoutingCapabilities=true --feature-gates=AdminNetworkPolicy=true --feature-gates=AlibabaPlatform=true --feature-gates=AutomatedEtcdBackup=false --feature-gates=AzureClusterHostedDNSInstall=false --feature-gates=AzureDedicatedHosts=false --feature-gates=AzureMultiDisk=false --feature-gates=AzureWorkloadIdentity=true --feature-gates=BootImageSkewEnforcement=false --feature-gates=BootcNodeManagement=false --feature-gates=BuildCSIVolumes=true --feature-gates=CPMSMachineNamePrefix=true --feature-gates=ClusterAPIInstall=false --feature-gates=ClusterAPIInstallIBMCloud=false --feature-gates=ClusterMonitoringConfig=false --feature-gates=ClusterVersionOperatorConfiguration=false --feature-gates=ConsolePluginContentSecurityPolicy=true --feature-gates=DNSNameResolver=false --feature-gates=DualReplica=false --feature-gates=DyanmicServiceEndpointIBMCloud=false --feature-gates=DynamicResourceAllocation=false --feature-gates=EtcdBackendQuota=false --feature-gates=EventedPLEG=false --feature-gates=Example2=false --feature-gates=Example=false --feature-gates=ExternalOIDC=true --feature-gates=ExternalOIDCWithUIDAndExtraClaimMappings=true --feature-gates=ExternalSnapshotMetadata=false --feature-gates=GCPClusterHostedDNS=false --feature-gates=GCPClusterHostedDNSInstall=false --feature-gates=GCPCustomAPIEndpoints=false --feature-gates=GCPCustomAPIEndpointsInstall=false --feature-gates=GatewayAPI=true --feature-gates=GatewayAPIController=true --feature-gates=HighlyAvailableArbiter=true --feature-gates=ImageModeStatusReporting=false --feature-gates=ImageStreamImportMode=false --feature-gates=ImageVolume=true --feature-gates=IngressControllerDynamicConfigurationManager=false --feature-gates=IngressControllerLBSubnetsAWS=true --feature-gates=InsightsConfig=false --feature-gates=InsightsConfigAPI=false --feature-gates=InsightsOnDemandDataGather=false --feature-gates=IrreconcilableMachineConfig=false --feature-gates=KMSEncryptionProvider=false --feature-gates=KMSv1=true --feature-gates=MachineAPIMigration=false --feature-gates=MachineAPIOperatorDisableMachineHealthCheckController=false --feature-gates=MachineConfigNodes=true --feature-gates=ManagedBootImages=true --feature-gates=ManagedBootImagesAWS=true --feature-gates=ManagedBootImagesAzure=false --feature-gates=ManagedBootImagesvSphere=false --feature-gates=MaxUnavailableStatefulSet=false --feature-gates=MetricsCollectionProfiles=true --feature-gates=MinimumKubeletVersion=false --feature-gates=MixedCPUsAllocation=false --feature-gates=MultiArchInstallAzure=false --feature-gates=MultiDiskSetup=false --feature-gates=MutatingAdmissionPolicy=false --feature-gates=NetworkDiagnosticsConfig=true --feature-gates=NetworkLiveMigration=true --feature-gates=NetworkSegmentation=true --feature-gates=NewOLM=true --feature-gates=NewOLMCatalogdAPIV1Metas=false --feature-gates=NewOLMOwnSingleNamespace=false --feature-gates=NewOLMPreflightPermissionChecks=false --feature-gates=NewOLMWebhookProviderOpenshiftServiceCA=false --feature-gates=NoRegistryClusterOperations=false --feature-gates=NodeSwap=false --feature-gates=NutanixMultiSubnets=false --feature-gates=OVNObservability=false --feature-gates=OpenShiftPodSecurityAdmission=false --feature-gates=PinnedImages=true --feature-gates=PreconfiguredUDNAddresses=true --feature-gates=ProcMountType=true --feature-gates=RouteAdvertisements=true --feature-gates=RouteExternalCertificate=true --feature-gates=SELinuxMount=false --feature-gates=ServiceAccountTokenNodeBinding=true --feature-gates=SetEIPForNLBIngressController=true --feature-gates=ShortCertRotation=false --feature-gates=SignatureStores=false --feature-gates=SigstoreImageVerification=true --feature-gates=SigstoreImageVerificationPKI=false --feature-gates=StoragePerformantSecurityPolicy=true --feature-gates=TranslateStreamCloseWebsocketRequests=false --feature-gates=UpgradeStatus=true --feature-gates=UserNamespacesPodSecurityStandards=true --feature-gates=UserNamespacesSupport=true --feature-gates=VSphereConfigurableMaxAllowedBlockVolumesPerNode=false --feature-gates=VSphereHostVMGroupZonal=false --feature-gates=VSphereMixedNodeEnv=false --feature-gates=VSphereMultiDisk=true --feature-gates=VSphereMultiNetworks=true --feature-gates=VolumeAttributesClass=false --feature-gates=VolumeGroupSnapshot=false --flex-volume-plugin-dir=/etc/kubernetes/kubelet-plugins/volume/exec --kube-api-burst=300 --kube-api-qps=150 --leader-elect-renew-deadline=12s --leader-elect-resource-lock=leases --leader-elect-retry-period=3s --leader-elect=true --pv-recycler-pod-template-filepath-hostpath=/etc/kubernetes/static-pod-resources/configmaps/recycler-config/recycler-pod.yaml --pv-recycler-pod-template-filepath-nfs=/etc/kubernetes/static-pod-resources/configmaps/recycler-config/recycler-pod.yaml --root-ca-file=/etc/kubernetes/static-pod-resources/configmaps/serviceaccount-ca/ca-bundle.crt --secure-port=10257 --service-account-private-key-file=/etc/kubernetes/static-pod-resources/secrets/service-account-private-key/service-account.key --service-cluster-ip-range=172.30.0.0/16 --use-service-account-credentials=true --tls-cipher-suites=TLS_AES_128_GCM_SHA256,TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 --tls-min-version=VersionTLS12
+2026-01-28T09:47:18.460287320Z W0128 09:47:18.460207       1 feature_gate.go:328] unrecognized feature gate: ImageStreamImportMode
+2026-01-28T09:47:18.460345573Z W0128 09:47:18.460332       1 feature_gate.go:328] unrecognized feature gate: InsightsConfig
+2026-01-28T09:47:18.460385735Z W0128 09:47:18.460373       1 feature_gate.go:349] Setting deprecated feature gate KMSv1=true. It will be removed in a future release.
+2026-01-28T09:47:18.460414266Z W0128 09:47:18.460403       1 feature_gate.go:328] unrecognized feature gate: BootImageSkewEnforcement
+2026-01-28T09:47:18.460440568Z W0128 09:47:18.460430       1 feature_gate.go:328] unrecognized feature gate: PreconfiguredUDNAddresses
+2026-01-28T09:47:18.460464619Z W0128 09:47:18.460454       1 feature_gate.go:328] unrecognized feature gate: GCPClusterHostedDNSInstall
+2026-01-28T09:47:18.460489550Z W0128 09:47:18.460479       1 feature_gate.go:328] unrecognized feature gate: MultiDiskSetup
+2026-01-28T09:47:18.460514591Z W0128 09:47:18.460504       1 feature_gate.go:328] unrecognized feature gate: KMSEncryptionProvider
+2026-01-28T09:47:18.460538792Z W0128 09:47:18.460529       1 feature_gate.go:328] unrecognized feature gate: IrreconcilableMachineConfig
+2026-01-28T09:47:18.460563334Z W0128 09:47:18.460553       1 feature_gate.go:328] unrecognized feature gate: GatewayAPIController
+2026-01-28T09:47:18.460600195Z W0128 09:47:18.460588       1 feature_gate.go:351] Setting GA feature gate ServiceAccountTokenNodeBinding=true. It will be removed in a future release.
+2026-01-28T09:47:18.460626597Z W0128 09:47:18.460616       1 feature_gate.go:328] unrecognized feature gate: VolumeGroupSnapshot
+2026-01-28T09:47:18.460653058Z W0128 09:47:18.460642       1 feature_gate.go:328] unrecognized feature gate: ClusterMonitoringConfig
+2026-01-28T09:47:18.460679110Z W0128 09:47:18.460669       1 feature_gate.go:328] unrecognized feature gate: MixedCPUsAllocation
+2026-01-28T09:47:18.460703401Z W0128 09:47:18.460693       1 feature_gate.go:328] unrecognized feature gate: NoRegistryClusterOperations
+2026-01-28T09:47:18.460727482Z W0128 09:47:18.460718       1 feature_gate.go:328] unrecognized feature gate: GCPCustomAPIEndpointsInstall
+2026-01-28T09:47:18.460751723Z W0128 09:47:18.460741       1 feature_gate.go:328] unrecognized feature gate: OVNObservability
+2026-01-28T09:47:18.460775684Z W0128 09:47:18.460766       1 feature_gate.go:328] unrecognized feature gate: AWSClusterHostedDNSInstall
+2026-01-28T09:47:18.460799936Z W0128 09:47:18.460790       1 feature_gate.go:328] unrecognized feature gate: ClusterAPIInstallIBMCloud
+2026-01-28T09:47:18.460824747Z W0128 09:47:18.460815       1 feature_gate.go:328] unrecognized feature gate: OpenShiftPodSecurityAdmission
+2026-01-28T09:47:18.460849138Z W0128 09:47:18.460839       1 feature_gate.go:328] unrecognized feature gate: AlibabaPlatform
+2026-01-28T09:47:18.460874669Z W0128 09:47:18.460864       1 feature_gate.go:328] unrecognized feature gate: NetworkSegmentation
+2026-01-28T09:47:18.460900630Z W0128 09:47:18.460890       1 feature_gate.go:328] unrecognized feature gate: DualReplica
+2026-01-28T09:47:18.460925592Z W0128 09:47:18.460915       1 feature_gate.go:328] unrecognized feature gate: MultiArchInstallAzure
+2026-01-28T09:47:18.461011906Z W0128 09:47:18.460998       1 feature_gate.go:328] unrecognized feature gate: ExternalOIDCWithUIDAndExtraClaimMappings
+2026-01-28T09:47:18.461084980Z W0128 09:47:18.461072       1 feature_gate.go:328] unrecognized feature gate: ManagedBootImagesvSphere
+2026-01-28T09:47:18.461126322Z W0128 09:47:18.461104       1 feature_gate.go:328] unrecognized feature gate: SignatureStores
+2026-01-28T09:47:18.461152933Z W0128 09:47:18.461143       1 feature_gate.go:328] unrecognized feature gate: ImageModeStatusReporting
+2026-01-28T09:47:18.461175714Z W0128 09:47:18.461166       1 feature_gate.go:328] unrecognized feature gate: NetworkDiagnosticsConfig
+2026-01-28T09:47:18.461220126Z W0128 09:47:18.461208       1 feature_gate.go:328] unrecognized feature gate: AWSServiceLBNetworkSecurityGroup
+2026-01-28T09:47:18.461246978Z W0128 09:47:18.461236       1 feature_gate.go:328] unrecognized feature gate: AWSDedicatedHosts
+2026-01-28T09:47:18.461273079Z W0128 09:47:18.461262       1 feature_gate.go:328] unrecognized feature gate: InsightsOnDemandDataGather
+2026-01-28T09:47:18.461297740Z W0128 09:47:18.461287       1 feature_gate.go:328] unrecognized feature gate: MachineAPIOperatorDisableMachineHealthCheckController
+2026-01-28T09:47:18.461323102Z W0128 09:47:18.461313       1 feature_gate.go:328] unrecognized feature gate: NetworkLiveMigration
+2026-01-28T09:47:18.461347123Z W0128 09:47:18.461337       1 feature_gate.go:328] unrecognized feature gate: ExternalOIDC
+2026-01-28T09:47:18.461370754Z W0128 09:47:18.461361       1 feature_gate.go:328] unrecognized feature gate: NewOLMPreflightPermissionChecks
+2026-01-28T09:47:18.461394955Z W0128 09:47:18.461385       1 feature_gate.go:328] unrecognized feature gate: ManagedBootImages
+2026-01-28T09:47:18.461419016Z W0128 09:47:18.461409       1 feature_gate.go:328] unrecognized feature gate: NewOLMOwnSingleNamespace
+2026-01-28T09:47:18.461442908Z W0128 09:47:18.461433       1 feature_gate.go:328] unrecognized feature gate: DyanmicServiceEndpointIBMCloud
+2026-01-28T09:47:18.461466559Z W0128 09:47:18.461457       1 feature_gate.go:328] unrecognized feature gate: MachineAPIMigration
+2026-01-28T09:47:18.461490330Z W0128 09:47:18.461480       1 feature_gate.go:328] unrecognized feature gate: SigstoreImageVerificationPKI
+2026-01-28T09:47:18.461514991Z W0128 09:47:18.461505       1 feature_gate.go:328] unrecognized feature gate: ClusterVersionOperatorConfiguration
+2026-01-28T09:47:18.461539082Z W0128 09:47:18.461529       1 feature_gate.go:328] unrecognized feature gate: GatewayAPI
+2026-01-28T09:47:18.461562754Z W0128 09:47:18.461553       1 feature_gate.go:328] unrecognized feature gate: ManagedBootImagesAWS
+2026-01-28T09:47:18.461587065Z W0128 09:47:18.461577       1 feature_gate.go:328] unrecognized feature gate: IngressControllerLBSubnetsAWS
+2026-01-28T09:47:18.461610706Z W0128 09:47:18.461601       1 feature_gate.go:328] unrecognized feature gate: BootcNodeManagement
+2026-01-28T09:47:18.461634707Z W0128 09:47:18.461624       1 feature_gate.go:328] unrecognized feature gate: ConsolePluginContentSecurityPolicy
+2026-01-28T09:47:18.461658528Z W0128 09:47:18.461649       1 feature_gate.go:328] unrecognized feature gate: VSphereMultiNetworks
+2026-01-28T09:47:18.461682069Z W0128 09:47:18.461672       1 feature_gate.go:328] unrecognized feature gate: AzureClusterHostedDNSInstall
+2026-01-28T09:47:18.461705630Z W0128 09:47:18.461696       1 feature_gate.go:328] unrecognized feature gate: CPMSMachineNamePrefix
+2026-01-28T09:47:18.461729442Z W0128 09:47:18.461719       1 feature_gate.go:328] unrecognized feature gate: VSphereMultiDisk
+2026-01-28T09:47:18.461754853Z W0128 09:47:18.461745       1 feature_gate.go:328] unrecognized feature gate: HighlyAvailableArbiter
+2026-01-28T09:47:18.461778414Z W0128 09:47:18.461769       1 feature_gate.go:328] unrecognized feature gate: IngressControllerDynamicConfigurationManager
+2026-01-28T09:47:18.461802135Z W0128 09:47:18.461792       1 feature_gate.go:328] unrecognized feature gate: ManagedBootImagesAzure
+2026-01-28T09:47:18.461825327Z W0128 09:47:18.461816       1 feature_gate.go:328] unrecognized feature gate: RouteAdvertisements
+2026-01-28T09:47:18.461849028Z W0128 09:47:18.461839       1 feature_gate.go:328] unrecognized feature gate: UpgradeStatus
+2026-01-28T09:47:18.461911301Z W0128 09:47:18.461899       1 feature_gate.go:328] unrecognized feature gate: PinnedImages
+2026-01-28T09:47:18.461945422Z W0128 09:47:18.461934       1 feature_gate.go:328] unrecognized feature gate: DNSNameResolver
+2026-01-28T09:47:18.461973454Z W0128 09:47:18.461962       1 feature_gate.go:328] unrecognized feature gate: AdditionalRoutingCapabilities
+2026-01-28T09:47:18.461999955Z W0128 09:47:18.461989       1 feature_gate.go:328] unrecognized feature gate: AutomatedEtcdBackup
+2026-01-28T09:47:18.462039767Z W0128 09:47:18.462013       1 feature_gate.go:328] unrecognized feature gate: BuildCSIVolumes
+2026-01-28T09:47:18.462112401Z W0128 09:47:18.462088       1 feature_gate.go:328] unrecognized feature gate: AdminNetworkPolicy
+2026-01-28T09:47:18.462112401Z W0128 09:47:18.462099       1 feature_gate.go:328] unrecognized feature gate: ClusterAPIInstall
+2026-01-28T09:47:18.462112401Z W0128 09:47:18.462104       1 feature_gate.go:328] unrecognized feature gate: InsightsConfigAPI
+2026-01-28T09:47:18.462112401Z W0128 09:47:18.462107       1 feature_gate.go:328] unrecognized feature gate: Example
+2026-01-28T09:47:18.462128172Z W0128 09:47:18.462111       1 feature_gate.go:328] unrecognized feature gate: NewOLM
+2026-01-28T09:47:18.462128172Z W0128 09:47:18.462114       1 feature_gate.go:328] unrecognized feature gate: VSphereHostVMGroupZonal
+2026-01-28T09:47:18.462128172Z W0128 09:47:18.462118       1 feature_gate.go:328] unrecognized feature gate: AWSClusterHostedDNS
+2026-01-28T09:47:18.462128172Z W0128 09:47:18.462121       1 feature_gate.go:328] unrecognized feature gate: ShortCertRotation
+2026-01-28T09:47:18.462128172Z W0128 09:47:18.462125       1 feature_gate.go:328] unrecognized feature gate: GCPCustomAPIEndpoints
+2026-01-28T09:47:18.462140362Z W0128 09:47:18.462128       1 feature_gate.go:328] unrecognized feature gate: MachineConfigNodes
+2026-01-28T09:47:18.462140362Z W0128 09:47:18.462131       1 feature_gate.go:328] unrecognized feature gate: GCPClusterHostedDNS
+2026-01-28T09:47:18.462140362Z W0128 09:47:18.462135       1 feature_gate.go:328] unrecognized feature gate: Example2
+2026-01-28T09:47:18.462151363Z W0128 09:47:18.462138       1 feature_gate.go:328] unrecognized feature gate: NewOLMCatalogdAPIV1Metas
+2026-01-28T09:47:18.462151363Z W0128 09:47:18.462142       1 feature_gate.go:328] unrecognized feature gate: SigstoreImageVerification
+2026-01-28T09:47:18.462151363Z W0128 09:47:18.462147       1 feature_gate.go:328] unrecognized feature gate: AzureMultiDisk
+2026-01-28T09:47:18.462161913Z W0128 09:47:18.462151       1 feature_gate.go:328] unrecognized feature gate: AzureDedicatedHosts
+2026-01-28T09:47:18.462161913Z W0128 09:47:18.462154       1 feature_gate.go:328] unrecognized feature gate: NewOLMWebhookProviderOpenshiftServiceCA
+2026-01-28T09:47:18.462161913Z W0128 09:47:18.462158       1 feature_gate.go:328] unrecognized feature gate: EtcdBackendQuota
+2026-01-28T09:47:18.462172334Z W0128 09:47:18.462162       1 feature_gate.go:328] unrecognized feature gate: AzureWorkloadIdentity
+2026-01-28T09:47:18.462172334Z W0128 09:47:18.462165       1 feature_gate.go:328] unrecognized feature gate: VSphereConfigurableMaxAllowedBlockVolumesPerNode
+2026-01-28T09:47:18.462172334Z W0128 09:47:18.462168       1 feature_gate.go:328] unrecognized feature gate: MetricsCollectionProfiles
+2026-01-28T09:47:18.462182814Z W0128 09:47:18.462172       1 feature_gate.go:328] unrecognized feature gate: SetEIPForNLBIngressController
+2026-01-28T09:47:18.462182814Z W0128 09:47:18.462175       1 feature_gate.go:328] unrecognized feature gate: NutanixMultiSubnets
+2026-01-28T09:47:18.462182814Z W0128 09:47:18.462178       1 feature_gate.go:328] unrecognized feature gate: ExternalSnapshotMetadata
+2026-01-28T09:47:18.462202325Z W0128 09:47:18.462182       1 feature_gate.go:328] unrecognized feature gate: VSphereMixedNodeEnv
+2026-01-28T09:47:18.462308491Z I0128 09:47:18.462284       1 flags.go:64] FLAG: --allocate-node-cidrs="false"
+2026-01-28T09:47:18.462308491Z I0128 09:47:18.462297       1 flags.go:64] FLAG: --allow-metric-labels="[]"
+2026-01-28T09:47:18.462333852Z I0128 09:47:18.462306       1 flags.go:64] FLAG: --allow-metric-labels-manifest=""
+2026-01-28T09:47:18.462333852Z I0128 09:47:18.462312       1 flags.go:64] FLAG: --allow-untagged-cloud="false"
+2026-01-28T09:47:18.462333852Z I0128 09:47:18.462316       1 flags.go:64] FLAG: --attach-detach-reconcile-sync-period="1m0s"
+2026-01-28T09:47:18.462333852Z I0128 09:47:18.462323       1 flags.go:64] FLAG: --authentication-kubeconfig="/etc/kubernetes/static-pod-resources/configmaps/controller-manager-kubeconfig/kubeconfig"
+2026-01-28T09:47:18.462333852Z I0128 09:47:18.462329       1 flags.go:64] FLAG: --authentication-skip-lookup="false"
+2026-01-28T09:47:18.462346633Z I0128 09:47:18.462333       1 flags.go:64] FLAG: --authentication-token-webhook-cache-ttl="10s"
+2026-01-28T09:47:18.462346633Z I0128 09:47:18.462337       1 flags.go:64] FLAG: --authentication-tolerate-lookup-failure="false"
+2026-01-28T09:47:18.462357343Z I0128 09:47:18.462341       1 flags.go:64] FLAG: --authorization-always-allow-paths="[/healthz,/readyz,/livez]"
+2026-01-28T09:47:18.462357343Z I0128 09:47:18.462348       1 flags.go:64] FLAG: --authorization-kubeconfig="/etc/kubernetes/static-pod-resources/configmaps/controller-manager-kubeconfig/kubeconfig"
+2026-01-28T09:47:18.462357343Z I0128 09:47:18.462353       1 flags.go:64] FLAG: --authorization-webhook-cache-authorized-ttl="10s"
+2026-01-28T09:47:18.462368314Z I0128 09:47:18.462357       1 flags.go:64] FLAG: --authorization-webhook-cache-unauthorized-ttl="10s"
+2026-01-28T09:47:18.462368314Z I0128 09:47:18.462361       1 flags.go:64] FLAG: --bind-address="0.0.0.0"
+2026-01-28T09:47:18.462378584Z I0128 09:47:18.462367       1 flags.go:64] FLAG: --cert-dir="/var/run/kubernetes"
+2026-01-28T09:47:18.462378584Z I0128 09:47:18.462371       1 flags.go:64] FLAG: --cidr-allocator-type="RangeAllocator"
+2026-01-28T09:47:18.462378584Z I0128 09:47:18.462375       1 flags.go:64] FLAG: --client-ca-file="/etc/kubernetes/static-pod-certs/configmaps/client-ca/ca-bundle.crt"
+2026-01-28T09:47:18.462389475Z I0128 09:47:18.462379       1 flags.go:64] FLAG: --cloud-config=""
+2026-01-28T09:47:18.462389475Z I0128 09:47:18.462383       1 flags.go:64] FLAG: --cloud-provider="external"
+2026-01-28T09:47:18.462399605Z I0128 09:47:18.462387       1 flags.go:64] FLAG: --cluster-cidr="10.128.0.0/14"
+2026-01-28T09:47:18.462399605Z I0128 09:47:18.462391       1 flags.go:64] FLAG: --cluster-name="ci-ln-vjb5l1t-76ef8-snmcd"
+2026-01-28T09:47:18.462399605Z I0128 09:47:18.462395       1 flags.go:64] FLAG: --cluster-signing-cert-file="/etc/kubernetes/static-pod-certs/secrets/csr-signer/tls.crt"
+2026-01-28T09:47:18.462410246Z I0128 09:47:18.462399       1 flags.go:64] FLAG: --cluster-signing-duration="720h0m0s"
+2026-01-28T09:47:18.462410246Z I0128 09:47:18.462403       1 flags.go:64] FLAG: --cluster-signing-key-file="/etc/kubernetes/static-pod-certs/secrets/csr-signer/tls.key"
+2026-01-28T09:47:18.462420616Z I0128 09:47:18.462408       1 flags.go:64] FLAG: --cluster-signing-kube-apiserver-client-cert-file=""
+2026-01-28T09:47:18.462420616Z I0128 09:47:18.462411       1 flags.go:64] FLAG: --cluster-signing-kube-apiserver-client-key-file=""
+2026-01-28T09:47:18.462420616Z I0128 09:47:18.462415       1 flags.go:64] FLAG: --cluster-signing-kubelet-client-cert-file=""
+2026-01-28T09:47:18.462437137Z I0128 09:47:18.462419       1 flags.go:64] FLAG: --cluster-signing-kubelet-client-key-file=""
+2026-01-28T09:47:18.462437137Z I0128 09:47:18.462423       1 flags.go:64] FLAG: --cluster-signing-kubelet-serving-cert-file=""
+2026-01-28T09:47:18.462437137Z I0128 09:47:18.462426       1 flags.go:64] FLAG: --cluster-signing-kubelet-serving-key-file=""
+2026-01-28T09:47:18.462437137Z I0128 09:47:18.462430       1 flags.go:64] FLAG: --cluster-signing-legacy-unknown-cert-file=""
+2026-01-28T09:47:18.462437137Z I0128 09:47:18.462434       1 flags.go:64] FLAG: --cluster-signing-legacy-unknown-key-file=""
+2026-01-28T09:47:18.462448447Z I0128 09:47:18.462438       1 flags.go:64] FLAG: --concurrent-cron-job-syncs="5"
+2026-01-28T09:47:18.462448447Z I0128 09:47:18.462443       1 flags.go:64] FLAG: --concurrent-daemonset-syncs="2"
+2026-01-28T09:47:18.462458618Z I0128 09:47:18.462447       1 flags.go:64] FLAG: --concurrent-deployment-syncs="5"
+2026-01-28T09:47:18.462458618Z I0128 09:47:18.462451       1 flags.go:64] FLAG: --concurrent-endpoint-syncs="5"
+2026-01-28T09:47:18.462458618Z I0128 09:47:18.462454       1 flags.go:64] FLAG: --concurrent-ephemeralvolume-syncs="5"
+2026-01-28T09:47:18.462469509Z I0128 09:47:18.462458       1 flags.go:64] FLAG: --concurrent-gc-syncs="20"
+2026-01-28T09:47:18.462469509Z I0128 09:47:18.462463       1 flags.go:64] FLAG: --concurrent-horizontal-pod-autoscaler-syncs="5"
+2026-01-28T09:47:18.462469509Z I0128 09:47:18.462467       1 flags.go:64] FLAG: --concurrent-job-syncs="5"
+2026-01-28T09:47:18.462480149Z I0128 09:47:18.462470       1 flags.go:64] FLAG: --concurrent-namespace-syncs="10"
+2026-01-28T09:47:18.462480149Z I0128 09:47:18.462474       1 flags.go:64] FLAG: --concurrent-rc-syncs="5"
+2026-01-28T09:47:18.462490130Z I0128 09:47:18.462478       1 flags.go:64] FLAG: --concurrent-replicaset-syncs="5"
+2026-01-28T09:47:18.462490130Z I0128 09:47:18.462481       1 flags.go:64] FLAG: --concurrent-resource-quota-syncs="5"
+2026-01-28T09:47:18.462490130Z I0128 09:47:18.462485       1 flags.go:64] FLAG: --concurrent-service-endpoint-syncs="5"
+2026-01-28T09:47:18.462500540Z I0128 09:47:18.462489       1 flags.go:64] FLAG: --concurrent-service-syncs="1"
+2026-01-28T09:47:18.462500540Z I0128 09:47:18.462493       1 flags.go:64] FLAG: --concurrent-serviceaccount-token-syncs="5"
+2026-01-28T09:47:18.462500540Z I0128 09:47:18.462496       1 flags.go:64] FLAG: --concurrent-statefulset-syncs="5"
+2026-01-28T09:47:18.462511101Z I0128 09:47:18.462500       1 flags.go:64] FLAG: --concurrent-ttl-after-finished-syncs="5"
+2026-01-28T09:47:18.462511101Z I0128 09:47:18.462504       1 flags.go:64] FLAG: --concurrent-validating-admission-policy-status-syncs="5"
+2026-01-28T09:47:18.462511101Z I0128 09:47:18.462507       1 flags.go:64] FLAG: --configure-cloud-routes="true"
+2026-01-28T09:47:18.462521941Z I0128 09:47:18.462511       1 flags.go:64] FLAG: --contention-profiling="false"
+2026-01-28T09:47:18.462521941Z I0128 09:47:18.462515       1 flags.go:64] FLAG: --controller-start-interval="0s"
+2026-01-28T09:47:18.462531982Z I0128 09:47:18.462518       1 flags.go:64] FLAG: --controllers="[*,-bootstrapsigner,-tokencleaner,-ttl,selinux-warning-controller]"
+2026-01-28T09:47:18.462531982Z I0128 09:47:18.462526       1 flags.go:64] FLAG: --disable-attach-detach-reconcile-sync="false"
+2026-01-28T09:47:18.462542182Z I0128 09:47:18.462530       1 flags.go:64] FLAG: --disable-force-detach-on-timeout="false"
+2026-01-28T09:47:18.462542182Z I0128 09:47:18.462534       1 flags.go:64] FLAG: --disable-http2-serving="false"
+2026-01-28T09:47:18.462542182Z I0128 09:47:18.462538       1 flags.go:64] FLAG: --disabled-metrics="[]"
+2026-01-28T09:47:18.462557703Z I0128 09:47:18.462542       1 flags.go:64] FLAG: --emulated-version="[]"
+2026-01-28T09:47:18.462557703Z I0128 09:47:18.462547       1 flags.go:64] FLAG: --enable-dynamic-provisioning="true"
+2026-01-28T09:47:18.462557703Z I0128 09:47:18.462551       1 flags.go:64] FLAG: --enable-garbage-collector="true"
+2026-01-28T09:47:18.462557703Z I0128 09:47:18.462555       1 flags.go:64] FLAG: --enable-hostpath-provisioner="false"
+2026-01-28T09:47:18.462569533Z I0128 09:47:18.462558       1 flags.go:64] FLAG: --enable-leader-migration="false"
+2026-01-28T09:47:18.462569533Z I0128 09:47:18.462562       1 flags.go:64] FLAG: --endpoint-updates-batch-period="0s"
+2026-01-28T09:47:18.462569533Z I0128 09:47:18.462566       1 flags.go:64] FLAG: --endpointslice-updates-batch-period="0s"
+2026-01-28T09:47:18.462580144Z I0128 09:47:18.462570       1 flags.go:64] FLAG: --external-cloud-volume-plugin=""
+2026-01-28T09:47:18.462664438Z I0128 09:47:18.462574       1 flags.go:64] FLAG: --feature-gates=":AWSClusterHostedDNS=false,:AWSClusterHostedDNSInstall=false,:AWSDedicatedHosts=false,:AWSServiceLBNetworkSecurityGroup=false,:AdditionalRoutingCapabilities=true,:AdminNetworkPolicy=true,:AlibabaPlatform=true,:AutomatedEtcdBackup=false,:AzureClusterHostedDNSInstall=false,:AzureDedicatedHosts=false,:AzureMultiDisk=false,:AzureWorkloadIdentity=true,:BootImageSkewEnforcement=false,:BootcNodeManagement=false,:BuildCSIVolumes=true,:CPMSMachineNamePrefix=true,:ClusterAPIInstall=false,:ClusterAPIInstallIBMCloud=false,:ClusterMonitoringConfig=false,:ClusterVersionOperatorConfiguration=false,:ConsolePluginContentSecurityPolicy=true,:DNSNameResolver=false,:DualReplica=false,:DyanmicServiceEndpointIBMCloud=false,:DynamicResourceAllocation=false,:EtcdBackendQuota=false,:EventedPLEG=false,:Example2=false,:Example=false,:ExternalOIDC=true,:ExternalOIDCWithUIDAndExtraClaimMappings=true,:ExternalSnapshotMetadata=false,:GCPClusterHostedDNS=false,:GCPClusterHostedDNSInstall=false,:GCPCustomAPIEndpoints=false,:GCPCustomAPIEndpointsInstall=false,:GatewayAPI=true,:GatewayAPIController=true,:HighlyAvailableArbiter=true,:ImageModeStatusReporting=false,:ImageStreamImportMode=false,:ImageVolume=true,:IngressControllerDynamicConfigurationManager=false,:IngressControllerLBSubnetsAWS=true,:InsightsConfig=false,:InsightsConfigAPI=false,:InsightsOnDemandDataGather=false,:IrreconcilableMachineConfig=false,:KMSEncryptionProvider=false,:KMSv1=true,:MachineAPIMigration=false,:MachineAPIOperatorDisableMachineHealthCheckController=false,:MachineConfigNodes=true,:ManagedBootImages=true,:ManagedBootImagesAWS=true,:ManagedBootImagesAzure=false,:ManagedBootImagesvSphere=false,:MaxUnavailableStatefulSet=false,:MetricsCollectionProfiles=true,:MinimumKubeletVersion=false,:MixedCPUsAllocation=false,:MultiArchInstallAzure=false,:MultiDiskSetup=false,:MutatingAdmissionPolicy=false,:NetworkDiagnosticsConfig=true,:NetworkLiveMigration=true,:NetworkSegmentation=true,:NewOLM=true,:NewOLMCatalogdAPIV1Metas=false,:NewOLMOwnSingleNamespace=false,:NewOLMPreflightPermissionChecks=false,:NewOLMWebhookProviderOpenshiftServiceCA=false,:NoRegistryClusterOperations=false,:NodeSwap=false,:NutanixMultiSubnets=false,:OVNObservability=false,:OpenShiftPodSecurityAdmission=false,:PinnedImages=true,:PreconfiguredUDNAddresses=true,:ProcMountType=true,:RouteAdvertisements=true,:RouteExternalCertificate=true,:SELinuxMount=false,:ServiceAccountTokenNodeBinding=true,:SetEIPForNLBIngressController=true,:ShortCertRotation=false,:SignatureStores=false,:SigstoreImageVerification=true,:SigstoreImageVerificationPKI=false,:StoragePerformantSecurityPolicy=true,:TranslateStreamCloseWebsocketRequests=false,:UpgradeStatus=true,:UserNamespacesPodSecurityStandards=true,:UserNamespacesSupport=true,:VSphereConfigurableMaxAllowedBlockVolumesPerNode=false,:VSphereHostVMGroupZonal=false,:VSphereMixedNodeEnv=false,:VSphereMultiDisk=true,:VSphereMultiNetworks=true,:VolumeAttributesClass=false,:VolumeGroupSnapshot=false"
+2026-01-28T09:47:18.462664438Z I0128 09:47:18.462653       1 flags.go:64] FLAG: --flex-volume-plugin-dir="/etc/kubernetes/kubelet-plugins/volume/exec"
+2026-01-28T09:47:18.462664438Z I0128 09:47:18.462660       1 flags.go:64] FLAG: --help="false"
+2026-01-28T09:47:18.462685169Z I0128 09:47:18.462664       1 flags.go:64] FLAG: --horizontal-pod-autoscaler-cpu-initialization-period="5m0s"
+2026-01-28T09:47:18.462685169Z I0128 09:47:18.462668       1 flags.go:64] FLAG: --horizontal-pod-autoscaler-downscale-stabilization="5m0s"
+2026-01-28T09:47:18.462685169Z I0128 09:47:18.462674       1 flags.go:64] FLAG: --horizontal-pod-autoscaler-initial-readiness-delay="30s"
+2026-01-28T09:47:18.462685169Z I0128 09:47:18.462678       1 flags.go:64] FLAG: --horizontal-pod-autoscaler-sync-period="15s"
+2026-01-28T09:47:18.462748933Z I0128 09:47:18.462682       1 flags.go:64] FLAG: --horizontal-pod-autoscaler-tolerance="0.1"
+2026-01-28T09:47:18.462748933Z I0128 09:47:18.462694       1 flags.go:64] FLAG: --http2-max-streams-per-connection="0"
+2026-01-28T09:47:18.462748933Z I0128 09:47:18.462699       1 flags.go:64] FLAG: --kube-api-burst="300"
+2026-01-28T09:47:18.462748933Z I0128 09:47:18.462703       1 flags.go:64] FLAG: --kube-api-content-type="application/vnd.kubernetes.protobuf"
+2026-01-28T09:47:18.462748933Z I0128 09:47:18.462707       1 flags.go:64] FLAG: --kube-api-qps="150"
+2026-01-28T09:47:18.462748933Z I0128 09:47:18.462712       1 flags.go:64] FLAG: --kubeconfig="/etc/kubernetes/static-pod-resources/configmaps/controller-manager-kubeconfig/kubeconfig"
+2026-01-28T09:47:18.462748933Z I0128 09:47:18.462716       1 flags.go:64] FLAG: --large-cluster-size-threshold="50"
+2026-01-28T09:47:18.462748933Z I0128 09:47:18.462720       1 flags.go:64] FLAG: --leader-elect="true"
+2026-01-28T09:47:18.462748933Z I0128 09:47:18.462724       1 flags.go:64] FLAG: --leader-elect-lease-duration="15s"
+2026-01-28T09:47:18.462748933Z I0128 09:47:18.462728       1 flags.go:64] FLAG: --leader-elect-renew-deadline="12s"
+2026-01-28T09:47:18.462748933Z I0128 09:47:18.462732       1 flags.go:64] FLAG: --leader-elect-resource-lock="leases"
+2026-01-28T09:47:18.462748933Z I0128 09:47:18.462735       1 flags.go:64] FLAG: --leader-elect-resource-name="kube-controller-manager"
+2026-01-28T09:47:18.462748933Z I0128 09:47:18.462739       1 flags.go:64] FLAG: --leader-elect-resource-namespace="kube-system"
+2026-01-28T09:47:18.462748933Z I0128 09:47:18.462742       1 flags.go:64] FLAG: --leader-elect-retry-period="3s"
+2026-01-28T09:47:18.462763573Z I0128 09:47:18.462746       1 flags.go:64] FLAG: --leader-migration-config=""
+2026-01-28T09:47:18.462763573Z I0128 09:47:18.462750       1 flags.go:64] FLAG: --legacy-service-account-token-clean-up-period="8760h0m0s"
+2026-01-28T09:47:18.462763573Z I0128 09:47:18.462754       1 flags.go:64] FLAG: --log-flush-frequency="5s"
+2026-01-28T09:47:18.462774164Z I0128 09:47:18.462758       1 flags.go:64] FLAG: --log-json-info-buffer-size="0"
+2026-01-28T09:47:18.462774164Z I0128 09:47:18.462765       1 flags.go:64] FLAG: --log-json-split-stream="false"
+2026-01-28T09:47:18.462774164Z I0128 09:47:18.462769       1 flags.go:64] FLAG: --log-text-info-buffer-size="0"
+2026-01-28T09:47:18.462791415Z I0128 09:47:18.462772       1 flags.go:64] FLAG: --log-text-split-stream="false"
+2026-01-28T09:47:18.462791415Z I0128 09:47:18.462776       1 flags.go:64] FLAG: --logging-format="text"
+2026-01-28T09:47:18.462819516Z I0128 09:47:18.462805       1 flags.go:64] FLAG: --master=""
+2026-01-28T09:47:18.462854028Z I0128 09:47:18.462833       1 flags.go:64] FLAG: --max-endpoints-per-slice="100"
+2026-01-28T09:47:18.462854028Z I0128 09:47:18.462841       1 flags.go:64] FLAG: --min-resync-period="12h0m0s"
+2026-01-28T09:47:18.462854028Z I0128 09:47:18.462846       1 flags.go:64] FLAG: --mirroring-concurrent-service-endpoint-syncs="5"
+2026-01-28T09:47:18.462854028Z I0128 09:47:18.462850       1 flags.go:64] FLAG: --mirroring-endpointslice-updates-batch-period="0s"
+2026-01-28T09:47:18.462873019Z I0128 09:47:18.462854       1 flags.go:64] FLAG: --mirroring-max-endpoints-per-subset="1000"
+2026-01-28T09:47:18.462873019Z I0128 09:47:18.462859       1 flags.go:64] FLAG: --namespace-sync-period="5m0s"
+2026-01-28T09:47:18.462873019Z I0128 09:47:18.462863       1 flags.go:64] FLAG: --node-cidr-mask-size="0"
+2026-01-28T09:47:18.462873019Z I0128 09:47:18.462867       1 flags.go:64] FLAG: --node-cidr-mask-size-ipv4="0"
+2026-01-28T09:47:18.462884379Z I0128 09:47:18.462872       1 flags.go:64] FLAG: --node-cidr-mask-size-ipv6="0"
+2026-01-28T09:47:18.462884379Z I0128 09:47:18.462876       1 flags.go:64] FLAG: --node-eviction-rate="0.1"
+2026-01-28T09:47:18.462884379Z I0128 09:47:18.462881       1 flags.go:64] FLAG: --node-monitor-grace-period="50s"
+2026-01-28T09:47:18.462895160Z I0128 09:47:18.462884       1 flags.go:64] FLAG: --node-monitor-period="5s"
+2026-01-28T09:47:18.462895160Z I0128 09:47:18.462888       1 flags.go:64] FLAG: --node-startup-grace-period="1m0s"
+2026-01-28T09:47:18.462895160Z I0128 09:47:18.462892       1 flags.go:64] FLAG: --node-sync-period="0s"
+2026-01-28T09:47:18.462905920Z I0128 09:47:18.462896       1 flags.go:64] FLAG: --openshift-config="/etc/kubernetes/static-pod-resources/configmaps/config/config.yaml"
+2026-01-28T09:47:18.462905920Z I0128 09:47:18.462901       1 flags.go:64] FLAG: --permit-address-sharing="false"
+2026-01-28T09:47:18.462916101Z I0128 09:47:18.462904       1 flags.go:64] FLAG: --permit-port-sharing="false"
+2026-01-28T09:47:18.462916101Z I0128 09:47:18.462909       1 flags.go:64] FLAG: --profiling="true"
+2026-01-28T09:47:18.462916101Z I0128 09:47:18.462913       1 flags.go:64] FLAG: --pv-recycler-increment-timeout-nfs="30"
+2026-01-28T09:47:18.462926621Z I0128 09:47:18.462916       1 flags.go:64] FLAG: --pv-recycler-minimum-timeout-hostpath="60"
+2026-01-28T09:47:18.462926621Z I0128 09:47:18.462920       1 flags.go:64] FLAG: --pv-recycler-minimum-timeout-nfs="300"
+2026-01-28T09:47:18.462936722Z I0128 09:47:18.462924       1 flags.go:64] FLAG: --pv-recycler-pod-template-filepath-hostpath="/etc/kubernetes/static-pod-resources/configmaps/recycler-config/recycler-pod.yaml"
+2026-01-28T09:47:18.462936722Z I0128 09:47:18.462929       1 flags.go:64] FLAG: --pv-recycler-pod-template-filepath-nfs="/etc/kubernetes/static-pod-resources/configmaps/recycler-config/recycler-pod.yaml"
+2026-01-28T09:47:18.462947182Z I0128 09:47:18.462935       1 flags.go:64] FLAG: --pv-recycler-timeout-increment-hostpath="30"
+2026-01-28T09:47:18.462947182Z I0128 09:47:18.462938       1 flags.go:64] FLAG: --pvclaimbinder-sync-period="15s"
+2026-01-28T09:47:18.462947182Z I0128 09:47:18.462942       1 flags.go:64] FLAG: --requestheader-allowed-names="[]"
+2026-01-28T09:47:18.462957973Z I0128 09:47:18.462948       1 flags.go:64] FLAG: --requestheader-client-ca-file="/etc/kubernetes/static-pod-certs/configmaps/aggregator-client-ca/ca-bundle.crt"
+2026-01-28T09:47:18.462957973Z I0128 09:47:18.462953       1 flags.go:64] FLAG: --requestheader-extra-headers-prefix="[x-remote-extra-]"
+2026-01-28T09:47:18.462968193Z I0128 09:47:18.462958       1 flags.go:64] FLAG: --requestheader-group-headers="[x-remote-group]"
+2026-01-28T09:47:18.462968193Z I0128 09:47:18.462963       1 flags.go:64] FLAG: --requestheader-uid-headers="[]"
+2026-01-28T09:47:18.462982684Z I0128 09:47:18.462967       1 flags.go:64] FLAG: --requestheader-username-headers="[x-remote-user]"
+2026-01-28T09:47:18.462982684Z I0128 09:47:18.462972       1 flags.go:64] FLAG: --resource-quota-sync-period="5m0s"
+2026-01-28T09:47:18.462982684Z I0128 09:47:18.462976       1 flags.go:64] FLAG: --root-ca-file="/etc/kubernetes/static-pod-resources/configmaps/serviceaccount-ca/ca-bundle.crt"
+2026-01-28T09:47:18.462993525Z I0128 09:47:18.462981       1 flags.go:64] FLAG: --route-reconciliation-period="10s"
+2026-01-28T09:47:18.462993525Z I0128 09:47:18.462985       1 flags.go:64] FLAG: --secondary-node-eviction-rate="0.01"
+2026-01-28T09:47:18.462993525Z I0128 09:47:18.462989       1 flags.go:64] FLAG: --secure-port="10257"
+2026-01-28T09:47:18.463004075Z I0128 09:47:18.462993       1 flags.go:64] FLAG: --service-account-private-key-file="/etc/kubernetes/static-pod-resources/secrets/service-account-private-key/service-account.key"
+2026-01-28T09:47:18.463004075Z I0128 09:47:18.462998       1 flags.go:64] FLAG: --service-cluster-ip-range="172.30.0.0/16"
+2026-01-28T09:47:18.463013986Z I0128 09:47:18.463002       1 flags.go:64] FLAG: --show-hidden-metrics-for-version=""
+2026-01-28T09:47:18.463013986Z I0128 09:47:18.463006       1 flags.go:64] FLAG: --terminated-pod-gc-threshold="12500"
+2026-01-28T09:47:18.463013986Z I0128 09:47:18.463010       1 flags.go:64] FLAG: --tls-cert-file="/etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.crt"
+2026-01-28T09:47:18.463064958Z I0128 09:47:18.463015       1 flags.go:64] FLAG: --tls-cipher-suites="[TLS_AES_128_GCM_SHA256,TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256]"
+2026-01-28T09:47:18.463064958Z I0128 09:47:18.463042       1 flags.go:64] FLAG: --tls-min-version="VersionTLS12"
+2026-01-28T09:47:18.463064958Z I0128 09:47:18.463046       1 flags.go:64] FLAG: --tls-private-key-file="/etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.key"
+2026-01-28T09:47:18.463064958Z I0128 09:47:18.463051       1 flags.go:64] FLAG: --tls-sni-cert-key="[]"
+2026-01-28T09:47:18.463064958Z I0128 09:47:18.463056       1 flags.go:64] FLAG: --unhealthy-zone-threshold="0.55"
+2026-01-28T09:47:18.463064958Z I0128 09:47:18.463061       1 flags.go:64] FLAG: --unsupported-kube-api-over-localhost="false"
+2026-01-28T09:47:18.463082659Z I0128 09:47:18.463065       1 flags.go:64] FLAG: --use-service-account-credentials="true"
+2026-01-28T09:47:18.463082659Z I0128 09:47:18.463068       1 flags.go:64] FLAG: --v="2"
+2026-01-28T09:47:18.463082659Z I0128 09:47:18.463074       1 flags.go:64] FLAG: --version="false"
+2026-01-28T09:47:18.463092980Z I0128 09:47:18.463079       1 flags.go:64] FLAG: --vmodule=""
+2026-01-28T09:47:18.463206365Z W0128 09:47:18.463184       1 feature_gate.go:328] unrecognized feature gate: AzureClusterHostedDNSInstall
+2026-01-28T09:47:18.463206365Z W0128 09:47:18.463194       1 feature_gate.go:328] unrecognized feature gate: CPMSMachineNamePrefix
+2026-01-28T09:47:18.463206365Z W0128 09:47:18.463199       1 feature_gate.go:328] unrecognized feature gate: VSphereMultiDisk
+2026-01-28T09:47:18.463220466Z W0128 09:47:18.463204       1 feature_gate.go:328] unrecognized feature gate: HighlyAvailableArbiter
+2026-01-28T09:47:18.463220466Z W0128 09:47:18.463207       1 feature_gate.go:328] unrecognized feature gate: IngressControllerDynamicConfigurationManager
+2026-01-28T09:47:18.463220466Z W0128 09:47:18.463211       1 feature_gate.go:328] unrecognized feature gate: ManagedBootImagesAzure
+2026-01-28T09:47:18.463220466Z W0128 09:47:18.463215       1 feature_gate.go:328] unrecognized feature gate: RouteAdvertisements
+2026-01-28T09:47:18.463237977Z W0128 09:47:18.463218       1 feature_gate.go:328] unrecognized feature gate: UpgradeStatus
+2026-01-28T09:47:18.463237977Z W0128 09:47:18.463222       1 feature_gate.go:328] unrecognized feature gate: PinnedImages
+2026-01-28T09:47:18.463237977Z W0128 09:47:18.463225       1 feature_gate.go:328] unrecognized feature gate: DNSNameResolver
+2026-01-28T09:47:18.463237977Z W0128 09:47:18.463229       1 feature_gate.go:328] unrecognized feature gate: AdditionalRoutingCapabilities
+2026-01-28T09:47:18.463237977Z W0128 09:47:18.463233       1 feature_gate.go:328] unrecognized feature gate: AutomatedEtcdBackup
+2026-01-28T09:47:18.463249357Z W0128 09:47:18.463237       1 feature_gate.go:328] unrecognized feature gate: BuildCSIVolumes
+2026-01-28T09:47:18.463249357Z W0128 09:47:18.463241       1 feature_gate.go:328] unrecognized feature gate: AdminNetworkPolicy
+2026-01-28T09:47:18.463249357Z W0128 09:47:18.463244       1 feature_gate.go:328] unrecognized feature gate: ClusterAPIInstall
+2026-01-28T09:47:18.463259968Z W0128 09:47:18.463247       1 feature_gate.go:328] unrecognized feature gate: InsightsConfigAPI
+2026-01-28T09:47:18.463259968Z W0128 09:47:18.463251       1 feature_gate.go:328] unrecognized feature gate: Example
+2026-01-28T09:47:18.463259968Z W0128 09:47:18.463254       1 feature_gate.go:328] unrecognized feature gate: NewOLM
+2026-01-28T09:47:18.463270479Z W0128 09:47:18.463258       1 feature_gate.go:328] unrecognized feature gate: VSphereHostVMGroupZonal
+2026-01-28T09:47:18.463270479Z W0128 09:47:18.463261       1 feature_gate.go:328] unrecognized feature gate: AWSClusterHostedDNS
+2026-01-28T09:47:18.463270479Z W0128 09:47:18.463264       1 feature_gate.go:328] unrecognized feature gate: ShortCertRotation
+2026-01-28T09:47:18.463281259Z W0128 09:47:18.463268       1 feature_gate.go:328] unrecognized feature gate: GCPCustomAPIEndpoints
+2026-01-28T09:47:18.463281259Z W0128 09:47:18.463272       1 feature_gate.go:328] unrecognized feature gate: MachineConfigNodes
+2026-01-28T09:47:18.463281259Z W0128 09:47:18.463276       1 feature_gate.go:328] unrecognized feature gate: GCPClusterHostedDNS
+2026-01-28T09:47:18.463291720Z W0128 09:47:18.463279       1 feature_gate.go:328] unrecognized feature gate: Example2
+2026-01-28T09:47:18.463291720Z W0128 09:47:18.463283       1 feature_gate.go:328] unrecognized feature gate: NewOLMCatalogdAPIV1Metas
+2026-01-28T09:47:18.463291720Z W0128 09:47:18.463286       1 feature_gate.go:328] unrecognized feature gate: SigstoreImageVerification
+2026-01-28T09:47:18.463302050Z W0128 09:47:18.463291       1 feature_gate.go:328] unrecognized feature gate: AzureMultiDisk
+2026-01-28T09:47:18.463302050Z W0128 09:47:18.463294       1 feature_gate.go:328] unrecognized feature gate: AzureDedicatedHosts
+2026-01-28T09:47:18.463302050Z W0128 09:47:18.463298       1 feature_gate.go:328] unrecognized feature gate: NewOLMWebhookProviderOpenshiftServiceCA
+2026-01-28T09:47:18.463312681Z W0128 09:47:18.463301       1 feature_gate.go:328] unrecognized feature gate: EtcdBackendQuota
+2026-01-28T09:47:18.463312681Z W0128 09:47:18.463305       1 feature_gate.go:328] unrecognized feature gate: AzureWorkloadIdentity
+2026-01-28T09:47:18.463312681Z W0128 09:47:18.463309       1 feature_gate.go:328] unrecognized feature gate: VSphereConfigurableMaxAllowedBlockVolumesPerNode
+2026-01-28T09:47:18.463322991Z W0128 09:47:18.463312       1 feature_gate.go:328] unrecognized feature gate: MetricsCollectionProfiles
+2026-01-28T09:47:18.463322991Z W0128 09:47:18.463315       1 feature_gate.go:328] unrecognized feature gate: SetEIPForNLBIngressController
+2026-01-28T09:47:18.463322991Z W0128 09:47:18.463319       1 feature_gate.go:328] unrecognized feature gate: NutanixMultiSubnets
+2026-01-28T09:47:18.463338042Z W0128 09:47:18.463322       1 feature_gate.go:328] unrecognized feature gate: ExternalSnapshotMetadata
+2026-01-28T09:47:18.463338042Z W0128 09:47:18.463326       1 feature_gate.go:328] unrecognized feature gate: VSphereMixedNodeEnv
+2026-01-28T09:47:18.463338042Z W0128 09:47:18.463329       1 feature_gate.go:328] unrecognized feature gate: ImageStreamImportMode
+2026-01-28T09:47:18.463338042Z W0128 09:47:18.463333       1 feature_gate.go:328] unrecognized feature gate: InsightsConfig
+2026-01-28T09:47:18.463349102Z W0128 09:47:18.463337       1 feature_gate.go:349] Setting deprecated feature gate KMSv1=true. It will be removed in a future release.
+2026-01-28T09:47:18.463349102Z W0128 09:47:18.463343       1 feature_gate.go:328] unrecognized feature gate: BootImageSkewEnforcement
+2026-01-28T09:47:18.463349102Z W0128 09:47:18.463346       1 feature_gate.go:328] unrecognized feature gate: PreconfiguredUDNAddresses
+2026-01-28T09:47:18.463359823Z W0128 09:47:18.463349       1 feature_gate.go:328] unrecognized feature gate: GCPClusterHostedDNSInstall
+2026-01-28T09:47:18.463359823Z W0128 09:47:18.463353       1 feature_gate.go:328] unrecognized feature gate: MultiDiskSetup
+2026-01-28T09:47:18.463359823Z W0128 09:47:18.463357       1 feature_gate.go:328] unrecognized feature gate: KMSEncryptionProvider
+2026-01-28T09:47:18.463370333Z W0128 09:47:18.463360       1 feature_gate.go:328] unrecognized feature gate: IrreconcilableMachineConfig
+2026-01-28T09:47:18.463370333Z W0128 09:47:18.463363       1 feature_gate.go:328] unrecognized feature gate: GatewayAPIController
+2026-01-28T09:47:18.463380354Z W0128 09:47:18.463368       1 feature_gate.go:351] Setting GA feature gate ServiceAccountTokenNodeBinding=true. It will be removed in a future release.
+2026-01-28T09:47:18.463380354Z W0128 09:47:18.463372       1 feature_gate.go:328] unrecognized feature gate: VolumeGroupSnapshot
+2026-01-28T09:47:18.463380354Z W0128 09:47:18.463376       1 feature_gate.go:328] unrecognized feature gate: ClusterMonitoringConfig
+2026-01-28T09:47:18.463390785Z W0128 09:47:18.463379       1 feature_gate.go:328] unrecognized feature gate: MixedCPUsAllocation
+2026-01-28T09:47:18.463390785Z W0128 09:47:18.463383       1 feature_gate.go:328] unrecognized feature gate: NoRegistryClusterOperations
+2026-01-28T09:47:18.463390785Z W0128 09:47:18.463386       1 feature_gate.go:328] unrecognized feature gate: GCPCustomAPIEndpointsInstall
+2026-01-28T09:47:18.463401395Z W0128 09:47:18.463390       1 feature_gate.go:328] unrecognized feature gate: OVNObservability
+2026-01-28T09:47:18.463401395Z W0128 09:47:18.463393       1 feature_gate.go:328] unrecognized feature gate: AWSClusterHostedDNSInstall
+2026-01-28T09:47:18.463401395Z W0128 09:47:18.463397       1 feature_gate.go:328] unrecognized feature gate: ClusterAPIInstallIBMCloud
+2026-01-28T09:47:18.463412066Z W0128 09:47:18.463402       1 feature_gate.go:328] unrecognized feature gate: OpenShiftPodSecurityAdmission
+2026-01-28T09:47:18.463412066Z W0128 09:47:18.463405       1 feature_gate.go:328] unrecognized feature gate: AlibabaPlatform
+2026-01-28T09:47:18.463412066Z W0128 09:47:18.463408       1 feature_gate.go:328] unrecognized feature gate: NetworkSegmentation
+2026-01-28T09:47:18.463422736Z W0128 09:47:18.463412       1 feature_gate.go:328] unrecognized feature gate: DualReplica
+2026-01-28T09:47:18.463422736Z W0128 09:47:18.463415       1 feature_gate.go:328] unrecognized feature gate: MultiArchInstallAzure
+2026-01-28T09:47:18.463422736Z W0128 09:47:18.463418       1 feature_gate.go:328] unrecognized feature gate: ExternalOIDCWithUIDAndExtraClaimMappings
+2026-01-28T09:47:18.463437587Z W0128 09:47:18.463422       1 feature_gate.go:328] unrecognized feature gate: ManagedBootImagesvSphere
+2026-01-28T09:47:18.463437587Z W0128 09:47:18.463425       1 feature_gate.go:328] unrecognized feature gate: SignatureStores
+2026-01-28T09:47:18.463437587Z W0128 09:47:18.463429       1 feature_gate.go:328] unrecognized feature gate: ImageModeStatusReporting
+2026-01-28T09:47:18.463437587Z W0128 09:47:18.463432       1 feature_gate.go:328] unrecognized feature gate: NetworkDiagnosticsConfig
+2026-01-28T09:47:18.463448527Z W0128 09:47:18.463435       1 feature_gate.go:328] unrecognized feature gate: AWSServiceLBNetworkSecurityGroup
+2026-01-28T09:47:18.463448527Z W0128 09:47:18.463439       1 feature_gate.go:328] unrecognized feature gate: AWSDedicatedHosts
+2026-01-28T09:47:18.463448527Z W0128 09:47:18.463442       1 feature_gate.go:328] unrecognized feature gate: InsightsOnDemandDataGather
+2026-01-28T09:47:18.463448527Z W0128 09:47:18.463445       1 feature_gate.go:328] unrecognized feature gate: MachineAPIOperatorDisableMachineHealthCheckController
+2026-01-28T09:47:18.463459248Z W0128 09:47:18.463449       1 feature_gate.go:328] unrecognized feature gate: NetworkLiveMigration
+2026-01-28T09:47:18.463459248Z W0128 09:47:18.463452       1 feature_gate.go:328] unrecognized feature gate: ExternalOIDC
+2026-01-28T09:47:18.463459248Z W0128 09:47:18.463456       1 feature_gate.go:328] unrecognized feature gate: NewOLMPreflightPermissionChecks
+2026-01-28T09:47:18.463469768Z W0128 09:47:18.463459       1 feature_gate.go:328] unrecognized feature gate: ManagedBootImages
+2026-01-28T09:47:18.463469768Z W0128 09:47:18.463462       1 feature_gate.go:328] unrecognized feature gate: NewOLMOwnSingleNamespace
+2026-01-28T09:47:18.463469768Z W0128 09:47:18.463466       1 feature_gate.go:328] unrecognized feature gate: DyanmicServiceEndpointIBMCloud
+2026-01-28T09:47:18.463480369Z W0128 09:47:18.463469       1 feature_gate.go:328] unrecognized feature gate: MachineAPIMigration
+2026-01-28T09:47:18.463480369Z W0128 09:47:18.463473       1 feature_gate.go:328] unrecognized feature gate: SigstoreImageVerificationPKI
+2026-01-28T09:47:18.463480369Z W0128 09:47:18.463476       1 feature_gate.go:328] unrecognized feature gate: ClusterVersionOperatorConfiguration
+2026-01-28T09:47:18.463490790Z W0128 09:47:18.463479       1 feature_gate.go:328] unrecognized feature gate: GatewayAPI
+2026-01-28T09:47:18.463490790Z W0128 09:47:18.463483       1 feature_gate.go:328] unrecognized feature gate: ManagedBootImagesAWS
+2026-01-28T09:47:18.463490790Z W0128 09:47:18.463486       1 feature_gate.go:328] unrecognized feature gate: IngressControllerLBSubnetsAWS
+2026-01-28T09:47:18.463501450Z W0128 09:47:18.463489       1 feature_gate.go:328] unrecognized feature gate: BootcNodeManagement
+2026-01-28T09:47:18.463501450Z W0128 09:47:18.463493       1 feature_gate.go:328] unrecognized feature gate: ConsolePluginContentSecurityPolicy
+2026-01-28T09:47:18.463501450Z W0128 09:47:18.463496       1 feature_gate.go:328] unrecognized feature gate: VSphereMultiNetworks
+2026-01-28T09:47:18.465121791Z I0128 09:47:18.465093       1 dynamic_serving_content.go:116] "Loaded a new cert/key pair" name="serving-cert::/etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.crt::/etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.key"
+2026-01-28T09:47:19.283575776Z I0128 09:47:19.283533       1 dynamic_cafile_content.go:123] "Loaded a new CA Bundle and Verifier" name="client-ca-bundle::/etc/kubernetes/static-pod-certs/configmaps/client-ca/ca-bundle.crt"
+2026-01-28T09:47:19.283612377Z I0128 09:47:19.283603       1 dynamic_cafile_content.go:123] "Loaded a new CA Bundle and Verifier" name="request-header::/etc/kubernetes/static-pod-certs/configmaps/aggregator-client-ca/ca-bundle.crt"
+2026-01-28T09:47:19.286981785Z I0128 09:47:19.286935       1 controllermanager.go:203] "Starting" version="v1.33.6"
+2026-01-28T09:47:19.286981785Z I0128 09:47:19.286950       1 controllermanager.go:205] "Golang settings" GOGC="" GOMAXPROCS="" GOTRACEBACK=""
+2026-01-28T09:47:19.288310321Z I0128 09:47:19.288286       1 dynamic_cafile_content.go:161] "Starting controller" name="request-header::/etc/kubernetes/static-pod-certs/configmaps/aggregator-client-ca/ca-bundle.crt"
+2026-01-28T09:47:19.288370964Z I0128 09:47:19.288345       1 dynamic_cafile_content.go:161] "Starting controller" name="client-ca-bundle::/etc/kubernetes/static-pod-certs/configmaps/client-ca/ca-bundle.crt"
+2026-01-28T09:47:19.288570974Z I0128 09:47:19.288543       1 dynamic_serving_content.go:135] "Starting controller" name="serving-cert::/etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.crt::/etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.key"
+2026-01-28T09:47:19.288679480Z I0128 09:47:19.288618       1 tlsconfig.go:181] "Loaded client CA" index=0 certName="client-ca-bundle::/etc/kubernetes/static-pod-certs/configmaps/client-ca/ca-bundle.crt,request-header::/etc/kubernetes/static-pod-certs/configmaps/aggregator-client-ca/ca-bundle.crt" certDetail="\"admin-kubeconfig-signer\" [] issuer=\"<self>\" (2026-01-28 09:13:02 +0000 UTC to 2036-01-26 09:13:02 +0000 UTC (now=2026-01-28 09:47:19.288590915 +0000 UTC))"
+2026-01-28T09:47:19.288679480Z I0128 09:47:19.288645       1 tlsconfig.go:181] "Loaded client CA" index=1 certName="client-ca-bundle::/etc/kubernetes/static-pod-certs/configmaps/client-ca/ca-bundle.crt,request-header::/etc/kubernetes/static-pod-certs/configmaps/aggregator-client-ca/ca-bundle.crt" certDetail="\"kube-csr-signer_@1769592636\" [] issuer=\"kubelet-signer\" (2026-01-28 09:30:35 +0000 UTC to 2026-01-29 09:13:06 +0000 UTC (now=2026-01-28 09:47:19.288639168 +0000 UTC))"
+2026-01-28T09:47:19.288694980Z I0128 09:47:19.288676       1 tlsconfig.go:181] "Loaded client CA" index=2 certName="client-ca-bundle::/etc/kubernetes/static-pod-certs/configmaps/client-ca/ca-bundle.crt,request-header::/etc/kubernetes/static-pod-certs/configmaps/aggregator-client-ca/ca-bundle.crt" certDetail="\"kubelet-signer\" [] issuer=\"<self>\" (2026-01-28 09:13:06 +0000 UTC to 2026-01-29 09:13:06 +0000 UTC (now=2026-01-28 09:47:19.288657348 +0000 UTC))"
+2026-01-28T09:47:19.288705541Z I0128 09:47:19.288691       1 tlsconfig.go:181] "Loaded client CA" index=3 certName="client-ca-bundle::/etc/kubernetes/static-pod-certs/configmaps/client-ca/ca-bundle.crt,request-header::/etc/kubernetes/static-pod-certs/configmaps/aggregator-client-ca/ca-bundle.crt" certDetail="\"kube-apiserver-to-kubelet-signer\" [] issuer=\"<self>\" (2026-01-28 09:13:07 +0000 UTC to 2027-01-28 09:13:07 +0000 UTC (now=2026-01-28 09:47:19.28868671 +0000 UTC))"
+2026-01-28T09:47:19.288717382Z I0128 09:47:19.288706       1 tlsconfig.go:181] "Loaded client CA" index=4 certName="client-ca-bundle::/etc/kubernetes/static-pod-certs/configmaps/client-ca/ca-bundle.crt,request-header::/etc/kubernetes/static-pod-certs/configmaps/aggregator-client-ca/ca-bundle.crt" certDetail="\"kube-control-plane-signer\" [] issuer=\"<self>\" (2026-01-28 09:13:06 +0000 UTC to 2027-01-28 09:13:06 +0000 UTC (now=2026-01-28 09:47:19.288701251 +0000 UTC))"
+2026-01-28T09:47:19.288751083Z I0128 09:47:19.288720       1 tlsconfig.go:181] "Loaded client CA" index=5 certName="client-ca-bundle::/etc/kubernetes/static-pod-certs/configmaps/client-ca/ca-bundle.crt,request-header::/etc/kubernetes/static-pod-certs/configmaps/aggregator-client-ca/ca-bundle.crt" certDetail="\"kubelet-bootstrap-kubeconfig-signer\" [] issuer=\"<self>\" (2026-01-28 09:13:03 +0000 UTC to 2036-01-26 09:13:03 +0000 UTC (now=2026-01-28 09:47:19.288715862 +0000 UTC))"
+2026-01-28T09:47:19.288751083Z I0128 09:47:19.288740       1 tlsconfig.go:181] "Loaded client CA" index=6 certName="client-ca-bundle::/etc/kubernetes/static-pod-certs/configmaps/client-ca/ca-bundle.crt,request-header::/etc/kubernetes/static-pod-certs/configmaps/aggregator-client-ca/ca-bundle.crt" certDetail="\"openshift-kube-apiserver-operator_node-system-admin-signer@1769592635\" [] issuer=\"<self>\" (2026-01-28 09:30:35 +0000 UTC to 2029-01-27 09:30:36 +0000 UTC (now=2026-01-28 09:47:19.288734702 +0000 UTC))"
+2026-01-28T09:47:19.288771244Z I0128 09:47:19.288755       1 tlsconfig.go:181] "Loaded client CA" index=7 certName="client-ca-bundle::/etc/kubernetes/static-pod-certs/configmaps/client-ca/ca-bundle.crt,request-header::/etc/kubernetes/static-pod-certs/configmaps/aggregator-client-ca/ca-bundle.crt" certDetail="\"aggregator-signer\" [] issuer=\"<self>\" (2026-01-28 09:13:04 +0000 UTC to 2026-01-29 09:13:04 +0000 UTC (now=2026-01-28 09:47:19.288751213 +0000 UTC))"
+2026-01-28T09:47:19.288989615Z I0128 09:47:19.288959       1 tlsconfig.go:203] "Loaded serving cert" certName="serving-cert::/etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.crt::/etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.key" certDetail="\"kube-controller-manager.openshift-kube-controller-manager.svc\" [serving] validServingFor=[kube-controller-manager.openshift-kube-controller-manager.svc,kube-controller-manager.openshift-kube-controller-manager.svc.cluster.local] issuer=\"openshift-service-serving-signer@1769592635\" (2026-01-28 09:30:56 +0000 UTC to 2028-01-28 09:30:57 +0000 UTC (now=2026-01-28 09:47:19.288941723 +0000 UTC))"
+2026-01-28T09:47:19.289198075Z I0128 09:47:19.289170       1 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1769593639\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1769593639\" (2026-01-28 08:47:18 +0000 UTC to 2029-01-28 08:47:18 +0000 UTC (now=2026-01-28 09:47:19.289161734 +0000 UTC))"
+2026-01-28T09:47:19.289216926Z I0128 09:47:19.289207       1 secure_serving.go:211] Serving securely on [::]:10257
+2026-01-28T09:47:19.289312661Z I0128 09:47:19.289296       1 tlsconfig.go:243] "Starting DynamicServingCertificateController"
+2026-01-28T09:47:19.289653308Z I0128 09:47:19.289623       1 leaderelection.go:257] attempting to acquire leader lease kube-system/kube-controller-manager...

@@ -1,0 +1,413 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:14Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: 9c4404e7.operatorframework.io
+    namespace: openshift-operator-controller
+    resourceVersion: "8765"
+    uid: 055822c0-d427-428f-b3cb-aa32be5dda22
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:14Z"
+  message: operator-controller-controller-manager-66b6b87dc7-msqnr_4b95a3ba-ab63-4ea1-97c2-4097a2bae652
+    became leader
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:14Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: operator-controller
+      operation: Update
+      time: "2026-01-28T09:31:14Z"
+    name: 9c4404e7.operatorframework.io.188edb2980b449a3
+    namespace: openshift-operator-controller
+    resourceVersion: "8767"
+    uid: 9e3585a1-654b-465a-9fc0-c50ea5e1f560
+  reason: LeaderElection
+  reportingComponent: operator-controller-controller-manager-66b6b87dc7-msqnr_4b95a3ba-ab63-4ea1-97c2-4097a2bae652
+  reportingInstance: ""
+  source:
+    component: operator-controller-controller-manager-66b6b87dc7-msqnr_4b95a3ba-ab63-4ea1-97c2-4097a2bae652
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:10Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: operator-controller-controller-manager-66b6b87dc7-msqnr
+    namespace: openshift-operator-controller
+    resourceVersion: "8360"
+    uid: 75990848-0e55-4d04-99b3-d3df286a47c8
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:10Z"
+  message: Successfully assigned openshift-operator-controller/operator-controller-controller-manager-66b6b87dc7-msqnr
+    to ip-10-0-3-203.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:31:10Z"
+    name: operator-controller-controller-manager-66b6b87dc7-msqnr.188edb288742f8ef
+    namespace: openshift-operator-controller
+    resourceVersion: "8377"
+    uid: dd51ac58-79a7-4574-823e-3b246e078f09
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:11Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: operator-controller-controller-manager-66b6b87dc7-msqnr
+    namespace: openshift-operator-controller
+    resourceVersion: "8383"
+    uid: 75990848-0e55-4d04-99b3-d3df286a47c8
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:11Z"
+  message: Add eth0 [10.128.0.11/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2026-01-28T09:31:11Z"
+    name: operator-controller-controller-manager-66b6b87dc7-msqnr.188edb28a41d2575
+    namespace: openshift-operator-controller
+    resourceVersion: "8422"
+    uid: b2ea7861-d6f2-4d97-8a9d-033cc08bed58
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:11Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{manager}
+    kind: Pod
+    name: operator-controller-controller-manager-66b6b87dc7-msqnr
+    namespace: openshift-operator-controller
+    resourceVersion: "8369"
+    uid: 75990848-0e55-4d04-99b3-d3df286a47c8
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:11Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:3f0a8a5999709f6e5fd01bc9c73c9aae75ea34e4eb919693b17ac272a2903b59"
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:31:11Z"
+    name: operator-controller-controller-manager-66b6b87dc7-msqnr.188edb28a53281f2
+    namespace: openshift-operator-controller
+    resourceVersion: "8426"
+    uid: b79a907f-371e-4540-a332-ee6039409a93
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{manager}
+    kind: Pod
+    name: operator-controller-controller-manager-66b6b87dc7-msqnr
+    namespace: openshift-operator-controller
+    resourceVersion: "8369"
+    uid: 75990848-0e55-4d04-99b3-d3df286a47c8
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:14Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:3f0a8a5999709f6e5fd01bc9c73c9aae75ea34e4eb919693b17ac272a2903b59"
+    in 3.287s (3.287s including waiting). Image size: 527156612 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:14Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:31:14Z"
+    name: operator-controller-controller-manager-66b6b87dc7-msqnr.188edb2969250b84
+    namespace: openshift-operator-controller
+    resourceVersion: "8744"
+    uid: 4e336d88-b9af-4ef4-a2f1-0b43e595681d
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{manager}
+    kind: Pod
+    name: operator-controller-controller-manager-66b6b87dc7-msqnr
+    namespace: openshift-operator-controller
+    resourceVersion: "8369"
+    uid: 75990848-0e55-4d04-99b3-d3df286a47c8
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:14Z"
+  message: 'Created container: manager'
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:14Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:31:14Z"
+    name: operator-controller-controller-manager-66b6b87dc7-msqnr.188edb2978cdaea4
+    namespace: openshift-operator-controller
+    resourceVersion: "8756"
+    uid: 5cdc5754-6a18-41e7-af25-97aec92523e2
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{manager}
+    kind: Pod
+    name: operator-controller-controller-manager-66b6b87dc7-msqnr
+    namespace: openshift-operator-controller
+    resourceVersion: "8369"
+    uid: 75990848-0e55-4d04-99b3-d3df286a47c8
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:14Z"
+  message: Started container manager
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:14Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:31:14Z"
+    name: operator-controller-controller-manager-66b6b87dc7-msqnr.188edb297989d8d3
+    namespace: openshift-operator-controller
+    resourceVersion: "8758"
+    uid: 230bea7a-0d7c-4509-8210-6b68957948e7
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:10Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: operator-controller-controller-manager-66b6b87dc7
+    namespace: openshift-operator-controller
+    resourceVersion: "8350"
+    uid: b1287392-27a3-4a14-a6c7-c7fd9db9eb24
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:10Z"
+  message: 'Created pod: operator-controller-controller-manager-66b6b87dc7-msqnr'
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:10Z"
+    name: operator-controller-controller-manager-66b6b87dc7.188edb28867d099d
+    namespace: openshift-operator-controller
+    resourceVersion: "8370"
+    uid: 00023194-d457-446d-8f32-8fc55d035a85
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:10Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: operator-controller-controller-manager
+    namespace: openshift-operator-controller
+    resourceVersion: "8347"
+    uid: 05c8d816-90d9-4b99-831f-bcac7c0ddce9
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:10Z"
+  message: Scaled up replica set operator-controller-controller-manager-66b6b87dc7
+    from 0 to 1
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:10Z"
+    name: operator-controller-controller-manager.188edb2884adef66
+    namespace: openshift-operator-controller
+    resourceVersion: "8354"
+    uid: c86ce274-dbf7-45bd-9315-f7c09c8687a8
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "35156"

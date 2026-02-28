@@ -1,0 +1,219 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.0.16
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-3-203.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: multus-admission-controller-7d8778c98d-llvc8
+      namespace: openshift-multus
+      uid: abf7fe0b-e254-49fc-8b28-6e7f7aae2e0c
+    zone: us-west-1a
+  - addresses:
+    - 10.130.0.48
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-108-54.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: multus-admission-controller-7d8778c98d-cxcq9
+      namespace: openshift-multus
+      uid: 5ab0820f-74fa-4e73-abcf-ac1f5c05a883
+    zone: us-west-1c
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:32:36Z"
+    creationTimestamp: "2026-01-28T09:29:14Z"
+    generateName: multus-admission-controller-
+    generation: 9
+    labels:
+      app: multus-admission-controller
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: multus-admission-controller
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"5284c395-0444-493b-8958-69809cb72df2"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:32:36Z"
+    name: multus-admission-controller-rbpvb
+    namespace: openshift-multus
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: multus-admission-controller
+      uid: 5284c395-0444-493b-8958-69809cb72df2
+    resourceVersion: "11981"
+    uid: 25793998-23b9-4c19-b5f6-300e37296ce6
+  ports:
+  - name: webhook
+    port: 6443
+    protocol: TCP
+  - name: metrics
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.0.4
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-102-200.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: network-metrics-daemon-xx8tl
+      namespace: openshift-multus
+      uid: 8ff544c5-a31b-46d2-96a5-1d8b269b38e5
+    zone: us-west-1c
+  - addresses:
+    - 10.128.0.3
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-3-203.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: network-metrics-daemon-gm8vn
+      namespace: openshift-multus
+      uid: d9fc5f26-9512-44df-afb5-3353826bea86
+    zone: us-west-1a
+  - addresses:
+    - 10.130.0.3
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-108-54.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: network-metrics-daemon-wsgb8
+      namespace: openshift-multus
+      uid: b147c7a7-7b6b-4e9d-90df-c24963dca864
+    zone: us-west-1c
+  - addresses:
+    - 10.131.0.3
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-78-215.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: network-metrics-daemon-zbldf
+      namespace: openshift-multus
+      uid: 9b1f4d6e-afcf-4a02-9a2e-d0f08186e129
+    zone: us-west-1c
+  - addresses:
+    - 10.128.2.4
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-101-165.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: network-metrics-daemon-rxmjs
+      namespace: openshift-multus
+      uid: 4ddbeb5c-18d4-49fa-8bd5-950c7d6c3d79
+    zone: us-west-1c
+  - addresses:
+    - 10.129.2.5
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-22-208.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: network-metrics-daemon-2pwhs
+      namespace: openshift-multus
+      uid: 593c720e-9d95-4467-88cd-60588be65e97
+    zone: us-west-1a
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:42:59Z"
+    creationTimestamp: "2026-01-28T09:29:13Z"
+    generateName: network-metrics-service-
+    generation: 7
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: network-metrics-service
+      service: network-metrics-service
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:service: {}
+            f:service.kubernetes.io/headless: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"ce0c666a-fa51-49ab-877f-338f2ad8f4b0"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:42:59Z"
+    name: network-metrics-service-kx6qx
+    namespace: openshift-multus
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: network-metrics-service
+      uid: ce0c666a-fa51-49ab-877f-338f2ad8f4b0
+    resourceVersion: "22582"
+    uid: be4cc9b4-fdf4-47ea-9d5a-11805dfc8de3
+  ports:
+  - name: metrics
+    port: 8443
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "35088"

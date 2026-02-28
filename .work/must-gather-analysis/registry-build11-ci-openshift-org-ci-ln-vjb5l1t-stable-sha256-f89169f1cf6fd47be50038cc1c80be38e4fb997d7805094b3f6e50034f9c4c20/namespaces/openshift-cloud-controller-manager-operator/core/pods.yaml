@@ -1,0 +1,617 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/default-container: cluster-cloud-controller-manager
+    creationTimestamp: "2026-01-28T09:28:19Z"
+    generateName: cluster-cloud-controller-manager-operator-7c4545c799-
+    generation: 1
+    labels:
+      k8s-app: cloud-manager-operator
+      pod-template-hash: 7c4545c799
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/default-container: {}
+            f:target.workload.openshift.io/management: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:k8s-app: {}
+            f:pod-template-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"d44952e5-d4d1-4066-9de8-2595518d1bb6"}: {}
+        f:spec:
+          f:containers:
+            k:{"name":"cluster-cloud-controller-manager"}:
+              .: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"RELEASE_VERSION"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":9257,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:hostPort: {}
+                  f:name: {}
+                  f:protocol: {}
+                k:{"containerPort":9259,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:hostPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/cloud-controller-manager-config/"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/etc/kubernetes"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+            k:{"name":"config-sync-controllers"}:
+              .: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"RELEASE_VERSION"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":9260,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:hostPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/kubernetes"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+            k:{"name":"kube-rbac-proxy"}:
+              .: {}
+              f:args: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":9258,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:hostPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/kube-rbac-proxy"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/etc/tls/private"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:hostNetwork: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"auth-proxy-config"}:
+              .: {}
+              f:configMap:
+                .: {}
+                f:defaultMode: {}
+                f:name: {}
+              f:name: {}
+            k:{"name":"cloud-controller-manager-operator-tls"}:
+              .: {}
+              f:name: {}
+              f:secret:
+                .: {}
+                f:defaultMode: {}
+                f:optional: {}
+                f:secretName: {}
+            k:{"name":"host-etc-kube"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"images"}:
+              .: {}
+              f:configMap:
+                .: {}
+                f:defaultMode: {}
+                f:name: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:28:19Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"PodReadyToStartContainers"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:hostIPs: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.0.108.54"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:31:55Z"
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9
+    namespace: openshift-cloud-controller-manager-operator
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: cluster-cloud-controller-manager-operator-7c4545c799
+      uid: d44952e5-d4d1-4066-9de8-2595518d1bb6
+    resourceVersion: "9834"
+    uid: 580d1d3e-7e7b-4f43-a88c-991fedb9047b
+  spec:
+    containers:
+    - command:
+      - /bin/bash
+      - -c
+      - |
+        #!/bin/bash
+        set -o allexport
+        if [[ -f /etc/kubernetes/apiserver-url.env ]]; then
+          source /etc/kubernetes/apiserver-url.env
+        else
+          URL_ONLY_KUBECONFIG=/etc/kubernetes/kubeconfig
+        fi
+        exec /cluster-controller-manager-operator \
+        --leader-elect=true \
+        --leader-elect-lease-duration=137s \
+        --leader-elect-renew-deadline=107s \
+        --leader-elect-retry-period=26s \
+        --leader-elect-resource-namespace=openshift-cloud-controller-manager-operator \
+        "--images-json=/etc/cloud-controller-manager-config/images.json" \
+        --metrics-bind-address=127.0.0.1:9257 \
+        --health-addr=127.0.0.1:9259
+      env:
+      - name: RELEASE_VERSION
+        value: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:8fa5cc6ccc9113ab5809d1c3203d585b8620671c91d3e8b2ca34a25da4f6305c
+      imagePullPolicy: IfNotPresent
+      name: cluster-cloud-controller-manager
+      ports:
+      - containerPort: 9257
+        hostPort: 9257
+        name: metrics
+        protocol: TCP
+      - containerPort: 9259
+        hostPort: 9259
+        name: healthz
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 10m
+          memory: 50Mi
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/cloud-controller-manager-config/
+        name: images
+      - mountPath: /etc/kubernetes
+        name: host-etc-kube
+        readOnly: true
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-2q9q5
+        readOnly: true
+    - command:
+      - /bin/bash
+      - -c
+      - |
+        #!/bin/bash
+        set -o allexport
+        if [[ -f /etc/kubernetes/apiserver-url.env ]]; then
+          source /etc/kubernetes/apiserver-url.env
+        else
+          URL_ONLY_KUBECONFIG=/etc/kubernetes/kubeconfig
+        fi
+        exec /config-sync-controllers \
+        --leader-elect=true \
+        --leader-elect-lease-duration=137s \
+        --leader-elect-renew-deadline=107s \
+        --leader-elect-retry-period=26s \
+        --leader-elect-resource-namespace=openshift-cloud-controller-manager-operator \
+        --health-addr=127.0.0.1:9260
+      env:
+      - name: RELEASE_VERSION
+        value: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:8fa5cc6ccc9113ab5809d1c3203d585b8620671c91d3e8b2ca34a25da4f6305c
+      imagePullPolicy: IfNotPresent
+      name: config-sync-controllers
+      ports:
+      - containerPort: 9260
+        hostPort: 9260
+        name: healthz
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 10m
+          memory: 25Mi
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/kubernetes
+        name: host-etc-kube
+        readOnly: true
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-2q9q5
+        readOnly: true
+    - args:
+      - --secure-listen-address=0.0.0.0:9258
+      - --upstream=http://127.0.0.1:9257/
+      - --tls-cert-file=/etc/tls/private/tls.crt
+      - --tls-private-key-file=/etc/tls/private/tls.key
+      - --config-file=/etc/kube-rbac-proxy/config-file.yaml
+      - --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+      - --logtostderr=true
+      - --v=3
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+      imagePullPolicy: IfNotPresent
+      name: kube-rbac-proxy
+      ports:
+      - containerPort: 9258
+        hostPort: 9258
+        name: https
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 10m
+          memory: 20Mi
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/kube-rbac-proxy
+        name: auth-proxy-config
+      - mountPath: /etc/tls/private
+        name: cloud-controller-manager-operator-tls
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-2q9q5
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    hostNetwork: true
+    nodeName: ip-10-0-108-54.us-west-1.compute.internal
+    nodeSelector:
+      node-role.kubernetes.io/master: ""
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000001000
+    priorityClassName: system-node-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: cluster-cloud-controller-manager
+    serviceAccountName: cluster-cloud-controller-manager
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/master
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 120
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 120
+    - effect: NoSchedule
+      key: node.cloudprovider.kubernetes.io/uninitialized
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+    volumes:
+    - configMap:
+        defaultMode: 420
+        name: cloud-controller-manager-images
+      name: images
+    - hostPath:
+        path: /etc/kubernetes
+        type: Directory
+      name: host-etc-kube
+    - configMap:
+        defaultMode: 420
+        name: kube-rbac-proxy
+      name: auth-proxy-config
+    - name: cloud-controller-manager-operator-tls
+      secret:
+        defaultMode: 420
+        optional: true
+        secretName: cloud-controller-manager-operator-tls
+    - name: kube-api-access-2q9q5
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:28:24Z"
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:28:19Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:31:55Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:31:55Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:28:19Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - allocatedResources:
+        cpu: 10m
+        memory: 50Mi
+      containerID: cri-o://2ef7e7dbd97858a0e8d2a979578b097e63df718155c7c07c23d54377bf730cfd
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:8fa5cc6ccc9113ab5809d1c3203d585b8620671c91d3e8b2ca34a25da4f6305c
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:8fa5cc6ccc9113ab5809d1c3203d585b8620671c91d3e8b2ca34a25da4f6305c
+      lastState: {}
+      name: cluster-cloud-controller-manager
+      ready: true
+      resources:
+        requests:
+          cpu: 10m
+          memory: 50Mi
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:28:23Z"
+      user:
+        linux:
+          gid: 0
+          supplementalGroups:
+          - 0
+          uid: 0
+      volumeMounts:
+      - mountPath: /etc/cloud-controller-manager-config/
+        name: images
+      - mountPath: /etc/kubernetes
+        name: host-etc-kube
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-2q9q5
+        readOnly: true
+        recursiveReadOnly: Disabled
+    - allocatedResources:
+        cpu: 10m
+        memory: 25Mi
+      containerID: cri-o://48e135624f13a8c0332111ebc63b276f7239ef2355de7cb4f290affb511324df
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:8fa5cc6ccc9113ab5809d1c3203d585b8620671c91d3e8b2ca34a25da4f6305c
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:8fa5cc6ccc9113ab5809d1c3203d585b8620671c91d3e8b2ca34a25da4f6305c
+      lastState: {}
+      name: config-sync-controllers
+      ready: true
+      resources:
+        requests:
+          cpu: 10m
+          memory: 25Mi
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:28:23Z"
+      user:
+        linux:
+          gid: 0
+          supplementalGroups:
+          - 0
+          uid: 0
+      volumeMounts:
+      - mountPath: /etc/kubernetes
+        name: host-etc-kube
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-2q9q5
+        readOnly: true
+        recursiveReadOnly: Disabled
+    - allocatedResources:
+        cpu: 10m
+        memory: 20Mi
+      containerID: cri-o://d39eeee46cca44fd5b0b3b5d6d385ed1bd7a21ab45e8c05c4f0d084115df73d8
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+      lastState:
+        terminated:
+          containerID: cri-o://5981ce6a1049de7fddba1cb40e3a8db179762d48ef3dbd4e47554beabe2a7496
+          exitCode: 1
+          finishedAt: "2026-01-28T09:29:56Z"
+          message: "ECDSA_WITH_CHACHA20_POLY1305]\"\nI0128 09:29:56.343693       1
+            flags.go:64] FLAG: --tls-min-version=\"VersionTLS12\"\nI0128 09:29:56.343696
+            \      1 flags.go:64] FLAG: --tls-private-key-file=\"/etc/tls/private/tls.key\"\nI0128
+            09:29:56.343698       1 flags.go:64] FLAG: --tls-reload-interval=\"1m0s\"\nI0128
+            09:29:56.343701       1 flags.go:64] FLAG: --upstream=\"http://127.0.0.1:9257/\"\nI0128
+            09:29:56.343704       1 flags.go:64] FLAG: --upstream-ca-file=\"\"\nI0128
+            09:29:56.343706       1 flags.go:64] FLAG: --upstream-client-cert-file=\"\"\nI0128
+            09:29:56.343708       1 flags.go:64] FLAG: --upstream-client-key-file=\"\"\nI0128
+            09:29:56.343710       1 flags.go:64] FLAG: --upstream-force-h2c=\"false\"\nI0128
+            09:29:56.343713       1 flags.go:64] FLAG: --v=\"3\"\nI0128 09:29:56.343715
+            \      1 flags.go:64] FLAG: --version=\"false\"\nI0128 09:29:56.343721
+            \      1 flags.go:64] FLAG: --vmodule=\"\"\nW0128 09:29:56.343726       1
+            deprecated.go:66] \n==== Removed Flag Warning ======================\n\nlogtostderr
+            is removed in the k8s upstream and has no effect any more.\n\n===============================================\n\t\t\nI0128
+            09:29:56.343734       1 kube-rbac-proxy.go:532] Reading config file: /etc/kube-rbac-proxy/config-file.yaml\nI0128
+            09:29:56.344091       1 envvar.go:172] \"Feature gate default state\"
+            feature=\"ClientsAllowCBOR\" enabled=false\nI0128 09:29:56.344106       1
+            envvar.go:172] \"Feature gate default state\" feature=\"ClientsPreferCBOR\"
+            enabled=false\nI0128 09:29:56.344112       1 envvar.go:172] \"Feature
+            gate default state\" feature=\"InformerResourceVersion\" enabled=false\nI0128
+            09:29:56.344116       1 envvar.go:172] \"Feature gate default state\"
+            feature=\"WatchListClient\" enabled=false\nI0128 09:29:56.344204       1
+            kube-rbac-proxy.go:235] Valid token audiences: \nI0128 09:29:56.344856
+            \      1 kube-rbac-proxy.go:349] Reading certificate files\nE0128 09:29:56.344892
+            \      1 run.go:72] \"command failed\" err=\"failed to initialize certificate
+            reloader: error loading certificates: error loading certificate: open
+            /etc/tls/private/tls.crt: no such file or directory\"\n"
+          reason: Error
+          startedAt: "2026-01-28T09:29:56Z"
+      name: kube-rbac-proxy
+      ready: true
+      resources:
+        requests:
+          cpu: 10m
+          memory: 20Mi
+      restartCount: 5
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:31:52Z"
+      user:
+        linux:
+          gid: 65534
+          supplementalGroups:
+          - 65534
+          uid: 65534
+      volumeMounts:
+      - mountPath: /etc/kube-rbac-proxy
+        name: auth-proxy-config
+      - mountPath: /etc/tls/private
+        name: cloud-controller-manager-operator-tls
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-2q9q5
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 10.0.108.54
+    hostIPs:
+    - ip: 10.0.108.54
+    phase: Running
+    podIP: 10.0.108.54
+    podIPs:
+    - ip: 10.0.108.54
+    qosClass: Burstable
+    startTime: "2026-01-28T09:28:19Z"
+kind: PodList
+metadata:
+  resourceVersion: "34965"

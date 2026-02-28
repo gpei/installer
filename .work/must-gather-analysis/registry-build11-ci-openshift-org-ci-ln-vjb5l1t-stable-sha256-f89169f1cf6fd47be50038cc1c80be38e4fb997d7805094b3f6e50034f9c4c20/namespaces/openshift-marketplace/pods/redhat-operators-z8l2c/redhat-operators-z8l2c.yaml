@@ -1,0 +1,590 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.20/23"],"mac_address":"0a:58:0a:80:00:14","gateway_ips":["10.128.0.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.128.0.1"},{"dest":"172.30.0.0/16","nextHop":"10.128.0.1"},{"dest":"169.254.0.5/32","nextHop":"10.128.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.0.1"}],"ip_address":"10.128.0.20/23","gateway_ip":"10.128.0.1","role":"primary"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.20"
+          ],
+          "mac": "0a:58:0a:80:00:14",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/required-scc: restricted-v2
+    openshift.io/scc: restricted-v2
+    operatorframework.io/managed-by: marketplace-operator
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    security.openshift.io/validated-scc-subject-type: user
+  creationTimestamp: "2026-01-28T09:31:59Z"
+  generateName: redhat-operators-
+  generation: 1
+  labels:
+    olm.catalogSource: redhat-operators
+    olm.managed: "true"
+    olm.pod-spec-hash: 1MhQyhq969903oocL8mavLYpPskVT4Kvr81qTH
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:cluster-autoscaler.kubernetes.io/safe-to-evict: {}
+          f:openshift.io/required-scc: {}
+          f:operatorframework.io/managed-by: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:olm.catalogSource: {}
+          f:olm.managed: {}
+          f:olm.pod-spec-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"28168737-f982-46d0-bd57-eae98968686c"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"registry-server"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"GOMEMLIMIT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:exec:
+                .: {}
+                f:command: {}
+              f:failureThreshold: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":50051,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:exec:
+                .: {}
+                f:command: {}
+              f:failureThreshold: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+              f:readOnlyRootFilesystem: {}
+            f:startupProbe:
+              .: {}
+              f:exec:
+                .: {}
+                f:command: {}
+              f:failureThreshold: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/extracted-catalog"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:initContainers:
+          .: {}
+          k:{"name":"extract-content"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+              f:readOnlyRootFilesystem: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/extracted-catalog"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/utilities"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"extract-utilities"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+              f:readOnlyRootFilesystem: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/utilities"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:seccompProfile:
+            .: {}
+            f:type: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"catalog-content"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+          k:{"name":"utilities"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+    manager: catalog
+    operation: Update
+    time: "2026-01-28T09:31:59Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ip-10-0-3-203
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:31:59Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:32:00Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:initContainerStatuses: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.20"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:33:49Z"
+  name: redhat-operators-z8l2c
+  namespace: openshift-marketplace
+  ownerReferences:
+  - apiVersion: operators.coreos.com/v1alpha1
+    blockOwnerDeletion: false
+    controller: true
+    kind: CatalogSource
+    name: redhat-operators
+    uid: 28168737-f982-46d0-bd57-eae98968686c
+  resourceVersion: "13001"
+  uid: 4cfd5001-85ee-4671-ab86-b8d797596060
+spec:
+  containers:
+  - args:
+    - serve
+    - /extracted-catalog/catalog
+    - --cache-dir=/extracted-catalog/cache
+    command:
+    - /bin/opm
+    env:
+    - name: GOMEMLIMIT
+      value: 30MiB
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:7290800c1daf30f811a950110a15ab75cd366eba88327d15030dc2be641e1d73
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      exec:
+        command:
+        - grpc_health_probe
+        - -addr=:50051
+      failureThreshold: 3
+      initialDelaySeconds: 10
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    name: registry-server
+    ports:
+    - containerPort: 50051
+      name: grpc
+      protocol: TCP
+    readinessProbe:
+      exec:
+        command:
+        - grpc_health_probe
+        - -addr=:50051
+      failureThreshold: 3
+      initialDelaySeconds: 5
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    resources:
+      requests:
+        cpu: 10m
+        memory: 30Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      readOnlyRootFilesystem: true
+      runAsNonRoot: true
+      runAsUser: 1000280000
+    startupProbe:
+      exec:
+        command:
+        - grpc_health_probe
+        - -addr=:50051
+      failureThreshold: 10
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /extracted-catalog
+      name: catalog-content
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-vt87m
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  initContainers:
+  - args:
+    - /bin/copy-content
+    - /utilities/copy-content
+    command:
+    - cp
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:941c71daa16180c08c62cb401a0337fdb7931e0bbf363172723eede6439b6439
+    imagePullPolicy: IfNotPresent
+    name: extract-utilities
+    resources: {}
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      readOnlyRootFilesystem: true
+      runAsNonRoot: true
+      runAsUser: 1000280000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /utilities
+      name: utilities
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-vt87m
+      readOnly: true
+  - args:
+    - --catalog.from=/configs
+    - --catalog.to=/extracted-catalog/catalog
+    - --cache.from=/tmp/cache
+    - --cache.to=/extracted-catalog/cache
+    command:
+    - /utilities/copy-content
+    image: registry.redhat.io/redhat/redhat-operator-index:v4.20
+    imagePullPolicy: Always
+    name: extract-content
+    resources: {}
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      readOnlyRootFilesystem: true
+      runAsNonRoot: true
+      runAsUser: 1000280000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /utilities
+      name: utilities
+    - mountPath: /extracted-catalog
+      name: catalog-content
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-vt87m
+      readOnly: true
+  nodeName: ip-10-0-3-203.us-west-1.compute.internal
+  nodeSelector:
+    kubernetes.io/os: linux
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000280000
+    seLinuxOptions:
+      level: s0:c17,c4
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: redhat-operators
+  serviceAccountName: redhat-operators
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - emptyDir: {}
+    name: utilities
+  - emptyDir: {}
+    name: catalog-content
+  - name: kube-api-access-vt87m
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:32:23Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:32:50Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:33:49Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:33:49Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:31:59Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - allocatedResources:
+      cpu: 10m
+      memory: 30Mi
+    containerID: cri-o://d28336acf10f5e4208daf7d498bf1ce781bebd76c579c57eb1866ce6571b8774
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:7290800c1daf30f811a950110a15ab75cd366eba88327d15030dc2be641e1d73
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:7290800c1daf30f811a950110a15ab75cd366eba88327d15030dc2be641e1d73
+    lastState: {}
+    name: registry-server
+    ready: true
+    resources:
+      requests:
+        cpu: 10m
+        memory: 30Mi
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2026-01-28T09:33:05Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        - 1000280000
+        uid: 1000280000
+    volumeMounts:
+    - mountPath: /extracted-catalog
+      name: catalog-content
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-vt87m
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 10.0.3.203
+  hostIPs:
+  - ip: 10.0.3.203
+  initContainerStatuses:
+  - containerID: cri-o://872c630f4161eadd8579cd7a5425fa9aa379cf6f704ce5338fc964059da2a2d4
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:941c71daa16180c08c62cb401a0337fdb7931e0bbf363172723eede6439b6439
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:941c71daa16180c08c62cb401a0337fdb7931e0bbf363172723eede6439b6439
+    lastState: {}
+    name: extract-utilities
+    ready: true
+    resources: {}
+    restartCount: 0
+    started: false
+    state:
+      terminated:
+        containerID: cri-o://872c630f4161eadd8579cd7a5425fa9aa379cf6f704ce5338fc964059da2a2d4
+        exitCode: 0
+        finishedAt: "2026-01-28T09:32:23Z"
+        reason: Completed
+        startedAt: "2026-01-28T09:32:23Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        - 1000280000
+        uid: 1000280000
+    volumeMounts:
+    - mountPath: /utilities
+      name: utilities
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-vt87m
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - containerID: cri-o://a73ed8c999e0cdb0635ca90431f3822ab9f129f7958eb3654a6db4a6722f5564
+    image: registry.redhat.io/redhat/redhat-operator-index:v4.20
+    imageID: registry.redhat.io/redhat/redhat-operator-index@sha256:c6ebeb814fe7fd0826e6e097ed59e7944c6c261565afb70ac969b17294cd0886
+    lastState: {}
+    name: extract-content
+    ready: true
+    resources: {}
+    restartCount: 0
+    started: false
+    state:
+      terminated:
+        containerID: cri-o://a73ed8c999e0cdb0635ca90431f3822ab9f129f7958eb3654a6db4a6722f5564
+        exitCode: 0
+        finishedAt: "2026-01-28T09:32:50Z"
+        reason: Completed
+        startedAt: "2026-01-28T09:32:48Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        - 1000280000
+        uid: 1000280000
+    volumeMounts:
+    - mountPath: /utilities
+      name: utilities
+    - mountPath: /extracted-catalog
+      name: catalog-content
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-vt87m
+      readOnly: true
+      recursiveReadOnly: Disabled
+  phase: Running
+  podIP: 10.128.0.20
+  podIPs:
+  - ip: 10.128.0.20
+  qosClass: Burstable
+  startTime: "2026-01-28T09:31:59Z"

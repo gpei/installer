@@ -1,0 +1,262 @@
+---
+apiVersion: networking.k8s.io/v1
+items:
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    annotations:
+      capability.openshift.io/name: CloudCredential
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+    creationTimestamp: "2026-01-28T09:27:08Z"
+    generation: 1
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+        f:spec:
+          f:egress: {}
+          f:podSelector: {}
+          f:policyTypes: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2026-01-28T09:27:08Z"
+    name: allow-egress
+    namespace: openshift-cloud-credential-operator
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      controller: true
+      kind: ClusterVersion
+      name: version
+      uid: 0370d296-6904-481d-ab90-157c7e5b835a
+    resourceVersion: "2998"
+    uid: d8909b3d-241e-4c89-9f17-737a597f19ae
+  spec:
+    egress:
+    - ports:
+      - endPort: 65535
+        port: 1
+        protocol: TCP
+    - ports:
+      - endPort: 65535
+        port: 1
+        protocol: UDP
+    podSelector:
+      matchExpressions:
+      - key: app
+        operator: In
+        values:
+        - cloud-credential-operator
+        - pod-identity-webhook
+    policyTypes:
+    - Egress
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    annotations:
+      capability.openshift.io/name: CloudCredential
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+    creationTimestamp: "2026-01-28T09:27:09Z"
+    generation: 1
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+        f:spec:
+          f:ingress: {}
+          f:podSelector: {}
+          f:policyTypes: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2026-01-28T09:27:09Z"
+    name: allow-ingress-metrics
+    namespace: openshift-cloud-credential-operator
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      controller: true
+      kind: ClusterVersion
+      name: version
+      uid: 0370d296-6904-481d-ab90-157c7e5b835a
+    resourceVersion: "3006"
+    uid: ef9ec5c7-2c2b-447a-a182-0bd79aa9f33d
+  spec:
+    ingress:
+    - ports:
+      - port: 8443
+        protocol: TCP
+    podSelector:
+      matchExpressions:
+      - key: app
+        operator: In
+        values:
+        - cloud-credential-operator
+    policyTypes:
+    - Ingress
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    annotations:
+      capability.openshift.io/name: CloudCredential
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+    creationTimestamp: "2026-01-28T09:27:09Z"
+    generation: 1
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+        f:spec:
+          f:ingress: {}
+          f:podSelector: {}
+          f:policyTypes: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2026-01-28T09:27:09Z"
+    name: allow-ingress-pprof
+    namespace: openshift-cloud-credential-operator
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      controller: true
+      kind: ClusterVersion
+      name: version
+      uid: 0370d296-6904-481d-ab90-157c7e5b835a
+    resourceVersion: "3014"
+    uid: 469889ff-b62b-497b-a001-b4fba79059c7
+  spec:
+    ingress:
+    - ports:
+      - port: 6060
+        protocol: TCP
+    podSelector:
+      matchExpressions:
+      - key: app
+        operator: In
+        values:
+        - cloud-credential-operator
+    policyTypes:
+    - Ingress
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    annotations:
+      capability.openshift.io/name: CloudCredential
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+    creationTimestamp: "2026-01-28T09:27:10Z"
+    generation: 1
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+        f:spec:
+          f:ingress: {}
+          f:podSelector: {}
+          f:policyTypes: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2026-01-28T09:27:10Z"
+    name: allow-ingress-webhook
+    namespace: openshift-cloud-credential-operator
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      controller: true
+      kind: ClusterVersion
+      name: version
+      uid: 0370d296-6904-481d-ab90-157c7e5b835a
+    resourceVersion: "3018"
+    uid: 633d6965-2be7-4650-99ae-b29b824802d3
+  spec:
+    ingress:
+    - ports:
+      - port: 9443
+        protocol: TCP
+    podSelector:
+      matchExpressions:
+      - key: app
+        operator: In
+        values:
+        - pod-identity-webhook
+    policyTypes:
+    - Ingress
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    annotations:
+      capability.openshift.io/name: CloudCredential
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+    creationTimestamp: "2026-01-28T09:27:10Z"
+    generation: 1
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+        f:spec:
+          f:policyTypes: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2026-01-28T09:27:10Z"
+    name: default-deny
+    namespace: openshift-cloud-credential-operator
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      controller: true
+      kind: ClusterVersion
+      name: version
+      uid: 0370d296-6904-481d-ab90-157c7e5b835a
+    resourceVersion: "3023"
+    uid: 9231743a-2416-4f6f-b8b0-8fa9aff3cf90
+  spec:
+    podSelector: {}
+    policyTypes:
+    - Ingress
+    - Egress
+kind: NetworkPolicyList
+metadata:
+  resourceVersion: "34974"

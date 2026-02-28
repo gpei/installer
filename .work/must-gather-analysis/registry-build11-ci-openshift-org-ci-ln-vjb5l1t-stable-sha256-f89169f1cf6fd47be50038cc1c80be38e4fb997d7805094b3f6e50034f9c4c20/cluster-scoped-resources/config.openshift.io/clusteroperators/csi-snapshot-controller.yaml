@@ -1,0 +1,136 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    capability.openshift.io/name: CSISnapshot
+    include.release.openshift.io/hypershift: "true"
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2026-01-28T09:25:40Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/hypershift: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:25:40Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:25:40Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"EvaluationConditionsDetected"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Upgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: csi-snapshot-controller-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:32:23Z"
+  name: csi-snapshot-controller
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "11658"
+  uid: e452228e-0c8d-4c43-b667-bbd7d2d398f3
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:31:59Z"
+    message: All is well
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2026-01-28T09:32:23Z"
+    message: 'CSISnapshotControllerProgressing: Deployment is not progressing'
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2026-01-28T09:32:09Z"
+    message: 'CSISnapshotControllerAvailable: Deployment is available'
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2026-01-28T09:31:59Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
+    type: Upgradeable
+  - lastTransitionTime: "2026-01-28T09:31:59Z"
+    reason: NoData
+    status: Unknown
+    type: EvaluationConditionsDetected
+  extension: null
+  relatedObjects:
+  - group: ""
+    name: openshift-cluster-storage-operator
+    resource: namespaces
+  - group: operator.openshift.io
+    name: cluster
+    resource: csisnapshotcontrollers
+  versions:
+  - name: operator
+    version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+  - name: csi-snapshot-controller
+    version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest

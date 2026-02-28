@@ -1,0 +1,54 @@
+---
+apiVersion: monitoring.coreos.com/v1
+items:
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    generation: 1
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"fcd269f8-e41e-4315-9f20-8de6753b39e9"}: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector:
+            .: {}
+            f:matchNames: {}
+          f:selector: {}
+      manager: dns-operator
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    name: dns-default
+    namespace: openshift-dns
+    ownerReferences:
+    - apiVersion: apps/v1
+      controller: true
+      kind: DaemonSet
+      name: dns-default
+      uid: fcd269f8-e41e-4315-9f20-8de6753b39e9
+    resourceVersion: "10485"
+    uid: fc5b0404-30c0-48b3-a7db-0bfa0456fb74
+  spec:
+    endpoints:
+    - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+      interval: 30s
+      path: /metrics
+      port: metrics
+      scheme: https
+      tlsConfig:
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        serverName: dns-default.openshift-dns.svc
+    namespaceSelector:
+      matchNames:
+      - openshift-dns
+    selector: {}
+kind: ServiceMonitorList
+metadata:
+  continue: ""
+  resourceVersion: "35035"

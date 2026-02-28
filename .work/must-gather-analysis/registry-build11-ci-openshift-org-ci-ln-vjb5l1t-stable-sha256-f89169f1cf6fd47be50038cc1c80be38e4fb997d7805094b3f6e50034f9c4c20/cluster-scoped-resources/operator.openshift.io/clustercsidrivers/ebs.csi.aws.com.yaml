@@ -1,0 +1,325 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: ClusterCSIDriver
+metadata:
+  creationTimestamp: "2026-01-28T09:31:05Z"
+  generation: 2
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ManagementStateDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: AWSEBSCSIDriver-ManagementState
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:12Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ConfigObservationDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: AWSEBSDriverCSIConfigObserverController-ConfigObserver
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:12Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"AWSEBSDriverControllerServiceControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: AWSEBSDriverControllerServiceController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:12Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"AWSEBSDriverNodeServiceControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: AWSEBSDriverNodeServiceController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:12Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"StorageClassControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: StorageClassController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:12Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"VolumeSnapshotClassControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: VolumeSnapshotClassController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:12Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ResourceSyncControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: ebs.csi.aws.com-ResourceSync
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:12Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"AWSEBSDriverControlPlaneStaticResourcesControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: AWSEBSDriverControlPlaneStaticResourcesController-StaticResources
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:13Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"AWSEBSDriverGuestStaticResourcesControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: AWSEBSDriverGuestStaticResourcesController-StaticResources
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:17Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"AWSEBSDriverControllerServiceControllerAvailable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"AWSEBSDriverControllerServiceControllerProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:generations:
+          k:{"group":"apps","name":"aws-ebs-csi-driver-controller","namespace":"openshift-cluster-csi-drivers","resource":"deployments"}:
+            .: {}
+            f:group: {}
+            f:lastGeneration: {}
+            f:name: {}
+            f:namespace: {}
+            f:resource: {}
+    manager: AWSEBSDriverControllerServiceController-Deployment
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:33:01Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"AWSEBSDriverNodeServiceControllerAvailable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"AWSEBSDriverNodeServiceControllerProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:generations:
+          k:{"group":"apps","name":"aws-ebs-csi-driver-node","namespace":"openshift-cluster-csi-drivers","resource":"daemonsets"}:
+            .: {}
+            f:group: {}
+            f:lastGeneration: {}
+            f:name: {}
+            f:namespace: {}
+            f:resource: {}
+    manager: AWSEBSDriverNodeServiceController-CSIDriverNodeService
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:42:21Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:driverConfig:
+          .: {}
+          f:driverType: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:observedConfig: {}
+        f:operatorLogLevel: {}
+        f:unsupportedConfigOverrides: {}
+    manager: cluster-storage-operator
+    operation: Update
+    time: "2026-01-28T09:31:05Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:observedConfig:
+          f:targetcsiconfig:
+            .: {}
+            f:servingInfo:
+              .: {}
+              f:cipherSuites: {}
+              f:minTLSVersion: {}
+    manager: aws-ebs-csi-driver-operator
+    operation: Update
+    time: "2026-01-28T09:31:12Z"
+  name: ebs.csi.aws.com
+  resourceVersion: "20986"
+  uid: e668e397-468e-47f1-9b7a-968e4c85550f
+spec:
+  driverConfig:
+    driverType: ""
+  logLevel: Normal
+  managementState: Managed
+  observedConfig:
+    targetcsiconfig:
+      servingInfo:
+        cipherSuites:
+        - TLS_AES_128_GCM_SHA256
+        - TLS_AES_256_GCM_SHA384
+        - TLS_CHACHA20_POLY1305_SHA256
+        - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+        - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+        - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+        - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+        - TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+        - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+        minTLSVersion: VersionTLS12
+  operatorLogLevel: Normal
+  unsupportedConfigOverrides: null
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:31:12Z"
+    status: "False"
+    type: ManagementStateDegraded
+  - lastTransitionTime: "2026-01-28T09:31:12Z"
+    reason: AsExpected
+    status: "False"
+    type: VolumeSnapshotClassControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:31:12Z"
+    status: "False"
+    type: ResourceSyncControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:31:12Z"
+    status: "False"
+    type: ConfigObservationDegraded
+  - lastTransitionTime: "2026-01-28T09:32:10Z"
+    message: Deployment is available
+    reason: AsExpected
+    status: "True"
+    type: AWSEBSDriverControllerServiceControllerAvailable
+  - lastTransitionTime: "2026-01-28T09:33:01Z"
+    message: Deployment is not progressing
+    reason: AsExpected
+    status: "False"
+    type: AWSEBSDriverControllerServiceControllerProgressing
+  - lastTransitionTime: "2026-01-28T09:31:12Z"
+    reason: AsExpected
+    status: "False"
+    type: AWSEBSDriverControllerServiceControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:31:12Z"
+    reason: AsExpected
+    status: "False"
+    type: StorageClassControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:31:52Z"
+    message: DaemonSet is available
+    reason: AsExpected
+    status: "True"
+    type: AWSEBSDriverNodeServiceControllerAvailable
+  - lastTransitionTime: "2026-01-28T09:42:21Z"
+    message: DaemonSet is not progressing
+    reason: AsExpected
+    status: "False"
+    type: AWSEBSDriverNodeServiceControllerProgressing
+  - lastTransitionTime: "2026-01-28T09:31:12Z"
+    reason: AsExpected
+    status: "False"
+    type: AWSEBSDriverNodeServiceControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:31:12Z"
+    message: ""
+    reason: AsExpected
+    status: "False"
+    type: AWSEBSDriverControlPlaneStaticResourcesControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:31:17Z"
+    message: ""
+    reason: AsExpected
+    status: "False"
+    type: AWSEBSDriverGuestStaticResourcesControllerDegraded
+  generations:
+  - group: apps
+    lastGeneration: 4
+    name: aws-ebs-csi-driver-controller
+    namespace: openshift-cluster-csi-drivers
+    resource: deployments
+  - group: apps
+    lastGeneration: 2
+    name: aws-ebs-csi-driver-node
+    namespace: openshift-cluster-csi-drivers
+    resource: daemonsets

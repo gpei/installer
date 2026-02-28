@@ -1,0 +1,4520 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:59Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: dns-default-4bqn5
+    namespace: openshift-dns
+    resourceVersion: "10426"
+    uid: 56b41c9d-b8bd-47f4-be8e-24a46021d678
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:59Z"
+  message: Successfully assigned openshift-dns/dns-default-4bqn5 to ip-10-0-3-203.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    name: dns-default-4bqn5.188edb33d22b47e8
+    namespace: openshift-dns
+    resourceVersion: "10436"
+    uid: 7375f068-cbf0-4703-8da9-2c3b74a824d2
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:59Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: dns-default-4bqn5
+    namespace: openshift-dns
+    resourceVersion: "10447"
+    uid: 56b41c9d-b8bd-47f4-be8e-24a46021d678
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:59Z"
+  message: Add eth0 [10.128.0.19/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    name: dns-default-4bqn5.188edb33ef9b5a29
+    namespace: openshift-dns
+    resourceVersion: "10540"
+    uid: bb6d2bad-0dc2-4474-98b3-17b36d55f0d1
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-4bqn5
+    namespace: openshift-dns
+    resourceVersion: "10433"
+    uid: 56b41c9d-b8bd-47f4-be8e-24a46021d678
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:00Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb"
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:00Z"
+    name: dns-default-4bqn5.188edb3402800c6d
+    namespace: openshift-dns
+    resourceVersion: "10604"
+    uid: cdadf4b8-e716-48a5-8f09-8017c33e8b51
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:21Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-4bqn5
+    namespace: openshift-dns
+    resourceVersion: "10433"
+    uid: 56b41c9d-b8bd-47f4-be8e-24a46021d678
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:21Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb"
+    in 21.724s (21.724s including waiting). Image size: 475686190 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:21Z"
+    name: dns-default-4bqn5.188edb3911640349
+    namespace: openshift-dns
+    resourceVersion: "11515"
+    uid: 1516a464-8382-4826-adf1-634c47eb9184
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:23Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-4bqn5
+    namespace: openshift-dns
+    resourceVersion: "10433"
+    uid: 56b41c9d-b8bd-47f4-be8e-24a46021d678
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:23Z"
+  message: 'Created container: dns'
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:23Z"
+    name: dns-default-4bqn5.188edb3961722bcb
+    namespace: openshift-dns
+    resourceVersion: "11570"
+    uid: 1854660d-2fbc-493c-a9e2-0331455285ee
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:23Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-4bqn5
+    namespace: openshift-dns
+    resourceVersion: "10433"
+    uid: 56b41c9d-b8bd-47f4-be8e-24a46021d678
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:23Z"
+  message: Started container dns
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:23Z"
+    name: dns-default-4bqn5.188edb39641ba090
+    namespace: openshift-dns
+    resourceVersion: "11575"
+    uid: 81a79ed4-440b-4823-a8c6-40bd81c7c670
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:23Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: dns-default-4bqn5
+    namespace: openshift-dns
+    resourceVersion: "10433"
+    uid: 56b41c9d-b8bd-47f4-be8e-24a46021d678
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:23Z"
+  message: Container image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b"
+    already present on machine
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:23Z"
+    name: dns-default-4bqn5.188edb39660f4bac
+    namespace: openshift-dns
+    resourceVersion: "11579"
+    uid: 746b39bc-e9c7-48da-92e4-522ca6ad3dd1
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:23Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: dns-default-4bqn5
+    namespace: openshift-dns
+    resourceVersion: "10433"
+    uid: 56b41c9d-b8bd-47f4-be8e-24a46021d678
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:23Z"
+  message: 'Created container: kube-rbac-proxy'
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:23Z"
+    name: dns-default-4bqn5.188edb397bcdb640
+    namespace: openshift-dns
+    resourceVersion: "11603"
+    uid: 7348cd1e-3b77-4d07-9df1-ebf44634598a
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:23Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: dns-default-4bqn5
+    namespace: openshift-dns
+    resourceVersion: "10433"
+    uid: 56b41c9d-b8bd-47f4-be8e-24a46021d678
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:23Z"
+  message: Started container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:23Z"
+    name: dns-default-4bqn5.188edb397c46e3b6
+    namespace: openshift-dns
+    resourceVersion: "11604"
+    uid: af4a4882-107a-4947-8b03-e47aa3dc6a43
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:47Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: dns-default-6hffk
+    namespace: openshift-dns
+    resourceVersion: "15553"
+    uid: 2af56918-e291-405c-8cb2-5d24a818d42f
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:47Z"
+  message: Successfully assigned openshift-dns/dns-default-6hffk to ip-10-0-78-215.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:47Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:36:47Z"
+    name: dns-default-6hffk.188edb76fbf335cb
+    namespace: openshift-dns
+    resourceVersion: "15581"
+    uid: 4138ba52-1dfe-408c-ac55-fce232a8dc86
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2026-01-28T09:36:47.722463Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: dns-default-6hffk
+    namespace: openshift-dns
+    resourceVersion: "15553"
+    uid: 2af56918-e291-405c-8cb2-5d24a818d42f
+  kind: Event
+  lastTimestamp: null
+  message: 'running Bind plugin "DefaultBinder": Operation cannot be fulfilled on
+    pods/binding "dns-default-6hffk": pod dns-default-6hffk is already assigned to
+    node "ip-10-0-78-215.us-west-1.compute.internal"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:47Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:36:47Z"
+    name: dns-default-6hffk.188edb76fe5012a6
+    namespace: openshift-dns
+    resourceVersion: "15584"
+    uid: 5fa674a3-6f6d-4def-8432-c3de7919a60f
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-108-54
+  source: {}
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:48Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: dns-default-6hffk
+    namespace: openshift-dns
+    resourceVersion: "15613"
+    uid: 2af56918-e291-405c-8cb2-5d24a818d42f
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:48Z"
+  message: Add eth0 [10.131.0.9/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2026-01-28T09:36:48Z"
+    name: dns-default-6hffk.188edb77390eaaa3
+    namespace: openshift-dns
+    resourceVersion: "15645"
+    uid: 32f4e929-5dbf-4aa3-aa23-5e754376460d
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-6hffk
+    namespace: openshift-dns
+    resourceVersion: "15562"
+    uid: 2af56918-e291-405c-8cb2-5d24a818d42f
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:48Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb"
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:48Z"
+    name: dns-default-6hffk.188edb773a476f64
+    namespace: openshift-dns
+    resourceVersion: "15647"
+    uid: d0f0c79e-f428-45ea-96c0-65d54af257bb
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-6hffk
+    namespace: openshift-dns
+    resourceVersion: "15562"
+    uid: 2af56918-e291-405c-8cb2-5d24a818d42f
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:58Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb"
+    in 10.143s (10.143s including waiting). Image size: 475686190 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:58Z"
+    name: dns-default-6hffk.188edb7996e07741
+    namespace: openshift-dns
+    resourceVersion: "15914"
+    uid: 242bee22-56e3-47b6-a1d7-9548c8462ebf
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-6hffk
+    namespace: openshift-dns
+    resourceVersion: "15562"
+    uid: 2af56918-e291-405c-8cb2-5d24a818d42f
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:59Z"
+  message: 'Created container: dns'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:59Z"
+    name: dns-default-6hffk.188edb79af395f88
+    namespace: openshift-dns
+    resourceVersion: "15941"
+    uid: bda47774-e552-4521-82dc-29a80a7eae27
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-6hffk
+    namespace: openshift-dns
+    resourceVersion: "15562"
+    uid: 2af56918-e291-405c-8cb2-5d24a818d42f
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:59Z"
+  message: Started container dns
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:59Z"
+    name: dns-default-6hffk.188edb79b03b9310
+    namespace: openshift-dns
+    resourceVersion: "15942"
+    uid: 1abffd8b-396a-4892-a51d-388151c5852b
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: dns-default-6hffk
+    namespace: openshift-dns
+    resourceVersion: "15562"
+    uid: 2af56918-e291-405c-8cb2-5d24a818d42f
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:59Z"
+  message: Container image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b"
+    already present on machine
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:59Z"
+    name: dns-default-6hffk.188edb79b047d5cd
+    namespace: openshift-dns
+    resourceVersion: "15943"
+    uid: eec41105-9579-4408-a0d5-58d241e8ea9c
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: dns-default-6hffk
+    namespace: openshift-dns
+    resourceVersion: "15562"
+    uid: 2af56918-e291-405c-8cb2-5d24a818d42f
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:59Z"
+  message: 'Created container: kube-rbac-proxy'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:59Z"
+    name: dns-default-6hffk.188edb79bf672337
+    namespace: openshift-dns
+    resourceVersion: "15948"
+    uid: 3d4a0c02-3c62-4c55-8063-dd23d2ff3d6a
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: dns-default-6hffk
+    namespace: openshift-dns
+    resourceVersion: "15562"
+    uid: 2af56918-e291-405c-8cb2-5d24a818d42f
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:59Z"
+  message: Started container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:59Z"
+    name: dns-default-6hffk.188edb79c0c71f7f
+    namespace: openshift-dns
+    resourceVersion: "15949"
+    uid: c910ffb0-4969-48ff-858e-69d8e807e57c
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:59Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: dns-default-bmdsx
+    namespace: openshift-dns
+    resourceVersion: "10422"
+    uid: a704880a-e8bb-458a-9e0c-29e2c77f84d5
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:59Z"
+  message: Successfully assigned openshift-dns/dns-default-bmdsx to ip-10-0-108-54.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    name: dns-default-bmdsx.188edb33d119999d
+    namespace: openshift-dns
+    resourceVersion: "10430"
+    uid: b717b6cc-92aa-485a-bd9a-fd0ec5de73fa
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:02Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: dns-default-bmdsx
+    namespace: openshift-dns
+    resourceVersion: "10441"
+    uid: a704880a-e8bb-458a-9e0c-29e2c77f84d5
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:02Z"
+  message: Add eth0 [10.130.0.45/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2026-01-28T09:32:02Z"
+    name: dns-default-bmdsx.188edb348f8c4604
+    namespace: openshift-dns
+    resourceVersion: "10880"
+    uid: bc759a5c-52ee-487f-9360-698ee36db32b
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-bmdsx
+    namespace: openshift-dns
+    resourceVersion: "10423"
+    uid: a704880a-e8bb-458a-9e0c-29e2c77f84d5
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:02Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb"
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:02Z"
+    name: dns-default-bmdsx.188edb34a8ff7924
+    namespace: openshift-dns
+    resourceVersion: "10901"
+    uid: 96916ce9-5626-4143-b258-2e9d62dffc10
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:08Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-bmdsx
+    namespace: openshift-dns
+    resourceVersion: "10423"
+    uid: a704880a-e8bb-458a-9e0c-29e2c77f84d5
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:08Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb"
+    in 5.251s (5.251s including waiting). Image size: 475686190 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:08Z"
+    name: dns-default-bmdsx.188edb35e1ff7756
+    namespace: openshift-dns
+    resourceVersion: "11186"
+    uid: 8b405f37-d156-4061-a894-2a444768fd01
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:08Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-bmdsx
+    namespace: openshift-dns
+    resourceVersion: "10423"
+    uid: a704880a-e8bb-458a-9e0c-29e2c77f84d5
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:08Z"
+  message: 'Created container: dns'
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:08Z"
+    name: dns-default-bmdsx.188edb35fb9fc84a
+    namespace: openshift-dns
+    resourceVersion: "11219"
+    uid: dcd389d9-c0b2-4bf4-a4ac-7b4d6ef780ab
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:08Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-bmdsx
+    namespace: openshift-dns
+    resourceVersion: "10423"
+    uid: a704880a-e8bb-458a-9e0c-29e2c77f84d5
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:08Z"
+  message: Started container dns
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:08Z"
+    name: dns-default-bmdsx.188edb35fc26fd40
+    namespace: openshift-dns
+    resourceVersion: "11220"
+    uid: ed565f22-e0a7-48f0-a3d3-4c146fd73d38
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:08Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: dns-default-bmdsx
+    namespace: openshift-dns
+    resourceVersion: "10423"
+    uid: a704880a-e8bb-458a-9e0c-29e2c77f84d5
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:08Z"
+  message: Container image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b"
+    already present on machine
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:08Z"
+    name: dns-default-bmdsx.188edb35fc44bb1b
+    namespace: openshift-dns
+    resourceVersion: "11221"
+    uid: 9a86c2b1-2789-4981-99e6-7d787f0d85f4
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:08Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: dns-default-bmdsx
+    namespace: openshift-dns
+    resourceVersion: "10423"
+    uid: a704880a-e8bb-458a-9e0c-29e2c77f84d5
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:08Z"
+  message: 'Created container: kube-rbac-proxy'
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:08Z"
+    name: dns-default-bmdsx.188edb36060df689
+    namespace: openshift-dns
+    resourceVersion: "11231"
+    uid: 6b44bfea-98cf-4320-bbd1-bbafe524f2e8
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:08Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: dns-default-bmdsx
+    namespace: openshift-dns
+    resourceVersion: "10423"
+    uid: a704880a-e8bb-458a-9e0c-29e2c77f84d5
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:08Z"
+  message: Started container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:08Z"
+    name: dns-default-bmdsx.188edb3606870139
+    namespace: openshift-dns
+    resourceVersion: "11232"
+    uid: cf267e91-6e99-4ed0-8f16-c8460a119747
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:59Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: dns-default-jcnkp
+    namespace: openshift-dns
+    resourceVersion: "10427"
+    uid: 9bddb4c1-2884-41d6-947f-87fb02197953
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:59Z"
+  message: Successfully assigned openshift-dns/dns-default-jcnkp to ip-10-0-102-200.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    name: dns-default-jcnkp.188edb33d2df487b
+    namespace: openshift-dns
+    resourceVersion: "10439"
+    uid: a445a8a6-4351-4050-9912-61373403e228
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:01Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: dns-default-jcnkp
+    namespace: openshift-dns
+    resourceVersion: "10459"
+    uid: 9bddb4c1-2884-41d6-947f-87fb02197953
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:01Z"
+  message: Add eth0 [10.129.0.18/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2026-01-28T09:32:01Z"
+    name: dns-default-jcnkp.188edb3463a1202d
+    namespace: openshift-dns
+    resourceVersion: "10833"
+    uid: a0f89741-3661-4ab6-ade7-32f47aacfcad
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:05Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-jcnkp
+    namespace: openshift-dns
+    resourceVersion: "10437"
+    uid: 9bddb4c1-2884-41d6-947f-87fb02197953
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:05Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb"
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:05Z"
+    name: dns-default-jcnkp.188edb353aff8ea8
+    namespace: openshift-dns
+    resourceVersion: "11058"
+    uid: a276d192-6a8c-4fbe-b50c-f4e68f9f4dbe
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:08Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-jcnkp
+    namespace: openshift-dns
+    resourceVersion: "10437"
+    uid: 9bddb4c1-2884-41d6-947f-87fb02197953
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:08Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb"
+    in 2.864s (2.864s including waiting). Image size: 475686190 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:08Z"
+    name: dns-default-jcnkp.188edb35e5bad15f
+    namespace: openshift-dns
+    resourceVersion: "11191"
+    uid: 5e26b30d-6f9f-4916-8802-aa6eb51cf6b7
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:08Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-jcnkp
+    namespace: openshift-dns
+    resourceVersion: "10437"
+    uid: 9bddb4c1-2884-41d6-947f-87fb02197953
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:08Z"
+  message: 'Created container: dns'
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:08Z"
+    name: dns-default-jcnkp.188edb35fde14b99
+    namespace: openshift-dns
+    resourceVersion: "11222"
+    uid: cc0561b8-2ec4-4318-af72-84d5bee5398a
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:08Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-jcnkp
+    namespace: openshift-dns
+    resourceVersion: "10437"
+    uid: 9bddb4c1-2884-41d6-947f-87fb02197953
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:08Z"
+  message: Started container dns
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:08Z"
+    name: dns-default-jcnkp.188edb35fea75860
+    namespace: openshift-dns
+    resourceVersion: "11226"
+    uid: 962e9f27-9dc7-4649-9753-0e5f310b0631
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:08Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: dns-default-jcnkp
+    namespace: openshift-dns
+    resourceVersion: "10437"
+    uid: 9bddb4c1-2884-41d6-947f-87fb02197953
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:08Z"
+  message: Container image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b"
+    already present on machine
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:08Z"
+    name: dns-default-jcnkp.188edb35feb1dab5
+    namespace: openshift-dns
+    resourceVersion: "11227"
+    uid: 9cc59f0d-36dd-4aa7-851c-01d761c59f03
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:09Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: dns-default-jcnkp
+    namespace: openshift-dns
+    resourceVersion: "10437"
+    uid: 9bddb4c1-2884-41d6-947f-87fb02197953
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:09Z"
+  message: 'Created container: kube-rbac-proxy'
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:09Z"
+    name: dns-default-jcnkp.188edb3635760c26
+    namespace: openshift-dns
+    resourceVersion: "11267"
+    uid: f17b982c-108b-4f19-932b-1da133c2cf28
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:09Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: dns-default-jcnkp
+    namespace: openshift-dns
+    resourceVersion: "10437"
+    uid: 9bddb4c1-2884-41d6-947f-87fb02197953
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:09Z"
+  message: Started container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:09Z"
+    name: dns-default-jcnkp.188edb3636af15de
+    namespace: openshift-dns
+    resourceVersion: "11269"
+    uid: ecef687b-fefa-46dd-8921-ae6f13ddf68f
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2026-01-28T09:42:30.515569Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: dns-default-ntdzj
+    namespace: openshift-dns
+    resourceVersion: "21165"
+    uid: d720d603-ef59-4936-b019-474bae5a6445
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-dns/dns-default-ntdzj to ip-10-0-101-165.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:30Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:42:30Z"
+    name: dns-default-ntdzj.188edbc6ce5fbf09
+    namespace: openshift-dns
+    resourceVersion: "21235"
+    uid: 024f5886-ef7b-4513-b1f0-bd232f47fdbf
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-3-203
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:31Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: dns-default-ntdzj
+    namespace: openshift-dns
+    resourceVersion: "21260"
+    uid: d720d603-ef59-4936-b019-474bae5a6445
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:31Z"
+  message: Add eth0 [10.128.2.9/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2026-01-28T09:42:31Z"
+    name: dns-default-ntdzj.188edbc704dc8538
+    namespace: openshift-dns
+    resourceVersion: "21293"
+    uid: 2b7b386c-b392-4856-8f23-678b0ab770e3
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-ntdzj
+    namespace: openshift-dns
+    resourceVersion: "21223"
+    uid: d720d603-ef59-4936-b019-474bae5a6445
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:31Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb"
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:31Z"
+    name: dns-default-ntdzj.188edbc706f56db9
+    namespace: openshift-dns
+    resourceVersion: "21297"
+    uid: eda3f4db-4995-4e8d-92e8-e78e2add0942
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:34Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-ntdzj
+    namespace: openshift-dns
+    resourceVersion: "21223"
+    uid: d720d603-ef59-4936-b019-474bae5a6445
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:34Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb"
+    in 2.784s (2.784s including waiting). Image size: 475686190 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:34Z"
+    name: dns-default-ntdzj.188edbc7acef782b
+    namespace: openshift-dns
+    resourceVersion: "21356"
+    uid: 3c7d8f3e-9e57-4085-856e-fdd9e3923bfa
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:34Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-ntdzj
+    namespace: openshift-dns
+    resourceVersion: "21223"
+    uid: d720d603-ef59-4936-b019-474bae5a6445
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:34Z"
+  message: 'Created container: dns'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:34Z"
+    name: dns-default-ntdzj.188edbc7b99cbddd
+    namespace: openshift-dns
+    resourceVersion: "21361"
+    uid: dd8924ba-9b49-4355-977e-fb8f8ae3a353
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:34Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-ntdzj
+    namespace: openshift-dns
+    resourceVersion: "21223"
+    uid: d720d603-ef59-4936-b019-474bae5a6445
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:34Z"
+  message: Started container dns
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:34Z"
+    name: dns-default-ntdzj.188edbc7ba5d8d20
+    namespace: openshift-dns
+    resourceVersion: "21362"
+    uid: fc7a9623-0409-452d-a043-01c4f94b1f3b
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:34Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: dns-default-ntdzj
+    namespace: openshift-dns
+    resourceVersion: "21223"
+    uid: d720d603-ef59-4936-b019-474bae5a6445
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:34Z"
+  message: Container image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b"
+    already present on machine
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:34Z"
+    name: dns-default-ntdzj.188edbc7ba7074a2
+    namespace: openshift-dns
+    resourceVersion: "21363"
+    uid: d7498dbb-e037-4357-b07c-01200bda7587
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:34Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: dns-default-ntdzj
+    namespace: openshift-dns
+    resourceVersion: "21223"
+    uid: d720d603-ef59-4936-b019-474bae5a6445
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:34Z"
+  message: 'Created container: kube-rbac-proxy'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:34Z"
+    name: dns-default-ntdzj.188edbc7c64ce5a6
+    namespace: openshift-dns
+    resourceVersion: "21369"
+    uid: 1dc68187-c7b4-4223-a9fd-6eb13aad4080
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:34Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: dns-default-ntdzj
+    namespace: openshift-dns
+    resourceVersion: "21223"
+    uid: d720d603-ef59-4936-b019-474bae5a6445
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:34Z"
+  message: Started container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:34Z"
+    name: dns-default-ntdzj.188edbc7c70919aa
+    namespace: openshift-dns
+    resourceVersion: "21370"
+    uid: a2b03175-d3ec-4255-9a72-08a5035dcd27
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2026-01-28T09:42:30.502149Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: dns-default-wx96s
+    namespace: openshift-dns
+    resourceVersion: "21182"
+    uid: 59d051a5-15ce-4032-ba14-57ea852ab125
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-dns/dns-default-wx96s to ip-10-0-22-208.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:30Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:42:30Z"
+    name: dns-default-wx96s.188edbc6cd92fb81
+    namespace: openshift-dns
+    resourceVersion: "21228"
+    uid: 699391d4-7272-477e-b05c-ffa453be0dd1
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-3-203
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:31Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: dns-default-wx96s
+    namespace: openshift-dns
+    resourceVersion: "21249"
+    uid: 59d051a5-15ce-4032-ba14-57ea852ab125
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:31Z"
+  message: Add eth0 [10.129.2.6/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2026-01-28T09:42:31Z"
+    name: dns-default-wx96s.188edbc6f63a2778
+    namespace: openshift-dns
+    resourceVersion: "21269"
+    uid: daec2740-33e0-434a-a030-4a2b43e307f7
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-wx96s
+    namespace: openshift-dns
+    resourceVersion: "21218"
+    uid: 59d051a5-15ce-4032-ba14-57ea852ab125
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:31Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb"
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:31Z"
+    name: dns-default-wx96s.188edbc6f81f38d9
+    namespace: openshift-dns
+    resourceVersion: "21273"
+    uid: 086a1e60-6cbd-4387-9ec5-b4379c3c1f9e
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:35Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-wx96s
+    namespace: openshift-dns
+    resourceVersion: "21218"
+    uid: 59d051a5-15ce-4032-ba14-57ea852ab125
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:35Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb"
+    in 4.706s (4.706s including waiting). Image size: 475686190 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:35Z"
+    name: dns-default-wx96s.188edbc8109f8fa9
+    namespace: openshift-dns
+    resourceVersion: "21411"
+    uid: 7e188a40-9d6b-445d-9eb3-83d6e46aad2e
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-wx96s
+    namespace: openshift-dns
+    resourceVersion: "21218"
+    uid: 59d051a5-15ce-4032-ba14-57ea852ab125
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:36Z"
+  message: 'Created container: dns'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:36Z"
+    name: dns-default-wx96s.188edbc81f4ef286
+    namespace: openshift-dns
+    resourceVersion: "21429"
+    uid: bcc17fff-3fae-442e-a322-c3a1b73518c6
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns}
+    kind: Pod
+    name: dns-default-wx96s
+    namespace: openshift-dns
+    resourceVersion: "21218"
+    uid: 59d051a5-15ce-4032-ba14-57ea852ab125
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:36Z"
+  message: Started container dns
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:36Z"
+    name: dns-default-wx96s.188edbc81fec278a
+    namespace: openshift-dns
+    resourceVersion: "21432"
+    uid: e8ba2e26-c56c-4a0c-a6ec-2a32071f0121
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: dns-default-wx96s
+    namespace: openshift-dns
+    resourceVersion: "21218"
+    uid: 59d051a5-15ce-4032-ba14-57ea852ab125
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:36Z"
+  message: Container image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b"
+    already present on machine
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:36Z"
+    name: dns-default-wx96s.188edbc82006d622
+    namespace: openshift-dns
+    resourceVersion: "21433"
+    uid: aaabb501-dacf-4a66-8f6f-930618504aff
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: dns-default-wx96s
+    namespace: openshift-dns
+    resourceVersion: "21218"
+    uid: 59d051a5-15ce-4032-ba14-57ea852ab125
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:36Z"
+  message: 'Created container: kube-rbac-proxy'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:36Z"
+    name: dns-default-wx96s.188edbc82b9a7774
+    namespace: openshift-dns
+    resourceVersion: "21448"
+    uid: 24f34e01-6f32-47e1-899e-19875aa423d5
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: dns-default-wx96s
+    namespace: openshift-dns
+    resourceVersion: "21218"
+    uid: 59d051a5-15ce-4032-ba14-57ea852ab125
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:36Z"
+  message: Started container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:36Z"
+    name: dns-default-wx96s.188edbc82c434997
+    namespace: openshift-dns
+    resourceVersion: "21451"
+    uid: 104ff4f1-c184-4c57-9f48-770921795462
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:59Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: dns-default
+    namespace: openshift-dns
+    resourceVersion: "10388"
+    uid: fcd269f8-e41e-4315-9f20-8de6753b39e9
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:59Z"
+  message: 'Created pod: dns-default-bmdsx'
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    name: dns-default.188edb33d0c946bb
+    namespace: openshift-dns
+    resourceVersion: "10425"
+    uid: 639630c4-7356-4051-873c-87e0939d192d
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:59Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: dns-default
+    namespace: openshift-dns
+    resourceVersion: "10388"
+    uid: fcd269f8-e41e-4315-9f20-8de6753b39e9
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:59Z"
+  message: 'Created pod: dns-default-4bqn5'
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    name: dns-default.188edb33d153a97a
+    namespace: openshift-dns
+    resourceVersion: "10431"
+    uid: 715915ee-fee8-4f49-ac6a-b54350d9968b
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:59Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: dns-default
+    namespace: openshift-dns
+    resourceVersion: "10388"
+    uid: fcd269f8-e41e-4315-9f20-8de6753b39e9
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:59Z"
+  message: 'Created pod: dns-default-jcnkp'
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    name: dns-default.188edb33d1c5c46f
+    namespace: openshift-dns
+    resourceVersion: "10435"
+    uid: d8c16748-4956-4281-9a93-81e05bfe00c7
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:47Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: dns-default
+    namespace: openshift-dns
+    resourceVersion: "12072"
+    uid: fcd269f8-e41e-4315-9f20-8de6753b39e9
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:47Z"
+  message: 'Created pod: dns-default-6hffk'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:47Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:36:47Z"
+    name: dns-default.188edb76fb060ea4
+    namespace: openshift-dns
+    resourceVersion: "15570"
+    uid: 474db8c1-9a7a-47f0-b799-989626c8d628
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:29Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: dns-default
+    namespace: openshift-dns
+    resourceVersion: "16305"
+    uid: fcd269f8-e41e-4315-9f20-8de6753b39e9
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:29Z"
+  message: 'Created pod: dns-default-ntdzj'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:42:29Z"
+    name: dns-default.188edbc699ca2b61
+    namespace: openshift-dns
+    resourceVersion: "21167"
+    uid: 7c167712-5268-4bd5-a7a8-7d3cfd2b86bc
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:29Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: dns-default
+    namespace: openshift-dns
+    resourceVersion: "21168"
+    uid: fcd269f8-e41e-4315-9f20-8de6753b39e9
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:29Z"
+  message: 'Created pod: dns-default-wx96s'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:42:29Z"
+    name: dns-default.188edbc6a93174ef
+    namespace: openshift-dns
+    resourceVersion: "21185"
+    uid: 8171bc30-69d3-448a-a0a0-bdb3c9c3f8f6
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 4
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:29Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Service
+    name: dns-default
+    namespace: openshift-dns
+    resourceVersion: "21192"
+    uid: c0d7bde8-868d-4268-b3c2-6cba64d6aabb
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:37Z"
+  message: 'Unable to allocate minimum required endpoints to each zone without exceeding
+    overload threshold (4 endpoints, 2 zones), addressType: IPv4'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:42:37Z"
+    name: dns-default.188edbc6abd17e95
+    namespace: openshift-dns
+    resourceVersion: "21498"
+    uid: d78837d5-bd2e-4b67-a493-2c28c91eb4f6
+  reason: TopologyAwareHintsDisabled
+  reportingComponent: endpoint-slice-controller
+  reportingInstance: ""
+  source:
+    component: endpoint-slice-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:45Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Service
+    name: dns-default
+    namespace: openshift-dns
+    resourceVersion: "21192"
+    uid: c0d7bde8-868d-4268-b3c2-6cba64d6aabb
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:45Z"
+  message: 'Topology Aware Hints has been enabled, addressType: IPv4'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:42:45Z"
+    name: dns-default.188edbca56f5933b
+    namespace: openshift-dns
+    resourceVersion: "22001"
+    uid: a5f9cac4-1c8e-496a-8e56-0bb7b036469b
+  reason: TopologyAwareHintsEnabled
+  reportingComponent: endpoint-slice-controller
+  reportingInstance: ""
+  source:
+    component: endpoint-slice-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:44:22Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Service
+    name: dns-default
+    namespace: openshift-dns
+    resourceVersion: "21192"
+    uid: c0d7bde8-868d-4268-b3c2-6cba64d6aabb
+  kind: Event
+  lastTimestamp: "2026-01-28T09:44:22Z"
+  message: 'Topology Aware Hints has been enabled, addressType: IPv4'
+  metadata:
+    creationTimestamp: "2026-01-28T09:44:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:44:22Z"
+    name: dns-default.188edbe0ec82788a
+    namespace: openshift-dns
+    resourceVersion: "23942"
+    uid: 0a946102-82c3-4e24-bd8f-b9d98861e8b0
+  reason: TopologyAwareHintsEnabled
+  reportingComponent: endpoint-slice-controller
+  reportingInstance: ""
+  source:
+    component: endpoint-slice-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:47:23Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Service
+    name: dns-default
+    namespace: openshift-dns
+    resourceVersion: "21192"
+    uid: c0d7bde8-868d-4268-b3c2-6cba64d6aabb
+  kind: Event
+  lastTimestamp: "2026-01-28T09:47:23Z"
+  message: 'Topology Aware Hints has been enabled, addressType: IPv4'
+  metadata:
+    creationTimestamp: "2026-01-28T09:47:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:47:23Z"
+    name: dns-default.188edc0b07849219
+    namespace: openshift-dns
+    resourceVersion: "25885"
+    uid: 4ca218f2-d1ce-48cf-863a-9147155cbc83
+  reason: TopologyAwareHintsEnabled
+  reportingComponent: endpoint-slice-controller
+  reportingInstance: ""
+  source:
+    component: endpoint-slice-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:59Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: node-resolver-5lvqn
+    namespace: openshift-dns
+    resourceVersion: "10495"
+    uid: 06c78052-644e-4bbd-b2a5-ec97121a8a38
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:59Z"
+  message: Successfully assigned openshift-dns/node-resolver-5lvqn to ip-10-0-102-200.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    name: node-resolver-5lvqn.188edb33e4c056b8
+    namespace: openshift-dns
+    resourceVersion: "10506"
+    uid: 9d0b9275-c1e1-4593-850c-02846e5a613b
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:05Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-node-resolver}
+    kind: Pod
+    name: node-resolver-5lvqn
+    namespace: openshift-dns
+    resourceVersion: "10500"
+    uid: 06c78052-644e-4bbd-b2a5-ec97121a8a38
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:05Z"
+  message: Container image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a"
+    already present on machine
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:05Z"
+    name: node-resolver-5lvqn.188edb353b030d7b
+    namespace: openshift-dns
+    resourceVersion: "11059"
+    uid: 9b804119-da7b-4d2c-8fbc-172628d9bd52
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:05Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-node-resolver}
+    kind: Pod
+    name: node-resolver-5lvqn
+    namespace: openshift-dns
+    resourceVersion: "10500"
+    uid: 06c78052-644e-4bbd-b2a5-ec97121a8a38
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:05Z"
+  message: 'Created container: dns-node-resolver'
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:05Z"
+    name: node-resolver-5lvqn.188edb354a431b42
+    namespace: openshift-dns
+    resourceVersion: "11070"
+    uid: 857ad108-448a-48e4-9b2e-f6483aaa0648
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:05Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-node-resolver}
+    kind: Pod
+    name: node-resolver-5lvqn
+    namespace: openshift-dns
+    resourceVersion: "10500"
+    uid: 06c78052-644e-4bbd-b2a5-ec97121a8a38
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:05Z"
+  message: Started container dns-node-resolver
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:05Z"
+    name: node-resolver-5lvqn.188edb354c2be991
+    namespace: openshift-dns
+    resourceVersion: "11071"
+    uid: ec7b606c-2552-445e-b677-15cac3ba8c50
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:11Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: node-resolver-8hgs7
+    namespace: openshift-dns
+    resourceVersion: "14827"
+    uid: f33f99c5-40ac-4416-844b-8643044f5fb7
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:11Z"
+  message: Successfully assigned openshift-dns/node-resolver-8hgs7 to ip-10-0-78-215.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:36:11Z"
+    name: node-resolver-8hgs7.188edb6e72b85332
+    namespace: openshift-dns
+    resourceVersion: "14836"
+    uid: aea0a35a-dc9e-472f-a40f-d1df1551db75
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2026-01-28T09:36:11.035718Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: node-resolver-8hgs7
+    namespace: openshift-dns
+    resourceVersion: "14827"
+    uid: f33f99c5-40ac-4416-844b-8643044f5fb7
+  kind: Event
+  lastTimestamp: null
+  message: 'running Bind plugin "DefaultBinder": Operation cannot be fulfilled on
+    pods/binding "node-resolver-8hgs7": pod node-resolver-8hgs7 is already assigned
+    to node "ip-10-0-78-215.us-west-1.compute.internal"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:11Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:36:11Z"
+    name: node-resolver-8hgs7.188edb6e739cc348
+    namespace: openshift-dns
+    resourceVersion: "14842"
+    uid: b9270d0a-6a99-4744-aed4-f9f35b56058d
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-108-54
+  source: {}
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:13Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-node-resolver}
+    kind: Pod
+    name: node-resolver-8hgs7
+    namespace: openshift-dns
+    resourceVersion: "14843"
+    uid: f33f99c5-40ac-4416-844b-8643044f5fb7
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:13Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a"
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:13Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:13Z"
+    name: node-resolver-8hgs7.188edb6eeae06a0b
+    namespace: openshift-dns
+    resourceVersion: "14965"
+    uid: a8dc15a0-1615-477f-82a6-b125665a7b0d
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:34Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-node-resolver}
+    kind: Pod
+    name: node-resolver-8hgs7
+    namespace: openshift-dns
+    resourceVersion: "14843"
+    uid: f33f99c5-40ac-4416-844b-8643044f5fb7
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:34Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a"
+    in 21.351s (21.351s including waiting). Image size: 585075370 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:34Z"
+    name: node-resolver-8hgs7.188edb73e3833814
+    namespace: openshift-dns
+    resourceVersion: "15244"
+    uid: b5f27db2-3e39-43e8-aaf5-00d1a4baf37e
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:34Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-node-resolver}
+    kind: Pod
+    name: node-resolver-8hgs7
+    namespace: openshift-dns
+    resourceVersion: "14843"
+    uid: f33f99c5-40ac-4416-844b-8643044f5fb7
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:34Z"
+  message: 'Created container: dns-node-resolver'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:34Z"
+    name: node-resolver-8hgs7.188edb73fb0a62df
+    namespace: openshift-dns
+    resourceVersion: "15258"
+    uid: 8db111f7-68ae-46c7-b85a-aea6969c5e69
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:34Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-node-resolver}
+    kind: Pod
+    name: node-resolver-8hgs7
+    namespace: openshift-dns
+    resourceVersion: "14843"
+    uid: f33f99c5-40ac-4416-844b-8643044f5fb7
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:34Z"
+  message: Started container dns-node-resolver
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:34Z"
+    name: node-resolver-8hgs7.188edb73fd3c6cc3
+    namespace: openshift-dns
+    resourceVersion: "15262"
+    uid: 83504eda-043a-4986-93d3-094b51f8adb5
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2026-01-28T09:41:49.362115Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: node-resolver-cqc85
+    namespace: openshift-dns
+    resourceVersion: "19844"
+    uid: 6eb2d225-b124-4f3a-bc7a-9a85c4acf461
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-dns/node-resolver-cqc85 to ip-10-0-22-208.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:41:49Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:41:49Z"
+    name: node-resolver-cqc85.188edbbd396fe8c9
+    namespace: openshift-dns
+    resourceVersion: "19851"
+    uid: 04fa647e-e43f-4181-947b-6dd275652452
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-108-54
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:41:51Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-node-resolver}
+    kind: Pod
+    name: node-resolver-cqc85
+    namespace: openshift-dns
+    resourceVersion: "19848"
+    uid: 6eb2d225-b124-4f3a-bc7a-9a85c4acf461
+  kind: Event
+  lastTimestamp: "2026-01-28T09:41:51Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a"
+  metadata:
+    creationTimestamp: "2026-01-28T09:41:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:41:51Z"
+    name: node-resolver-cqc85.188edbbdb1a02e6a
+    namespace: openshift-dns
+    resourceVersion: "19961"
+    uid: ab8c57da-9ccc-4c96-88b7-3cb67b7feb4f
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-node-resolver}
+    kind: Pod
+    name: node-resolver-cqc85
+    namespace: openshift-dns
+    resourceVersion: "19848"
+    uid: 6eb2d225-b124-4f3a-bc7a-9a85c4acf461
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:14Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a"
+    in 22.899s (22.899s including waiting). Image size: 585075370 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:14Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:14Z"
+    name: node-resolver-cqc85.188edbc3068a3ce9
+    namespace: openshift-dns
+    resourceVersion: "20816"
+    uid: eb81db95-6129-4b3f-9cf0-10131c1343cd
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-node-resolver}
+    kind: Pod
+    name: node-resolver-cqc85
+    namespace: openshift-dns
+    resourceVersion: "19848"
+    uid: 6eb2d225-b124-4f3a-bc7a-9a85c4acf461
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:14Z"
+  message: 'Created container: dns-node-resolver'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:14Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:14Z"
+    name: node-resolver-cqc85.188edbc328d721f3
+    namespace: openshift-dns
+    resourceVersion: "20842"
+    uid: 1a86150d-a691-4812-95b7-5ab5ea450046
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-node-resolver}
+    kind: Pod
+    name: node-resolver-cqc85
+    namespace: openshift-dns
+    resourceVersion: "19848"
+    uid: 6eb2d225-b124-4f3a-bc7a-9a85c4acf461
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:14Z"
+  message: Started container dns-node-resolver
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:14Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:14Z"
+    name: node-resolver-cqc85.188edbc32ae9e1e2
+    namespace: openshift-dns
+    resourceVersion: "20843"
+    uid: fd7e241f-2c79-4b0e-9c20-d638dde7b79a
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2026-01-28T09:41:46.805213Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: node-resolver-k7g6c
+    namespace: openshift-dns
+    resourceVersion: "19636"
+    uid: fc75b133-5390-4d28-9efb-5e9f4ecb0f18
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-dns/node-resolver-k7g6c to ip-10-0-101-165.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:41:46Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:41:46Z"
+    name: node-resolver-k7g6c.188edbbca108b192
+    namespace: openshift-dns
+    resourceVersion: "19648"
+    uid: fe4fc952-355a-48b6-8a54-fa2112e9f367
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-108-54
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:41:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-node-resolver}
+    kind: Pod
+    name: node-resolver-k7g6c
+    namespace: openshift-dns
+    resourceVersion: "19646"
+    uid: fc75b133-5390-4d28-9efb-5e9f4ecb0f18
+  kind: Event
+  lastTimestamp: "2026-01-28T09:41:48Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a"
+  metadata:
+    creationTimestamp: "2026-01-28T09:41:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:41:48Z"
+    name: node-resolver-k7g6c.188edbbd0f83d5c1
+    namespace: openshift-dns
+    resourceVersion: "19762"
+    uid: 22d1f69a-2b09-488a-8d83-453b31a18e0d
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-node-resolver}
+    kind: Pod
+    name: node-resolver-k7g6c
+    namespace: openshift-dns
+    resourceVersion: "19646"
+    uid: fc75b133-5390-4d28-9efb-5e9f4ecb0f18
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:10Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a"
+    in 21.525s (21.525s including waiting). Image size: 585075370 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:10Z"
+    name: node-resolver-k7g6c.188edbc212886151
+    namespace: openshift-dns
+    resourceVersion: "20640"
+    uid: 59e465d4-cc05-436b-b5aa-bd4017ad60c3
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-node-resolver}
+    kind: Pod
+    name: node-resolver-k7g6c
+    namespace: openshift-dns
+    resourceVersion: "19646"
+    uid: fc75b133-5390-4d28-9efb-5e9f4ecb0f18
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:10Z"
+  message: 'Created container: dns-node-resolver'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:10Z"
+    name: node-resolver-k7g6c.188edbc22e881989
+    namespace: openshift-dns
+    resourceVersion: "20688"
+    uid: ae58a4bf-9c74-48a1-9bb0-908c25a88877
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-node-resolver}
+    kind: Pod
+    name: node-resolver-k7g6c
+    namespace: openshift-dns
+    resourceVersion: "19646"
+    uid: fc75b133-5390-4d28-9efb-5e9f4ecb0f18
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:10Z"
+  message: Started container dns-node-resolver
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:10Z"
+    name: node-resolver-k7g6c.188edbc22fc26546
+    namespace: openshift-dns
+    resourceVersion: "20690"
+    uid: ae9f6e98-4608-4cbb-8503-28efd89c4920
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:59Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: node-resolver-ndnhf
+    namespace: openshift-dns
+    resourceVersion: "10490"
+    uid: d9750b08-86f6-4ec3-911c-97090b3cd747
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:59Z"
+  message: Successfully assigned openshift-dns/node-resolver-ndnhf to ip-10-0-108-54.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    name: node-resolver-ndnhf.188edb33e41dbb80
+    namespace: openshift-dns
+    resourceVersion: "10498"
+    uid: a16af325-3657-41ce-a3c6-23f0f7c4ce2b
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-node-resolver}
+    kind: Pod
+    name: node-resolver-ndnhf
+    namespace: openshift-dns
+    resourceVersion: "10494"
+    uid: d9750b08-86f6-4ec3-911c-97090b3cd747
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:02Z"
+  message: Container image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a"
+    already present on machine
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:02Z"
+    name: node-resolver-ndnhf.188edb3483c65aff
+    namespace: openshift-dns
+    resourceVersion: "10870"
+    uid: d9ec49b0-5c29-47eb-98c5-2d7eb77e4310
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:03Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-node-resolver}
+    kind: Pod
+    name: node-resolver-ndnhf
+    namespace: openshift-dns
+    resourceVersion: "10494"
+    uid: d9750b08-86f6-4ec3-911c-97090b3cd747
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:03Z"
+  message: 'Created container: dns-node-resolver'
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:03Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:03Z"
+    name: node-resolver-ndnhf.188edb34e83dd771
+    namespace: openshift-dns
+    resourceVersion: "10978"
+    uid: bcd7c5e6-4593-42b7-bef4-91f080efd8c5
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:03Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-node-resolver}
+    kind: Pod
+    name: node-resolver-ndnhf
+    namespace: openshift-dns
+    resourceVersion: "10494"
+    uid: d9750b08-86f6-4ec3-911c-97090b3cd747
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:03Z"
+  message: Started container dns-node-resolver
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:03Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:03Z"
+    name: node-resolver-ndnhf.188edb34ea569e2c
+    namespace: openshift-dns
+    resourceVersion: "10980"
+    uid: ea7a8e40-a517-41d6-be87-5e867d487501
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:59Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: node-resolver-tqf2n
+    namespace: openshift-dns
+    resourceVersion: "10492"
+    uid: f7a34f15-1599-4f39-8c75-2dc31527b20a
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:59Z"
+  message: Successfully assigned openshift-dns/node-resolver-tqf2n to ip-10-0-3-203.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    name: node-resolver-tqf2n.188edb33e47e106b
+    namespace: openshift-dns
+    resourceVersion: "10502"
+    uid: 474940f1-2e13-4daf-a204-ab90457565c0
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-node-resolver}
+    kind: Pod
+    name: node-resolver-tqf2n
+    namespace: openshift-dns
+    resourceVersion: "10496"
+    uid: f7a34f15-1599-4f39-8c75-2dc31527b20a
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:00Z"
+  message: Container image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a"
+    already present on machine
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:00Z"
+    name: node-resolver-tqf2n.188edb3404035e02
+    namespace: openshift-dns
+    resourceVersion: "10620"
+    uid: 7944edaa-cba4-42da-a577-088993f4a0b9
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-node-resolver}
+    kind: Pod
+    name: node-resolver-tqf2n
+    namespace: openshift-dns
+    resourceVersion: "10496"
+    uid: f7a34f15-1599-4f39-8c75-2dc31527b20a
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:00Z"
+  message: 'Created container: dns-node-resolver'
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:00Z"
+    name: node-resolver-tqf2n.188edb342117a1c3
+    namespace: openshift-dns
+    resourceVersion: "10690"
+    uid: 0938a288-ab09-4985-a376-b28a5ad844da
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-node-resolver}
+    kind: Pod
+    name: node-resolver-tqf2n
+    namespace: openshift-dns
+    resourceVersion: "10496"
+    uid: f7a34f15-1599-4f39-8c75-2dc31527b20a
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:00Z"
+  message: Started container dns-node-resolver
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:32:00Z"
+    name: node-resolver-tqf2n.188edb3424e1f6f9
+    namespace: openshift-dns
+    resourceVersion: "10701"
+    uid: d7e8a6d9-4586-4252-b72e-70400e006cb7
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:59Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: node-resolver
+    namespace: openshift-dns
+    resourceVersion: "10488"
+    uid: a599b6e7-c66d-4f11-9cc8-6317fdefd964
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:59Z"
+  message: 'Created pod: node-resolver-ndnhf'
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    name: node-resolver.188edb33e3b9f3c0
+    namespace: openshift-dns
+    resourceVersion: "10493"
+    uid: e3dd43b5-e37d-4a20-9e27-c8c63e6cc848
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:59Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: node-resolver
+    namespace: openshift-dns
+    resourceVersion: "10488"
+    uid: a599b6e7-c66d-4f11-9cc8-6317fdefd964
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:59Z"
+  message: 'Created pod: node-resolver-tqf2n'
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    name: node-resolver.188edb33e42820fa
+    namespace: openshift-dns
+    resourceVersion: "10497"
+    uid: 0ad3cc0f-49ce-4848-86d9-a844b8129564
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:59Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: node-resolver
+    namespace: openshift-dns
+    resourceVersion: "10488"
+    uid: a599b6e7-c66d-4f11-9cc8-6317fdefd964
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:59Z"
+  message: 'Created pod: node-resolver-5lvqn'
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    name: node-resolver.188edb33e449cb49
+    namespace: openshift-dns
+    resourceVersion: "10503"
+    uid: a7f72fc6-e271-4f7f-ba4d-c9b49663e161
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:11Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: node-resolver
+    namespace: openshift-dns
+    resourceVersion: "11103"
+    uid: a599b6e7-c66d-4f11-9cc8-6317fdefd964
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:11Z"
+  message: 'Created pod: node-resolver-8hgs7'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:36:11Z"
+    name: node-resolver.188edb6e71fb0f62
+    namespace: openshift-dns
+    resourceVersion: "14829"
+    uid: 996d04b9-1ed0-43fc-afae-a0c01d8fbd74
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:41:46Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: node-resolver
+    namespace: openshift-dns
+    resourceVersion: "15281"
+    uid: a599b6e7-c66d-4f11-9cc8-6317fdefd964
+  kind: Event
+  lastTimestamp: "2026-01-28T09:41:46Z"
+  message: 'Created pod: node-resolver-k7g6c'
+  metadata:
+    creationTimestamp: "2026-01-28T09:41:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:41:46Z"
+    name: node-resolver.188edbbc9e928e3c
+    namespace: openshift-dns
+    resourceVersion: "19639"
+    uid: c23fe512-718a-4a9a-a73b-b9be38e39702
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:41:49Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: node-resolver
+    namespace: openshift-dns
+    resourceVersion: "19679"
+    uid: a599b6e7-c66d-4f11-9cc8-6317fdefd964
+  kind: Event
+  lastTimestamp: "2026-01-28T09:41:49Z"
+  message: 'Created pod: node-resolver-cqc85'
+  metadata:
+    creationTimestamp: "2026-01-28T09:41:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:41:49Z"
+    name: node-resolver.188edbbd390470dd
+    namespace: openshift-dns
+    resourceVersion: "19849"
+    uid: 6d9f23ea-4946-4b25-9d48-afa362041def
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "35035"

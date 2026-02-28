@@ -1,0 +1,44 @@
+2026-01-28T09:36:34.843715349Z I0128 09:36:34.843559    2885 controller.go:1668] starting in-cluster ocp-tuned 5f4d569c
+2026-01-28T09:36:35.101009046Z I0128 09:36:35.100963    2885 controller.go:672] writing /var/lib/ocp-tuned/image.env
+2026-01-28T09:36:35.102733561Z E0128 09:36:35.102692    2885 controller.go:1713] error repacking the profile: open /etc/tuned/recommend.d/50-openshift.conf: no such file or directory
+2026-01-28T09:36:35.102733561Z I0128 09:36:35.102722    2885 controller.go:1714] deferred updates likely broken
+2026-01-28T09:36:35.102817502Z I0128 09:36:35.102731    2885 controller.go:1730] starting: profile unpacked is "" fingerprint "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+2026-01-28T09:36:35.102817502Z I0128 09:36:35.102770    2885 controller.go:1426] recover: no pending deferred change
+2026-01-28T09:36:35.102817502Z I0128 09:36:35.102778    2885 controller.go:1736] starting: no pending deferred update
+2026-01-28T09:36:50.453286787Z I0128 09:36:50.453218    2885 controller.go:383] disabling system tuned...
+2026-01-28T09:36:50.502979734Z I0128 09:36:50.502952    2885 controller.go:1548] started events processors
+2026-01-28T09:36:50.503223679Z I0128 09:36:50.503203    2885 controller.go:1569] monitoring filesystem events on "/etc/tuned/bootcmdline"
+2026-01-28T09:36:50.503223679Z I0128 09:36:50.503219    2885 controller.go:1572] started controller
+2026-01-28T09:36:50.805188445Z I0128 09:36:50.805147    2885 controller.go:360] set log level 0
+2026-01-28T09:36:50.805316828Z I0128 09:36:50.805292    2885 controller.go:615] providerExtract(): extracting cloud provider name to /var/lib/ocp-tuned/provider
+2026-01-28T09:36:50.805559923Z I0128 09:36:50.805538    2885 controller.go:693] tunedRecommendFileWrite(): written "/etc/tuned/recommend.d/50-openshift.conf" to set TuneD profile openshift-node
+2026-01-28T09:36:50.805559923Z I0128 09:36:50.805555    2885 controller.go:418] profilesExtract(): extracting 1 TuneD profiles (recommended=openshift-node)
+2026-01-28T09:36:50.930610321Z I0128 09:36:50.930573    2885 controller.go:463] profilesExtract(): recommended TuneD profile openshift-node content changed [openshift]
+2026-01-28T09:36:50.930798744Z I0128 09:36:50.930781    2885 controller.go:479] profilesExtract(): fingerprint of extracted profiles: "caa493f132cc24114a421e5a3d0bc5b4874608c4f2897f3f55aac18a2f3513d6"
+2026-01-28T09:36:50.930908707Z I0128 09:36:50.930872    2885 controller.go:819] tunedReload()
+2026-01-28T09:36:50.930923957Z I0128 09:36:50.930915    2885 controller.go:746] starting tuned...
+2026-01-28T09:36:50.930934117Z I0128 09:36:50.930923    2885 run.go:127] running cmd...
+2026-01-28T09:36:52.704802836Z 2026-01-28 09:36:52,703 INFO     tuned.daemon.application: TuneD: 2.25.1, kernel: 5.14.0-570.82.1.el9_6.x86_64
+2026-01-28T09:36:52.704886527Z 2026-01-28 09:36:52,704 INFO     tuned.daemon.application: dynamic tuning is globally disabled
+2026-01-28T09:36:52.812234200Z 2026-01-28 09:36:52,811 INFO     tuned.daemon.daemon: using sleep interval of 1 second(s)
+2026-01-28T09:36:52.812708570Z 2026-01-28 09:36:52,812 INFO     tuned.daemon.daemon: Running in automatic mode, checking what profile is recommended for your configuration.
+2026-01-28T09:36:52.813914964Z 2026-01-28 09:36:52,813 INFO     tuned.daemon.daemon: Using 'openshift-node' profile
+2026-01-28T09:36:52.815992086Z 2026-01-28 09:36:52,815 INFO     tuned.profiles.loader: loading profile: openshift-node
+2026-01-28T09:36:52.893096222Z 2026-01-28 09:36:52,891 INFO     tuned.daemon.controller: starting controller
+2026-01-28T09:36:52.893151083Z 2026-01-28 09:36:52,892 INFO     tuned.daemon.controller: waiting for udev to settle
+2026-01-28T09:36:53.899706245Z 2026-01-28 09:36:53,899 INFO     tuned.daemon.controller: udev settled
+2026-01-28T09:36:53.899959580Z 2026-01-28 09:36:53,899 INFO     tuned.daemon.daemon: starting tuning
+2026-01-28T09:36:53.925387341Z 2026-01-28 09:36:53,925 INFO     tuned.plugins.base: instance cpu: assigning devices cpu0, cpu3, cpu1, cpu2
+2026-01-28T09:36:53.926042235Z 2026-01-28 09:36:53,925 INFO     tuned.plugins.plugin_cpu: We are running on an x86 AuthenticAMD platform
+2026-01-28T09:36:53.928815364Z 2026-01-28 09:36:53,928 INFO     tuned.plugins.base: instance disk: assigning devices loop0, nvme0n1
+2026-01-28T09:36:53.929047499Z 2026-01-28 09:36:53,928 WARNING  tuned.plugins.base: instance video: no matching devices available
+2026-01-28T09:36:53.932105134Z 2026-01-28 09:36:53,932 INFO     tuned.plugins.base: instance net: assigning devices ens5
+2026-01-28T09:36:53.934820142Z 2026-01-28 09:36:53,934 INFO     tuned.plugins.plugin_vm: Setting option 'dirty_ratio' to '30'.
+2026-01-28T09:36:53.935001645Z 2026-01-28 09:36:53,934 INFO     tuned.plugins.plugin_vm: Not setting option 'dirty_background_ratio' to '10', already set.
+2026-01-28T09:36:53.970992401Z 2026-01-28 09:36:53,970 INFO     tuned.plugins.plugin_sysctl: reapplying system sysctl
+2026-01-28T09:36:54.009592641Z 2026-01-28 09:36:54,009 INFO     tuned.daemon.daemon: static tuning from profile 'openshift-node' applied
+2026-01-28T09:36:54.009731414Z I0128 09:36:54.009698    2885 controller.go:703] tunedRecommendFileRead(): read "openshift-node" from "/etc/tuned/recommend.d/50-openshift.conf"
+2026-01-28T09:36:54.024988619Z I0128 09:36:54.024966    2885 controller.go:360] set log level 0
+2026-01-28T09:36:54.028557045Z I0128 09:36:54.028539    2885 controller.go:418] profilesExtract(): extracting 1 TuneD profiles (recommended=openshift-node)
+2026-01-28T09:36:54.089971350Z I0128 09:36:54.089940    2885 controller.go:463] profilesExtract(): recommended TuneD profile openshift-node content unchanged [openshift]
+2026-01-28T09:36:54.124257179Z I0128 09:36:54.124192    2885 controller.go:479] profilesExtract(): fingerprint of extracted profiles: "caa493f132cc24114a421e5a3d0bc5b4874608c4f2897f3f55aac18a2f3513d6"

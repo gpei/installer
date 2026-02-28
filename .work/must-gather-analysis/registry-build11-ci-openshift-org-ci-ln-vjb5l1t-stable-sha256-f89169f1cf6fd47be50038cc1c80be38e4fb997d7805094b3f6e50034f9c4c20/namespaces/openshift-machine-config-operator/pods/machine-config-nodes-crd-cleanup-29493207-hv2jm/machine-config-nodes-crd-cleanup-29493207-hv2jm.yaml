@@ -1,0 +1,379 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.130.0.28/23"],"mac_address":"0a:58:0a:82:00:1c","gateway_ips":["10.130.0.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.130.0.1"},{"dest":"172.30.0.0/16","nextHop":"10.130.0.1"},{"dest":"169.254.0.5/32","nextHop":"10.130.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.130.0.1"}],"ip_address":"10.130.0.28/23","gateway_ip":"10.130.0.1","role":"primary"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.130.0.28"
+          ],
+          "mac": "0a:58:0a:82:00:1c",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/required-scc: nonroot-v2
+    openshift.io/scc: nonroot-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    security.openshift.io/validated-scc-subject-type: serviceaccount
+  creationTimestamp: "2026-01-28T09:29:03Z"
+  generateName: machine-config-nodes-crd-cleanup-29493207-
+  generation: 1
+  labels:
+    app: machine-config-nodes-crd-cleanup
+    batch.kubernetes.io/controller-uid: c0c084b9-fa86-42c7-a684-133fdce508b6
+    batch.kubernetes.io/job-name: machine-config-nodes-crd-cleanup-29493207
+    controller-uid: c0c084b9-fa86-42c7-a684-133fdce508b6
+    job-name: machine-config-nodes-crd-cleanup-29493207
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/required-scc: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:batch.kubernetes.io/controller-uid: {}
+          f:batch.kubernetes.io/job-name: {}
+          f:controller-uid: {}
+          f:job-name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"c0c084b9-fa86-42c7-a684-133fdce508b6"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"crd-cleanup"}:
+            .: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsNonRoot: {}
+          f:runAsUser: {}
+          f:seccompProfile:
+            .: {}
+            f:type: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2026-01-28T09:29:03Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:29:03Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ip-10-0-108-54
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:30:09Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:30:10Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.130.0.28"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:32:02Z"
+  name: machine-config-nodes-crd-cleanup-29493207-hv2jm
+  namespace: openshift-machine-config-operator
+  ownerReferences:
+  - apiVersion: batch/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Job
+    name: machine-config-nodes-crd-cleanup-29493207
+    uid: c0c084b9-fa86-42c7-a684-133fdce508b6
+  resourceVersion: "10928"
+  uid: d9045698-a037-416f-aed7-50cdf64db011
+spec:
+  containers:
+  - command:
+    - /bin/bash
+    - -c
+    - |
+      set -euo pipefail
+
+      # Set trap to suspend cronjob on successful exit (exit code 0)
+      trap 'if [ $? -eq 0 ]; then echo "Suspending cronjob..."; oc patch cronjob machine-config-nodes-crd-cleanup -p "{\"spec\":{\"suspend\":true}}" --field-manager=machine-config-operator || echo "Failed to suspend cronjob"; fi' EXIT
+
+      CRD_NAME="machineconfignodes.machineconfiguration.openshift.io"
+
+      echo "Checking for MachineConfigNodes CRD with v1alpha1 version..."
+
+      # Check if CRD exists
+      if ! CRD_CHECK_OUTPUT=$(oc get crd "$CRD_NAME" 2>&1); then
+        echo "Error checking for CRD $CRD_NAME: $CRD_CHECK_OUTPUT"
+        echo "Assuming CRD does not exist, nothing to clean up"
+        exit 0
+      fi
+
+      # Check if CRD has v1alpha1 version
+      if ! HAS_V1ALPHA1=$(oc get crd "$CRD_NAME" -o jsonpath='{.spec.versions[?(@.name=="v1alpha1")].name}' 2>&1); then
+        echo "Error checking CRD versions for $CRD_NAME: $HAS_V1ALPHA1"
+        echo "v1 version likely exists, skipping cleanup"
+        exit 0
+      fi
+
+      if [ -z "$HAS_V1ALPHA1" ]; then
+        echo "CRD $CRD_NAME does not have v1alpha1 version, nothing to clean up"
+        exit 0
+      fi
+
+      echo "Found CRD $CRD_NAME with v1alpha1 version, deleting it..."
+
+      # Delete the CRD
+      if DELETE_OUTPUT=$(oc delete crd "$CRD_NAME" 2>&1); then
+        echo "Successfully deleted CRD $CRD_NAME"
+      else
+        echo "Failed to delete CRD $CRD_NAME"
+        echo "Delete error output: $DELETE_OUTPUT"
+        exit 1
+      fi
+
+      echo "CRD cleanup completed successfully"
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:56380161baf19863b676fb94aacaae253df853c437df18d00e447f36c895b794
+    imagePullPolicy: IfNotPresent
+    name: crd-cleanup
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-6crk9
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: ip-10-0-108-54.us-west-1.compute.internal
+  nodeSelector:
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: OnFailure
+  schedulerName: default-scheduler
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 65534
+    seLinuxOptions:
+      level: s0:c18,c7
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: machine-config-operator
+  serviceAccountName: machine-config-operator
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: kube-api-access-6crk9
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:32:02Z"
+    status: "False"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:30:09Z"
+    reason: PodCompleted
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:31:59Z"
+    reason: PodCompleted
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:31:59Z"
+    reason: PodCompleted
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:30:08Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - allocatedResources:
+      cpu: 10m
+      memory: 50Mi
+    containerID: cri-o://428ea75d6952163e6a499a4d5c479e54b09c01cea176b305810d2f5259b1697d
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:56380161baf19863b676fb94aacaae253df853c437df18d00e447f36c895b794
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:56380161baf19863b676fb94aacaae253df853c437df18d00e447f36c895b794
+    lastState: {}
+    name: crd-cleanup
+    ready: false
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    restartCount: 0
+    started: false
+    state:
+      terminated:
+        containerID: cri-o://428ea75d6952163e6a499a4d5c479e54b09c01cea176b305810d2f5259b1697d
+        exitCode: 0
+        finishedAt: "2026-01-28T09:31:59Z"
+        reason: Completed
+        startedAt: "2026-01-28T09:31:55Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        uid: 65534
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-6crk9
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 10.0.108.54
+  hostIPs:
+  - ip: 10.0.108.54
+  phase: Succeeded
+  podIP: 10.130.0.28
+  podIPs:
+  - ip: 10.130.0.28
+  qosClass: Burstable
+  startTime: "2026-01-28T09:30:09Z"

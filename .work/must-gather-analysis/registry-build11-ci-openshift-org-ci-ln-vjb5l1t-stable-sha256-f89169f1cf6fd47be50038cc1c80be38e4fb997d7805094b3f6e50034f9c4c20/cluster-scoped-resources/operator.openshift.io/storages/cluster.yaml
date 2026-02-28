@@ -1,0 +1,411 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: Storage
+metadata:
+  annotations:
+    capability.openshift.io/name: Storage
+    include.release.openshift.io/hypershift: "true"
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2026-01-28T09:26:08Z"
+  generation: 1
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"AWSEBSCSIDriverOperatorDeploymentDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: AWSEBSCSIDriverOperatorDeployment-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:05Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"CSIDriverStarterDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: CSIDriverStarter-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:05Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"DefaultStorageClassControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: DefaultStorageClassController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:05Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"VSphereProblemDetectorStarterDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: VSphereProblemDetectorStarter-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:05Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"VolumeDataSourceValidatorStarterDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: VolumeDataSourceValidatorStarter-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:05Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ConfigObservationDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: openshift-storage-ConfigObserver
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:05Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ManagementStateDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: storage-ManagementState
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:05Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"VolumeDataSourceValidatorDeploymentControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: VolumeDataSourceValidatorDeploymentController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:06Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"VolumeDataSourceValidatorStaticControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: VolumeDataSourceValidatorStaticController-StaticResources
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:07Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"AWSEBSCSIDriverOperatorStaticControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: AWSEBSCSIDriverOperatorStaticController-StaticResources
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:08Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"AWSEBSCSIDriverOperatorDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: AWSEBSCSIDriverOperator-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:09Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"VolumeDataSourceValidatorDeploymentControllerProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:generations:
+          ? k:{"group":"apps","name":"volume-data-source-validator","namespace":"openshift-cluster-storage-operator","resource":"deployments"}
+          : .: {}
+            f:group: {}
+            f:lastGeneration: {}
+            f:name: {}
+            f:namespace: {}
+            f:resource: {}
+    manager: VolumeDataSourceValidatorDeploymentController-Deployment
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:37:00Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/hypershift: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:release.openshift.io/create-only: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec:
+        .: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:operatorLogLevel: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:26:08Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions:
+          .: {}
+          k:{"type":"AWSEBSCSIDriverOperatorCRAvailable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"AWSEBSCSIDriverOperatorCRDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"AWSEBSCSIDriverOperatorCRProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"AWSEBSCSIDriverOperatorCRUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"AWSEBSProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"DefaultStorageClassControllerAvailable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"DefaultStorageClassControllerProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:generations:
+          .: {}
+          k:{"group":"apps","name":"aws-ebs-csi-driver-operator","namespace":"openshift-cluster-csi-drivers","resource":"deployments"}:
+            .: {}
+            f:group: {}
+            f:hash: {}
+            f:lastGeneration: {}
+            f:name: {}
+            f:namespace: {}
+            f:resource: {}
+          ? k:{"group":"apps","name":"volume-data-source-validator","namespace":"openshift-cluster-storage-operator","resource":"deployments"}
+          : f:hash: {}
+          k:{"group":"operator.openshift.io","name":"ebs.csi.aws.com","namespace":"","resource":"clustercsidrivers"}:
+            .: {}
+            f:group: {}
+            f:hash: {}
+            f:lastGeneration: {}
+            f:name: {}
+            f:namespace: {}
+            f:resource: {}
+        f:readyReplicas: {}
+    manager: cluster-storage-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:42:21Z"
+  name: cluster
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "20987"
+  uid: 57b53b3e-4e42-46d9-aaea-a9951dcea6de
+spec:
+  logLevel: Normal
+  managementState: Managed
+  operatorLogLevel: Normal
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:31:05Z"
+    message: StorageClass provided by supplied CSI Driver instead of the cluster-storage-operator
+    status: "True"
+    type: DefaultStorageClassControllerAvailable
+  - lastTransitionTime: "2026-01-28T09:31:05Z"
+    status: "False"
+    type: DefaultStorageClassControllerProgressing
+  - lastTransitionTime: "2026-01-28T09:31:11Z"
+    status: "False"
+    type: AWSEBSProgressing
+  - lastTransitionTime: "2026-01-28T09:31:05Z"
+    reason: AsExpected
+    status: "False"
+    type: VolumeDataSourceValidatorStarterDegraded
+  - lastTransitionTime: "2026-01-28T09:31:05Z"
+    reason: AsExpected
+    status: "False"
+    type: CSIDriverStarterDegraded
+  - lastTransitionTime: "2026-01-28T09:31:05Z"
+    status: "False"
+    type: ConfigObservationDegraded
+  - lastTransitionTime: "2026-01-28T09:31:05Z"
+    status: "False"
+    type: ManagementStateDegraded
+  - lastTransitionTime: "2026-01-28T09:37:00Z"
+    message: Deployment is not progressing
+    reason: AsExpected
+    status: "False"
+    type: VolumeDataSourceValidatorDeploymentControllerProgressing
+  - lastTransitionTime: "2026-01-28T09:31:05Z"
+    reason: AsExpected
+    status: "False"
+    type: VSphereProblemDetectorStarterDegraded
+  - lastTransitionTime: "2026-01-28T09:31:05Z"
+    reason: AsExpected
+    status: "False"
+    type: DefaultStorageClassControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:31:05Z"
+    reason: AsExpected
+    status: "False"
+    type: AWSEBSCSIDriverOperatorDeploymentDegraded
+  - lastTransitionTime: "2026-01-28T09:31:05Z"
+    reason: AsExpected
+    status: "False"
+    type: VolumeDataSourceValidatorDeploymentControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:31:06Z"
+    reason: AsExpected
+    status: "False"
+    type: VolumeDataSourceValidatorStaticControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:31:08Z"
+    reason: AsExpected
+    status: "False"
+    type: AWSEBSCSIDriverOperatorDegraded
+  - lastTransitionTime: "2026-01-28T09:31:08Z"
+    reason: AsExpected
+    status: "False"
+    type: AWSEBSCSIDriverOperatorStaticControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:32:10Z"
+    message: |-
+      AWSEBSDriverControllerServiceControllerAvailable: Deployment is available
+      AWSEBSDriverNodeServiceControllerAvailable: DaemonSet is available
+    reason: AsExpected
+    status: "True"
+    type: AWSEBSCSIDriverOperatorCRAvailable
+  - lastTransitionTime: "2026-01-28T09:42:21Z"
+    message: |-
+      AWSEBSDriverControllerServiceControllerProgressing: Deployment is not progressing
+      AWSEBSDriverNodeServiceControllerProgressing: DaemonSet is not progressing
+    reason: AsExpected
+    status: "False"
+    type: AWSEBSCSIDriverOperatorCRProgressing
+  - lastTransitionTime: "2026-01-28T09:31:13Z"
+    message: All is well
+    reason: AsExpected
+    status: "False"
+    type: AWSEBSCSIDriverOperatorCRDegraded
+  - lastTransitionTime: "2026-01-28T09:31:08Z"
+    status: "True"
+    type: AWSEBSCSIDriverOperatorCRUpgradeable
+  generations:
+  - group: apps
+    hash: ""
+    lastGeneration: 1
+    name: aws-ebs-csi-driver-operator
+    namespace: openshift-cluster-csi-drivers
+    resource: deployments
+  - group: apps
+    hash: ""
+    lastGeneration: 1
+    name: volume-data-source-validator
+    namespace: openshift-cluster-storage-operator
+    resource: deployments
+  - group: operator.openshift.io
+    hash: ""
+    lastGeneration: 2
+    name: ebs.csi.aws.com
+    namespace: ""
+    resource: clustercsidrivers
+  readyReplicas: 0

@@ -1,0 +1,25 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: "2026-01-28T09:31:01Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:rules: {}
+    manager: cluster-olm-operator
+    operation: Update
+    time: "2026-01-28T09:31:01Z"
+  name: operator-controller-clusterextension-viewer-role
+  resourceVersion: "7749"
+  uid: a1bae7c6-e935-4454-ad8c-f71e544510fe
+rules:
+- apiGroups:
+  - olm.operatorframework.io
+  resources:
+  - clusterextensions
+  verbs:
+  - get
+  - list
+  - watch

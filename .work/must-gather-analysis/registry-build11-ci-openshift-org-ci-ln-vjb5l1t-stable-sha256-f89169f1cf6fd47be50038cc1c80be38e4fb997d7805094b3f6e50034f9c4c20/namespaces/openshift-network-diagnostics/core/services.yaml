@@ -1,0 +1,119 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      include.release.openshift.io/self-managed-high-availability: "true"
+    creationTimestamp: "2026-01-28T09:29:27Z"
+    labels:
+      app: network-check-source
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:include.release.openshift.io/self-managed-high-availability: {}
+          f:labels:
+            f:app: {}
+          f:ownerReferences:
+            k:{"uid":"7763cebb-f1d7-4359-81b8-b55ef9916383"}: {}
+        f:spec:
+          f:clusterIP: {}
+          f:ports:
+            k:{"port":17698,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:type: {}
+      manager: cluster-network-operator/operconfig
+      operation: Apply
+      time: "2026-01-28T09:29:27Z"
+    name: network-check-source
+    namespace: openshift-network-diagnostics
+    ownerReferences:
+    - apiVersion: operator.openshift.io/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Network
+      name: cluster
+      uid: 7763cebb-f1d7-4359-81b8-b55ef9916383
+    resourceVersion: "4579"
+    uid: 2158064d-6981-4410-beb6-afbd63e11308
+  spec:
+    clusterIP: None
+    clusterIPs:
+    - None
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: check-endpoints
+      port: 17698
+      protocol: TCP
+      targetPort: 17698
+    selector:
+      app: network-check-source
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:ownerReferences:
+            k:{"uid":"7763cebb-f1d7-4359-81b8-b55ef9916383"}: {}
+        f:spec:
+          f:ports:
+            k:{"port":80,"protocol":"TCP"}:
+              .: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+      manager: cluster-network-operator/operconfig
+      operation: Apply
+      time: "2026-01-28T09:29:28Z"
+    name: network-check-target
+    namespace: openshift-network-diagnostics
+    ownerReferences:
+    - apiVersion: operator.openshift.io/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Network
+      name: cluster
+      uid: 7763cebb-f1d7-4359-81b8-b55ef9916383
+    resourceVersion: "4617"
+    uid: c29e920e-a234-4fa3-975f-77383cf45b6e
+  spec:
+    clusterIP: 172.30.241.12
+    clusterIPs:
+    - 172.30.241.12
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app: network-check-target
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: ServiceList
+metadata:
+  resourceVersion: "35151"

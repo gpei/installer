@@ -1,0 +1,94 @@
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: MutatingWebhookConfiguration
+metadata:
+  annotations:
+    service.beta.openshift.io/inject-cabundle: "true"
+  creationTimestamp: "2026-01-28T09:31:11Z"
+  generation: 2
+  managedFields:
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:service.beta.openshift.io/inject-cabundle: {}
+      f:webhooks:
+        .: {}
+        k:{"name":"inject-metadata-name.olm.operatorframework.io"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchConditions:
+            .: {}
+            k:{"name":"MissingOrIncorrectMetadataNameLabel"}:
+              .: {}
+              f:expression: {}
+              f:name: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:reinvocationPolicy: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+    manager: cluster-olm-operator
+    operation: Update
+    time: "2026-01-28T09:31:11Z"
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:webhooks:
+        k:{"name":"inject-metadata-name.olm.operatorframework.io"}:
+          f:clientConfig:
+            f:caBundle: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2026-01-28T09:31:11Z"
+  name: catalogd-mutating-webhook-configuration
+  resourceVersion: "8421"
+  uid: 0ed34a3d-1902-4e35-895a-f9a0f3ab6de8
+webhooks:
+- admissionReviewVersions:
+  - v1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJRXcwTy9pcFdJYVl3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRjMk9UVTVNall6TlRBZQpGdzB5TmpBeE1qZ3dPVE13TXpSYUZ3MHlPREF6TWpnd09UTXdNelZhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTNOamsxT1RJMk16VXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRQzZEZ0llNFg4czRKa0JKSnJSWDMzNlBpUHh5dkxGOGtLOApsWE1ISGZCbHRzQldsUEpMZ0thM0JJbDdUUTVKYktibzF3T0lwL2hJaFRRbTkvQ1ZaNndUSUh5WFNmRkFLQjZFCnZvdDJWdGxxOTZYcDZOVkxOd3BySG50cXlEbTV2OVdWZG5wY1NqNDFYZmhiYUsxOXlJR3lyRGxQSzhiUFVYSHAKdDlVbFF2c3l4bEFuK2djNVJJR2hPNUtNazdNWm0zZlVyNEJ4TjJKeWhYZW9zblpEV1EyTFY4cDZoQVphZnRTTwpGQk53ZzlvNktJM09LUDdFSWJFcEZONUFHcTVacFpqWnQ0OUlZQzRSeWcyYjBJOHRjV1c4amJsd0ZBTFlxcVJaCk1VK2VYb2V2ZlVsK2VSMC9aNHBrN0ZnQTRIMnU1U1NoYzQzeHFwbXFoVFN5NFhiVlQvU1JBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlNZd1g1WQpWVnZpb1I5OCtqbzkycVhBclR6MTZ6QWZCZ05WSFNNRUdEQVdnQlNZd1g1WVZWdmlvUjk4K2pvOTJxWEFyVHoxCjZ6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFSNlVYd0gwcmlYejRCa2lzNkNCRnZPRi9jNUxLbnFXdlR3UEYKemJqY1ZBUy9Nb0tRdVhqZVVIZXZ0dEMyR0NRSTEwbkJyYUpYUklOSGtVTzVMYVUyVWxBMVh6LzZmaGxGMkJKSwplSmtkaHF3QnFDcjlqa0hKVk1kYW5wZ25TTUNUcitDYVNUM0d3ai80TU1hSHcvRkY4bTQ3VkFkWlJnajNlY0h0CkhGeVBiR0gxb1ZiZklKa2huYmFCcEZMVnllMnVjKzdreGR1MDN4bmo0T1RRbkM3NWpuZzErY21Lc1lnVWd4Q2QKQzAzdFRZOFU5QTlkTVJrTUhpclR1VGpxSXJJQjBoWmFENHhZU01WSFlrZEh4OHNiV3JoOGwvNEM5SUIwalFQRQpXSjJvTU1PaU1qZHlIZmtIZ0tvTDh1QVV6dHpqVGZ3dlg0RUlweFBrNWx5SWdGM3k2dz09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    service:
+      name: catalogd-service
+      namespace: openshift-catalogd
+      path: /mutate-olm-operatorframework-io-v1-clustercatalog
+      port: 9443
+  failurePolicy: Fail
+  matchConditions:
+  - expression: '''name'' in object.metadata && (!has(object.metadata.labels) || !(''olm.operatorframework.io/metadata.name''
+      in object.metadata.labels) || object.metadata.labels[''olm.operatorframework.io/metadata.name'']
+      != object.metadata.name)'
+    name: MissingOrIncorrectMetadataNameLabel
+  matchPolicy: Equivalent
+  name: inject-metadata-name.olm.operatorframework.io
+  namespaceSelector: {}
+  objectSelector: {}
+  reinvocationPolicy: Never
+  rules:
+  - apiGroups:
+    - olm.operatorframework.io
+    apiVersions:
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - clustercatalogs
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10

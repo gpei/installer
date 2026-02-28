@@ -1,0 +1,102 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:31:08Z"
+    creationTimestamp: "2026-01-28T09:31:08Z"
+    labels:
+      app: console
+      endpoints.kubernetes.io/managed-by: endpoint-controller
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpoints.kubernetes.io/managed-by: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:47:23Z"
+    name: console
+    namespace: openshift-console
+    resourceVersion: "25879"
+    uid: 827fbe14-02d4-4323-a9ed-383ece6c91a0
+  subsets:
+  - addresses:
+    - ip: 10.128.0.51
+      nodeName: ip-10-0-3-203.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: console-585b57b9cf-bgvtm
+        namespace: openshift-console
+        uid: 264fea00-9440-4d11-9ec9-b4eda2611224
+    - ip: 10.129.0.53
+      nodeName: ip-10-0-102-200.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: console-585b57b9cf-2ntjt
+        namespace: openshift-console
+        uid: 9db6cafb-3300-4408-9808-65fa73c31ae9
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:32:02Z"
+    creationTimestamp: "2026-01-28T09:31:08Z"
+    labels:
+      endpoints.kubernetes.io/managed-by: endpoint-controller
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:endpoints.kubernetes.io/managed-by: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:32:02Z"
+    name: downloads
+    namespace: openshift-console
+    resourceVersion: "10905"
+    uid: 2441178c-9b97-47ad-9d96-40e174b8c9b6
+  subsets:
+  - addresses:
+    - ip: 10.128.0.10
+      nodeName: ip-10-0-3-203.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: downloads-5cd4dc6c99-bvlbk
+        namespace: openshift-console
+        uid: b9d75c95-7472-4aec-ba4a-5c5e1fae0669
+    - ip: 10.129.0.10
+      nodeName: ip-10-0-102-200.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: downloads-5cd4dc6c99-njvt9
+        namespace: openshift-console
+        uid: e8e6715a-c330-4877-908f-0d775d0ad969
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "35027"

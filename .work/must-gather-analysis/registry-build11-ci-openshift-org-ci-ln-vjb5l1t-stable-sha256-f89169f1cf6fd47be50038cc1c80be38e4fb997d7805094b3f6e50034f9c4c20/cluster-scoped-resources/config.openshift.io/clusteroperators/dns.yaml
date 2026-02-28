@@ -1,0 +1,127 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2026-01-28T09:25:40Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:25:40Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:25:41Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Upgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: dns-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:42:54Z"
+  name: dns
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "22497"
+  uid: 369bade1-b0d2-45d8-b08e-63c19744e5b3
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:32:27Z"
+    message: DNS "default" is available.
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2026-01-28T09:42:15Z"
+    message: Desired and current number of DNSes are equal
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2026-01-28T09:42:54Z"
+    reason: DNSNotDegraded
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2026-01-28T09:31:58Z"
+    message: 'DNS default is upgradeable: DNS Operator can be upgraded'
+    reason: DNSUpgradeable
+    status: "True"
+    type: Upgradeable
+  extension: null
+  relatedObjects:
+  - group: ""
+    name: openshift-dns-operator
+    resource: namespaces
+  - group: operator.openshift.io
+    name: default
+    resource: dnses
+  - group: ""
+    name: openshift-dns
+    resource: namespaces
+  versions:
+  - name: coredns
+    version: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb
+  - name: openshift-cli
+    version: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a
+  - name: kube-rbac-proxy
+    version: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+  - name: operator
+    version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest

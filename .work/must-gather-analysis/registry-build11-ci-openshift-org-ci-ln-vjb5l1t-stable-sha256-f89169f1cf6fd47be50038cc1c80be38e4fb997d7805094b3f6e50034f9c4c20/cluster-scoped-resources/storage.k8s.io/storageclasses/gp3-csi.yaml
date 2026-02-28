@@ -1,0 +1,36 @@
+---
+allowVolumeExpansion: true
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "true"
+  creationTimestamp: "2026-01-28T09:31:12Z"
+  managedFields:
+  - apiVersion: storage.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:allowVolumeExpansion: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:storageclass.kubernetes.io/is-default-class: {}
+      f:parameters:
+        .: {}
+        f:encrypted: {}
+        f:type: {}
+      f:provisioner: {}
+      f:reclaimPolicy: {}
+      f:volumeBindingMode: {}
+    manager: aws-ebs-csi-driver-operator
+    operation: Update
+    time: "2026-01-28T09:31:12Z"
+  name: gp3-csi
+  resourceVersion: "8463"
+  uid: 40cc00fe-dedc-488e-bf0e-7815ecb81b69
+parameters:
+  encrypted: "true"
+  type: gp3
+provisioner: ebs.csi.aws.com
+reclaimPolicy: Delete
+volumeBindingMode: WaitForFirstConsumer

@@ -1,0 +1,83 @@
+---
+apiVersion: certificates.k8s.io/v1
+kind: CertificateSigningRequest
+metadata:
+  creationTimestamp: "2026-01-28T09:31:56Z"
+  generateName: system:openshift:openshift-monitoring-
+  labels:
+    metrics.openshift.io/csr.subject: prometheus
+  managedFields:
+  - apiVersion: certificates.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Approved"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: cluster-policy-controller
+    operation: Update
+    subresource: approval
+    time: "2026-01-28T09:31:56Z"
+  - apiVersion: certificates.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:certificate: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:31:56Z"
+  - apiVersion: certificates.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:metrics.openshift.io/csr.subject: {}
+    manager: operator
+    operation: Update
+    time: "2026-01-28T09:31:56Z"
+  name: system:openshift:openshift-monitoring-cmxhq
+  resourceVersion: "9950"
+  uid: 44f9a219-a073-4509-ba52-9cb2bc408f9e
+spec:
+  extra:
+    authentication.kubernetes.io/credential-id:
+    - JTI=c32834eb-3e49-48e8-97df-8bcc57a034d1
+    authentication.kubernetes.io/node-name:
+    - ip-10-0-108-54.us-west-1.compute.internal
+    authentication.kubernetes.io/node-uid:
+    - 8aee47ee-44d2-43c6-8262-ad6e14a5f14a
+    authentication.kubernetes.io/pod-name:
+    - cluster-monitoring-operator-5f95799b88-rt4b7
+    authentication.kubernetes.io/pod-uid:
+    - 9c469337-be39-4704-a464-5c68db5f71fe
+  groups:
+  - system:serviceaccounts
+  - system:serviceaccounts:openshift-monitoring
+  - system:authenticated
+  request: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURSBSRVFVRVNULS0tLS0KTUlIL01JR21BZ0VBTUVReFFqQkFCZ05WQkFNVE9YTjVjM1JsYlRwelpYSjJhV05sWVdOamIzVnVkRHB2Y0dWdQpjMmhwWm5RdGJXOXVhWFJ2Y21sdVp6cHdjbTl0WlhSb1pYVnpMV3M0Y3pCWk1CTUdCeXFHU000OUFnRUdDQ3FHClNNNDlBd0VIQTBJQUJMSzJqbUY4ZVk0dWhGcTB4U0c4OExtdnNnKzhPV1ZMUGNrSDRsTU1ZYm1uRGxDT0wrb1kKbkwxOFUvdHpNNmJML01yL0hib2VBK0hRbTdHQ2lsa2ROSjZnQURBS0JnZ3Foa2pPUFFRREFnTklBREJGQWlFQQp4TzNwZWFTTE5nRllOL0RTT1FsR1NYMHhUUlQ5NjkwOExhdW9sMjdNc2NnQ0lFVjB6VjRQSmdmb0dHQVRVMnVICks1NlcrdFZuTW1KUkZmV3NzTnM4OHA2TQotLS0tLUVORCBDRVJUSUZJQ0FURSBSRVFVRVNULS0tLS0K
+  signerName: kubernetes.io/kube-apiserver-client
+  uid: 594706ba-2833-497a-909f-8cd4ef416224
+  usages:
+  - digital signature
+  - key encipherment
+  - client auth
+  username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+status:
+  certificate: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNoekNDQVcrZ0F3SUJBZ0lSQU9vSEczbWdrSVFFZGIrVWR4NE9BaE13RFFZSktvWklodmNOQVFFTEJRQXcKTFRFU01CQUdBMVVFQ3hNSmIzQmxibk5vYVdaME1SY3dGUVlEVlFRREV3NXJkV0psYkdWMExYTnBaMjVsY2pBZQpGdzB5TmpBeE1qZ3dPVEkyTlRaYUZ3MHlOakF4TWprd09URXpNRFphTUVReFFqQkFCZ05WQkFNVE9YTjVjM1JsCmJUcHpaWEoyYVdObFlXTmpiM1Z1ZERwdmNHVnVjMmhwWm5RdGJXOXVhWFJ2Y21sdVp6cHdjbTl0WlhSb1pYVnoKTFdzNGN6QlpNQk1HQnlxR1NNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJMSzJqbUY4ZVk0dWhGcTB4U0c4OExtdgpzZys4T1dWTFBja0g0bE1NWWJtbkRsQ09MK29ZbkwxOFUvdHpNNmJML01yL0hib2VBK0hRbTdHQ2lsa2ROSjZqClZqQlVNQTRHQTFVZER3RUIvd1FFQXdJRm9EQVRCZ05WSFNVRUREQUtCZ2dyQmdFRkJRY0RBakFNQmdOVkhSTUIKQWY4RUFqQUFNQjhHQTFVZEl3UVlNQmFBRkxkbXAvMW5saEQrbVBpbnRyNENNUTQ0dzAwdk1BMEdDU3FHU0liMwpEUUVCQ3dVQUE0SUJBUUJOTEViV1dqaGwvbTR0Si9GaVF5eHpqZjhHMzc3MEdZTnl6aDlmcFN2WDlKaHRUK3U0Cm5YcmY1Mlo1UXhYVEdYN2pDSFJRRjJSVHVpdTlJUGI4SUdnTWwwTzV4dDlkUExiS1BiVzFGM1MyKzZvdkF2QWYKM0p1Wmw2SlVmbHVOdStySkxXZ3A2Mm9QVmJ2VUROWjZwdmoxd0VVdWhXRVBaYmJ2d042c2J1a3RMUUpGSEhvNApXcXlvOC81YTlhYkF0ZW53Rmx5eGsvemRrQmVwOTBJU2NtN2gxOUVxYlRoQWYzMm1SbzY4WHlRVitTSGJNdTQrCnV6c2Fvb1VGTkh3L1psbWlqUWJxbjJ4NytjaExoaUdlcnROeGZCT3dtcUVieXhnNmdDNmx0TzVNb0pIZmhoemYKdUxudE9vRWlENkJIeUZjMWhyL01XazNLZ3l0YUZQazJaNkh6Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:31:56Z"
+    lastUpdateTime: "2026-01-28T09:31:56Z"
+    message: Auto-approved CSR "system:openshift:openshift-monitoring-cmxhq"
+    reason: AutoApproved
+    status: "True"
+    type: Approved

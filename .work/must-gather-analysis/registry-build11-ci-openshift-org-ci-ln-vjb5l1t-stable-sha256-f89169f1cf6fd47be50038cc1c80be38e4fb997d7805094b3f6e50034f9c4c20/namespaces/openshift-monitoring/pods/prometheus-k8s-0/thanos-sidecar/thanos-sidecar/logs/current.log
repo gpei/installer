@@ -1,0 +1,14 @@
+2026-01-28T09:45:42.539430159Z ts=2026-01-28T09:45:42.539351805Z caller=sidecar.go:140 level=info msg="no supported bucket was configured, uploads will be disabled"
+2026-01-28T09:45:42.539642712Z ts=2026-01-28T09:45:42.53961918Z caller=options.go:33 level=info protocol=gRPC msg="enabling server side TLS"
+2026-01-28T09:45:42.539968080Z ts=2026-01-28T09:45:42.539941029Z caller=options.go:74 level=info protocol=gRPC msg="server TLS client verification enabled"
+2026-01-28T09:45:42.540426816Z ts=2026-01-28T09:45:42.540380163Z caller=sidecar.go:442 level=info msg="starting sidecar"
+2026-01-28T09:45:42.540553544Z ts=2026-01-28T09:45:42.540520871Z caller=reloader.go:274 level=info component=reloader msg="nothing to be watched"
+2026-01-28T09:45:42.540626657Z ts=2026-01-28T09:45:42.540605967Z caller=intrumentation.go:75 level=info msg="changing probe status" status=healthy
+2026-01-28T09:45:42.540680041Z ts=2026-01-28T09:45:42.540647309Z caller=http.go:72 level=info service=http/server component=sidecar msg="listening for requests and metrics" address=127.0.0.1:10902
+2026-01-28T09:45:42.541058062Z ts=2026-01-28T09:45:42.54101449Z caller=handler.go:87 level=info service=http/server component=sidecar caller=tls_config.go:347 time=2026-01-28T09:45:42.541003139Z msg="Listening on" address=127.0.0.1:10902
+2026-01-28T09:45:42.541108435Z ts=2026-01-28T09:45:42.541088584Z caller=handler.go:87 level=info service=http/server component=sidecar caller=tls_config.go:350 time=2026-01-28T09:45:42.541080734Z msg="TLS is disabled." http2=false address=127.0.0.1:10902
+2026-01-28T09:45:42.542471163Z ts=2026-01-28T09:45:42.542439991Z caller=sidecar.go:216 level=warn msg="failed to fetch prometheus version. Is Prometheus running? Retrying" err="expected 2xx response, got 503. Body: Service Unavailable"
+2026-01-28T09:46:12.542754550Z ts=2026-01-28T09:46:12.542696526Z caller=sidecar.go:223 level=info msg="successfully loaded prometheus version"
+2026-01-28T09:46:12.714832337Z ts=2026-01-28T09:46:12.714776724Z caller=sidecar.go:254 level=info msg="successfully loaded prometheus external labels" external_labels="{prometheus=\"openshift-monitoring/k8s\", prometheus_replica=\"prometheus-k8s-0\"}"
+2026-01-28T09:46:12.714915762Z ts=2026-01-28T09:46:12.714899491Z caller=intrumentation.go:56 level=info msg="changing probe status" status=ready
+2026-01-28T09:46:12.715152566Z ts=2026-01-28T09:46:12.715126375Z caller=grpc.go:167 level=info service=gRPC/server component=sidecar msg="listening for serving gRPC" address=0.0.0.0:10901

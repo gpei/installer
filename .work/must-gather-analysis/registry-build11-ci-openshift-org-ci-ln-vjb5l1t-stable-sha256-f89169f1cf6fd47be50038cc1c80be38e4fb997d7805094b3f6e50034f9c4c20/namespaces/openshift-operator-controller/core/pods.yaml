@@ -1,0 +1,538 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.11/23"],"mac_address":"0a:58:0a:80:00:0b","gateway_ips":["10.128.0.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.128.0.1"},{"dest":"172.30.0.0/16","nextHop":"10.128.0.1"},{"dest":"169.254.0.5/32","nextHop":"10.128.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.0.1"}],"ip_address":"10.128.0.11/23","gateway_ip":"10.128.0.1","role":"primary"}}'
+      k8s.v1.cni.cncf.io/network-status: |-
+        [{
+            "name": "ovn-kubernetes",
+            "interface": "eth0",
+            "ips": [
+                "10.128.0.11"
+            ],
+            "mac": "0a:58:0a:80:00:0b",
+            "default": true,
+            "dns": {}
+        }]
+      kubectl.kubernetes.io/default-container: manager
+      openshift.io/required-scc: privileged
+      openshift.io/scc: privileged
+      seccomp.security.alpha.kubernetes.io/pod: runtime/default
+      security.openshift.io/validated-scc-subject-type: serviceaccount
+    creationTimestamp: "2026-01-28T09:31:10Z"
+    generateName: operator-controller-controller-manager-66b6b87dc7-
+    generation: 1
+    labels:
+      control-plane: operator-controller-controller-manager
+      pod-template-hash: 66b6b87dc7
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.ovn.org/pod-networks: {}
+      manager: ip-10-0-3-203
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:31:10Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/default-container: {}
+            f:openshift.io/required-scc: {}
+            f:target.workload.openshift.io/management: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:control-plane: {}
+            f:pod-template-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"b1287392-27a3-4a14-a6c7-c7fd9db9eb24"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:nodeAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"manager"}:
+              .: {}
+              f:args: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"SSL_CERT_DIR"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:livenessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:initialDelaySeconds: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:name: {}
+              f:readinessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:initialDelaySeconds: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:allowPrivilegeEscalation: {}
+                f:capabilities:
+                  .: {}
+                  f:drop: {}
+                f:readOnlyRootFilesystem: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/containers"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/etc/docker"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/tmp"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/var/ca-certs"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/var/cache"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/var/certs"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext:
+            .: {}
+            f:runAsNonRoot: {}
+            f:seLinuxOptions:
+              .: {}
+              f:type: {}
+            f:seccompProfile:
+              .: {}
+              f:type: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"ca-certs"}:
+              .: {}
+              f:name: {}
+              f:projected:
+                .: {}
+                f:defaultMode: {}
+                f:sources: {}
+            k:{"name":"cache"}:
+              .: {}
+              f:emptyDir: {}
+              f:name: {}
+            k:{"name":"etc-containers"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"etc-docker"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"operator-controller-certs"}:
+              .: {}
+              f:name: {}
+              f:secret:
+                .: {}
+                f:defaultMode: {}
+                f:items: {}
+                f:optional: {}
+                f:secretName: {}
+            k:{"name":"tmp"}:
+              .: {}
+              f:emptyDir: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:10Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.v1.cni.cncf.io/network-status: {}
+      manager: multus-daemon
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:31:11Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"PodReadyToStartContainers"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:hostIPs: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.128.0.11"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:31:27Z"
+    name: operator-controller-controller-manager-66b6b87dc7-msqnr
+    namespace: openshift-operator-controller
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: operator-controller-controller-manager-66b6b87dc7
+      uid: b1287392-27a3-4a14-a6c7-c7fd9db9eb24
+    resourceVersion: "9249"
+    uid: 75990848-0e55-4d04-99b3-d3df286a47c8
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchExpressions:
+            - key: kubernetes.io/arch
+              operator: In
+              values:
+              - amd64
+              - arm64
+              - ppc64le
+              - s390x
+            - key: kubernetes.io/os
+              operator: In
+              values:
+              - linux
+    containers:
+    - args:
+      - --health-probe-bind-address=:8081
+      - --metrics-bind-address=:8443
+      - --leader-elect
+      - --tls-cert=/var/certs/tls.crt
+      - --tls-key=/var/certs/tls.key
+      - --catalogd-cas-dir=/var/ca-certs
+      - --v=4
+      - --global-pull-secret=openshift-config/pull-secret
+      command:
+      - /operator-controller
+      env:
+      - name: SSL_CERT_DIR
+        value: /var/ca-certs
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:3f0a8a5999709f6e5fd01bc9c73c9aae75ea34e4eb919693b17ac272a2903b59
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /healthz
+          port: 8081
+          scheme: HTTP
+        initialDelaySeconds: 15
+        periodSeconds: 20
+        successThreshold: 1
+        timeoutSeconds: 1
+      name: manager
+      readinessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /readyz
+          port: 8081
+          scheme: HTTP
+        initialDelaySeconds: 5
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 1
+      resources:
+        requests:
+          cpu: 10m
+          memory: 64Mi
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+        readOnlyRootFilesystem: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /var/cache
+        name: cache
+      - mountPath: /tmp
+        name: tmp
+      - mountPath: /var/certs
+        name: operator-controller-certs
+      - mountPath: /var/ca-certs
+        name: ca-certs
+        readOnly: true
+      - mountPath: /etc/containers
+        name: etc-containers
+        readOnly: true
+      - mountPath: /etc/docker
+        name: etc-docker
+        readOnly: true
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-2t789
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: ip-10-0-3-203.us-west-1.compute.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+      node-role.kubernetes.io/master: ""
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000000000
+    priorityClassName: system-cluster-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext:
+      runAsNonRoot: true
+      seLinuxOptions:
+        type: spc_t
+      seccompProfile:
+        type: RuntimeDefault
+    serviceAccount: operator-controller-controller-manager
+    serviceAccountName: operator-controller-controller-manager
+    terminationGracePeriodSeconds: 10
+    tolerations:
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/master
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 120
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 120
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+    volumes:
+    - emptyDir: {}
+      name: cache
+    - emptyDir: {}
+      name: tmp
+    - name: operator-controller-certs
+      secret:
+        defaultMode: 420
+        items:
+        - key: tls.crt
+          path: tls.crt
+        - key: tls.key
+          path: tls.key
+        optional: false
+        secretName: operator-controller-cert
+    - name: ca-certs
+      projected:
+        defaultMode: 420
+        sources:
+        - configMap:
+            items:
+            - key: ca-bundle.crt
+              path: ca-bundle.crt
+            name: operator-controller-trusted-ca-bundle
+            optional: false
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+            optional: false
+    - hostPath:
+        path: /etc/containers
+        type: Directory
+      name: etc-containers
+    - hostPath:
+        path: /etc/docker
+        type: Directory
+      name: etc-docker
+    - name: kube-api-access-2t789
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:31:15Z"
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:31:10Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:31:27Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:31:27Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:31:10Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - allocatedResources:
+        cpu: 10m
+        memory: 64Mi
+      containerID: cri-o://f6cea53e6471be69a61af5d5ae2dbc4322afa7a1091fbc43d88e8ed303b2b174
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:3f0a8a5999709f6e5fd01bc9c73c9aae75ea34e4eb919693b17ac272a2903b59
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:3f0a8a5999709f6e5fd01bc9c73c9aae75ea34e4eb919693b17ac272a2903b59
+      lastState: {}
+      name: manager
+      ready: true
+      resources:
+        requests:
+          cpu: 10m
+          memory: 64Mi
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:31:14Z"
+      user:
+        linux:
+          gid: 0
+          supplementalGroups:
+          - 0
+          uid: 1001
+      volumeMounts:
+      - mountPath: /var/cache
+        name: cache
+      - mountPath: /tmp
+        name: tmp
+      - mountPath: /var/certs
+        name: operator-controller-certs
+      - mountPath: /var/ca-certs
+        name: ca-certs
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /etc/containers
+        name: etc-containers
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /etc/docker
+        name: etc-docker
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-2t789
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 10.0.3.203
+    hostIPs:
+    - ip: 10.0.3.203
+    phase: Running
+    podIP: 10.128.0.11
+    podIPs:
+    - ip: 10.128.0.11
+    qosClass: Burstable
+    startTime: "2026-01-28T09:31:10Z"
+kind: PodList
+metadata:
+  resourceVersion: "35156"

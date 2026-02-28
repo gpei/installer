@@ -1,0 +1,74 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:50:52Z"
+    creationTimestamp: "2026-01-28T09:25:29Z"
+    labels:
+      endpoints.kubernetes.io/managed-by: endpoint-controller
+      k8s-app: etcd
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:endpoints.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:50:52Z"
+    name: etcd
+    namespace: openshift-etcd
+    resourceVersion: "27066"
+    uid: 854c9f7f-3e87-48e2-96c2-86fc30aa5c7f
+  subsets:
+  - addresses:
+    - ip: 10.0.102.200
+      nodeName: ip-10-0-102-200.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: etcd-ip-10-0-102-200.us-west-1.compute.internal
+        namespace: openshift-etcd
+        uid: d8a74efc-2c6b-42f7-a95e-3c324c49fd30
+    - ip: 10.0.108.54
+      nodeName: ip-10-0-108-54.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: etcd-ip-10-0-108-54.us-west-1.compute.internal
+        namespace: openshift-etcd
+        uid: 20dbf164-e35b-45eb-aa70-0b3be195d892
+    - ip: 10.0.3.203
+      nodeName: ip-10-0-3-203.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: etcd-ip-10-0-3-203.us-west-1.compute.internal
+        namespace: openshift-etcd
+        uid: ccdcee63-1492-4ee6-8425-e863be5cdcaf
+    ports:
+    - name: readyz-sidecar
+      port: 9980
+      protocol: TCP
+    - name: etcd-peer
+      port: 2380
+      protocol: TCP
+    - name: grpc-proxy
+      port: 9978
+      protocol: TCP
+    - name: etcd
+      port: 2379
+      protocol: TCP
+    - name: etcd-metrics
+      port: 9979
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "35040"

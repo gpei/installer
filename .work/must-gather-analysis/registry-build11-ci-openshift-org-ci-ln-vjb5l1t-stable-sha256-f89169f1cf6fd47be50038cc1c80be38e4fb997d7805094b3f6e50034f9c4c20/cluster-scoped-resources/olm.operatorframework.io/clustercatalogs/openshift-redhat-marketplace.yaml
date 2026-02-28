@@ -1,0 +1,103 @@
+---
+apiVersion: olm.operatorframework.io/v1
+kind: ClusterCatalog
+metadata:
+  creationTimestamp: "2026-01-28T09:31:10Z"
+  finalizers:
+  - olm.operatorframework.io/delete-server-cache
+  generation: 1
+  labels:
+    olm.operatorframework.io/metadata.name: openshift-redhat-marketplace
+  managedFields:
+  - apiVersion: olm.operatorframework.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:priority: {}
+        f:source:
+          f:image:
+            f:pollIntervalMinutes: {}
+            f:ref: {}
+          f:type: {}
+    manager: CatalogdClusterCatalogOpenshiftRedhatMarketplace
+    operation: Apply
+    time: "2026-01-28T09:31:10Z"
+  - apiVersion: olm.operatorframework.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"olm.operatorframework.io/delete-server-cache": {}
+    manager: catalogd
+    operation: Update
+    time: "2026-01-28T09:43:30Z"
+  - apiVersion: olm.operatorframework.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions:
+          .: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:observedGeneration: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Serving"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:observedGeneration: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:lastUnpacked: {}
+        f:resolvedSource:
+          .: {}
+          f:image:
+            .: {}
+            f:ref: {}
+          f:type: {}
+        f:urls:
+          .: {}
+          f:base: {}
+    manager: catalogd
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:43:39Z"
+  name: openshift-redhat-marketplace
+  resourceVersion: "23275"
+  uid: 756ca691-d517-49bb-b39f-2637472098e4
+spec:
+  availabilityMode: Available
+  priority: -300
+  source:
+    image:
+      pollIntervalMinutes: 10
+      ref: registry.redhat.io/redhat/redhat-marketplace-index:v4.20
+    type: Image
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:43:39Z"
+    message: Successfully unpacked and stored content from resolved source
+    observedGeneration: 1
+    reason: Succeeded
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2026-01-28T09:43:39Z"
+    message: Serving desired content from resolved source
+    observedGeneration: 1
+    reason: Available
+    status: "True"
+    type: Serving
+  lastUnpacked: "2026-01-28T09:43:38Z"
+  resolvedSource:
+    image:
+      ref: registry.redhat.io/redhat/redhat-marketplace-index@sha256:2de587bb1487f6b1dd49786d2fc43245365c8f7492fffdb71d054ed573414fa4
+    type: Image
+  urls:
+    base: https://catalogd-service.openshift-catalogd.svc/catalogs/openshift-redhat-marketplace

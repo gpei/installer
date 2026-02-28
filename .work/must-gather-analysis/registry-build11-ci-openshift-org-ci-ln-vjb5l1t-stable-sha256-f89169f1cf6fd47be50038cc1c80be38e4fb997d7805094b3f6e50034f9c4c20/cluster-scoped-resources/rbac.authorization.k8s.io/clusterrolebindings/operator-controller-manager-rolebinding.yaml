@@ -1,0 +1,25 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  creationTimestamp: "2026-01-28T09:31:07Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:roleRef: {}
+      f:subjects: {}
+    manager: cluster-olm-operator
+    operation: Update
+    time: "2026-01-28T09:31:07Z"
+  name: operator-controller-manager-rolebinding
+  resourceVersion: "8190"
+  uid: 4d60ac72-9620-4c10-9851-7d434febcb91
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: operator-controller-manager-role
+subjects:
+- kind: ServiceAccount
+  name: operator-controller-controller-manager
+  namespace: openshift-operator-controller

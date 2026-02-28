@@ -1,0 +1,106 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:42:38Z"
+    creationTimestamp: "2026-01-28T09:31:45Z"
+    labels:
+      app.kubernetes.io/name: insights-runtime-extractor
+      endpoints.kubernetes.io/managed-by: endpoint-controller
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/name: {}
+            f:endpoints.kubernetes.io/managed-by: {}
+            f:service.kubernetes.io/headless: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:42:38Z"
+    name: exporter
+    namespace: openshift-insights
+    resourceVersion: "21546"
+    uid: e71d88c5-abcb-41a0-9834-22c5d71d7f5e
+  subsets:
+  - addresses:
+    - ip: 10.128.2.7
+      nodeName: ip-10-0-101-165.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: insights-runtime-extractor-vvvkj
+        namespace: openshift-insights
+        uid: d7a4addd-a9d8-4e2b-8bab-963e9d4b7e9e
+    - ip: 10.129.2.10
+      nodeName: ip-10-0-22-208.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: insights-runtime-extractor-8p8nd
+        namespace: openshift-insights
+        uid: ca7b7f9d-0e91-4c6d-acd5-3c286ee6a04c
+    - ip: 10.131.0.11
+      nodeName: ip-10-0-78-215.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: insights-runtime-extractor-g8b77
+        namespace: openshift-insights
+        uid: b951fa80-bb64-4f97-a70a-3aaf48b2d71c
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:31:55Z"
+    creationTimestamp: "2026-01-28T09:26:19Z"
+    labels:
+      app: insights-operator
+      endpoints.kubernetes.io/managed-by: endpoint-controller
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpoints.kubernetes.io/managed-by: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:55Z"
+    name: metrics
+    namespace: openshift-insights
+    resourceVersion: "9857"
+    uid: 466d9a9d-d30c-45f6-b86e-097ba863d950
+  subsets:
+  - addresses:
+    - ip: 10.130.0.39
+      nodeName: ip-10-0-108-54.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: insights-operator-c7975f6f-qbb65
+        namespace: openshift-insights
+        uid: 73d760e7-9217-4df6-ba2e-f7c261a80aae
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "35048"

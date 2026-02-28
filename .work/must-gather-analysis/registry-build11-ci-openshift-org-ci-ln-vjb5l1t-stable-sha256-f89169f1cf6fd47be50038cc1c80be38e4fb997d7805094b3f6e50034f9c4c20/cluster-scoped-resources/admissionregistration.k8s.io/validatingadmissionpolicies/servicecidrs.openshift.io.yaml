@@ -1,0 +1,64 @@
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingAdmissionPolicy
+metadata:
+  creationTimestamp: "2026-01-28T09:29:31Z"
+  generation: 1
+  managedFields:
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:observedGeneration: {}
+        f:typeChecking: {}
+    manager: validatingadmissionpolicy-status
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:29:31Z"
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          k:{"uid":"7763cebb-f1d7-4359-81b8-b55ef9916383"}: {}
+      f:spec:
+        f:failurePolicy: {}
+        f:matchConstraints: {}
+        f:validations: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2026-01-28T09:30:00Z"
+  name: servicecidrs.openshift.io
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: 7763cebb-f1d7-4359-81b8-b55ef9916383
+  resourceVersion: "5319"
+  uid: d3ad2b4f-6172-42ed-b405-f4f238dda4fa
+spec:
+  failurePolicy: Fail
+  matchConstraints:
+    matchPolicy: Equivalent
+    namespaceSelector: {}
+    objectSelector: {}
+    resourceRules:
+    - apiGroups:
+      - networking.k8s.io
+      apiVersions:
+      - v1
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - servicecidrs
+      scope: '*'
+  validations:
+  - expression: request.userInfo.username == 'system:apiserver' && 'system:masters'
+      in request.userInfo.groups
+    message: changing service CIDRs in a running cluster is not supported
+status:
+  observedGeneration: 1
+  typeChecking: {}

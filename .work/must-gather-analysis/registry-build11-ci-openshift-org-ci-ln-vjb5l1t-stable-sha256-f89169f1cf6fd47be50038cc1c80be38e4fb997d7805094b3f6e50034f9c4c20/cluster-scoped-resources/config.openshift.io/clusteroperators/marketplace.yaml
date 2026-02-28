@@ -1,0 +1,125 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    capability.openshift.io/name: marketplace
+    include.release.openshift.io/hypershift: "true"
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2026-01-28T09:25:40Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/hypershift: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:25:40Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:25:41Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Upgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: marketplace-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:31:58Z"
+  name: marketplace
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "10349"
+  uid: b26d4181-3a3e-4136-a861-bf4f886b7137
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:31:58Z"
+    message: 'Successfully progressed to release version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest'
+    reason: OperatorAvailable
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2026-01-28T09:31:58Z"
+    message: 'Available release version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest'
+    reason: OperatorAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2026-01-28T09:31:58Z"
+    message: Marketplace is upgradeable
+    reason: OperatorAvailable
+    status: "True"
+    type: Upgradeable
+  - lastTransitionTime: "2026-01-28T09:31:58Z"
+    message: 'Available release version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest'
+    reason: OperatorAvailable
+    status: "False"
+    type: Degraded
+  extension: null
+  relatedObjects:
+  - group: ""
+    name: openshift-marketplace
+    resource: namespaces
+  - group: operators.coreos.com
+    name: ""
+    namespace: openshift-marketplace
+    resource: catalogsources
+  versions:
+  - name: operator
+    version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest

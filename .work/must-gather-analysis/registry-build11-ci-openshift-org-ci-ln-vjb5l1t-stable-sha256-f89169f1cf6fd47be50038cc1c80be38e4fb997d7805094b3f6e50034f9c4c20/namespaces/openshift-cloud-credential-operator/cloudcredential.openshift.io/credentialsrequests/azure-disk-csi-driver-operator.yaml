@@ -1,0 +1,106 @@
+---
+apiVersion: cloudcredential.openshift.io/v1
+kind: CredentialsRequest
+metadata:
+  annotations:
+    capability.openshift.io/name: Storage+CloudCredential
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2026-01-28T09:25:52Z"
+  generation: 1
+  managedFields:
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec:
+        .: {}
+        f:providerSpec:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:permissions: {}
+        f:secretRef: {}
+        f:serviceAccountNames: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:25:52Z"
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:lastSyncGeneration: {}
+        f:provisioned: {}
+    manager: cloud-credential-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:27:00Z"
+  name: azure-disk-csi-driver-operator
+  namespace: openshift-cloud-credential-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "2850"
+  uid: 0fe97c0b-8196-4411-9a12-8643f0b1695e
+spec:
+  providerSpec:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: AzureProviderSpec
+    permissions:
+    - Microsoft.Compute/disks/read
+    - Microsoft.Compute/disks/write
+    - Microsoft.Compute/disks/delete
+    - Microsoft.Compute/diskEncryptionSets/read
+    - Microsoft.Compute/snapshots/read
+    - Microsoft.Compute/snapshots/write
+    - Microsoft.Compute/snapshots/delete
+    - Microsoft.Compute/virtualMachines/write
+    - Microsoft.Compute/virtualMachines/read
+    - Microsoft.Compute/virtualMachineScaleSets/virtualMachines/write
+    - Microsoft.Compute/virtualMachineScaleSets/virtualMachines/read
+    - Microsoft.Compute/virtualMachineScaleSets/read
+    - Microsoft.Compute/locations/operations/read
+    - Microsoft.Compute/locations/DiskOperations/read
+    - Microsoft.Resources/subscriptions/resourceGroups/read
+    - Microsoft.Resources/subscriptions/resourceGroups/*/read
+    - Microsoft.Compute/disks/beginGetAccess/action
+    - Microsoft.KeyVault/vaults/deploy/action
+    - Microsoft.ManagedIdentity/userAssignedIdentities/assign/action
+    - Microsoft.Network/applicationGateways/backendAddressPools/join/action
+    - Microsoft.Network/applicationSecurityGroups/joinIpConfiguration/action
+    - Microsoft.Network/loadBalancers/backendAddressPools/join/action
+    - Microsoft.Network/loadBalancers/inboundNatPools/join/action
+    - Microsoft.Network/loadBalancers/probes/join/action
+    - Microsoft.Network/networkInterfaces/join/action
+    - Microsoft.Network/networkSecurityGroups/join/action
+    - Microsoft.Network/publicIPPrefixes/join/action
+    - Microsoft.Network/virtualNetworks/subnets/join/action
+  secretRef:
+    name: azure-disk-credentials
+    namespace: openshift-cluster-csi-drivers
+  serviceAccountNames:
+  - azure-disk-csi-driver-operator
+  - azure-disk-csi-driver-controller-sa
+status:
+  conditions:
+  - lastProbeTime: "2026-01-28T09:27:00Z"
+    lastTransitionTime: "2026-01-28T09:27:00Z"
+    message: CredentialsRequest is not for platform AWS
+    reason: InfrastructureMismatch
+    status: "True"
+    type: Ignored
+  lastSyncGeneration: 0
+  provisioned: false

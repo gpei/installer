@@ -1,0 +1,127 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    capability.openshift.io/name: ImageRegistry
+    include.release.openshift.io/hypershift: "true"
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2026-01-28T09:25:40Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/hypershift: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:25:40Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:25:40Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: cluster-image-registry-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:42:54Z"
+  name: image-registry
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "22484"
+  uid: 026b1ff0-5b4e-4020-b264-786e842f0be4
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:42:21Z"
+    message: |-
+      Available: The registry is ready
+      NodeCADaemonAvailable: The daemon set node-ca has available replicas
+      ImagePrunerAvailable: Pruner CronJob has been created
+    reason: Ready
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2026-01-28T09:42:54Z"
+    message: |-
+      Progressing: The registry is ready
+      NodeCADaemonProgressing: The daemon set node-ca is deployed
+    reason: Ready
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2026-01-28T09:41:54Z"
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  extension: null
+  relatedObjects:
+  - group: imageregistry.operator.openshift.io
+    name: cluster
+    resource: configs
+  - group: imageregistry.operator.openshift.io
+    name: cluster
+    resource: imagepruners
+  - group: rbac.authorization.k8s.io
+    name: system:registry
+    resource: clusterroles
+  - group: rbac.authorization.k8s.io
+    name: registry-registry-role
+    resource: clusterrolebindings
+  - group: rbac.authorization.k8s.io
+    name: openshift-image-registry-pruner
+    resource: clusterrolebindings
+  - group: ""
+    name: openshift-image-registry
+    resource: namespaces
+  versions:
+  - name: operator
+    version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest

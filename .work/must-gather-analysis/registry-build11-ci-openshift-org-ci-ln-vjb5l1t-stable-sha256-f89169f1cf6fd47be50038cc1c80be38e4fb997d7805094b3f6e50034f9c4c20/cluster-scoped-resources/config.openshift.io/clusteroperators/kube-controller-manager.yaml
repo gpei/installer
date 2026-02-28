@@ -1,0 +1,155 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    exclude.release.openshift.io/internal-openshift-hosted: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2026-01-28T09:25:40Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:exclude.release.openshift.io/internal-openshift-hosted: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:25:40Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:25:40Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"EvaluationConditionsDetected"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Upgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:49:39Z"
+  name: kube-controller-manager
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "26720"
+  uid: 3696f8aa-3a1d-476a-953c-0519f00a34cc
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:37:54Z"
+    message: 'NodeControllerDegraded: All master nodes are ready'
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2026-01-28T09:49:39Z"
+    message: 'NodeInstallerProgressing: 3 nodes are at revision 7'
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2026-01-28T09:36:03Z"
+    message: 'StaticPodsAvailable: 3 nodes are active; 3 nodes are at revision 7'
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2026-01-28T09:30:34Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
+    type: Upgradeable
+  - lastTransitionTime: "2026-01-28T09:30:34Z"
+    reason: NoData
+    status: Unknown
+    type: EvaluationConditionsDetected
+  extension: null
+  relatedObjects:
+  - group: operator.openshift.io
+    name: cluster
+    resource: kubecontrollermanagers
+  - group: ""
+    name: openshift-config
+    resource: namespaces
+  - group: ""
+    name: openshift-config-managed
+    resource: namespaces
+  - group: ""
+    name: openshift-kube-controller-manager
+    resource: namespaces
+  - group: ""
+    name: openshift-kube-controller-manager-operator
+    resource: namespaces
+  - group: ""
+    name: kube-system
+    resource: namespaces
+  - group: certificates.k8s.io
+    name: ""
+    resource: certificatesigningrequests
+  - group: ""
+    name: ""
+    resource: nodes
+  - group: config.openshift.io
+    name: cluster
+    resource: nodes
+  versions:
+  - name: raw-internal
+    version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+  - name: operator
+    version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+  - name: kube-controller-manager
+    version: 1.33.6

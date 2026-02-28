@@ -1,0 +1,667 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    cluster-autoscaler.kubernetes.io/enable-ds-eviction: "false"
+    openshift.io/required-scc: privileged
+    openshift.io/scc: privileged
+    operator.openshift.io/dep-5d02b1dbbfd3b1124537c2229e410cd2adfa2: b3aTLg==
+    security.openshift.io/validated-scc-subject-type: serviceaccount
+  creationTimestamp: "2026-01-28T09:41:49Z"
+  generateName: aws-ebs-csi-driver-node-
+  generation: 1
+  labels:
+    app: aws-ebs-csi-driver-node
+    controller-revision-hash: fbf468fd7
+    pod-template-generation: "2"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:cluster-autoscaler.kubernetes.io/enable-ds-eviction: {}
+          f:openshift.io/required-scc: {}
+          f:operator.openshift.io/dep-5d02b1dbbfd3b1124537c2229e410cd2adfa2: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:controller-revision-hash: {}
+          f:pod-template-generation: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"49cc7061-5868-447f-9bfb-cf5e55bb4c21"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:nodeAffinity:
+            .: {}
+            f:requiredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"csi-driver"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"CSI_ENDPOINT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:host: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":10300,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/csi"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/dev"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/selinux"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/sys/fs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/lib/kubelet"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+          k:{"name":"csi-liveness-probe"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/csi"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"csi-node-driver-registrar"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:lifecycle:
+              .: {}
+              f:preStop:
+                .: {}
+                f:exec:
+                  .: {}
+                  f:command: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:host: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":10309,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/csi"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/registration"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"device-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"etc-selinux"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"kubelet-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"metrics-serving-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"non-standard-root-system-trust-ca-bundle"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"registration-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"socket-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"sys-fs"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2026-01-28T09:41:49Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.22.208"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:42:21Z"
+  name: aws-ebs-csi-driver-node-5mqm2
+  namespace: openshift-cluster-csi-drivers
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: DaemonSet
+    name: aws-ebs-csi-driver-node
+    uid: 49cc7061-5868-447f-9bfb-cf5e55bb4c21
+  resourceVersion: "20983"
+  uid: adb2b544-da90-4ba6-867b-3a1744ba68e7
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchFields:
+          - key: metadata.name
+            operator: In
+            values:
+            - ip-10-0-22-208.us-west-1.compute.internal
+  containers:
+  - args:
+    - node
+    - --endpoint=$(CSI_ENDPOINT)
+    - --logtostderr
+    - --v=2
+    - --reserved-volume-attachments=1
+    env:
+    - name: CSI_ENDPOINT
+      value: unix:/csi/csi.sock
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:16eec5fa72b90a0210d17a4497e5f430e1461046890512fc480568fa54542a80
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 5
+      httpGet:
+        host: 127.0.0.1
+        path: /healthz
+        port: healthz
+        scheme: HTTP
+      initialDelaySeconds: 10
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 3
+    name: csi-driver
+    ports:
+    - containerPort: 10300
+      hostPort: 10300
+      name: healthz
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/lib/kubelet
+      mountPropagation: Bidirectional
+      name: kubelet-dir
+    - mountPath: /csi
+      name: socket-dir
+    - mountPath: /dev
+      name: device-dir
+    - mountPath: /etc/selinux
+      name: etc-selinux
+    - mountPath: /sys/fs
+      name: sys-fs
+    - mountPath: /etc/pki/ca-trust/extracted/pem
+      name: non-standard-root-system-trust-ca-bundle
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-cwlrk
+      readOnly: true
+  - args:
+    - --csi-address=/csi/csi.sock
+    - --kubelet-registration-path=/var/lib/kubelet/plugins/ebs.csi.aws.com/csi.sock
+    - --http-endpoint=127.0.0.1:10309
+    - --v=2
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:2049797466a1536cbe9a72805e650920b4847965b8d55585545e9736385f262c
+    imagePullPolicy: IfNotPresent
+    lifecycle:
+      preStop:
+        exec:
+          command:
+          - /bin/sh
+          - -c
+          - rm -rf /registration/ebs.csi.aws.com-reg.sock /csi/csi.sock
+    livenessProbe:
+      failureThreshold: 5
+      httpGet:
+        host: 127.0.0.1
+        path: /healthz
+        port: rhealthz
+        scheme: HTTP
+      initialDelaySeconds: 10
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 3
+    name: csi-node-driver-registrar
+    ports:
+    - containerPort: 10309
+      hostPort: 10309
+      name: rhealthz
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /csi
+      name: socket-dir
+    - mountPath: /registration
+      name: registration-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-cwlrk
+      readOnly: true
+  - args:
+    - --csi-address=/csi/csi.sock
+    - --http-endpoint=127.0.0.1:10300
+    - --v=2
+    - --probe-timeout=3s
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:688fb2404fabe8055015a5750740f8c43a61dc3f96d0242b15345a54da695af1
+    imagePullPolicy: IfNotPresent
+    name: csi-liveness-probe
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /csi
+      name: socket-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-cwlrk
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  nodeName: ip-10-0-22-208.us-west-1.compute.internal
+  nodeSelector:
+    kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: aws-ebs-csi-driver-node-sa
+  serviceAccountName: aws-ebs-csi-driver-node-sa
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - operator: Exists
+  volumes:
+  - hostPath:
+      path: /var/lib/kubelet
+      type: Directory
+    name: kubelet-dir
+  - hostPath:
+      path: /var/lib/kubelet/plugins/ebs.csi.aws.com/
+      type: DirectoryOrCreate
+    name: socket-dir
+  - hostPath:
+      path: /var/lib/kubelet/plugins_registry/
+      type: Directory
+    name: registration-dir
+  - hostPath:
+      path: /dev
+      type: Directory
+    name: device-dir
+  - hostPath:
+      path: /etc/selinux
+      type: DirectoryOrCreate
+    name: etc-selinux
+  - hostPath:
+      path: /sys/fs
+      type: Directory
+    name: sys-fs
+  - name: metrics-serving-cert
+    secret:
+      defaultMode: 420
+      secretName: aws-ebs-csi-driver-node-metrics-serving-cert
+  - configMap:
+      defaultMode: 420
+      items:
+      - key: ca-bundle.crt
+        path: tls-ca-bundle.pem
+      name: aws-ebs-csi-driver-trusted-ca-bundle
+    name: non-standard-root-system-trust-ca-bundle
+  - name: kube-api-access-cwlrk
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:42:21Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:41:51Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:42:21Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:42:21Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:41:49Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - allocatedResources:
+      cpu: 10m
+      memory: 50Mi
+    containerID: cri-o://6d364313171ace7ebf2c6a02829822ac1af0d32ae3a4d381715c35746dc22d64
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:16eec5fa72b90a0210d17a4497e5f430e1461046890512fc480568fa54542a80
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:16eec5fa72b90a0210d17a4497e5f430e1461046890512fc480568fa54542a80
+    lastState: {}
+    name: csi-driver
+    ready: true
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2026-01-28T09:42:14Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        uid: 0
+    volumeMounts:
+    - mountPath: /var/lib/kubelet
+      name: kubelet-dir
+    - mountPath: /csi
+      name: socket-dir
+    - mountPath: /dev
+      name: device-dir
+    - mountPath: /etc/selinux
+      name: etc-selinux
+    - mountPath: /sys/fs
+      name: sys-fs
+    - mountPath: /etc/pki/ca-trust/extracted/pem
+      name: non-standard-root-system-trust-ca-bundle
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-cwlrk
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - allocatedResources:
+      cpu: 10m
+      memory: 50Mi
+    containerID: cri-o://2318cde7673dd0bcf1502fa19dd4ae35b40420e6856c626a3c7023c8c814e8fa
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:688fb2404fabe8055015a5750740f8c43a61dc3f96d0242b15345a54da695af1
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:688fb2404fabe8055015a5750740f8c43a61dc3f96d0242b15345a54da695af1
+    lastState: {}
+    name: csi-liveness-probe
+    ready: true
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2026-01-28T09:42:20Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        uid: 0
+    volumeMounts:
+    - mountPath: /csi
+      name: socket-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-cwlrk
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - allocatedResources:
+      cpu: 10m
+      memory: 50Mi
+    containerID: cri-o://d512f298afd48582caa734745e8cbfd1b71a2ca4ac73ed619a8938d4677a67e4
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:2049797466a1536cbe9a72805e650920b4847965b8d55585545e9736385f262c
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:2049797466a1536cbe9a72805e650920b4847965b8d55585545e9736385f262c
+    lastState: {}
+    name: csi-node-driver-registrar
+    ready: true
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2026-01-28T09:42:17Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        uid: 0
+    volumeMounts:
+    - mountPath: /csi
+      name: socket-dir
+    - mountPath: /registration
+      name: registration-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-cwlrk
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 10.0.22.208
+  hostIPs:
+  - ip: 10.0.22.208
+  phase: Running
+  podIP: 10.0.22.208
+  podIPs:
+  - ip: 10.0.22.208
+  qosClass: Burstable
+  startTime: "2026-01-28T09:41:51Z"

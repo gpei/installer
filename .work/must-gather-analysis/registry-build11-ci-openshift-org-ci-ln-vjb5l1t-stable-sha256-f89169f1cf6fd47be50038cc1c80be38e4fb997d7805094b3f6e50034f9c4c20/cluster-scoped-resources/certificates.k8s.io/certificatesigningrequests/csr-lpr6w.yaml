@@ -1,0 +1,68 @@
+---
+apiVersion: certificates.k8s.io/v1
+kind: CertificateSigningRequest
+metadata:
+  creationTimestamp: "2026-01-28T09:36:46Z"
+  generateName: csr-
+  managedFields:
+  - apiVersion: certificates.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:certificate: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:36:46Z"
+  - apiVersion: certificates.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+    manager: multus-daemon
+    operation: Update
+    time: "2026-01-28T09:36:46Z"
+  - apiVersion: certificates.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Approved"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: ovnkube-identity
+    operation: Update
+    subresource: approval
+    time: "2026-01-28T09:36:46Z"
+  name: csr-lpr6w
+  resourceVersion: "15514"
+  uid: ea5910e9-6d24-435c-b741-e60b4acbb45d
+spec:
+  expirationSeconds: 86400
+  extra:
+    authentication.kubernetes.io/credential-id:
+    - X509SHA256=891061c9cdc3c3e163b499663523374e50d13208017d0bc9862284000f19212d
+  groups:
+  - system:nodes
+  - system:authenticated
+  request: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURSBSRVFVRVNULS0tLS0KTUlJQkZEQ0J2QUlCQURCYU1SWXdGQVlEVlFRS0V3MXplWE4wWlcwNmJYVnNkSFZ6TVVBd1BnWURWUVFERXpkegplWE4wWlcwNmJYVnNkSFZ6T21sd0xURXdMVEF0TnpndE1qRTFMblZ6TFhkbGMzUXRNUzVqYjIxd2RYUmxMbWx1CmRHVnlibUZzTUZrd0V3WUhLb1pJemowQ0FRWUlLb1pJemowREFRY0RRZ0FFWlZuOXp0d2prZXgzdnhkYTlSdzMKWUk1Y2lWRUJnVFZoQWdUUjg4N0QrMmtXYU0wMmFIZ2tqcGhWODlXSUlydVVQd0N3d2ZQTWdaK0FMVXRIUG4yRQo0NkFBTUFvR0NDcUdTTTQ5QkFNQ0EwY0FNRVFDSUhZSkFkWlc5V3paelIvbVdIK1RTTm96bkllMHArWlY1TVJkCk80dHl2b2paQWlBN09RTU1LT3B1ekNKQ3V2dHh4bkE5NkFjYXFTeXZodVJhaU11UHBUc2h1QT09Ci0tLS0tRU5EIENFUlRJRklDQVRFIFJFUVVFU1QtLS0tLQo=
+  signerName: kubernetes.io/kube-apiserver-client
+  usages:
+  - digital signature
+  - client auth
+  username: system:node:ip-10-0-78-215.us-west-1.compute.internal
+status:
+  certificate: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNuRENDQVlTZ0F3SUJBZ0lRZnhubHMxZXF4bW9kNDIwNk4rTnE5akFOQmdrcWhraUc5dzBCQVFzRkFEQXQKTVJJd0VBWURWUVFMRXdsdmNHVnVjMmhwWm5ReEZ6QVZCZ05WQkFNVERtdDFZbVZzWlhRdGMybG5ibVZ5TUI0WApEVEkyTURFeU9EQTVNekUwTmxvWERUSTJNREV5T1RBNU1UTXdObG93V2pFV01CUUdBMVVFQ2hNTmMzbHpkR1Z0Ck9tMTFiSFIxY3pGQU1ENEdBMVVFQXhNM2MzbHpkR1Z0T20xMWJIUjFjenBwY0MweE1DMHdMVGM0TFRJeE5TNTEKY3kxM1pYTjBMVEV1WTI5dGNIVjBaUzVwYm5SbGNtNWhiREJaTUJNR0J5cUdTTTQ5QWdFR0NDcUdTTTQ5QXdFSApBMElBQkdWWi9jN2NJNUhzZDc4WFd2VWNOMkNPWElsUkFZRTFZUUlFMGZQT3cvdHBGbWpOTm1oNEpJNllWZlBWCmlDSzdsRDhBc01IenpJR2ZnQzFMUno1OWhPT2pWakJVTUE0R0ExVWREd0VCL3dRRUF3SUhnREFUQmdOVkhTVUUKRERBS0JnZ3JCZ0VGQlFjREFqQU1CZ05WSFJNQkFmOEVBakFBTUI4R0ExVWRJd1FZTUJhQUZMZG1wLzFubGhEKwptUGludHI0Q01RNDR3MDB2TUEwR0NTcUdTSWIzRFFFQkN3VUFBNElCQVFBQWRRMzNzc1pMb29RMkRIUk9DeTg1CktQR1hUU2VzODJOaUE0T3FjbFFUYS9rU2YwNlNzMzdIQlN5WldJVE1sNjU1aDdaN0tTZW1jTy9oOE83dDIzMXYKZE9wbWdoMnFYd2NzSUQ4QVBlMkE3S1NydktROURXbXc1aHRra1pybW05SVgzdzRsRWJEcUpINWZBbmMzNjZoWAp1U01wL1hMVTViWm9jREIwWVZpdk4rYkVjc3A5YVk1N3FNZWh0cCtrbFByTU5OOHNPaGg1bi9sOVZqeHczdm9TCjFoRjFNYXFybytCamI4UTZPL3g2ZE12MHR1MVcwRzRzeWNjWmV1SVJlNU5nOGhxUjVmaUNTUEdCaEdtZ21Wa3MKZTd2eU9meStaZFZ4aGJ0UnBwVEZWZFBMamRHVTRaeGdVelZJODVjTVJHVGVSdjhBUzE1a095aHp0VlN6Y0NkRQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:36:46Z"
+    lastUpdateTime: "2026-01-28T09:36:46Z"
+    message: Auto-approved CSR "csr-lpr6w"
+    reason: AutoApproved
+    status: "True"
+    type: Approved

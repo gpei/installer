@@ -1,0 +1,55 @@
+2026-01-28T09:42:45.320224596Z ts=2026-01-28T09:42:45+00:00 num_cpus=4 gomaxprocs=4
+2026-01-28T09:42:45.326013378Z time=2026-01-28T09:42:45.325Z level=INFO source=node_exporter.go:216 msg="Starting node_exporter" version="(version=1.9.1, branch=HEAD, revision=5e27e161dce299768fb4409fd1bed3c0983e3f58)"
+2026-01-28T09:42:45.326146131Z time=2026-01-28T09:42:45.326Z level=INFO source=node_exporter.go:217 msg="Build context" build_context="(go=go1.24.11 (Red Hat 1.24.11-1.el9_6) X:strictfipsruntime, platform=linux/amd64, user=reproducible@reproducible, date=20251105-05:52:03, tags=strictfipsruntime)"
+2026-01-28T09:42:45.326701594Z time=2026-01-28T09:42:45.326Z level=INFO source=netdev_common.go:80 msg="Parsed flag --collector.netdev.device-exclude" collector=netdev flag=^(veth.*|[a-f0-9]{15}|enP.*|ovn-k8s-mp[0-9]*|br-ex|br-int|br-ext|br[0-9]*|tun[0-9]*|cali[a-f0-9]*)$
+2026-01-28T09:42:45.327084793Z time=2026-01-28T09:42:45.327Z level=INFO source=diskstats_common.go:110 msg="Parsed flag --collector.diskstats.device-exclude" collector=diskstats flag=^(z?ram|loop|fd|(h|s|v|xv)d[a-z]|nvme\d+n\d+p)\d+$
+2026-01-28T09:42:45.328505985Z time=2026-01-28T09:42:45.328Z level=INFO source=filesystem_common.go:265 msg="Parsed flag --collector.filesystem.mount-points-exclude" collector=filesystem flag=^/(dev|proc|sys|run/k3s/containerd/.+|var/lib/docker/.+|var/lib/kubelet/pods/.+)($|/)
+2026-01-28T09:42:45.328583987Z time=2026-01-28T09:42:45.328Z level=INFO source=filesystem_common.go:294 msg="Parsed flag --collector.filesystem.fs-types-exclude" collector=filesystem flag=^(autofs|binfmt_misc|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|fusectl|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|sysfs|tracefs)$
+2026-01-28T09:42:45.328686719Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:135 msg="Enabled collectors"
+2026-01-28T09:42:45.328712520Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=accelerator
+2026-01-28T09:42:45.328712520Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=arp
+2026-01-28T09:42:45.328712520Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=bcache
+2026-01-28T09:42:45.328712520Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=bonding
+2026-01-28T09:42:45.328724710Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=conntrack
+2026-01-28T09:42:45.328724710Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=cpu
+2026-01-28T09:42:45.328737940Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=diskstats
+2026-01-28T09:42:45.328737940Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=dmi
+2026-01-28T09:42:45.328748171Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=edac
+2026-01-28T09:42:45.328748171Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=entropy
+2026-01-28T09:42:45.328758311Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=fibrechannel
+2026-01-28T09:42:45.328758311Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=filefd
+2026-01-28T09:42:45.328768261Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=filesystem
+2026-01-28T09:42:45.328768261Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=hwmon
+2026-01-28T09:42:45.328778381Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=infiniband
+2026-01-28T09:42:45.328778381Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=ipvs
+2026-01-28T09:42:45.328788372Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=loadavg
+2026-01-28T09:42:45.328809112Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=mdadm
+2026-01-28T09:42:45.328809112Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=meminfo
+2026-01-28T09:42:45.328809112Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=netclass
+2026-01-28T09:42:45.328809112Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=netdev
+2026-01-28T09:42:45.328820742Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=netstat
+2026-01-28T09:42:45.328820742Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=nfs
+2026-01-28T09:42:45.328830993Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=nfsd
+2026-01-28T09:42:45.328830993Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=nvme
+2026-01-28T09:42:45.328841113Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=os
+2026-01-28T09:42:45.328841113Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=powersupplyclass
+2026-01-28T09:42:45.328841113Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=pressure
+2026-01-28T09:42:45.328851633Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=rapl
+2026-01-28T09:42:45.328851633Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=schedstat
+2026-01-28T09:42:45.328861703Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=selinux
+2026-01-28T09:42:45.328861703Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=sockstat
+2026-01-28T09:42:45.328872243Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=softnet
+2026-01-28T09:42:45.328872243Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=stat
+2026-01-28T09:42:45.328882264Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=tapestats
+2026-01-28T09:42:45.328882264Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=textfile
+2026-01-28T09:42:45.328892494Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=thermal_zone
+2026-01-28T09:42:45.328892494Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=time
+2026-01-28T09:42:45.328902404Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=timex
+2026-01-28T09:42:45.328902404Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=udp_queues
+2026-01-28T09:42:45.328902404Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=uname
+2026-01-28T09:42:45.328912864Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=vmstat
+2026-01-28T09:42:45.328912864Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=watchdog
+2026-01-28T09:42:45.328922715Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=xfs
+2026-01-28T09:42:45.328922715Z time=2026-01-28T09:42:45.328Z level=INFO source=node_exporter.go:141 msg=zfs
+2026-01-28T09:42:45.329490017Z time=2026-01-28T09:42:45.329Z level=INFO source=tls_config.go:347 msg="Listening on" address=127.0.0.1:9100
+2026-01-28T09:42:45.329490017Z time=2026-01-28T09:42:45.329Z level=INFO source=tls_config.go:350 msg="TLS is disabled." http2=false address=127.0.0.1:9100

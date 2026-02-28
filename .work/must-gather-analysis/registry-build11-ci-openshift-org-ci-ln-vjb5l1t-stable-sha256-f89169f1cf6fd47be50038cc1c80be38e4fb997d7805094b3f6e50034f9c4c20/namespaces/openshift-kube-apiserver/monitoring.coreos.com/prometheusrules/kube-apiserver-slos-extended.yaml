@@ -1,0 +1,205 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  creationTimestamp: "2026-01-28T09:30:52Z"
+  generation: 1
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:groups:
+          .: {}
+          k:{"name":"kube-apiserver-slos-extended"}:
+            .: {}
+            f:name: {}
+            f:rules: {}
+          k:{"name":"kube-apiserver.rules"}:
+            .: {}
+            f:name: {}
+            f:rules: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2026-01-28T09:30:52Z"
+  name: kube-apiserver-slos-extended
+  namespace: openshift-kube-apiserver
+  resourceVersion: "7383"
+  uid: 266ab502-e318-4cd8-9d8e-610eb3ea7b87
+spec:
+  groups:
+  - name: kube-apiserver-slos-extended
+    rules:
+    - alert: KubeAPIErrorBudgetBurn
+      annotations:
+        description: The API server is burning too much error budget. This alert fires
+          when too many requests are failing with high latency. Use the 'API Performance'
+          monitoring dashboards to narrow down the request states and latency. The
+          'etcd' monitoring dashboards also provides metrics to help determine etcd
+          stability and performance.
+        runbook_url: https://github.com/openshift/runbooks/blob/master/alerts/cluster-kube-apiserver-operator/KubeAPIErrorBudgetBurn.md
+        summary: The API server is burning too much error budget.
+      expr: |
+        sum:apiserver_request:burnrate1d > (3.00 * 0.01000)
+        and
+        sum:apiserver_request:burnrate2h > (3.00 * 0.01000)
+      for: 1h
+      labels:
+        long: 1d
+        namespace: openshift-kube-apiserver
+        severity: warning
+        short: 2h
+    - alert: KubeAPIErrorBudgetBurn
+      annotations:
+        description: The API server is burning too much error budget. This alert fires
+          when too many requests are failing with high latency. Use the 'API Performance'
+          monitoring dashboards to narrow down the request states and latency. The
+          'etcd' monitoring dashboards also provides metrics to help determine etcd
+          stability and performance.
+        runbook_url: https://github.com/openshift/runbooks/blob/master/alerts/cluster-kube-apiserver-operator/KubeAPIErrorBudgetBurn.md
+        summary: The API server is burning too much error budget.
+      expr: |
+        sum:apiserver_request:burnrate3d > (1.00 * 0.01000)
+        and
+        sum:apiserver_request:burnrate6h > (1.00 * 0.01000)
+      for: 3h
+      labels:
+        long: 3d
+        namespace: openshift-kube-apiserver
+        severity: warning
+        short: 6h
+  - name: kube-apiserver.rules
+    rules:
+    - expr: |
+        (
+          (
+            # too slow
+            sum by (cluster) (rate(apiserver_request_sli_duration_seconds_bucket{job="apiserver",verb=~"LIST|GET",subresource!~"proxy|attach|log|exec|portforward|/healthz|/livez|/readyz",le=~"60(.0)?"}[2h]))
+            -
+            (
+              (
+                sum by (cluster) (rate(apiserver_request_sli_duration_seconds_bucket{job="apiserver",verb=~"LIST|GET",subresource!~"proxy|attach|log|exec|portforward|/healthz|/livez|/readyz",scope=~"resource|",le=~"1(.0)?"}[2h]))
+                or
+                vector(0)
+              )
+              +
+              sum by (cluster) (rate(apiserver_request_sli_duration_seconds_bucket{job="apiserver",verb=~"LIST|GET",subresource!~"proxy|attach|log|exec|portforward|/healthz|/livez|/readyz",scope="namespace",le=~"5(.0)?"}[2h]))
+              +
+              sum by (cluster) (rate(apiserver_request_sli_duration_seconds_bucket{job="apiserver",verb=~"LIST|GET",subresource!~"proxy|attach|log|exec|portforward|/healthz|/livez|/readyz",scope="cluster",le=~"30(.0)?"}[2h]))
+            )
+          )
+          +
+          # errors
+          sum by (cluster) (rate(apiserver_request_total{job="apiserver",verb=~"LIST|GET",subresource!~"/healthz|/livez|/readyz",code=~"5.."}[2h]))
+        )
+      labels:
+        verb: read
+      record: apiserver_request:burn2h
+    - expr: |
+        (
+          (
+            # too slow
+            sum by (cluster) (rate(apiserver_request_sli_duration_seconds_bucket{job="apiserver",verb=~"LIST|GET",subresource!~"proxy|attach|log|exec|portforward|/healthz|/livez|/readyz",le=~"60(.0)?"}[1d]))
+            -
+            (
+              (
+                sum by (cluster) (rate(apiserver_request_sli_duration_seconds_bucket{job="apiserver",verb=~"LIST|GET",subresource!~"proxy|attach|log|exec|portforward|/healthz|/livez|/readyz",scope=~"resource|",le=~"1(.0)?"}[1d]))
+                or
+                vector(0)
+              )
+              +
+              sum by (cluster) (rate(apiserver_request_sli_duration_seconds_bucket{job="apiserver",verb=~"LIST|GET",subresource!~"proxy|attach|log|exec|portforward|/healthz|/livez|/readyz",scope="namespace",le=~"5(.0)?"}[1d]))
+              +
+              sum by (cluster) (rate(apiserver_request_sli_duration_seconds_bucket{job="apiserver",verb=~"LIST|GET",subresource!~"proxy|attach|log|exec|portforward|/healthz|/livez|/readyz",scope="cluster",le=~"30(.0)?"}[1d]))
+            )
+          )
+          +
+          # errors
+          sum by (cluster) (rate(apiserver_request_total{job="apiserver",verb=~"LIST|GET",subresource!~"/healthz|/livez|/readyz",code=~"5.."}[1d]))
+        )
+      labels:
+        verb: read
+      record: apiserver_request:burn1d
+    - expr: |
+        (
+          (
+            # too slow
+            sum by (cluster) (rate(apiserver_request_sli_duration_seconds_bucket{job="apiserver",verb=~"LIST|GET",subresource!~"proxy|attach|log|exec|portforward|/healthz|/livez|/readyz",le=~"60(.0)?"}[3d]))
+            -
+            (
+              (
+                sum by (cluster) (rate(apiserver_request_sli_duration_seconds_bucket{job="apiserver",verb=~"LIST|GET",subresource!~"proxy|attach|log|exec|portforward|/healthz|/livez|/readyz",scope=~"resource|",le=~"1(.0)?"}[3d]))
+                or
+                vector(0)
+              )
+              +
+              sum by (cluster) (rate(apiserver_request_sli_duration_seconds_bucket{job="apiserver",verb=~"LIST|GET",subresource!~"proxy|attach|log|exec|portforward|/healthz|/livez|/readyz",scope="namespace",le=~"5(.0)?"}[3d]))
+              +
+              sum by (cluster) (rate(apiserver_request_sli_duration_seconds_bucket{job="apiserver",verb=~"LIST|GET",subresource!~"proxy|attach|log|exec|portforward|/healthz|/livez|/readyz",scope="cluster",le=~"30(.0)?"}[3d]))
+            )
+          )
+          +
+          # errors
+          sum by (cluster) (rate(apiserver_request_total{job="apiserver",verb=~"LIST|GET",subresource!~"/healthz|/livez|/readyz",code=~"5.."}[3d]))
+        )
+      labels:
+        verb: read
+      record: apiserver_request:burn3d
+    - expr: |
+        (
+          (
+            # too slow
+            sum by (cluster) (rate(apiserver_request_sli_duration_seconds_bucket{job="apiserver",verb=~"POST|PUT|PATCH|DELETE",subresource!~"proxy|attach|log|exec|portforward|/healthz|/livez|/readyz",le=~"60(.0)?"}[1d]))
+            -
+            sum by (cluster) (rate(apiserver_request_sli_duration_seconds_bucket{job="apiserver",verb=~"POST|PUT|PATCH|DELETE",subresource!~"proxy|attach|log|exec|portforward|/healthz|/livez|/readyz",le=~"1(.0)?"}[1d]))
+          )
+          +
+          sum by (cluster) (rate(apiserver_request_total{job="apiserver",verb=~"POST|PUT|PATCH|DELETE",subresource!~"/healthz|/livez|/readyz",code=~"5.."}[1d]))
+        )
+      labels:
+        verb: write
+      record: apiserver_request:burn1d
+    - expr: |
+        (
+          (
+            # too slow
+            sum by (cluster) (rate(apiserver_request_sli_duration_seconds_bucket{job="apiserver",verb=~"POST|PUT|PATCH|DELETE",subresource!~"proxy|attach|log|exec|portforward|/healthz|/livez|/readyz",le=~"60(.0)?"}[2h]))
+            -
+            sum by (cluster) (rate(apiserver_request_sli_duration_seconds_bucket{job="apiserver",verb=~"POST|PUT|PATCH|DELETE",subresource!~"proxy|attach|log|exec|portforward|/healthz|/livez|/readyz",le=~"1(.0)?"}[2h]))
+          )
+          +
+          sum by (cluster) (rate(apiserver_request_total{job="apiserver",verb=~"POST|PUT|PATCH|DELETE",subresource!~"/healthz|/livez|/readyz",code=~"5.."}[2h]))
+        )
+      labels:
+        verb: write
+      record: apiserver_request:burn2h
+    - expr: |
+        (
+          (
+            # too slow
+            sum by (cluster) (rate(apiserver_request_sli_duration_seconds_bucket{job="apiserver",verb=~"POST|PUT|PATCH|DELETE",subresource!~"proxy|attach|log|exec|portforward|/healthz|/livez|/readyz",le=~"60(.0)?"}[3d]))
+            -
+            sum by (cluster) (rate(apiserver_request_sli_duration_seconds_bucket{job="apiserver",verb=~"POST|PUT|PATCH|DELETE",subresource!~"proxy|attach|log|exec|portforward|/healthz|/livez|/readyz",le=~"1(.0)?"}[3d]))
+          )
+          +
+          sum by (cluster) (rate(apiserver_request_total{job="apiserver",verb=~"POST|PUT|PATCH|DELETE",subresource!~"/healthz|/livez|/readyz",code=~"5.."}[3d]))
+        )
+      labels:
+        verb: write
+      record: apiserver_request:burn3d
+    - expr: |
+        sum(apiserver_request:burn2h)
+        /
+        sum by (cluster) (rate(apiserver_request_total{job="apiserver",verb=~"LIST|GET|POST|PUT|PATCH|DELETE"}[2h]))
+      record: sum:apiserver_request:burnrate2h
+    - expr: |
+        sum(apiserver_request:burn1d)
+        /
+        sum by (cluster) (rate(apiserver_request_total{job="apiserver",verb=~"LIST|GET|POST|PUT|PATCH|DELETE"}[1d]))
+      record: sum:apiserver_request:burnrate1d
+    - expr: |
+        sum(apiserver_request:burn3d)
+        /
+        sum by (cluster) (rate(apiserver_request_total{job="apiserver",verb=~"LIST|GET|POST|PUT|PATCH|DELETE"}[3d]))
+      record: sum:apiserver_request:burnrate3d

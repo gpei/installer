@@ -1,0 +1,235 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/display-name: Apache HTTP Server
+    samples.operator.openshift.io/version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+  creationTimestamp: "2026-01-28T09:42:08Z"
+  generation: 1
+  labels:
+    samples.operator.openshift.io/managed: "true"
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/display-name: {}
+          f:samples.operator.openshift.io/version: {}
+        f:labels:
+          .: {}
+          f:samples.operator.openshift.io/managed: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"2.4-el8"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"2.4-ubi8"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"2.4-ubi9"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"2.4-ubi10"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"latest"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-samples-operator
+    operation: Update
+    time: "2026-01-28T09:42:08Z"
+  name: httpd
+  namespace: openshift
+  resourceVersion: "20562"
+  uid: 72a541b6-c3fd-4540-abcc-da55ce06006e
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations:
+      description: Build and serve static content via Apache HTTP Server (httpd) 2.4
+        on RHEL 8. For more information about using this builder image, including
+        OpenShift considerations, see https://github.com/sclorg/httpd-container/blob/master/2.4/README.md.
+      iconClass: icon-httpd
+      openshift.io/display-name: Apache HTTP Server 2.4 (RHEL 8)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/httpd-ex.git
+      tags: builder,httpd
+      version: "2.4"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/rhel8/httpd-24:latest
+    generation: 1
+    importPolicy:
+      importMode: Legacy
+    name: 2.4-el8
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and serve static content via Apache HTTP Server (httpd) 2.4
+        on UBI 10. For more information about using this builder image, including
+        OpenShift considerations, see https://github.com/sclorg/httpd-container/blob/master/2.4/README.md.
+      iconClass: icon-httpd
+      openshift.io/display-name: Apache HTTP Server 2.4 (UBI 10)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/httpd-ex.git
+      tags: builder,httpd
+      version: "2.4"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ubi10/httpd-24:latest
+    generation: 1
+    importPolicy:
+      importMode: Legacy
+    name: 2.4-ubi10
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and serve static content via Apache HTTP Server (httpd) 2.4
+        on UBI 8. For more information about using this builder image, including OpenShift
+        considerations, see https://github.com/sclorg/httpd-container/blob/master/2.4/README.md.
+      iconClass: icon-httpd
+      openshift.io/display-name: Apache HTTP Server 2.4 (UBI 8)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/httpd-ex.git
+      tags: builder,httpd
+      version: "2.4"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ubi8/httpd-24:latest
+    generation: 1
+    importPolicy:
+      importMode: Legacy
+    name: 2.4-ubi8
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and serve static content via Apache HTTP Server (httpd) 2.4
+        on UBI 9. For more information about using this builder image, including OpenShift
+        considerations, see https://github.com/sclorg/httpd-container/blob/master/2.4/README.md.
+      iconClass: icon-httpd
+      openshift.io/display-name: Apache HTTP Server 2.4 (UBI 9)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/httpd-ex.git
+      tags: builder,httpd
+      version: "2.4"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ubi9/httpd-24:latest
+    generation: 1
+    importPolicy:
+      importMode: Legacy
+    name: 2.4-ubi9
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: |
+        Build and serve static content via Apache HTTP Server (httpd) 2.4 on UBI 9. For more information about using this builder image, including OpenShift considerations, see https://github.com/sclorg/httpd-container/blob/master/2.4/README.md.
+
+        WARNING: By selecting this tag, your application will automatically update to use the latest version available on OpenShift, including major version updates.
+      iconClass: icon-httpd
+      openshift.io/display-name: Apache HTTP Server 2.4 (Latest)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/httpd-ex.git
+      tags: builder,httpd
+      version: "2.4"
+    from:
+      kind: ImageStreamTag
+      name: 2.4-ubi9
+    generation: 1
+    importPolicy:
+      importMode: Legacy
+    name: latest
+    referencePolicy:
+      type: Local
+status:
+  dockerImageRepository: image-registry.openshift-image-registry.svc:5000/openshift/httpd

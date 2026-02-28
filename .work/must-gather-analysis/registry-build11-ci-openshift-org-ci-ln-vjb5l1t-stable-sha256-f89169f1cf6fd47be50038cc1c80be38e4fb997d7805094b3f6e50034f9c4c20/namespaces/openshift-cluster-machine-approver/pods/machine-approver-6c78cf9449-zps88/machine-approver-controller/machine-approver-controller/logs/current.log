@@ -1,0 +1,51 @@
+2026-01-28T09:31:05.761793563Z W0128 09:31:05.761679       1 client_config.go:667] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+2026-01-28T09:31:05.761956831Z W0128 09:31:05.761910       1 client_config.go:667] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+2026-01-28T09:31:05.762052425Z I0128 09:31:05.762038       1 main.go:157] setting up manager
+2026-01-28T09:31:05.762199003Z I0128 09:31:05.762172       1 envvar.go:172] "Feature gate default state" feature="InOrderInformers" enabled=true
+2026-01-28T09:31:05.762199003Z I0128 09:31:05.762189       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2026-01-28T09:31:05.762214334Z I0128 09:31:05.762196       1 envvar.go:172] "Feature gate default state" feature="ClientsAllowCBOR" enabled=false
+2026-01-28T09:31:05.762214334Z I0128 09:31:05.762202       1 envvar.go:172] "Feature gate default state" feature="ClientsPreferCBOR" enabled=false
+2026-01-28T09:31:05.762214334Z I0128 09:31:05.762208       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2026-01-28T09:31:05.774083021Z I0128 09:31:05.774001       1 main.go:182] registering components
+2026-01-28T09:31:05.774083021Z I0128 09:31:05.774039       1 main.go:184] setting up scheme
+2026-01-28T09:31:05.774352894Z I0128 09:31:05.774335       1 main.go:222] setting up controllers
+2026-01-28T09:31:05.774432208Z I0128 09:31:05.774400       1 config.go:33] using default as failed to load config /var/run/configmaps/config/config.yaml: open /var/run/configmaps/config/config.yaml: no such file or directory
+2026-01-28T09:31:05.774432208Z I0128 09:31:05.774417       1 config.go:23] machine approver config: {NodeClientCert:{Disabled:false}}
+2026-01-28T09:31:05.774586296Z I0128 09:31:05.774565       1 main.go:248] starting the cmd
+2026-01-28T09:31:05.774700521Z I0128 09:31:05.774681       1 server.go:208] "Starting metrics server" logger="controller-runtime.metrics"
+2026-01-28T09:31:05.775836227Z I0128 09:31:05.775812       1 server.go:247] "Serving metrics server" logger="controller-runtime.metrics" bindAddress="127.0.0.1:9191" secure=false
+2026-01-28T09:31:05.777031857Z I0128 09:31:05.776994       1 reflector.go:430] "Caches populated" logger="controller-runtime.cache" type="*v1.CertificateSigningRequest" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:114"
+2026-01-28T09:31:05.876016623Z I0128 09:31:05.875973       1 leaderelection.go:257] attempting to acquire leader lease openshift-cluster-machine-approver/cluster-machine-approver-leader...
+2026-01-28T09:31:05.880382129Z I0128 09:31:05.880363       1 leaderelection.go:271] successfully acquired lease openshift-cluster-machine-approver/cluster-machine-approver-leader
+2026-01-28T09:31:05.880581809Z I0128 09:31:05.880544       1 recorder.go:104] "ip-10-0-108-54_6d8dea2f-5a6d-4fe7-8d4b-46171c0b5166 became leader" logger="events" type="Normal" object={"kind":"Lease","namespace":"openshift-cluster-machine-approver","name":"cluster-machine-approver-leader","uid":"391891da-17c9-458c-8ac3-151a547dcf7f","apiVersion":"coordination.k8s.io/v1","resourceVersion":"7998"} reason="LeaderElection"
+2026-01-28T09:31:05.880681244Z I0128 09:31:05.880662       1 controller.go:246] "Starting EventSource" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" source="kind source: *v1.ConfigMap"
+2026-01-28T09:31:05.880725176Z I0128 09:31:05.880704       1 controller.go:246] "Starting EventSource" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" source="kind source: *v1.CertificateSigningRequest"
+2026-01-28T09:31:05.880814471Z I0128 09:31:05.880802       1 status.go:100] Starting cluster operator status controller
+2026-01-28T09:31:05.882306825Z I0128 09:31:05.882284       1 reflector.go:430] "Caches populated" type="*v1.ClusterOperator" reflector="github.com/openshift/cluster-machine-approver/status.go:102"
+2026-01-28T09:31:05.979705373Z I0128 09:31:05.977675       1 reflector.go:430] "Caches populated" logger="controller-runtime.cache" type="*v1.ConfigMap" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:114"
+2026-01-28T09:31:05.982362414Z I0128 09:31:05.981574       1 controller.go:186] "Starting Controller" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest"
+2026-01-28T09:31:05.982362414Z I0128 09:31:05.981608       1 controller.go:195] "Starting workers" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" worker count=10
+2026-01-28T09:36:10.660124517Z I0128 09:36:10.660052       1 controller.go:165] Reconciling CSR: csr-cjc5s
+2026-01-28T09:36:10.692075118Z I0128 09:36:10.691950       1 controller.go:293] CSR csr-cjc5s approved
+2026-01-28T09:36:11.703898608Z I0128 09:36:11.703833       1 controller.go:165] Reconciling CSR: csr-8xc8m
+2026-01-28T09:36:11.718485409Z I0128 09:36:11.718452       1 csr_check.go:173] csr-8xc8m: CSR does not appear to be client csr
+2026-01-28T09:36:11.719917081Z I0128 09:36:11.719896       1 csr_check.go:563] retrieving serving cert from ip-10-0-78-215.us-west-1.compute.internal (10.0.78.215:10250)
+2026-01-28T09:36:11.724709481Z I0128 09:36:11.724274       1 csr_check.go:198] Failed to retrieve current serving cert: remote error: tls: internal error
+2026-01-28T09:36:11.724709481Z I0128 09:36:11.724293       1 csr_check.go:218] Falling back to machine-api authorization for ip-10-0-78-215.us-west-1.compute.internal
+2026-01-28T09:36:11.728267589Z I0128 09:36:11.728061       1 controller.go:293] CSR csr-8xc8m approved
+2026-01-28T09:41:46.263497235Z I0128 09:41:46.263437       1 controller.go:165] Reconciling CSR: csr-k74qx
+2026-01-28T09:41:46.303345450Z I0128 09:41:46.302962       1 controller.go:293] CSR csr-k74qx approved
+2026-01-28T09:41:47.359111761Z I0128 09:41:47.359017       1 controller.go:165] Reconciling CSR: csr-s2mzw
+2026-01-28T09:41:47.456489551Z I0128 09:41:47.455280       1 csr_check.go:173] csr-s2mzw: CSR does not appear to be client csr
+2026-01-28T09:41:47.474095088Z I0128 09:41:47.473138       1 csr_check.go:563] retrieving serving cert from ip-10-0-101-165.us-west-1.compute.internal (10.0.101.165:10250)
+2026-01-28T09:41:47.481373741Z I0128 09:41:47.478813       1 csr_check.go:198] Failed to retrieve current serving cert: remote error: tls: internal error
+2026-01-28T09:41:47.481373741Z I0128 09:41:47.478832       1 csr_check.go:218] Falling back to machine-api authorization for ip-10-0-101-165.us-west-1.compute.internal
+2026-01-28T09:41:47.504168426Z I0128 09:41:47.504128       1 controller.go:293] CSR csr-s2mzw approved
+2026-01-28T09:41:48.991291473Z I0128 09:41:48.991253       1 controller.go:165] Reconciling CSR: csr-2cmqh
+2026-01-28T09:41:49.023330069Z I0128 09:41:49.023282       1 controller.go:293] CSR csr-2cmqh approved
+2026-01-28T09:41:50.043946969Z I0128 09:41:50.043891       1 controller.go:165] Reconciling CSR: csr-tkk8w
+2026-01-28T09:41:50.066307862Z I0128 09:41:50.066247       1 csr_check.go:173] csr-tkk8w: CSR does not appear to be client csr
+2026-01-28T09:41:50.069585716Z I0128 09:41:50.069564       1 csr_check.go:563] retrieving serving cert from ip-10-0-22-208.us-west-1.compute.internal (10.0.22.208:10250)
+2026-01-28T09:41:50.074579455Z I0128 09:41:50.074527       1 csr_check.go:198] Failed to retrieve current serving cert: remote error: tls: internal error
+2026-01-28T09:41:50.074579455Z I0128 09:41:50.074552       1 csr_check.go:218] Falling back to machine-api authorization for ip-10-0-22-208.us-west-1.compute.internal
+2026-01-28T09:41:50.081790674Z I0128 09:41:50.081745       1 controller.go:293] CSR csr-tkk8w approved

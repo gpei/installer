@@ -1,0 +1,561 @@
+
+[
+	{
+		"namespace":"openshift-cluster-csi-drivers", 
+		"name":"aws-ebs-csi-driver-node-nfhmc", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"csi-driver",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			}, 
+			{
+				"name":"csi-node-driver-registrar",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			}, 
+			{
+				"name":"csi-liveness-probe",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-cluster-node-tuning-operator", 
+		"name":"tuned-bcwwm", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"tuned",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-cluster-storage-operator", 
+		"name":"volume-data-source-validator-59d66bc9fd-wgkdh", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"volume-data-source-validator",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-dns", 
+		"name":"dns-default-6hffk", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"dns",
+				"resources": {
+					"requests": {
+						"cpu": "50m"
+					}
+				} 
+			}, 
+			{
+				"name":"kube-rbac-proxy",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-dns", 
+		"name":"node-resolver-8hgs7", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"dns-node-resolver",
+				"resources": {
+					"requests": {
+						"cpu": "5m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-e2e-loki", 
+		"name":"loki-promtail-xwcmq", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"promtail",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			}, 
+			{
+				"name":"oauth-proxy",
+				"resources": {
+					"requests": {
+						"cpu": "20m"
+					}
+				} 
+			}, 
+			{
+				"name":"prod-bearer-token",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-image-registry", 
+		"name":"node-ca-5qq29", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"node-ca",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-ingress-canary", 
+		"name":"ingress-canary-npfwq", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"serve-healthcheck-canary",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-ingress", 
+		"name":"router-default-69d986749c-f2gwp", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"router",
+				"resources": {
+					"requests": {
+						"cpu": "100m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-insights", 
+		"name":"insights-runtime-extractor-g8b77", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"kube-rbac-proxy",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			}, 
+			{
+				"name":"exporter",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			}, 
+			{
+				"name":"extractor",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-machine-config-operator", 
+		"name":"kube-rbac-proxy-crio-ip-10-0-78-215.us-west-1.compute.internal", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"kube-rbac-proxy-crio",
+				"resources": {
+					"requests": {
+						"cpu": "20m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-machine-config-operator", 
+		"name":"machine-config-daemon-w7kk4", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"machine-config-daemon",
+				"resources": {
+					"requests": {
+						"cpu": "20m"
+					}
+				} 
+			}, 
+			{
+				"name":"kube-rbac-proxy",
+				"resources": {
+					"requests": {
+						"cpu": "20m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-monitoring", 
+		"name":"metrics-server-64d4ffb7b6-vzr6w", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"metrics-server",
+				"resources": {
+					"requests": {
+						"cpu": "1m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-monitoring", 
+		"name":"monitoring-plugin-5648d58565-hgdt8", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"monitoring-plugin",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-monitoring", 
+		"name":"node-exporter-czd4w", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"node-exporter",
+				"resources": {
+					"requests": {
+						"cpu": "8m"
+					}
+				} 
+			}, 
+			{
+				"name":"kube-rbac-proxy",
+				"resources": {
+					"requests": {
+						"cpu": "1m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-monitoring", 
+		"name":"prometheus-operator-admission-webhook-77b4b78b99-2sssv", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"prometheus-operator-admission-webhook",
+				"resources": {
+					"requests": {
+						"cpu": "5m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-multus", 
+		"name":"multus-additional-cni-plugins-kv9g9", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"kube-multus-additional-cni-plugins",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-multus", 
+		"name":"multus-rhfws", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"kube-multus",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-multus", 
+		"name":"network-metrics-daemon-zbldf", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"network-metrics-daemon",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			}, 
+			{
+				"name":"kube-rbac-proxy",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-must-gather-5xcqk", 
+		"name":"perf-node-gather-daemonset-89jxz", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Guaranteed",
+		"containers": [ 
+			{
+				"name":"node-probe",
+				"resources": {  
+					"limits": {
+						"cpu": "100m"
+					},
+					"requests": {
+						"cpu": "100m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-network-console", 
+		"name":"networking-console-plugin-5d69f676c4-8svvn", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"networking-console-plugin",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-network-console", 
+		"name":"networking-console-plugin-5d69f676c4-fgz9n", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"networking-console-plugin",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-network-diagnostics", 
+		"name":"network-check-source-7577c494d6-pf4wt", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"check-endpoints",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-network-diagnostics", 
+		"name":"network-check-target-gsfwx", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"network-check-target-container",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-network-operator", 
+		"name":"iptables-alerter-kf9bz", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"iptables-alerter",
+				"resources": {  
+					"limits": {
+						"cpu": "10m"
+					},
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			} 
+		] 
+	},
+	{
+		"namespace":"openshift-ovn-kubernetes", 
+		"name":"ovnkube-node-shtsk", 
+		"nodeName":"ip-10-0-78-215.us-west-1.compute.internal", 
+		"qosClass": "Burstable",
+		"containers": [ 
+			{
+				"name":"ovn-controller",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			}, 
+			{
+				"name":"ovn-acl-logging",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			}, 
+			{
+				"name":"kube-rbac-proxy-node",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			}, 
+			{
+				"name":"kube-rbac-proxy-ovn-metrics",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			}, 
+			{
+				"name":"northd",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			}, 
+			{
+				"name":"nbdb",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			}, 
+			{
+				"name":"sbdb",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			}, 
+			{
+				"name":"ovnkube-controller",
+				"resources": {
+					"requests": {
+						"cpu": "10m"
+					}
+				} 
+			} 
+		] 
+	}
+]

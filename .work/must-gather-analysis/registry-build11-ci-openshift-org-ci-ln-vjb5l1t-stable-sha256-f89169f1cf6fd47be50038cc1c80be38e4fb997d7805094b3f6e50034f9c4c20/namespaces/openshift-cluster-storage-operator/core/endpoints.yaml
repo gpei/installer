@@ -1,0 +1,90 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:31:04Z"
+    creationTimestamp: "2026-01-28T09:26:10Z"
+    labels:
+      app: cluster-storage-operator-metrics
+      endpoints.kubernetes.io/managed-by: endpoint-controller
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpoints.kubernetes.io/managed-by: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:04Z"
+    name: cluster-storage-operator-metrics
+    namespace: openshift-cluster-storage-operator
+    resourceVersion: "7868"
+    uid: 9ff8c316-2ce1-4fd1-aa04-e62efa08347b
+  subsets:
+  - addresses:
+    - ip: 10.130.0.37
+      nodeName: ip-10-0-108-54.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: cluster-storage-operator-97b755d8c-z5w4v
+        namespace: openshift-cluster-storage-operator
+        uid: 37e0cbec-5a00-426a-96c3-f5d2de84452a
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:31:55Z"
+    creationTimestamp: "2026-01-28T09:25:51Z"
+    labels:
+      app: csi-snapshot-controller-operator
+      endpoints.kubernetes.io/managed-by: endpoint-controller
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpoints.kubernetes.io/managed-by: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:55Z"
+    name: csi-snapshot-controller-operator-metrics
+    namespace: openshift-cluster-storage-operator
+    resourceVersion: "9847"
+    uid: eb1eb6eb-ad15-400a-83db-8cb86f729779
+  subsets:
+  - addresses:
+    - ip: 10.130.0.18
+      nodeName: ip-10-0-108-54.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: csi-snapshot-controller-operator-694c5957bf-qjh54
+        namespace: openshift-cluster-storage-operator
+        uid: 8b74842b-bbd2-476b-b6bb-c9e2cf964c6c
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "35033"

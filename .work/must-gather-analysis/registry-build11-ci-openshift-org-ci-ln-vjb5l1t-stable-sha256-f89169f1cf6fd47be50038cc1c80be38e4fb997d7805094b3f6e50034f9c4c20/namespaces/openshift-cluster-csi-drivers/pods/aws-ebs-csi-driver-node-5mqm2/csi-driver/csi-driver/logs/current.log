@@ -1,0 +1,16 @@
+2026-01-28T09:42:14.615230531Z I0128 09:42:14.615150       1 main.go:154] "Initializing metadata"
+2026-01-28T09:42:14.615359114Z I0128 09:42:14.615331       1 metadata.go:66] "Attempting to retrieve instance metadata from IMDS"
+2026-01-28T09:42:14.624540664Z I0128 09:42:14.624516       1 metadata.go:69] "Retrieved metadata from IMDS"
+2026-01-28T09:42:14.651365517Z I0128 09:42:14.651298       1 envvar.go:172] "Feature gate default state" feature="ClientsAllowCBOR" enabled=false
+2026-01-28T09:42:14.651438219Z I0128 09:42:14.651422       1 envvar.go:172] "Feature gate default state" feature="ClientsPreferCBOR" enabled=false
+2026-01-28T09:42:14.651469170Z I0128 09:42:14.651457       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2026-01-28T09:42:14.651515231Z I0128 09:42:14.651503       1 envvar.go:172] "Feature gate default state" feature="InOrderInformers" enabled=true
+2026-01-28T09:42:14.651542611Z I0128 09:42:14.651532       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2026-01-28T09:42:14.652110164Z I0128 09:42:14.652094       1 driver.go:69] "Driver Information" Driver="ebs.csi.aws.com" Version="v1.45.0"
+2026-01-28T09:43:01.153430557Z I0128 09:43:01.153360       1 mount_linux.go:608] Disk "/dev/nvme1n1" appears to be unformatted, attempting to format as type: "ext4" with options: [-F -m0 /dev/nvme1n1]
+2026-01-28T09:43:01.542806952Z I0128 09:43:01.542763       1 mount_linux.go:619] Disk successfully formatted (mkfs): ext4 - /dev/nvme1n1 /var/lib/kubelet/plugins/kubernetes.io/csi/ebs.csi.aws.com/9c55286b451e6750e955b2855a278ff9615528ec94544a8f9f2ce9e252076bf3/globalmount
+2026-01-28T09:43:01.551254412Z I0128 09:43:01.551225       1 mount_linux.go:295] Cannot run systemd-run, assuming non-systemd OS
+2026-01-28T09:43:01.575667739Z I0128 09:43:01.575630       1 node.go:282] "Volume needs resizing" source="/dev/nvme1n1"
+2026-01-28T09:43:01.582259801Z I0128 09:43:01.582228       1 resizefs_linux.go:74] Device /dev/nvme1n1 resized successfully
+2026-01-28T09:44:33.200185011Z I0128 09:44:33.200135       1 node.go:282] "Volume needs resizing" source="/dev/nvme1n1"
+2026-01-28T09:44:33.205215297Z I0128 09:44:33.205178       1 resizefs_linux.go:74] Device /dev/nvme1n1 resized successfully

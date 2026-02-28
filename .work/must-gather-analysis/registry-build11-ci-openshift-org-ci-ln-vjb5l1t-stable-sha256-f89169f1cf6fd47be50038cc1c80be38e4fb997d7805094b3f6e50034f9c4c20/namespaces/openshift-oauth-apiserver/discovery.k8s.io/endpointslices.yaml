@@ -1,0 +1,97 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.0.50
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-102-200.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: apiserver-f485d7f4c-6j69n
+      namespace: openshift-oauth-apiserver
+      uid: 46e3135a-0a7c-4701-ab02-566aecebab33
+    zone: us-west-1c
+  - addresses:
+    - 10.130.0.78
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-108-54.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: apiserver-f485d7f4c-w49xf
+      namespace: openshift-oauth-apiserver
+      uid: d0627bd5-8d12-4cf8-a5bc-c17a7408b450
+    zone: us-west-1c
+  - addresses:
+    - 10.128.0.53
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-3-203.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: apiserver-f485d7f4c-f7jwv
+      namespace: openshift-oauth-apiserver
+      uid: ef0eae73-a134-45b5-adc6-ddd4c0c8586c
+    zone: us-west-1a
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:46:20Z"
+    creationTimestamp: "2026-01-28T09:30:46Z"
+    generateName: api-
+    generation: 55
+    labels:
+      app: openshift-oauth-apiserver
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: api
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"61b7df2f-9fc9-4fca-be24-fc2f5a16e13d"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:46:20Z"
+    name: api-fhhhj
+    namespace: openshift-oauth-apiserver
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: api
+      uid: 61b7df2f-9fc9-4fca-be24-fc2f5a16e13d
+    resourceVersion: "25367"
+    uid: d7a08f82-ff1c-415b-ae8e-74216a7e3382
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "34889"

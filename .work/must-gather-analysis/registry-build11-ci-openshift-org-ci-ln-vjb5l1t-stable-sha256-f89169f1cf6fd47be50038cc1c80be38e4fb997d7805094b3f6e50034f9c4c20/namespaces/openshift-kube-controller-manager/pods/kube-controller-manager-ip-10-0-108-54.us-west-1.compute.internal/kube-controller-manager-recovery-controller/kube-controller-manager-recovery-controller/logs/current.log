@@ -1,0 +1,17 @@
+2026-01-28T09:47:19.073611676Z + timeout 3m /bin/bash -exuo pipefail -c 'while [ -n "$(ss -Htanop \( sport = 9443 \))" ]; do sleep 1; done'
+2026-01-28T09:47:19.077724600Z ++ ss -Htanop '(' sport = 9443 ')'
+2026-01-28T09:47:19.085621033Z + '[' -n '' ']'
+2026-01-28T09:47:19.086105978Z + exec cluster-kube-controller-manager-operator cert-recovery-controller --kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/kube-controller-cert-syncer-kubeconfig/kubeconfig --namespace=openshift-kube-controller-manager --listen=0.0.0.0:9443 -v=2
+2026-01-28T09:47:19.130720578Z W0128 09:47:19.130597       1 cmd.go:257] Using insecure, self-signed certificates
+2026-01-28T09:47:19.130796682Z I0128 09:47:19.130776       1 crypto.go:594] Generating new CA for cert-recovery-controller-signer@1769593639 cert, and key in /tmp/serving-cert-3819320424/serving-signer.crt, /tmp/serving-cert-3819320424/serving-signer.key
+2026-01-28T09:47:19.130796682Z Validity period of the certificate for "cert-recovery-controller-signer@1769593639" is unset, resetting to 43800h0m0s!
+2026-01-28T09:47:19.338556932Z I0128 09:47:19.338496       1 leaderelection.go:121] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2026-01-28T09:47:19.339139551Z I0128 09:47:19.339100       1 observer_polling.go:159] Starting file observer
+2026-01-28T09:47:19.339275868Z I0128 09:47:19.339242       1 envvar.go:172] "Feature gate default state" feature="ClientsPreferCBOR" enabled=false
+2026-01-28T09:47:19.339275868Z I0128 09:47:19.339264       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2026-01-28T09:47:19.339275868Z I0128 09:47:19.339271       1 envvar.go:172] "Feature gate default state" feature="InOrderInformers" enabled=true
+2026-01-28T09:47:19.339294029Z I0128 09:47:19.339277       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2026-01-28T09:47:19.339294029Z I0128 09:47:19.339283       1 envvar.go:172] "Feature gate default state" feature="ClientsAllowCBOR" enabled=false
+2026-01-28T09:47:19.353647993Z I0128 09:47:19.353600       1 builder.go:304] cert-recovery-controller version 4.20.0-202601161812.p2.g438c9db.assembly.stream.el9-438c9db-438c9dba80ddadeabe9efe4a654297a7b550b2b8
+2026-01-28T09:47:19.357816561Z I0128 09:47:19.357791       1 leaderelection.go:257] attempting to acquire leader lease openshift-kube-controller-manager/cert-recovery-controller-lock...
+2026-01-28T09:50:42.270075488Z E0128 09:50:42.267441       1 leaderelection.go:436] error retrieving resource lock openshift-kube-controller-manager/cert-recovery-controller-lock: leases.coordination.k8s.io "cert-recovery-controller-lock" is forbidden: User "system:serviceaccount:openshift-kube-controller-manager:localhost-recovery-client" cannot get resource "leases" in API group "coordination.k8s.io" in the namespace "openshift-kube-controller-manager"

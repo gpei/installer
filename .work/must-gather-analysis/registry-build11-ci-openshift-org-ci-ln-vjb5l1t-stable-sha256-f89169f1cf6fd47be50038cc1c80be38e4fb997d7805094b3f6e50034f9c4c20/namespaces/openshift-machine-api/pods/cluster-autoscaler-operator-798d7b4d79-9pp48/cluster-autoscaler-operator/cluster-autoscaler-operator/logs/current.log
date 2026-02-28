@@ -1,0 +1,1390 @@
+2026-01-28T09:32:03.127804640Z I0128 09:32:03.127593       1 main.go:15] Go Version: go1.24.11 (Red Hat 1.24.11-1.el9_6) X:strictfipsruntime
+2026-01-28T09:32:03.128010920Z I0128 09:32:03.127998       1 main.go:16] Go OS/Arch: linux/amd64
+2026-01-28T09:32:03.128066083Z I0128 09:32:03.128049       1 main.go:17] Version: cluster-autoscaler-operator v4.20.0-202601161812.p2.g147e5a7.assembly.stream.el9+ose-cluster-autoscaler-operator
+2026-01-28T09:32:03.128324056Z I0128 09:32:03.128293       1 leaderelection.go:121] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2026-01-28T09:32:03.165044602Z I0128 09:32:03.164993       1 server.go:183] "msg"="Registering webhook" "logger"="controller-runtime.webhook" "path"="/validate-clusterautoscalers"
+2026-01-28T09:32:03.165171129Z I0128 09:32:03.165145       1 server.go:183] "msg"="Registering webhook" "logger"="controller-runtime.webhook" "path"="/validate-machineautoscalers"
+2026-01-28T09:32:03.165368189Z I0128 09:32:03.165354       1 main.go:41] Starting cluster-autoscaler-operator
+2026-01-28T09:32:03.165567808Z I0128 09:32:03.165552       1 server.go:208] "msg"="Starting metrics server" "logger"="controller-runtime.metrics"
+2026-01-28T09:32:03.165953857Z I0128 09:32:03.165937       1 server.go:247] "msg"="Serving metrics server" "bindAddress"="127.0.0.1:9191" "logger"="controller-runtime.metrics" "secure"=false
+2026-01-28T09:32:03.166055732Z I0128 09:32:03.166017       1 server.go:191] "msg"="Starting webhook server" "logger"="controller-runtime.webhook"
+2026-01-28T09:32:03.166403280Z I0128 09:32:03.166386       1 certwatcher.go:211] "msg"="Updated current TLS certificate" "logger"="controller-runtime.certwatcher"
+2026-01-28T09:32:03.166528726Z I0128 09:32:03.166513       1 server.go:242] "msg"="Serving webhook server" "host"="" "logger"="controller-runtime.webhook" "port"=8443
+2026-01-28T09:32:03.166658062Z I0128 09:32:03.166643       1 certwatcher.go:133] "msg"="Starting certificate poll+watcher" "interval"=10000000000 "logger"="controller-runtime.certwatcher"
+2026-01-28T09:32:03.166726646Z I0128 09:32:03.166713       1 leaderelection.go:257] attempting to acquire leader lease openshift-machine-api/cluster-autoscaler-operator-leader...
+2026-01-28T09:32:03.176099149Z I0128 09:32:03.176075       1 leaderelection.go:271] successfully acquired lease openshift-machine-api/cluster-autoscaler-operator-leader
+2026-01-28T09:32:03.179867336Z I0128 09:32:03.179846       1 controller.go:198] "msg"="Starting EventSource" "controller"="cluster_autoscaler_controller" "source"="kind source: *v1.PrometheusRule"
+2026-01-28T09:32:03.180648854Z I0128 09:32:03.180630       1 controller.go:198] "msg"="Starting EventSource" "controller"="cluster_autoscaler_controller" "source"="kind source: *v1.ClusterAutoscaler"
+2026-01-28T09:32:03.180865975Z I0128 09:32:03.180850       1 controller.go:198] "msg"="Starting EventSource" "controller"="cluster_autoscaler_controller" "source"="kind source: *v1.Deployment"
+2026-01-28T09:32:03.181103847Z I0128 09:32:03.181079       1 controller.go:198] "msg"="Starting EventSource" "controller"="cluster_autoscaler_controller" "source"="kind source: *v1.Service"
+2026-01-28T09:32:03.181443884Z I0128 09:32:03.181425       1 controller.go:198] "msg"="Starting EventSource" "controller"="cluster_autoscaler_controller" "source"="kind source: *v1.ServiceMonitor"
+2026-01-28T09:32:03.182080695Z I0128 09:32:03.182064       1 controller.go:198] "msg"="Starting EventSource" "controller"="machine_autoscaler_controller" "source"="kind source: *unstructured.Unstructured"
+2026-01-28T09:32:03.187103334Z I0128 09:32:03.187083       1 controller.go:198] "msg"="Starting EventSource" "controller"="machine_autoscaler_controller" "source"="kind source: *v1beta1.MachineAutoscaler"
+2026-01-28T09:32:03.189809858Z I0128 09:32:03.187426       1 status.go:360] Starting status reporter: cluster operator informers
+2026-01-28T09:32:03.282112815Z I0128 09:32:03.282078       1 controller.go:233] "msg"="Starting Controller" "controller"="cluster_autoscaler_controller"
+2026-01-28T09:32:03.282182338Z I0128 09:32:03.282168       1 controller.go:242] "msg"="Starting workers" "controller"="cluster_autoscaler_controller" "worker count"=1
+2026-01-28T09:32:03.285887312Z I0128 09:32:03.285852       1 webhookconfig.go:72] Webhook configuration status: created
+2026-01-28T09:32:03.290286379Z I0128 09:32:03.290263       1 status.go:371] Starting status reporter: worker
+2026-01-28T09:32:03.293771372Z I0128 09:32:03.293748       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:03.293833805Z W0128 09:32:03.293821       1 status.go:290] Operator status degraded but not yet reported: machine-api not ready (consecutive count: 1)
+2026-01-28T09:32:03.293860276Z I0128 09:32:03.293851       1 status.go:253] Operator status available: available, but observed potential degradations.
+2026-01-28T09:32:03.294085738Z I0128 09:32:03.294068       1 controller.go:233] "msg"="Starting Controller" "controller"="machine_autoscaler_controller"
+2026-01-28T09:32:03.294156621Z I0128 09:32:03.294144       1 controller.go:242] "msg"="Starting workers" "controller"="machine_autoscaler_controller" "worker count"=1
+2026-01-28T09:32:03.316754859Z I0128 09:32:03.316721       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:03.316821252Z W0128 09:32:03.316808       1 status.go:290] Operator status degraded but not yet reported: machine-api not ready (consecutive count: 2)
+2026-01-28T09:32:03.316850914Z I0128 09:32:03.316840       1 status.go:253] Operator status available: available, but observed potential degradations.
+2026-01-28T09:32:03.589644922Z I0128 09:32:03.589405       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:03.589714666Z W0128 09:32:03.589701       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:03.615227478Z I0128 09:32:03.615194       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:03.615290371Z W0128 09:32:03.615278       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:05.028528469Z I0128 09:32:05.028092       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:05.028528469Z W0128 09:32:05.028511       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:05.425086561Z I0128 09:32:05.423327       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:05.425086561Z W0128 09:32:05.423349       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:06.353274438Z I0128 09:32:06.352771       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:06.353346702Z W0128 09:32:06.353334       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:06.358533639Z I0128 09:32:06.358514       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:06.358592862Z W0128 09:32:06.358581       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:08.156814799Z I0128 09:32:08.156778       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:08.156884002Z W0128 09:32:08.156870       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:08.276646208Z I0128 09:32:08.274713       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:08.276646208Z W0128 09:32:08.274731       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:09.044768016Z I0128 09:32:09.044730       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:09.044824189Z W0128 09:32:09.044811       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:09.884846594Z I0128 09:32:09.884811       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:09.884900867Z W0128 09:32:09.884889       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:10.100281334Z I0128 09:32:10.100246       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:10.100367708Z W0128 09:32:10.100318       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:10.893488122Z I0128 09:32:10.893442       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:10.893575127Z W0128 09:32:10.893561       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:11.132841906Z I0128 09:32:11.132804       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:11.132906359Z W0128 09:32:11.132880       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:11.206942212Z I0128 09:32:11.206907       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:11.207006476Z W0128 09:32:11.206995       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:12.244975965Z I0128 09:32:12.244939       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:12.244975965Z W0128 09:32:12.244958       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:12.268156142Z I0128 09:32:12.267730       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:12.268156142Z W0128 09:32:12.267746       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:14.495136453Z I0128 09:32:14.495089       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:14.495201346Z W0128 09:32:14.495189       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:14.639497143Z I0128 09:32:14.639457       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:14.639497143Z W0128 09:32:14.639476       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:16.080201427Z I0128 09:32:16.080157       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:16.080230898Z W0128 09:32:16.080222       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:18.022356629Z I0128 09:32:18.021695       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:18.022356629Z W0128 09:32:18.021733       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:18.293109421Z I0128 09:32:18.293062       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:18.293109421Z W0128 09:32:18.293076       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:18.646113646Z I0128 09:32:18.646067       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:18.646113646Z W0128 09:32:18.646083       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:18.761584846Z I0128 09:32:18.761541       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:18.761643739Z W0128 09:32:18.761630       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:21.002636294Z I0128 09:32:21.002579       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:21.002636294Z W0128 09:32:21.002598       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:22.759780932Z I0128 09:32:22.759519       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:22.759780932Z W0128 09:32:22.759552       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:23.671607708Z I0128 09:32:23.671571       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:23.671663811Z W0128 09:32:23.671652       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:23.891497390Z I0128 09:32:23.891461       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:23.891554463Z W0128 09:32:23.891541       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:25.332526299Z I0128 09:32:25.332484       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:25.332526299Z W0128 09:32:25.332504       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:26.965206192Z I0128 09:32:26.965164       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:26.965274975Z W0128 09:32:26.965262       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:27.098747387Z I0128 09:32:27.098694       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:27.098825321Z W0128 09:32:27.098812       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:27.930215643Z I0128 09:32:27.930170       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:27.930215643Z W0128 09:32:27.930208       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:28.854112667Z I0128 09:32:28.854075       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:28.854164939Z W0128 09:32:28.854152       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:30.075580133Z I0128 09:32:30.075516       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:30.075667288Z W0128 09:32:30.075654       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:30.968955878Z I0128 09:32:30.968901       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:30.969004581Z W0128 09:32:30.968992       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:31.678537630Z I0128 09:32:31.678503       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:31.678599213Z W0128 09:32:31.678586       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:33.294119609Z I0128 09:32:33.294082       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:33.294151681Z W0128 09:32:33.294120       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:36.307863669Z I0128 09:32:36.307824       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:36.307941733Z W0128 09:32:36.307916       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:36.326338384Z I0128 09:32:36.326305       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:36.326404918Z W0128 09:32:36.326393       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:36.334858661Z I0128 09:32:36.334827       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:36.334858661Z W0128 09:32:36.334843       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:39.537945993Z I0128 09:32:39.536762       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:39.537945993Z W0128 09:32:39.536784       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:39.951825188Z I0128 09:32:39.951788       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:39.951884941Z W0128 09:32:39.951872       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:40.303007323Z I0128 09:32:40.302964       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:40.303097587Z W0128 09:32:40.303061       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:41.761813581Z I0128 09:32:41.761777       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:41.761876544Z W0128 09:32:41.761864       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:43.857710611Z I0128 09:32:43.857671       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:43.857710611Z W0128 09:32:43.857689       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:43.868274550Z I0128 09:32:43.868240       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:43.868274550Z W0128 09:32:43.868255       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:48.293577692Z I0128 09:32:48.293542       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:48.293577692Z W0128 09:32:48.293558       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:49.758698364Z I0128 09:32:49.758659       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:49.758766568Z W0128 09:32:49.758753       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:49.788083898Z I0128 09:32:49.788041       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:49.788083898Z W0128 09:32:49.788065       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:51.352877140Z I0128 09:32:51.352837       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:51.352941323Z W0128 09:32:51.352928       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:55.752488904Z I0128 09:32:55.752453       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:55.752569289Z W0128 09:32:55.752556       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:56.227350700Z I0128 09:32:56.227304       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:56.227454516Z W0128 09:32:56.227409       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:56.819786242Z I0128 09:32:56.819747       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:56.819786242Z W0128 09:32:56.819764       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:32:58.166833763Z I0128 09:32:58.166111       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:32:58.166833763Z W0128 09:32:58.166130       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:01.377989581Z I0128 09:33:01.377954       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:01.378079276Z W0128 09:33:01.378065       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:01.420552129Z I0128 09:33:01.420506       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:01.420625893Z W0128 09:33:01.420613       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:02.508813873Z I0128 09:33:02.508773       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:02.508942700Z W0128 09:33:02.508898       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:03.088853943Z I0128 09:33:03.088538       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:03.088853943Z W0128 09:33:03.088559       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:03.109054324Z I0128 09:33:03.108594       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:03.109054324Z W0128 09:33:03.108613       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:03.294685478Z I0128 09:33:03.294635       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:03.294685478Z W0128 09:33:03.294652       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:04.153825160Z I0128 09:33:04.153742       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:04.153825160Z W0128 09:33:04.153778       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:05.791095249Z I0128 09:33:05.791055       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:05.791155092Z W0128 09:33:05.791142       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:06.748928123Z I0128 09:33:06.748850       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:06.748998317Z W0128 09:33:06.748982       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:08.723518481Z I0128 09:33:08.723474       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:08.723518481Z W0128 09:33:08.723506       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:08.821673455Z I0128 09:33:08.821628       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:08.821740328Z W0128 09:33:08.821727       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:08.873227136Z I0128 09:33:08.873191       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:08.873301860Z W0128 09:33:08.873286       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:12.306217547Z I0128 09:33:12.306180       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:12.306278510Z W0128 09:33:12.306266       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:12.321588897Z I0128 09:33:12.321553       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:12.321642620Z W0128 09:33:12.321630       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:17.166979460Z I0128 09:33:17.166929       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:17.167079035Z W0128 09:33:17.167064       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:18.293486493Z I0128 09:33:18.293451       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:18.293486493Z W0128 09:33:18.293466       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:24.882716093Z I0128 09:33:24.882675       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:24.882716093Z W0128 09:33:24.882692       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:28.574541020Z I0128 09:33:28.574485       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:28.574629065Z W0128 09:33:28.574615       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:30.157277956Z I0128 09:33:30.157240       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:30.157340459Z W0128 09:33:30.157327       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:33.293679800Z I0128 09:33:33.293637       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:33.293679800Z W0128 09:33:33.293655       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:47.297769987Z I0128 09:33:47.297732       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:47.297833471Z W0128 09:33:47.297820       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:47.332948328Z I0128 09:33:47.332905       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:47.332948328Z W0128 09:33:47.332921       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:48.293047757Z I0128 09:33:48.292994       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:48.293047757Z W0128 09:33:48.293010       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:52.882622311Z I0128 09:33:52.882415       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:52.882622311Z W0128 09:33:52.882433       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:56.318896951Z I0128 09:33:56.318861       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:56.318949954Z W0128 09:33:56.318938       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:57.641654538Z I0128 09:33:57.641595       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:57.641654538Z W0128 09:33:57.641619       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:33:58.541874956Z I0128 09:33:58.541819       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:33:58.541951830Z W0128 09:33:58.541937       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:34:00.074195844Z I0128 09:34:00.073180       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:34:00.074195844Z W0128 09:34:00.073223       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:34:00.565772783Z I0128 09:34:00.565519       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:34:00.565772783Z W0128 09:34:00.565537       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:34:03.294001339Z I0128 09:34:03.293964       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:34:03.294115704Z W0128 09:34:03.293998       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:34:06.792996197Z I0128 09:34:06.792957       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:34:06.793092562Z W0128 09:34:06.793078       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:34:15.775076959Z I0128 09:34:15.775042       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:34:15.775135612Z W0128 09:34:15.775123       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:34:18.293739607Z I0128 09:34:18.293693       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:34:18.293739607Z W0128 09:34:18.293712       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:34:23.188881231Z I0128 09:34:23.188206       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:34:23.188881231Z W0128 09:34:23.188227       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:34:25.964903349Z I0128 09:34:25.964853       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:34:25.965008294Z W0128 09:34:25.964957       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:34:31.573446623Z I0128 09:34:31.573405       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:34:31.573446623Z W0128 09:34:31.573428       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:34:33.293874299Z I0128 09:34:33.293801       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:34:33.293874299Z W0128 09:34:33.293821       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:34:37.175307434Z I0128 09:34:37.174741       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:34:37.175307434Z W0128 09:34:37.174763       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:34:41.964202227Z I0128 09:34:41.962864       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:34:41.964202227Z W0128 09:34:41.962884       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:34:45.524659964Z I0128 09:34:45.524607       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:34:45.524659964Z W0128 09:34:45.524633       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:34:48.294407372Z I0128 09:34:48.294346       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:34:48.294407372Z W0128 09:34:48.294367       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:34:49.037123134Z I0128 09:34:49.037085       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:34:49.037179817Z W0128 09:34:49.037167       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:34:49.440857601Z I0128 09:34:49.440778       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:34:49.440857601Z W0128 09:34:49.440797       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:34:49.471664593Z I0128 09:34:49.471610       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:34:49.471748507Z W0128 09:34:49.471736       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:34:51.307918977Z I0128 09:34:51.307868       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:34:51.307918977Z W0128 09:34:51.307888       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:34:55.824180598Z I0128 09:34:55.824142       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:34:55.824246492Z W0128 09:34:55.824222       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:34:55.966822675Z I0128 09:34:55.966132       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:34:55.966822675Z W0128 09:34:55.966154       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:34:57.290708898Z I0128 09:34:57.290650       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:34:57.290708898Z W0128 09:34:57.290672       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:34:58.972693042Z I0128 09:34:58.972468       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:34:58.972693042Z W0128 09:34:58.972491       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:01.598386742Z I0128 09:35:01.598343       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:01.598463696Z W0128 09:35:01.598449       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:02.254309106Z I0128 09:35:02.254261       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:02.254376000Z W0128 09:35:02.254363       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:03.293671749Z I0128 09:35:03.293631       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:03.293671749Z W0128 09:35:03.293654       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:03.640943393Z I0128 09:35:03.640007       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:03.640943393Z W0128 09:35:03.640056       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:04.230839330Z I0128 09:35:04.230793       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:04.230982629Z W0128 09:35:04.230965       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:07.254616487Z I0128 09:35:07.254567       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:07.254702351Z W0128 09:35:07.254689       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:09.312497852Z I0128 09:35:09.312453       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:09.312497852Z W0128 09:35:09.312478       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:09.467107989Z I0128 09:35:09.467059       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:09.467107989Z W0128 09:35:09.467088       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:10.573424398Z I0128 09:35:10.573380       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:10.573516393Z W0128 09:35:10.573501       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:12.836943413Z I0128 09:35:12.836904       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:12.837039047Z W0128 09:35:12.837009       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:12.851552827Z I0128 09:35:12.851503       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:12.851613750Z W0128 09:35:12.851602       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:18.293197917Z I0128 09:35:18.293152       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:18.293197917Z W0128 09:35:18.293176       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:33.294159971Z I0128 09:35:33.294121       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:33.294159971Z W0128 09:35:33.294138       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:39.613756361Z I0128 09:35:39.613703       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:39.613756361Z W0128 09:35:39.613727       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:39.651996239Z I0128 09:35:39.651954       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:39.651996239Z W0128 09:35:39.651974       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:44.204344420Z I0128 09:35:44.204305       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:44.204414343Z W0128 09:35:44.204397       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:44.600411045Z I0128 09:35:44.600354       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:44.600411045Z W0128 09:35:44.600377       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:48.293554039Z I0128 09:35:48.293502       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:48.293554039Z W0128 09:35:48.293529       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:49.210283865Z I0128 09:35:49.210238       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:49.210344908Z W0128 09:35:49.210332       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:50.295880508Z I0128 09:35:50.295841       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:50.295939121Z W0128 09:35:50.295927       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:50.326472959Z I0128 09:35:50.326437       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:50.326546453Z W0128 09:35:50.326533       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:50.395236969Z I0128 09:35:50.395080       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:50.395236969Z W0128 09:35:50.395099       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:54.791274738Z I0128 09:35:54.791223       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:54.791274738Z W0128 09:35:54.791242       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:54.997515067Z I0128 09:35:54.997476       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:54.997515067Z W0128 09:35:54.997493       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:55.171778396Z I0128 09:35:55.171406       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:55.171778396Z W0128 09:35:55.171425       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:35:59.058400718Z I0128 09:35:59.058354       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:35:59.058400718Z W0128 09:35:59.058377       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:00.578169919Z I0128 09:36:00.575825       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:00.578169919Z W0128 09:36:00.575846       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:00.771781120Z I0128 09:36:00.771746       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:00.771842523Z W0128 09:36:00.771828       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:03.293861584Z I0128 09:36:03.293789       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:03.293861584Z W0128 09:36:03.293813       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:03.995435109Z I0128 09:36:03.995398       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:03.995513752Z W0128 09:36:03.995500       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:10.960524500Z I0128 09:36:10.959911       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:10.960524500Z W0128 09:36:10.959934       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:11.042464266Z I0128 09:36:11.042420       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:11.042521459Z W0128 09:36:11.042507       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:11.078527563Z I0128 09:36:11.077939       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:11.078527563Z W0128 09:36:11.077969       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:11.095511774Z I0128 09:36:11.094749       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:11.095511774Z W0128 09:36:11.094772       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:11.136038334Z I0128 09:36:11.135971       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:11.136038334Z W0128 09:36:11.135998       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:11.170036948Z I0128 09:36:11.169959       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:11.170036948Z W0128 09:36:11.169995       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:11.252954783Z I0128 09:36:11.252862       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:11.252954783Z W0128 09:36:11.252883       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:11.300832762Z I0128 09:36:11.300740       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:11.300832762Z W0128 09:36:11.300761       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:11.348459708Z I0128 09:36:11.348416       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:11.348459708Z W0128 09:36:11.348440       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:11.362163745Z I0128 09:36:11.361909       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:11.362163745Z W0128 09:36:11.361929       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:12.562445628Z I0128 09:36:12.562389       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:12.562523542Z W0128 09:36:12.562510       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:12.962164767Z I0128 09:36:12.961185       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:12.962164767Z W0128 09:36:12.961205       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:14.214745311Z I0128 09:36:14.214565       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:14.214745311Z W0128 09:36:14.214606       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:18.293265748Z I0128 09:36:18.293218       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:18.293265748Z W0128 09:36:18.293238       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:21.492468803Z I0128 09:36:21.492424       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:21.492560177Z W0128 09:36:21.492546       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:22.369563424Z I0128 09:36:22.369513       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:22.369563424Z W0128 09:36:22.369532       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:26.967788397Z I0128 09:36:26.967747       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:26.967865271Z W0128 09:36:26.967852       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:29.778202967Z I0128 09:36:29.778155       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:29.778280290Z W0128 09:36:29.778244       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:33.295683053Z I0128 09:36:33.295630       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:33.295683053Z W0128 09:36:33.295652       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:34.976460970Z I0128 09:36:34.975210       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:34.976460970Z W0128 09:36:34.975232       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:35.002493848Z I0128 09:36:35.002439       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:35.002569502Z W0128 09:36:35.002556       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:35.031169747Z I0128 09:36:35.031130       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:35.031256382Z W0128 09:36:35.031243       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:36.982740127Z I0128 09:36:36.982689       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:36.982824011Z W0128 09:36:36.982812       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:41.400556147Z I0128 09:36:41.400518       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:41.400556147Z W0128 09:36:41.400534       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:41.489819475Z I0128 09:36:41.489781       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:41.489874347Z W0128 09:36:41.489862       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:41.969562299Z I0128 09:36:41.969522       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:41.969620431Z W0128 09:36:41.969607       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:42.047883235Z I0128 09:36:42.047847       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:42.047935678Z W0128 09:36:42.047923       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:47.796570393Z I0128 09:36:47.796535       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:47.796637357Z W0128 09:36:47.796620       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:48.293295879Z I0128 09:36:48.293248       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:48.293295879Z W0128 09:36:48.293264       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:49.707353758Z I0128 09:36:49.707305       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:49.707353758Z W0128 09:36:49.707334       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:54.060311504Z I0128 09:36:54.060246       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:54.060376907Z W0128 09:36:54.060346       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:54.073918841Z I0128 09:36:54.073851       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:54.073918841Z W0128 09:36:54.073874       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:54.091486015Z I0128 09:36:54.091443       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:54.091486015Z W0128 09:36:54.091461       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:55.655682132Z I0128 09:36:55.655639       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:55.655682132Z W0128 09:36:55.655659       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:56.398935163Z I0128 09:36:56.398895       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:56.399002626Z W0128 09:36:56.398989       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:57.559940174Z I0128 09:36:57.559905       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:57.560015997Z W0128 09:36:57.560003       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:57.931267584Z I0128 09:36:57.931221       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:57.931361619Z W0128 09:36:57.931345       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:36:57.949661779Z I0128 09:36:57.949616       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:36:57.949740013Z W0128 09:36:57.949726       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:00.260432922Z I0128 09:37:00.260386       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:00.260432922Z W0128 09:37:00.260404       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:00.298297366Z I0128 09:37:00.298259       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:00.298411521Z W0128 09:37:00.298388       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:01.894170578Z I0128 09:37:01.894090       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:01.894170578Z W0128 09:37:01.894150       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:01.993151232Z I0128 09:37:01.993095       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:01.993151232Z W0128 09:37:01.993135       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:02.185949282Z I0128 09:37:02.185828       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:02.185949282Z W0128 09:37:02.185848       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:03.294783699Z I0128 09:37:03.294721       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:03.294783699Z W0128 09:37:03.294741       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:06.283525955Z I0128 09:37:06.283478       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:06.283525955Z W0128 09:37:06.283504       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:06.302596990Z I0128 09:37:06.302556       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:06.302666993Z W0128 09:37:06.302654       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:09.166172629Z I0128 09:37:09.166119       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:09.166295765Z W0128 09:37:09.166280       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:10.203487302Z I0128 09:37:10.203410       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:10.203613998Z W0128 09:37:10.203589       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:10.215488182Z I0128 09:37:10.215424       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:10.215597078Z W0128 09:37:10.215578       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:12.365686750Z I0128 09:37:12.365644       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:12.365758664Z W0128 09:37:12.365744       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:16.093380394Z I0128 09:37:16.093336       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:16.093380394Z W0128 09:37:16.093360       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:16.656504576Z I0128 09:37:16.656445       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:16.656504576Z W0128 09:37:16.656485       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:18.293767314Z I0128 09:37:18.293717       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:18.293767314Z W0128 09:37:18.293733       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:20.238696495Z I0128 09:37:20.238655       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:20.238809351Z W0128 09:37:20.238747       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:20.748142505Z I0128 09:37:20.748099       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:20.748142505Z W0128 09:37:20.748117       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:28.386304804Z I0128 09:37:28.386263       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:28.386377618Z W0128 09:37:28.386362       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:33.293704640Z I0128 09:37:33.293654       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:33.293704640Z W0128 09:37:33.293673       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:40.071604699Z I0128 09:37:40.071361       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:40.071604699Z W0128 09:37:40.071380       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:43.068305214Z I0128 09:37:43.068254       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:43.068391908Z W0128 09:37:43.068379       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:47.268258226Z I0128 09:37:47.268212       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:47.268258226Z W0128 09:37:47.268235       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:48.296862502Z I0128 09:37:48.296823       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:48.296937546Z W0128 09:37:48.296926       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:53.942971910Z I0128 09:37:53.942935       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:53.943075825Z W0128 09:37:53.943053       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:54.686362973Z I0128 09:37:54.686267       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:54.686362973Z W0128 09:37:54.686287       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:55.312984290Z I0128 09:37:55.312912       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:55.312984290Z W0128 09:37:55.312937       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:56.278773218Z I0128 09:37:56.278715       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:56.278858223Z W0128 09:37:56.278846       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:37:56.475220787Z I0128 09:37:56.475168       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:37:56.475220787Z W0128 09:37:56.475190       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:38:00.580082218Z I0128 09:38:00.580042       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:38:00.580163992Z W0128 09:38:00.580151       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:38:01.622905966Z I0128 09:38:01.622868       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:38:01.622994260Z W0128 09:38:01.622980       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:38:03.296074847Z I0128 09:38:03.295997       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:38:03.296150121Z W0128 09:38:03.296137       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:38:10.852469812Z I0128 09:38:10.852430       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:38:10.852533385Z W0128 09:38:10.852519       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:38:18.293886940Z I0128 09:38:18.293838       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:38:18.293886940Z W0128 09:38:18.293859       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:38:19.162144266Z I0128 09:38:19.162095       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:38:19.162144266Z W0128 09:38:19.162118       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:38:25.226179056Z I0128 09:38:25.226127       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:38:25.226253710Z W0128 09:38:25.226241       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:38:33.294469590Z I0128 09:38:33.294427       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:38:33.294525763Z W0128 09:38:33.294481       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:38:41.648505002Z I0128 09:38:41.648457       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:38:41.648505002Z W0128 09:38:41.648481       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:38:47.475927920Z I0128 09:38:47.475833       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:38:47.475927920Z W0128 09:38:47.475857       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:38:48.293949181Z I0128 09:38:48.293890       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:38:48.293949181Z W0128 09:38:48.293911       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:38:50.542811213Z I0128 09:38:50.542075       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:38:50.542811213Z W0128 09:38:50.542096       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:38:53.385970477Z I0128 09:38:53.385935       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:38:53.385970477Z W0128 09:38:53.385952       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:38:53.476717874Z I0128 09:38:53.475906       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:38:53.476717874Z W0128 09:38:53.475929       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:39:03.293980210Z I0128 09:39:03.293921       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:39:03.293980210Z W0128 09:39:03.293939       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:39:04.233953843Z I0128 09:39:04.233912       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:39:04.234006826Z W0128 09:39:04.233994       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:39:18.294432768Z I0128 09:39:18.294388       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:39:18.294432768Z W0128 09:39:18.294404       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:39:32.679253871Z I0128 09:39:32.679215       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:39:32.679323435Z W0128 09:39:32.679311       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:39:33.295018184Z I0128 09:39:33.294977       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:39:33.295018184Z W0128 09:39:33.294995       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:39:41.102215519Z I0128 09:39:41.102171       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:39:41.102288853Z W0128 09:39:41.102276       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:39:41.374352012Z I0128 09:39:41.374315       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:39:41.374424356Z W0128 09:39:41.374412       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:39:42.926683396Z I0128 09:39:42.926623       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:39:42.926764210Z W0128 09:39:42.926752       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:39:42.987303908Z I0128 09:39:42.987249       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:39:42.987398793Z W0128 09:39:42.987385       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:39:48.293555485Z I0128 09:39:48.293511       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:39:48.293555485Z W0128 09:39:48.293528       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:39:49.505224596Z I0128 09:39:49.505174       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:39:49.505294700Z W0128 09:39:49.505281       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:39:53.564867622Z I0128 09:39:53.564821       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:39:53.564944316Z W0128 09:39:53.564931       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:39:55.506735340Z I0128 09:39:55.506696       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:39:55.506824554Z W0128 09:39:55.506811       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:03.293926189Z I0128 09:40:03.293880       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:03.293926189Z W0128 09:40:03.293901       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:04.600338233Z I0128 09:40:04.600274       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:04.600424377Z W0128 09:40:04.600409       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:08.955897545Z I0128 09:40:08.955861       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:08.955954338Z W0128 09:40:08.955942       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:09.066264103Z I0128 09:40:09.066224       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:09.066321856Z W0128 09:40:09.066309       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:09.270640473Z I0128 09:40:09.270596       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:09.270704666Z W0128 09:40:09.270690       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:09.396708036Z I0128 09:40:09.396660       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:09.396780060Z W0128 09:40:09.396766       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:09.443772660Z I0128 09:40:09.443721       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:09.443851554Z W0128 09:40:09.443837       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:09.541083554Z I0128 09:40:09.541043       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:09.541083554Z W0128 09:40:09.541063       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:09.610147044Z I0128 09:40:09.605576       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:09.610147044Z W0128 09:40:09.605598       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:09.654373297Z I0128 09:40:09.654330       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:09.654435160Z W0128 09:40:09.654424       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:09.796288443Z I0128 09:40:09.795840       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:09.796288443Z W0128 09:40:09.795858       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:12.552301860Z I0128 09:40:12.552261       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:12.552363133Z W0128 09:40:12.552349       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:13.794361657Z I0128 09:40:13.794317       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:13.794443261Z W0128 09:40:13.794430       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:14.818016682Z I0128 09:40:14.817974       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:14.818385930Z W0128 09:40:14.818360       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:16.539565200Z I0128 09:40:16.539512       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:16.539634714Z W0128 09:40:16.539622       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:16.597667179Z I0128 09:40:16.597623       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:16.597736202Z W0128 09:40:16.597723       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:18.294933696Z I0128 09:40:18.293727       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:18.294933696Z W0128 09:40:18.293746       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:19.053698151Z I0128 09:40:19.053658       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:19.053757434Z W0128 09:40:19.053745       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:20.154720938Z I0128 09:40:20.154627       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:20.154789042Z W0128 09:40:20.154775       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:24.782906001Z I0128 09:40:24.782859       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:24.782979744Z W0128 09:40:24.782967       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:25.109306259Z I0128 09:40:25.109261       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:25.109344180Z W0128 09:40:25.109302       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:25.164655907Z I0128 09:40:25.164176       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:25.164655907Z W0128 09:40:25.164194       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:25.201172188Z I0128 09:40:25.201131       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:25.201172188Z W0128 09:40:25.201152       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:25.237229057Z I0128 09:40:25.237180       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:25.237311811Z W0128 09:40:25.237298       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:25.301101606Z I0128 09:40:25.299540       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:25.301101606Z W0128 09:40:25.299561       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:25.318340388Z I0128 09:40:25.318279       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:25.318340388Z W0128 09:40:25.318318       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:27.486216954Z I0128 09:40:27.485960       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:27.486216954Z W0128 09:40:27.485979       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:29.912447127Z I0128 09:40:29.912388       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:29.912527151Z W0128 09:40:29.912514       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:30.166106628Z I0128 09:40:30.165532       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:30.166106628Z W0128 09:40:30.165579       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:30.578652449Z I0128 09:40:30.578302       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:30.578652449Z W0128 09:40:30.578320       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:30.609842953Z I0128 09:40:30.608870       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:30.609842953Z W0128 09:40:30.608891       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:33.293971511Z I0128 09:40:33.293934       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:33.294013563Z W0128 09:40:33.293997       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:35.537204611Z I0128 09:40:35.537012       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:35.537204611Z W0128 09:40:35.537055       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:40.519483070Z I0128 09:40:40.519448       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:40.519483070Z W0128 09:40:40.519465       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:53.132870748Z I0128 09:40:53.132831       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:53.132937351Z W0128 09:40:53.132922       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:53.142992140Z I0128 09:40:53.142951       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:53.143095905Z W0128 09:40:53.143082       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:55.615149777Z I0128 09:40:55.615106       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:55.615149777Z W0128 09:40:55.615123       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:55.715014170Z I0128 09:40:55.714285       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:55.715014170Z W0128 09:40:55.714307       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:40:56.712651420Z I0128 09:40:56.712377       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:40:56.712651420Z W0128 09:40:56.712400       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:41:00.714737084Z I0128 09:41:00.713543       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:41:00.714737084Z W0128 09:41:00.713570       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:41:03.296253164Z I0128 09:41:03.296202       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:41:03.296253164Z W0128 09:41:03.296235       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:41:05.714290088Z I0128 09:41:05.714237       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:41:05.714290088Z W0128 09:41:05.714262       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:41:06.111887064Z I0128 09:41:06.111845       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:41:06.111887064Z W0128 09:41:06.111866       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:41:18.295142105Z I0128 09:41:18.295099       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:41:18.295142105Z W0128 09:41:18.295118       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:41:29.164651581Z I0128 09:41:29.164606       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:41:29.164651581Z W0128 09:41:29.164626       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:41:29.236057436Z I0128 09:41:29.235981       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:41:29.236057436Z W0128 09:41:29.236001       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:41:33.296751432Z I0128 09:41:33.296693       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:41:33.296751432Z W0128 09:41:33.296716       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:41:36.307882873Z E0128 09:41:36.307807       1 leaderelection.go:429] Failed to update lock optimistically: etcdserver: request timed out, falling back to slow path
+2026-01-28T09:41:44.081668203Z I0128 09:41:44.081626       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:41:44.081668203Z W0128 09:41:44.081644       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:41:46.610114681Z I0128 09:41:46.610068       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:41:46.610209746Z W0128 09:41:46.610194       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:41:46.750650612Z I0128 09:41:46.750607       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:41:46.750729505Z W0128 09:41:46.750717       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:41:46.885491158Z I0128 09:41:46.885208       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:41:46.885491158Z W0128 09:41:46.885228       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:41:47.415730871Z I0128 09:41:47.415694       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:41:47.415784584Z W0128 09:41:47.415772       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:41:47.453081421Z I0128 09:41:47.451566       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:41:47.453081421Z W0128 09:41:47.451586       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:41:47.501542555Z I0128 09:41:47.501503       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:41:47.501885882Z W0128 09:41:47.501869       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:41:47.519311641Z I0128 09:41:47.519267       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:41:47.519417056Z W0128 09:41:47.519402       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:41:47.641913328Z I0128 09:41:47.641863       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:41:47.641985611Z W0128 09:41:47.641972       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:41:47.727013827Z I0128 09:41:47.726952       1 status.go:459] machine-api-operator not ready yet
+2026-01-28T09:41:47.727013827Z W0128 09:41:47.726970       1 status.go:285] Operator status degraded: machine-api not ready
+2026-01-28T09:41:48.148556795Z I0128 09:41:48.148511       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:41:48.148556795Z I0128 09:41:48.148535       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:41:48.169682387Z I0128 09:41:48.169630       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:41:48.169682387Z I0128 09:41:48.169650       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:41:48.294979208Z I0128 09:41:48.294932       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:41:48.294979208Z I0128 09:41:48.294947       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:41:48.408326325Z I0128 09:41:48.407598       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:41:48.408326325Z I0128 09:41:48.407623       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:41:48.791313162Z I0128 09:41:48.791268       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:41:48.791394996Z I0128 09:41:48.791380       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:41:49.273623377Z I0128 09:41:49.273584       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:41:49.273688020Z I0128 09:41:49.273673       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:41:49.474965966Z I0128 09:41:49.473606       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:41:49.474965966Z I0128 09:41:49.473627       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:41:49.526111024Z I0128 09:41:49.526064       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:41:49.526111024Z I0128 09:41:49.526083       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:41:50.011203868Z I0128 09:41:50.011148       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:41:50.011203868Z I0128 09:41:50.011169       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:41:50.412253375Z I0128 09:41:50.409896       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:41:50.412253375Z I0128 09:41:50.409915       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:41:51.204798094Z I0128 09:41:51.204757       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:41:51.204907369Z I0128 09:41:51.204894       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:41:51.628444187Z I0128 09:41:51.617527       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:41:51.628444187Z I0128 09:41:51.617545       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:41:54.929582004Z I0128 09:41:54.929491       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:41:54.929582004Z I0128 09:41:54.929528       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:41:56.396183078Z I0128 09:41:56.396115       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:41:56.396183078Z I0128 09:41:56.396135       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:41:56.444286445Z I0128 09:41:56.444232       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:41:56.444356958Z I0128 09:41:56.444343       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:41:56.589276099Z I0128 09:41:56.589234       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:41:56.589369783Z I0128 09:41:56.589357       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:41:56.736198179Z I0128 09:41:56.735146       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:41:56.736198179Z I0128 09:41:56.735174       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:41:57.335594975Z I0128 09:41:57.335253       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:41:57.335594975Z I0128 09:41:57.335274       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:41:59.139752020Z I0128 09:41:59.139693       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:41:59.139752020Z I0128 09:41:59.139715       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:41:59.993299319Z I0128 09:41:59.992166       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:41:59.993299319Z I0128 09:41:59.992186       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:00.596568768Z I0128 09:42:00.596509       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:00.596653992Z I0128 09:42:00.596639       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:00.638039854Z I0128 09:42:00.636862       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:00.638039854Z I0128 09:42:00.636883       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:03.298320176Z I0128 09:42:03.298272       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:03.298435831Z I0128 09:42:03.298404       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:03.626856986Z I0128 09:42:03.626798       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:03.626856986Z I0128 09:42:03.626820       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:04.451912455Z I0128 09:42:04.451871       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:04.451912455Z I0128 09:42:04.451892       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:04.481196274Z I0128 09:42:04.481145       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:04.481196274Z I0128 09:42:04.481165       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:04.494056265Z I0128 09:42:04.492900       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:04.494056265Z I0128 09:42:04.492920       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:07.949009692Z I0128 09:42:07.948956       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:07.949098827Z I0128 09:42:07.949085       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:08.038643859Z I0128 09:42:08.038585       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:08.038643859Z I0128 09:42:08.038607       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:11.461662065Z I0128 09:42:11.461589       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:11.461732989Z I0128 09:42:11.461720       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:11.511128480Z I0128 09:42:11.508752       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:11.511128480Z I0128 09:42:11.508772       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:11.729569734Z I0128 09:42:11.729500       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:11.729569734Z I0128 09:42:11.729544       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:11.808635274Z I0128 09:42:11.805922       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:11.808635274Z I0128 09:42:11.805942       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:11.869700556Z I0128 09:42:11.869570       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:11.869700556Z I0128 09:42:11.869605       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:12.678332663Z I0128 09:42:12.678290       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:12.678394816Z I0128 09:42:12.678383       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:13.547850912Z I0128 09:42:13.547808       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:13.547928856Z I0128 09:42:13.547916       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:13.564559098Z I0128 09:42:13.562507       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:13.564559098Z I0128 09:42:13.562528       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:15.008148963Z I0128 09:42:15.007854       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:15.008148963Z I0128 09:42:15.007875       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:15.317065712Z I0128 09:42:15.316358       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:15.317065712Z I0128 09:42:15.316380       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:15.376201383Z I0128 09:42:15.375836       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:15.376201383Z I0128 09:42:15.375856       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:15.465558047Z I0128 09:42:15.465524       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:15.465636951Z I0128 09:42:15.465623       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:17.343234234Z I0128 09:42:17.343180       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:17.343319868Z I0128 09:42:17.343307       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:18.303644862Z I0128 09:42:18.303609       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:18.303704045Z I0128 09:42:18.303693       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:18.317766500Z I0128 09:42:18.317432       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:18.317766500Z I0128 09:42:18.317450       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:21.402368532Z I0128 09:42:21.402314       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:21.402443356Z I0128 09:42:21.402430       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:21.950665415Z I0128 09:42:21.950262       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:21.950665415Z I0128 09:42:21.950282       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:28.959123851Z I0128 09:42:28.959082       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:28.959123851Z I0128 09:42:28.959099       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:29.994080089Z I0128 09:42:29.993453       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:29.994080089Z I0128 09:42:29.993473       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:32.585990958Z I0128 09:42:32.585955       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:32.586065652Z I0128 09:42:32.586053       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:33.294272922Z I0128 09:42:33.294233       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:33.294272922Z I0128 09:42:33.294251       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:33.717940278Z I0128 09:42:33.717891       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:33.717940278Z I0128 09:42:33.717913       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:33.800032867Z I0128 09:42:33.798999       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:33.800032867Z I0128 09:42:33.799043       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:33.847575576Z I0128 09:42:33.844481       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:33.847575576Z I0128 09:42:33.844501       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:35.452367641Z I0128 09:42:35.452315       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:35.452367641Z I0128 09:42:35.452334       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:35.517548098Z I0128 09:42:35.517491       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:35.517622652Z I0128 09:42:35.517608       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:35.799243571Z I0128 09:42:35.799183       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:35.799243571Z I0128 09:42:35.799201       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:44.855563197Z I0128 09:42:44.855529       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:44.855639701Z I0128 09:42:44.855628       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:44.970940326Z I0128 09:42:44.970871       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:44.971014609Z I0128 09:42:44.971001       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:46.506831225Z I0128 09:42:46.506542       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:46.506831225Z I0128 09:42:46.506563       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:46.553763927Z I0128 09:42:46.553701       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:46.553763927Z I0128 09:42:46.553724       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:48.294638948Z I0128 09:42:48.294594       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:48.294638948Z I0128 09:42:48.294616       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:52.774759275Z I0128 09:42:52.773565       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:52.774759275Z I0128 09:42:52.773585       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:54.152661348Z I0128 09:42:54.152623       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:54.152840417Z I0128 09:42:54.152701       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:54.765698488Z I0128 09:42:54.765662       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:54.765752921Z I0128 09:42:54.765741       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:55.879563978Z I0128 09:42:55.879517       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:55.879644982Z I0128 09:42:55.879632       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:59.527116323Z I0128 09:42:59.527063       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:59.527116323Z I0128 09:42:59.527092       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:42:59.602671871Z I0128 09:42:59.602632       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:42:59.602757905Z I0128 09:42:59.602746       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:03.294429731Z I0128 09:43:03.294386       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:03.294429731Z I0128 09:43:03.294403       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:06.470443966Z I0128 09:43:06.470405       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:06.470443966Z I0128 09:43:06.470438       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:06.614129834Z I0128 09:43:06.614073       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:06.614129834Z I0128 09:43:06.614096       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:07.612790820Z I0128 09:43:07.612739       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:07.612878994Z I0128 09:43:07.612867       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:08.241950480Z I0128 09:43:08.241901       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:08.241950480Z I0128 09:43:08.241926       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:10.049594793Z I0128 09:43:10.048771       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:10.049594793Z I0128 09:43:10.048790       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:10.067772159Z I0128 09:43:10.067736       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:10.067772159Z I0128 09:43:10.067754       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:15.576804148Z I0128 09:43:15.576755       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:15.576804148Z I0128 09:43:15.576778       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:18.293880205Z I0128 09:43:18.293837       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:18.293880205Z I0128 09:43:18.293856       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:24.556420720Z I0128 09:43:24.556372       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:24.556420720Z I0128 09:43:24.556388       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:30.565462031Z I0128 09:43:30.564296       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:30.565462031Z I0128 09:43:30.564353       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:30.622682883Z I0128 09:43:30.622589       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:30.622682883Z I0128 09:43:30.622611       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:33.296518986Z I0128 09:43:33.296476       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:33.296727406Z I0128 09:43:33.296578       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:35.617856118Z I0128 09:43:35.617797       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:35.618003506Z I0128 09:43:35.617989       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:38.146308465Z I0128 09:43:38.146256       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:38.146368498Z I0128 09:43:38.146357       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:38.806332363Z I0128 09:43:38.806245       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:38.806332363Z I0128 09:43:38.806262       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:39.408608342Z I0128 09:43:39.408562       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:39.408608342Z I0128 09:43:39.408593       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:40.006958386Z I0128 09:43:40.006887       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:40.006958386Z I0128 09:43:40.006903       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:41.454939408Z I0128 09:43:41.454898       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:41.455009491Z I0128 09:43:41.454997       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:42.284267754Z I0128 09:43:42.284227       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:42.284267754Z I0128 09:43:42.284245       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:44.314125898Z I0128 09:43:44.314074       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:44.314125898Z I0128 09:43:44.314094       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:46.670667196Z I0128 09:43:46.670560       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:46.670730449Z I0128 09:43:46.670718       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:48.294475872Z I0128 09:43:48.294439       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:48.294540975Z I0128 09:43:48.294528       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:48.377861018Z I0128 09:43:48.377801       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:48.377861018Z I0128 09:43:48.377843       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:50.400091691Z I0128 09:43:50.397514       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:50.400091691Z I0128 09:43:50.397538       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:43:57.113662751Z I0128 09:43:57.113628       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:43:57.113743295Z I0128 09:43:57.113730       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:44:00.398843898Z I0128 09:44:00.398803       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:44:00.398843898Z I0128 09:44:00.398822       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:44:03.293891036Z I0128 09:44:03.293853       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:44:03.293891036Z I0128 09:44:03.293871       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:44:09.300386436Z I0128 09:44:09.300307       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:44:09.300454850Z I0128 09:44:09.300443       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:44:09.368767136Z I0128 09:44:09.368707       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:44:09.370176326Z I0128 09:44:09.370155       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:44:12.614204976Z I0128 09:44:12.614164       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:44:12.614204976Z I0128 09:44:12.614185       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:44:12.810827591Z I0128 09:44:12.810791       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:44:12.810827591Z I0128 09:44:12.810810       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:44:18.293830964Z I0128 09:44:18.293794       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:44:18.293830964Z I0128 09:44:18.293810       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:44:21.524497159Z I0128 09:44:21.524450       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:44:21.524574463Z I0128 09:44:21.524560       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:44:23.919504768Z I0128 09:44:23.919468       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:44:23.919574372Z I0128 09:44:23.919561       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:44:24.341763710Z I0128 09:44:24.341715       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:44:24.341841054Z I0128 09:44:24.341827       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:44:24.920054764Z I0128 09:44:24.920000       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:44:24.920084886Z I0128 09:44:24.920055       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:44:33.299187354Z I0128 09:44:33.299141       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:44:33.299187354Z I0128 09:44:33.299162       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:44:33.339985699Z I0128 09:44:33.339949       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:44:33.339985699Z I0128 09:44:33.339965       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:44:48.303672851Z I0128 09:44:48.303605       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:44:48.303672851Z I0128 09:44:48.303651       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:44:53.462040007Z I0128 09:44:53.461980       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:44:53.462108090Z I0128 09:44:53.462094       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:45:03.295654573Z I0128 09:45:03.295616       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:45:03.295654573Z I0128 09:45:03.295635       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:45:04.888359704Z I0128 09:45:04.887533       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:45:04.888359704Z I0128 09:45:04.887558       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:45:18.296349204Z I0128 09:45:18.296288       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:45:18.296349204Z I0128 09:45:18.296312       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:45:20.000144411Z I0128 09:45:19.999508       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:45:20.000144411Z I0128 09:45:19.999530       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:45:21.832406207Z I0128 09:45:21.832359       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:45:21.832491751Z I0128 09:45:21.832477       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:45:30.613217495Z I0128 09:45:30.613179       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:45:30.613282998Z I0128 09:45:30.613270       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:45:30.649236018Z I0128 09:45:30.649199       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:45:30.649293881Z I0128 09:45:30.649280       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:45:33.295879986Z I0128 09:45:33.295835       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:45:33.295879986Z I0128 09:45:33.295854       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:45:36.436327011Z I0128 09:45:36.436278       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:45:36.436387434Z I0128 09:45:36.436375       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:45:41.628272344Z I0128 09:45:41.627772       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:45:41.628272344Z I0128 09:45:41.627790       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:45:42.742983345Z I0128 09:45:42.742927       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:45:42.743075930Z I0128 09:45:42.743063       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:45:42.787123112Z I0128 09:45:42.786990       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:45:42.787186175Z I0128 09:45:42.787173       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:45:42.838897549Z I0128 09:45:42.838858       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:45:42.838969332Z I0128 09:45:42.838956       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:45:42.872863659Z I0128 09:45:42.872822       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:45:42.872932223Z I0128 09:45:42.872919       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:45:45.448061527Z I0128 09:45:45.446306       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:45:45.448061527Z I0128 09:45:45.446326       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:45:45.948567098Z I0128 09:45:45.948519       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:45:45.948632112Z I0128 09:45:45.948619       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:45:48.293634821Z I0128 09:45:48.293594       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:45:48.293634821Z I0128 09:45:48.293610       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:45:56.713549680Z I0128 09:45:56.713505       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:45:56.713549680Z I0128 09:45:56.713524       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:45:56.733436750Z I0128 09:45:56.733397       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:45:56.733496133Z I0128 09:45:56.733482       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:03.294485301Z I0128 09:46:03.294443       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:03.294485301Z I0128 09:46:03.294462       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:18.295314386Z I0128 09:46:18.295275       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:18.295314386Z I0128 09:46:18.295291       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:20.155560849Z I0128 09:46:20.155467       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:20.155560849Z I0128 09:46:20.155498       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:21.229313252Z I0128 09:46:21.229256       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:21.229388536Z I0128 09:46:21.229376       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:33.298191569Z I0128 09:46:33.298153       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:33.298191569Z I0128 09:46:33.298169       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:44.747574100Z I0128 09:46:44.746042       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:44.747574100Z I0128 09:46:44.746064       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:44.854426812Z I0128 09:46:44.854320       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:44.854426812Z I0128 09:46:44.854342       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:44.904224478Z I0128 09:46:44.904175       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:44.904224478Z I0128 09:46:44.904206       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:44.958226483Z I0128 09:46:44.958180       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:44.958318708Z I0128 09:46:44.958299       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:44.986059737Z I0128 09:46:44.986009       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:44.986127200Z I0128 09:46:44.986114       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:47.020397942Z I0128 09:46:47.020346       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:47.020472526Z I0128 09:46:47.020459       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:47.060932229Z I0128 09:46:47.060884       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:47.061005492Z I0128 09:46:47.060993       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:47.124908721Z I0128 09:46:47.123242       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:47.124908721Z I0128 09:46:47.123261       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:47.161150924Z I0128 09:46:47.161108       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:47.161150924Z I0128 09:46:47.161131       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:48.295386910Z I0128 09:46:48.295350       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:48.295428102Z I0128 09:46:48.295384       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:49.525014201Z I0128 09:46:49.523674       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:49.525014201Z I0128 09:46:49.523696       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:49.545394155Z I0128 09:46:49.545346       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:49.545394155Z I0128 09:46:49.545369       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:49.617966936Z I0128 09:46:49.617313       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:49.617966936Z I0128 09:46:49.617333       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:49.648974758Z I0128 09:46:49.648642       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:49.648974758Z I0128 09:46:49.648662       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:54.811854970Z I0128 09:46:54.811810       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:54.811854970Z I0128 09:46:54.811831       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:54.917058004Z I0128 09:46:54.914837       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:54.917058004Z I0128 09:46:54.914886       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:59.571726974Z I0128 09:46:59.571693       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:59.571784237Z I0128 09:46:59.571774       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:46:59.667803973Z I0128 09:46:59.667768       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:46:59.667803973Z I0128 09:46:59.667785       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:03.296016492Z I0128 09:47:03.295978       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:03.296016492Z I0128 09:47:03.295995       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:18.294867067Z I0128 09:47:18.294827       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:18.294867067Z I0128 09:47:18.294849       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:22.124891159Z I0128 09:47:22.124850       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:22.124891159Z I0128 09:47:22.124870       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:28.114815619Z I0128 09:47:28.114765       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:28.114815619Z I0128 09:47:28.114786       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:30.611075552Z I0128 09:47:30.609959       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:30.611075552Z I0128 09:47:30.609980       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:30.655477691Z I0128 09:47:30.655419       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:30.655559315Z I0128 09:47:30.655546       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:30.707253117Z I0128 09:47:30.707218       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:30.707253117Z I0128 09:47:30.707236       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:30.825729901Z I0128 09:47:30.823958       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:30.825729901Z I0128 09:47:30.823977       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:30.854504523Z I0128 09:47:30.849903       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:30.854504523Z I0128 09:47:30.849923       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:30.925535447Z I0128 09:47:30.925479       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:30.925535447Z I0128 09:47:30.925511       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:30.963595800Z I0128 09:47:30.963454       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:30.963595800Z I0128 09:47:30.963474       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:32.520258707Z I0128 09:47:32.520217       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:32.520258707Z I0128 09:47:32.520236       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:33.296530918Z I0128 09:47:33.296464       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:33.296530918Z I0128 09:47:33.296486       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:34.505561450Z I0128 09:47:34.504939       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:34.505561450Z I0128 09:47:34.504976       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:34.543125108Z I0128 09:47:34.542986       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:34.543125108Z I0128 09:47:34.543007       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:34.610909081Z I0128 09:47:34.610869       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:34.610979564Z I0128 09:47:34.610967       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:34.669044303Z I0128 09:47:34.668978       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:34.669044303Z I0128 09:47:34.668999       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:48.294904250Z I0128 09:47:48.294858       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:48.294904250Z I0128 09:47:48.294878       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:53.055409605Z I0128 09:47:53.055366       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:53.055471208Z I0128 09:47:53.055459       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:56.320790773Z I0128 09:47:56.320740       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:56.320865977Z I0128 09:47:56.320853       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:56.367234609Z I0128 09:47:56.367194       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:56.367292772Z I0128 09:47:56.367282       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:56.412187022Z I0128 09:47:56.412138       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:56.412276657Z I0128 09:47:56.412261       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:47:56.473424193Z I0128 09:47:56.473386       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:47:56.473501577Z I0128 09:47:56.473488       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:48:03.296638413Z I0128 09:48:03.296566       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:48:03.296638413Z I0128 09:48:03.296611       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:48:04.438340782Z I0128 09:48:04.438297       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:48:04.438411766Z I0128 09:48:04.438399       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:48:06.822918969Z I0128 09:48:06.822876       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:48:06.823000443Z I0128 09:48:06.822988       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:48:09.624909344Z I0128 09:48:09.624866       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:48:09.625000328Z I0128 09:48:09.624972       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:48:16.825321145Z I0128 09:48:16.825283       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:48:16.825404959Z I0128 09:48:16.825391       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:48:18.295480829Z I0128 09:48:18.295440       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:48:18.295547862Z I0128 09:48:18.295535       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:48:33.295938847Z I0128 09:48:33.295895       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:48:33.295938847Z I0128 09:48:33.295917       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:48:48.295065068Z I0128 09:48:48.295009       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:48:48.295065068Z I0128 09:48:48.295045       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:49:03.103919060Z I0128 09:49:03.103860       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:49:03.104003764Z I0128 09:49:03.103991       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:49:03.133725395Z I0128 09:49:03.133679       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:49:03.133802709Z I0128 09:49:03.133791       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:49:03.252127667Z I0128 09:49:03.252059       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:49:03.252127667Z I0128 09:49:03.252079       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:49:03.270938193Z I0128 09:49:03.270899       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:49:03.270994486Z I0128 09:49:03.270982       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:49:03.297219599Z I0128 09:49:03.297173       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:49:03.297219599Z I0128 09:49:03.297194       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:49:18.294459151Z I0128 09:49:18.294424       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:49:18.294459151Z I0128 09:49:18.294440       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:49:30.590232491Z I0128 09:49:30.590176       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:49:30.590232491Z I0128 09:49:30.590196       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:49:30.631175260Z I0128 09:49:30.631129       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:49:30.631175260Z I0128 09:49:30.631151       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:49:33.294854964Z I0128 09:49:33.294807       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:49:33.294854964Z I0128 09:49:33.294828       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:49:39.062557890Z I0128 09:49:39.059532       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:49:39.062557890Z I0128 09:49:39.059553       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:49:48.295561692Z I0128 09:49:48.295498       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:49:48.295561692Z I0128 09:49:48.295533       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:50:03.297068398Z I0128 09:50:03.296988       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:50:03.297068398Z I0128 09:50:03.297007       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:50:09.910302693Z I0128 09:50:09.910263       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:50:09.910385147Z I0128 09:50:09.910370       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:50:09.948440767Z I0128 09:50:09.948400       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:50:09.948478619Z I0128 09:50:09.948437       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:50:10.018657747Z I0128 09:50:10.018567       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:50:10.018657747Z I0128 09:50:10.018595       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:50:10.050804975Z I0128 09:50:10.050754       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:50:10.050804975Z I0128 09:50:10.050771       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:50:18.293902834Z I0128 09:50:18.293862       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:50:18.293902834Z I0128 09:50:18.293879       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:50:33.294904956Z I0128 09:50:33.294864       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:50:33.294904956Z I0128 09:50:33.294882       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:50:43.856870240Z I0128 09:50:43.856820       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:50:43.856959235Z I0128 09:50:43.856946       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:50:43.895771551Z I0128 09:50:43.895732       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:50:43.895858485Z I0128 09:50:43.895843       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:50:43.934360006Z I0128 09:50:43.934321       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:50:43.934428860Z I0128 09:50:43.934415       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:50:44.040859353Z I0128 09:50:44.040823       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:50:44.040937336Z I0128 09:50:44.040926       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:50:44.080409746Z I0128 09:50:44.080007       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:50:44.080409746Z I0128 09:50:44.080054       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:50:48.294520557Z I0128 09:50:48.294469       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:50:48.294520557Z I0128 09:50:48.294493       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:50:53.251627164Z I0128 09:50:53.251486       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:50:53.251627164Z I0128 09:50:53.251505       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:51:00.581091622Z I0128 09:51:00.581049       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:51:00.581167446Z I0128 09:51:00.581155       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:51:00.626922382Z I0128 09:51:00.626878       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:51:00.627052728Z I0128 09:51:00.627039       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:51:03.295751313Z I0128 09:51:03.295696       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:51:03.295751313Z I0128 09:51:03.295722       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:51:16.685833455Z I0128 09:51:16.685795       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:51:16.685927310Z I0128 09:51:16.685914       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:51:16.728055022Z I0128 09:51:16.727994       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:51:16.728147826Z I0128 09:51:16.728134       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:51:16.801172292Z I0128 09:51:16.801118       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:51:16.801252916Z I0128 09:51:16.801239       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:51:16.818275821Z I0128 09:51:16.818184       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:51:16.818275821Z I0128 09:51:16.818231       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:51:18.293831167Z I0128 09:51:18.293777       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:51:18.293831167Z I0128 09:51:18.293795       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:51:25.498271514Z I0128 09:51:25.498209       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:51:25.498369779Z I0128 09:51:25.498357       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:51:25.597431340Z I0128 09:51:25.596115       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:51:25.597431340Z I0128 09:51:25.596254       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:51:25.628585454Z I0128 09:51:25.627096       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:51:25.628585454Z I0128 09:51:25.627137       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:51:25.678833706Z I0128 09:51:25.678783       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:51:25.678897499Z I0128 09:51:25.678884       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:51:25.708269335Z I0128 09:51:25.706173       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:51:25.708269335Z I0128 09:51:25.706194       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:51:29.318906916Z I0128 09:51:29.318849       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:51:29.318974689Z I0128 09:51:29.318961       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:51:29.347437600Z I0128 09:51:29.347385       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:51:29.347437600Z I0128 09:51:29.347410       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:51:29.423267450Z I0128 09:51:29.422497       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:51:29.423267450Z I0128 09:51:29.422535       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:51:29.434303537Z I0128 09:51:29.434268       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:51:29.434357890Z I0128 09:51:29.434346       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:51:33.295015905Z I0128 09:51:33.294964       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:51:33.295015905Z I0128 09:51:33.294984       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:51:48.294551158Z I0128 09:51:48.294503       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:51:48.294551158Z I0128 09:51:48.294528       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:01.175493640Z I0128 09:52:01.175271       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:01.175493640Z I0128 09:52:01.175295       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:01.208911758Z I0128 09:52:01.208666       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:01.209054385Z I0128 09:52:01.209005       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:01.287997410Z I0128 09:52:01.287694       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:01.287997410Z I0128 09:52:01.287713       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:01.321936574Z I0128 09:52:01.321885       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:01.322036889Z I0128 09:52:01.322009       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:01.379632156Z I0128 09:52:01.379580       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:01.379704150Z I0128 09:52:01.379691       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:01.410547309Z I0128 09:52:01.410496       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:01.410636464Z I0128 09:52:01.410623       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:01.459294978Z I0128 09:52:01.459250       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:01.459360201Z I0128 09:52:01.459348       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:01.504580874Z I0128 09:52:01.504534       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:01.504691529Z I0128 09:52:01.504677       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:01.823790988Z I0128 09:52:01.823736       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:01.823885812Z I0128 09:52:01.823873       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:01.919301405Z I0128 09:52:01.919254       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:01.919391570Z I0128 09:52:01.919379       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:02.322203801Z I0128 09:52:02.321463       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:02.322203801Z I0128 09:52:02.321486       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:02.517995383Z I0128 09:52:02.517944       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:02.518116899Z I0128 09:52:02.518104       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:02.919241576Z I0128 09:52:02.919184       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:02.919336440Z I0128 09:52:02.919324       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:03.215524132Z I0128 09:52:03.215476       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:03.215524132Z I0128 09:52:03.215495       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:03.221624355Z I0128 09:52:03.221593       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:03.221624355Z I0128 09:52:03.221609       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:03.294423336Z I0128 09:52:03.294378       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:03.294423336Z I0128 09:52:03.294396       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:04.088426341Z I0128 09:52:04.088383       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:04.088513656Z I0128 09:52:04.088501       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:04.129840856Z I0128 09:52:04.129803       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:04.129915129Z I0128 09:52:04.129902       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:04.238058443Z I0128 09:52:04.238005       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:04.238124407Z I0128 09:52:04.238110       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:04.276754823Z I0128 09:52:04.276714       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:04.276847447Z I0128 09:52:04.276835       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:04.355455357Z I0128 09:52:04.355413       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:04.355542861Z I0128 09:52:04.355531       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:04.378895269Z I0128 09:52:04.378847       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:04.378988644Z I0128 09:52:04.378976       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:04.517537287Z I0128 09:52:04.517492       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:04.517610080Z I0128 09:52:04.517598       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:04.736845855Z I0128 09:52:04.736798       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:04.736910428Z I0128 09:52:04.736897       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:05.921899438Z I0128 09:52:05.921101       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:05.921899438Z I0128 09:52:05.921121       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:06.119607775Z I0128 09:52:06.119549       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:06.119706690Z I0128 09:52:06.119693       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:06.315152874Z I0128 09:52:06.315100       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:06.315208977Z I0128 09:52:06.315165       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:06.519739453Z I0128 09:52:06.518400       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:06.519739453Z I0128 09:52:06.518421       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:11.332638051Z I0128 09:52:11.332579       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:11.332747666Z I0128 09:52:11.332734       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:11.377984123Z I0128 09:52:11.377315       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:11.377984123Z I0128 09:52:11.377337       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:18.293553603Z I0128 09:52:18.293510       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:18.293553603Z I0128 09:52:18.293528       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:33.296079720Z I0128 09:52:33.296014       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:33.296143203Z I0128 09:52:33.296090       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:52:48.294304048Z I0128 09:52:48.294246       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:52:48.294304048Z I0128 09:52:48.294269       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:53:03.297815214Z I0128 09:53:03.297767       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:53:03.297815214Z I0128 09:53:03.297788       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:53:18.295852250Z I0128 09:53:18.295806       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:53:18.295932944Z I0128 09:53:18.295919       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:53:33.294651799Z I0128 09:53:33.294593       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:53:33.294651799Z I0128 09:53:33.294613       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:53:48.294582465Z I0128 09:53:48.294536       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:53:48.294582465Z I0128 09:53:48.294555       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:54:03.296081841Z I0128 09:54:03.295996       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:54:03.296081841Z I0128 09:54:03.296015       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:54:18.293641897Z I0128 09:54:18.293589       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:54:18.293641897Z I0128 09:54:18.293610       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:54:23.693861296Z I0128 09:54:23.693820       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:54:23.693918209Z I0128 09:54:23.693906       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:54:29.486850689Z I0128 09:54:29.486814       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:54:29.486913902Z I0128 09:54:29.486901       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:54:29.537909692Z I0128 09:54:29.537872       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:54:29.537964825Z I0128 09:54:29.537954       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:54:33.295259747Z I0128 09:54:33.295217       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:54:33.295259747Z I0128 09:54:33.295237       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:54:48.296748794Z I0128 09:54:48.296702       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:54:48.296748794Z I0128 09:54:48.296723       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:55:03.294915561Z I0128 09:55:03.294853       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:55:03.294915561Z I0128 09:55:03.294871       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:55:12.097412004Z I0128 09:55:12.097364       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:55:12.097497248Z I0128 09:55:12.097484       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:55:18.293800015Z I0128 09:55:18.293750       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:55:18.293800015Z I0128 09:55:18.293768       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:55:33.293720927Z I0128 09:55:33.293671       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:55:33.293720927Z I0128 09:55:33.293692       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:55:48.295452474Z I0128 09:55:48.295404       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:55:48.295452474Z I0128 09:55:48.295424       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:56:03.295234957Z I0128 09:56:03.295190       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:56:03.295234957Z I0128 09:56:03.295207       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:56:18.297330079Z I0128 09:56:18.297279       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:56:18.297330079Z I0128 09:56:18.297302       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:56:33.294889480Z I0128 09:56:33.294845       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:56:33.294889480Z I0128 09:56:33.294864       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:56:48.294181743Z I0128 09:56:48.294125       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:56:48.294181743Z I0128 09:56:48.294149       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:57:03.294577478Z I0128 09:57:03.294513       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:57:03.294577478Z I0128 09:57:03.294532       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:57:18.294760949Z I0128 09:57:18.294719       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:57:18.294760949Z I0128 09:57:18.294738       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:57:33.293887230Z I0128 09:57:33.293826       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:57:33.293887230Z I0128 09:57:33.293846       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:57:48.294950067Z I0128 09:57:48.294888       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:57:48.294950067Z I0128 09:57:48.294912       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:58:03.295124782Z I0128 09:58:03.295086       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:58:03.295171065Z I0128 09:58:03.295131       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:58:18.297460310Z I0128 09:58:18.297416       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:58:18.297460310Z I0128 09:58:18.297436       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:58:33.294877128Z I0128 09:58:33.294828       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:58:33.294877128Z I0128 09:58:33.294851       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:58:48.294584487Z I0128 09:58:48.294536       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:58:48.294584487Z I0128 09:58:48.294557       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:59:03.296180716Z I0128 09:59:03.296139       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:59:03.296180716Z I0128 09:59:03.296155       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:59:18.297200801Z I0128 09:59:18.297155       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:59:18.297200801Z I0128 09:59:18.297172       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:59:33.295541054Z I0128 09:59:33.295498       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:59:33.295614448Z I0128 09:59:33.295602       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T09:59:48.293797341Z I0128 09:59:48.293751       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T09:59:48.293797341Z I0128 09:59:48.293774       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:00:03.296301396Z I0128 10:00:03.296259       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:00:03.296301396Z I0128 10:00:03.296278       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:00:18.295429216Z I0128 10:00:18.295383       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:00:18.295429216Z I0128 10:00:18.295411       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:00:33.293890093Z I0128 10:00:33.293839       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:00:33.293890093Z I0128 10:00:33.293859       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:00:48.294017395Z I0128 10:00:48.293966       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:00:48.294017395Z I0128 10:00:48.293986       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:01:03.296368200Z I0128 10:01:03.296317       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:01:03.296368200Z I0128 10:01:03.296339       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:01:18.296303514Z I0128 10:01:18.296222       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:01:18.296303514Z I0128 10:01:18.296243       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:01:33.295460538Z I0128 10:01:33.295416       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:01:33.295538172Z I0128 10:01:33.295524       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:01:48.294834077Z I0128 10:01:48.294796       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:01:48.294834077Z I0128 10:01:48.294816       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:02:03.215951754Z I0128 10:02:03.215896       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:02:03.215951754Z I0128 10:02:03.215914       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:02:03.222795575Z I0128 10:02:03.222767       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:02:03.222795575Z I0128 10:02:03.222786       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:02:03.295072188Z I0128 10:02:03.295011       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:02:03.295072188Z I0128 10:02:03.295044       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:02:18.295207888Z I0128 10:02:18.295161       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:02:18.295207888Z I0128 10:02:18.295182       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:02:33.294497522Z I0128 10:02:33.294447       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:02:33.294497522Z I0128 10:02:33.294468       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:02:48.295304405Z I0128 10:02:48.295258       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:02:48.295304405Z I0128 10:02:48.295277       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:03:03.296284293Z I0128 10:03:03.296234       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:03:03.296284293Z I0128 10:03:03.296255       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:03:18.293831967Z I0128 10:03:18.293781       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:03:18.293831967Z I0128 10:03:18.293802       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:03:33.295819269Z I0128 10:03:33.295763       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:03:33.295819269Z I0128 10:03:33.295780       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:03:48.295865556Z I0128 10:03:48.295816       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:03:48.295865556Z I0128 10:03:48.295836       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:04:03.294739494Z I0128 10:04:03.294697       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:04:03.294739494Z I0128 10:04:03.294713       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:04:18.294483328Z I0128 10:04:18.294443       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:04:18.294483328Z I0128 10:04:18.294461       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:04:33.293722195Z I0128 10:04:33.293680       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:04:33.293722195Z I0128 10:04:33.293699       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:04:48.294289654Z I0128 10:04:48.294244       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:04:48.294289654Z I0128 10:04:48.294266       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:05:03.295638761Z I0128 10:05:03.295598       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:05:03.295686223Z I0128 10:05:03.295644       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:05:18.294847162Z I0128 10:05:18.294795       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:05:18.294847162Z I0128 10:05:18.294829       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:05:33.294801709Z I0128 10:05:33.294749       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:05:33.294801709Z I0128 10:05:33.294771       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:05:48.295838671Z I0128 10:05:48.295793       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:05:48.295838671Z I0128 10:05:48.295810       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:06:03.294775584Z I0128 10:06:03.294733       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:06:03.294775584Z I0128 10:06:03.294749       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:06:18.295535741Z I0128 10:06:18.295492       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:06:18.295535741Z I0128 10:06:18.295509       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:06:33.294289042Z I0128 10:06:33.294245       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:06:33.294289042Z I0128 10:06:33.294262       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:06:48.295531055Z I0128 10:06:48.295474       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:06:48.295531055Z I0128 10:06:48.295495       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:07:03.296180778Z I0128 10:07:03.296126       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:07:03.296180778Z I0128 10:07:03.296147       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:07:18.294404447Z I0128 10:07:18.294347       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:07:18.294404447Z I0128 10:07:18.294368       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:07:33.296061760Z I0128 10:07:33.295989       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:07:33.296061760Z I0128 10:07:33.296009       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:07:48.294100605Z I0128 10:07:48.294059       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:07:48.294100605Z I0128 10:07:48.294077       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:08:03.294641798Z I0128 10:08:03.294581       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:08:03.294641798Z I0128 10:08:03.294601       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:08:18.294753667Z I0128 10:08:18.294703       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:08:18.294753667Z I0128 10:08:18.294724       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:08:33.295600171Z I0128 10:08:33.295555       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:08:33.295600171Z I0128 10:08:33.295574       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:08:48.293922740Z I0128 10:08:48.293860       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:08:48.293922740Z I0128 10:08:48.293885       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:09:03.294839144Z I0128 10:09:03.294795       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:09:03.294839144Z I0128 10:09:03.294813       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:09:18.294766688Z I0128 10:09:18.294726       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:09:18.294766688Z I0128 10:09:18.294744       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:09:33.294673299Z I0128 10:09:33.294631       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:09:33.294673299Z I0128 10:09:33.294650       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:09:48.295554800Z I0128 10:09:48.295493       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:09:48.295554800Z I0128 10:09:48.295514       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:10:03.295384299Z I0128 10:10:03.295345       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:10:03.295384299Z I0128 10:10:03.295364       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:10:18.294784292Z I0128 10:10:18.294741       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:10:18.294784292Z I0128 10:10:18.294759       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:10:33.295640072Z I0128 10:10:33.295589       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:10:33.295640072Z I0128 10:10:33.295611       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:10:48.294106178Z I0128 10:10:48.294057       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:10:48.294106178Z I0128 10:10:48.294078       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:11:03.297101482Z I0128 10:11:03.297056       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:11:03.297101482Z I0128 10:11:03.297073       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:11:18.294580217Z I0128 10:11:18.294534       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:11:18.294580217Z I0128 10:11:18.294553       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:11:33.294129523Z I0128 10:11:33.294077       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:11:33.294129523Z I0128 10:11:33.294096       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:11:48.295890764Z I0128 10:11:48.295846       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:11:48.295890764Z I0128 10:11:48.295866       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:12:03.216653275Z I0128 10:12:03.216595       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:12:03.216653275Z I0128 10:12:03.216614       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:12:03.222875705Z I0128 10:12:03.222852       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:12:03.222875705Z I0128 10:12:03.222865       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:12:03.293793659Z I0128 10:12:03.293736       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:12:03.293793659Z I0128 10:12:03.293757       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:12:18.294183386Z I0128 10:12:18.294147       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:12:18.294183386Z I0128 10:12:18.294163       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:12:33.295561450Z I0128 10:12:33.295502       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:12:33.295561450Z I0128 10:12:33.295521       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:12:48.293653385Z I0128 10:12:48.293599       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:12:48.293653385Z I0128 10:12:48.293620       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:13:03.294432170Z I0128 10:13:03.294378       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:13:03.294432170Z I0128 10:13:03.294400       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:13:18.294908827Z I0128 10:13:18.294869       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:13:18.294908827Z I0128 10:13:18.294886       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:13:33.294753249Z I0128 10:13:33.294708       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:13:33.294753249Z I0128 10:13:33.294725       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:13:48.293530558Z I0128 10:13:48.293482       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:13:48.293530558Z I0128 10:13:48.293502       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:14:03.294166912Z I0128 10:14:03.294128       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:14:03.294166912Z I0128 10:14:03.294144       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:14:18.295119056Z I0128 10:14:18.295072       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:14:18.295119056Z I0128 10:14:18.295091       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:14:33.295311581Z I0128 10:14:33.295270       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:14:33.295311581Z I0128 10:14:33.295286       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:14:48.295294519Z I0128 10:14:48.295248       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:14:48.295294519Z I0128 10:14:48.295268       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:15:03.294099877Z I0128 10:15:03.294058       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:15:03.294166910Z I0128 10:15:03.294154       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:15:18.296258918Z I0128 10:15:18.296213       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:15:18.296258918Z I0128 10:15:18.296230       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:15:33.295354319Z I0128 10:15:33.295305       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:15:33.295430273Z I0128 10:15:33.295360       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:15:48.294644057Z I0128 10:15:48.294590       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:15:48.294644057Z I0128 10:15:48.294614       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:16:03.294786536Z I0128 10:16:03.294741       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:16:03.294938124Z I0128 10:16:03.294910       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:16:18.293985654Z I0128 10:16:18.293941       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:16:18.293985654Z I0128 10:16:18.293962       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:16:33.295383006Z I0128 10:16:33.295338       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:16:33.295383006Z I0128 10:16:33.295358       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:16:48.295179674Z I0128 10:16:48.295117       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:16:48.295179674Z I0128 10:16:48.295136       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:17:03.294301684Z I0128 10:17:03.294257       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:17:03.294301684Z I0128 10:17:03.294275       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:17:18.294504781Z I0128 10:17:18.294460       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:17:18.294504781Z I0128 10:17:18.294480       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:17:33.295443794Z I0128 10:17:33.295405       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:17:33.295443794Z I0128 10:17:33.295421       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:17:48.294346670Z I0128 10:17:48.294281       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:17:48.294346670Z I0128 10:17:48.294300       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:18:03.295527221Z I0128 10:18:03.295483       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:18:03.295527221Z I0128 10:18:03.295501       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:18:18.296633264Z I0128 10:18:18.296582       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:18:18.296633264Z I0128 10:18:18.296600       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:18:33.294006034Z I0128 10:18:33.293959       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:18:33.294006034Z I0128 10:18:33.293981       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:18:48.296035105Z I0128 10:18:48.295968       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:18:48.296035105Z I0128 10:18:48.295988       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:19:03.295321897Z I0128 10:19:03.295274       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:19:03.295321897Z I0128 10:19:03.295296       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:19:18.295134139Z I0128 10:19:18.295097       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:19:18.295134139Z I0128 10:19:18.295114       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:19:33.296371525Z I0128 10:19:33.296322       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:19:33.296371525Z I0128 10:19:33.296338       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:19:48.293847621Z I0128 10:19:48.293803       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:19:48.293847621Z I0128 10:19:48.293822       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:20:03.300368822Z I0128 10:20:03.300106       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:20:03.300368822Z I0128 10:20:03.300129       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:20:18.294241108Z I0128 10:20:18.294193       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:20:18.294241108Z I0128 10:20:18.294209       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:20:33.297158577Z I0128 10:20:33.297097       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:20:33.297158577Z I0128 10:20:33.297129       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:20:48.295906215Z I0128 10:20:48.295865       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:20:48.295906215Z I0128 10:20:48.295883       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:21:03.295459731Z I0128 10:21:03.295400       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:21:03.295459731Z I0128 10:21:03.295421       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:21:18.297230964Z I0128 10:21:18.297189       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:21:18.297230964Z I0128 10:21:18.297207       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:21:33.293977914Z I0128 10:21:33.293917       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:21:33.293977914Z I0128 10:21:33.293936       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:21:48.296093614Z I0128 10:21:48.296052       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:21:48.296093614Z I0128 10:21:48.296068       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:22:03.218290086Z I0128 10:22:03.218241       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:22:03.218290086Z I0128 10:22:03.218260       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:22:03.225129796Z I0128 10:22:03.225108       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:22:03.225129796Z I0128 10:22:03.225119       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:22:03.294553540Z I0128 10:22:03.294482       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:22:03.294553540Z I0128 10:22:03.294503       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:22:18.296656639Z I0128 10:22:18.296566       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:22:18.296656639Z I0128 10:22:18.296585       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:22:33.297202209Z I0128 10:22:33.297158       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:22:33.297202209Z I0128 10:22:33.297176       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:22:48.295627232Z I0128 10:22:48.295565       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:22:48.295627232Z I0128 10:22:48.295587       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:23:03.297570207Z I0128 10:23:03.297517       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:23:03.297570207Z I0128 10:23:03.297539       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:23:18.295601723Z I0128 10:23:18.295556       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:23:18.295601723Z I0128 10:23:18.295579       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:23:33.296834445Z I0128 10:23:33.296778       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:23:33.296834445Z I0128 10:23:33.296796       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:23:48.296737357Z I0128 10:23:48.296693       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:23:48.296737357Z I0128 10:23:48.296710       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:24:03.296049597Z I0128 10:24:03.295970       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:24:03.296049597Z I0128 10:24:03.295991       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:24:18.297064778Z I0128 10:24:18.297001       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:24:18.297064778Z I0128 10:24:18.297038       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+2026-01-28T10:24:33.296399056Z I0128 10:24:33.296347       1 status.go:472] No ClusterAutoscaler. Reporting available.
+2026-01-28T10:24:33.296399056Z I0128 10:24:33.296365       1 status.go:253] Operator status available: at version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest

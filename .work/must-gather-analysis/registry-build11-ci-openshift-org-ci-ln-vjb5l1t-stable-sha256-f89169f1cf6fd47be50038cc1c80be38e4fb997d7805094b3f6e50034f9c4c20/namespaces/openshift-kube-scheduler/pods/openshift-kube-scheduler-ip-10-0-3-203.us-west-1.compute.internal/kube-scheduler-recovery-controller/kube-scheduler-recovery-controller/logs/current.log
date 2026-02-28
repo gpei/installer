@@ -1,0 +1,16 @@
+2026-01-28T09:44:54.223727983Z + timeout 3m /bin/bash -exuo pipefail -c 'while [ -n "$(ss -Htanop \( sport = 11443 \))" ]; do sleep 1; done'
+2026-01-28T09:44:54.226611724Z ++ ss -Htanop '(' sport = 11443 ')'
+2026-01-28T09:44:54.234200603Z + '[' -n '' ']'
+2026-01-28T09:44:54.234801895Z + exec cluster-kube-scheduler-operator cert-recovery-controller --kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/kube-scheduler-cert-syncer-kubeconfig/kubeconfig --namespace=openshift-kube-scheduler --listen=0.0.0.0:11443 -v=2
+2026-01-28T09:44:54.281681606Z W0128 09:44:54.281570       1 cmd.go:257] Using insecure, self-signed certificates
+2026-01-28T09:44:54.281846579Z I0128 09:44:54.281825       1 crypto.go:594] Generating new CA for cert-recovery-controller-signer@1769593494 cert, and key in /tmp/serving-cert-2528218936/serving-signer.crt, /tmp/serving-cert-2528218936/serving-signer.key
+2026-01-28T09:44:54.281910470Z Validity period of the certificate for "cert-recovery-controller-signer@1769593494" is unset, resetting to 157680000000000000 years!
+2026-01-28T09:44:54.668747611Z I0128 09:44:54.668675       1 leaderelection.go:121] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2026-01-28T09:44:54.669298893Z I0128 09:44:54.669259       1 observer_polling.go:159] Starting file observer
+2026-01-28T09:44:54.669396255Z I0128 09:44:54.669369       1 envvar.go:172] "Feature gate default state" feature="ClientsPreferCBOR" enabled=false
+2026-01-28T09:44:54.669396255Z I0128 09:44:54.669387       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2026-01-28T09:44:54.669411285Z I0128 09:44:54.669396       1 envvar.go:172] "Feature gate default state" feature="InOrderInformers" enabled=true
+2026-01-28T09:44:54.669411285Z I0128 09:44:54.669403       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2026-01-28T09:44:54.669421876Z I0128 09:44:54.669409       1 envvar.go:172] "Feature gate default state" feature="ClientsAllowCBOR" enabled=false
+2026-01-28T09:44:54.682051325Z I0128 09:44:54.682010       1 builder.go:304] cert-recovery-controller version v0.0.0-master+$Format:%H$-$Format:%H$
+2026-01-28T09:44:54.692864306Z I0128 09:44:54.692827       1 leaderelection.go:257] attempting to acquire leader lease openshift-kube-scheduler/cert-recovery-controller-lock...

@@ -1,0 +1,177 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: Network
+metadata:
+  creationTimestamp: "2026-01-28T09:28:56Z"
+  generation: 2
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ManagementStateDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: cluster-network-operator-ManagementState
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:28:56Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:clusterNetwork: {}
+        f:defaultNetwork:
+          f:ovnKubernetesConfig:
+            f:egressIPConfig: {}
+            f:gatewayConfig:
+              f:ipv4: {}
+              f:ipv6: {}
+            f:genevePort: {}
+            f:mtu: {}
+            f:policyAuditConfig:
+              f:destination: {}
+              f:maxFileSize: {}
+              f:rateLimit: {}
+              f:syslogFacility: {}
+          f:type: {}
+        f:deployKubeProxy: {}
+        f:disableMultiNetwork: {}
+        f:disableNetworkDiagnostics: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:observedConfig: {}
+        f:operatorLogLevel: {}
+        f:serviceNetwork: {}
+        f:unsupportedConfigOverrides: {}
+        f:useMultiNetworkPolicy: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2026-01-28T09:29:07Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:clusterNetwork: {}
+        f:defaultNetwork:
+          f:type: {}
+        f:disableNetworkDiagnostics: {}
+        f:managementState: {}
+        f:observedConfig: {}
+        f:serviceNetwork: {}
+        f:unsupportedConfigOverrides: {}
+    manager: cluster-network-operator/clusterconfig
+    operation: Apply
+    time: "2026-01-28T09:31:42Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ManagementStateDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Upgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:version: {}
+    manager: cluster-network-operator/status-manager
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:42:59Z"
+  name: cluster
+  resourceVersion: "22589"
+  uid: 7763cebb-f1d7-4359-81b8-b55ef9916383
+spec:
+  clusterNetwork:
+  - cidr: 10.128.0.0/14
+    hostPrefix: 23
+  defaultNetwork:
+    ovnKubernetesConfig:
+      egressIPConfig: {}
+      gatewayConfig:
+        ipv4: {}
+        ipv6: {}
+        routingViaHost: false
+      genevePort: 6081
+      ipsecConfig:
+        mode: Disabled
+      mtu: 8901
+      policyAuditConfig:
+        destination: "null"
+        maxFileSize: 50
+        maxLogFiles: 5
+        rateLimit: 20
+        syslogFacility: local0
+    type: OVNKubernetes
+  deployKubeProxy: false
+  disableMultiNetwork: false
+  disableNetworkDiagnostics: false
+  logLevel: Normal
+  managementState: Managed
+  observedConfig: null
+  operatorLogLevel: Normal
+  serviceNetwork:
+  - 172.30.0.0/16
+  unsupportedConfigOverrides: null
+  useMultiNetworkPolicy: false
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:40:48Z"
+    message: ""
+    reason: ""
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2026-01-28T09:28:56Z"
+    message: ""
+    reason: ""
+    status: "True"
+    type: Upgradeable
+  - lastTransitionTime: "2026-01-28T09:28:56Z"
+    message: ""
+    reason: ""
+    status: "False"
+    type: ManagementStateDegraded
+  - lastTransitionTime: "2026-01-28T09:42:59Z"
+    message: ""
+    reason: ""
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2026-01-28T09:29:07Z"
+    message: ""
+    reason: ""
+    status: "True"
+    type: Available
+  version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest

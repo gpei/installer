@@ -1,0 +1,73 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.0.108.54
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-108-54.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: machine-approver-6c78cf9449-zps88
+      namespace: openshift-cluster-machine-approver
+      uid: 353f6dab-4ba1-4578-b0d2-2b4ae525f7d6
+    zone: us-west-1c
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:31:06Z"
+    creationTimestamp: "2026-01-28T09:27:05Z"
+    generateName: machine-approver-
+    generation: 3
+    labels:
+      app: machine-approver
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: machine-approver
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:service.kubernetes.io/headless: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"5da187f4-8a7b-4fc9-9eea-ad359c02dffc"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:06Z"
+    name: machine-approver-gbzcg
+    namespace: openshift-cluster-machine-approver
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: machine-approver
+      uid: 5da187f4-8a7b-4fc9-9eea-ad359c02dffc
+    resourceVersion: "8038"
+    uid: ebb82cbe-823b-4c52-804a-f3c2d6a2f669
+  ports:
+  - name: https
+    port: 9192
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "35113"

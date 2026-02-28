@@ -1,0 +1,64 @@
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingAdmissionPolicy
+metadata:
+  creationTimestamp: "2026-01-28T09:29:25Z"
+  generation: 1
+  managedFields:
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:observedGeneration: {}
+        f:typeChecking: {}
+    manager: validatingadmissionpolicy-status
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:29:25Z"
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          k:{"uid":"7763cebb-f1d7-4359-81b8-b55ef9916383"}: {}
+      f:spec:
+        f:failurePolicy: {}
+        f:matchConstraints: {}
+        f:validations: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2026-01-28T09:29:54Z"
+  name: user-defined-networks-namespace-label
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: 7763cebb-f1d7-4359-81b8-b55ef9916383
+  resourceVersion: "5151"
+  uid: dac3bd56-5e09-4cd9-8541-71ef67e1e1e1
+spec:
+  failurePolicy: Fail
+  matchConstraints:
+    matchPolicy: Equivalent
+    namespaceSelector: {}
+    objectSelector: {}
+    resourceRules:
+    - apiGroups:
+      - ""
+      apiVersions:
+      - v1
+      operations:
+      - UPDATE
+      resources:
+      - namespaces
+      scope: '*'
+  validations:
+  - expression: ('k8s.ovn.org/primary-user-defined-network' in oldObject.metadata.labels)
+      == ('k8s.ovn.org/primary-user-defined-network' in object.metadata.labels)
+    message: The 'k8s.ovn.org/primary-user-defined-network' label cannot be added/removed
+      after the namespace was created
+status:
+  observedGeneration: 1
+  typeChecking: {}

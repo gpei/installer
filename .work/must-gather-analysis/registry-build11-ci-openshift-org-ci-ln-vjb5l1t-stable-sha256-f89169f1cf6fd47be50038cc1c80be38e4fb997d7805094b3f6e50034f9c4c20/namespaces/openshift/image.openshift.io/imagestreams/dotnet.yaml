@@ -1,0 +1,347 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/display-name: .NET
+    samples.operator.openshift.io/version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+  creationTimestamp: "2026-01-28T09:42:09Z"
+  generation: 1
+  labels:
+    samples.operator.openshift.io/managed: "true"
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/display-name: {}
+          f:samples.operator.openshift.io/version: {}
+        f:labels:
+          .: {}
+          f:samples.operator.openshift.io/managed: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"6.0"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleContextDir: {}
+              f:sampleRef: {}
+              f:sampleRepo: {}
+              f:supports: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"6.0-ubi8"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleContextDir: {}
+              f:sampleRef: {}
+              f:sampleRepo: {}
+              f:supports: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"8.0"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleContextDir: {}
+              f:sampleRef: {}
+              f:sampleRepo: {}
+              f:supports: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"8.0-ubi8"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleContextDir: {}
+              f:sampleRef: {}
+              f:sampleRepo: {}
+              f:supports: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"9.0"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleContextDir: {}
+              f:sampleRef: {}
+              f:sampleRepo: {}
+              f:supports: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"9.0-ubi8"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleContextDir: {}
+              f:sampleRef: {}
+              f:sampleRepo: {}
+              f:supports: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"latest"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleContextDir: {}
+              f:sampleRef: {}
+              f:sampleRepo: {}
+              f:supports: {}
+              f:tags: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-samples-operator
+    operation: Update
+    time: "2026-01-28T09:42:09Z"
+  name: dotnet
+  namespace: openshift
+  resourceVersion: "20582"
+  uid: f88cfed1-cce4-4512-ac3c-642b6f86a8b0
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations:
+      description: Build and run .NET 6.0 applications on UBI 8. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/redhat-developer/s2i-dotnetcore/tree/main/6.0/build/README.md.
+      iconClass: icon-dotnet
+      openshift.io/display-name: .NET 6.0 (UBI 8)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleContextDir: app
+      sampleRef: dotnet-6.0
+      sampleRepo: https://github.com/redhat-developer/s2i-dotnetcore-ex
+      supports: dotnet,dotnet:6.0
+      tags: builder,dotnet,hidden
+      version: "6.0"
+    from:
+      kind: DockerImage
+      name: registry.access.redhat.com/ubi8/dotnet-60:6.0
+    generation: 1
+    importPolicy:
+      importMode: Legacy
+    name: "6.0"
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run .NET 6.0 applications on UBI 8. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/redhat-developer/s2i-dotnetcore/tree/main/6.0/build/README.md.
+      iconClass: icon-dotnet
+      openshift.io/display-name: .NET 6.0 (UBI 8)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleContextDir: app
+      sampleRef: dotnet-6.0
+      sampleRepo: https://github.com/redhat-developer/s2i-dotnetcore-ex
+      supports: dotnet,dotnet:6.0
+      tags: builder,dotnet
+      version: "6.0"
+    from:
+      kind: DockerImage
+      name: registry.access.redhat.com/ubi8/dotnet-60:6.0
+    generation: 1
+    importPolicy:
+      importMode: Legacy
+    name: 6.0-ubi8
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run .NET 8.0 applications on UBI 8. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/redhat-developer/s2i-dotnetcore/tree/main/8.0/build/README.md.
+      iconClass: icon-dotnet
+      openshift.io/display-name: .NET 8.0 (UBI 8)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleContextDir: app
+      sampleRef: dotnet-8.0
+      sampleRepo: https://github.com/redhat-developer/s2i-dotnetcore-ex
+      supports: dotnet,dotnet:8.0
+      tags: builder,dotnet,hidden
+      version: "8.0"
+    from:
+      kind: DockerImage
+      name: registry.access.redhat.com/ubi8/dotnet-80:8.0
+    generation: 1
+    importPolicy:
+      importMode: Legacy
+    name: "8.0"
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run .NET 8.0 applications on UBI 8. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/redhat-developer/s2i-dotnetcore/tree/main/8.0/build/README.md.
+      iconClass: icon-dotnet
+      openshift.io/display-name: .NET 8.0 (UBI 8)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleContextDir: app
+      sampleRef: dotnet-8.0
+      sampleRepo: https://github.com/redhat-developer/s2i-dotnetcore-ex
+      supports: dotnet,dotnet:8.0
+      tags: builder,dotnet
+      version: "8.0"
+    from:
+      kind: DockerImage
+      name: registry.access.redhat.com/ubi8/dotnet-80:8.0
+    generation: 1
+    importPolicy:
+      importMode: Legacy
+    name: 8.0-ubi8
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run .NET 9.0 applications on UBI 8. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/redhat-developer/s2i-dotnetcore/tree/main/9.0/build/README.md.
+      iconClass: icon-dotnet
+      openshift.io/display-name: .NET 9.0 (UBI 8)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleContextDir: app
+      sampleRef: dotnet-9.0
+      sampleRepo: https://github.com/redhat-developer/s2i-dotnetcore-ex
+      supports: dotnet,dotnet:9.0
+      tags: builder,dotnet,hidden
+      version: "9.0"
+    from:
+      kind: DockerImage
+      name: registry.access.redhat.com/ubi8/dotnet-90:9.0
+    generation: 1
+    importPolicy:
+      importMode: Legacy
+    name: "9.0"
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run .NET 9.0 applications on UBI 8. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/redhat-developer/s2i-dotnetcore/tree/main/9.0/build/README.md.
+      iconClass: icon-dotnet
+      openshift.io/display-name: .NET 9.0 (UBI 8)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleContextDir: app
+      sampleRef: dotnet-9.0
+      sampleRepo: https://github.com/redhat-developer/s2i-dotnetcore-ex
+      supports: dotnet,dotnet:9.0
+      tags: builder,dotnet
+      version: "9.0"
+    from:
+      kind: DockerImage
+      name: registry.access.redhat.com/ubi8/dotnet-90:9.0
+    generation: 1
+    importPolicy:
+      importMode: Legacy
+    name: 9.0-ubi8
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: |-
+        Build and run .NET applications. For more information about using this builder image, including OpenShift considerations, see https://github.com/redhat-developer/s2i-dotnetcore/tree/main/9.0/build/README.md.
+
+        WARNING: By selecting this tag, your application will automatically update to use the latest version of .NET available on OpenShift, including major version updates.
+      iconClass: icon-dotnet
+      openshift.io/display-name: .NET (Latest)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleContextDir: app
+      sampleRef: dotnet-9.0
+      sampleRepo: https://github.com/redhat-developer/s2i-dotnetcore-ex
+      supports: dotnet
+      tags: builder,dotnet,hidden
+    from:
+      kind: ImageStreamTag
+      name: 9.0-ubi8
+    generation: 1
+    importPolicy:
+      importMode: Legacy
+    name: latest
+    referencePolicy:
+      type: Local
+status:
+  dockerImageRepository: image-registry.openshift-image-registry.svc:5000/openshift/dotnet

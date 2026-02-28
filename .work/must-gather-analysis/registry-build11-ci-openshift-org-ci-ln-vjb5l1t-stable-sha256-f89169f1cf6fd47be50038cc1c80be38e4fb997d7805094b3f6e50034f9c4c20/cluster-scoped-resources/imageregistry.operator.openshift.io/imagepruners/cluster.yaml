@@ -1,0 +1,66 @@
+---
+apiVersion: imageregistry.operator.openshift.io/v1
+kind: ImagePruner
+metadata:
+  creationTimestamp: "2026-01-28T09:31:56Z"
+  generation: 1
+  managedFields:
+  - apiVersion: imageregistry.operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:failedJobsHistoryLimit: {}
+        f:ignoreInvalidImageReferences: {}
+        f:keepTagRevisions: {}
+        f:logLevel: {}
+        f:schedule: {}
+        f:successfulJobsHistoryLimit: {}
+        f:suspend: {}
+    manager: cluster-image-registry-operator
+    operation: Update
+    time: "2026-01-28T09:31:56Z"
+  - apiVersion: imageregistry.operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:observedGeneration: {}
+    manager: cluster-image-registry-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:31:57Z"
+  name: cluster
+  resourceVersion: "10051"
+  uid: 8d059553-fa9a-430a-af7a-dbfce3f7ad04
+spec:
+  failedJobsHistoryLimit: 3
+  ignoreInvalidImageReferences: true
+  keepTagRevisions: 3
+  logLevel: Normal
+  schedule: ""
+  successfulJobsHistoryLimit: 3
+  suspend: false
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:31:57Z"
+    message: Pruner CronJob has been created
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2026-01-28T09:31:57Z"
+    message: Pruner completed successfully
+    reason: Complete
+    status: "False"
+    type: Failed
+  - lastTransitionTime: "2026-01-28T09:31:57Z"
+    message: The pruner job has been scheduled
+    reason: Scheduled
+    status: "True"
+    type: Scheduled
+  - lastTransitionTime: "2026-01-28T09:31:57Z"
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  observedGeneration: 1

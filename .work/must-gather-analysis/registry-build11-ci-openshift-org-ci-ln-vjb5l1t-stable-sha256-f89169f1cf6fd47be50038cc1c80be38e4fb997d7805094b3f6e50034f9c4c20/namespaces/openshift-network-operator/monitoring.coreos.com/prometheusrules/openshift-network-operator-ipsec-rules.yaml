@@ -1,0 +1,42 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  creationTimestamp: "2026-01-28T09:29:31Z"
+  generation: 1
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          k:{"uid":"7763cebb-f1d7-4359-81b8-b55ef9916383"}: {}
+      f:spec:
+        f:groups:
+          k:{"name":"openshift-network.rules"}:
+            .: {}
+            f:name: {}
+            f:rules: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2026-01-28T09:29:31Z"
+  name: openshift-network-operator-ipsec-rules
+  namespace: openshift-network-operator
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: 7763cebb-f1d7-4359-81b8-b55ef9916383
+  resourceVersion: "4699"
+  uid: 0d98a725-933c-4ccf-a623-f28125d7e6c0
+spec:
+  groups:
+  - name: openshift-network.rules
+    rules:
+    - expr: |-
+        group by (mode,is_legacy_api) (
+          openshift_network_operator_ipsec_state{namespace=~"openshift-network-operator"}
+        )
+      record: openshift:openshift_network_operator_ipsec_state:info

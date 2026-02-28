@@ -1,0 +1,90 @@
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  creationTimestamp: "2026-01-28T09:40:17Z"
+  generation: 1
+  managedFields:
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          k:{"uid":"7763cebb-f1d7-4359-81b8-b55ef9916383"}: {}
+      f:webhooks:
+        k:{"name":"node.network-node-identity.openshift.io"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            f:caBundle: {}
+            f:url: {}
+          f:name: {}
+          f:rules: {}
+          f:sideEffects: {}
+        k:{"name":"pod.network-node-identity.openshift.io"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            f:caBundle: {}
+            f:url: {}
+          f:name: {}
+          f:rules: {}
+          f:sideEffects: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2026-01-28T09:40:17Z"
+  name: network-node-identity.openshift.io
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: 7763cebb-f1d7-4359-81b8-b55ef9916383
+  resourceVersion: "18627"
+  uid: 10749976-f0c6-4c9d-915f-227d71b33481
+webhooks:
+- admissionReviewVersions:
+  - v1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURnVENDQW1tZ0F3SUJBZ0lJQlZRVXAzd1ZHcDh3RFFZSktvWklodmNOQVFFTEJRQXdUakZNTUVvR0ExVUUKQXd4RGIzQmxibk5vYVdaMExXNWxkSGR2Y21zdGJtOWtaUzFwWkdWdWRHbDBlVjl1WlhSM2IzSnJMVzV2WkdVdAphV1JsYm5ScGRIa3RZMkZBTVRjMk9UVTVNalUzTVRBZUZ3MHlOakF4TWpnd09USTVNekJhRncwek5qQXhNall3Ck9USTVNekZhTUU0eFREQktCZ05WQkFNTVEyOXdaVzV6YUdsbWRDMXVaWFIzYjNKckxXNXZaR1V0YVdSbGJuUnAKZEhsZmJtVjBkMjl5YXkxdWIyUmxMV2xrWlc1MGFYUjVMV05oUURFM05qazFPVEkxTnpFd2dnRWlNQTBHQ1NxRwpTSWIzRFFFQkFRVUFBNElCRHdBd2dnRUtBb0lCQVFEWTVNWTFUdlNjM1FIN2ZoeXhBbFhMSGVvOXMwZUIyTFV6CloxeE1QS1p0c2psaDc1K1lZem1jM0RhaTE2dkZaYWZENDZIUjB4bk81VFIyVGV5NS8zdHVjMFhWTGhGVGpIekwKSW1lLzY0WTlmeUtHTmx6aWZHNnVLSUFnVk5NOGVPWktnY0M5T2NaQnZKZEQ1U1ZtK21vM3JTYmhyVjJnOGtJZQpRcndKc2FtelE4QVdqMGVtK0s5bFhMblR4MDhhbmVabXFkTzB5ZzVCR1lWekUrS2g1SjcwSFE4S0YvL3U0S1U3Cks4Q1U1RE5EbFlBOHNDMFJmNkhpUk9PTE9NQjQ5WlJ5N2V5bEh0SGNXVERlWGc1Q0djenBFRk85M0tTeDM4aTgKNnQ0S0huZU5weTVnejNMQU5UZlRoTnEvTEZsYzQwQ1l3bFN6ZTBoSjc3T3ArTWcvUVM0TEFnTUJBQUdqWXpCaApNQTRHQTFVZER3RUIvd1FFQXdJQ3BEQVBCZ05WSFJNQkFmOEVCVEFEQVFIL01CMEdBMVVkRGdRV0JCUkRuOUx3CmIwei9QdEFiTlVMOUluempaenJqbmpBZkJnTlZIU01FR0RBV2dCUkRuOUx3YjB6L1B0QWJOVUw5SW56alp6cmoKbmpBTkJna3Foa2lHOXcwQkFRc0ZBQU9DQVFFQUJ6NWgrWDJSSTNjZFpZcjdGRkVaY1gwQnUxUmRlVm8xR2ZRegpkWnhkOHZCMzlmTjdNanQyZ0UvTkhyVngzMEhXYXBHOTZrL0FNOHRGUlhnbjVSRzNGTkdQV2dKbUxuZDlhdzJRCjg0Tk5JamtzV1QyZytmRm1OM1QyYndELzcwSEtCSklLZWRFYkxRRUwxNTNFbXg3K1lVK2s3enNyMzhaOXdBWDEKclBTRVcwMmZ6RWVwNTlwQzdoMzhrU0paMXdaQVNLMlBkK25xY05hS09tOFdTK2Q5ekhwWDJkVFQ1U3FRYys0NAorZUxBYXhRR3VNRjZzMVZtaTUwU3ZGNzlPZUNWd0dVRHRpVHhnc1JyYm1WbEdJaVBMOGdYSkk2WDlkbldzdHpRCk9reEVsZEtvYVY0a01YNm9LODlpK1lJdzFCU2NlUi9DbEVnQWdGUVZmejhzc2s4c3RRPT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    url: https://127.0.0.1:9743/node
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: node.network-node-identity.openshift.io
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - '*'
+    apiVersions:
+    - '*'
+    operations:
+    - UPDATE
+    resources:
+    - nodes/status
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURnVENDQW1tZ0F3SUJBZ0lJQlZRVXAzd1ZHcDh3RFFZSktvWklodmNOQVFFTEJRQXdUakZNTUVvR0ExVUUKQXd4RGIzQmxibk5vYVdaMExXNWxkSGR2Y21zdGJtOWtaUzFwWkdWdWRHbDBlVjl1WlhSM2IzSnJMVzV2WkdVdAphV1JsYm5ScGRIa3RZMkZBTVRjMk9UVTVNalUzTVRBZUZ3MHlOakF4TWpnd09USTVNekJhRncwek5qQXhNall3Ck9USTVNekZhTUU0eFREQktCZ05WQkFNTVEyOXdaVzV6YUdsbWRDMXVaWFIzYjNKckxXNXZaR1V0YVdSbGJuUnAKZEhsZmJtVjBkMjl5YXkxdWIyUmxMV2xrWlc1MGFYUjVMV05oUURFM05qazFPVEkxTnpFd2dnRWlNQTBHQ1NxRwpTSWIzRFFFQkFRVUFBNElCRHdBd2dnRUtBb0lCQVFEWTVNWTFUdlNjM1FIN2ZoeXhBbFhMSGVvOXMwZUIyTFV6CloxeE1QS1p0c2psaDc1K1lZem1jM0RhaTE2dkZaYWZENDZIUjB4bk81VFIyVGV5NS8zdHVjMFhWTGhGVGpIekwKSW1lLzY0WTlmeUtHTmx6aWZHNnVLSUFnVk5NOGVPWktnY0M5T2NaQnZKZEQ1U1ZtK21vM3JTYmhyVjJnOGtJZQpRcndKc2FtelE4QVdqMGVtK0s5bFhMblR4MDhhbmVabXFkTzB5ZzVCR1lWekUrS2g1SjcwSFE4S0YvL3U0S1U3Cks4Q1U1RE5EbFlBOHNDMFJmNkhpUk9PTE9NQjQ5WlJ5N2V5bEh0SGNXVERlWGc1Q0djenBFRk85M0tTeDM4aTgKNnQ0S0huZU5weTVnejNMQU5UZlRoTnEvTEZsYzQwQ1l3bFN6ZTBoSjc3T3ArTWcvUVM0TEFnTUJBQUdqWXpCaApNQTRHQTFVZER3RUIvd1FFQXdJQ3BEQVBCZ05WSFJNQkFmOEVCVEFEQVFIL01CMEdBMVVkRGdRV0JCUkRuOUx3CmIwei9QdEFiTlVMOUluempaenJqbmpBZkJnTlZIU01FR0RBV2dCUkRuOUx3YjB6L1B0QWJOVUw5SW56alp6cmoKbmpBTkJna3Foa2lHOXcwQkFRc0ZBQU9DQVFFQUJ6NWgrWDJSSTNjZFpZcjdGRkVaY1gwQnUxUmRlVm8xR2ZRegpkWnhkOHZCMzlmTjdNanQyZ0UvTkhyVngzMEhXYXBHOTZrL0FNOHRGUlhnbjVSRzNGTkdQV2dKbUxuZDlhdzJRCjg0Tk5JamtzV1QyZytmRm1OM1QyYndELzcwSEtCSklLZWRFYkxRRUwxNTNFbXg3K1lVK2s3enNyMzhaOXdBWDEKclBTRVcwMmZ6RWVwNTlwQzdoMzhrU0paMXdaQVNLMlBkK25xY05hS09tOFdTK2Q5ekhwWDJkVFQ1U3FRYys0NAorZUxBYXhRR3VNRjZzMVZtaTUwU3ZGNzlPZUNWd0dVRHRpVHhnc1JyYm1WbEdJaVBMOGdYSkk2WDlkbldzdHpRCk9reEVsZEtvYVY0a01YNm9LODlpK1lJdzFCU2NlUi9DbEVnQWdGUVZmejhzc2s4c3RRPT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    url: https://127.0.0.1:9743/pod
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: pod.network-node-identity.openshift.io
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - '*'
+    apiVersions:
+    - '*'
+    operations:
+    - UPDATE
+    resources:
+    - pods/status
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10

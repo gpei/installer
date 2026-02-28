@@ -1,0 +1,175 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.131.0.8
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-78-215.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: router-default-69d986749c-f2gwp
+      namespace: openshift-ingress
+      uid: b9397286-9dd1-4e35-a286-c58a256a6533
+    zone: us-west-1c
+  - addresses:
+    - 10.129.2.9
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-22-208.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: router-default-69d986749c-g44cn
+      namespace: openshift-ingress
+      uid: f5e5b0a2-9f70-4962-a2b5-ac18079fa484
+    zone: us-west-1a
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:42:37Z"
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    generateName: router-default-
+    generation: 5
+    labels:
+      app: router
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      ingresscontroller.operator.openshift.io/owning-ingresscontroller: default
+      kubernetes.io/service-name: router-default
+      router: router-default
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:ingresscontroller.operator.openshift.io/owning-ingresscontroller: {}
+            f:kubernetes.io/service-name: {}
+            f:router: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"76ab11fa-04cb-45a6-8cab-84e9060b4675"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:42:37Z"
+    name: router-default-cvlr5
+    namespace: openshift-ingress
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: router-default
+      uid: 76ab11fa-04cb-45a6-8cab-84e9060b4675
+    resourceVersion: "21503"
+    uid: ae03e595-a512-4a91-a97c-2cab9194a6ee
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+  - name: https
+    port: 443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.131.0.8
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-78-215.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: router-default-69d986749c-f2gwp
+      namespace: openshift-ingress
+      uid: b9397286-9dd1-4e35-a286-c58a256a6533
+    zone: us-west-1c
+  - addresses:
+    - 10.129.2.9
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-22-208.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: router-default-69d986749c-g44cn
+      namespace: openshift-ingress
+      uid: f5e5b0a2-9f70-4962-a2b5-ac18079fa484
+    zone: us-west-1a
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:42:37Z"
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    generateName: router-internal-default-
+    generation: 5
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      ingresscontroller.operator.openshift.io/owning-ingresscontroller: default
+      kubernetes.io/service-name: router-internal-default
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:ingresscontroller.operator.openshift.io/owning-ingresscontroller: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"7b3e569b-497c-4142-bec4-20732e1633c5"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:42:37Z"
+    name: router-internal-default-dmjh8
+    namespace: openshift-ingress
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: router-internal-default
+      uid: 7b3e569b-497c-4142-bec4-20732e1633c5
+    resourceVersion: "21499"
+    uid: dc225f4e-38fe-4fa4-a8f3-1c25d3925f97
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+  - name: metrics
+    port: 1936
+    protocol: TCP
+  - name: https
+    port: 443
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "34886"

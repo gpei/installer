@@ -1,0 +1,57 @@
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+    annotations:
+        openshift-patch-reference: machineConfig-to-set-the-default-behavior-of-NODE_SIZING_ENABLED
+    creationTimestamp: "2026-01-28T09:32:24Z"
+    generation: 1
+    labels:
+        machineconfiguration.openshift.io/role: worker
+    managedFields:
+        - apiVersion: machineconfiguration.openshift.io/v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:metadata:
+                f:annotations:
+                    .: {}
+                    f:openshift-patch-reference: {}
+                f:labels:
+                    .: {}
+                    f:machineconfiguration.openshift.io/role: {}
+            f:spec:
+                .: {}
+                f:baseOSExtensionsContainerImage: {}
+                f:config:
+                    .: {}
+                    f:ignition:
+                        .: {}
+                        f:version: {}
+                    f:storage:
+                        .: {}
+                        f:files: {}
+                f:fips: {}
+                f:kernelArguments: {}
+                f:kernelType: {}
+                f:osImageURL: {}
+          manager: machine-config-controller
+          operation: Update
+          time: "2026-01-28T09:32:24Z"
+    name: 50-worker-auto-sizing-disabled
+    resourceVersion: "11694"
+    uid: 8c093182-2fb9-41ca-bbda-a424604aeb5b
+spec:
+    baseOSExtensionsContainerImage: ""
+    config:
+        ignition:
+            version: 3.5.0
+        storage:
+            files:
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 198
+                  mode: 420
+                  path: /etc/node-sizing-enabled.env
+    fips: false
+    kernelArguments: null
+    kernelType: ""
+    osImageURL: ""

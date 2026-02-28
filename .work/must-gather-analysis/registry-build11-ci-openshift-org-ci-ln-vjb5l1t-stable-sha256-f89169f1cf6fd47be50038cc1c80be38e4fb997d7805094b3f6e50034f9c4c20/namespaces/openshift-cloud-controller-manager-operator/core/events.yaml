@@ -1,0 +1,921 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:23Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: cluster-cloud-config-sync-leader
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3372"
+    uid: 676cd658-57bf-4a9b-af51-2874a9082a9c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:23Z"
+  message: ip-10-0-108-54_5eb99e84-10bf-4500-bdf0-d5b718cbc358 became leader
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: config-sync-controllers
+      operation: Update
+      time: "2026-01-28T09:28:23Z"
+    name: cluster-cloud-config-sync-leader.188edb018a1ef78a
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3374"
+    uid: 34e230d0-2b91-4dc6-a611-ebb0db61ada4
+  reason: LeaderElection
+  reportingComponent: ip-10-0-108-54_5eb99e84-10bf-4500-bdf0-d5b718cbc358
+  reportingInstance: ""
+  source:
+    component: ip-10-0-108-54_5eb99e84-10bf-4500-bdf0-d5b718cbc358
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:23Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: cluster-cloud-controller-manager-leader
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3364"
+    uid: 118973ce-067f-423c-a609-a5f887495569
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:23Z"
+  message: ip-10-0-108-54_b936cb95-7703-4c54-b5af-babe9bfc0d37 became leader
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-controller-manager-operator
+      operation: Update
+      time: "2026-01-28T09:28:23Z"
+    name: cluster-cloud-controller-manager-leader.188edb0180c18551
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3366"
+    uid: af36e494-ee72-4f7d-8e7c-b3ea03c5b796
+  reason: LeaderElection
+  reportingComponent: ip-10-0-108-54_b936cb95-7703-4c54-b5af-babe9bfc0d37
+  reportingInstance: ""
+  source:
+    component: ip-10-0-108-54_b936cb95-7703-4c54-b5af-babe9bfc0d37
+  type: Normal
+- apiVersion: v1
+  count: 13
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:27:13Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: cluster-cloud-controller-manager-operator-6bdf4df774
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3087"
+    uid: 4e5dcba9-1200-4f10-8817-5d2bc9609a45
+  kind: Event
+  lastTimestamp: "2026-01-28T09:27:34Z"
+  message: 'Error creating: pods "cluster-cloud-controller-manager-operator-6bdf4df774-"
+    is forbidden: autoscaling.openshift.io/ManagementCPUsOverride the cluster does
+    not have any nodes'
+  metadata:
+    creationTimestamp: "2026-01-28T09:27:13Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:27:34Z"
+    name: cluster-cloud-controller-manager-operator-6bdf4df774.188edaf15563a7fa
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3181"
+    uid: 3e749bb6-5d8b-4472-83da-a2a0d3a8f5b5
+  reason: FailedCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:19Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3319"
+    uid: 580d1d3e-7e7b-4f43-a88c-991fedb9047b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:19Z"
+  message: Successfully assigned openshift-cloud-controller-manager-operator/cluster-cloud-controller-manager-operator-7c4545c799-2qzh9
+    to ip-10-0-108-54.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:19Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:28:19Z"
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9.188edb00ad2dd7e2
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3323"
+    uid: 2f1dd08a-790e-4e0c-987b-53473efb8813
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:19Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-cloud-controller-manager}
+    kind: Pod
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3320"
+    uid: 580d1d3e-7e7b-4f43-a88c-991fedb9047b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:19Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:8fa5cc6ccc9113ab5809d1c3203d585b8620671c91d3e8b2ca34a25da4f6305c"
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:19Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:28:19Z"
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9.188edb00c049291e
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3334"
+    uid: 76980dd9-929e-42fb-b792-ff2b9d50599e
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:22Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-cloud-controller-manager}
+    kind: Pod
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3320"
+    uid: 580d1d3e-7e7b-4f43-a88c-991fedb9047b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:22Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:8fa5cc6ccc9113ab5809d1c3203d585b8620671c91d3e8b2ca34a25da4f6305c"
+    in 3.031s (3.031s including waiting). Image size: 566843459 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:28:22Z"
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9.188edb0174fb0809
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3355"
+    uid: 08d7860a-237a-4881-a1a8-8eca16f1a631
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:23Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-cloud-controller-manager}
+    kind: Pod
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3320"
+    uid: 580d1d3e-7e7b-4f43-a88c-991fedb9047b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:23Z"
+  message: 'Created container: cluster-cloud-controller-manager'
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:28:23Z"
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9.188edb017ca76755
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3360"
+    uid: c1f83d1b-6aa3-4e9f-bbce-d51ba6cfdaa3
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:23Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-cloud-controller-manager}
+    kind: Pod
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3320"
+    uid: 580d1d3e-7e7b-4f43-a88c-991fedb9047b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:23Z"
+  message: Started container cluster-cloud-controller-manager
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:28:23Z"
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9.188edb017d0c1ccf
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3361"
+    uid: 75679761-3051-4860-be03-7fdcd3e5a8d4
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:23Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{config-sync-controllers}
+    kind: Pod
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3320"
+    uid: 580d1d3e-7e7b-4f43-a88c-991fedb9047b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:23Z"
+  message: Container image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:8fa5cc6ccc9113ab5809d1c3203d585b8620671c91d3e8b2ca34a25da4f6305c"
+    already present on machine
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:28:23Z"
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9.188edb017d2ebe4a
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3362"
+    uid: 6dd599f5-3f75-4411-9715-2a39070fca22
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:23Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{config-sync-controllers}
+    kind: Pod
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3320"
+    uid: 580d1d3e-7e7b-4f43-a88c-991fedb9047b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:23Z"
+  message: 'Created container: config-sync-controllers'
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:28:23Z"
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9.188edb018638e8c7
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3369"
+    uid: 1653c977-8de2-477c-a3cf-688fe9a56fe7
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:23Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{config-sync-controllers}
+    kind: Pod
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3320"
+    uid: 580d1d3e-7e7b-4f43-a88c-991fedb9047b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:23Z"
+  message: Started container config-sync-controllers
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:28:23Z"
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9.188edb01868d72e9
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3370"
+    uid: 652007a9-3ebd-4765-972c-19dda54a29ba
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 6
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:23Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3320"
+    uid: 580d1d3e-7e7b-4f43-a88c-991fedb9047b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:27Z"
+  message: Container image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b"
+    already present on machine
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:31:27Z"
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9.188edb0186a9c8e8
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "9257"
+    uid: e2f4f733-c2e7-4ea2-95a0-670cd09f2798
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 6
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:23Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3320"
+    uid: 580d1d3e-7e7b-4f43-a88c-991fedb9047b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:52Z"
+  message: 'Created container: kube-rbac-proxy'
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:31:52Z"
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9.188edb018eb6e467
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "9713"
+    uid: 136d3285-c24f-48e8-912d-364e220e7449
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 6
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:23Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3320"
+    uid: 580d1d3e-7e7b-4f43-a88c-991fedb9047b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:53Z"
+  message: Started container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:31:53Z"
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9.188edb018f0d79b0
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "9737"
+    uid: c7d64099-a6a8-4f8e-98f1-a6b3ee1d98cd
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 15
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:25Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3320"
+    uid: 580d1d3e-7e7b-4f43-a88c-991fedb9047b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:14Z"
+  message: Back-off restarting failed container kube-rbac-proxy in pod cluster-cloud-controller-manager-operator-7c4545c799-2qzh9_openshift-cloud-controller-manager-operator(580d1d3e-7e7b-4f43-a88c-991fedb9047b)
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:31:14Z"
+    name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9.188edb01fc1a442e
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "8721"
+    uid: c8aae5f1-2a91-40be-8550-51617c04ec67
+  reason: BackOff
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Warning
+- apiVersion: v1
+  count: 13
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:27:38Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: cluster-cloud-controller-manager-operator-7c4545c799
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3199"
+    uid: d44952e5-d4d1-4066-9de8-2595518d1bb6
+  kind: Event
+  lastTimestamp: "2026-01-28T09:27:59Z"
+  message: 'Error creating: pods "cluster-cloud-controller-manager-operator-7c4545c799-"
+    is forbidden: autoscaling.openshift.io/ManagementCPUsOverride the cluster does
+    not have any nodes'
+  metadata:
+    creationTimestamp: "2026-01-28T09:27:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:27:59Z"
+    name: cluster-cloud-controller-manager-operator-7c4545c799.188edaf720e458bc
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3254"
+    uid: 1e1fc3a1-192e-4db2-8398-f8aebc981725
+  reason: FailedCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:19Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: cluster-cloud-controller-manager-operator-7c4545c799
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3203"
+    uid: d44952e5-d4d1-4066-9de8-2595518d1bb6
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:19Z"
+  message: 'Created pod: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9'
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:19Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:28:19Z"
+    name: cluster-cloud-controller-manager-operator-7c4545c799.188edb00acebc38c
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3321"
+    uid: 620f2821-5646-41cc-8da8-05bff91db812
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:27:13Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-cloud-controller-manager-operator
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3086"
+    uid: ece3218a-170a-4030-9bae-bcf2d4234913
+  kind: Event
+  lastTimestamp: "2026-01-28T09:27:13Z"
+  message: Scaled up replica set cluster-cloud-controller-manager-operator-6bdf4df774
+    from 0 to 1
+  metadata:
+    creationTimestamp: "2026-01-28T09:27:13Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:27:13Z"
+    name: cluster-cloud-controller-manager-operator.188edaf155281f1c
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3088"
+    uid: b2821794-7c8a-466e-b4ce-243ea0a081c0
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:27:38Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-cloud-controller-manager-operator
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3194"
+    uid: ece3218a-170a-4030-9bae-bcf2d4234913
+  kind: Event
+  lastTimestamp: "2026-01-28T09:27:38Z"
+  message: Scaled down replica set cluster-cloud-controller-manager-operator-6bdf4df774
+    from 1 to 0
+  metadata:
+    creationTimestamp: "2026-01-28T09:27:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:27:38Z"
+    name: cluster-cloud-controller-manager-operator.188edaf71ff136f5
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3196"
+    uid: be7f037f-19dc-4b10-8ae9-0cc338fa2045
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:27:38Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-cloud-controller-manager-operator
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3198"
+    uid: ece3218a-170a-4030-9bae-bcf2d4234913
+  kind: Event
+  lastTimestamp: "2026-01-28T09:27:38Z"
+  message: Scaled up replica set cluster-cloud-controller-manager-operator-7c4545c799
+    from 0 to 1
+  metadata:
+    creationTimestamp: "2026-01-28T09:27:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:27:38Z"
+    name: cluster-cloud-controller-manager-operator.188edaf720c7fd22
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "3200"
+    uid: 34895b4a-d9e4-4921-a51c-6fe46e34ce9c
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "34966"

@@ -1,0 +1,26 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  creationTimestamp: "2026-01-28T09:31:07Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:rules: {}
+    manager: cluster-storage-operator
+    operation: Update
+    time: "2026-01-28T09:31:07Z"
+  name: aws-ebs-csi-driver-operator-aws-config-role
+  namespace: openshift-config-managed
+  resourceVersion: "8180"
+  uid: 19b49f11-2b13-431d-9343-84e4aa75878b
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - configmaps
+  verbs:
+  - get
+  - list
+  - watch

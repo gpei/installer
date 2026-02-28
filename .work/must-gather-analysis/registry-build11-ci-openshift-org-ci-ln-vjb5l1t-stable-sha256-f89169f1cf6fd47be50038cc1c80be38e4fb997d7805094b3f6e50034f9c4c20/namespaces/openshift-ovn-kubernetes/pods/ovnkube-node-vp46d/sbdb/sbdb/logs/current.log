@@ -1,0 +1,27 @@
+2026-01-28T09:42:20.577210379Z + [[ -f /env/_master ]]
+2026-01-28T09:42:20.577210379Z + . /ovnkube-lib/ovnkube-lib.sh
+2026-01-28T09:42:20.577364702Z ++ set -x
+2026-01-28T09:42:20.577364702Z ++ K8S_NODE=
+2026-01-28T09:42:20.577364702Z ++ [[ -n '' ]]
+2026-01-28T09:42:20.577364702Z ++ northd_pidfile=/var/run/ovn/ovn-northd.pid
+2026-01-28T09:42:20.577364702Z ++ controller_pidfile=/var/run/ovn/ovn-controller.pid
+2026-01-28T09:42:20.577364702Z ++ controller_logfile=/var/log/ovn/acl-audit-log.log
+2026-01-28T09:42:20.577364702Z ++ vswitch_dbsock=/var/run/openvswitch/db.sock
+2026-01-28T09:42:20.577364702Z ++ nbdb_pidfile=/var/run/ovn/ovnnb_db.pid
+2026-01-28T09:42:20.577364702Z ++ nbdb_sock=/var/run/ovn/ovnnb_db.sock
+2026-01-28T09:42:20.577364702Z ++ nbdb_ctl=/var/run/ovn/ovnnb_db.ctl
+2026-01-28T09:42:20.577364702Z ++ sbdb_pidfile=/var/run/ovn/ovnsb_db.pid
+2026-01-28T09:42:20.577364702Z ++ sbdb_sock=/var/run/ovn/ovnsb_db.sock
+2026-01-28T09:42:20.577364702Z ++ sbdb_ctl=/var/run/ovn/ovnsb_db.ctl
+2026-01-28T09:42:20.578893246Z + trap quit-sbdb TERM INT
+2026-01-28T09:42:20.578909747Z + start-sbdb info
+2026-01-28T09:42:20.578919577Z + local log_level=info
+2026-01-28T09:42:20.578996239Z + [[ 1 -ne 1 ]]
+2026-01-28T09:42:20.579216944Z + wait 3284
+2026-01-28T09:42:20.579318926Z + exec /usr/share/ovn/scripts/ovn-ctl --no-monitor --db-sb-sock=/var/run/ovn/ovnsb_db.sock '--ovn-sb-log=-vconsole:info -vfile:off -vPATTERN:console:%D{%Y-%m-%dT%H:%M:%S.###Z}|%05N|%c%T|%p|%m' run_sb_ovsdb
+2026-01-28T09:42:20.659898364Z /etc/ovn/ovnsb_db.db does not exist ... (warning).
+2026-01-28T09:42:20.681641509Z Creating empty database /etc/ovn/ovnsb_db.db.
+2026-01-28T09:42:20.713346006Z 2026-01-28T09:42:20.713Z|00001|vlog|INFO|opened log file /var/log/ovn/ovsdb-server-sb.log
+2026-01-28T09:42:20.718138653Z 2026-01-28T09:42:20.718Z|00002|ovsdb_server|INFO|ovsdb-server (Open vSwitch) 3.5.2-51.el9fdp
+2026-01-28T09:42:30.719556529Z 2026-01-28T09:42:30.719Z|00003|memory|INFO|15340 kB peak resident set size after 10.0 seconds
+2026-01-28T09:42:30.719614630Z 2026-01-28T09:42:30.719Z|00004|memory|INFO|atoms:16597 cells:15737 json-caches:2 monitors:5 n-weak-refs:112 sessions:3

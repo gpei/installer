@@ -1,0 +1,3519 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:40Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cluster-olm-operator-6b4797576b-g5m7z
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "3580"
+    uid: 03e90898-2155-4f76-b896-b84f87513f9d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:40Z"
+  message: '0/2 nodes are available: 2 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+    }. preemption: 0/2 nodes are available: 2 Preemption is not helpful for scheduling.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:28:40Z"
+    name: cluster-olm-operator-6b4797576b-g5m7z.188edb0587700a4d
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "3581"
+    uid: f7c5dcc9-e8d6-420e-a61b-a139a276b16d
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:08Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cluster-olm-operator-6b4797576b-g5m7z
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "3584"
+    uid: 03e90898-2155-4f76-b896-b84f87513f9d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:08Z"
+  message: Successfully assigned openshift-cluster-olm-operator/cluster-olm-operator-6b4797576b-g5m7z
+    to ip-10-0-108-54.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:30:08Z"
+    name: cluster-olm-operator-6b4797576b-g5m7z.188edb1a215af725
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "5422"
+    uid: 70f6a9db-6b07-4ae5-b469-708efe7330c8
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:09Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cluster-olm-operator-6b4797576b-g5m7z
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "5412"
+    uid: 03e90898-2155-4f76-b896-b84f87513f9d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:09Z"
+  message: Add eth0 [10.130.0.12/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2026-01-28T09:30:09Z"
+    name: cluster-olm-operator-6b4797576b-g5m7z.188edb1a3fc0d253
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "5498"
+    uid: 4234ebbd-6ab8-4716-86f1-def2ef06d9c6
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:09Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{copy-catalogd-manifests}
+    kind: Pod
+    name: cluster-olm-operator-6b4797576b-g5m7z
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "5375"
+    uid: 03e90898-2155-4f76-b896-b84f87513f9d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:09Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:f7d0d3af8ca46727b17eae293799af55706dedd1ff2e9ef0fa73f804fd7a93fa"
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:09Z"
+    name: cluster-olm-operator-6b4797576b-g5m7z.188edb1a408ec536
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "5501"
+    uid: 4fc56c8a-0ff3-4cc5-b961-c711f0cc9373
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:23Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{copy-catalogd-manifests}
+    kind: Pod
+    name: cluster-olm-operator-6b4797576b-g5m7z
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "5375"
+    uid: 03e90898-2155-4f76-b896-b84f87513f9d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:23Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:f7d0d3af8ca46727b17eae293799af55706dedd1ff2e9ef0fa73f804fd7a93fa"
+    in 14.163s (14.163s including waiting). Image size: 453909640 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:23Z"
+    name: cluster-olm-operator-6b4797576b-g5m7z.188edb1d8cc94df1
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "5720"
+    uid: 9f8bc1ca-45ab-4224-8669-701edd3f8277
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{copy-catalogd-manifests}
+    kind: Pod
+    name: cluster-olm-operator-6b4797576b-g5m7z
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "5375"
+    uid: 03e90898-2155-4f76-b896-b84f87513f9d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:28Z"
+  message: 'Created container: copy-catalogd-manifests'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:28Z"
+    name: cluster-olm-operator-6b4797576b-g5m7z.188edb1eb9c80fdf
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "5768"
+    uid: b3e8aa55-f20d-401f-abab-4094078cdb8b
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{copy-catalogd-manifests}
+    kind: Pod
+    name: cluster-olm-operator-6b4797576b-g5m7z
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "5375"
+    uid: 03e90898-2155-4f76-b896-b84f87513f9d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:28Z"
+  message: Started container copy-catalogd-manifests
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:28Z"
+    name: cluster-olm-operator-6b4797576b-g5m7z.188edb1ece361710
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "5775"
+    uid: ccfac5c8-b3a8-4efc-a5f8-beb407a64c6b
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{copy-operator-controller-manifests}
+    kind: Pod
+    name: cluster-olm-operator-6b4797576b-g5m7z
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "5375"
+    uid: 03e90898-2155-4f76-b896-b84f87513f9d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:29Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:3f0a8a5999709f6e5fd01bc9c73c9aae75ea34e4eb919693b17ac272a2903b59"
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:29Z"
+    name: cluster-olm-operator-6b4797576b-g5m7z.188edb1ef6cd0d1b
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "5803"
+    uid: 579e56c9-1c3b-42f5-b290-701af6181dd6
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:45Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{copy-operator-controller-manifests}
+    kind: Pod
+    name: cluster-olm-operator-6b4797576b-g5m7z
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "5375"
+    uid: 03e90898-2155-4f76-b896-b84f87513f9d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:45Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:3f0a8a5999709f6e5fd01bc9c73c9aae75ea34e4eb919693b17ac272a2903b59"
+    in 15.664s (15.664s including waiting). Image size: 527156612 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:45Z"
+    name: cluster-olm-operator-6b4797576b-g5m7z.188edb229c735bb9
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "6881"
+    uid: 370197c4-636d-428f-977e-306db696af2c
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:46Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{copy-operator-controller-manifests}
+    kind: Pod
+    name: cluster-olm-operator-6b4797576b-g5m7z
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "5375"
+    uid: 03e90898-2155-4f76-b896-b84f87513f9d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:46Z"
+  message: 'Created container: copy-operator-controller-manifests'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:46Z"
+    name: cluster-olm-operator-6b4797576b-g5m7z.188edb22dcc8f074
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "6961"
+    uid: da61f764-e8a5-450f-a5ea-8729361329c6
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:46Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{copy-operator-controller-manifests}
+    kind: Pod
+    name: cluster-olm-operator-6b4797576b-g5m7z
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "5375"
+    uid: 03e90898-2155-4f76-b896-b84f87513f9d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:46Z"
+  message: Started container copy-operator-controller-manifests
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:46Z"
+    name: cluster-olm-operator-6b4797576b-g5m7z.188edb22deea0217
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "6966"
+    uid: bb77b6a0-2702-419c-a6ff-72ec7fe48f76
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:47Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-olm-operator}
+    kind: Pod
+    name: cluster-olm-operator-6b4797576b-g5m7z
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "5375"
+    uid: 03e90898-2155-4f76-b896-b84f87513f9d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:47Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:1ce75bb705ce22107366132679b7b435eb0d2e5ca6096f5669ea5c4eba39da1a"
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:47Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:47Z"
+    name: cluster-olm-operator-6b4797576b-g5m7z.188edb230aef5824
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7021"
+    uid: c179f333-eae0-4286-900e-645bd5599592
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-olm-operator}
+    kind: Pod
+    name: cluster-olm-operator-6b4797576b-g5m7z
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "5375"
+    uid: 03e90898-2155-4f76-b896-b84f87513f9d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:58Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:1ce75bb705ce22107366132679b7b435eb0d2e5ca6096f5669ea5c4eba39da1a"
+    in 11.188s (11.188s including waiting). Image size: 514874345 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:58Z"
+    name: cluster-olm-operator-6b4797576b-g5m7z.188edb25a5d34305
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7542"
+    uid: 372219fd-216c-41a9-8fd7-dc12f1011cfd
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-olm-operator}
+    kind: Pod
+    name: cluster-olm-operator-6b4797576b-g5m7z
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "5375"
+    uid: 03e90898-2155-4f76-b896-b84f87513f9d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:59Z"
+  message: 'Created container: cluster-olm-operator'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:59Z"
+    name: cluster-olm-operator-6b4797576b-g5m7z.188edb26065234ea
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7651"
+    uid: 6fea6564-6f65-4440-acb9-95b3de5d5b0a
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-olm-operator}
+    kind: Pod
+    name: cluster-olm-operator-6b4797576b-g5m7z
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "5375"
+    uid: 03e90898-2155-4f76-b896-b84f87513f9d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:00Z"
+  message: Started container cluster-olm-operator
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:31:00Z"
+    name: cluster-olm-operator-6b4797576b-g5m7z.188edb260a80bb87
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7652"
+    uid: f040d9bb-952a-4256-b599-067bd6b8acc3
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 15
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:25:56Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: cluster-olm-operator-6b4797576b
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "1520"
+    uid: 8443f810-790e-4b20-b42f-17744d2840fe
+  kind: Event
+  lastTimestamp: "2026-01-28T09:27:18Z"
+  message: 'Error creating: pods "cluster-olm-operator-6b4797576b-" is forbidden:
+    autoscaling.openshift.io/ManagementCPUsOverride the cluster does not have any
+    nodes'
+  metadata:
+    creationTimestamp: "2026-01-28T09:25:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:27:18Z"
+    name: cluster-olm-operator-6b4797576b.188edadf5cfd211c
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "3120"
+    uid: 8cabcc66-9ab7-43e9-b04d-c14ac4aeecb6
+  reason: FailedCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:40Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: cluster-olm-operator-6b4797576b
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "1524"
+    uid: 8443f810-790e-4b20-b42f-17744d2840fe
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:40Z"
+  message: 'Created pod: cluster-olm-operator-6b4797576b-g5m7z'
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:28:40Z"
+    name: cluster-olm-operator-6b4797576b.188edb0587689fda
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "3582"
+    uid: 6f9e2103-4172-411c-9adb-1c1af59b2521
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:00Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: cluster-olm-operator-lock
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7679"
+    uid: 20c1e5bb-861c-4647-bee2-3cfd5dcb209d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:00Z"
+  message: cluster-olm-operator-6b4797576b-g5m7z_356987dd-131d-4579-b4f3-30696dfabf62
+    became leader
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:00Z"
+    name: cluster-olm-operator-lock.188edb262bd8c873
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7682"
+    uid: d6ca4ed4-a191-4815-ab74-533928186b87
+  reason: LeaderElection
+  reportingComponent: cluster-olm-operator
+  reportingInstance: ""
+  source:
+    component: cluster-olm-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:25:56Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "1519"
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:25:56Z"
+  message: Scaled up replica set cluster-olm-operator-6b4797576b from 0 to 1
+  metadata:
+    creationTimestamp: "2026-01-28T09:25:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:25:56Z"
+    name: cluster-olm-operator.188edadf5c917b8e
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "1521"
+    uid: 825eb803-7d2f-4fc5-8bd0-ad21657786f7
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:00Z"
+  message: FeatureGates updated to featuregates.Features{Enabled:[]v1.FeatureGateName{"AdditionalRoutingCapabilities",
+    "AdminNetworkPolicy", "AlibabaPlatform", "AzureWorkloadIdentity", "BuildCSIVolumes",
+    "CPMSMachineNamePrefix", "ConsolePluginContentSecurityPolicy", "ExternalOIDC",
+    "ExternalOIDCWithUIDAndExtraClaimMappings", "GatewayAPI", "GatewayAPIController",
+    "HighlyAvailableArbiter", "ImageVolume", "IngressControllerLBSubnetsAWS", "KMSv1",
+    "MachineConfigNodes", "ManagedBootImages", "ManagedBootImagesAWS", "MetricsCollectionProfiles",
+    "NetworkDiagnosticsConfig", "NetworkLiveMigration", "NetworkSegmentation", "NewOLM",
+    "PinnedImages", "PreconfiguredUDNAddresses", "ProcMountType", "RouteAdvertisements",
+    "RouteExternalCertificate", "ServiceAccountTokenNodeBinding", "SetEIPForNLBIngressController",
+    "SigstoreImageVerification", "StoragePerformantSecurityPolicy", "UpgradeStatus",
+    "UserNamespacesPodSecurityStandards", "UserNamespacesSupport", "VSphereMultiDisk",
+    "VSphereMultiNetworks"}, Disabled:[]v1.FeatureGateName{"AWSClusterHostedDNS",
+    "AWSClusterHostedDNSInstall", "AWSDedicatedHosts", "AWSServiceLBNetworkSecurityGroup",
+    "AutomatedEtcdBackup", "AzureClusterHostedDNSInstall", "AzureDedicatedHosts",
+    "AzureMultiDisk", "BootImageSkewEnforcement", "BootcNodeManagement", "ClusterAPIInstall",
+    "ClusterAPIInstallIBMCloud", "ClusterMonitoringConfig", "ClusterVersionOperatorConfiguration",
+    "DNSNameResolver", "DualReplica", "DyanmicServiceEndpointIBMCloud", "DynamicResourceAllocation",
+    "EtcdBackendQuota", "EventedPLEG", "Example", "Example2", "ExternalSnapshotMetadata",
+    "GCPClusterHostedDNS", "GCPClusterHostedDNSInstall", "GCPCustomAPIEndpoints",
+    "GCPCustomAPIEndpointsInstall", "ImageModeStatusReporting", "ImageStreamImportMode",
+    "IngressControllerDynamicConfigurationManager", "InsightsConfig", "InsightsConfigAPI",
+    "InsightsOnDemandDataGather", "IrreconcilableMachineConfig", "KMSEncryptionProvider",
+    "MachineAPIMigration", "MachineAPIOperatorDisableMachineHealthCheckController",
+    "ManagedBootImagesAzure", "ManagedBootImagesvSphere", "MaxUnavailableStatefulSet",
+    "MinimumKubeletVersion", "MixedCPUsAllocation", "MultiArchInstallAzure", "MultiDiskSetup",
+    "MutatingAdmissionPolicy", "NewOLMCatalogdAPIV1Metas", "NewOLMOwnSingleNamespace",
+    "NewOLMPreflightPermissionChecks", "NewOLMWebhookProviderOpenshiftServiceCA",
+    "NoRegistryClusterOperations", "NodeSwap", "NutanixMultiSubnets", "OVNObservability",
+    "OpenShiftPodSecurityAdmission", "SELinuxMount", "ShortCertRotation", "SignatureStores",
+    "SigstoreImageVerificationPKI", "TranslateStreamCloseWebsocketRequests", "VSphereConfigurableMaxAllowedBlockVolumesPerNode",
+    "VSphereHostVMGroupZonal", "VSphereMixedNodeEnv", "VolumeAttributesClass", "VolumeGroupSnapshot"}}
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:00Z"
+    name: cluster-olm-operator.188edb262de9ce1e
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7683"
+    uid: e4280b91-8808-4f4c-b79b-73495724016b
+  reason: FeatureGatesInitialized
+  reportingComponent: cluster-olm-operator
+  reportingInstance: ""
+  source:
+    component: cluster-olm-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:00Z"
+  message: Created Namespace/openshift-operator-controller because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:00Z"
+    name: cluster-olm-operator.188edb262ec5553a
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7686"
+    uid: 341018f8-bef3-4c24-8816-02c743ae67e3
+  reason: NamespaceCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:00Z"
+  message: Created CustomResourceDefinition.apiextensions.k8s.io/clusterextensions.olm.operatorframework.io
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:00Z"
+    name: cluster-olm-operator.188edb26303d9fc6
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7698"
+    uid: b5d1bf73-afb3-41cf-b636-8190c14f30ad
+  reason: CustomResourceDefinitionCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:00Z"
+  message: Created ServiceAccount/operator-controller-controller-manager -n openshift-operator-controller
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:00Z"
+    name: cluster-olm-operator.188edb2630bd310e
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7701"
+    uid: 6a663610-2802-4cff-9380-c06762382de9
+  reason: ServiceAccountCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:00Z"
+  message: Created Role.rbac.authorization.k8s.io/operator-controller-manager-role
+    -n openshift-config because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:00Z"
+    name: cluster-olm-operator.188edb26310e91c3
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7704"
+    uid: c9ffc904-9a1b-489b-93d3-4a6bcdda488c
+  reason: RoleCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:00Z"
+  message: Created Role.rbac.authorization.k8s.io/operator-controller-leader-election-role
+    -n openshift-operator-controller because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:00Z"
+    name: cluster-olm-operator.188edb2631df51d4
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7707"
+    uid: 29d51d10-0640-490e-866f-7e567ecbc9a8
+  reason: RoleCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:00Z"
+  message: Created Role.rbac.authorization.k8s.io/operator-controller-manager-role
+    -n openshift-operator-controller because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:00Z"
+    name: cluster-olm-operator.188edb2632293be6
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7709"
+    uid: b1762319-9147-4eb3-98ca-78d22a792570
+  reason: RoleCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:00Z"
+  message: Created Role.rbac.authorization.k8s.io/operator-controller-metrics-monitor-role
+    -n openshift-operator-controller because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:00Z"
+    name: cluster-olm-operator.188edb26326db124
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7711"
+    uid: ddda7a3f-1878-4455-9201-a3ab0e9e7cdd
+  reason: RoleCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:00Z"
+  message: Created ClusterRole.rbac.authorization.k8s.io/operator-controller-clusterextension-editor-role
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:00Z"
+    name: cluster-olm-operator.188edb2632d64387
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7714"
+    uid: af717f0e-65e6-4651-9ac0-3bdf1dd9d4e3
+  reason: ClusterRoleCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:00Z"
+  message: clusteroperator/olm version "operator" changed from "" to "4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest"
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:01Z"
+    name: cluster-olm-operator.188edb2633f4e74a
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7743"
+    uid: c3f9143c-3705-4861-a3e7-c9dce5be31f7
+  reason: OperatorVersionChanged
+  reportingComponent: olm-status-controller-statussyncer_olm
+  reportingInstance: ""
+  source:
+    component: olm-status-controller-statussyncer_olm
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:00Z"
+  message: 'Status for clusteroperator/olm changed: Degraded set to Unknown (""),Progressing
+    set to Unknown (""),Available set to Unknown (""),Upgradeable set to Unknown (""),EvaluationConditionsDetected
+    set to Unknown (""),status.relatedObjects changed from [{"" "namespaces" "" "openshift-cluster-olm-operator"}
+    {"operator.openshift.io" "olms" "" "cluster"}] to [{"" "namespaces" "" "openshift-catalogd"}
+    {"apiextensions.k8s.io" "customresourcedefinitions" "" "clustercatalogs.olm.operatorframework.io"}
+    {"" "serviceaccounts" "openshift-catalogd" "catalogd-controller-manager"} {"rbac.authorization.k8s.io"
+    "roles" "openshift-catalogd" "catalogd-leader-election-role"} {"rbac.authorization.k8s.io"
+    "roles" "openshift-catalogd" "catalogd-manager-role"} {"rbac.authorization.k8s.io"
+    "roles" "openshift-catalogd" "catalogd-metrics-monitor-role"} {"rbac.authorization.k8s.io"
+    "roles" "openshift-config" "catalogd-manager-role"} {"rbac.authorization.k8s.io"
+    "clusterroles" "" "catalogd-manager-role"} {"rbac.authorization.k8s.io" "clusterroles"
+    "" "catalogd-metrics-reader"} {"rbac.authorization.k8s.io" "clusterroles" "" "catalogd-proxy-role"}
+    {"rbac.authorization.k8s.io" "rolebindings" "openshift-catalogd" "catalogd-leader-election-rolebinding"}
+    {"rbac.authorization.k8s.io" "rolebindings" "openshift-catalogd" "catalogd-manager-rolebinding"}
+    {"rbac.authorization.k8s.io" "rolebindings" "openshift-catalogd" "catalogd-metrics-monitor-rolebinding"}
+    {"rbac.authorization.k8s.io" "rolebindings" "openshift-config" "catalogd-manager-rolebinding"}
+    {"rbac.authorization.k8s.io" "clusterrolebindings" "" "catalogd-manager-rolebinding"}
+    {"rbac.authorization.k8s.io" "clusterrolebindings" "" "catalogd-proxy-rolebinding"}
+    {"" "configmaps" "openshift-catalogd" "catalogd-trusted-ca-bundle"} {"" "services"
+    "openshift-catalogd" "catalogd-service"} {"apps" "deployments" "openshift-catalogd"
+    "catalogd-controller-manager"} {"monitoring.coreos.com" "servicemonitors" "openshift-catalogd"
+    "catalogd-metrics-monitor"} {"networking.k8s.io" "networkpolicies" "openshift-catalogd"
+    "catalogd-controller-manager"} {"networking.k8s.io" "networkpolicies" "openshift-catalogd"
+    "catalogd-default-deny-all-traffic"} {"olm.operatorframework.io" "clustercatalogs"
+    "" "openshift-certified-operators"} {"olm.operatorframework.io" "clustercatalogs"
+    "" "openshift-community-operators"} {"olm.operatorframework.io" "clustercatalogs"
+    "" "openshift-redhat-marketplace"} {"olm.operatorframework.io" "clustercatalogs"
+    "" "openshift-redhat-operators"} {"admissionregistration.k8s.io" "mutatingwebhookconfigurations"
+    "" "catalogd-mutating-webhook-configuration"} {"" "namespaces" "" "openshift-operator-controller"}
+    {"apiextensions.k8s.io" "customresourcedefinitions" "" "clusterextensions.olm.operatorframework.io"}
+    {"" "serviceaccounts" "openshift-operator-controller" "operator-controller-controller-manager"}
+    {"rbac.authorization.k8s.io" "roles" "openshift-config" "operator-controller-manager-role"}
+    {"rbac.authorization.k8s.io" "roles" "openshift-operator-controller" "operator-controller-leader-election-role"}
+    {"rbac.authorization.k8s.io" "roles" "openshift-operator-controller" "operator-controller-manager-role"}
+    {"rbac.authorization.k8s.io" "roles" "openshift-operator-controller" "operator-controller-metrics-monitor-role"}
+    {"rbac.authorization.k8s.io" "clusterroles" "" "operator-controller-clusterextension-editor-role"}
+    {"rbac.authorization.k8s.io" "clusterroles" "" "operator-controller-clusterextension-viewer-role"}
+    {"rbac.authorization.k8s.io" "clusterroles" "" "operator-controller-manager-role"}
+    {"rbac.authorization.k8s.io" "clusterroles" "" "operator-controller-metrics-reader"}
+    {"rbac.authorization.k8s.io" "clusterroles" "" "operator-controller-proxy-role"}
+    {"rbac.authorization.k8s.io" "rolebindings" "openshift-config" "operator-controller-manager-rolebinding"}
+    {"rbac.authorization.k8s.io" "rolebindings" "openshift-operator-controller" "operator-controller-leader-election-rolebinding"}
+    {"rbac.authorization.k8s.io" "rolebindings" "openshift-operator-controller" "operator-controller-manager-rolebinding"}
+    {"rbac.authorization.k8s.io" "rolebindings" "openshift-operator-controller" "operator-controller-metrics-monitor-rolebinding"}
+    {"rbac.authorization.k8s.io" "clusterrolebindings" "" "operator-controller-manager-rolebinding"}
+    {"rbac.authorization.k8s.io" "clusterrolebindings" "" "operator-controller-proxy-rolebinding"}
+    {"" "configmaps" "openshift-operator-controller" "operator-controller-trusted-ca-bundle"}
+    {"" "services" "openshift-operator-controller" "operator-controller-service"}
+    {"apps" "deployments" "openshift-operator-controller" "operator-controller-controller-manager"}
+    {"monitoring.coreos.com" "servicemonitors" "openshift-operator-controller" "operator-controller-metrics-monitor"}
+    {"networking.k8s.io" "networkpolicies" "openshift-operator-controller" "operator-controller-controller-manager"}
+    {"networking.k8s.io" "networkpolicies" "openshift-operator-controller" "operator-controller-default-deny-all-traffic"}
+    {"operator.openshift.io" "olms" "" "cluster"} {"" "namespaces" "" "openshift-cluster-olm-operator"}],status.versions
+    changed from [] to [{"operator" "4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest"}]'
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:00Z"
+    name: cluster-olm-operator.188edb2634ca0467
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7722"
+    uid: d7a60bd6-7cfb-45e6-baf3-b1a924fabca2
+  reason: OperatorStatusChanged
+  reportingComponent: olm-status-controller-statussyncer_olm
+  reportingInstance: ""
+  source:
+    component: olm-status-controller-statussyncer_olm
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:00Z"
+  message: Created Namespace/openshift-catalogd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:00Z"
+    name: cluster-olm-operator.188edb2634fea308
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7740"
+    uid: b467d764-9007-4492-a289-f9c2bbf2a4d4
+  reason: NamespaceCreated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:00Z"
+  message: 'Status for clusteroperator/olm changed: Upgradeable changed from Unknown
+    to True ("All is well")'
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:01Z"
+    name: cluster-olm-operator.188edb2636b6c1d6
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7757"
+    uid: a453f5c2-dd90-4627-a378-a983e6392d66
+  reason: OperatorStatusChanged
+  reportingComponent: olm-status-controller-statussyncer_olm
+  reportingInstance: ""
+  source:
+    component: olm-status-controller-statussyncer_olm
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:00Z"
+  message: Created CustomResourceDefinition.apiextensions.k8s.io/clustercatalogs.olm.operatorframework.io
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:01Z"
+    name: cluster-olm-operator.188edb2637255f9b
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7748"
+    uid: 57a9ea09-e51c-4a32-b705-5784c9e35e93
+  reason: CustomResourceDefinitionCreated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:00Z"
+  message: Created ServiceAccount/catalogd-controller-manager -n openshift-catalogd
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:01Z"
+    name: cluster-olm-operator.188edb26378138c3
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7764"
+    uid: cf8784db-146e-4e51-8b9b-21967b99689c
+  reason: ServiceAccountCreated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:00Z"
+  message: 'Status for clusteroperator/olm changed: Degraded changed from Unknown
+    to False ("All is well")'
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:02Z"
+    name: cluster-olm-operator.188edb2638485c8c
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7774"
+    uid: 33121d26-f358-412a-a5fd-24e5e9d38bcc
+  reason: OperatorStatusChanged
+  reportingComponent: olm-status-controller-statussyncer_olm
+  reportingInstance: ""
+  source:
+    component: olm-status-controller-statussyncer_olm
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:01Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:01Z"
+  message: Created ClusterRole.rbac.authorization.k8s.io/operator-controller-clusterextension-viewer-role
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:01Z"
+    name: cluster-olm-operator.188edb2654bd7b49
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7769"
+    uid: c5bb19ea-e8c4-4010-bd18-3f730082a901
+  reason: ClusterRoleCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:01Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:01Z"
+  message: Created Role.rbac.authorization.k8s.io/catalogd-leader-election-role -n
+    openshift-catalogd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:02Z"
+    name: cluster-olm-operator.188edb2660a95535
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7790"
+    uid: 9d46ab25-3947-4198-b6e4-2d91ab8110e2
+  reason: RoleCreated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:02Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:02Z"
+  message: Created ClusterRole.rbac.authorization.k8s.io/operator-controller-manager-role
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:02Z"
+    name: cluster-olm-operator.188edb2684660b04
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7797"
+    uid: ad92c62f-3273-4c60-943d-1b40e191bf60
+  reason: ClusterRoleCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:02Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:02Z"
+  message: Created Role.rbac.authorization.k8s.io/catalogd-manager-role -n openshift-catalogd
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:02Z"
+    name: cluster-olm-operator.188edb2690587dcf
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7805"
+    uid: a48675f3-304d-4c97-bf9b-885a6afda832
+  reason: RoleCreated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:02Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:02Z"
+  message: Created ClusterRole.rbac.authorization.k8s.io/operator-controller-metrics-reader
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:02Z"
+    name: cluster-olm-operator.188edb26b420247f
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7812"
+    uid: 2412cd9f-f996-4038-a692-85b30fab67ed
+  reason: ClusterRoleCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:03Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:03Z"
+  message: Created Role.rbac.authorization.k8s.io/catalogd-metrics-monitor-role -n
+    openshift-catalogd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:03Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:03Z"
+    name: cluster-olm-operator.188edb26c0165c89
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7821"
+    uid: d702aed3-53cc-44d9-88c6-7060adb32674
+  reason: RoleCreated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:03Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:03Z"
+  message: Created ClusterRole.rbac.authorization.k8s.io/operator-controller-proxy-role
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:03Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:03Z"
+    name: cluster-olm-operator.188edb26e446981c
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7852"
+    uid: d11fc293-c4cd-43d4-9863-6f8ff9d59d45
+  reason: ClusterRoleCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:03Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:03Z"
+  message: Created Role.rbac.authorization.k8s.io/catalogd-manager-role -n openshift-config
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:03Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:03Z"
+    name: cluster-olm-operator.188edb26eff5a38f
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7858"
+    uid: 439c9c44-efa1-488b-87f1-62f09b88594e
+  reason: RoleCreated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:04Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:04Z"
+  message: Created RoleBinding.rbac.authorization.k8s.io/operator-controller-manager-rolebinding
+    -n openshift-config because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:04Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:04Z"
+    name: cluster-olm-operator.188edb2713957d80
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7885"
+    uid: ca6acc2b-ad40-47fd-95a1-e00f3c6f3639
+  reason: RoleBindingCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:04Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:04Z"
+  message: Created ClusterRole.rbac.authorization.k8s.io/catalogd-manager-role because
+    it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:04Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:04Z"
+    name: cluster-olm-operator.188edb271f61724b
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7899"
+    uid: 71853297-2657-456b-a77e-f73e2c7347c4
+  reason: ClusterRoleCreated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:05Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:05Z"
+  message: Created RoleBinding.rbac.authorization.k8s.io/operator-controller-leader-election-rolebinding
+    -n openshift-operator-controller because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:05Z"
+    name: cluster-olm-operator.188edb27437cddd4
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7923"
+    uid: 89348cbf-0e5a-4348-986f-2095be0fd9b5
+  reason: RoleBindingCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:05Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:05Z"
+  message: Created ClusterRole.rbac.authorization.k8s.io/catalogd-metrics-reader because
+    it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:05Z"
+    name: cluster-olm-operator.188edb274f2827b5
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7972"
+    uid: fa12336c-8b29-4306-a375-90e7f55658e9
+  reason: ClusterRoleCreated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:06Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:06Z"
+  message: Created RoleBinding.rbac.authorization.k8s.io/operator-controller-manager-rolebinding
+    -n openshift-operator-controller because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:06Z"
+    name: cluster-olm-operator.188edb2772f1fde0
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8009"
+    uid: 6d697ce8-e01c-4fc7-9137-805b2cfc33d9
+  reason: RoleBindingCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:06Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:06Z"
+  message: Created ClusterRole.rbac.authorization.k8s.io/catalogd-proxy-role because
+    it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:06Z"
+    name: cluster-olm-operator.188edb277ed05a58
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8043"
+    uid: 7bb149d8-1fd1-4b75-94cb-6a5979444d14
+  reason: ClusterRoleCreated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:06Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:06Z"
+  message: Created RoleBinding.rbac.authorization.k8s.io/operator-controller-metrics-monitor-rolebinding
+    -n openshift-operator-controller because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:06Z"
+    name: cluster-olm-operator.188edb27a29b1a15
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8100"
+    uid: 5d3a3cdd-56bf-43b3-b5c4-229663a9f053
+  reason: RoleBindingCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:07Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:07Z"
+  message: Created RoleBinding.rbac.authorization.k8s.io/catalogd-leader-election-rolebinding
+    -n openshift-catalogd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:07Z"
+    name: cluster-olm-operator.188edb27aeaf4811
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8116"
+    uid: 9cbbb870-2780-40fd-ade8-886647083b60
+  reason: RoleBindingCreated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:07Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:07Z"
+  message: Created ClusterRoleBinding.rbac.authorization.k8s.io/operator-controller-manager-rolebinding
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:07Z"
+    name: cluster-olm-operator.188edb27d25bb775
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8192"
+    uid: f5bb1195-6682-41d8-ab06-6358ddf8a643
+  reason: ClusterRoleBindingCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:07Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:07Z"
+  message: Created RoleBinding.rbac.authorization.k8s.io/catalogd-manager-rolebinding
+    -n openshift-catalogd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:07Z"
+    name: cluster-olm-operator.188edb27de332dfb
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8201"
+    uid: 55611464-a141-4509-88a4-f8f3899bbb2b
+  reason: RoleBindingCreated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:08Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:08Z"
+  message: Created ClusterRoleBinding.rbac.authorization.k8s.io/operator-controller-proxy-rolebinding
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:08Z"
+    name: cluster-olm-operator.188edb2801e89911
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8240"
+    uid: 3e212b8a-4ee7-4a7b-a522-3b46e47e65b9
+  reason: ClusterRoleBindingCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:08Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:08Z"
+  message: Created ConfigMap/operator-controller-trusted-ca-bundle -n openshift-operator-controller
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:08Z"
+    name: cluster-olm-operator.188edb28023bebf9
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8242"
+    uid: 2144f79d-462e-4d9c-83f8-aca498a83a36
+  reason: ConfigMapCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:08Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:08Z"
+  message: Created Service/operator-controller-service -n openshift-operator-controller
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:08Z"
+    name: cluster-olm-operator.188edb2802fdc65b
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8249"
+    uid: 149d1ddf-2453-476b-b1e7-add50c02442c
+  reason: ServiceCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:08Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:08Z"
+  message: Created ServiceMonitor.monitoring.coreos.com/operator-controller-metrics-monitor
+    -n openshift-operator-controller because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:08Z"
+    name: cluster-olm-operator.188edb28036951d9
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8251"
+    uid: d77e23bd-c5e6-4fd0-af8d-5fb256d7a8fe
+  reason: ServiceMonitorCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:08Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:08Z"
+  message: Created NetworkPolicy.networking.k8s.io/operator-controller-controller-manager
+    -n openshift-operator-controller because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:08Z"
+    name: cluster-olm-operator.188edb2803bcec0d
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8254"
+    uid: 936c984b-1dc3-48b4-b2cf-dcbf5a8a8a57
+  reason: NetworkPolicyCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:08Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:08Z"
+  message: Created NetworkPolicy.networking.k8s.io/operator-controller-default-deny-all-traffic
+    -n openshift-operator-controller because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:08Z"
+    name: cluster-olm-operator.188edb2803fc35cc
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8256"
+    uid: 886d651b-fa4e-4671-aa1a-d4b125c72dac
+  reason: NetworkPolicyCreated
+  reportingComponent: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: OperatorControllerStaticResources-operatorcontrollerstaticresources-operatorcontrollerstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:08Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:08Z"
+  message: Created RoleBinding.rbac.authorization.k8s.io/catalogd-metrics-monitor-rolebinding
+    -n openshift-catalogd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:08Z"
+    name: cluster-olm-operator.188edb280df6a4e7
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8269"
+    uid: 9c52a90c-b808-427f-8286-5780862d9b16
+  reason: RoleBindingCreated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:09Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:09Z"
+  message: Created RoleBinding.rbac.authorization.k8s.io/catalogd-manager-rolebinding
+    -n openshift-config because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:09Z"
+    name: cluster-olm-operator.188edb283d8de7c6
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8305"
+    uid: 56221df5-9406-45a2-bfd3-28a8910b1250
+  reason: RoleBindingCreated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:10Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:10Z"
+  message: Created ClusterRoleBinding.rbac.authorization.k8s.io/catalogd-manager-rolebinding
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:10Z"
+    name: cluster-olm-operator.188edb286d3f4963
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8335"
+    uid: fb780ff0-b5b8-4f80-880c-ba124e87e97f
+  reason: ClusterRoleBindingCreated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:10Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:10Z"
+  message: Created Deployment.apps/operator-controller-controller-manager -n openshift-operator-controller
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:10Z"
+    name: cluster-olm-operator.188edb2883e45671
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8349"
+    uid: 71759f9e-802a-48d9-90b1-2a2a98d80aae
+  reason: DeploymentCreated
+  reportingComponent: OperatorcontrollerDeploymentOperatorControllerControllerManager-operatorcontrollerdeploymentoperatorcontrollercontrollermanager-deployment-controller--operatorcontrollerdeploymentoperatorcontrollercontrollermanager
+  reportingInstance: ""
+  source:
+    component: OperatorcontrollerDeploymentOperatorControllerControllerManager-operatorcontrollerdeploymentoperatorcontrollercontrollermanager-deployment-controller--operatorcontrollerdeploymentoperatorcontrollercontrollermanager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:10Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:10Z"
+  message: Created Deployment.apps/catalogd-controller-manager -n openshift-catalogd
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:10Z"
+    name: cluster-olm-operator.188edb2884e452e5
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8356"
+    uid: 755d0c86-bda3-42b1-b764-6bca81381aad
+  reason: DeploymentCreated
+  reportingComponent: CatalogdDeploymentCatalogdControllerManager-catalogddeploymentcatalogdcontrollermanager-deployment-controller--catalogddeploymentcatalogdcontrollermanager
+  reportingInstance: ""
+  source:
+    component: CatalogdDeploymentCatalogdControllerManager-catalogddeploymentcatalogdcontrollermanager-deployment-controller--catalogddeploymentcatalogdcontrollermanager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:10Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:10Z"
+  message: 'Status for clusteroperator/olm changed: Progressing changed from Unknown
+    to True ("OperatorcontrollerDeploymentOperatorControllerControllerManagerProgressing:
+    Waiting for Deployment to act on changes"),Available changed from Unknown to False
+    ("OperatorcontrollerDeploymentOperatorControllerControllerManagerAvailable: Waiting
+    for Deployment")'
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:10Z"
+    name: cluster-olm-operator.188edb288883cc59
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8381"
+    uid: 455ac16d-9b33-42c3-80c3-9881bbe4e9e6
+  reason: OperatorStatusChanged
+  reportingComponent: olm-status-controller-statussyncer_olm
+  reportingInstance: ""
+  source:
+    component: olm-status-controller-statussyncer_olm
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:10Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:10Z"
+  message: 'Status for clusteroperator/olm changed: Progressing message changed from
+    "OperatorcontrollerDeploymentOperatorControllerControllerManagerProgressing: Waiting
+    for Deployment to act on changes" to "CatalogdDeploymentCatalogdControllerManagerProgressing:
+    Waiting for Deployment to act on changes\nOperatorcontrollerDeploymentOperatorControllerControllerManagerProgressing:
+    Waiting for Deployment to act on changes",Available message changed from "OperatorcontrollerDeploymentOperatorControllerControllerManagerAvailable:
+    Waiting for Deployment" to "CatalogdDeploymentCatalogdControllerManagerAvailable:
+    Waiting for Deployment\nOperatorcontrollerDeploymentOperatorControllerControllerManagerAvailable:
+    Waiting for Deployment"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:10Z"
+    name: cluster-olm-operator.188edb288f0cf7d9
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8397"
+    uid: 3b83b1f3-bc4d-4a98-a7db-e873b07544eb
+  reason: OperatorStatusChanged
+  reportingComponent: olm-status-controller-statussyncer_olm
+  reportingInstance: ""
+  source:
+    component: olm-status-controller-statussyncer_olm
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:11Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:11Z"
+  message: Created ClusterRoleBinding.rbac.authorization.k8s.io/catalogd-proxy-rolebinding
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:11Z"
+    name: cluster-olm-operator.188edb289ce6a1c4
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8402"
+    uid: 4bd23ae2-8934-4d04-a062-c67149e22d97
+  reason: ClusterRoleBindingCreated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:11Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:11Z"
+  message: Created ConfigMap/catalogd-trusted-ca-bundle -n openshift-catalogd because
+    it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:11Z"
+    name: cluster-olm-operator.188edb289d25f908
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8404"
+    uid: d26e660e-d68d-45f0-bf82-d3344c8fe673
+  reason: ConfigMapCreated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:11Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:11Z"
+  message: Created Service/catalogd-service -n openshift-catalogd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:11Z"
+    name: cluster-olm-operator.188edb289dce94f1
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8409"
+    uid: c00da339-be1f-4f6b-ad05-a6d705324dc3
+  reason: ServiceCreated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:11Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:11Z"
+  message: Created ServiceMonitor.monitoring.coreos.com/catalogd-metrics-monitor -n
+    openshift-catalogd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:11Z"
+    name: cluster-olm-operator.188edb289e662303
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8414"
+    uid: 26d82c5e-3654-4fc2-9859-6b5323f57963
+  reason: ServiceMonitorCreated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:11Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:11Z"
+  message: Created NetworkPolicy.networking.k8s.io/catalogd-controller-manager -n
+    openshift-catalogd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:11Z"
+    name: cluster-olm-operator.188edb289ecc131e
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8416"
+    uid: 5c0cf1ea-a8c0-4bfb-81ee-a187303d85e4
+  reason: NetworkPolicyCreated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:11Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:11Z"
+  message: Created NetworkPolicy.networking.k8s.io/catalogd-default-deny-all-traffic
+    -n openshift-catalogd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:11Z"
+    name: cluster-olm-operator.188edb289f0f7317
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8418"
+    uid: 5fda32d1-238c-4cb0-80e2-d6023aefb89d
+  reason: NetworkPolicyCreated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:11Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:11Z"
+  message: Created MutatingWebhookConfiguration.admissionregistration.k8s.io/catalogd-mutating-webhook-configuration
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:11Z"
+    name: cluster-olm-operator.188edb289f7ad1c6
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8420"
+    uid: 23acc1e7-7124-46b0-832c-93c3c0eac35d
+  reason: MutatingWebhookConfigurationCreated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:12Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:12Z"
+  message: 'Status for clusteroperator/olm changed: Progressing message changed from
+    "CatalogdDeploymentCatalogdControllerManagerProgressing: Waiting for Deployment
+    to act on changes\nOperatorcontrollerDeploymentOperatorControllerControllerManagerProgressing:
+    Waiting for Deployment to act on changes" to "CatalogdDeploymentCatalogdControllerManagerProgressing:
+    Waiting for Deployment to act on changes\nOperatorcontrollerDeploymentOperatorControllerControllerManagerProgressing:
+    Waiting for Deployment to deploy pods"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:12Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:12Z"
+    name: cluster-olm-operator.188edb2906f8bc90
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8596"
+    uid: 8fda9c77-1435-4572-854a-3d3ef495535c
+  reason: OperatorStatusChanged
+  reportingComponent: olm-status-controller-statussyncer_olm
+  reportingInstance: ""
+  source:
+    component: olm-status-controller-statussyncer_olm
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:13Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:13Z"
+  message: 'Status for clusteroperator/olm changed: Progressing message changed from
+    "CatalogdDeploymentCatalogdControllerManagerProgressing: Waiting for Deployment
+    to act on changes\nOperatorcontrollerDeploymentOperatorControllerControllerManagerProgressing:
+    Waiting for Deployment to deploy pods" to "CatalogdDeploymentCatalogdControllerManagerProgressing:
+    Waiting for Deployment to deploy pods\nOperatorcontrollerDeploymentOperatorControllerControllerManagerProgressing:
+    Waiting for Deployment to deploy pods"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:13Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:13Z"
+    name: cluster-olm-operator.188edb29141248b1
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8649"
+    uid: 27d252db-2972-43bd-a382-8d6a286a7bfa
+  reason: OperatorStatusChanged
+  reportingComponent: olm-status-controller-statussyncer_olm
+  reportingInstance: ""
+  source:
+    component: olm-status-controller-statussyncer_olm
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:16Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:16Z"
+  message: Updated MutatingWebhookConfiguration.admissionregistration.k8s.io/catalogd-mutating-webhook-configuration
+    because it changed
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:16Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:16Z"
+    name: cluster-olm-operator.188edb29f8c04386
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "8841"
+    uid: 42693b07-9538-403b-9614-d59e35f516a8
+  reason: MutatingWebhookConfigurationUpdated
+  reportingComponent: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: CatalogdStaticResources-catalogdstaticresources-catalogdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:28Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:28Z"
+  message: 'Status for clusteroperator/olm changed: Progressing message changed from
+    "CatalogdDeploymentCatalogdControllerManagerProgressing: Waiting for Deployment
+    to deploy pods\nOperatorcontrollerDeploymentOperatorControllerControllerManagerProgressing:
+    Waiting for Deployment to deploy pods" to "CatalogdDeploymentCatalogdControllerManagerProgressing:
+    Waiting for Deployment to deploy pods",Available message changed from "CatalogdDeploymentCatalogdControllerManagerAvailable:
+    Waiting for Deployment\nOperatorcontrollerDeploymentOperatorControllerControllerManagerAvailable:
+    Waiting for Deployment" to "CatalogdDeploymentCatalogdControllerManagerAvailable:
+    Waiting for Deployment"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:28Z"
+    name: cluster-olm-operator.188edb2ca867265c
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "9266"
+    uid: 914ad4eb-06f1-41b4-9fe5-b936aa893978
+  reason: OperatorStatusChanged
+  reportingComponent: olm-status-controller-statussyncer_olm
+  reportingInstance: ""
+  source:
+    component: olm-status-controller-statussyncer_olm
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:32Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-olm-operator
+    namespace: openshift-cluster-olm-operator
+    uid: 5845abb0-c375-4b28-8a90-6ff167f8474b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:32Z"
+  message: 'Status for clusteroperator/olm changed: Progressing changed from True
+    to False ("OperatorcontrollerDeploymentOperatorControllerControllerManagerProgressing:
+    Deployment is not progressing\nCatalogdDeploymentCatalogdControllerManagerProgressing:
+    Deployment is not progressing"),Available changed from False to True ("OperatorcontrollerDeploymentOperatorControllerControllerManagerAvailable:
+    Deployment is available\nCatalogdDeploymentCatalogdControllerManagerAvailable:
+    Deployment is available")'
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-olm-operator
+      operation: Update
+      time: "2026-01-28T09:31:32Z"
+    name: cluster-olm-operator.188edb2d8ae413c1
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "9312"
+    uid: 767cbde1-0909-469d-b99e-cd1306fc374e
+  reason: OperatorStatusChanged
+  reportingComponent: olm-status-controller-statussyncer_olm
+  reportingInstance: ""
+  source:
+    component: olm-status-controller-statussyncer_olm
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "35159"

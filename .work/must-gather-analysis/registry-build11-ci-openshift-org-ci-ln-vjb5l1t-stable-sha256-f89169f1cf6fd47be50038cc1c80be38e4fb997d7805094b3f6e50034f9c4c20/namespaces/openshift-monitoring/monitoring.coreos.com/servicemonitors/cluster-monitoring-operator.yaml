@@ -1,0 +1,52 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  creationTimestamp: "2026-01-28T09:42:44Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/managed-by: cluster-monitoring-operator
+    app.kubernetes.io/name: cluster-monitoring-operator
+    app.kubernetes.io/part-of: openshift-monitoring
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+      f:spec:
+        .: {}
+        f:endpoints: {}
+        f:namespaceSelector: {}
+        f:scrapeClass: {}
+        f:selector: {}
+    manager: operator
+    operation: Update
+    time: "2026-01-28T09:42:44Z"
+  name: cluster-monitoring-operator
+  namespace: openshift-monitoring
+  resourceVersion: "21880"
+  uid: 0f120fd2-051c-4e36-8d72-c58e5d8b00f8
+spec:
+  endpoints:
+  - metricRelabelings:
+    - action: drop
+      regex: (apiserver|go_sched|workqueue)_.+
+      sourceLabels:
+      - __name__
+    port: https
+    scheme: https
+    tlsConfig:
+      ca: {}
+      cert: {}
+      insecureSkipVerify: false
+      serverName: cluster-monitoring-operator.openshift-monitoring.svc
+  namespaceSelector: {}
+  scrapeClass: tls-client-certificate-auth
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: cluster-monitoring-operator

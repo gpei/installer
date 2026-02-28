@@ -1,0 +1,92 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:31:06Z"
+    creationTimestamp: "2026-01-28T09:27:07Z"
+    labels:
+      endpoints.kubernetes.io/managed-by: endpoint-controller
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:endpoints.kubernetes.io/managed-by: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:06Z"
+    name: cco-metrics
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "8033"
+    uid: 565df8f5-6a7a-45b7-ad3c-9988145eaca4
+  subsets:
+  - addresses:
+    - ip: 10.130.0.8
+      nodeName: ip-10-0-108-54.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: cloud-credential-operator-68d5848f5d-22hx4
+        namespace: openshift-cloud-credential-operator
+        uid: d97c4ef0-38b8-416e-9509-16e67a94ecbb
+    ports:
+    - name: metrics
+      port: 8443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:40:15Z"
+    creationTimestamp: "2026-01-28T09:40:12Z"
+    labels:
+      endpoints.kubernetes.io/managed-by: endpoint-controller
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:endpoints.kubernetes.io/managed-by: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:40:15Z"
+    name: pod-identity-webhook
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "18591"
+    uid: e52fe567-a2b2-4d81-a2fe-81d146b08430
+  subsets:
+  - addresses:
+    - ip: 10.128.0.41
+      nodeName: ip-10-0-3-203.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: pod-identity-webhook-698875dc5b-7x5m5
+        namespace: openshift-cloud-credential-operator
+        uid: 578c4402-72d9-4708-b9f1-aeaba96b057d
+    - ip: 10.129.0.37
+      nodeName: ip-10-0-102-200.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: pod-identity-webhook-698875dc5b-rrw8l
+        namespace: openshift-cloud-credential-operator
+        uid: 72107327-9cef-467d-abe4-2d7e4333cfc3
+    ports:
+    - port: 9443
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "34974"

@@ -1,0 +1,80 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:40Z"
+    labels:
+      app.kubernetes.io/managed-by: prometheus-operator
+      app.kubernetes.io/name: kubelet
+      k8s-app: kubelet
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:k8s-app: {}
+        f:subsets: {}
+      manager: PrometheusOperator
+      operation: Update
+      time: "2026-01-28T09:42:40Z"
+    name: kubelet
+    namespace: kube-system
+    resourceVersion: "21573"
+    uid: 75efd9d3-86eb-4240-a349-e640f5907582
+  subsets:
+  - addresses:
+    - ip: 10.0.101.165
+      nodeName: ip-10-0-101-165.us-west-1.compute.internal
+      targetRef:
+        kind: Node
+        name: ip-10-0-101-165.us-west-1.compute.internal
+        uid: b0fef558-e9cb-478b-80f8-c8c43c81a878
+    - ip: 10.0.102.200
+      nodeName: ip-10-0-102-200.us-west-1.compute.internal
+      targetRef:
+        kind: Node
+        name: ip-10-0-102-200.us-west-1.compute.internal
+        uid: 64bba62c-c331-4f4e-9112-9298c88bdae0
+    - ip: 10.0.108.54
+      nodeName: ip-10-0-108-54.us-west-1.compute.internal
+      targetRef:
+        kind: Node
+        name: ip-10-0-108-54.us-west-1.compute.internal
+        uid: 8aee47ee-44d2-43c6-8262-ad6e14a5f14a
+    - ip: 10.0.22.208
+      nodeName: ip-10-0-22-208.us-west-1.compute.internal
+      targetRef:
+        kind: Node
+        name: ip-10-0-22-208.us-west-1.compute.internal
+        uid: 70a9365a-adc1-449a-8f3e-5fd2bcec4b45
+    - ip: 10.0.3.203
+      nodeName: ip-10-0-3-203.us-west-1.compute.internal
+      targetRef:
+        kind: Node
+        name: ip-10-0-3-203.us-west-1.compute.internal
+        uid: 96871530-1a97-4a09-81f1-3cab61f897b8
+    - ip: 10.0.78.215
+      nodeName: ip-10-0-78-215.us-west-1.compute.internal
+      targetRef:
+        kind: Node
+        name: ip-10-0-78-215.us-west-1.compute.internal
+        uid: 15f7ea9d-72f7-4a8c-b969-0328a57ba32a
+    ports:
+    - name: https-metrics
+      port: 10250
+      protocol: TCP
+    - name: http-metrics
+      port: 10255
+      protocol: TCP
+    - name: cadvisor
+      port: 4194
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "35098"

@@ -1,0 +1,243 @@
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfigNode
+metadata:
+  creationTimestamp: "2026-01-28T09:41:49Z"
+  generation: 2
+  managedFields:
+  - apiVersion: machineconfiguration.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:configVersion:
+          f:desired: {}
+        f:node:
+          f:name: {}
+        f:pool:
+          f:name: {}
+    manager: machine-config-operator
+    operation: Apply
+    time: "2026-01-28T09:42:00Z"
+  - apiVersion: machineconfiguration.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"AppliedFilesAndOS"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Cordoned"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Drained"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"NodeDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PinnedImageSetsDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PinnedImageSetsProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"RebootedNode"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Resumed"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Uncordoned"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"UpdateComplete"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"UpdateExecuted"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"UpdatePostActionComplete"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"UpdatePrepared"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Updated"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:configVersion:
+          f:current: {}
+          f:desired: {}
+        f:observedGeneration: {}
+    manager: machine-config-operator
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:42:44Z"
+  - apiVersion: machineconfiguration.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"b0fef558-e9cb-478b-80f8-c8c43c81a878"}: {}
+      f:spec:
+        .: {}
+        f:configVersion: {}
+        f:node:
+          .: {}
+          f:name: {}
+        f:pool:
+          .: {}
+          f:name: {}
+    manager: machine-config-operator
+    operation: Update
+    time: "2026-01-28T09:41:49Z"
+  name: ip-10-0-101-165.us-west-1.compute.internal
+  ownerReferences:
+  - apiVersion: v1
+    kind: Node
+    name: ip-10-0-101-165.us-west-1.compute.internal
+    uid: b0fef558-e9cb-478b-80f8-c8c43c81a878
+  resourceVersion: "21928"
+  uid: d6b8639e-40bc-441b-804a-744c91a85f66
+spec:
+  configVersion:
+    desired: rendered-worker-a2bb68b0b8221b5a131f2617a7ee033e
+  node:
+    name: ip-10-0-101-165.us-west-1.compute.internal
+  pool:
+    name: worker
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:41:50Z"
+    message: All pinned image sets complete
+    reason: AsExpected
+    status: "False"
+    type: PinnedImageSetsProgressing
+  - lastTransitionTime: "2026-01-28T09:41:50Z"
+    message: This node has not yet entered the UpdatePrepared phase
+    reason: NotYetOccurred
+    status: "False"
+    type: UpdatePrepared
+  - lastTransitionTime: "2026-01-28T09:41:50Z"
+    message: This node has not yet entered the UpdateExecuted phase
+    reason: NotYetOccurred
+    status: "False"
+    type: UpdateExecuted
+  - lastTransitionTime: "2026-01-28T09:41:50Z"
+    message: This node has not yet entered the UpdatePostActionComplete phase
+    reason: NotYetOccurred
+    status: "False"
+    type: UpdatePostActionComplete
+  - lastTransitionTime: "2026-01-28T09:42:44Z"
+    message: 'Action during update to rendered-worker-a2bb68b0b8221b5a131f2617a7ee033e:
+      Uncordoned Node as part of completing upgrade phase'
+    reason: Uncordoned
+    status: "False"
+    type: UpdateComplete
+  - lastTransitionTime: "2026-01-28T09:42:44Z"
+    message: 'Action during update to rendered-worker-a2bb68b0b8221b5a131f2617a7ee033e:
+      In desired config . Resumed normal operations.'
+    reason: Resumed
+    status: "False"
+    type: Resumed
+  - lastTransitionTime: "2026-01-28T09:41:50Z"
+    message: This node has not yet entered the Drained phase
+    reason: NotYetOccurred
+    status: "False"
+    type: Drained
+  - lastTransitionTime: "2026-01-28T09:41:50Z"
+    message: This node has not yet entered the AppliedFilesAndOS phase
+    reason: NotYetOccurred
+    status: "False"
+    type: AppliedFilesAndOS
+  - lastTransitionTime: "2026-01-28T09:41:50Z"
+    message: This node has not yet entered the Cordoned phase
+    reason: NotYetOccurred
+    status: "False"
+    type: Cordoned
+  - lastTransitionTime: "2026-01-28T09:41:50Z"
+    message: This node has not yet entered the RebootedNode phase
+    reason: NotYetOccurred
+    status: "False"
+    type: RebootedNode
+  - lastTransitionTime: "2026-01-28T09:42:44Z"
+    message: Node ip-10-0-101-165.us-west-1.compute.internal Updated
+    reason: Updated
+    status: "True"
+    type: Updated
+  - lastTransitionTime: "2026-01-28T09:42:44Z"
+    message: 'Action during update to rendered-worker-a2bb68b0b8221b5a131f2617a7ee033e:
+      UnCordoned node. The node is reporting Unschedulable = false'
+    reason: UpdateCompleteUncordoned
+    status: "False"
+    type: Uncordoned
+  - lastTransitionTime: "2026-01-28T09:41:50Z"
+    message: This node has not yet entered the NodeDegraded phase
+    reason: NotYetOccurred
+    status: "False"
+    type: NodeDegraded
+  - lastTransitionTime: "2026-01-28T09:41:50Z"
+    message: All is good
+    reason: AsExpected
+    status: "False"
+    type: PinnedImageSetsDegraded
+  configVersion:
+    current: rendered-worker-a2bb68b0b8221b5a131f2617a7ee033e
+    desired: rendered-worker-a2bb68b0b8221b5a131f2617a7ee033e
+  observedGeneration: 3

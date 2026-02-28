@@ -1,0 +1,29 @@
+---
+apiVersion: networking.k8s.io/v1
+items:
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    creationTimestamp: "2026-01-28T09:25:35Z"
+    generation: 1
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:policyTypes: {}
+      manager: cluster-bootstrap
+      operation: Update
+      time: "2026-01-28T09:25:35Z"
+    name: default-deny
+    namespace: openshift-cluster-version
+    resourceVersion: "681"
+    uid: 50062a80-6b97-4c16-b926-6a5ce4bbd32b
+  spec:
+    podSelector: {}
+    policyTypes:
+    - Ingress
+    - Egress
+kind: NetworkPolicyList
+metadata:
+  resourceVersion: "34857"

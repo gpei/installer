@@ -1,0 +1,4762 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:46Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: etcd-operator-86dcff847c-dnhnc
+    namespace: openshift-etcd-operator
+    resourceVersion: "3724"
+    uid: 99f91643-03c3-4ab6-91bc-b45e56edd1c5
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:46Z"
+  message: '0/3 nodes are available: 3 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+    }. preemption: 0/3 nodes are available: 3 Preemption is not helpful for scheduling.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:28:46Z"
+    name: etcd-operator-86dcff847c-dnhnc.188edb0701c114c3
+    namespace: openshift-etcd-operator
+    resourceVersion: "3726"
+    uid: 5283d88f-c95a-4f6d-a2e4-033b25914eff
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:08Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: etcd-operator-86dcff847c-dnhnc
+    namespace: openshift-etcd-operator
+    resourceVersion: "3728"
+    uid: 99f91643-03c3-4ab6-91bc-b45e56edd1c5
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:08Z"
+  message: Successfully assigned openshift-etcd-operator/etcd-operator-86dcff847c-dnhnc
+    to ip-10-0-108-54.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:30:09Z"
+    name: etcd-operator-86dcff847c-dnhnc.188edb1a21f8ef43
+    namespace: openshift-etcd-operator
+    resourceVersion: "5469"
+    uid: 6450ceeb-a908-4f6b-9268-3412c8a033b7
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:10Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: etcd-operator-86dcff847c-dnhnc
+    namespace: openshift-etcd-operator
+    resourceVersion: "5425"
+    uid: 99f91643-03c3-4ab6-91bc-b45e56edd1c5
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:10Z"
+  message: Add eth0 [10.130.0.24/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2026-01-28T09:30:10Z"
+    name: etcd-operator-86dcff847c-dnhnc.188edb1a7adebc08
+    namespace: openshift-etcd-operator
+    resourceVersion: "5557"
+    uid: fcbbaf36-5cc6-4650-a718-e19f4605b3b7
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd-operator}
+    kind: Pod
+    name: etcd-operator-86dcff847c-dnhnc
+    namespace: openshift-etcd-operator
+    resourceVersion: "5389"
+    uid: 99f91643-03c3-4ab6-91bc-b45e56edd1c5
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:10Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:15f04c05213f230b93b63ac6ad35aabfee6d09e990166de1638b582088ad9af2"
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:10Z"
+    name: etcd-operator-86dcff847c-dnhnc.188edb1a7c9cde92
+    namespace: openshift-etcd-operator
+    resourceVersion: "5562"
+    uid: 484ee545-3e12-49c5-8293-7a76f94f91f7
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd-operator}
+    kind: Pod
+    name: etcd-operator-86dcff847c-dnhnc
+    namespace: openshift-etcd-operator
+    resourceVersion: "5389"
+    uid: 99f91643-03c3-4ab6-91bc-b45e56edd1c5
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:28Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:15f04c05213f230b93b63ac6ad35aabfee6d09e990166de1638b582088ad9af2"
+    in 17.961s (17.961s including waiting). Image size: 657893086 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:28Z"
+    name: etcd-operator-86dcff847c-dnhnc.188edb1eab3b87a1
+    namespace: openshift-etcd-operator
+    resourceVersion: "5762"
+    uid: fd781cad-bf6f-4399-939a-9c77190d8c99
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd-operator}
+    kind: Pod
+    name: etcd-operator-86dcff847c-dnhnc
+    namespace: openshift-etcd-operator
+    resourceVersion: "5389"
+    uid: 99f91643-03c3-4ab6-91bc-b45e56edd1c5
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:53Z"
+  message: 'Created container: etcd-operator'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:31:54Z"
+    name: etcd-operator-86dcff847c-dnhnc.188edb1f0301b9b1
+    namespace: openshift-etcd-operator
+    resourceVersion: "9780"
+    uid: 40c7c17a-0b21-486b-8f03-f876f934e92a
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd-operator}
+    kind: Pod
+    name: etcd-operator-86dcff847c-dnhnc
+    namespace: openshift-etcd-operator
+    resourceVersion: "5389"
+    uid: 99f91643-03c3-4ab6-91bc-b45e56edd1c5
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:54Z"
+  message: Started container etcd-operator
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:31:54Z"
+    name: etcd-operator-86dcff847c-dnhnc.188edb1f0fd5233f
+    namespace: openshift-etcd-operator
+    resourceVersion: "9785"
+    uid: 7f7aaa06-e17a-4b37-a2a2-f3b1122f20fd
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:51Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd-operator}
+    kind: Pod
+    name: etcd-operator-86dcff847c-dnhnc
+    namespace: openshift-etcd-operator
+    resourceVersion: "5389"
+    uid: 99f91643-03c3-4ab6-91bc-b45e56edd1c5
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:51Z"
+  message: Container image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:15f04c05213f230b93b63ac6ad35aabfee6d09e990166de1638b582088ad9af2"
+    already present on machine
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:31:51Z"
+    name: etcd-operator-86dcff847c-dnhnc.188edb320f10de46
+    namespace: openshift-etcd-operator
+    resourceVersion: "9652"
+    uid: c87e26cb-61e3-4024-8809-f953d45c167c
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 15
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:26:02Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: etcd-operator-86dcff847c
+    namespace: openshift-etcd-operator
+    resourceVersion: "1827"
+    uid: 4814294a-7d5d-41a9-bc5a-0f742cbbf684
+  kind: Event
+  lastTimestamp: "2026-01-28T09:27:24Z"
+  message: 'Error creating: pods "etcd-operator-86dcff847c-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
+    the cluster does not have any nodes'
+  metadata:
+    creationTimestamp: "2026-01-28T09:26:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:27:24Z"
+    name: etcd-operator-86dcff847c.188edae0d8dd7700
+    namespace: openshift-etcd-operator
+    resourceVersion: "3142"
+    uid: 4ed64e75-e71f-4e8b-b7d7-592ac6899652
+  reason: FailedCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:46Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: etcd-operator-86dcff847c
+    namespace: openshift-etcd-operator
+    resourceVersion: "1831"
+    uid: 4814294a-7d5d-41a9-bc5a-0f742cbbf684
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:46Z"
+  message: 'Created pod: etcd-operator-86dcff847c-dnhnc'
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:28:46Z"
+    name: etcd-operator-86dcff847c.188edb0701be8488
+    namespace: openshift-etcd-operator
+    resourceVersion: "3725"
+    uid: 780cd659-4efb-4631-8f22-1c337cca990b
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:26:02Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    resourceVersion: "1826"
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:26:02Z"
+  message: Scaled up replica set etcd-operator-86dcff847c from 0 to 1
+  metadata:
+    creationTimestamp: "2026-01-28T09:26:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:26:02Z"
+    name: etcd-operator.188edae0d8991866
+    namespace: openshift-etcd-operator
+    resourceVersion: "1828"
+    uid: a4840a63-7a15-4288-bfab-fa7dc1d88c88
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:34Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:34Z"
+  message: FeatureGates updated to featuregates.Features{Enabled:[]v1.FeatureGateName{"AdditionalRoutingCapabilities",
+    "AdminNetworkPolicy", "AlibabaPlatform", "AzureWorkloadIdentity", "BuildCSIVolumes",
+    "CPMSMachineNamePrefix", "ConsolePluginContentSecurityPolicy", "ExternalOIDC",
+    "ExternalOIDCWithUIDAndExtraClaimMappings", "GatewayAPI", "GatewayAPIController",
+    "HighlyAvailableArbiter", "ImageVolume", "IngressControllerLBSubnetsAWS", "KMSv1",
+    "MachineConfigNodes", "ManagedBootImages", "ManagedBootImagesAWS", "MetricsCollectionProfiles",
+    "NetworkDiagnosticsConfig", "NetworkLiveMigration", "NetworkSegmentation", "NewOLM",
+    "PinnedImages", "PreconfiguredUDNAddresses", "ProcMountType", "RouteAdvertisements",
+    "RouteExternalCertificate", "ServiceAccountTokenNodeBinding", "SetEIPForNLBIngressController",
+    "SigstoreImageVerification", "StoragePerformantSecurityPolicy", "UpgradeStatus",
+    "UserNamespacesPodSecurityStandards", "UserNamespacesSupport", "VSphereMultiDisk",
+    "VSphereMultiNetworks"}, Disabled:[]v1.FeatureGateName{"AWSClusterHostedDNS",
+    "AWSClusterHostedDNSInstall", "AWSDedicatedHosts", "AWSServiceLBNetworkSecurityGroup",
+    "AutomatedEtcdBackup", "AzureClusterHostedDNSInstall", "AzureDedicatedHosts",
+    "AzureMultiDisk", "BootImageSkewEnforcement", "BootcNodeManagement", "ClusterAPIInstall",
+    "ClusterAPIInstallIBMCloud", "ClusterMonitoringConfig", "ClusterVersionOperatorConfiguration",
+    "DNSNameResolver", "DualReplica", "DyanmicServiceEndpointIBMCloud", "DynamicResourceAllocation",
+    "EtcdBackendQuota", "EventedPLEG", "Example", "Example2", "ExternalSnapshotMetadata",
+    "GCPClusterHostedDNS", "GCPClusterHostedDNSInstall", "GCPCustomAPIEndpoints",
+    "GCPCustomAPIEndpointsInstall", "ImageModeStatusReporting", "ImageStreamImportMode",
+    "IngressControllerDynamicConfigurationManager", "InsightsConfig", "InsightsConfigAPI",
+    "InsightsOnDemandDataGather", "IrreconcilableMachineConfig", "KMSEncryptionProvider",
+    "MachineAPIMigration", "MachineAPIOperatorDisableMachineHealthCheckController",
+    "ManagedBootImagesAzure", "ManagedBootImagesvSphere", "MaxUnavailableStatefulSet",
+    "MinimumKubeletVersion", "MixedCPUsAllocation", "MultiArchInstallAzure", "MultiDiskSetup",
+    "MutatingAdmissionPolicy", "NewOLMCatalogdAPIV1Metas", "NewOLMOwnSingleNamespace",
+    "NewOLMPreflightPermissionChecks", "NewOLMWebhookProviderOpenshiftServiceCA",
+    "NoRegistryClusterOperations", "NodeSwap", "NutanixMultiSubnets", "OVNObservability",
+    "OpenShiftPodSecurityAdmission", "SELinuxMount", "ShortCertRotation", "SignatureStores",
+    "SigstoreImageVerificationPKI", "TranslateStreamCloseWebsocketRequests", "VSphereConfigurableMaxAllowedBlockVolumesPerNode",
+    "VSphereHostVMGroupZonal", "VSphereMixedNodeEnv", "VolumeAttributesClass", "VolumeGroupSnapshot"}}
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:34Z"
+    name: etcd-operator.188edb2025dd89f0
+    namespace: openshift-etcd-operator
+    resourceVersion: "6041"
+    uid: f891ac7e-3543-4d92-8049-b6f020b36f16
+  reason: FeatureGatesInitialized
+  reportingComponent: openshift-cluster-etcd-operator
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:34Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:34Z"
+  message: etcds.operator.openshift.io "cluster" not found
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:34Z"
+    name: etcd-operator.188edb2028cd0d2a
+    namespace: openshift-etcd-operator
+    resourceVersion: "6042"
+    uid: b3d126cc-0b79-4cee-acc1-6524d021ed13
+  reason: ReportEtcdMembersErrorUpdatingStatus
+  reportingComponent: openshift-cluster-etcd-operator-member-observer-controller-etcdmemberscontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-member-observer-controller-etcdmemberscontroller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:34Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:34Z"
+  message: clusteroperator/etcd version "raw-internal" changed from "" to "4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest"
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:34Z"
+    name: etcd-operator.188edb202ec2c016
+    namespace: openshift-etcd-operator
+    resourceVersion: "6065"
+    uid: ffa03672-76c9-4124-bfb8-def3a4f716cc
+  reason: OperatorVersionChanged
+  reportingComponent: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:34Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:34Z"
+  message: Observed new master node ip-10-0-102-200.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:34Z"
+    name: etcd-operator.188edb202eebb5ff
+    namespace: openshift-etcd-operator
+    resourceVersion: "6067"
+    uid: 1ee4391f-6907-4da4-b876-16ffddef90f6
+  reason: MasterNodeObserved
+  reportingComponent: openshift-cluster-etcd-operator-etcd-node
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcd-node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:34Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:34Z"
+  message: Observed new master node ip-10-0-108-54.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:34Z"
+    name: etcd-operator.188edb202eebe949
+    namespace: openshift-etcd-operator
+    resourceVersion: "6069"
+    uid: ba6ffd48-936e-45b9-b501-6e6c3071c0a4
+  reason: MasterNodeObserved
+  reportingComponent: openshift-cluster-etcd-operator-etcd-node
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcd-node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:34Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:34Z"
+  message: Observed new master node ip-10-0-3-203.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:34Z"
+    name: etcd-operator.188edb202eebf8d5
+    namespace: openshift-etcd-operator
+    resourceVersion: "6072"
+    uid: 7aee9ff1-de36-4d50-93ad-fc87b4d3319d
+  reason: MasterNodeObserved
+  reportingComponent: openshift-cluster-etcd-operator-etcd-node
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcd-node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:34Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:34Z"
+  message: 'Status for clusteroperator/etcd changed: Degraded set to False ("EtcdMembersControllerDegraded:
+    getting cache client could not retrieve endpoints: configmaps lister not synced"),Progressing
+    set to Unknown (""),Available set to Unknown (""),Upgradeable set to Unknown (""),EvaluationConditionsDetected
+    set to Unknown (""),status.versions changed from [] to [{"raw-internal" "4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest"}]'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:34Z"
+    name: etcd-operator.188edb202f723dab
+    namespace: openshift-etcd-operator
+    resourceVersion: "6070"
+    uid: f192f5e0-d059-43ee-8779-30bf9edba7ba
+  reason: OperatorStatusChanged
+  reportingComponent: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:34Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:34Z"
+  message: 'Status for clusteroperator/etcd changed: Degraded message changed from
+    "EtcdMembersControllerDegraded: getting cache client could not retrieve endpoints:
+    configmaps lister not synced" to "EtcdMembersControllerDegraded: getting cache
+    client could not retrieve endpoints: configmaps lister not synced\nScriptControllerDegraded:
+    \"configmap/etcd-pod\": missing env var values"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:34Z"
+    name: etcd-operator.188edb2031cdb3cc
+    namespace: openshift-etcd-operator
+    resourceVersion: "6078"
+    uid: a68cbd67-bd3a-4d69-aa96-2168d99fdad4
+  reason: OperatorStatusChanged
+  reportingComponent: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:35Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:35Z"
+  message: All master nodes are ready
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:35Z"
+    name: etcd-operator.188edb2039acecf6
+    namespace: openshift-etcd-operator
+    resourceVersion: "6098"
+    uid: 5e064edc-3b22-43e4-b73c-c47a3ed64a1c
+  reason: MasterNodesReadyChanged
+  reportingComponent: openshift-cluster-etcd-operator-etcd-node
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcd-node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:35Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:35Z"
+  message: 'Status for clusteroperator/etcd changed: Upgradeable changed from Unknown
+    to True ("All is well")'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:35Z"
+    name: etcd-operator.188edb2039f95e22
+    namespace: openshift-etcd-operator
+    resourceVersion: "6100"
+    uid: 7505f223-28c7-483c-9570-bd2c564475f7
+  reason: OperatorStatusChanged
+  reportingComponent: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:35Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:35Z"
+  message: 'Status for clusteroperator/etcd changed: Degraded message changed from
+    "EtcdMembersControllerDegraded: getting cache client could not retrieve endpoints:
+    configmaps lister not synced\nScriptControllerDegraded: \"configmap/etcd-pod\":
+    missing env var values" to "EtcdMembersControllerDegraded: getting cache client
+    could not retrieve endpoints: configmaps lister not synced\nScriptControllerDegraded:
+    \"configmap/etcd-pod\": missing env var values\nNodeControllerDegraded: All master
+    nodes are ready"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:35Z"
+    name: etcd-operator.188edb203aca12ad
+    namespace: openshift-etcd-operator
+    resourceVersion: "6105"
+    uid: a5ecaa12-5b23-4abb-9042-e04183d63ca4
+  reason: OperatorStatusChanged
+  reportingComponent: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:35Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:35Z"
+  message: minTLSVersion changed to VersionTLS12
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:35Z"
+    name: etcd-operator.188edb207046b4e2
+    namespace: openshift-etcd-operator
+    resourceVersion: "6196"
+    uid: ea1896c9-4fd8-42f9-b493-9c7dd8b7f342
+  reason: ObserveTLSSecurityProfile
+  reportingComponent: openshift-cluster-etcd-operator-config-observer-configobserver
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-config-observer-configobserver
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:35Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:35Z"
+  message: cipherSuites changed to ["TLS_AES_128_GCM_SHA256" "TLS_AES_256_GCM_SHA384"
+    "TLS_CHACHA20_POLY1305_SHA256" "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256" "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+    "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384" "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
+    "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256" "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"]
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:35Z"
+    name: etcd-operator.188edb2070472fe6
+    namespace: openshift-etcd-operator
+    resourceVersion: "6199"
+    uid: 58b5af53-27d8-47d1-bac7-e9a0a96f3a44
+  reason: ObserveTLSSecurityProfile
+  reportingComponent: openshift-cluster-etcd-operator-config-observer-configobserver
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-config-observer-configobserver
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:35Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:35Z"
+  message: "Writing updated observed config:   map[string]any{\n+ \t\"controlPlane\":
+    map[string]any{\"replicas\": float64(3)},\n+ \t\"servingInfo\": map[string]any{\n+
+    \t\t\"cipherSuites\": []any{\n+ \t\t\tstring(\"TLS_AES_128_GCM_SHA256\"), string(\"TLS_AES_256_GCM_SHA384\"),\n+
+    \t\t\tstring(\"TLS_CHACHA20_POLY1305_SHA256\"),\n+ \t\t\tstring(\"TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256\"),\n+
+    \t\t\tstring(\"TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256\"),\n+ \t\t\tstring(\"TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384\"),\n+
+    \t\t\tstring(\"TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384\"),\n+ \t\t\tstring(\"TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256\"),
+    ...,\n+ \t\t},\n+ \t\t\"minTLSVersion\": string(\"VersionTLS12\"),\n+ \t},\n  }\n"
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:35Z"
+    name: etcd-operator.188edb20704e223a
+    namespace: openshift-etcd-operator
+    resourceVersion: "6200"
+    uid: f06e100c-53d0-4501-a7cd-3ce12832b2ee
+  reason: ObservedConfigChanged
+  reportingComponent: openshift-cluster-etcd-operator-config-observer-configobserver
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-config-observer-configobserver
+  type: Normal
+- apiVersion: v1
+  count: 5
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:35Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:38Z"
+  message: 'configmaps: etcd-all-bundles-0,etcd-endpoints-0,etcd-pod-0, secrets: etcd-all-certs-0'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:38Z"
+    name: etcd-operator.188edb207069992a
+    namespace: openshift-etcd-operator
+    resourceVersion: "6348"
+    uid: 012b396e-c63e-4af0-8d07-2c6ef9d7ec23
+  reason: RequiredInstallerResourcesMissing
+  reportingComponent: openshift-cluster-etcd-operator-installer-controller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-installer-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:36Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:36Z"
+  message: Created ConfigMap/cluster-config-v1 -n openshift-etcd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:36Z"
+    name: etcd-operator.188edb209ff61f9d
+    namespace: openshift-etcd-operator
+    resourceVersion: "6254"
+    uid: 6dfcef30-3e9d-4af6-a196-2b8fdb7610b3
+  reason: ConfigMapCreated
+  reportingComponent: openshift-cluster-etcd-operator-resource-sync-controller-resourcesynccontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-resource-sync-controller-resourcesynccontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:37Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:37Z"
+  message: |-
+    Updated ConfigMap/etcd-ca-bundle -n openshift-etcd-operator:
+    cause by changes in data.ca-bundle.crt
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:37Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:37Z"
+    name: etcd-operator.188edb20e794a620
+    namespace: openshift-etcd-operator
+    resourceVersion: "6326"
+    uid: f0526a09-3787-4245-afcc-b17fb2b8bf2f
+  reason: ConfigMapUpdated
+  reportingComponent: openshift-cluster-etcd-operator-resource-sync-controller-resourcesynccontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-resource-sync-controller-resourcesynccontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:38Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:38Z"
+  message: Updated Namespace/openshift-etcd because it changed
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:38Z"
+    name: etcd-operator.188edb20ff6b351a
+    namespace: openshift-etcd-operator
+    resourceVersion: "6349"
+    uid: de60cc4c-2970-4e9e-b351-e36515645648
+  reason: NamespaceUpdated
+  reportingComponent: openshift-cluster-etcd-operator-etcdstaticresources-etcdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcdstaticresources-etcdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:38Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:38Z"
+  message: Created ServiceAccount/installer-sa -n openshift-etcd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:38Z"
+    name: etcd-operator.188edb210b305bd5
+    namespace: openshift-etcd-operator
+    resourceVersion: "6363"
+    uid: 42f7b321-2d7d-42ec-9be3-5b566aa06bbb
+  reason: ServiceAccountCreated
+  reportingComponent: openshift-cluster-etcd-operator-backingresourcecontroller-backingresourcecontroller-staticresources
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-backingresourcecontroller-backingresourcecontroller-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:38Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:38Z"
+  message: Created ClusterRoleBinding.rbac.authorization.k8s.io/system:openshift:operator:openshift-etcd-installer
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:38Z"
+    name: etcd-operator.188edb210b964cd4
+    namespace: openshift-etcd-operator
+    resourceVersion: "6366"
+    uid: ad86e38c-825d-468f-8590-1bb4ee55ebdb
+  reason: ClusterRoleBindingCreated
+  reportingComponent: openshift-cluster-etcd-operator-backingresourcecontroller-backingresourcecontroller-staticresources
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-backingresourcecontroller-backingresourcecontroller-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:38Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:38Z"
+  message: Created ConfigMap/etcd-ca-bundle -n openshift-config because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:38Z"
+    name: etcd-operator.188edb2122fdefe7
+    namespace: openshift-etcd-operator
+    resourceVersion: "6383"
+    uid: c4b3437f-d4fb-4ad7-9f6a-2191d8052aea
+  reason: ConfigMapCreated
+  reportingComponent: openshift-cluster-etcd-operator-resource-sync-controller-resourcesynccontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-resource-sync-controller-resourcesynccontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:39Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:39Z"
+  message: Created ConfigMap/etcd-serving-ca -n openshift-config because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:39Z"
+    name: etcd-operator.188edb2152c97017
+    namespace: openshift-etcd-operator
+    resourceVersion: "6436"
+    uid: 878beb96-2da3-473c-bac9-b66f4b94b8e6
+  reason: ConfigMapCreated
+  reportingComponent: openshift-cluster-etcd-operator-resource-sync-controller-resourcesynccontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-resource-sync-controller-resourcesynccontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:40Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:40Z"
+  message: Created ServiceAccount/etcd-sa -n openshift-etcd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:40Z"
+    name: etcd-operator.188edb216a8c76bd
+    namespace: openshift-etcd-operator
+    resourceVersion: "6481"
+    uid: 7bd9d1bf-54fa-42dc-b305-fcc4faccacca
+  reason: ServiceAccountCreated
+  reportingComponent: openshift-cluster-etcd-operator-etcdstaticresources-etcdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcdstaticresources-etcdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:40Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:40Z"
+  message: Created ConfigMap/etcd-metric-serving-ca -n openshift-etcd-operator because
+    it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:40Z"
+    name: etcd-operator.188edb218e5213c6
+    namespace: openshift-etcd-operator
+    resourceVersion: "6527"
+    uid: 531513f8-104f-4016-9027-47f127e4c43f
+  reason: ConfigMapCreated
+  reportingComponent: openshift-cluster-etcd-operator-resource-sync-controller-resourcesynccontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-resource-sync-controller-resourcesynccontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:42Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:42Z"
+  message: Updated Service/etcd -n openshift-etcd because it changed
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:42Z"
+    name: etcd-operator.188edb21e1e74402
+    namespace: openshift-etcd-operator
+    resourceVersion: "6648"
+    uid: ff6f791d-13ae-4060-80c3-f94100800f37
+  reason: ServiceUpdated
+  reportingComponent: openshift-cluster-etcd-operator-etcdstaticresources-etcdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcdstaticresources-etcdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:42Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:42Z"
+  message: Created ServiceMonitor.monitoring.coreos.com/etcd -n openshift-etcd-operator
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:42Z"
+    name: etcd-operator.188edb21e2582f6a
+    namespace: openshift-etcd-operator
+    resourceVersion: "6651"
+    uid: 387b4c62-5e0d-4048-a94c-c1fc6c627fa6
+  reason: ServiceMonitorCreated
+  reportingComponent: openshift-cluster-etcd-operator-etcdstaticresources-etcdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcdstaticresources-etcdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:42Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:42Z"
+  message: Created ServiceMonitor.monitoring.coreos.com/etcd-minimal -n openshift-etcd-operator
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:42Z"
+    name: etcd-operator.188edb21e2de3135
+    namespace: openshift-etcd-operator
+    resourceVersion: "6653"
+    uid: 1e9210c8-7080-496a-8618-00b4d2296ddb
+  reason: ServiceMonitorCreated
+  reportingComponent: openshift-cluster-etcd-operator-etcdstaticresources-etcdstaticresources-staticresources
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcdstaticresources-etcdstaticresources-staticresources
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:43Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:43Z"
+  message: '"etcd-peer-ip-10-0-108-54.us-west-1.compute.internal" in "openshift-etcd"
+    requires a new target cert/key pair: secret doesn''t exist'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:43Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:43Z"
+    name: etcd-operator.188edb2229363b19
+    namespace: openshift-etcd-operator
+    resourceVersion: "6731"
+    uid: a378f3c2-f3cb-40ab-bb10-da6f070a160e
+  reason: TargetUpdateRequired
+  reportingComponent: openshift-cluster-etcd-operator-etcd-cert-signer-controller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcd-cert-signer-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:44Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:44Z"
+  message: Created Secret/etcd-peer-ip-10-0-108-54.us-west-1.compute.internal -n openshift-etcd
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:44Z"
+    name: etcd-operator.188edb227ce24ddf
+    namespace: openshift-etcd-operator
+    resourceVersion: "6814"
+    uid: 724c03d8-2a80-45d3-a027-c15a55e62c93
+  reason: SecretCreated
+  reportingComponent: openshift-cluster-etcd-operator-etcd-cert-signer-controller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcd-cert-signer-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:45Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:45Z"
+  message: '"etcd-serving-ip-10-0-108-54.us-west-1.compute.internal" in "openshift-etcd"
+    requires a new target cert/key pair: secret doesn''t exist'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:45Z"
+    name: etcd-operator.188edb22a08481c0
+    namespace: openshift-etcd-operator
+    resourceVersion: "6886"
+    uid: cf074103-b353-49ab-a88e-e38ddc5c0209
+  reason: TargetUpdateRequired
+  reportingComponent: openshift-cluster-etcd-operator-etcd-cert-signer-controller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcd-cert-signer-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:45Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:45Z"
+  message: 'Operation cannot be fulfilled on etcds.operator.openshift.io "cluster":
+    the object has been modified; please apply your changes to the latest version
+    and try again'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:45Z"
+    name: etcd-operator.188edb22a0d3fecd
+    namespace: openshift-etcd-operator
+    resourceVersion: "6888"
+    uid: 020c407f-2b67-41a0-969d-f60e0d4d5fa0
+  reason: EnvVarControllerUpdatingStatus
+  reportingComponent: openshift-cluster-etcd-operator-env-var-controller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-env-var-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:46Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:46Z"
+  message: Created Secret/etcd-serving-ip-10-0-108-54.us-west-1.compute.internal -n
+    openshift-etcd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:46Z"
+    name: etcd-operator.188edb22dc563475
+    namespace: openshift-etcd-operator
+    resourceVersion: "6958"
+    uid: b555d461-59b0-4d33-a375-74d829927e22
+  reason: SecretCreated
+  reportingComponent: openshift-cluster-etcd-operator-etcd-cert-signer-controller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcd-cert-signer-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:46Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:46Z"
+  message: '"etcd-serving-metrics-ip-10-0-108-54.us-west-1.compute.internal" in "openshift-etcd"
+    requires a new target cert/key pair: secret doesn''t exist'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:46Z"
+    name: etcd-operator.188edb22ffc4e1f4
+    namespace: openshift-etcd-operator
+    resourceVersion: "7005"
+    uid: c63a7fcd-4de5-4570-b866-a0ff960f2060
+  reason: TargetUpdateRequired
+  reportingComponent: openshift-cluster-etcd-operator-etcd-cert-signer-controller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcd-cert-signer-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:59Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:59Z"
+  message: Updated Secret/etcd-all-certs -n openshift-etcd because it changed
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:59Z"
+    name: etcd-operator.188edb25ef8b0255
+    namespace: openshift-etcd-operator
+    resourceVersion: "7636"
+    uid: c8eabc15-e797-4dbc-9f34-a2dd388e734c
+  reason: SecretUpdated
+  reportingComponent: openshift-cluster-etcd-operator-etcd-cert-signer-controller-etcdcertsignercontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcd-cert-signer-controller-etcdcertsignercontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:01Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:01Z"
+  message: Created ConfigMap/etcd-scripts -n openshift-etcd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:31:01Z"
+    name: etcd-operator.188edb267e05a8f8
+    namespace: openshift-etcd-operator
+    resourceVersion: "7772"
+    uid: 79689dc4-01d0-4024-97f2-30f6319afa4e
+  reason: ConfigMapCreated
+  reportingComponent: openshift-cluster-etcd-operator-script-controller-scriptcontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-script-controller-scriptcontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:02Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:02Z"
+  message: Created ConfigMap/etcd-pod -n openshift-etcd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:31:02Z"
+    name: etcd-operator.188edb268a211e36
+    namespace: openshift-etcd-operator
+    resourceVersion: "7785"
+    uid: 36529f47-5bdf-4bb2-9624-8af75291284e
+  reason: ConfigMapCreated
+  reportingComponent: openshift-cluster-etcd-operator-target-config-controller-targetconfigcontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-target-config-controller-targetconfigcontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:02Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:02Z"
+  message: new revision 1 triggered by "configmap \"etcd-pod-0\" not found"
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:31:02Z"
+    name: etcd-operator.188edb268a3808d4
+    namespace: openshift-etcd-operator
+    resourceVersion: "7786"
+    uid: 6b37aabf-e0d4-427c-b810-fb66ecc41809
+  reason: StartingNewRevision
+  reportingComponent: openshift-cluster-etcd-operator-revisioncontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-revisioncontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:04Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:04Z"
+  message: Created ConfigMap/restore-etcd-pod -n openshift-etcd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:04Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:31:04Z"
+    name: etcd-operator.188edb27191ada9a
+    namespace: openshift-etcd-operator
+    resourceVersion: "7891"
+    uid: 84bd9977-88aa-43e0-a16d-8128cf2f5757
+  reason: ConfigMapCreated
+  reportingComponent: openshift-cluster-etcd-operator-target-config-controller-targetconfigcontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-target-config-controller-targetconfigcontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:04Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:04Z"
+  message: Created ConfigMap/etcd-pod-1 -n openshift-etcd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:04Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:31:04Z"
+    name: etcd-operator.188edb2724fbfee8
+    namespace: openshift-etcd-operator
+    resourceVersion: "7906"
+    uid: 41b35667-88d6-42c0-9ee4-2f54bb4eac64
+  reason: ConfigMapCreated
+  reportingComponent: openshift-cluster-etcd-operator-revisioncontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-revisioncontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:05Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:05Z"
+  message: Created ConfigMap/etcd-endpoints-1 -n openshift-etcd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:31:05Z"
+    name: etcd-operator.188edb276c629d4f
+    namespace: openshift-etcd-operator
+    resourceVersion: "8004"
+    uid: 9aaaa5dc-45f3-4785-8d25-2b20bd97bbb2
+  reason: ConfigMapCreated
+  reportingComponent: openshift-cluster-etcd-operator-revisioncontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-revisioncontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:06Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:06Z"
+  message: Created ConfigMap/etcd-all-bundles-1 -n openshift-etcd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:31:06Z"
+    name: etcd-operator.188edb27a7fe1cb9
+    namespace: openshift-etcd-operator
+    resourceVersion: "8104"
+    uid: 253498cb-8238-40b6-b918-918f45423d56
+  reason: ConfigMapCreated
+  reportingComponent: openshift-cluster-etcd-operator-revisioncontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-revisioncontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:07Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:07Z"
+  message: Created Secret/etcd-all-certs-1 -n openshift-etcd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:31:07Z"
+    name: etcd-operator.188edb27d7cd7e90
+    namespace: openshift-etcd-operator
+    resourceVersion: "8198"
+    uid: e44e8676-1948-4d32-bdad-9f061a5f972d
+  reason: SecretCreated
+  reportingComponent: openshift-cluster-etcd-operator-revisioncontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-revisioncontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:09Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:09Z"
+  message: Updating node "ip-10-0-102-200.us-west-1.compute.internal" from revision
+    0 to 1 because node ip-10-0-102-200.us-west-1.compute.internal static pod not
+    found
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:31:09Z"
+    name: etcd-operator.188edb285b8b6f1b
+    namespace: openshift-etcd-operator
+    resourceVersion: "8326"
+    uid: 0e3abc28-a2c8-4609-abfd-ac195f03c3cb
+  reason: NodeTargetRevisionChanged
+  reportingComponent: openshift-cluster-etcd-operator-installer-controller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-installer-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:12Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:12Z"
+  message: Created Pod/installer-1-ip-10-0-102-200.us-west-1.compute.internal -n openshift-etcd
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:12Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:31:12Z"
+    name: etcd-operator.188edb290463b2bc
+    namespace: openshift-etcd-operator
+    resourceVersion: "8585"
+    uid: 0a4639b8-76c4-46c9-810d-17d0ab56bef2
+  reason: PodCreated
+  reportingComponent: openshift-cluster-etcd-operator-installer-controller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-installer-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:46Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:46Z"
+  message: 'client rate limiter Wait returned an error: context canceled'
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:31:46Z"
+    name: etcd-operator.188edb30d4392876
+    namespace: openshift-etcd-operator
+    resourceVersion: "9577"
+    uid: 01c8e9d2-fa3f-45ca-b068-48b8fd9d3276
+  reason: ScriptControllerErrorUpdatingStatus
+  reportingComponent: openshift-cluster-etcd-operator-script-controller-scriptcontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-script-controller-scriptcontroller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:00Z"
+  message: FeatureGates updated to featuregates.Features{Enabled:[]v1.FeatureGateName{"AdditionalRoutingCapabilities",
+    "AdminNetworkPolicy", "AlibabaPlatform", "AzureWorkloadIdentity", "BuildCSIVolumes",
+    "CPMSMachineNamePrefix", "ConsolePluginContentSecurityPolicy", "ExternalOIDC",
+    "ExternalOIDCWithUIDAndExtraClaimMappings", "GatewayAPI", "GatewayAPIController",
+    "HighlyAvailableArbiter", "ImageVolume", "IngressControllerLBSubnetsAWS", "KMSv1",
+    "MachineConfigNodes", "ManagedBootImages", "ManagedBootImagesAWS", "MetricsCollectionProfiles",
+    "NetworkDiagnosticsConfig", "NetworkLiveMigration", "NetworkSegmentation", "NewOLM",
+    "PinnedImages", "PreconfiguredUDNAddresses", "ProcMountType", "RouteAdvertisements",
+    "RouteExternalCertificate", "ServiceAccountTokenNodeBinding", "SetEIPForNLBIngressController",
+    "SigstoreImageVerification", "StoragePerformantSecurityPolicy", "UpgradeStatus",
+    "UserNamespacesPodSecurityStandards", "UserNamespacesSupport", "VSphereMultiDisk",
+    "VSphereMultiNetworks"}, Disabled:[]v1.FeatureGateName{"AWSClusterHostedDNS",
+    "AWSClusterHostedDNSInstall", "AWSDedicatedHosts", "AWSServiceLBNetworkSecurityGroup",
+    "AutomatedEtcdBackup", "AzureClusterHostedDNSInstall", "AzureDedicatedHosts",
+    "AzureMultiDisk", "BootImageSkewEnforcement", "BootcNodeManagement", "ClusterAPIInstall",
+    "ClusterAPIInstallIBMCloud", "ClusterMonitoringConfig", "ClusterVersionOperatorConfiguration",
+    "DNSNameResolver", "DualReplica", "DyanmicServiceEndpointIBMCloud", "DynamicResourceAllocation",
+    "EtcdBackendQuota", "EventedPLEG", "Example", "Example2", "ExternalSnapshotMetadata",
+    "GCPClusterHostedDNS", "GCPClusterHostedDNSInstall", "GCPCustomAPIEndpoints",
+    "GCPCustomAPIEndpointsInstall", "ImageModeStatusReporting", "ImageStreamImportMode",
+    "IngressControllerDynamicConfigurationManager", "InsightsConfig", "InsightsConfigAPI",
+    "InsightsOnDemandDataGather", "IrreconcilableMachineConfig", "KMSEncryptionProvider",
+    "MachineAPIMigration", "MachineAPIOperatorDisableMachineHealthCheckController",
+    "ManagedBootImagesAzure", "ManagedBootImagesvSphere", "MaxUnavailableStatefulSet",
+    "MinimumKubeletVersion", "MixedCPUsAllocation", "MultiArchInstallAzure", "MultiDiskSetup",
+    "MutatingAdmissionPolicy", "NewOLMCatalogdAPIV1Metas", "NewOLMOwnSingleNamespace",
+    "NewOLMPreflightPermissionChecks", "NewOLMWebhookProviderOpenshiftServiceCA",
+    "NoRegistryClusterOperations", "NodeSwap", "NutanixMultiSubnets", "OVNObservability",
+    "OpenShiftPodSecurityAdmission", "SELinuxMount", "ShortCertRotation", "SignatureStores",
+    "SigstoreImageVerificationPKI", "TranslateStreamCloseWebsocketRequests", "VSphereConfigurableMaxAllowedBlockVolumesPerNode",
+    "VSphereHostVMGroupZonal", "VSphereMixedNodeEnv", "VolumeAttributesClass", "VolumeGroupSnapshot"}}
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:32:00Z"
+    name: etcd-operator.188edb341b9d1b68
+    namespace: openshift-etcd-operator
+    resourceVersion: "10678"
+    uid: d72790c9-2a80-493f-a41f-c9d3ce15e807
+  reason: FeatureGatesInitialized
+  reportingComponent: openshift-cluster-etcd-operator
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:00Z"
+  message: 'Status for clusteroperator/etcd changed: Degraded message changed from
+    "NodeControllerDegraded: All master nodes are ready\nEtcdEndpointsDegraded: no
+    etcd members are present\nEtcdMembersDegraded: No unhealthy members found" to
+    "EtcdMembersControllerDegraded: getting cache client could not retrieve endpoints:
+    configmaps lister not synced\nNodeControllerDegraded: All master nodes are ready\nEtcdEndpointsDegraded:
+    no etcd members are present\nEtcdMembersDegraded: No unhealthy members found"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:32:00Z"
+    name: etcd-operator.188edb342bbc673c
+    namespace: openshift-etcd-operator
+    resourceVersion: "10732"
+    uid: 7b2a9906-477d-4b0d-a157-5cbe360b98c9
+  reason: OperatorStatusChanged
+  reportingComponent: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:00Z"
+  message: 'Status for clusteroperator/etcd changed: Degraded message changed from
+    "EtcdMembersControllerDegraded: getting cache client could not retrieve endpoints:
+    configmaps lister not synced\nNodeControllerDegraded: All master nodes are ready\nEtcdEndpointsDegraded:
+    no etcd members are present\nEtcdMembersDegraded: No unhealthy members found"
+    to "EtcdMembersControllerDegraded: getting cache client could not retrieve endpoints:
+    configmaps lister not synced\nScriptControllerDegraded: \"configmap/etcd-pod\":
+    missing env var values\nNodeControllerDegraded: All master nodes are ready\nEtcdEndpointsDegraded:
+    no etcd members are present\nEtcdMembersDegraded: No unhealthy members found"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:32:00Z"
+    name: etcd-operator.188edb342ddffa51
+    namespace: openshift-etcd-operator
+    resourceVersion: "10750"
+    uid: b35fe46f-9839-4575-8a3c-cd3a3a7cd3f5
+  reason: OperatorStatusChanged
+  reportingComponent: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:01Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:01Z"
+  message: 'Status for clusteroperator/etcd changed: Degraded message changed from
+    "EtcdMembersControllerDegraded: getting cache client could not retrieve endpoints:
+    configmaps lister not synced\nScriptControllerDegraded: \"configmap/etcd-pod\":
+    missing env var values\nNodeControllerDegraded: All master nodes are ready\nEtcdEndpointsDegraded:
+    no etcd members are present\nEtcdMembersDegraded: No unhealthy members found"
+    to "ScriptControllerDegraded: \"configmap/etcd-pod\": missing env var values\nNodeControllerDegraded:
+    All master nodes are ready\nEtcdEndpointsDegraded: no etcd members are present\nEtcdMembersDegraded:
+    No unhealthy members found"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:32:02Z"
+    name: etcd-operator.188edb3477ebe85d
+    namespace: openshift-etcd-operator
+    resourceVersion: "10864"
+    uid: fdb72193-0566-4d0f-b5e5-c62c8eb9dada
+  reason: OperatorStatusChanged
+  reportingComponent: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:03Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:03Z"
+  message: 'Status for clusteroperator/etcd changed: Degraded message changed from
+    "ScriptControllerDegraded: \"configmap/etcd-pod\": missing env var values\nNodeControllerDegraded:
+    All master nodes are ready\nEtcdEndpointsDegraded: no etcd members are present\nEtcdMembersDegraded:
+    No unhealthy members found" to "NodeControllerDegraded: All master nodes are ready\nEtcdEndpointsDegraded:
+    no etcd members are present\nEtcdMembersDegraded: No unhealthy members found"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:03Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:32:03Z"
+    name: etcd-operator.188edb34b5a80a04
+    namespace: openshift-etcd-operator
+    resourceVersion: "10919"
+    uid: 49771ec8-fc56-4699-b6b4-dd1efc982161
+  reason: OperatorStatusChanged
+  reportingComponent: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:06Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:06Z"
+  message: clusteroperator/etcd version "etcd" changed from "" to "4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest"
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:32:06Z"
+    name: etcd-operator.188edb357a00be6b
+    namespace: openshift-etcd-operator
+    resourceVersion: "11109"
+    uid: e126400f-2e97-42a8-83e0-86db30cbe08a
+  reason: OperatorVersionChanged
+  reportingComponent: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:06Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:06Z"
+  message: Created PodDisruptionBudget.policy/etcd-guard-pdb -n openshift-etcd because
+    it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:32:07Z"
+    name: etcd-operator.188edb35a1eab75f
+    namespace: openshift-etcd-operator
+    resourceVersion: "11145"
+    uid: a47d9b94-0f84-4e59-ba86-a76cadbd6b43
+  reason: PodDisruptionBudgetCreated
+  reportingComponent: openshift-cluster-etcd-operator-guardcontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-guardcontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:11Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:11Z"
+  message: successfully added new member https://10.0.102.200:2380
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:32:11Z"
+    name: etcd-operator.188edb3695945233
+    namespace: openshift-etcd-operator
+    resourceVersion: "11332"
+    uid: 472233e5-9d2b-48dc-9c9c-5ba24612d0e3
+  reason: MemberAddAsLearner
+  reportingComponent: openshift-cluster-etcd-operator-etcd-client
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcd-client
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:11Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:11Z"
+  message: Created Pod/etcd-guard-ip-10-0-102-200.us-west-1.compute.internal -n openshift-etcd
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:32:11Z"
+    name: etcd-operator.188edb3698b72e52
+    namespace: openshift-etcd-operator
+    resourceVersion: "11337"
+    uid: 4df7439e-45a7-4236-b566-9368061db592
+  reason: PodCreated
+  reportingComponent: openshift-cluster-etcd-operator-guardcontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-guardcontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:15Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:15Z"
+  message: Updated Pod/etcd-guard-ip-10-0-102-200.us-west-1.compute.internal -n openshift-etcd
+    because it changed
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:15Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:32:15Z"
+    name: etcd-operator.188edb379ebac5f0
+    namespace: openshift-etcd-operator
+    resourceVersion: "11406"
+    uid: cc4ab53c-be38-4d32-93fa-8982d76bff87
+  reason: PodUpdated
+  reportingComponent: openshift-cluster-etcd-operator-guardcontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-guardcontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:42Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:42Z"
+  message: successfully promoted learner member https://10.0.102.200:2380
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:32:42Z"
+    name: etcd-operator.188edb3dc9f38ea1
+    namespace: openshift-etcd-operator
+    resourceVersion: "12057"
+    uid: 7739a7d9-1085-48e1-a0de-e8b14822fa15
+  reason: MemberPromote
+  reportingComponent: openshift-cluster-etcd-operator-etcd-client
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcd-client
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:58Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:58Z"
+  message: Updated node "ip-10-0-102-200.us-west-1.compute.internal" from revision
+    0 to 1 because static pod is ready
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:32:58Z"
+    name: etcd-operator.188edb418a8fd63c
+    namespace: openshift-etcd-operator
+    resourceVersion: "12401"
+    uid: 586759c9-911c-4683-9ac1-a142dceabdd4
+  reason: NodeCurrentRevisionChanged
+  reportingComponent: openshift-cluster-etcd-operator-installer-controller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-installer-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:33:01Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:33:01Z"
+  message: Updating node "ip-10-0-108-54.us-west-1.compute.internal" from revision
+    0 to 1 because node ip-10-0-108-54.us-west-1.compute.internal static pod not found
+  metadata:
+    creationTimestamp: "2026-01-28T09:33:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:33:01Z"
+    name: etcd-operator.188edb423d558e4a
+    namespace: openshift-etcd-operator
+    resourceVersion: "12438"
+    uid: e12f0de1-ab35-4a82-b90f-285c10a16063
+  reason: NodeTargetRevisionChanged
+  reportingComponent: openshift-cluster-etcd-operator-installer-controller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-installer-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:33:01Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:33:01Z"
+  message: |-
+    Updated ConfigMap/etcd-endpoints -n openshift-etcd:
+    cause by changes in data.959d23da33d1013c
+  metadata:
+    creationTimestamp: "2026-01-28T09:33:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:33:01Z"
+    name: etcd-operator.188edb42487ef28f
+    namespace: openshift-etcd-operator
+    resourceVersion: "12450"
+    uid: 6059710e-aec9-4ebe-aac6-d3837677eb27
+  reason: ConfigMapUpdated
+  reportingComponent: openshift-cluster-etcd-operator-etcd-endpoints-controller-etcdendpointscontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcd-endpoints-controller-etcdendpointscontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:33:01Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:33:01Z"
+  message: new revision 2 triggered by "required configmap/etcd-endpoints has been
+    created"
+  metadata:
+    creationTimestamp: "2026-01-28T09:33:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:33:01Z"
+    name: etcd-operator.188edb4249dd1e7c
+    namespace: openshift-etcd-operator
+    resourceVersion: "12453"
+    uid: c14691a7-644f-450e-9655-5ca46a73c6c2
+  reason: StartingNewRevision
+  reportingComponent: openshift-cluster-etcd-operator-revisioncontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-revisioncontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:33:05Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:33:05Z"
+  message: Created Pod/installer-1-ip-10-0-108-54.us-west-1.compute.internal -n openshift-etcd
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:33:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:33:05Z"
+    name: etcd-operator.188edb432c9ba1a6
+    namespace: openshift-etcd-operator
+    resourceVersion: "12561"
+    uid: e5b61f86-65ef-4f31-8811-d8f5c83e1d8a
+  reason: PodCreated
+  reportingComponent: openshift-cluster-etcd-operator-installer-controller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-installer-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:33:05Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:33:05Z"
+  message: Created ConfigMap/etcd-pod-2 -n openshift-etcd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:33:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:33:05Z"
+    name: etcd-operator.188edb433782336a
+    namespace: openshift-etcd-operator
+    resourceVersion: "12569"
+    uid: 091487e6-aa8a-4132-8d78-864767861f11
+  reason: ConfigMapCreated
+  reportingComponent: openshift-cluster-etcd-operator-revisioncontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-revisioncontroller
+  type: Normal
+- apiVersion: v1
+  count: 4
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:33:06Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:07Z"
+  message: |-
+    Updated ConfigMap/etcd-scripts -n openshift-etcd:
+    cause by changes in data.etcd.env
+  metadata:
+    creationTimestamp: "2026-01-28T09:33:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:43:07Z"
+    name: etcd-operator.188edb43727d286c
+    namespace: openshift-etcd-operator
+    resourceVersion: "22786"
+    uid: 83bf60d2-414c-409f-b85d-6d3cb230c349
+  reason: ConfigMapUpdated
+  reportingComponent: openshift-cluster-etcd-operator-script-controller-scriptcontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-script-controller-scriptcontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:33:07Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:33:07Z"
+  message: Created ConfigMap/etcd-endpoints-2 -n openshift-etcd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:33:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:33:07Z"
+    name: etcd-operator.188edb43ae359940
+    namespace: openshift-etcd-operator
+    resourceVersion: "12610"
+    uid: bed4051c-d79c-4b7a-bb24-10630fd71a74
+  reason: ConfigMapCreated
+  reportingComponent: openshift-cluster-etcd-operator-revisioncontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-revisioncontroller
+  type: Normal
+- apiVersion: v1
+  count: 4
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:33:07Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:10Z"
+  message: |-
+    Updated ConfigMap/etcd-pod -n openshift-etcd:
+    cause by changes in data.pod.yaml
+  metadata:
+    creationTimestamp: "2026-01-28T09:33:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:43:10Z"
+    name: etcd-operator.188edb43d1e61029
+    namespace: openshift-etcd-operator
+    resourceVersion: "22874"
+    uid: b4dfa5b8-a7d4-4e55-aad9-09df8559645a
+  reason: ConfigMapUpdated
+  reportingComponent: openshift-cluster-etcd-operator-target-config-controller-targetconfigcontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-target-config-controller-targetconfigcontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:33:09Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:33:09Z"
+  message: Created ConfigMap/etcd-all-bundles-2 -n openshift-etcd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:33:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:33:09Z"
+    name: etcd-operator.188edb44253cd678
+    namespace: openshift-etcd-operator
+    resourceVersion: "12670"
+    uid: 3de7926e-3458-409b-83c5-3ba3e2076ddd
+  reason: ConfigMapCreated
+  reportingComponent: openshift-cluster-etcd-operator-revisioncontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-revisioncontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:33:11Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:33:11Z"
+  message: Created Secret/etcd-all-certs-2 -n openshift-etcd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:33:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:33:11Z"
+    name: etcd-operator.188edb4490a7bff9
+    namespace: openshift-etcd-operator
+    resourceVersion: "12683"
+    uid: a1a0cdcb-b90c-49f5-a3c6-df5d467d66da
+  reason: SecretCreated
+  reportingComponent: openshift-cluster-etcd-operator-revisioncontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-revisioncontroller
+  type: Normal
+- apiVersion: v1
+  count: 4
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:33:11Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:13Z"
+  message: |-
+    Updated ConfigMap/restore-etcd-pod -n openshift-etcd:
+    cause by changes in data.pod.yaml,data.quorum-restore-pod.yaml
+  metadata:
+    creationTimestamp: "2026-01-28T09:33:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:43:13Z"
+    name: etcd-operator.188edb44b45d1b36
+    namespace: openshift-etcd-operator
+    resourceVersion: "22959"
+    uid: b40d9712-0fee-40b4-be33-3d302fdf699c
+  reason: ConfigMapUpdated
+  reportingComponent: openshift-cluster-etcd-operator-target-config-controller-targetconfigcontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-target-config-controller-targetconfigcontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:33:20Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:33:20Z"
+  message: Created Pod/installer-2-ip-10-0-108-54.us-west-1.compute.internal -n openshift-etcd
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:33:20Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:33:20Z"
+    name: etcd-operator.188edb46d8bfdb52
+    namespace: openshift-etcd-operator
+    resourceVersion: "12757"
+    uid: 67211818-f1c1-4299-8651-19e0f7f2c49c
+  reason: PodCreated
+  reportingComponent: openshift-cluster-etcd-operator-installer-controller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-installer-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:33:31Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:33:31Z"
+  message: Created Pod/installer-3-ip-10-0-108-54.us-west-1.compute.internal -n openshift-etcd
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:33:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:33:31Z"
+    name: etcd-operator.188edb496862fe2f
+    namespace: openshift-etcd-operator
+    resourceVersion: "12855"
+    uid: 34622330-06f4-4efa-8a9c-a64beea46cdf
+  reason: PodCreated
+  reportingComponent: openshift-cluster-etcd-operator-installer-controller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-installer-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:34:23Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:34:23Z"
+  message: Created Pod/etcd-guard-ip-10-0-108-54.us-west-1.compute.internal -n openshift-etcd
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:34:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:34:23Z"
+    name: etcd-operator.188edb55540eff49
+    namespace: openshift-etcd-operator
+    resourceVersion: "13382"
+    uid: bf82dc64-7983-4f01-83e1-739a32d8e409
+  reason: PodCreated
+  reportingComponent: openshift-cluster-etcd-operator-guardcontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-guardcontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:34:30Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:34:30Z"
+  message: Updated Pod/etcd-guard-ip-10-0-108-54.us-west-1.compute.internal -n openshift-etcd
+    because it changed
+  metadata:
+    creationTimestamp: "2026-01-28T09:34:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:34:30Z"
+    name: etcd-operator.188edb57194dca68
+    namespace: openshift-etcd-operator
+    resourceVersion: "13434"
+    uid: 634be10d-c4d5-4e4f-8bc4-823b61fcf43f
+  reason: PodUpdated
+  reportingComponent: openshift-cluster-etcd-operator-guardcontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-guardcontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:34:38Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:34:38Z"
+  message: successfully added new member https://10.0.108.54:2380
+  metadata:
+    creationTimestamp: "2026-01-28T09:34:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:34:38Z"
+    name: etcd-operator.188edb58fd2dfe66
+    namespace: openshift-etcd-operator
+    resourceVersion: "13518"
+    uid: 26559a96-f3f7-4b75-946c-ecb9e13fcb41
+  reason: MemberAddAsLearner
+  reportingComponent: openshift-cluster-etcd-operator-etcd-client
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcd-client
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:34:40Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:34:40Z"
+  message: successfully promoted learner member https://10.0.108.54:2380
+  metadata:
+    creationTimestamp: "2026-01-28T09:34:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:34:40Z"
+    name: etcd-operator.188edb5951f86b31
+    namespace: openshift-etcd-operator
+    resourceVersion: "13543"
+    uid: c4366f40-f36d-406f-bfd6-d02606fc1423
+  reason: MemberPromote
+  reportingComponent: openshift-cluster-etcd-operator-etcd-client
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcd-client
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:34:45Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:34:45Z"
+  message: |-
+    Updated ConfigMap/etcd-endpoints -n openshift-etcd:
+    cause by changes in data.86f370780f5c8e2
+  metadata:
+    creationTimestamp: "2026-01-28T09:34:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:34:45Z"
+    name: etcd-operator.188edb5a734983ed
+    namespace: openshift-etcd-operator
+    resourceVersion: "13572"
+    uid: 2a4d9df7-15fe-45cc-9884-f10c68c7ff95
+  reason: ConfigMapUpdated
+  reportingComponent: openshift-cluster-etcd-operator-etcd-endpoints-controller-etcdendpointscontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcd-endpoints-controller-etcdendpointscontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:38Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:38Z"
+  message: successfully added new member https://10.0.3.203:2380
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:36:38Z"
+    name: etcd-operator.188edb74e8041d24
+    namespace: openshift-etcd-operator
+    resourceVersion: "15345"
+    uid: 9e7440a0-af15-462e-a8d1-30fe28ad68ea
+  reason: MemberAddAsLearner
+  reportingComponent: openshift-cluster-etcd-operator-etcd-client
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcd-client
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:45Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:45Z"
+  message: |-
+    Updated ConfigMap/etcd-endpoints -n openshift-etcd:
+    cause by changes in data.98ceec0dbc638235
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:36:45Z"
+    name: etcd-operator.188edb7687f4be38
+    namespace: openshift-etcd-operator
+    resourceVersion: "15498"
+    uid: aca6f17b-d3d1-45ef-a911-be193c06836f
+  reason: ConfigMapUpdated
+  reportingComponent: openshift-cluster-etcd-operator-etcd-endpoints-controller-etcdendpointscontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcd-endpoints-controller-etcdendpointscontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:37:09Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:37:09Z"
+  message: 'Status for clusteroperator/etcd changed: Progressing message changed from
+    "NodeInstallerProgressing: 1 node is at revision 1; 1 node is at revision 3; 1
+    node is at revision 5" to "NodeInstallerProgressing: 1 node is at revision 1;
+    1 node is at revision 3; 1 node is at revision 5; 0 nodes have achieved new revision
+    6",Available message changed from "StaticPodsAvailable: 3 nodes are active; 1
+    node is at revision 1; 1 node is at revision 3; 1 node is at revision 5\nEtcdMembersAvailable:
+    3 members are available" to "StaticPodsAvailable: 3 nodes are active; 1 node is
+    at revision 1; 1 node is at revision 3; 1 node is at revision 5; 0 nodes have
+    achieved new revision 6\nEtcdMembersAvailable: 3 members are available"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:37:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:37:09Z"
+    name: etcd-operator.188edb7bfc8e6540
+    namespace: openshift-etcd-operator
+    resourceVersion: "16173"
+    uid: b3d9ed80-cbd4-4963-93c3-a7561831e77e
+  reason: OperatorStatusChanged
+  reportingComponent: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:38:47Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:38:47Z"
+  message: Updated node "ip-10-0-102-200.us-west-1.compute.internal" from revision
+    1 to 7 because static pod is ready
+  metadata:
+    creationTimestamp: "2026-01-28T09:38:47Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:38:47Z"
+    name: etcd-operator.188edb92df1d956c
+    namespace: openshift-etcd-operator
+    resourceVersion: "17267"
+    uid: 196d72ad-2bc7-4a25-ace0-e81abd1b6b90
+  reason: NodeCurrentRevisionChanged
+  reportingComponent: openshift-cluster-etcd-operator-installer-controller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-installer-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:41:08Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:41:08Z"
+  message: attempting to remove bootstrap member [480e0316a784fc27]
+  metadata:
+    creationTimestamp: "2026-01-28T09:41:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:41:08Z"
+    name: etcd-operator.188edbb3ae456ecc
+    namespace: openshift-etcd-operator
+    resourceVersion: "19359"
+    uid: f82c2851-8c97-4bf2-9083-c8bfec52c59e
+  reason: Removing bootstrap member
+  reportingComponent: openshift-cluster-etcd-operator-bootstrap-teardown-controller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-bootstrap-teardown-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:59Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:59Z"
+  message: Updated node "ip-10-0-3-203.us-west-1.compute.internal" from revision 5
+    to 7 because static pod is ready
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:42:59Z"
+    name: etcd-operator.188edbcd8ebfab4b
+    namespace: openshift-etcd-operator
+    resourceVersion: "22587"
+    uid: 89621ca5-7a7b-4a92-874f-9ed25ef9ce4e
+  reason: NodeCurrentRevisionChanged
+  reportingComponent: openshift-cluster-etcd-operator-installer-controller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-installer-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:59Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:59Z"
+  message: 'Status for clusteroperator/etcd changed: Progressing changed from True
+    to False ("NodeInstallerProgressing: 3 nodes are at revision 7\nEtcdMembersProgressing:
+    No unstarted etcd members found"),Available message changed from "StaticPodsAvailable:
+    3 nodes are active; 1 node is at revision 5; 2 nodes are at revision 7\nEtcdMembersAvailable:
+    3 members are available" to "StaticPodsAvailable: 3 nodes are active; 3 nodes
+    are at revision 7\nEtcdMembersAvailable: 3 members are available"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:42:59Z"
+    name: etcd-operator.188edbcd8f2fad22
+    namespace: openshift-etcd-operator
+    resourceVersion: "22588"
+    uid: 6b5413ec-70a6-47d1-8c23-36865554dfe0
+  reason: OperatorStatusChanged
+  reportingComponent: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:02Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:02Z"
+  message: Created Pod/revision-pruner-7-ip-10-0-102-200.us-west-1.compute.internal
+    -n openshift-etcd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:43:02Z"
+    name: etcd-operator.188edbce343266b4
+    namespace: openshift-etcd-operator
+    resourceVersion: "22640"
+    uid: cb473d94-206c-4890-b929-73da352d4c2c
+  reason: PodCreated
+  reportingComponent: openshift-cluster-etcd-operator-prunecontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-prunecontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:03Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:03Z"
+  message: |
+    Updated ConfigMap/etcd-endpoints -n openshift-etcd:
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:03Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:43:03Z"
+    name: etcd-operator.188edbce7bd0b8cf
+    namespace: openshift-etcd-operator
+    resourceVersion: "22664"
+    uid: f063ba34-a4d0-4435-a0d4-4e0f22311a62
+  reason: ConfigMapUpdated
+  reportingComponent: openshift-cluster-etcd-operator-etcd-endpoints-controller-etcdendpointscontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-etcd-endpoints-controller-etcdendpointscontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:06Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:06Z"
+  message: Created Pod/revision-pruner-7-ip-10-0-108-54.us-west-1.compute.internal
+    -n openshift-etcd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:43:06Z"
+    name: etcd-operator.188edbcf2f3e45e0
+    namespace: openshift-etcd-operator
+    resourceVersion: "22747"
+    uid: 30bf0d73-fbe4-4be6-90a0-b4c8f0e624fa
+  reason: PodCreated
+  reportingComponent: openshift-cluster-etcd-operator-prunecontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-prunecontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:10Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:10Z"
+  message: new revision 8 triggered by "required configmap/etcd-pod has changed"
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:43:10Z"
+    name: etcd-operator.188edbd005efe50b
+    namespace: openshift-etcd-operator
+    resourceVersion: "22875"
+    uid: 0dfd5786-cd4b-476b-b3c7-b8f828edb5b4
+  reason: StartingNewRevision
+  reportingComponent: openshift-cluster-etcd-operator-revisioncontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-revisioncontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:10Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:10Z"
+  message: Created Pod/revision-pruner-7-ip-10-0-3-203.us-west-1.compute.internal
+    -n openshift-etcd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:43:10Z"
+    name: etcd-operator.188edbd010f87248
+    namespace: openshift-etcd-operator
+    resourceVersion: "22879"
+    uid: 5a55c1c5-3b70-4365-88e2-1d428d3d6428
+  reason: PodCreated
+  reportingComponent: openshift-cluster-etcd-operator-prunecontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-prunecontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:14Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:14Z"
+  message: Created ConfigMap/etcd-pod-8 -n openshift-etcd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:14Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:43:14Z"
+    name: etcd-operator.188edbd0f2039b03
+    namespace: openshift-etcd-operator
+    resourceVersion: "22963"
+    uid: 9abaa91e-cada-4714-b0e2-b8a58afb06ea
+  reason: ConfigMapCreated
+  reportingComponent: openshift-cluster-etcd-operator-revisioncontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-revisioncontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:27Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:27Z"
+  message: Created Pod/revision-pruner-8-ip-10-0-102-200.us-west-1.compute.internal
+    -n openshift-etcd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:27Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:43:27Z"
+    name: etcd-operator.188edbd406187738
+    namespace: openshift-etcd-operator
+    resourceVersion: "23112"
+    uid: 827096ee-8300-4d4e-a13d-779930020ee6
+  reason: PodCreated
+  reportingComponent: openshift-cluster-etcd-operator-prunecontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-prunecontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:29Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:29Z"
+  message: Created Pod/revision-pruner-8-ip-10-0-108-54.us-west-1.compute.internal
+    -n openshift-etcd because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:43:29Z"
+    name: etcd-operator.188edbd49532af03
+    namespace: openshift-etcd-operator
+    resourceVersion: "23139"
+    uid: 28be8be7-43fb-4e54-9fe4-07b6ee4ab8bb
+  reason: PodCreated
+  reportingComponent: openshift-cluster-etcd-operator-prunecontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-prunecontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:47:30Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:47:30Z"
+  message: 'Status for clusteroperator/etcd changed: Degraded message changed from
+    "NodeControllerDegraded: All master nodes are ready\nEtcdMembersDegraded: 2 of
+    3 members are available, ip-10-0-102-200.us-west-1.compute.internal is unhealthy"
+    to "NodeControllerDegraded: All master nodes are ready\nEtcdMembersDegraded: 2
+    of 3 members are available, ip-10-0-108-54.us-west-1.compute.internal is unhealthy"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:47:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:47:30Z"
+    name: etcd-operator.188edc0cacff90ac
+    namespace: openshift-etcd-operator
+    resourceVersion: "25936"
+    uid: 106526f7-93ab-4474-bc51-9cf86c86eb06
+  reason: OperatorStatusChanged
+  reportingComponent: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:48:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:48:00Z"
+  message: 'Detected leader change increase of 2.2222222222222223 over 5 minutes on
+    "AWS"; disk metrics are: etcd-ip-10-0-102-200.us-west-1.compute.internal=0.003962,etcd-ip-10-0-108-54.us-west-1.compute.internal=0.008520,etcd-ip-10-0-3-203.us-west-1.compute.internal=0.156160.
+    Most often this is as a result of inadequate storage or sometimes due to networking
+    issues.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:48:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:48:00Z"
+    name: etcd-operator.188edc13b162471f
+    namespace: openshift-etcd-operator
+    resourceVersion: "26173"
+    uid: 820ec522-d578-44e3-853f-70587cef8b8c
+  reason: EtcdLeaderChangeMetrics
+  reportingComponent: openshift-cluster-etcd-operator-fsynccontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-fsynccontroller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:48:06Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:48:06Z"
+  message: Updated node "ip-10-0-108-54.us-west-1.compute.internal" from revision
+    7 to 8 because static pod is ready
+  metadata:
+    creationTimestamp: "2026-01-28T09:48:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:48:06Z"
+    name: etcd-operator.188edc151a57080a
+    namespace: openshift-etcd-operator
+    resourceVersion: "26206"
+    uid: a65a82ca-7a91-4718-8efa-e8dec802c7f8
+  reason: NodeCurrentRevisionChanged
+  reportingComponent: openshift-cluster-etcd-operator-installer-controller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-installer-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:50:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:50:00Z"
+  message: 'Detected leader change increase of 2.2222222222222223 over 5 minutes on
+    "AWS"; disk metrics are: etcd-ip-10-0-102-200.us-west-1.compute.internal=0.003994,etcd-ip-10-0-108-54.us-west-1.compute.internal=0.008474,etcd-ip-10-0-3-203.us-west-1.compute.internal=0.134613.
+    Most often this is as a result of inadequate storage or sometimes due to networking
+    issues.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:50:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:50:00Z"
+    name: etcd-operator.188edc2f97fa2d7b
+    namespace: openshift-etcd-operator
+    resourceVersion: "26802"
+    uid: a9006338-a172-4534-8ce8-7108fd4d49c7
+  reason: EtcdLeaderChangeMetrics
+  reportingComponent: openshift-cluster-etcd-operator-fsynccontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-fsynccontroller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:51:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: etcd-operator
+    namespace: openshift-etcd-operator
+    uid: d8417fba-73ea-4ead-a4e0-c7eb3496e113
+  kind: Event
+  lastTimestamp: "2026-01-28T09:51:00Z"
+  message: 'Detected leader change increase of 2.2222222222222223 over 5 minutes on
+    "AWS"; disk metrics are: etcd-ip-10-0-102-200.us-west-1.compute.internal=0.003994,etcd-ip-10-0-108-54.us-west-1.compute.internal=0.007833,etcd-ip-10-0-3-203.us-west-1.compute.internal=0.063793.
+    Most often this is as a result of inadequate storage or sometimes due to networking
+    issues.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:51:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:51:00Z"
+    name: etcd-operator.188edc3d90526ff8
+    namespace: openshift-etcd-operator
+    resourceVersion: "27104"
+    uid: 3270b33c-8779-44a7-abdb-dfbd90f165be
+  reason: EtcdLeaderChangeMetrics
+  reportingComponent: openshift-cluster-etcd-operator-fsynccontroller
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator-fsynccontroller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:34Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: openshift-cluster-etcd-operator-lock
+    namespace: openshift-etcd-operator
+    resourceVersion: "6023"
+    uid: 7032c332-9ccb-430d-8afe-ddfb0b661c8a
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:34Z"
+  message: etcd-operator-86dcff847c-dnhnc_b270a6a6-800b-4e64-9095-7e18fb1e8347 became
+    leader
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:34Z"
+    name: openshift-cluster-etcd-operator-lock.188edb2021d55931
+    namespace: openshift-etcd-operator
+    resourceVersion: "6024"
+    uid: df63acb5-67ed-488c-a6d1-5736b1ad6067
+  reason: LeaderElection
+  reportingComponent: openshift-cluster-etcd-operator
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:00Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: openshift-cluster-etcd-operator-lock
+    namespace: openshift-etcd-operator
+    resourceVersion: "10656"
+    uid: 7032c332-9ccb-430d-8afe-ddfb0b661c8a
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:00Z"
+  message: etcd-operator-86dcff847c-dnhnc_eca50234-5ccf-4cee-b4f2-8ab087b57094 became
+    leader
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:32:00Z"
+    name: openshift-cluster-etcd-operator-lock.188edb341210db1a
+    namespace: openshift-etcd-operator
+    resourceVersion: "10663"
+    uid: 381355af-90ed-4a84-9edb-eb379130de0c
+  reason: LeaderElection
+  reportingComponent: openshift-cluster-etcd-operator
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-etcd-operator
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "35036"

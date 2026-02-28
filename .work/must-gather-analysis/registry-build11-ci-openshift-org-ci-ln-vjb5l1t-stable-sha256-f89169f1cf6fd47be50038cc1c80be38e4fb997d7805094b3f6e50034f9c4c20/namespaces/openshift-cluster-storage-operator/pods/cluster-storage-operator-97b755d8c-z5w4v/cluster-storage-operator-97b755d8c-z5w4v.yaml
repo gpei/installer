@@ -1,0 +1,583 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.130.0.37/23"],"mac_address":"0a:58:0a:82:00:25","gateway_ips":["10.130.0.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.130.0.1"},{"dest":"172.30.0.0/16","nextHop":"10.130.0.1"},{"dest":"169.254.0.5/32","nextHop":"10.130.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.130.0.1"}],"ip_address":"10.130.0.37/23","gateway_ip":"10.130.0.1","role":"primary"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.130.0.37"
+          ],
+          "mac": "0a:58:0a:82:00:25",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/required-scc: nonroot-v2
+    openshift.io/scc: nonroot-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    security.openshift.io/validated-scc-subject-type: serviceaccount
+  creationTimestamp: "2026-01-28T09:29:02Z"
+  generateName: cluster-storage-operator-97b755d8c-
+  generation: 1
+  labels:
+    name: cluster-storage-operator
+    openshift.storage.network-policy.api-server: allow
+    openshift.storage.network-policy.dns: allow
+    openshift.storage.network-policy.operator-metrics: allow
+    pod-template-hash: 97b755d8c
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/required-scc: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:name: {}
+          f:openshift.storage.network-policy.api-server: {}
+          f:openshift.storage.network-policy.dns: {}
+          f:openshift.storage.network-policy.operator-metrics: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"c6ef0340-a8c9-497a-9571-5e993af8c8ad"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"cluster-storage-operator"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"ATTACHER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"AWS_EBS_DRIVER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"AWS_EBS_DRIVER_OPERATOR_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"AZURE_DISK_DRIVER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"AZURE_DISK_DRIVER_OPERATOR_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"AZURE_FILE_DRIVER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"AZURE_FILE_DRIVER_OPERATOR_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"CLUSTER_CLOUD_CONTROLLER_MANAGER_OPERATOR_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"GCP_PD_DRIVER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"GCP_PD_DRIVER_OPERATOR_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IBM_VPC_BLOCK_DRIVER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IBM_VPC_BLOCK_DRIVER_OPERATOR_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"KUBE_RBAC_PROXY_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"LIVENESS_PROBE_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"MANILA_DRIVER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"MANILA_DRIVER_OPERATOR_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"MANILA_NFS_DRIVER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NODE_DRIVER_REGISTRAR_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPENSTACK_CINDER_DRIVER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPENSTACK_CINDER_DRIVER_OPERATOR_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPERAND_IMAGE_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPERATOR_IMAGE_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OVIRT_DRIVER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OVIRT_DRIVER_OPERATOR_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"POWERVS_BLOCK_CSI_DRIVER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"POWERVS_BLOCK_CSI_DRIVER_OPERATOR_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PROVISIONER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RESIZER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"SNAPSHOTTER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"TOOLS_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"VMWARE_VSPHERE_DRIVER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"VMWARE_VSPHERE_DRIVER_OPERATOR_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"VMWARE_VSPHERE_SYNCER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"VOLUME_DATA_SOURCE_VALIDATOR_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"VSPHERE_PROBLEM_DETECTOR_OPERATOR_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8443,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+              f:readOnlyRootFilesystem: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/var/run/secrets/serving-cert"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsNonRoot: {}
+          f:runAsUser: {}
+          f:seccompProfile:
+            .: {}
+            f:type: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"cluster-storage-operator-serving-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2026-01-28T09:29:02Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:29:02Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ip-10-0-108-54
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:30:09Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:30:44Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.130.0.37"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:31:04Z"
+  name: cluster-storage-operator-97b755d8c-z5w4v
+  namespace: openshift-cluster-storage-operator
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: cluster-storage-operator-97b755d8c
+    uid: c6ef0340-a8c9-497a-9571-5e993af8c8ad
+  resourceVersion: "7866"
+  uid: 37e0cbec-5a00-426a-96c3-f5d2de84452a
+spec:
+  containers:
+  - args:
+    - start
+    - -v=2
+    - --terminate-on-files=/var/run/secrets/serving-cert/tls.crt
+    - --terminate-on-files=/var/run/secrets/serving-cert/tls.key
+    command:
+    - cluster-storage-operator
+    - start
+    env:
+    - name: OPERATOR_IMAGE_VERSION
+      value: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+    - name: OPERAND_IMAGE_VERSION
+      value: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+    - name: AWS_EBS_DRIVER_OPERATOR_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a127655796264964b0aeb27fd0cf27157c6d4702554655aa35018829c98878cb
+    - name: AWS_EBS_DRIVER_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:16eec5fa72b90a0210d17a4497e5f430e1461046890512fc480568fa54542a80
+    - name: GCP_PD_DRIVER_OPERATOR_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90da9ecf47f896403fe73af024849e67b4db3a4ce9a898219ef96c0fac78c99c
+    - name: GCP_PD_DRIVER_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:667c3af8948bc7ffd0b5608d78901cd5b59568be729415da76c9fc5dc378affd
+    - name: OPENSTACK_CINDER_DRIVER_OPERATOR_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:0ed6d2b51a3130ad0eb49c7b81b6f73b193d2f74bb9e59d7f6a59abc009b0e35
+    - name: OPENSTACK_CINDER_DRIVER_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:24a1fd4d84e49550bb7bb0bd9962c42cfd355899d2d2e1dc07a27061345a8ad9
+    - name: OVIRT_DRIVER_OPERATOR_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:6991df72aa75d57bd87226681eae16f3c847ae440b1025d3529bb7d11a153909
+    - name: OVIRT_DRIVER_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:1f290e34d857c4e4562417b6781fa5ab32cfe4384b4c5b063babe6ba83a4420f
+    - name: MANILA_DRIVER_OPERATOR_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:15c00e8a07c64398ea157183d7968578626dfd46b36e5b7fa06a35e838882ada
+    - name: MANILA_DRIVER_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:c52a140672ac75c7a33e6afcd7b1ce6f4669cfdbad702ad471850da9f5b559cd
+    - name: MANILA_NFS_DRIVER_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:ba7563fc6a628df72b27a445804c04273e2e901be5ddf684eee4cdd2a1ec0089
+    - name: PROVISIONER_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:6dce12cdd98f375e8a7688f4938dd832e5f894c0ba816d4a5a8d6720ff975904
+    - name: ATTACHER_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:fbec5c24870ed6cd27985bed8371a888e9322898e5ae4d9989e099f05a1c6a23
+    - name: RESIZER_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a3d4db4816440b5141aecead32da7cfa9eee4efb8a663c3f0d30a4e23d96d2bf
+    - name: SNAPSHOTTER_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:deb4bbeb305282d6d6f762ef9e6988b2cd74c4a48c45bcc639f218f06e2da941
+    - name: NODE_DRIVER_REGISTRAR_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:2049797466a1536cbe9a72805e650920b4847965b8d55585545e9736385f262c
+    - name: LIVENESS_PROBE_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:688fb2404fabe8055015a5750740f8c43a61dc3f96d0242b15345a54da695af1
+    - name: VSPHERE_PROBLEM_DETECTOR_OPERATOR_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:c1e43030a3ed06c373454862f34990a4e7bbd75bb8cec5573162aeffac7ec7e9
+    - name: AZURE_DISK_DRIVER_OPERATOR_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e53cb8811fc2ff70bb300b80dc99cfee4f4ef26fead261e8ee8d572a61c674ef
+    - name: AZURE_DISK_DRIVER_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:78a99f2bf1a0d4985b7829c4982e5009d177c853ac2b10f7eeedbee7249ab1af
+    - name: AZURE_FILE_DRIVER_OPERATOR_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:dce78a16bd7e0bad5dea2e556c47e23dc47457d4c99067e3246c2e3a8127c98a
+    - name: AZURE_FILE_DRIVER_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:cb34fa841f30d6c244480deeb8ac72a5f7ed8ea0b61dfa17f05611ec4e510369
+    - name: KUBE_RBAC_PROXY_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+    - name: VMWARE_VSPHERE_DRIVER_OPERATOR_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:08ca65bef2e87d1a5516ed95beadc9315d914e23ee3415023e77f4c69ce9c32a
+    - name: VMWARE_VSPHERE_DRIVER_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e7c6584c2327ea506d7da93b39037cbd878c79efd74459ee2fa26bcdc4a51cdc
+    - name: VMWARE_VSPHERE_SYNCER_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:33561d01b7c7e3e13779b4be3570019b7a614b04acd8aaf94bee06af294945b3
+    - name: CLUSTER_CLOUD_CONTROLLER_MANAGER_OPERATOR_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:8fa5cc6ccc9113ab5809d1c3203d585b8620671c91d3e8b2ca34a25da4f6305c
+    - name: IBM_VPC_BLOCK_DRIVER_OPERATOR_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:c7808698bffc9322ab66dbbd272aa74e775a97b2ca94cdfd440f5fe65827cf39
+    - name: IBM_VPC_BLOCK_DRIVER_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:32419a71a40118c6dd625d2ac90766a804a5c2196d5c45cbd95038e7f3879758
+    - name: POWERVS_BLOCK_CSI_DRIVER_OPERATOR_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:be7e4f88c8c1c251b6da8bb077bfafaf07996e1049883032c01dcb083d2b69a9
+    - name: POWERVS_BLOCK_CSI_DRIVER_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:6abd2673fd5cf3f13f6690b800c0f13da3cc27789b893c36c90ba24b74a6d8ad
+    - name: VOLUME_DATA_SOURCE_VALIDATOR_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:5e0deb66c1015d9e084c78a8a5cdfbf5e795aeaaa2dad96d2388f760d14c30dc
+    - name: TOOLS_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d9de3f8e0f8eccb4a81258835fa96b11c41785642ac9da6b2592458071379adc
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:724fcbb751a5b0dbe321f26f1faa369b8c11db774dd006a4bdd07b91c337282f
+    imagePullPolicy: IfNotPresent
+    name: cluster-storage-operator
+    ports:
+    - containerPort: 8443
+      name: metrics
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 20Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      readOnlyRootFilesystem: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/secrets/serving-cert
+      name: cluster-storage-operator-serving-cert
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8tjhk
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: ip-10-0-108-54.us-west-1.compute.internal
+  nodeSelector:
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 11411
+    seLinuxOptions:
+      level: s0:c13,c7
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: cluster-storage-operator
+  serviceAccountName: cluster-storage-operator
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: cluster-storage-operator-serving-cert
+    secret:
+      defaultMode: 420
+      secretName: cluster-storage-operator-serving-cert
+  - name: kube-api-access-8tjhk
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:31:04Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:30:09Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:31:04Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:31:04Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:30:08Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - allocatedResources:
+      cpu: 10m
+      memory: 20Mi
+    containerID: cri-o://79ec22ac639ddd21eda67cc3453d5b4c6ebcdb90e0ebe74d1014b8d08287014a
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:724fcbb751a5b0dbe321f26f1faa369b8c11db774dd006a4bdd07b91c337282f
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:724fcbb751a5b0dbe321f26f1faa369b8c11db774dd006a4bdd07b91c337282f
+    lastState: {}
+    name: cluster-storage-operator
+    ready: true
+    resources:
+      requests:
+        cpu: 10m
+        memory: 20Mi
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2026-01-28T09:31:03Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        uid: 11411
+    volumeMounts:
+    - mountPath: /var/run/secrets/serving-cert
+      name: cluster-storage-operator-serving-cert
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8tjhk
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 10.0.108.54
+  hostIPs:
+  - ip: 10.0.108.54
+  phase: Running
+  podIP: 10.130.0.37
+  podIPs:
+  - ip: 10.130.0.37
+  qosClass: Burstable
+  startTime: "2026-01-28T09:30:09Z"

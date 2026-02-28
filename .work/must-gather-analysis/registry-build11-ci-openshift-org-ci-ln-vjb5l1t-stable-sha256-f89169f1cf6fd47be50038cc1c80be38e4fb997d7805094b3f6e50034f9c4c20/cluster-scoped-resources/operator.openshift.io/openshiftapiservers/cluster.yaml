@@ -1,0 +1,537 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: OpenShiftAPIServer
+metadata:
+  annotations:
+    include.release.openshift.io/hypershift: "true"
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2026-01-28T09:25:47Z"
+  generation: 7
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ConfigObservationDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: openshift-apiserver-ConfigObserver
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:33Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"UnsupportedConfigOverridesUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: openshift-apiserver-UnsupportedConfigOverrides
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:33Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"Encrypted"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: openshift-apiserver-EncryptionCondition
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:35Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"EncryptionKeyControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: openshift-apiserver-EncryptionKey
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:35Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"EncryptionMigrationControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"EncryptionMigrationControllerProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: openshift-apiserver-EncryptionMigration
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:35Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"EncryptionPruneControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: openshift-apiserver-EncryptionPrune
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:35Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"EncryptionStateControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: openshift-apiserver-EncryptionState
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:35Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"AuditPolicyDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: openshift-apiserver-AuditPolicy
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:37Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ResourceSyncControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: openshift-apiserver-ResourceSync
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:37Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"RevisionControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: RevisionController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:41Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:latestAvailableRevision: {}
+    manager: openshift-apiserver-RevisionController
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:41Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"APIServerStaticResourcesDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: APIServerStaticResources-StaticResources
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:42Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"APIServicesAvailable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"APIServicesDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: openshift-apiserver-APIService
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:40:55Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"APIServerDeploymentAvailable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"APIServerDeploymentDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"APIServerDeploymentProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"APIServerWorkloadDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:generations:
+          k:{"group":"apps","name":"apiserver","namespace":"openshift-apiserver","resource":"deployments"}:
+            .: {}
+            f:group: {}
+            f:lastGeneration: {}
+            f:name: {}
+            f:namespace: {}
+            f:resource: {}
+    manager: OpenShiftAPIServer-Workload
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:47:53Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/hypershift: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:release.openshift.io/create-only: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec:
+        .: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:operatorLogLevel: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:25:47Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:observedConfig:
+          .: {}
+          f:apiServerArguments:
+            .: {}
+            f:feature-gates: {}
+          f:imagePolicyConfig:
+            .: {}
+            f:internalRegistryHostname: {}
+          f:projectConfig:
+            .: {}
+            f:projectRequestMessage: {}
+          f:routingConfig:
+            .: {}
+            f:subdomain: {}
+          f:servingInfo:
+            .: {}
+            f:cipherSuites: {}
+            f:minTLSVersion: {}
+          f:storageConfig:
+            .: {}
+            f:urls: {}
+        f:unsupportedConfigOverrides: {}
+    manager: cluster-openshift-apiserver-operator
+    operation: Update
+    time: "2026-01-28T09:43:05Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"OperatorConfigProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:generations:
+          .: {}
+          k:{"group":"apps","name":"apiserver","namespace":"openshift-apiserver","resource":"deployments"}:
+            .: {}
+            f:group: {}
+            f:hash: {}
+            f:lastGeneration: {}
+            f:name: {}
+            f:namespace: {}
+            f:resource: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+    manager: cluster-openshift-apiserver-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:43:10Z"
+  name: cluster
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "26115"
+  uid: 7720f48e-2443-49e5-909f-0dee1d34cc71
+spec:
+  logLevel: Normal
+  managementState: Managed
+  observedConfig:
+    apiServerArguments:
+      feature-gates:
+      - AdditionalRoutingCapabilities=true
+      - AdminNetworkPolicy=true
+      - AlibabaPlatform=true
+      - AzureWorkloadIdentity=true
+      - BuildCSIVolumes=true
+      - CPMSMachineNamePrefix=true
+      - ConsolePluginContentSecurityPolicy=true
+      - ExternalOIDC=true
+      - ExternalOIDCWithUIDAndExtraClaimMappings=true
+      - GatewayAPI=true
+      - GatewayAPIController=true
+      - HighlyAvailableArbiter=true
+      - ImageVolume=true
+      - IngressControllerLBSubnetsAWS=true
+      - KMSv1=true
+      - MachineConfigNodes=true
+      - ManagedBootImages=true
+      - ManagedBootImagesAWS=true
+      - MetricsCollectionProfiles=true
+      - NetworkDiagnosticsConfig=true
+      - NetworkLiveMigration=true
+      - NetworkSegmentation=true
+      - NewOLM=true
+      - PinnedImages=true
+      - PreconfiguredUDNAddresses=true
+      - ProcMountType=true
+      - RouteAdvertisements=true
+      - RouteExternalCertificate=true
+      - ServiceAccountTokenNodeBinding=true
+      - SetEIPForNLBIngressController=true
+      - SigstoreImageVerification=true
+      - StoragePerformantSecurityPolicy=true
+      - UpgradeStatus=true
+      - UserNamespacesPodSecurityStandards=true
+      - UserNamespacesSupport=true
+      - VSphereMultiDisk=true
+      - VSphereMultiNetworks=true
+      - AWSClusterHostedDNS=false
+      - AWSClusterHostedDNSInstall=false
+      - AWSDedicatedHosts=false
+      - AWSServiceLBNetworkSecurityGroup=false
+      - AutomatedEtcdBackup=false
+      - AzureClusterHostedDNSInstall=false
+      - AzureDedicatedHosts=false
+      - AzureMultiDisk=false
+      - BootImageSkewEnforcement=false
+      - BootcNodeManagement=false
+      - ClusterAPIInstall=false
+      - ClusterAPIInstallIBMCloud=false
+      - ClusterMonitoringConfig=false
+      - ClusterVersionOperatorConfiguration=false
+      - DNSNameResolver=false
+      - DualReplica=false
+      - DyanmicServiceEndpointIBMCloud=false
+      - DynamicResourceAllocation=false
+      - EtcdBackendQuota=false
+      - EventedPLEG=false
+      - Example=false
+      - Example2=false
+      - ExternalSnapshotMetadata=false
+      - GCPClusterHostedDNS=false
+      - GCPClusterHostedDNSInstall=false
+      - GCPCustomAPIEndpoints=false
+      - GCPCustomAPIEndpointsInstall=false
+      - ImageModeStatusReporting=false
+      - ImageStreamImportMode=false
+      - IngressControllerDynamicConfigurationManager=false
+      - InsightsConfig=false
+      - InsightsConfigAPI=false
+      - InsightsOnDemandDataGather=false
+      - IrreconcilableMachineConfig=false
+      - KMSEncryptionProvider=false
+      - MachineAPIMigration=false
+      - MachineAPIOperatorDisableMachineHealthCheckController=false
+      - ManagedBootImagesAzure=false
+      - ManagedBootImagesvSphere=false
+      - MaxUnavailableStatefulSet=false
+      - MinimumKubeletVersion=false
+      - MixedCPUsAllocation=false
+      - MultiArchInstallAzure=false
+      - MultiDiskSetup=false
+      - MutatingAdmissionPolicy=false
+      - NewOLMCatalogdAPIV1Metas=false
+      - NewOLMOwnSingleNamespace=false
+      - NewOLMPreflightPermissionChecks=false
+      - NewOLMWebhookProviderOpenshiftServiceCA=false
+      - NoRegistryClusterOperations=false
+      - NodeSwap=false
+      - NutanixMultiSubnets=false
+      - OVNObservability=false
+      - OpenShiftPodSecurityAdmission=false
+      - SELinuxMount=false
+      - ShortCertRotation=false
+      - SignatureStores=false
+      - SigstoreImageVerificationPKI=false
+      - TranslateStreamCloseWebsocketRequests=false
+      - VSphereConfigurableMaxAllowedBlockVolumesPerNode=false
+      - VSphereHostVMGroupZonal=false
+      - VSphereMixedNodeEnv=false
+      - VolumeAttributesClass=false
+      - VolumeGroupSnapshot=false
+    imagePolicyConfig:
+      internalRegistryHostname: image-registry.openshift-image-registry.svc:5000
+    projectConfig:
+      projectRequestMessage: ""
+    routingConfig:
+      subdomain: apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    servingInfo:
+      cipherSuites:
+      - TLS_AES_128_GCM_SHA256
+      - TLS_AES_256_GCM_SHA384
+      - TLS_CHACHA20_POLY1305_SHA256
+      - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+      - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+      minTLSVersion: VersionTLS12
+    storageConfig:
+      urls:
+      - https://10.0.102.200:2379
+      - https://10.0.108.54:2379
+      - https://10.0.3.203:2379
+  operatorLogLevel: Normal
+  unsupportedConfigOverrides: null
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:30:41Z"
+    reason: AsExpected
+    status: "False"
+    type: RevisionControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:33Z"
+    reason: NoUnsupportedConfigOverrides
+    status: "True"
+    type: UnsupportedConfigOverridesUpgradeable
+  - lastTransitionTime: "2026-01-28T09:30:33Z"
+    status: "False"
+    type: ConfigObservationDegraded
+  - lastTransitionTime: "2026-01-28T09:30:35Z"
+    status: "False"
+    type: EncryptionStateControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:35Z"
+    status: "False"
+    type: EncryptionMigrationControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:35Z"
+    status: "False"
+    type: EncryptionMigrationControllerProgressing
+  - lastTransitionTime: "2026-01-28T09:30:35Z"
+    status: "False"
+    type: EncryptionPruneControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:35Z"
+    status: "False"
+    type: EncryptionKeyControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:35Z"
+    status: "False"
+    type: Encrypted
+  - lastTransitionTime: "2026-01-28T09:40:55Z"
+    status: "True"
+    type: APIServicesAvailable
+  - lastTransitionTime: "2026-01-28T09:30:36Z"
+    status: "False"
+    type: APIServicesDegraded
+  - lastTransitionTime: "2026-01-28T09:30:37Z"
+    status: "False"
+    type: ResourceSyncControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:37Z"
+    status: "False"
+    type: AuditPolicyDegraded
+  - lastTransitionTime: "2026-01-28T09:30:42Z"
+    reason: AsExpected
+    status: "False"
+    type: APIServerStaticResourcesDegraded
+  - lastTransitionTime: "2026-01-28T09:43:10Z"
+    reason: AsExpected
+    status: "False"
+    type: OperatorConfigProgressing
+  - lastTransitionTime: "2026-01-28T09:31:59Z"
+    reason: AsExpected
+    status: "True"
+    type: APIServerDeploymentAvailable
+  - lastTransitionTime: "2026-01-28T09:30:44Z"
+    reason: AsExpected
+    status: "False"
+    type: APIServerDeploymentDegraded
+  - lastTransitionTime: "2026-01-28T09:47:53Z"
+    reason: AsExpected
+    status: "False"
+    type: APIServerDeploymentProgressing
+  - lastTransitionTime: "2026-01-28T09:30:44Z"
+    status: "False"
+    type: APIServerWorkloadDegraded
+  generations:
+  - group: apps
+    hash: ""
+    lastGeneration: 8
+    name: apiserver
+    namespace: openshift-apiserver
+    resource: deployments
+  latestAvailableRevision: 1
+  observedGeneration: 7
+  readyReplicas: 0

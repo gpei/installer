@@ -1,0 +1,1101 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: KubeAPIServer
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2026-01-28T09:26:12Z"
+  generation: 9
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"UnsupportedConfigOverridesUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: cluster-kube-apiserver-operator-UnsupportedConfigOverrides
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:34Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"WorkerLatencyProfileComplete"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"WorkerLatencyProfileProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-apiserver-LatencyProfile
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:34Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"StaticPodFallbackRevisionDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-apiserver-StaticPodStateFallback
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:34Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"Encrypted"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: openshift-kube-apiserver-EncryptionCondition
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:34Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"EncryptionKeyControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: openshift-kube-apiserver-EncryptionKey
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:34Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"EncryptionMigrationControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"EncryptionMigrationControllerProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: openshift-kube-apiserver-EncryptionMigration
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:34Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"EncryptionPruneControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: openshift-kube-apiserver-EncryptionPrune
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:34Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"EncryptionStateControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: openshift-kube-apiserver-EncryptionState
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:34Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"StartupMonitorPodContainerExcessiveRestartsDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"StartupMonitorPodDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-apiserver-StartupMonitorPodCondition
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:37Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"WorkerLatencyProfileDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: WorkerLatencyProfile-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:38Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"MissingStaticPodControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: MissingStaticPodController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:40Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"InstallerPodContainerWaitingDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"InstallerPodNetworkingDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"InstallerPodPendingDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-apiserver-InstallerState
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:40Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"NodeControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:nodeStatuses:
+          k:{"nodeName":"ip-10-0-3-203.us-west-1.compute.internal"}:
+            .: {}
+            f:nodeName: {}
+          k:{"nodeName":"ip-10-0-102-200.us-west-1.compute.internal"}:
+            .: {}
+            f:nodeName: {}
+          k:{"nodeName":"ip-10-0-108-54.us-west-1.compute.internal"}:
+            .: {}
+            f:nodeName: {}
+    manager: kube-apiserver-Node
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:40Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"BackingResourceControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: BackingResourceController-StaticResources
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:43Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"AuditPolicyDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-apiserver-AuditPolicy
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:43Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"KubeAPIServerStaticResourcesDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: KubeAPIServerStaticResources-StaticResources
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:55Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ConfigObservationDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-apiserver-ConfigObserver
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:18Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"NodeKubeconfigControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: NodeKubeconfigController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:34:48Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ResourceSyncControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-apiserver-ResourceSync
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:34:49Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"RevisionControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: RevisionController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:35:02Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"GuardControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: GuardController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:39:41Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:latestAvailableRevision: {}
+    manager: kube-apiserver-RevisionController
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:43:28Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"StaticPodsDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-apiserver-StaticPodState
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:46:44Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"InstallerControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"NodeInstallerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"NodeInstallerProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"StaticPodsAvailable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:nodeStatuses:
+          k:{"nodeName":"ip-10-0-3-203.us-west-1.compute.internal"}:
+            .: {}
+            f:currentRevision: {}
+            f:lastFailedCount: {}
+            f:lastFailedReason: {}
+            f:lastFailedRevision: {}
+            f:lastFallbackCount: {}
+            f:nodeName: {}
+            f:targetRevision: {}
+          k:{"nodeName":"ip-10-0-102-200.us-west-1.compute.internal"}:
+            .: {}
+            f:currentRevision: {}
+            f:lastFailedCount: {}
+            f:lastFailedReason: {}
+            f:lastFailedRevision: {}
+            f:lastFallbackCount: {}
+            f:nodeName: {}
+            f:targetRevision: {}
+          k:{"nodeName":"ip-10-0-108-54.us-west-1.compute.internal"}:
+            .: {}
+            f:currentRevision: {}
+            f:lastFailedCount: {}
+            f:lastFailedReason: {}
+            f:lastFailedRevision: {}
+            f:lastFallbackCount: {}
+            f:nodeName: {}
+            f:targetRevision: {}
+    manager: kube-apiserver-Installer
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:55:12Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:release.openshift.io/create-only: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec:
+        .: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:operatorLogLevel: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:26:12Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions:
+          .: {}
+          k:{"type":"CRDConversionWebhookConfigurationError"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CertRotation_AggregatorProxyClientCert_Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CertRotation_CheckEndpointsClient_Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CertRotation_ControlPlaneNodeAdminClient_Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CertRotation_ExternalLoadBalancerServing_Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CertRotation_InternalLoadBalancerServing_Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CertRotation_KubeAPIServerToKubeletClientCert_Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CertRotation_KubeControllerManagerClient_Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CertRotation_KubeSchedulerClient_Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CertRotation_LocalhostRecoveryServing_Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CertRotation_LocalhostServing_Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CertRotation_NodeSystemAdminClient_Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CertRotation_ServiceNetworkServing_Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CertRotationTimeUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"KubeletMinorVersionUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"MutatingAdmissionWebhookConfigurationError"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodSecurityCustomerEvaluationConditionsDetected"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodSecurityDisabledSyncerEvaluationConditionsDetected"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodSecurityInconclusiveEvaluationConditionsDetected"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodSecurityOpenshiftEvaluationConditionsDetected"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodSecurityRunLevelZeroEvaluationConditionsDetected"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"TargetConfigControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ValidatingAdmissionWebhookConfigurationError"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"VirtualResourceAdmissionError"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:readyReplicas: {}
+        f:serviceAccountIssuers: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:40:05Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:observedConfig:
+          .: {}
+          f:admission:
+            .: {}
+            f:pluginConfig:
+              .: {}
+              f:PodSecurity:
+                .: {}
+                f:configuration:
+                  .: {}
+                  f:defaults:
+                    .: {}
+                    f:audit: {}
+                    f:audit-version: {}
+                    f:enforce: {}
+                    f:enforce-version: {}
+                    f:warn: {}
+                    f:warn-version: {}
+              f:network.openshift.io/ExternalIPRanger:
+                .: {}
+                f:configuration:
+                  .: {}
+                  f:allowIngressIP: {}
+                  f:apiVersion: {}
+                  f:kind: {}
+              f:network.openshift.io/RestrictedEndpointsAdmission:
+                .: {}
+                f:configuration:
+                  .: {}
+                  f:apiVersion: {}
+                  f:kind: {}
+                  f:restrictedCIDRs: {}
+          f:apiServerArguments:
+            .: {}
+            f:api-audiences: {}
+            f:authentication-token-webhook-config-file: {}
+            f:authentication-token-webhook-version: {}
+            f:authorization-mode: {}
+            f:enable-admission-plugins: {}
+            f:etcd-servers: {}
+            f:feature-gates: {}
+            f:goaway-chance: {}
+            f:send-retry-after-while-not-ready-once: {}
+            f:service-account-issuer: {}
+            f:service-account-jwks-uri: {}
+            f:shutdown-delay-duration: {}
+          f:authConfig:
+            .: {}
+            f:oauthMetadataFile: {}
+          f:corsAllowedOrigins: {}
+          f:gracefulTerminationDuration: {}
+          f:imagePolicyConfig:
+            .: {}
+            f:internalRegistryHostname: {}
+          f:servicesSubnet: {}
+          f:servingInfo:
+            .: {}
+            f:bindAddress: {}
+            f:bindNetwork: {}
+            f:cipherSuites: {}
+            f:minTLSVersion: {}
+            f:namedCertificates: {}
+        f:unsupportedConfigOverrides: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2026-01-28T09:43:03Z"
+  name: cluster
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "28269"
+  uid: f08e1b82-40b0-4670-9007-030699db8f26
+spec:
+  logLevel: Normal
+  managementState: Managed
+  observedConfig:
+    admission:
+      pluginConfig:
+        PodSecurity:
+          configuration:
+            defaults:
+              audit: restricted
+              audit-version: latest
+              enforce: privileged
+              enforce-version: latest
+              warn: restricted
+              warn-version: latest
+        network.openshift.io/ExternalIPRanger:
+          configuration:
+            allowIngressIP: false
+            apiVersion: network.openshift.io/v1
+            kind: ExternalIPRangerAdmissionConfig
+        network.openshift.io/RestrictedEndpointsAdmission:
+          configuration:
+            apiVersion: network.openshift.io/v1
+            kind: RestrictedEndpointsAdmissionConfig
+            restrictedCIDRs:
+            - 10.128.0.0/14
+            - 172.30.0.0/16
+    apiServerArguments:
+      api-audiences:
+      - https://kubernetes.default.svc
+      authentication-token-webhook-config-file:
+      - /etc/kubernetes/static-pod-resources/secrets/webhook-authenticator/kubeConfig
+      authentication-token-webhook-version:
+      - v1
+      authorization-mode:
+      - Scope
+      - SystemMasters
+      - RBAC
+      - Node
+      enable-admission-plugins:
+      - authorization.openshift.io/RestrictSubjectBindings
+      - authorization.openshift.io/ValidateRoleBindingRestriction
+      etcd-servers:
+      - https://10.0.102.200:2379
+      - https://10.0.108.54:2379
+      - https://10.0.3.203:2379
+      - https://localhost:2379
+      feature-gates:
+      - AdditionalRoutingCapabilities=true
+      - AdminNetworkPolicy=true
+      - AlibabaPlatform=true
+      - AzureWorkloadIdentity=true
+      - BuildCSIVolumes=true
+      - CPMSMachineNamePrefix=true
+      - ConsolePluginContentSecurityPolicy=true
+      - ExternalOIDC=true
+      - ExternalOIDCWithUIDAndExtraClaimMappings=true
+      - GatewayAPI=true
+      - GatewayAPIController=true
+      - HighlyAvailableArbiter=true
+      - ImageVolume=true
+      - IngressControllerLBSubnetsAWS=true
+      - KMSv1=true
+      - MachineConfigNodes=true
+      - ManagedBootImages=true
+      - ManagedBootImagesAWS=true
+      - MetricsCollectionProfiles=true
+      - NetworkDiagnosticsConfig=true
+      - NetworkLiveMigration=true
+      - NetworkSegmentation=true
+      - NewOLM=true
+      - PinnedImages=true
+      - PreconfiguredUDNAddresses=true
+      - ProcMountType=true
+      - RouteAdvertisements=true
+      - RouteExternalCertificate=true
+      - ServiceAccountTokenNodeBinding=true
+      - SetEIPForNLBIngressController=true
+      - SigstoreImageVerification=true
+      - StoragePerformantSecurityPolicy=true
+      - UpgradeStatus=true
+      - UserNamespacesPodSecurityStandards=true
+      - UserNamespacesSupport=true
+      - VSphereMultiDisk=true
+      - VSphereMultiNetworks=true
+      - AWSClusterHostedDNS=false
+      - AWSClusterHostedDNSInstall=false
+      - AWSDedicatedHosts=false
+      - AWSServiceLBNetworkSecurityGroup=false
+      - AutomatedEtcdBackup=false
+      - AzureClusterHostedDNSInstall=false
+      - AzureDedicatedHosts=false
+      - AzureMultiDisk=false
+      - BootImageSkewEnforcement=false
+      - BootcNodeManagement=false
+      - ClusterAPIInstall=false
+      - ClusterAPIInstallIBMCloud=false
+      - ClusterMonitoringConfig=false
+      - ClusterVersionOperatorConfiguration=false
+      - DNSNameResolver=false
+      - DualReplica=false
+      - DyanmicServiceEndpointIBMCloud=false
+      - DynamicResourceAllocation=false
+      - EtcdBackendQuota=false
+      - EventedPLEG=false
+      - Example=false
+      - Example2=false
+      - ExternalSnapshotMetadata=false
+      - GCPClusterHostedDNS=false
+      - GCPClusterHostedDNSInstall=false
+      - GCPCustomAPIEndpoints=false
+      - GCPCustomAPIEndpointsInstall=false
+      - ImageModeStatusReporting=false
+      - ImageStreamImportMode=false
+      - IngressControllerDynamicConfigurationManager=false
+      - InsightsConfig=false
+      - InsightsConfigAPI=false
+      - InsightsOnDemandDataGather=false
+      - IrreconcilableMachineConfig=false
+      - KMSEncryptionProvider=false
+      - MachineAPIMigration=false
+      - MachineAPIOperatorDisableMachineHealthCheckController=false
+      - ManagedBootImagesAzure=false
+      - ManagedBootImagesvSphere=false
+      - MaxUnavailableStatefulSet=false
+      - MinimumKubeletVersion=false
+      - MixedCPUsAllocation=false
+      - MultiArchInstallAzure=false
+      - MultiDiskSetup=false
+      - MutatingAdmissionPolicy=false
+      - NewOLMCatalogdAPIV1Metas=false
+      - NewOLMOwnSingleNamespace=false
+      - NewOLMPreflightPermissionChecks=false
+      - NewOLMWebhookProviderOpenshiftServiceCA=false
+      - NoRegistryClusterOperations=false
+      - NodeSwap=false
+      - NutanixMultiSubnets=false
+      - OVNObservability=false
+      - OpenShiftPodSecurityAdmission=false
+      - SELinuxMount=false
+      - ShortCertRotation=false
+      - SignatureStores=false
+      - SigstoreImageVerificationPKI=false
+      - TranslateStreamCloseWebsocketRequests=false
+      - VSphereConfigurableMaxAllowedBlockVolumesPerNode=false
+      - VSphereHostVMGroupZonal=false
+      - VSphereMixedNodeEnv=false
+      - VolumeAttributesClass=false
+      - VolumeGroupSnapshot=false
+      goaway-chance:
+      - "0.001"
+      send-retry-after-while-not-ready-once:
+      - "false"
+      service-account-issuer:
+      - https://kubernetes.default.svc
+      service-account-jwks-uri:
+      - https://api.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX:6443/openid/v1/jwks
+      shutdown-delay-duration:
+      - 129s
+    authConfig:
+      oauthMetadataFile: /etc/kubernetes/static-pod-resources/configmaps/oauth-metadata/oauthMetadata
+    corsAllowedOrigins:
+    - //127\.0\.0\.1(:|$)
+    - //localhost(:|$)
+    gracefulTerminationDuration: "194"
+    imagePolicyConfig:
+      internalRegistryHostname: image-registry.openshift-image-registry.svc:5000
+    servicesSubnet: 172.30.0.0/16
+    servingInfo:
+      bindAddress: 0.0.0.0:6443
+      bindNetwork: tcp4
+      cipherSuites:
+      - TLS_AES_128_GCM_SHA256
+      - TLS_AES_256_GCM_SHA384
+      - TLS_CHACHA20_POLY1305_SHA256
+      - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+      - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+      minTLSVersion: VersionTLS12
+      namedCertificates:
+      - certFile: /etc/kubernetes/static-pod-certs/secrets/localhost-serving-cert-certkey/tls.crt
+        keyFile: /etc/kubernetes/static-pod-certs/secrets/localhost-serving-cert-certkey/tls.key
+      - certFile: /etc/kubernetes/static-pod-certs/secrets/service-network-serving-certkey/tls.crt
+        keyFile: /etc/kubernetes/static-pod-certs/secrets/service-network-serving-certkey/tls.key
+      - certFile: /etc/kubernetes/static-pod-certs/secrets/external-loadbalancer-serving-certkey/tls.crt
+        keyFile: /etc/kubernetes/static-pod-certs/secrets/external-loadbalancer-serving-certkey/tls.key
+      - certFile: /etc/kubernetes/static-pod-certs/secrets/internal-loadbalancer-serving-certkey/tls.crt
+        keyFile: /etc/kubernetes/static-pod-certs/secrets/internal-loadbalancer-serving-certkey/tls.key
+      - certFile: /etc/kubernetes/static-pod-resources/secrets/localhost-recovery-serving-certkey/tls.crt
+        keyFile: /etc/kubernetes/static-pod-resources/secrets/localhost-recovery-serving-certkey/tls.key
+  operatorLogLevel: Normal
+  unsupportedConfigOverrides: null
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:30:34Z"
+    reason: DefaultCertRotationBase
+    status: "True"
+    type: CertRotationTimeUpgradeable
+  - lastTransitionTime: "2026-01-28T09:35:02Z"
+    reason: AsExpected
+    status: "False"
+    type: RevisionControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:34Z"
+    reason: NoUnsupportedConfigOverrides
+    status: "True"
+    type: UnsupportedConfigOverridesUpgradeable
+  - lastTransitionTime: "2026-01-28T09:30:34Z"
+    status: "False"
+    type: EncryptionStateControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:34Z"
+    status: "False"
+    type: EncryptionKeyControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:34Z"
+    message: latency profile not set on cluster
+    reason: ProfileEmpty
+    status: "True"
+    type: WorkerLatencyProfileComplete
+  - lastTransitionTime: "2026-01-28T09:30:34Z"
+    reason: ProfileEmpty
+    status: "False"
+    type: WorkerLatencyProfileProgressing
+  - lastTransitionTime: "2026-01-28T09:30:34Z"
+    status: "False"
+    type: Encrypted
+  - lastTransitionTime: "2026-01-28T09:30:34Z"
+    status: "False"
+    type: StaticPodFallbackRevisionDegraded
+  - lastTransitionTime: "2026-01-28T09:30:34Z"
+    status: "False"
+    type: EncryptionMigrationControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:34Z"
+    status: "False"
+    type: EncryptionMigrationControllerProgressing
+  - lastTransitionTime: "2026-01-28T09:30:34Z"
+    status: "False"
+    type: EncryptionPruneControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:35:07Z"
+    status: "False"
+    type: InstallerControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:34Z"
+    status: "False"
+    type: NodeInstallerDegraded
+  - lastTransitionTime: "2026-01-28T09:55:12Z"
+    message: 3 nodes are at revision 6
+    reason: AllNodesAtLatestRevision
+    status: "False"
+    type: NodeInstallerProgressing
+  - lastTransitionTime: "2026-01-28T09:36:10Z"
+    message: 3 nodes are active; 3 nodes are at revision 6
+    reason: ""
+    status: "True"
+    type: StaticPodsAvailable
+  - lastTransitionTime: "2026-01-28T09:30:35Z"
+    status: "False"
+    type: StartupMonitorPodContainerExcessiveRestartsDegraded
+  - lastTransitionTime: "2026-01-28T09:30:35Z"
+    status: "False"
+    type: StartupMonitorPodDegraded
+  - lastTransitionTime: "2026-01-28T09:30:35Z"
+    status: "False"
+    type: StaticPodsDegraded
+  - lastTransitionTime: "2026-01-28T09:30:36Z"
+    reason: AsExpected
+    status: "False"
+    type: WorkerLatencyProfileDegraded
+  - lastTransitionTime: "2026-01-28T09:30:37Z"
+    reason: AsExpected
+    status: "False"
+    type: MissingStaticPodControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:34:48Z"
+    reason: AsExpected
+    status: "False"
+    type: NodeKubeconfigControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:39Z"
+    message: All master nodes are ready
+    reason: MasterNodesReady
+    status: "False"
+    type: NodeControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:39:41Z"
+    reason: AsExpected
+    status: "False"
+    type: GuardControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:38Z"
+    status: "False"
+    type: InstallerPodContainerWaitingDegraded
+  - lastTransitionTime: "2026-01-28T09:30:38Z"
+    status: "False"
+    type: InstallerPodNetworkingDegraded
+  - lastTransitionTime: "2026-01-28T09:30:38Z"
+    status: "False"
+    type: InstallerPodPendingDegraded
+  - lastTransitionTime: "2026-01-28T09:30:41Z"
+    reason: AsExpected
+    status: "False"
+    type: BackingResourceControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:41Z"
+    status: "False"
+    type: AuditPolicyDegraded
+  - lastTransitionTime: "2026-01-28T09:33:08Z"
+    status: "False"
+    type: MutatingAdmissionWebhookConfigurationError
+  - lastTransitionTime: "2026-01-28T09:32:28Z"
+    status: "False"
+    type: ValidatingAdmissionWebhookConfigurationError
+  - lastTransitionTime: "2026-01-28T09:38:15Z"
+    status: "False"
+    type: CRDConversionWebhookConfigurationError
+  - lastTransitionTime: "2026-01-28T09:30:43Z"
+    status: "False"
+    type: VirtualResourceAdmissionError
+  - lastTransitionTime: "2026-01-28T09:31:15Z"
+    status: "False"
+    type: ConfigObservationDegraded
+  - lastTransitionTime: "2026-01-28T09:34:49Z"
+    status: "False"
+    type: ResourceSyncControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:30:52Z"
+    reason: AsExpected
+    status: "False"
+    type: KubeAPIServerStaticResourcesDegraded
+  - lastTransitionTime: "2026-01-28T09:30:56Z"
+    message: Kubelet and API server minor versions are synced.
+    reason: KubeletMinorVersionsSynced
+    status: "True"
+    type: KubeletMinorVersionUpgradeable
+  - lastTransitionTime: "2026-01-28T09:31:18Z"
+    reason: ExpectedReason
+    status: "False"
+    type: PodSecurityCustomerEvaluationConditionsDetected
+  - lastTransitionTime: "2026-01-28T09:31:18Z"
+    reason: ExpectedReason
+    status: "False"
+    type: PodSecurityOpenshiftEvaluationConditionsDetected
+  - lastTransitionTime: "2026-01-28T09:31:18Z"
+    reason: ExpectedReason
+    status: "False"
+    type: PodSecurityRunLevelZeroEvaluationConditionsDetected
+  - lastTransitionTime: "2026-01-28T09:31:18Z"
+    reason: ExpectedReason
+    status: "False"
+    type: PodSecurityDisabledSyncerEvaluationConditionsDetected
+  - lastTransitionTime: "2026-01-28T09:31:18Z"
+    message: 'Could not evaluate violations for namespaces: [kube-node-lease openshift
+      openshift-apiserver-operator openshift-cloud-credential-operator openshift-cloud-network-config-controller
+      openshift-cluster-olm-operator openshift-cluster-samples-operator openshift-cluster-storage-operator
+      openshift-config-managed openshift-config-operator openshift-console openshift-console-operator
+      openshift-console-user-settings openshift-controller-manager-operator openshift-dns-operator
+      openshift-host-network openshift-ingress-operator openshift-kube-controller-manager-operator
+      openshift-kube-storage-version-migrator openshift-kube-storage-version-migrator-operator
+      openshift-network-console openshift-network-diagnostics openshift-node openshift-service-ca
+      openshift-service-ca-operator openshift-user-workload-monitoring]'
+    reason: PSViolationDecisionInconclusive
+    status: "True"
+    type: PodSecurityInconclusiveEvaluationConditionsDetected
+  - lastTransitionTime: "2026-01-28T09:39:54Z"
+    status: "False"
+    type: CertRotation_NodeSystemAdminClient_Degraded
+  - lastTransitionTime: "2026-01-28T09:39:54Z"
+    status: "False"
+    type: CertRotation_ExternalLoadBalancerServing_Degraded
+  - lastTransitionTime: "2026-01-28T09:39:55Z"
+    status: "False"
+    type: CertRotation_KubeControllerManagerClient_Degraded
+  - lastTransitionTime: "2026-01-28T09:39:55Z"
+    status: "False"
+    type: CertRotation_AggregatorProxyClientCert_Degraded
+  - lastTransitionTime: "2026-01-28T09:39:57Z"
+    status: "False"
+    type: TargetConfigControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:39:57Z"
+    status: "False"
+    type: CertRotation_CheckEndpointsClient_Degraded
+  - lastTransitionTime: "2026-01-28T09:40:00Z"
+    status: "False"
+    type: CertRotation_LocalhostServing_Degraded
+  - lastTransitionTime: "2026-01-28T09:40:00Z"
+    status: "False"
+    type: CertRotation_InternalLoadBalancerServing_Degraded
+  - lastTransitionTime: "2026-01-28T09:40:01Z"
+    status: "False"
+    type: CertRotation_KubeAPIServerToKubeletClientCert_Degraded
+  - lastTransitionTime: "2026-01-28T09:40:01Z"
+    status: "False"
+    type: CertRotation_ControlPlaneNodeAdminClient_Degraded
+  - lastTransitionTime: "2026-01-28T09:40:05Z"
+    status: "False"
+    type: CertRotation_LocalhostRecoveryServing_Degraded
+  - lastTransitionTime: "2026-01-28T09:40:05Z"
+    status: "False"
+    type: CertRotation_ServiceNetworkServing_Degraded
+  - lastTransitionTime: "2026-01-28T09:40:05Z"
+    status: "False"
+    type: CertRotation_KubeSchedulerClient_Degraded
+  latestAvailableRevision: 6
+  nodeStatuses:
+  - currentRevision: 6
+    lastFailedCount: 0
+    lastFailedReason: ""
+    lastFailedRevision: 0
+    lastFallbackCount: 0
+    nodeName: ip-10-0-102-200.us-west-1.compute.internal
+    targetRevision: 0
+  - currentRevision: 6
+    lastFailedCount: 0
+    lastFailedReason: ""
+    lastFailedRevision: 0
+    lastFallbackCount: 0
+    nodeName: ip-10-0-108-54.us-west-1.compute.internal
+    targetRevision: 0
+  - currentRevision: 6
+    lastFailedCount: 0
+    lastFailedReason: ""
+    lastFailedRevision: 0
+    lastFallbackCount: 0
+    nodeName: ip-10-0-3-203.us-west-1.compute.internal
+    targetRevision: 0
+  readyReplicas: 0
+  serviceAccountIssuers:
+  - name: https://kubernetes.default.svc

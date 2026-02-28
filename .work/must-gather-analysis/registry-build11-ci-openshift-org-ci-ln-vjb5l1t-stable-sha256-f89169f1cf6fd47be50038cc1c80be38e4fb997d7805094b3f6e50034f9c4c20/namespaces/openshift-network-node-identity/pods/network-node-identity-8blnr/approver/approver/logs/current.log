@@ -1,0 +1,231 @@
+2026-01-28T09:29:50.896964369Z + [[ -f /env/_master ]]
+2026-01-28T09:29:50.897219885Z ++ date '+%m%d %H:%M:%S.%N'
+2026-01-28T09:29:50.898823879Z I0128 09:29:50.898548523 - network-node-identity - start approver
+2026-01-28T09:29:50.898837159Z + echo 'I0128 09:29:50.898548523 - network-node-identity - start approver'
+2026-01-28T09:29:50.898847949Z + exec /usr/bin/ovnkube-identity --k8s-apiserver=https://api-int.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX:6443 --disable-webhook --csr-acceptance-conditions=/var/run/ovnkube-identity-config/additional-cert-acceptance-cond.json --loglevel=4
+2026-01-28T09:29:50.916860012Z I0128 09:29:50.916769       1 ovnkubeidentity.go:133] Config: {kubeconfig: apiServer:https://api-int.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX:6443 logLevel:4 port:9443 host:localhost certDir: metricsAddress:0 leaseNamespace: enableInterconnect:false enableHybridOverlay:false disableWebhook:true disableApprover:false waitForKAPIDuration:0 localKAPIPort:6443 extraAllowedUsers:{slice:[] separator:{sep: disabled:false customized:false} hasBeenSet:false keepSpace:false} csrAcceptanceConditionFile:/var/run/ovnkube-identity-config/additional-cert-acceptance-cond.json csrAcceptanceConditions:[] podAdmissionConditionFile: podAdmissionConditions:[]}
+2026-01-28T09:29:50.916860012Z W0128 09:29:50.916847       1 client_config.go:667] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+2026-01-28T09:29:50.917284561Z I0128 09:29:50.917264       1 envvar.go:172] "Feature gate default state" feature="InOrderInformers" enabled=true
+2026-01-28T09:29:50.917284561Z I0128 09:29:50.917279       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2026-01-28T09:29:50.917297261Z I0128 09:29:50.917283       1 envvar.go:172] "Feature gate default state" feature="ClientsAllowCBOR" enabled=false
+2026-01-28T09:29:50.917297261Z I0128 09:29:50.917287       1 envvar.go:172] "Feature gate default state" feature="ClientsPreferCBOR" enabled=false
+2026-01-28T09:29:50.917297261Z I0128 09:29:50.917290       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2026-01-28T09:29:50.917793632Z I0128 09:29:50.917775       1 ovnkubeidentity.go:472] Starting certificate signing request approver
+2026-01-28T09:29:50.917842753Z I0128 09:29:50.917826       1 leaderelection.go:257] attempting to acquire leader lease openshift-network-node-identity/ovnkube-identity...
+2026-01-28T09:29:50.925539616Z I0128 09:29:50.925508       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:29:50.925539616Z I0128 09:29:50.925523       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:30:25.905629461Z I0128 09:30:25.905589       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:30:25.905629461Z I0128 09:30:25.905605       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:30:48.126014293Z I0128 09:30:48.125959       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:30:48.126014293Z I0128 09:30:48.125985       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:31:17.329400439Z I0128 09:31:17.329357       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:31:17.329429600Z I0128 09:31:17.329403       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:31:40.503227714Z I0128 09:31:40.503191       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:31:40.503227714Z I0128 09:31:40.503205       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:32:21.888814569Z I0128 09:32:21.888771       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:32:21.888814569Z I0128 09:32:21.888787       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:33:02.533455358Z I0128 09:33:02.533407       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:33:02.533455358Z I0128 09:33:02.533424       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:33:31.274130046Z I0128 09:33:31.274085       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:33:31.274130046Z I0128 09:33:31.274098       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:34:08.150520865Z I0128 09:34:08.150482       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:34:08.150520865Z I0128 09:34:08.150496       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:34:35.690280305Z I0128 09:34:35.690238       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:34:35.690280305Z I0128 09:34:35.690255       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:35:04.944869554Z I0128 09:35:04.944824       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:35:04.944869554Z I0128 09:35:04.944839       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:35:41.846479692Z I0128 09:35:41.846431       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:35:41.846479692Z I0128 09:35:41.846451       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:36:07.114850983Z I0128 09:36:07.114798       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:36:07.114850983Z I0128 09:36:07.114816       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:36:31.555995280Z I0128 09:36:31.555948       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:36:31.555995280Z I0128 09:36:31.555967       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:37:14.719068045Z I0128 09:37:14.719032       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:37:14.719068045Z I0128 09:37:14.719047       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:37:44.622970618Z I0128 09:37:44.622930       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:37:44.622970618Z I0128 09:37:44.622946       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:38:05.243301438Z I0128 09:38:05.243266       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:38:05.243301438Z I0128 09:38:05.243282       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:38:45.190657985Z I0128 09:38:45.190613       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:38:45.190657985Z I0128 09:38:45.190628       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:39:27.513038628Z I0128 09:39:27.513004       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:39:27.513038628Z I0128 09:39:27.513018       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:40:02.927372677Z I0128 09:40:02.927303       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:40:02.927372677Z I0128 09:40:02.927325       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:40:25.621313875Z I0128 09:40:25.621235       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:40:25.621313875Z I0128 09:40:25.621258       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:41:03.257952007Z I0128 09:41:03.256963       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:41:03.257952007Z I0128 09:41:03.257307       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:41:35.810164163Z I0128 09:41:35.810121       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:41:35.810164163Z I0128 09:41:35.810139       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:42:09.730542053Z I0128 09:42:09.730509       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:42:09.730542053Z I0128 09:42:09.730526       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:42:33.102421005Z I0128 09:42:33.102382       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:42:33.102421005Z I0128 09:42:33.102398       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:43:01.705662209Z I0128 09:43:01.705604       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:43:01.705662209Z I0128 09:43:01.705622       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:43:30.440715311Z I0128 09:43:30.440660       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:43:30.440715311Z I0128 09:43:30.440691       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:43:52.757952443Z I0128 09:43:52.757868       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:43:52.757952443Z I0128 09:43:52.757909       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:44:28.382764408Z I0128 09:44:28.382720       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:44:28.382764408Z I0128 09:44:28.382736       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:44:51.879374116Z I0128 09:44:51.879321       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:44:51.879374116Z I0128 09:44:51.879340       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:45:13.693086341Z I0128 09:45:13.693038       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:45:13.693086341Z I0128 09:45:13.693057       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:45:40.838162458Z I0128 09:45:40.838110       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:45:40.838162458Z I0128 09:45:40.838128       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:46:02.670043978Z I0128 09:46:02.669998       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:46:02.670043978Z I0128 09:46:02.670017       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:46:37.142130317Z I0128 09:46:37.142083       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:46:37.142130317Z I0128 09:46:37.142101       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:47:10.031788769Z I0128 09:47:10.031754       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:47:10.031788769Z I0128 09:47:10.031770       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:47:53.065074039Z I0128 09:47:53.065026       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:47:53.065074039Z I0128 09:47:53.065042       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:48:21.354092304Z I0128 09:48:21.354056       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:48:21.354138535Z I0128 09:48:21.354113       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:48:58.571140699Z I0128 09:48:58.571087       1 with_retry.go:234] "Got a Retry-After response" delay="1s" attempt=1 url="https://api-int.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity?timeout=15s"
+2026-01-28T09:48:58.581862731Z I0128 09:48:58.581832       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:48:58.581862731Z I0128 09:48:58.581848       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:49:18.697905143Z I0128 09:49:18.697835       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:49:18.697905143Z I0128 09:49:18.697853       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:49:47.546601862Z I0128 09:49:47.546559       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:49:47.546682704Z I0128 09:49:47.546667       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:50:08.923694458Z I0128 09:50:08.923640       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:50:08.923694458Z I0128 09:50:08.923662       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:50:30.233975631Z I0128 09:50:30.233938       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:50:30.233975631Z I0128 09:50:30.233955       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:51:00.669471162Z I0128 09:51:00.669423       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:51:00.669471162Z I0128 09:51:00.669445       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:51:30.835220464Z I0128 09:51:30.835171       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:51:30.835220464Z I0128 09:51:30.835191       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:51:53.459817634Z I0128 09:51:53.459764       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:51:53.459817634Z I0128 09:51:53.459784       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:52:19.860864093Z I0128 09:52:19.860822       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:52:19.860864093Z I0128 09:52:19.860840       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:52:50.705222409Z I0128 09:52:50.705170       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:52:50.705222409Z I0128 09:52:50.705190       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:53:16.264586606Z I0128 09:53:16.264529       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:53:16.264586606Z I0128 09:53:16.264548       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:53:39.094132781Z I0128 09:53:39.094076       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:53:39.094132781Z I0128 09:53:39.094098       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:54:18.806588576Z I0128 09:54:18.806553       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:54:18.806588576Z I0128 09:54:18.806568       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:54:42.571173304Z I0128 09:54:42.571125       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:54:42.571173304Z I0128 09:54:42.571147       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:55:10.615480600Z I0128 09:55:10.615424       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:55:10.615557022Z I0128 09:55:10.615535       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:55:52.982165921Z I0128 09:55:52.982125       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:55:52.982165921Z I0128 09:55:52.982142       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:56:30.671360174Z I0128 09:56:30.671309       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:56:30.671360174Z I0128 09:56:30.671330       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:57:14.244974072Z I0128 09:57:14.244930       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:57:14.244974072Z I0128 09:57:14.244948       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:57:55.360666513Z I0128 09:57:55.360609       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:57:55.360666513Z I0128 09:57:55.360628       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:58:24.648073320Z I0128 09:58:24.648015       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:58:24.648073320Z I0128 09:58:24.648035       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:59:01.340135534Z I0128 09:59:01.340093       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:59:01.340135534Z I0128 09:59:01.340112       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:59:32.701870110Z I0128 09:59:32.701828       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T09:59:32.701870110Z I0128 09:59:32.701843       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:00:03.235158340Z I0128 10:00:03.235109       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:00:03.235158340Z I0128 10:00:03.235133       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:00:27.549611917Z I0128 10:00:27.549550       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:00:27.549611917Z I0128 10:00:27.549571       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:01:00.058313394Z I0128 10:01:00.058258       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:01:00.058313394Z I0128 10:01:00.058278       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:01:22.958257066Z I0128 10:01:22.958201       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:01:22.958257066Z I0128 10:01:22.958220       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:01:46.897155415Z I0128 10:01:46.897099       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:01:46.897155415Z I0128 10:01:46.897118       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:02:25.231419651Z I0128 10:02:25.231380       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:02:25.231419651Z I0128 10:02:25.231397       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:02:59.162593559Z I0128 10:02:59.162554       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:02:59.162593559Z I0128 10:02:59.162573       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:03:32.110797393Z I0128 10:03:32.110742       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:03:32.110797393Z I0128 10:03:32.110760       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:04:11.762836389Z I0128 10:04:11.762783       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:04:11.762836389Z I0128 10:04:11.762803       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:04:45.203819783Z I0128 10:04:45.203778       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:04:45.203819783Z I0128 10:04:45.203795       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:05:08.509787232Z I0128 10:05:08.509734       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:05:08.509787232Z I0128 10:05:08.509754       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:05:37.263655204Z I0128 10:05:37.263613       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:05:37.263655204Z I0128 10:05:37.263629       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:06:16.751876249Z I0128 10:06:16.751819       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:06:16.751876249Z I0128 10:06:16.751839       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:06:38.503485821Z I0128 10:06:38.503445       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:06:38.503578553Z I0128 10:06:38.503563       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:07:14.208833762Z I0128 10:07:14.208795       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:07:14.208833762Z I0128 10:07:14.208812       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:07:37.077860890Z I0128 10:07:37.077806       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:07:37.077860890Z I0128 10:07:37.077824       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:08:06.061128460Z I0128 10:08:06.061086       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:08:06.061128460Z I0128 10:08:06.061104       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:08:44.941673409Z I0128 10:08:44.941623       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:08:44.941673409Z I0128 10:08:44.941640       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:09:28.599327461Z I0128 10:09:28.599284       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:09:28.599421383Z I0128 10:09:28.599386       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:09:54.889905851Z I0128 10:09:54.889825       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:09:54.889905851Z I0128 10:09:54.889843       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:10:31.032814638Z I0128 10:10:31.032762       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:10:31.032814638Z I0128 10:10:31.032780       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:10:57.413842832Z I0128 10:10:57.413790       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:10:57.413842832Z I0128 10:10:57.413810       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:11:35.504279015Z I0128 10:11:35.504202       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:11:35.504279015Z I0128 10:11:35.504222       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:12:02.985996836Z I0128 10:12:02.985950       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:12:02.985996836Z I0128 10:12:02.985969       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:12:46.837990258Z I0128 10:12:46.837943       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:12:46.837990258Z I0128 10:12:46.837962       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:13:08.615966791Z I0128 10:13:08.615917       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:13:08.615966791Z I0128 10:13:08.615938       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:13:32.432201719Z I0128 10:13:32.432148       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:13:32.432201719Z I0128 10:13:32.432166       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:13:52.813537171Z I0128 10:13:52.813484       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:13:52.813537171Z I0128 10:13:52.813503       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:14:27.935451011Z I0128 10:14:27.935390       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:14:27.935451011Z I0128 10:14:27.935409       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:15:02.183448057Z I0128 10:15:02.183399       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:15:02.183448057Z I0128 10:15:02.183419       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:15:29.927176095Z I0128 10:15:29.927123       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:15:29.927176095Z I0128 10:15:29.927142       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:16:00.099109675Z I0128 10:16:00.099057       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:16:00.099109675Z I0128 10:16:00.099079       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:16:35.577562092Z I0128 10:16:35.577516       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:16:35.577562092Z I0128 10:16:35.577532       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:16:59.718716135Z I0128 10:16:59.718665       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:16:59.718716135Z I0128 10:16:59.718682       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:17:32.820756427Z I0128 10:17:32.820701       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:17:32.820756427Z I0128 10:17:32.820718       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:18:02.714338601Z I0128 10:18:02.714287       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:18:02.714338601Z I0128 10:18:02.714304       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:18:41.410863970Z I0128 10:18:41.410810       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:18:41.410863970Z I0128 10:18:41.410830       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:19:22.923571298Z I0128 10:19:22.923505       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:19:22.923571298Z I0128 10:19:22.923526       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:20:00.996485201Z I0128 10:20:00.996433       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:20:00.996485201Z I0128 10:20:00.996454       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:20:44.713444563Z I0128 10:20:44.713393       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:20:44.713444563Z I0128 10:20:44.713415       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:21:18.190087114Z I0128 10:21:18.190043       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:21:18.190087114Z I0128 10:21:18.190063       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:22:00.047762963Z I0128 10:22:00.047712       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:22:00.047762963Z I0128 10:22:00.047733       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:22:25.261369510Z I0128 10:22:25.261317       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:22:25.261369510Z I0128 10:22:25.261334       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:22:55.546651736Z I0128 10:22:55.546593       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:22:55.546651736Z I0128 10:22:55.546614       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:23:36.251306707Z I0128 10:23:36.251259       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:23:36.251306707Z I0128 10:23:36.251277       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:24:04.791941658Z I0128 10:24:04.791900       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:24:04.791988749Z I0128 10:24:04.791955       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:24:29.535906782Z I0128 10:24:29.535843       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:24:29.535906782Z I0128 10:24:29.535860       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:24:57.922162446Z I0128 10:24:57.922116       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:24:57.922162446Z I0128 10:24:57.922134       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T10:25:25.235467123Z I0128 10:25:25.235419       1 leaderelection.go:456] lock is held by ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b and has not yet expired
+2026-01-28T10:25:25.235467123Z I0128 10:25:25.235439       1 leaderelection.go:266] failed to acquire lease openshift-network-node-identity/ovnkube-identity

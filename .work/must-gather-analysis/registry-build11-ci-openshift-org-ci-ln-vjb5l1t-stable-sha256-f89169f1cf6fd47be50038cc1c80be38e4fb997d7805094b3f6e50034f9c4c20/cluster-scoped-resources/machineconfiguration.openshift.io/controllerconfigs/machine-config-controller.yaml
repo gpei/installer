@@ -1,0 +1,376 @@
+apiVersion: machineconfiguration.openshift.io/v1
+kind: ControllerConfig
+metadata:
+    annotations:
+        machineconfiguration.openshift.io/generated-by-version: 3ce6221a
+        machineconfiguration.openshift.io/release-image-version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+        machineconfiguration.openshift.io/service-ca-rotate: "false"
+    creationTimestamp: "2026-01-28T09:32:23Z"
+    generation: 3
+    managedFields:
+        - apiVersion: machineconfiguration.openshift.io/v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:metadata:
+                f:annotations:
+                    .: {}
+                    f:machineconfiguration.openshift.io/generated-by-version: {}
+                    f:machineconfiguration.openshift.io/release-image-version: {}
+                    f:machineconfiguration.openshift.io/service-ca-rotate: {}
+            f:spec:
+                .: {}
+                f:additionalTrustBundle: {}
+                f:baseOSContainerImage: {}
+                f:baseOSExtensionsContainerImage: {}
+                f:cloudProviderCAData: {}
+                f:cloudProviderConfig: {}
+                f:clusterDNSIP: {}
+                f:dns:
+                    .: {}
+                    f:apiVersion: {}
+                    f:kind: {}
+                    f:metadata:
+                        .: {}
+                        f:creationTimestamp: {}
+                        f:generation: {}
+                        f:managedFields: {}
+                        f:name: {}
+                        f:resourceVersion: {}
+                        f:uid: {}
+                    f:spec:
+                        .: {}
+                        f:baseDomain: {}
+                        f:platform:
+                            .: {}
+                            f:type: {}
+                        f:privateZone:
+                            .: {}
+                            f:tags:
+                                .: {}
+                                f:Name: {}
+                                f:kubernetes.io/cluster/ci-ln-vjb5l1t-76ef8-snmcd: {}
+                        f:publicZone:
+                            .: {}
+                            f:id: {}
+                    f:status: {}
+                f:imageRegistryBundleData: {}
+                f:imageRegistryBundleUserData: {}
+                f:images:
+                    .: {}
+                    f:apiServerWatcherKey: {}
+                    f:baremetalRuntimeCfgImage: {}
+                    f:corednsImage: {}
+                    f:haproxyImage: {}
+                    f:infraImageKey: {}
+                    f:keepalivedImage: {}
+                    f:kubeRbacProxyImage: {}
+                    f:machineConfigOperator: {}
+                f:infra:
+                    .: {}
+                    f:apiVersion: {}
+                    f:kind: {}
+                    f:metadata:
+                        .: {}
+                        f:creationTimestamp: {}
+                        f:generation: {}
+                        f:managedFields: {}
+                        f:name: {}
+                        f:resourceVersion: {}
+                        f:uid: {}
+                    f:spec:
+                        .: {}
+                        f:cloudConfig:
+                            .: {}
+                            f:key: {}
+                            f:name: {}
+                        f:platformSpec:
+                            .: {}
+                            f:aws: {}
+                            f:type: {}
+                    f:status:
+                        .: {}
+                        f:apiServerInternalURI: {}
+                        f:apiServerURL: {}
+                        f:controlPlaneTopology: {}
+                        f:cpuPartitioning: {}
+                        f:etcdDiscoveryDomain: {}
+                        f:infrastructureName: {}
+                        f:infrastructureTopology: {}
+                        f:platform: {}
+                        f:platformStatus:
+                            .: {}
+                            f:aws:
+                                .: {}
+                                f:region: {}
+                            f:type: {}
+                f:internalRegistryPullSecret: {}
+                f:ipFamilies: {}
+                f:kubeAPIServerServingCAData: {}
+                f:network: {}
+                f:networkType: {}
+                f:osImageURL: {}
+                f:platform: {}
+                f:proxy: {}
+                f:pullSecret: {}
+                f:releaseImage: {}
+                f:rootCAData: {}
+          manager: machine-config-operator
+          operation: Update
+          time: "2026-01-28T09:42:03Z"
+        - apiVersion: machineconfiguration.openshift.io/v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:status:
+                .: {}
+                f:conditions:
+                    .: {}
+                    k:{"type":"TemplateControllerCompleted"}:
+                        .: {}
+                        f:lastTransitionTime: {}
+                        f:message: {}
+                        f:status: {}
+                        f:type: {}
+                    k:{"type":"TemplateControllerFailing"}:
+                        .: {}
+                        f:lastTransitionTime: {}
+                        f:status: {}
+                        f:type: {}
+                    k:{"type":"TemplateControllerRunning"}:
+                        .: {}
+                        f:lastTransitionTime: {}
+                        f:status: {}
+                        f:type: {}
+                f:controllerCertificates: {}
+                f:observedGeneration: {}
+          manager: machine-config-controller
+          operation: Update
+          subresource: status
+          time: "2026-01-28T09:42:04Z"
+    name: machine-config-controller
+    resourceVersion: "20404"
+    uid: dc0c134b-26eb-4fe6-9312-d207cc20003f
+spec:
+    additionalTrustBundle: null
+    baseOSContainerImage: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:56380161baf19863b676fb94aacaae253df853c437df18d00e447f36c895b794
+    baseOSExtensionsContainerImage: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:48f0516df39672a56a64cd4b2eef8402658376668980b42b1824eb93fbce1fa9
+    cloudProviderCAData: null
+    cloudProviderConfig: |
+        [Global]
+    clusterDNSIP: 172.30.0.10
+    dns:
+        apiVersion: config.openshift.io/v1
+        kind: DNS
+        metadata:
+            creationTimestamp: "2026-01-28T09:25:08Z"
+            generation: 1
+            managedFields:
+                - apiVersion: config.openshift.io/v1
+                  fieldsType: FieldsV1
+                  fieldsV1:
+                    f:spec:
+                        .: {}
+                        f:baseDomain: {}
+                        f:platform:
+                            .: {}
+                            f:type: {}
+                        f:privateZone:
+                            .: {}
+                            f:tags:
+                                .: {}
+                                f:Name: {}
+                                f:kubernetes.io/cluster/ci-ln-vjb5l1t-76ef8-snmcd: {}
+                        f:publicZone:
+                            .: {}
+                            f:id: {}
+                  manager: cluster-bootstrap
+                  operation: Update
+                  time: "2026-01-28T09:25:08Z"
+                - apiVersion: config.openshift.io/v1
+                  fieldsType: FieldsV1
+                  fieldsV1:
+                    f:status: {}
+                  manager: cluster-bootstrap
+                  operation: Update
+                  subresource: status
+                  time: "2026-01-28T09:25:08Z"
+            name: cluster
+            resourceVersion: "545"
+            uid: 93298848-11b2-4afb-ab43-e62e1d1e2e9a
+        spec:
+            baseDomain: ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+            platform:
+                type: ""
+            privateZone:
+                tags:
+                    Name: ci-ln-vjb5l1t-76ef8-snmcd-int
+                    kubernetes.io/cluster/ci-ln-vjb5l1t-76ef8-snmcd: owned
+            publicZone:
+                id: Z0764857NINJVO7A6ST2
+        status: {}
+    imageRegistryBundleData:
+        - data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJRXcwTy9pcFdJYVl3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRjMk9UVTVNall6TlRBZQpGdzB5TmpBeE1qZ3dPVE13TXpSYUZ3MHlPREF6TWpnd09UTXdNelZhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTNOamsxT1RJMk16VXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRQzZEZ0llNFg4czRKa0JKSnJSWDMzNlBpUHh5dkxGOGtLOApsWE1ISGZCbHRzQldsUEpMZ0thM0JJbDdUUTVKYktibzF3T0lwL2hJaFRRbTkvQ1ZaNndUSUh5WFNmRkFLQjZFCnZvdDJWdGxxOTZYcDZOVkxOd3BySG50cXlEbTV2OVdWZG5wY1NqNDFYZmhiYUsxOXlJR3lyRGxQSzhiUFVYSHAKdDlVbFF2c3l4bEFuK2djNVJJR2hPNUtNazdNWm0zZlVyNEJ4TjJKeWhYZW9zblpEV1EyTFY4cDZoQVphZnRTTwpGQk53ZzlvNktJM09LUDdFSWJFcEZONUFHcTVacFpqWnQ0OUlZQzRSeWcyYjBJOHRjV1c4amJsd0ZBTFlxcVJaCk1VK2VYb2V2ZlVsK2VSMC9aNHBrN0ZnQTRIMnU1U1NoYzQzeHFwbXFoVFN5NFhiVlQvU1JBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlNZd1g1WQpWVnZpb1I5OCtqbzkycVhBclR6MTZ6QWZCZ05WSFNNRUdEQVdnQlNZd1g1WVZWdmlvUjk4K2pvOTJxWEFyVHoxCjZ6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFSNlVYd0gwcmlYejRCa2lzNkNCRnZPRi9jNUxLbnFXdlR3UEYKemJqY1ZBUy9Nb0tRdVhqZVVIZXZ0dEMyR0NRSTEwbkJyYUpYUklOSGtVTzVMYVUyVWxBMVh6LzZmaGxGMkJKSwplSmtkaHF3QnFDcjlqa0hKVk1kYW5wZ25TTUNUcitDYVNUM0d3ai80TU1hSHcvRkY4bTQ3VkFkWlJnajNlY0h0CkhGeVBiR0gxb1ZiZklKa2huYmFCcEZMVnllMnVjKzdreGR1MDN4bmo0T1RRbkM3NWpuZzErY21Lc1lnVWd4Q2QKQzAzdFRZOFU5QTlkTVJrTUhpclR1VGpxSXJJQjBoWmFENHhZU01WSFlrZEh4OHNiV3JoOGwvNEM5SUIwalFQRQpXSjJvTU1PaU1qZHlIZmtIZ0tvTDh1QVV6dHpqVGZ3dlg0RUlweFBrNWx5SWdGM3k2dz09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+          file: image-registry.openshift-image-registry.svc..5000
+        - data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJRXcwTy9pcFdJYVl3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRjMk9UVTVNall6TlRBZQpGdzB5TmpBeE1qZ3dPVE13TXpSYUZ3MHlPREF6TWpnd09UTXdNelZhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTNOamsxT1RJMk16VXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRQzZEZ0llNFg4czRKa0JKSnJSWDMzNlBpUHh5dkxGOGtLOApsWE1ISGZCbHRzQldsUEpMZ0thM0JJbDdUUTVKYktibzF3T0lwL2hJaFRRbTkvQ1ZaNndUSUh5WFNmRkFLQjZFCnZvdDJWdGxxOTZYcDZOVkxOd3BySG50cXlEbTV2OVdWZG5wY1NqNDFYZmhiYUsxOXlJR3lyRGxQSzhiUFVYSHAKdDlVbFF2c3l4bEFuK2djNVJJR2hPNUtNazdNWm0zZlVyNEJ4TjJKeWhYZW9zblpEV1EyTFY4cDZoQVphZnRTTwpGQk53ZzlvNktJM09LUDdFSWJFcEZONUFHcTVacFpqWnQ0OUlZQzRSeWcyYjBJOHRjV1c4amJsd0ZBTFlxcVJaCk1VK2VYb2V2ZlVsK2VSMC9aNHBrN0ZnQTRIMnU1U1NoYzQzeHFwbXFoVFN5NFhiVlQvU1JBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlNZd1g1WQpWVnZpb1I5OCtqbzkycVhBclR6MTZ6QWZCZ05WSFNNRUdEQVdnQlNZd1g1WVZWdmlvUjk4K2pvOTJxWEFyVHoxCjZ6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFSNlVYd0gwcmlYejRCa2lzNkNCRnZPRi9jNUxLbnFXdlR3UEYKemJqY1ZBUy9Nb0tRdVhqZVVIZXZ0dEMyR0NRSTEwbkJyYUpYUklOSGtVTzVMYVUyVWxBMVh6LzZmaGxGMkJKSwplSmtkaHF3QnFDcjlqa0hKVk1kYW5wZ25TTUNUcitDYVNUM0d3ai80TU1hSHcvRkY4bTQ3VkFkWlJnajNlY0h0CkhGeVBiR0gxb1ZiZklKa2huYmFCcEZMVnllMnVjKzdreGR1MDN4bmo0T1RRbkM3NWpuZzErY21Lc1lnVWd4Q2QKQzAzdFRZOFU5QTlkTVJrTUhpclR1VGpxSXJJQjBoWmFENHhZU01WSFlrZEh4OHNiV3JoOGwvNEM5SUIwalFQRQpXSjJvTU1PaU1qZHlIZmtIZ0tvTDh1QVV6dHpqVGZ3dlg0RUlweFBrNWx5SWdGM3k2dz09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+          file: image-registry.openshift-image-registry.svc.cluster.local..5000
+    imageRegistryBundleUserData: []
+    images:
+        apiServerWatcherKey: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:f531950bc313d9e80aea72aa532209085d8c1d67017055da1fae01f7ad4ac98b
+        baremetalRuntimeCfgImage: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:699e770ee3bb7b1ca627912edf42cd2eeb584c6b76e1f500b1756b085ae00be3
+        corednsImage: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:90c3e20d684e0b90706a8fabb9c9bda2929bb957ffe3e1641ea68fe9dc919cbb
+        haproxyImage: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:cbf62d739e5d9109b736a9b1689b15541929b0d77563ccf0c3a5bc90eda6d973
+        infraImageKey: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:9cd7ad89abd5c8714a4d1e937bf8d3afbd1895438158e004034b6449426e0f1b
+        keepalivedImage: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:3dec8c0f4dddea8fcf8908436f81f27edf465d192e56f7a9affb50b0854da02e
+        kubeRbacProxyImage: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+        machineConfigOperator: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:f531950bc313d9e80aea72aa532209085d8c1d67017055da1fae01f7ad4ac98b
+    infra:
+        apiVersion: config.openshift.io/v1
+        kind: Infrastructure
+        metadata:
+            creationTimestamp: "2026-01-28T09:25:08Z"
+            generation: 1
+            managedFields:
+                - apiVersion: config.openshift.io/v1
+                  fieldsType: FieldsV1
+                  fieldsV1:
+                    f:spec:
+                        .: {}
+                        f:cloudConfig:
+                            .: {}
+                            f:key: {}
+                            f:name: {}
+                        f:platformSpec:
+                            .: {}
+                            f:aws: {}
+                            f:type: {}
+                  manager: cluster-bootstrap
+                  operation: Update
+                  time: "2026-01-28T09:25:08Z"
+                - apiVersion: config.openshift.io/v1
+                  fieldsType: FieldsV1
+                  fieldsV1:
+                    f:status:
+                        .: {}
+                        f:apiServerInternalURI: {}
+                        f:apiServerURL: {}
+                        f:controlPlaneTopology: {}
+                        f:cpuPartitioning: {}
+                        f:etcdDiscoveryDomain: {}
+                        f:infrastructureName: {}
+                        f:infrastructureTopology: {}
+                        f:platform: {}
+                        f:platformStatus:
+                            .: {}
+                            f:aws:
+                                .: {}
+                                f:region: {}
+                            f:type: {}
+                  manager: cluster-bootstrap
+                  operation: Update
+                  subresource: status
+                  time: "2026-01-28T09:25:08Z"
+            name: cluster
+            resourceVersion: "547"
+            uid: d0ee3a4d-6106-4c66-8c5e-d6e21c77c123
+        spec:
+            cloudConfig:
+                key: config
+                name: cloud-provider-config
+            platformSpec:
+                aws: {}
+                type: AWS
+        status:
+            apiServerInternalURI: https://api-int.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX:6443
+            apiServerURL: https://api.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX:6443
+            controlPlaneTopology: HighlyAvailable
+            cpuPartitioning: None
+            etcdDiscoveryDomain: ""
+            infrastructureName: ci-ln-vjb5l1t-76ef8-snmcd
+            infrastructureTopology: HighlyAvailable
+            platform: AWS
+            platformStatus:
+                aws:
+                    region: us-west-1
+                type: AWS
+    internalRegistryPullSecret:
+        _REDACTED: This field has been redacted
+        length: 6116
+    ipFamilies: IPv4
+    kubeAPIServerServingCAData:
+        _REDACTED: This field has been redacted
+        length: 11112
+    network: null
+    networkType: OVNKubernetes
+    osImageURL: ""
+    platform: aws
+    proxy: null
+    pullSecret:
+        name: pull-secret
+        namespace: openshift-config
+    releaseImage: ""
+    rootCAData:
+        _REDACTED: This field has been redacted
+        length: 1500
+status:
+    conditions:
+        - lastTransitionTime: "2026-01-28T09:32:25Z"
+          status: "False"
+          type: TemplateControllerFailing
+        - lastTransitionTime: "2026-01-28T09:42:04Z"
+          message: sync completed towards (3) generation using controller version 3ce6221a
+          status: "True"
+          type: TemplateControllerCompleted
+        - lastTransitionTime: "2026-01-28T09:42:04Z"
+          status: "False"
+          type: TemplateControllerRunning
+    controllerCertificates:
+        - bundleFile: KubeAPIServerServingCAData
+          notAfter: "2036-01-26T09:13:02Z"
+          notBefore: "2026-01-28T09:13:02Z"
+          signer: CN=admin-kubeconfig-signer,OU=openshift
+          subject: CN=admin-kubeconfig-signer,OU=openshift
+        - bundleFile: KubeAPIServerServingCAData
+          notAfter: "2026-01-29T09:13:06Z"
+          notBefore: "2026-01-28T09:30:35Z"
+          signer: CN=kubelet-signer,OU=openshift
+          subject: CN=kube-csr-signer_@1769592636
+        - bundleFile: KubeAPIServerServingCAData
+          notAfter: "2026-01-29T09:13:06Z"
+          notBefore: "2026-01-28T09:13:06Z"
+          signer: CN=kubelet-signer,OU=openshift
+          subject: CN=kubelet-signer,OU=openshift
+        - bundleFile: KubeAPIServerServingCAData
+          notAfter: "2027-01-28T09:13:07Z"
+          notBefore: "2026-01-28T09:13:07Z"
+          signer: CN=kube-apiserver-to-kubelet-signer,OU=openshift
+          subject: CN=kube-apiserver-to-kubelet-signer,OU=openshift
+        - bundleFile: KubeAPIServerServingCAData
+          notAfter: "2027-01-28T09:13:06Z"
+          notBefore: "2026-01-28T09:13:06Z"
+          signer: CN=kube-control-plane-signer,OU=openshift
+          subject: CN=kube-control-plane-signer,OU=openshift
+        - bundleFile: KubeAPIServerServingCAData
+          notAfter: "2036-01-26T09:13:03Z"
+          notBefore: "2026-01-28T09:13:03Z"
+          signer: CN=kubelet-bootstrap-kubeconfig-signer,OU=openshift
+          subject: CN=kubelet-bootstrap-kubeconfig-signer,OU=openshift
+        - bundleFile: KubeAPIServerServingCAData
+          notAfter: "2029-01-27T09:30:36Z"
+          notBefore: "2026-01-28T09:30:35Z"
+          signer: CN=openshift-kube-apiserver-operator_node-system-admin-signer@1769592635
+          subject: CN=openshift-kube-apiserver-operator_node-system-admin-signer@1769592635
+        - bundleFile: RootCAData
+          notAfter: "2036-01-26T09:12:56Z"
+          notBefore: "2026-01-28T09:12:56Z"
+          signer: CN=root-ca,OU=openshift
+          subject: CN=root-ca,OU=openshift
+        - bundleFile: image-registry.openshift-image-registry.svc..5000
+          notAfter: "2028-03-28T09:30:35Z"
+          notBefore: "2026-01-28T09:30:34Z"
+          signer: CN=openshift-service-serving-signer@1769592635
+          subject: CN=openshift-service-serving-signer@1769592635
+        - bundleFile: image-registry.openshift-image-registry.svc.cluster.local..5000
+          notAfter: "2028-03-28T09:30:35Z"
+          notBefore: "2026-01-28T09:30:34Z"
+          signer: CN=openshift-service-serving-signer@1769592635
+          subject: CN=openshift-service-serving-signer@1769592635
+    observedGeneration: 3

@@ -1,0 +1,152 @@
+---
+apiVersion: config.openshift.io/v1
+items:
+- apiVersion: config.openshift.io/v1
+  kind: FeatureGate
+  metadata:
+    annotations:
+      include.release.openshift.io/self-managed-high-availability: "true"
+    creationTimestamp: "2026-01-28T09:25:37Z"
+    generation: 1
+    managedFields:
+    - apiVersion: config.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+        f:spec: {}
+      manager: cluster-bootstrap
+      operation: Update
+      time: "2026-01-28T09:25:37Z"
+    - apiVersion: config.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:featureGates:
+            .: {}
+            k:{"version":"4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest"}:
+              .: {}
+              f:disabled: {}
+              f:enabled: {}
+              f:version: {}
+      manager: cluster-bootstrap
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:25:37Z"
+    name: cluster
+    resourceVersion: "708"
+    uid: f4e7bfa5-ce45-4eca-847e-f57549601c9b
+  spec: {}
+  status:
+    featureGates:
+    - disabled:
+      - name: AWSClusterHostedDNS
+      - name: AWSClusterHostedDNSInstall
+      - name: AWSDedicatedHosts
+      - name: AWSServiceLBNetworkSecurityGroup
+      - name: AutomatedEtcdBackup
+      - name: AzureClusterHostedDNSInstall
+      - name: AzureDedicatedHosts
+      - name: AzureMultiDisk
+      - name: BootImageSkewEnforcement
+      - name: BootcNodeManagement
+      - name: ClusterAPIInstall
+      - name: ClusterAPIInstallIBMCloud
+      - name: ClusterMonitoringConfig
+      - name: ClusterVersionOperatorConfiguration
+      - name: DNSNameResolver
+      - name: DualReplica
+      - name: DyanmicServiceEndpointIBMCloud
+      - name: DynamicResourceAllocation
+      - name: EtcdBackendQuota
+      - name: EventedPLEG
+      - name: Example
+      - name: Example2
+      - name: ExternalSnapshotMetadata
+      - name: GCPClusterHostedDNS
+      - name: GCPClusterHostedDNSInstall
+      - name: GCPCustomAPIEndpoints
+      - name: GCPCustomAPIEndpointsInstall
+      - name: ImageModeStatusReporting
+      - name: ImageStreamImportMode
+      - name: IngressControllerDynamicConfigurationManager
+      - name: InsightsConfig
+      - name: InsightsConfigAPI
+      - name: InsightsOnDemandDataGather
+      - name: IrreconcilableMachineConfig
+      - name: KMSEncryptionProvider
+      - name: MachineAPIMigration
+      - name: MachineAPIOperatorDisableMachineHealthCheckController
+      - name: ManagedBootImagesAzure
+      - name: ManagedBootImagesvSphere
+      - name: MaxUnavailableStatefulSet
+      - name: MinimumKubeletVersion
+      - name: MixedCPUsAllocation
+      - name: MultiArchInstallAzure
+      - name: MultiDiskSetup
+      - name: MutatingAdmissionPolicy
+      - name: NewOLMCatalogdAPIV1Metas
+      - name: NewOLMOwnSingleNamespace
+      - name: NewOLMPreflightPermissionChecks
+      - name: NewOLMWebhookProviderOpenshiftServiceCA
+      - name: NoRegistryClusterOperations
+      - name: NodeSwap
+      - name: NutanixMultiSubnets
+      - name: OVNObservability
+      - name: OpenShiftPodSecurityAdmission
+      - name: SELinuxMount
+      - name: ShortCertRotation
+      - name: SignatureStores
+      - name: SigstoreImageVerificationPKI
+      - name: TranslateStreamCloseWebsocketRequests
+      - name: VSphereConfigurableMaxAllowedBlockVolumesPerNode
+      - name: VSphereHostVMGroupZonal
+      - name: VSphereMixedNodeEnv
+      - name: VolumeAttributesClass
+      - name: VolumeGroupSnapshot
+      enabled:
+      - name: AdditionalRoutingCapabilities
+      - name: AdminNetworkPolicy
+      - name: AlibabaPlatform
+      - name: AzureWorkloadIdentity
+      - name: BuildCSIVolumes
+      - name: CPMSMachineNamePrefix
+      - name: ConsolePluginContentSecurityPolicy
+      - name: ExternalOIDC
+      - name: ExternalOIDCWithUIDAndExtraClaimMappings
+      - name: GatewayAPI
+      - name: GatewayAPIController
+      - name: HighlyAvailableArbiter
+      - name: ImageVolume
+      - name: IngressControllerLBSubnetsAWS
+      - name: KMSv1
+      - name: MachineConfigNodes
+      - name: ManagedBootImages
+      - name: ManagedBootImagesAWS
+      - name: MetricsCollectionProfiles
+      - name: NetworkDiagnosticsConfig
+      - name: NetworkLiveMigration
+      - name: NetworkSegmentation
+      - name: NewOLM
+      - name: PinnedImages
+      - name: PreconfiguredUDNAddresses
+      - name: ProcMountType
+      - name: RouteAdvertisements
+      - name: RouteExternalCertificate
+      - name: ServiceAccountTokenNodeBinding
+      - name: SetEIPForNLBIngressController
+      - name: SigstoreImageVerification
+      - name: StoragePerformantSecurityPolicy
+      - name: UpgradeStatus
+      - name: UserNamespacesPodSecurityStandards
+      - name: UserNamespacesSupport
+      - name: VSphereMultiDisk
+      - name: VSphereMultiNetworks
+      version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+kind: FeatureGateList
+metadata:
+  continue: ""
+  resourceVersion: "34862"

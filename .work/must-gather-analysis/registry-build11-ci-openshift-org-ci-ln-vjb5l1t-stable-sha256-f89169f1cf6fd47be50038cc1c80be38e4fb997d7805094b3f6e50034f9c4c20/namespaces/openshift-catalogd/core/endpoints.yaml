@@ -1,0 +1,56 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:31:26Z"
+    creationTimestamp: "2026-01-28T09:31:11Z"
+    labels:
+      app.kubernetes.io/name: catalogd
+      app.kubernetes.io/part-of: olm
+      endpoints.kubernetes.io/managed-by: endpoint-controller
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:endpoints.kubernetes.io/managed-by: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:26Z"
+    name: catalogd-service
+    namespace: openshift-catalogd
+    resourceVersion: "9126"
+    uid: e59195e6-012d-4418-8505-b5682892daff
+  subsets:
+  - addresses:
+    - ip: 10.128.0.12
+      nodeName: ip-10-0-3-203.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: catalogd-controller-manager-67dbc4869c-r2qb5
+        namespace: openshift-catalogd
+        uid: efa1985e-a9bc-45f5-868b-11cd5544b2d0
+    ports:
+    - name: metrics
+      port: 7443
+      protocol: TCP
+    - name: webhook
+      port: 9443
+      protocol: TCP
+    - name: https
+      port: 8443
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "35086"

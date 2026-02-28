@@ -1,0 +1,53 @@
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+    creationTimestamp: "2026-01-28T09:32:24Z"
+    generation: 1
+    labels:
+        machineconfiguration.openshift.io/role: master
+    managedFields:
+        - apiVersion: machineconfiguration.openshift.io/v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:metadata:
+                f:labels:
+                    .: {}
+                    f:machineconfiguration.openshift.io/role: {}
+            f:spec:
+                .: {}
+                f:baseOSExtensionsContainerImage: {}
+                f:config:
+                    .: {}
+                    f:ignition:
+                        .: {}
+                        f:version: {}
+                    f:storage:
+                        .: {}
+                        f:files: {}
+                f:fips: {}
+                f:kernelArguments: {}
+                f:kernelType: {}
+                f:osImageURL: {}
+          manager: machine-config-controller
+          operation: Update
+          time: "2026-01-28T09:32:24Z"
+    name: 00-override-master-generated-crio-default-ulimits
+    resourceVersion: "11700"
+    uid: e9b64c04-706c-4e1b-b501-dcbf7912ffb7
+spec:
+    baseOSExtensionsContainerImage: ""
+    config:
+        ignition:
+            version: 3.5.0
+        storage:
+            files:
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 150
+                  mode: 420
+                  overwrite: true
+                  path: /etc/crio/crio.conf.d/01-ctrcfg-defaultUlimits
+    fips: false
+    kernelArguments: null
+    kernelType: ""
+    osImageURL: ""

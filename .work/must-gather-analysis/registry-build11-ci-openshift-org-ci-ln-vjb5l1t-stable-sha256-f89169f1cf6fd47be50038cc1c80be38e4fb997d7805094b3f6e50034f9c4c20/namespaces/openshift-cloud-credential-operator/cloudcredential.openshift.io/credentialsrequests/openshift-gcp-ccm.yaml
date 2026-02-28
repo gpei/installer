@@ -1,0 +1,114 @@
+---
+apiVersion: cloudcredential.openshift.io/v1
+kind: CredentialsRequest
+metadata:
+  annotations:
+    capability.openshift.io/name: CloudCredential+CloudControllerManager
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2026-01-28T09:28:43Z"
+  generation: 1
+  managedFields:
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:lastSyncGeneration: {}
+        f:provisioned: {}
+    manager: cloud-credential-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:28:43Z"
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec:
+        .: {}
+        f:providerSpec:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:permissions: {}
+          f:skipServiceCheck: {}
+        f:secretRef: {}
+        f:serviceAccountNames: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:28:43Z"
+  name: openshift-gcp-ccm
+  namespace: openshift-cloud-credential-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "3672"
+  uid: a6308593-3642-43f9-bdf5-8e8e052c0ad0
+spec:
+  providerSpec:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: GCPProviderSpec
+    permissions:
+    - compute.addresses.create
+    - compute.addresses.delete
+    - compute.addresses.get
+    - compute.addresses.list
+    - compute.firewalls.create
+    - compute.firewalls.delete
+    - compute.firewalls.get
+    - compute.firewalls.update
+    - compute.forwardingRules.create
+    - compute.forwardingRules.delete
+    - compute.forwardingRules.get
+    - compute.healthChecks.create
+    - compute.healthChecks.delete
+    - compute.healthChecks.get
+    - compute.healthChecks.update
+    - compute.httpHealthChecks.create
+    - compute.httpHealthChecks.delete
+    - compute.httpHealthChecks.get
+    - compute.httpHealthChecks.update
+    - compute.instanceGroups.create
+    - compute.instanceGroups.delete
+    - compute.instanceGroups.get
+    - compute.instanceGroups.update
+    - compute.instances.get
+    - compute.instances.use
+    - compute.regionBackendServices.create
+    - compute.regionBackendServices.delete
+    - compute.regionBackendServices.get
+    - compute.regionBackendServices.update
+    - compute.targetPools.addInstance
+    - compute.targetPools.create
+    - compute.targetPools.delete
+    - compute.targetPools.get
+    - compute.targetPools.removeInstance
+    - compute.zones.list
+    skipServiceCheck: true
+  secretRef:
+    name: gcp-ccm-cloud-credentials
+    namespace: openshift-cloud-controller-manager
+  serviceAccountNames:
+  - cloud-controller-manager
+status:
+  conditions:
+  - lastProbeTime: "2026-01-28T09:28:43Z"
+    lastTransitionTime: "2026-01-28T09:28:43Z"
+    message: CredentialsRequest is not for platform AWS
+    reason: InfrastructureMismatch
+    status: "True"
+    type: Ignored
+  lastSyncGeneration: 0
+  provisioned: false

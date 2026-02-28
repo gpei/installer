@@ -1,0 +1,838 @@
+2026-01-28T09:28:26.745689105Z I0128 09:28:26.745587       1 serving.go:386] Generated self-signed cert in-memory
+2026-01-28T09:28:26.745689105Z W0128 09:28:26.745649       1 client_config.go:667] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+2026-01-28T09:28:26.745935016Z I0128 09:28:26.745902       1 envvar.go:172] "Feature gate default state" feature="ClientsPreferCBOR" enabled=false
+2026-01-28T09:28:26.745935016Z I0128 09:28:26.745924       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2026-01-28T09:28:26.745935016Z I0128 09:28:26.745928       1 envvar.go:172] "Feature gate default state" feature="InOrderInformers" enabled=true
+2026-01-28T09:28:26.745935016Z I0128 09:28:26.745932       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2026-01-28T09:28:26.745949396Z I0128 09:28:26.745935       1 envvar.go:172] "Feature gate default state" feature="ClientsAllowCBOR" enabled=false
+2026-01-28T09:28:26.748904364Z I0128 09:28:26.748875       1 aws_sdk.go:213] "instance metadata identity" region="us-west-1" availability-zone="us-west-1c" instance-type="m6a.xlarge" architecture="x86_64" instance-id="i-010583ba086028d2a" private-ip="10.0.108.54" account-id="387344700001" image-id="ami-07680a1b8de089d13"
+2026-01-28T09:28:26.748961856Z I0128 09:28:26.748906       1 config.go:140] Loading region from metadata service
+2026-01-28T09:28:26.751225844Z I0128 09:28:26.751199       1 aws.go:543] Building AWS cloudprovider
+2026-01-28T09:28:26.754065097Z I0128 09:28:26.754040       1 aws_sdk.go:213] "instance metadata identity" region="us-west-1" availability-zone="us-west-1c" instance-type="m6a.xlarge" architecture="x86_64" instance-id="i-010583ba086028d2a" private-ip="10.0.108.54" account-id="387344700001" image-id="ami-07680a1b8de089d13"
+2026-01-28T09:28:26.754065097Z I0128 09:28:26.754056       1 config.go:140] Loading region from metadata service
+2026-01-28T09:28:26.858509729Z I0128 09:28:26.858462       1 batcher.go:146] Batch processing duration: 100.185958ms
+2026-01-28T09:28:26.858540800Z I0128 09:28:26.858505       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:26.858552751Z I0128 09:28:26.858521       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:28:27.081638343Z I0128 09:28:27.081578       1 tags.go:81] AWS cloud filtering on ClusterID: ci-ln-vjb5l1t-76ef8-snmcd
+2026-01-28T09:28:27.081638343Z I0128 09:28:27.081606       1 aws.go:629] The following IP families will be added to nodes: [ipv4]
+2026-01-28T09:28:27.081692615Z I0128 09:28:27.081647       1 controllermanager.go:160] Version: v0.0.0-master+$Format:%H$
+2026-01-28T09:28:27.082264390Z I0128 09:28:27.082243       1 leaderelection.go:257] attempting to acquire leader lease openshift-cloud-controller-manager/cloud-controller-manager...
+2026-01-28T09:28:27.093205202Z I0128 09:28:27.093178       1 leaderelection.go:271] successfully acquired lease openshift-cloud-controller-manager/cloud-controller-manager
+2026-01-28T09:28:27.093337848Z I0128 09:28:27.093275       1 event.go:389] "Event occurred" object="openshift-cloud-controller-manager/cloud-controller-manager" fieldPath="" kind="Lease" apiVersion="coordination.k8s.io/v1" type="Normal" reason="LeaderElection" message="ip-10-0-108-54_9c6bc116-9578-4e9d-b071-544f93480159 became leader"
+2026-01-28T09:28:27.112886902Z I0128 09:28:27.112867       1 aws.go:658] cluster version: v1.33. git version: v1.33.6. git tree state: clean. commit: 862000da81cd63b37ab36d1709602109709177c2. platform: linux/amd64
+2026-01-28T09:28:27.112886902Z I0128 09:28:27.112880       1 aws.go:437] Setting up informers for Cloud
+2026-01-28T09:28:27.112933754Z I0128 09:28:27.112915       1 controllermanager.go:310] Starting "cloud-node-controller"
+2026-01-28T09:28:27.114422588Z I0128 09:28:27.114401       1 controllermanager.go:329] Started "cloud-node-controller"
+2026-01-28T09:28:27.114447440Z I0128 09:28:27.114439       1 controllermanager.go:310] Starting "cloud-node-lifecycle-controller"
+2026-01-28T09:28:27.114508262Z I0128 09:28:27.114430       1 node_controller.go:176] Sending events to api server.
+2026-01-28T09:28:27.114549694Z I0128 09:28:27.114536       1 node_controller.go:185] Waiting for informer caches to sync
+2026-01-28T09:28:27.117300123Z I0128 09:28:27.117265       1 controllermanager.go:329] Started "cloud-node-lifecycle-controller"
+2026-01-28T09:28:27.117359675Z I0128 09:28:27.117343       1 controllermanager.go:310] Starting "service-lb-controller"
+2026-01-28T09:28:27.117556883Z I0128 09:28:27.117534       1 node_lifecycle_controller.go:112] Sending events to api server
+2026-01-28T09:28:27.123968970Z I0128 09:28:27.123938       1 controllermanager.go:329] Started "service-lb-controller"
+2026-01-28T09:28:27.123968970Z I0128 09:28:27.123956       1 controllermanager.go:310] Starting "node-route-controller"
+2026-01-28T09:28:27.123968970Z I0128 09:28:27.123964       1 core.go:104] Will not configure cloud provider routes, --configure-cloud-routes: false
+2026-01-28T09:28:27.124009892Z W0128 09:28:27.123972       1 controllermanager.go:317] Skipping "node-route-controller"
+2026-01-28T09:28:27.124009892Z W0128 09:28:27.123978       1 controllermanager.go:306] "tagging" is disabled
+2026-01-28T09:28:27.124108156Z I0128 09:28:27.124085       1 controller.go:234] Starting service controller
+2026-01-28T09:28:27.124124537Z I0128 09:28:27.124115       1 shared_informer.go:350] "Waiting for caches to sync" controller="service"
+2026-01-28T09:28:27.126037980Z I0128 09:28:27.125995       1 reflector.go:430] "Caches populated" type="*v1.Node" reflector="k8s.io/client-go/informers/factory.go:160"
+2026-01-28T09:28:27.126867836Z I0128 09:28:27.126840       1 reflector.go:430] "Caches populated" type="*v1.Service" reflector="k8s.io/client-go/informers/factory.go:160"
+2026-01-28T09:28:27.214705879Z I0128 09:28:27.214663       1 node_controller.go:429] Initializing node ip-10-0-108-54.us-west-1.compute.internal with cloud provider
+2026-01-28T09:28:27.214760441Z I0128 09:28:27.214733       1 node_controller.go:271] Update 1 nodes status took 72.693µs.
+2026-01-28T09:28:27.224933451Z I0128 09:28:27.224871       1 shared_informer.go:357] "Caches are synced" controller="service"
+2026-01-28T09:28:27.224976342Z I0128 09:28:27.224955       1 controller.go:722] Syncing backends for all LB services.
+2026-01-28T09:28:27.224995953Z I0128 09:28:27.224975       1 controller.go:726] Successfully updated 0 out of 0 load balancers to direct traffic to the updated set of nodes
+2026-01-28T09:28:27.315156737Z I0128 09:28:27.315121       1 batcher.go:146] Batch processing duration: 100.382045ms
+2026-01-28T09:28:27.315187008Z I0128 09:28:27.315159       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:27.315197078Z I0128 09:28:27.315170       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:28:27.453509653Z I0128 09:28:27.453453       1 topology.go:130] Instance type m6a.xlarge unsupported for getting instance topology
+2026-01-28T09:28:27.453509653Z I0128 09:28:27.453476       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:28:27.453509653Z I0128 09:28:27.453485       1 node_controller.go:512] Adding node label from cloud provider: beta.kubernetes.io/instance-type=m6a.xlarge
+2026-01-28T09:28:27.453509653Z I0128 09:28:27.453490       1 node_controller.go:513] Adding node label from cloud provider: node.kubernetes.io/instance-type=m6a.xlarge
+2026-01-28T09:28:27.453509653Z I0128 09:28:27.453495       1 node_controller.go:524] Adding node label from cloud provider: failure-domain.beta.kubernetes.io/zone=us-west-1c
+2026-01-28T09:28:27.453509653Z I0128 09:28:27.453500       1 node_controller.go:525] Adding node label from cloud provider: topology.kubernetes.io/zone=us-west-1c
+2026-01-28T09:28:27.453567716Z I0128 09:28:27.453507       1 node_controller.go:535] Adding node label from cloud provider: failure-domain.beta.kubernetes.io/region=us-west-1
+2026-01-28T09:28:27.453567716Z I0128 09:28:27.453516       1 node_controller.go:536] Adding node label from cloud provider: topology.kubernetes.io/region=us-west-1
+2026-01-28T09:28:27.453567716Z I0128 09:28:27.453524       1 node_controller.go:547] Adding additional node label(s) from cloud provider: map[topology.k8s.aws/zone-id:usw1-az3]
+2026-01-28T09:28:27.476757646Z I0128 09:28:27.476725       1 node_controller.go:474] Successfully initialized node ip-10-0-108-54.us-west-1.compute.internal with cloud provider
+2026-01-28T09:28:27.477186754Z I0128 09:28:27.477144       1 event.go:389] "Event occurred" object="ip-10-0-108-54.us-west-1.compute.internal" fieldPath="" kind="Node" apiVersion="v1" type="Normal" reason="Synced" message="Node synced successfully"
+2026-01-28T09:28:32.219092465Z I0128 09:28:32.219034       1 batcher.go:146] Batch processing duration: 100.465278ms
+2026-01-28T09:28:32.219092465Z I0128 09:28:32.219082       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:32.219131827Z I0128 09:28:32.219092       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:28:32.389576453Z I0128 09:28:32.389515       1 batcher.go:146] Batch processing duration: 100.260705ms
+2026-01-28T09:28:32.389619505Z I0128 09:28:32.389561       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:32.389635396Z I0128 09:28:32.389572       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:28:37.552177051Z I0128 09:28:37.552081       1 batcher.go:146] Batch processing duration: 100.315659ms
+2026-01-28T09:28:37.552246794Z I0128 09:28:37.552168       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:37.552246794Z I0128 09:28:37.552191       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:28:37.759300753Z I0128 09:28:37.759159       1 batcher.go:146] Batch processing duration: 100.267298ms
+2026-01-28T09:28:37.759300753Z I0128 09:28:37.759269       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:37.759369636Z I0128 09:28:37.759288       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:28:38.067167573Z I0128 09:28:38.067129       1 controller.go:722] Syncing backends for all LB services.
+2026-01-28T09:28:38.067167573Z I0128 09:28:38.067148       1 controller.go:726] Successfully updated 0 out of 0 load balancers to direct traffic to the updated set of nodes
+2026-01-28T09:28:38.067167573Z I0128 09:28:38.067149       1 node_controller.go:429] Initializing node ip-10-0-102-200.us-west-1.compute.internal with cloud provider
+2026-01-28T09:28:38.167567768Z I0128 09:28:38.167483       1 batcher.go:146] Batch processing duration: 100.2841ms
+2026-01-28T09:28:38.167567768Z I0128 09:28:38.167557       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:38.167637672Z I0128 09:28:38.167572       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:28:38.276069162Z I0128 09:28:38.276040       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:28:38.276069162Z I0128 09:28:38.276057       1 node_controller.go:512] Adding node label from cloud provider: beta.kubernetes.io/instance-type=m6a.xlarge
+2026-01-28T09:28:38.276069162Z I0128 09:28:38.276062       1 node_controller.go:513] Adding node label from cloud provider: node.kubernetes.io/instance-type=m6a.xlarge
+2026-01-28T09:28:38.276069162Z I0128 09:28:38.276066       1 node_controller.go:524] Adding node label from cloud provider: failure-domain.beta.kubernetes.io/zone=us-west-1c
+2026-01-28T09:28:38.276095733Z I0128 09:28:38.276069       1 node_controller.go:525] Adding node label from cloud provider: topology.kubernetes.io/zone=us-west-1c
+2026-01-28T09:28:38.276095733Z I0128 09:28:38.276073       1 node_controller.go:535] Adding node label from cloud provider: failure-domain.beta.kubernetes.io/region=us-west-1
+2026-01-28T09:28:38.276095733Z I0128 09:28:38.276077       1 node_controller.go:536] Adding node label from cloud provider: topology.kubernetes.io/region=us-west-1
+2026-01-28T09:28:38.276095733Z I0128 09:28:38.276081       1 node_controller.go:547] Adding additional node label(s) from cloud provider: map[topology.k8s.aws/zone-id:usw1-az3]
+2026-01-28T09:28:38.287848394Z I0128 09:28:38.287764       1 node_controller.go:474] Successfully initialized node ip-10-0-102-200.us-west-1.compute.internal with cloud provider
+2026-01-28T09:28:38.288058175Z I0128 09:28:38.287949       1 event.go:389] "Event occurred" object="ip-10-0-102-200.us-west-1.compute.internal" fieldPath="" kind="Node" apiVersion="v1" type="Normal" reason="Synced" message="Node synced successfully"
+2026-01-28T09:28:42.784544931Z I0128 09:28:42.784466       1 controller.go:722] Syncing backends for all LB services.
+2026-01-28T09:28:42.784544931Z I0128 09:28:42.784513       1 controller.go:726] Successfully updated 0 out of 0 load balancers to direct traffic to the updated set of nodes
+2026-01-28T09:28:42.784544931Z I0128 09:28:42.784479       1 node_controller.go:429] Initializing node ip-10-0-3-203.us-west-1.compute.internal with cloud provider
+2026-01-28T09:28:42.938937602Z I0128 09:28:42.938821       1 batcher.go:146] Batch processing duration: 154.221723ms
+2026-01-28T09:28:42.939007825Z I0128 09:28:42.938934       1 batcher.go:187] Batch size for label describe_instance is 2
+2026-01-28T09:28:42.939007825Z I0128 09:28:42.938957       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55 i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:28:43.056455027Z I0128 09:28:43.056428       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:28:43.056455027Z I0128 09:28:43.056449       1 node_controller.go:512] Adding node label from cloud provider: beta.kubernetes.io/instance-type=m6a.xlarge
+2026-01-28T09:28:43.056476328Z I0128 09:28:43.056455       1 node_controller.go:513] Adding node label from cloud provider: node.kubernetes.io/instance-type=m6a.xlarge
+2026-01-28T09:28:43.056476328Z I0128 09:28:43.056460       1 node_controller.go:524] Adding node label from cloud provider: failure-domain.beta.kubernetes.io/zone=us-west-1a
+2026-01-28T09:28:43.056476328Z I0128 09:28:43.056464       1 node_controller.go:525] Adding node label from cloud provider: topology.kubernetes.io/zone=us-west-1a
+2026-01-28T09:28:43.056476328Z I0128 09:28:43.056469       1 node_controller.go:535] Adding node label from cloud provider: failure-domain.beta.kubernetes.io/region=us-west-1
+2026-01-28T09:28:43.056507020Z I0128 09:28:43.056474       1 node_controller.go:536] Adding node label from cloud provider: topology.kubernetes.io/region=us-west-1
+2026-01-28T09:28:43.056507020Z I0128 09:28:43.056481       1 node_controller.go:547] Adding additional node label(s) from cloud provider: map[topology.k8s.aws/zone-id:usw1-az1]
+2026-01-28T09:28:43.067990025Z I0128 09:28:43.067905       1 node_controller.go:474] Successfully initialized node ip-10-0-3-203.us-west-1.compute.internal with cloud provider
+2026-01-28T09:28:43.068091850Z I0128 09:28:43.068053       1 event.go:389] "Event occurred" object="ip-10-0-3-203.us-west-1.compute.internal" fieldPath="" kind="Node" apiVersion="v1" type="Normal" reason="Synced" message="Node synced successfully"
+2026-01-28T09:28:43.156854010Z I0128 09:28:43.156803       1 batcher.go:146] Batch processing duration: 100.393482ms
+2026-01-28T09:28:43.156887022Z I0128 09:28:43.156855       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:43.156899992Z I0128 09:28:43.156865       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:28:43.387582958Z I0128 09:28:43.387513       1 batcher.go:146] Batch processing duration: 100.231494ms
+2026-01-28T09:28:43.387582958Z I0128 09:28:43.387571       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:43.387636070Z I0128 09:28:43.387588       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:28:43.603568050Z I0128 09:28:43.603502       1 batcher.go:146] Batch processing duration: 100.241625ms
+2026-01-28T09:28:43.603613572Z I0128 09:28:43.603554       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:43.603613572Z I0128 09:28:43.603567       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:28:43.830494361Z I0128 09:28:43.830432       1 batcher.go:146] Batch processing duration: 100.110568ms
+2026-01-28T09:28:43.830571694Z I0128 09:28:43.830493       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:43.830571694Z I0128 09:28:43.830504       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:28:44.035522603Z I0128 09:28:44.035456       1 batcher.go:146] Batch processing duration: 100.231514ms
+2026-01-28T09:28:44.035569116Z I0128 09:28:44.035519       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:44.035569116Z I0128 09:28:44.035530       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:28:49.206933392Z I0128 09:28:49.206593       1 batcher.go:146] Batch processing duration: 100.478395ms
+2026-01-28T09:28:49.206933392Z I0128 09:28:49.206923       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:49.206973445Z I0128 09:28:49.206938       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:28:49.421389461Z I0128 09:28:49.421333       1 batcher.go:146] Batch processing duration: 100.223833ms
+2026-01-28T09:28:49.421429703Z I0128 09:28:49.421385       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:49.421429703Z I0128 09:28:49.421394       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:28:49.579099954Z I0128 09:28:49.579053       1 batcher.go:146] Batch processing duration: 100.188561ms
+2026-01-28T09:28:49.579143346Z I0128 09:28:49.579106       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:49.579155657Z I0128 09:28:49.579131       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:28:49.809576899Z I0128 09:28:49.809526       1 batcher.go:146] Batch processing duration: 100.169141ms
+2026-01-28T09:28:49.809576899Z I0128 09:28:49.809565       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:49.809630872Z I0128 09:28:49.809575       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:28:49.984096841Z I0128 09:28:49.984058       1 batcher.go:146] Batch processing duration: 100.228324ms
+2026-01-28T09:28:49.984161734Z I0128 09:28:49.984092       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:49.984161734Z I0128 09:28:49.984101       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:28:50.188294571Z I0128 09:28:50.188220       1 batcher.go:146] Batch processing duration: 101.030914ms
+2026-01-28T09:28:50.188348064Z I0128 09:28:50.188294       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:50.188348064Z I0128 09:28:50.188307       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:28:55.347919984Z I0128 09:28:55.347861       1 batcher.go:146] Batch processing duration: 100.242904ms
+2026-01-28T09:28:55.347919984Z I0128 09:28:55.347914       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:55.347974236Z I0128 09:28:55.347924       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:28:55.514600640Z I0128 09:28:55.514528       1 batcher.go:146] Batch processing duration: 100.241764ms
+2026-01-28T09:28:55.514600640Z I0128 09:28:55.514587       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:55.514653332Z I0128 09:28:55.514599       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:28:55.696086493Z I0128 09:28:55.696009       1 batcher.go:146] Batch processing duration: 101.031014ms
+2026-01-28T09:28:55.696131535Z I0128 09:28:55.696082       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:55.696131535Z I0128 09:28:55.696091       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:28:55.856540281Z I0128 09:28:55.856477       1 batcher.go:146] Batch processing duration: 100.250175ms
+2026-01-28T09:28:55.856592634Z I0128 09:28:55.856541       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:55.856605164Z I0128 09:28:55.856572       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:28:56.012970572Z I0128 09:28:56.012908       1 batcher.go:146] Batch processing duration: 100.267755ms
+2026-01-28T09:28:56.013046176Z I0128 09:28:56.012966       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:56.013062207Z I0128 09:28:56.012979       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:28:56.188639150Z I0128 09:28:56.188570       1 batcher.go:146] Batch processing duration: 100.979241ms
+2026-01-28T09:28:56.188690783Z I0128 09:28:56.188645       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:28:56.188690783Z I0128 09:28:56.188665       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:29:01.349591603Z I0128 09:29:01.349523       1 batcher.go:146] Batch processing duration: 100.238976ms
+2026-01-28T09:29:01.349646696Z I0128 09:29:01.349589       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:01.349646696Z I0128 09:29:01.349606       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:29:01.526205098Z I0128 09:29:01.526162       1 batcher.go:146] Batch processing duration: 100.255245ms
+2026-01-28T09:29:01.526253941Z I0128 09:29:01.526201       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:01.526253941Z I0128 09:29:01.526210       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:29:01.705256686Z I0128 09:29:01.705183       1 batcher.go:146] Batch processing duration: 100.330039ms
+2026-01-28T09:29:01.705256686Z I0128 09:29:01.705244       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:01.705369652Z I0128 09:29:01.705260       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:29:01.860875721Z I0128 09:29:01.860784       1 batcher.go:146] Batch processing duration: 100.278488ms
+2026-01-28T09:29:01.860875721Z I0128 09:29:01.860851       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:01.860953895Z I0128 09:29:01.860869       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:29:02.024067533Z I0128 09:29:02.023976       1 batcher.go:146] Batch processing duration: 100.224005ms
+2026-01-28T09:29:02.024067533Z I0128 09:29:02.024017       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:02.024104635Z I0128 09:29:02.024065       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:29:02.203352245Z I0128 09:29:02.203288       1 batcher.go:146] Batch processing duration: 100.933031ms
+2026-01-28T09:29:02.203392476Z I0128 09:29:02.203363       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:02.203400367Z I0128 09:29:02.203374       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:29:07.372174108Z I0128 09:29:07.372063       1 batcher.go:146] Batch processing duration: 100.277816ms
+2026-01-28T09:29:07.372174108Z I0128 09:29:07.372160       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:07.372257942Z I0128 09:29:07.372181       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:29:07.538012395Z I0128 09:29:07.537920       1 batcher.go:146] Batch processing duration: 100.246746ms
+2026-01-28T09:29:07.538012395Z I0128 09:29:07.537998       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:07.538087399Z I0128 09:29:07.538011       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:29:07.697540978Z I0128 09:29:07.697430       1 batcher.go:146] Batch processing duration: 100.770322ms
+2026-01-28T09:29:07.697540978Z I0128 09:29:07.697527       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:07.697593321Z I0128 09:29:07.697543       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:29:07.857876494Z I0128 09:29:07.857825       1 batcher.go:146] Batch processing duration: 100.245375ms
+2026-01-28T09:29:07.857948598Z I0128 09:29:07.857872       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:07.857948598Z I0128 09:29:07.857883       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:29:08.011825175Z I0128 09:29:08.011724       1 batcher.go:146] Batch processing duration: 100.232776ms
+2026-01-28T09:29:08.011906099Z I0128 09:29:08.011845       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:08.011930710Z I0128 09:29:08.011866       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:29:08.172577082Z I0128 09:29:08.172500       1 batcher.go:146] Batch processing duration: 100.761942ms
+2026-01-28T09:29:08.172611373Z I0128 09:29:08.172564       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:08.172611373Z I0128 09:29:08.172588       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:29:13.337133750Z I0128 09:29:13.337064       1 batcher.go:146] Batch processing duration: 100.212464ms
+2026-01-28T09:29:13.337133750Z I0128 09:29:13.337121       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:13.337178842Z I0128 09:29:13.337131       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:29:13.528536159Z I0128 09:29:13.528476       1 batcher.go:146] Batch processing duration: 100.225366ms
+2026-01-28T09:29:13.528536159Z I0128 09:29:13.528526       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:13.528606012Z I0128 09:29:13.528537       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:29:13.692041444Z I0128 09:29:13.691985       1 batcher.go:146] Batch processing duration: 100.906869ms
+2026-01-28T09:29:13.692072346Z I0128 09:29:13.692036       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:13.692085177Z I0128 09:29:13.692046       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:29:13.894534547Z I0128 09:29:13.894462       1 batcher.go:146] Batch processing duration: 100.231084ms
+2026-01-28T09:29:13.894534547Z I0128 09:29:13.894526       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:13.894580249Z I0128 09:29:13.894535       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:29:14.064103662Z I0128 09:29:14.064061       1 batcher.go:146] Batch processing duration: 100.231975ms
+2026-01-28T09:29:14.064215378Z I0128 09:29:14.064181       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:14.064230509Z I0128 09:29:14.064203       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:29:14.262004261Z I0128 09:29:14.261660       1 batcher.go:146] Batch processing duration: 100.234315ms
+2026-01-28T09:29:14.262113676Z I0128 09:29:14.262097       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:14.262214562Z I0128 09:29:14.262151       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:29:19.422205160Z I0128 09:29:19.422149       1 batcher.go:146] Batch processing duration: 100.214004ms
+2026-01-28T09:29:19.422260582Z I0128 09:29:19.422205       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:19.422293054Z I0128 09:29:19.422236       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:29:19.636823078Z I0128 09:29:19.636763       1 batcher.go:146] Batch processing duration: 100.967391ms
+2026-01-28T09:29:19.636877531Z I0128 09:29:19.636821       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:19.636877531Z I0128 09:29:19.636831       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:29:19.807172602Z I0128 09:29:19.807123       1 batcher.go:146] Batch processing duration: 100.178763ms
+2026-01-28T09:29:19.807213894Z I0128 09:29:19.807168       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:19.807222324Z I0128 09:29:19.807178       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:29:20.007255583Z I0128 09:29:20.007208       1 batcher.go:146] Batch processing duration: 100.254296ms
+2026-01-28T09:29:20.007348748Z I0128 09:29:20.007334       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:20.007447153Z I0128 09:29:20.007375       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:29:20.162212488Z I0128 09:29:20.162161       1 batcher.go:146] Batch processing duration: 100.574482ms
+2026-01-28T09:29:20.162293512Z I0128 09:29:20.162278       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:20.162351865Z I0128 09:29:20.162317       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:29:20.363534680Z I0128 09:29:20.363468       1 batcher.go:146] Batch processing duration: 100.238716ms
+2026-01-28T09:29:20.363632855Z I0128 09:29:20.363616       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:20.363703408Z I0128 09:29:20.363657       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:29:25.518228026Z I0128 09:29:25.518154       1 batcher.go:146] Batch processing duration: 100.273877ms
+2026-01-28T09:29:25.518228026Z I0128 09:29:25.518218       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:25.518268688Z I0128 09:29:25.518230       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:29:25.682988286Z I0128 09:29:25.682935       1 batcher.go:146] Batch processing duration: 101.086869ms
+2026-01-28T09:29:25.683034968Z I0128 09:29:25.682992       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:25.683050299Z I0128 09:29:25.683004       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:29:25.842769998Z I0128 09:29:25.842714       1 batcher.go:146] Batch processing duration: 100.256566ms
+2026-01-28T09:29:25.842802019Z I0128 09:29:25.842774       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:25.842809949Z I0128 09:29:25.842785       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:29:26.005042553Z I0128 09:29:26.004951       1 batcher.go:146] Batch processing duration: 100.259696ms
+2026-01-28T09:29:26.005042553Z I0128 09:29:26.005008       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:26.005089785Z I0128 09:29:26.005035       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:29:26.162670050Z I0128 09:29:26.162600       1 batcher.go:146] Batch processing duration: 100.954881ms
+2026-01-28T09:29:26.162670050Z I0128 09:29:26.162662       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:26.162710182Z I0128 09:29:26.162672       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:29:26.324718505Z I0128 09:29:26.324665       1 batcher.go:146] Batch processing duration: 100.231263ms
+2026-01-28T09:29:26.324770208Z I0128 09:29:26.324721       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:26.324770208Z I0128 09:29:26.324732       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:29:31.481280433Z I0128 09:29:31.481236       1 batcher.go:146] Batch processing duration: 100.428676ms
+2026-01-28T09:29:31.481374588Z I0128 09:29:31.481350       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:31.481405560Z I0128 09:29:31.481367       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:29:31.639888154Z I0128 09:29:31.639783       1 batcher.go:146] Batch processing duration: 100.90843ms
+2026-01-28T09:29:31.639888154Z I0128 09:29:31.639828       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:31.639888154Z I0128 09:29:31.639838       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:29:31.797607692Z I0128 09:29:31.797560       1 batcher.go:146] Batch processing duration: 100.270919ms
+2026-01-28T09:29:31.797640964Z I0128 09:29:31.797630       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:31.797712977Z I0128 09:29:31.797642       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:29:31.959489551Z I0128 09:29:31.959404       1 batcher.go:146] Batch processing duration: 100.224117ms
+2026-01-28T09:29:31.959547494Z I0128 09:29:31.959486       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:31.959571215Z I0128 09:29:31.959527       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:29:32.119772203Z I0128 09:29:32.119725       1 batcher.go:146] Batch processing duration: 100.865298ms
+2026-01-28T09:29:32.119887558Z I0128 09:29:32.119852       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:32.119910900Z I0128 09:29:32.119882       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:29:32.318775937Z I0128 09:29:32.318642       1 batcher.go:146] Batch processing duration: 100.251279ms
+2026-01-28T09:29:32.318775937Z I0128 09:29:32.318762       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:32.318831280Z I0128 09:29:32.318784       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:29:37.476347212Z I0128 09:29:37.476295       1 batcher.go:146] Batch processing duration: 100.196626ms
+2026-01-28T09:29:37.476471018Z I0128 09:29:37.476429       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:37.476485239Z I0128 09:29:37.476451       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:29:37.689962194Z I0128 09:29:37.689898       1 batcher.go:146] Batch processing duration: 100.089821ms
+2026-01-28T09:29:37.689962194Z I0128 09:29:37.689951       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:37.689995675Z I0128 09:29:37.689962       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:29:37.857109577Z I0128 09:29:37.857062       1 batcher.go:146] Batch processing duration: 100.220417ms
+2026-01-28T09:29:37.857199722Z I0128 09:29:37.857185       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:37.857258994Z I0128 09:29:37.857227       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:29:38.071556629Z I0128 09:29:38.071511       1 batcher.go:146] Batch processing duration: 100.113162ms
+2026-01-28T09:29:38.071636493Z I0128 09:29:38.071620       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:38.071694445Z I0128 09:29:38.071665       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:29:38.228767332Z I0128 09:29:38.228712       1 batcher.go:146] Batch processing duration: 100.240007ms
+2026-01-28T09:29:38.228804854Z I0128 09:29:38.228796       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:38.228845485Z I0128 09:29:38.228808       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:29:38.427511754Z I0128 09:29:38.427455       1 batcher.go:146] Batch processing duration: 100.219827ms
+2026-01-28T09:29:38.427595398Z I0128 09:29:38.427583       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:38.427653660Z I0128 09:29:38.427622       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:29:43.601543836Z I0128 09:29:43.601473       1 batcher.go:146] Batch processing duration: 100.26278ms
+2026-01-28T09:29:43.601543836Z I0128 09:29:43.601533       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:43.601593558Z I0128 09:29:43.601547       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:29:43.816881780Z I0128 09:29:43.816831       1 batcher.go:146] Batch processing duration: 100.160924ms
+2026-01-28T09:29:43.816938323Z I0128 09:29:43.816912       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:43.816989075Z I0128 09:29:43.816941       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:29:43.975037579Z I0128 09:29:43.974965       1 batcher.go:146] Batch processing duration: 100.202257ms
+2026-01-28T09:29:43.975071930Z I0128 09:29:43.975038       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:43.975081901Z I0128 09:29:43.975049       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:29:44.189287371Z I0128 09:29:44.189239       1 batcher.go:146] Batch processing duration: 101.056377ms
+2026-01-28T09:29:44.189315662Z I0128 09:29:44.189293       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:44.189341723Z I0128 09:29:44.189304       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:29:44.353288912Z I0128 09:29:44.353239       1 batcher.go:146] Batch processing duration: 100.204526ms
+2026-01-28T09:29:44.353323604Z I0128 09:29:44.353301       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:44.353360726Z I0128 09:29:44.353313       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:29:44.628336124Z I0128 09:29:44.628275       1 batcher.go:146] Batch processing duration: 100.888129ms
+2026-01-28T09:29:44.628423739Z I0128 09:29:44.628402       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:44.628454750Z I0128 09:29:44.628417       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:29:49.794331244Z I0128 09:29:49.794280       1 batcher.go:146] Batch processing duration: 100.290601ms
+2026-01-28T09:29:49.794500843Z I0128 09:29:49.794331       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:49.794500843Z I0128 09:29:49.794344       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:29:49.954413649Z I0128 09:29:49.954355       1 batcher.go:146] Batch processing duration: 100.24688ms
+2026-01-28T09:29:49.954474562Z I0128 09:29:49.954445       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:49.954590527Z I0128 09:29:49.954466       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:29:50.123119846Z I0128 09:29:50.123061       1 batcher.go:146] Batch processing duration: 100.779455ms
+2026-01-28T09:29:50.123168379Z I0128 09:29:50.123114       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:50.123179969Z I0128 09:29:50.123125       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:29:50.295747619Z I0128 09:29:50.295687       1 batcher.go:146] Batch processing duration: 100.283921ms
+2026-01-28T09:29:50.295936148Z I0128 09:29:50.295849       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:50.295998611Z I0128 09:29:50.295911       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:29:50.502820922Z I0128 09:29:50.502764       1 batcher.go:146] Batch processing duration: 100.242319ms
+2026-01-28T09:29:50.502820922Z I0128 09:29:50.502813       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:50.502881485Z I0128 09:29:50.502829       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:29:50.657616446Z I0128 09:29:50.657531       1 batcher.go:146] Batch processing duration: 100.03292ms
+2026-01-28T09:29:50.657681469Z I0128 09:29:50.657607       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:50.657681469Z I0128 09:29:50.657627       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:29:55.826878558Z I0128 09:29:55.826828       1 batcher.go:146] Batch processing duration: 100.232118ms
+2026-01-28T09:29:55.826919360Z I0128 09:29:55.826878       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:55.826927471Z I0128 09:29:55.826890       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:29:56.030684590Z I0128 09:29:56.030616       1 batcher.go:146] Batch processing duration: 100.245659ms
+2026-01-28T09:29:56.030684590Z I0128 09:29:56.030672       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:56.030736363Z I0128 09:29:56.030691       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:29:56.191047908Z I0128 09:29:56.190981       1 batcher.go:146] Batch processing duration: 100.961264ms
+2026-01-28T09:29:56.191067738Z I0128 09:29:56.191052       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:56.191107630Z I0128 09:29:56.191063       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:29:56.389942277Z I0128 09:29:56.389890       1 batcher.go:146] Batch processing duration: 101.199316ms
+2026-01-28T09:29:56.389967908Z I0128 09:29:56.389943       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:56.389996930Z I0128 09:29:56.389955       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:29:56.559457225Z I0128 09:29:56.559391       1 batcher.go:146] Batch processing duration: 100.562724ms
+2026-01-28T09:29:56.559483297Z I0128 09:29:56.559451       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:56.559495318Z I0128 09:29:56.559464       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:29:56.769194470Z I0128 09:29:56.768714       1 batcher.go:146] Batch processing duration: 100.2685ms
+2026-01-28T09:29:56.769194470Z I0128 09:29:56.769181       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:29:56.769269424Z I0128 09:29:56.769203       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:30:01.946302091Z I0128 09:30:01.946209       1 batcher.go:146] Batch processing duration: 100.245219ms
+2026-01-28T09:30:01.946302091Z I0128 09:30:01.946292       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:30:01.946363084Z I0128 09:30:01.946307       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:30:02.152417437Z I0128 09:30:02.152371       1 batcher.go:146] Batch processing duration: 100.152394ms
+2026-01-28T09:30:02.152417437Z I0128 09:30:02.152407       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:30:02.152480120Z I0128 09:30:02.152417       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:30:02.319087946Z I0128 09:30:02.319052       1 batcher.go:146] Batch processing duration: 100.230769ms
+2026-01-28T09:30:02.319130558Z I0128 09:30:02.319088       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:30:02.319130558Z I0128 09:30:02.319097       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:30:02.528076243Z I0128 09:30:02.527925       1 batcher.go:146] Batch processing duration: 100.272261ms
+2026-01-28T09:30:02.528076243Z I0128 09:30:02.528064       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:30:02.528171568Z I0128 09:30:02.528083       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:30:02.689835680Z I0128 09:30:02.689805       1 batcher.go:146] Batch processing duration: 100.886241ms
+2026-01-28T09:30:02.689872092Z I0128 09:30:02.689839       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:30:02.689872092Z I0128 09:30:02.689846       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:30:02.854151202Z I0128 09:30:02.854091       1 batcher.go:146] Batch processing duration: 100.257181ms
+2026-01-28T09:30:02.854181143Z I0128 09:30:02.854161       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:30:02.854214295Z I0128 09:30:02.854172       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:30:08.045618944Z I0128 09:30:08.045563       1 batcher.go:146] Batch processing duration: 100.229096ms
+2026-01-28T09:30:08.045665397Z I0128 09:30:08.045615       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:30:08.045665397Z I0128 09:30:08.045628       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:30:08.274295644Z I0128 09:30:08.274208       1 batcher.go:146] Batch processing duration: 100.281248ms
+2026-01-28T09:30:08.274377928Z I0128 09:30:08.274322       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:30:08.274377928Z I0128 09:30:08.274340       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:30:08.518505362Z I0128 09:30:08.518429       1 batcher.go:146] Batch processing duration: 100.224826ms
+2026-01-28T09:30:08.518505362Z I0128 09:30:08.518496       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:30:08.518554185Z I0128 09:30:08.518506       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:30:08.728583029Z I0128 09:30:08.728483       1 batcher.go:146] Batch processing duration: 100.288238ms
+2026-01-28T09:30:08.728646322Z I0128 09:30:08.728573       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:30:08.728671504Z I0128 09:30:08.728623       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:30:08.890640098Z I0128 09:30:08.890235       1 batcher.go:146] Batch processing duration: 100.257097ms
+2026-01-28T09:30:08.890640098Z I0128 09:30:08.890324       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:30:08.890640098Z I0128 09:30:08.890336       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:30:09.113118490Z I0128 09:30:09.113072       1 batcher.go:146] Batch processing duration: 101.856986ms
+2026-01-28T09:30:09.113204314Z I0128 09:30:09.113191       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:30:09.113273498Z I0128 09:30:09.113239       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:31:59.183870291Z I0128 09:31:59.183824       1 controller.go:401] Ensuring load balancer for service openshift-ingress/router-default
+2026-01-28T09:31:59.183912243Z I0128 09:31:59.183895       1 controller.go:943] Adding finalizer to service openshift-ingress/router-default
+2026-01-28T09:31:59.185257780Z I0128 09:31:59.185228       1 event.go:389] "Event occurred" object="openshift-ingress/router-default" fieldPath="" kind="Service" apiVersion="v1" type="Normal" reason="EnsuringLoadBalancer" message="Ensuring load balancer"
+2026-01-28T09:31:59.218869543Z I0128 09:31:59.218403       1 aws.go:2147] EnsureLoadBalancer(kubernetes, openshift-ingress, router-default, us-west-1, , [{http TCP <nil> 80 {1 0 http} 32302} {https TCP <nil> 443 {1 0 https} 30263}], map[service.beta.kubernetes.io/aws-load-balancer-healthcheck-healthy-threshold:2 service.beta.kubernetes.io/aws-load-balancer-healthcheck-interval:5 service.beta.kubernetes.io/aws-load-balancer-healthcheck-timeout:4 service.beta.kubernetes.io/aws-load-balancer-healthcheck-unhealthy-threshold:2 service.beta.kubernetes.io/aws-load-balancer-proxy-protocol:* traffic-policy.network.alpha.openshift.io/local-with-fallback:])
+2026-01-28T09:31:59.963388892Z I0128 09:31:59.963290       1 aws.go:1658] Ignoring private subnet for public ELB "subnet-06040b38db4a55d25"
+2026-01-28T09:31:59.963445075Z I0128 09:31:59.963431       1 aws.go:1658] Ignoring private subnet for public ELB "subnet-0b5189a8cc3acef7a"
+2026-01-28T09:32:00.457686250Z I0128 09:32:00.457628       1 aws.go:1313] Existing security group ingress: sg-0326cd1298a972272 []
+2026-01-28T09:32:00.457817937Z I0128 09:32:00.457776       1 aws.go:1344] Adding security group ingress: sg-0326cd1298a972272 [{0xc000a79ab8 0xc0005b0530 [{0xc0005b0260 <nil> {}}] [] [] 0xc000a79abc [] {}} {0xc000a79ac0 0xc0005b0550 [{0xc0005b0260 <nil> {}}] [] [] 0xc000a79ac4 [] {}} {0xc000a78cb0 0xc0005b0300 [{0xc0005b0260 <nil> {}}] [] [] 0xc000a78cb4 [] {}}]
+2026-01-28T09:32:00.774320988Z I0128 09:32:00.774281       1 aws_loadbalancer.go:1025] Creating load balancer for openshift-ingress/router-default with name: a76ab11fa04cb45a68cab84e9060b467
+2026-01-28T09:32:01.398611868Z I0128 09:32:01.398571       1 aws_loadbalancer.go:1568] Creating proxy protocol policy on load balancer
+2026-01-28T09:32:01.463935580Z I0128 09:32:01.463898       1 aws_loadbalancer.go:1038] Adjusting AWS loadbalancer proxy protocol on node port 32302. Setting to true
+2026-01-28T09:32:01.476444759Z I0128 09:32:01.476410       1 aws_loadbalancer.go:1584] Adding AWS loadbalancer backend policies on node port 824644704368
+2026-01-28T09:32:01.525821683Z I0128 09:32:01.525785       1 aws_loadbalancer.go:1038] Adjusting AWS loadbalancer proxy protocol on node port 30263. Setting to true
+2026-01-28T09:32:01.525821683Z I0128 09:32:01.525806       1 aws_loadbalancer.go:1584] Adding AWS loadbalancer backend policies on node port 824644704384
+2026-01-28T09:32:01.637544611Z I0128 09:32:01.637500       1 aws_loadbalancer.go:1228] Updating load-balancer attributes for "a76ab11fa04cb45a68cab84e9060b467"
+2026-01-28T09:32:02.190635428Z I0128 09:32:02.190588       1 aws.go:2804] Adding rule for traffic from the load balancer (sg-0326cd1298a972272) to instances (sg-09adb9c3542a4781c)
+2026-01-28T09:32:02.245666511Z I0128 09:32:02.245615       1 aws.go:1388] Existing security group ingress: sg-09adb9c3542a4781c [{0xc0006a7148 0xc0006da2f0 [{0xc0006da300 0xc0006da310 {}}] [] [] 0xc0006a7168 [] {}} {0xc0006a7278 0xc0006da320 [{0xc0006da330 0xc0006da340 {}}] [] [] 0xc0006a72b8 [] {}}]
+2026-01-28T09:32:02.245729484Z I0128 09:32:02.245706       1 aws.go:1416] Adding security group ingress: sg-09adb9c3542a4781c [{<nil> 0xc001138350 [] [] [] <nil> [{<nil> 0xc0010ffce0 <nil> <nil> <nil> <nil> <nil> {}}] {}}]
+2026-01-28T09:32:02.597865158Z I0128 09:32:02.597829       1 aws_loadbalancer.go:1473] Instances added to load-balancer a76ab11fa04cb45a68cab84e9060b467
+2026-01-28T09:32:02.597937901Z I0128 09:32:02.597923       1 aws.go:2561] Loadbalancer a76ab11fa04cb45a68cab84e9060b467 (openshift-ingress/router-default) has DNS name a76ab11fa04cb45a68cab84e9060b467-651916475.us-west-1.elb.amazonaws.com
+2026-01-28T09:32:02.598015845Z I0128 09:32:02.598005       1 controller.go:984] Patching status for service openshift-ingress/router-default
+2026-01-28T09:32:02.598795904Z I0128 09:32:02.598321       1 event.go:389] "Event occurred" object="openshift-ingress/router-default" fieldPath="" kind="Service" apiVersion="v1" type="Normal" reason="EnsuredLoadBalancer" message="Ensured load balancer"
+2026-01-28T09:33:27.316152131Z I0128 09:33:27.316076       1 batcher.go:146] Batch processing duration: 100.240968ms
+2026-01-28T09:33:27.316152131Z I0128 09:33:27.316141       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:33:27.316221774Z I0128 09:33:27.316154       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:33:27.412627110Z I0128 09:33:27.412227       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:33:27.513218555Z I0128 09:33:27.513172       1 batcher.go:146] Batch processing duration: 100.397296ms
+2026-01-28T09:33:27.513263957Z I0128 09:33:27.513223       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:33:27.513263957Z I0128 09:33:27.513234       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:33:27.586128845Z I0128 09:33:27.586090       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:33:27.687070317Z I0128 09:33:27.686991       1 batcher.go:146] Batch processing duration: 100.739972ms
+2026-01-28T09:33:27.687105439Z I0128 09:33:27.687084       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:33:27.687137751Z I0128 09:33:27.687096       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:33:27.758503233Z I0128 09:33:27.758465       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:33:27.758585817Z I0128 09:33:27.758567       1 node_controller.go:271] Update 3 nodes status took 542.855513ms.
+2026-01-28T09:36:10.876010035Z I0128 09:36:10.875953       1 controller.go:722] Syncing backends for all LB services.
+2026-01-28T09:36:10.876103680Z I0128 09:36:10.876058       1 controller.go:831] Updating backends for load balancer openshift-ingress/router-default with 4 nodes: [ip-10-0-102-200.us-west-1.compute.internal ip-10-0-108-54.us-west-1.compute.internal ip-10-0-3-203.us-west-1.compute.internal ip-10-0-78-215.us-west-1.compute.internal]
+2026-01-28T09:36:10.876738562Z I0128 09:36:10.876711       1 node_controller.go:429] Initializing node ip-10-0-78-215.us-west-1.compute.internal with cloud provider
+2026-01-28T09:36:10.977949613Z I0128 09:36:10.977858       1 batcher.go:146] Batch processing duration: 101.068634ms
+2026-01-28T09:36:10.977949613Z I0128 09:36:10.977937       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:36:10.978515971Z I0128 09:36:10.977950       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T09:36:11.066078999Z I0128 09:36:11.066007       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:36:11.066078999Z I0128 09:36:11.066060       1 node_controller.go:512] Adding node label from cloud provider: beta.kubernetes.io/instance-type=m6a.xlarge
+2026-01-28T09:36:11.066078999Z I0128 09:36:11.066066       1 node_controller.go:513] Adding node label from cloud provider: node.kubernetes.io/instance-type=m6a.xlarge
+2026-01-28T09:36:11.066078999Z I0128 09:36:11.066072       1 node_controller.go:524] Adding node label from cloud provider: failure-domain.beta.kubernetes.io/zone=us-west-1c
+2026-01-28T09:36:11.066160793Z I0128 09:36:11.066077       1 node_controller.go:525] Adding node label from cloud provider: topology.kubernetes.io/zone=us-west-1c
+2026-01-28T09:36:11.066160793Z I0128 09:36:11.066082       1 node_controller.go:535] Adding node label from cloud provider: failure-domain.beta.kubernetes.io/region=us-west-1
+2026-01-28T09:36:11.066160793Z I0128 09:36:11.066087       1 node_controller.go:536] Adding node label from cloud provider: topology.kubernetes.io/region=us-west-1
+2026-01-28T09:36:11.066160793Z I0128 09:36:11.066093       1 node_controller.go:547] Adding additional node label(s) from cloud provider: map[topology.k8s.aws/zone-id:usw1-az3]
+2026-01-28T09:36:11.083706742Z I0128 09:36:11.083650       1 node_controller.go:474] Successfully initialized node ip-10-0-78-215.us-west-1.compute.internal with cloud provider
+2026-01-28T09:36:11.085259510Z I0128 09:36:11.083959       1 event.go:389] "Event occurred" object="ip-10-0-78-215.us-west-1.compute.internal" fieldPath="" kind="Node" apiVersion="v1" type="Normal" reason="Synced" message="Node synced successfully"
+2026-01-28T09:36:11.417961091Z I0128 09:36:11.417888       1 aws_loadbalancer.go:1473] Instances added to load-balancer a76ab11fa04cb45a68cab84e9060b467
+2026-01-28T09:36:11.635258199Z I0128 09:36:11.635197       1 controller.go:726] Successfully updated 1 out of 1 load balancers to direct traffic to the updated set of nodes
+2026-01-28T09:36:11.635258199Z I0128 09:36:11.635227       1 event.go:389] "Event occurred" object="openshift-ingress/router-default" fieldPath="" kind="Service" apiVersion="v1" type="Normal" reason="UpdatedLoadBalancer" message="Updated load balancer with new hosts"
+2026-01-28T09:36:14.337068570Z I0128 09:36:14.336993       1 batcher.go:146] Batch processing duration: 100.223962ms
+2026-01-28T09:36:14.337167895Z I0128 09:36:14.337153       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:36:14.337240749Z I0128 09:36:14.337198       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T09:36:14.504590355Z I0128 09:36:14.504515       1 batcher.go:146] Batch processing duration: 100.251754ms
+2026-01-28T09:36:14.504590355Z I0128 09:36:14.504574       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:36:14.504674239Z I0128 09:36:14.504586       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T09:36:19.674813746Z I0128 09:36:19.674085       1 batcher.go:146] Batch processing duration: 100.465404ms
+2026-01-28T09:36:19.674813746Z I0128 09:36:19.674149       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:36:19.674813746Z I0128 09:36:19.674161       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T09:36:19.854082647Z I0128 09:36:19.853990       1 batcher.go:146] Batch processing duration: 100.231452ms
+2026-01-28T09:36:19.854140960Z I0128 09:36:19.854081       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:36:19.854140960Z I0128 09:36:19.854092       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T09:36:25.026106764Z I0128 09:36:25.026040       1 batcher.go:146] Batch processing duration: 100.226282ms
+2026-01-28T09:36:25.026164767Z I0128 09:36:25.026104       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:36:25.026164767Z I0128 09:36:25.026116       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T09:36:25.201755825Z I0128 09:36:25.201699       1 batcher.go:146] Batch processing duration: 100.950909ms
+2026-01-28T09:36:25.201755825Z I0128 09:36:25.201748       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:36:25.201818479Z I0128 09:36:25.201761       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T09:36:30.375462247Z I0128 09:36:30.375406       1 batcher.go:146] Batch processing duration: 100.249743ms
+2026-01-28T09:36:30.375516890Z I0128 09:36:30.375466       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:36:30.375516890Z I0128 09:36:30.375478       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T09:36:30.548641776Z I0128 09:36:30.548580       1 batcher.go:146] Batch processing duration: 100.161069ms
+2026-01-28T09:36:30.548742901Z I0128 09:36:30.548723       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:36:30.548777823Z I0128 09:36:30.548741       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T09:36:35.716411272Z I0128 09:36:35.716354       1 batcher.go:146] Batch processing duration: 100.295804ms
+2026-01-28T09:36:35.716459175Z I0128 09:36:35.716413       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:36:35.716459175Z I0128 09:36:35.716426       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T09:36:35.891681827Z I0128 09:36:35.891618       1 batcher.go:146] Batch processing duration: 100.194689ms
+2026-01-28T09:36:35.891740600Z I0128 09:36:35.891695       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:36:35.891740600Z I0128 09:36:35.891710       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T09:36:41.061232323Z I0128 09:36:41.061174       1 batcher.go:146] Batch processing duration: 100.228421ms
+2026-01-28T09:36:41.061296676Z I0128 09:36:41.061233       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:36:41.061296676Z I0128 09:36:41.061246       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T09:36:41.247278111Z I0128 09:36:41.247227       1 batcher.go:146] Batch processing duration: 100.41879ms
+2026-01-28T09:36:41.247278111Z I0128 09:36:41.247265       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:36:41.247322443Z I0128 09:36:41.247277       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T09:36:46.429559126Z I0128 09:36:46.429151       1 batcher.go:146] Batch processing duration: 100.354767ms
+2026-01-28T09:36:46.429559126Z I0128 09:36:46.429201       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:36:46.429559126Z I0128 09:36:46.429214       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T09:36:46.608983296Z I0128 09:36:46.608910       1 batcher.go:146] Batch processing duration: 100.257383ms
+2026-01-28T09:36:46.609224358Z I0128 09:36:46.609176       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:36:46.609259220Z I0128 09:36:46.609196       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T09:38:27.859953669Z I0128 09:38:27.859893       1 batcher.go:146] Batch processing duration: 100.242302ms
+2026-01-28T09:38:27.860013762Z I0128 09:38:27.859950       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:38:27.860013762Z I0128 09:38:27.859965       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:38:27.999668609Z I0128 09:38:27.999614       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:38:28.100080579Z I0128 09:38:28.099968       1 batcher.go:146] Batch processing duration: 100.224282ms
+2026-01-28T09:38:28.100197635Z I0128 09:38:28.100169       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:38:28.100223417Z I0128 09:38:28.100187       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:38:28.205346703Z I0128 09:38:28.205289       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:38:28.305717782Z I0128 09:38:28.305626       1 batcher.go:146] Batch processing duration: 100.241742ms
+2026-01-28T09:38:28.305717782Z I0128 09:38:28.305710       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:38:28.305784245Z I0128 09:38:28.305722       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:38:28.417729214Z I0128 09:38:28.417674       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:38:28.518107433Z I0128 09:38:28.518009       1 batcher.go:146] Batch processing duration: 100.241001ms
+2026-01-28T09:38:28.518178686Z I0128 09:38:28.518104       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:38:28.518178686Z I0128 09:38:28.518116       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T09:38:28.629265671Z I0128 09:38:28.629216       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:38:28.629265671Z I0128 09:38:28.629251       1 node_controller.go:271] Update 4 nodes status took 869.732134ms.
+2026-01-28T09:41:46.502125122Z I0128 09:41:46.502065       1 controller.go:722] Syncing backends for all LB services.
+2026-01-28T09:41:46.502209706Z I0128 09:41:46.502142       1 controller.go:831] Updating backends for load balancer openshift-ingress/router-default with 5 nodes: [ip-10-0-101-165.us-west-1.compute.internal ip-10-0-102-200.us-west-1.compute.internal ip-10-0-108-54.us-west-1.compute.internal ip-10-0-3-203.us-west-1.compute.internal ip-10-0-78-215.us-west-1.compute.internal]
+2026-01-28T09:41:46.502527122Z I0128 09:41:46.502490       1 node_controller.go:429] Initializing node ip-10-0-101-165.us-west-1.compute.internal with cloud provider
+2026-01-28T09:41:46.603367645Z I0128 09:41:46.603281       1 batcher.go:146] Batch processing duration: 100.587121ms
+2026-01-28T09:41:46.603479430Z I0128 09:41:46.603461       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:41:46.603565395Z I0128 09:41:46.603527       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T09:41:46.703450760Z I0128 09:41:46.703398       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:41:46.703515224Z I0128 09:41:46.703502       1 node_controller.go:512] Adding node label from cloud provider: beta.kubernetes.io/instance-type=m6a.xlarge
+2026-01-28T09:41:46.703557566Z I0128 09:41:46.703546       1 node_controller.go:513] Adding node label from cloud provider: node.kubernetes.io/instance-type=m6a.xlarge
+2026-01-28T09:41:46.703606328Z I0128 09:41:46.703595       1 node_controller.go:524] Adding node label from cloud provider: failure-domain.beta.kubernetes.io/zone=us-west-1c
+2026-01-28T09:41:46.703635239Z I0128 09:41:46.703625       1 node_controller.go:525] Adding node label from cloud provider: topology.kubernetes.io/zone=us-west-1c
+2026-01-28T09:41:46.703674672Z I0128 09:41:46.703653       1 node_controller.go:535] Adding node label from cloud provider: failure-domain.beta.kubernetes.io/region=us-west-1
+2026-01-28T09:41:46.703710103Z I0128 09:41:46.703700       1 node_controller.go:536] Adding node label from cloud provider: topology.kubernetes.io/region=us-west-1
+2026-01-28T09:41:46.703746135Z I0128 09:41:46.703727       1 node_controller.go:547] Adding additional node label(s) from cloud provider: map[topology.k8s.aws/zone-id:usw1-az3]
+2026-01-28T09:41:46.707460340Z I0128 09:41:46.707437       1 aws_loadbalancer.go:1473] Instances added to load-balancer a76ab11fa04cb45a68cab84e9060b467
+2026-01-28T09:41:46.735015733Z I0128 09:41:46.734967       1 node_controller.go:474] Successfully initialized node ip-10-0-101-165.us-west-1.compute.internal with cloud provider
+2026-01-28T09:41:46.735281156Z I0128 09:41:46.735258       1 event.go:389] "Event occurred" object="ip-10-0-101-165.us-west-1.compute.internal" fieldPath="" kind="Node" apiVersion="v1" type="Normal" reason="Synced" message="Node synced successfully"
+2026-01-28T09:41:46.857222040Z I0128 09:41:46.857122       1 batcher.go:146] Batch processing duration: 106.940937ms
+2026-01-28T09:41:46.857342886Z I0128 09:41:46.857327       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:41:46.857419000Z I0128 09:41:46.857385       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T09:41:47.058387761Z I0128 09:41:47.058322       1 batcher.go:146] Batch processing duration: 100.545848ms
+2026-01-28T09:41:47.058506247Z I0128 09:41:47.058489       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:41:47.058573800Z I0128 09:41:47.058534       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T09:41:47.096400664Z I0128 09:41:47.096359       1 controller.go:726] Successfully updated 1 out of 1 load balancers to direct traffic to the updated set of nodes
+2026-01-28T09:41:47.097077298Z I0128 09:41:47.097046       1 event.go:389] "Event occurred" object="openshift-ingress/router-default" fieldPath="" kind="Service" apiVersion="v1" type="Normal" reason="UpdatedLoadBalancer" message="Updated load balancer with new hosts"
+2026-01-28T09:41:49.210131534Z I0128 09:41:49.210093       1 controller.go:722] Syncing backends for all LB services.
+2026-01-28T09:41:49.210252971Z I0128 09:41:49.210208       1 controller.go:831] Updating backends for load balancer openshift-ingress/router-default with 6 nodes: [ip-10-0-101-165.us-west-1.compute.internal ip-10-0-102-200.us-west-1.compute.internal ip-10-0-108-54.us-west-1.compute.internal ip-10-0-22-208.us-west-1.compute.internal ip-10-0-3-203.us-west-1.compute.internal ip-10-0-78-215.us-west-1.compute.internal]
+2026-01-28T09:41:49.210833369Z I0128 09:41:49.210813       1 node_controller.go:429] Initializing node ip-10-0-22-208.us-west-1.compute.internal with cloud provider
+2026-01-28T09:41:49.311643521Z I0128 09:41:49.311586       1 batcher.go:146] Batch processing duration: 100.644844ms
+2026-01-28T09:41:49.311773368Z I0128 09:41:49.311754       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:41:49.311848681Z I0128 09:41:49.311808       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T09:41:49.404868295Z I0128 09:41:49.404817       1 aws_loadbalancer.go:1473] Instances added to load-balancer a76ab11fa04cb45a68cab84e9060b467
+2026-01-28T09:41:49.407850473Z I0128 09:41:49.407820       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:41:49.407903916Z I0128 09:41:49.407892       1 node_controller.go:512] Adding node label from cloud provider: beta.kubernetes.io/instance-type=m6a.xlarge
+2026-01-28T09:41:49.407931597Z I0128 09:41:49.407921       1 node_controller.go:513] Adding node label from cloud provider: node.kubernetes.io/instance-type=m6a.xlarge
+2026-01-28T09:41:49.407957439Z I0128 09:41:49.407948       1 node_controller.go:524] Adding node label from cloud provider: failure-domain.beta.kubernetes.io/zone=us-west-1a
+2026-01-28T09:41:49.407982240Z I0128 09:41:49.407973       1 node_controller.go:525] Adding node label from cloud provider: topology.kubernetes.io/zone=us-west-1a
+2026-01-28T09:41:49.408007031Z I0128 09:41:49.407998       1 node_controller.go:535] Adding node label from cloud provider: failure-domain.beta.kubernetes.io/region=us-west-1
+2026-01-28T09:41:49.408058914Z I0128 09:41:49.408047       1 node_controller.go:536] Adding node label from cloud provider: topology.kubernetes.io/region=us-west-1
+2026-01-28T09:41:49.408099666Z I0128 09:41:49.408083       1 node_controller.go:547] Adding additional node label(s) from cloud provider: map[topology.k8s.aws/zone-id:usw1-az1]
+2026-01-28T09:41:49.444706869Z I0128 09:41:49.444139       1 node_controller.go:474] Successfully initialized node ip-10-0-22-208.us-west-1.compute.internal with cloud provider
+2026-01-28T09:41:49.444706869Z I0128 09:41:49.444457       1 event.go:389] "Event occurred" object="ip-10-0-22-208.us-west-1.compute.internal" fieldPath="" kind="Node" apiVersion="v1" type="Normal" reason="Synced" message="Node synced successfully"
+2026-01-28T09:41:49.588806567Z I0128 09:41:49.588741       1 controller.go:726] Successfully updated 1 out of 1 load balancers to direct traffic to the updated set of nodes
+2026-01-28T09:41:49.589158485Z I0128 09:41:49.589127       1 event.go:389] "Event occurred" object="openshift-ingress/router-default" fieldPath="" kind="Service" apiVersion="v1" type="Normal" reason="UpdatedLoadBalancer" message="Updated load balancer with new hosts"
+2026-01-28T09:41:52.227245404Z I0128 09:41:52.227192       1 batcher.go:146] Batch processing duration: 100.037874ms
+2026-01-28T09:41:52.227327238Z I0128 09:41:52.227311       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:41:52.227404542Z I0128 09:41:52.227353       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T09:41:52.405523475Z I0128 09:41:52.404816       1 batcher.go:146] Batch processing duration: 100.244894ms
+2026-01-28T09:41:52.405523475Z I0128 09:41:52.404870       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:41:52.405523475Z I0128 09:41:52.404881       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T09:41:52.589643106Z I0128 09:41:52.589575       1 batcher.go:146] Batch processing duration: 100.185441ms
+2026-01-28T09:41:52.589643106Z I0128 09:41:52.589617       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:41:52.589680708Z I0128 09:41:52.589630       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T09:41:52.753344561Z I0128 09:41:52.753280       1 batcher.go:146] Batch processing duration: 100.253203ms
+2026-01-28T09:41:52.753344561Z I0128 09:41:52.753334       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:41:52.753419014Z I0128 09:41:52.753365       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T09:41:57.924144341Z I0128 09:41:57.924098       1 batcher.go:146] Batch processing duration: 101.312069ms
+2026-01-28T09:41:57.924249906Z I0128 09:41:57.924232       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:41:57.924311469Z I0128 09:41:57.924276       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T09:41:58.099977371Z I0128 09:41:58.099921       1 batcher.go:146] Batch processing duration: 100.197502ms
+2026-01-28T09:41:58.100012293Z I0128 09:41:58.099977       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:41:58.100061976Z I0128 09:41:58.099989       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T09:41:58.268979312Z I0128 09:41:58.268927       1 batcher.go:146] Batch processing duration: 100.606883ms
+2026-01-28T09:41:58.269017574Z I0128 09:41:58.269006       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:41:58.269132210Z I0128 09:41:58.269057       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T09:41:58.442219314Z I0128 09:41:58.442161       1 batcher.go:146] Batch processing duration: 100.225813ms
+2026-01-28T09:41:58.442311779Z I0128 09:41:58.442296       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:41:58.442402284Z I0128 09:41:58.442341       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T09:42:03.619291379Z I0128 09:42:03.619174       1 batcher.go:146] Batch processing duration: 100.963341ms
+2026-01-28T09:42:03.619443866Z I0128 09:42:03.619407       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:42:03.619558332Z I0128 09:42:03.619520       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T09:42:03.799230484Z I0128 09:42:03.799179       1 batcher.go:146] Batch processing duration: 100.213703ms
+2026-01-28T09:42:03.799272926Z I0128 09:42:03.799244       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:42:03.799289477Z I0128 09:42:03.799257       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T09:42:03.963813185Z I0128 09:42:03.963768       1 batcher.go:146] Batch processing duration: 100.662736ms
+2026-01-28T09:42:03.963849707Z I0128 09:42:03.963823       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:42:03.963902689Z I0128 09:42:03.963845       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T09:42:04.133770953Z I0128 09:42:04.133717       1 batcher.go:146] Batch processing duration: 100.854875ms
+2026-01-28T09:42:04.133870158Z I0128 09:42:04.133838       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:42:04.133892169Z I0128 09:42:04.133854       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T09:42:09.304506132Z I0128 09:42:09.304448       1 batcher.go:146] Batch processing duration: 100.258365ms
+2026-01-28T09:42:09.304587316Z I0128 09:42:09.304552       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:42:09.304601127Z I0128 09:42:09.304569       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T09:42:09.480680900Z I0128 09:42:09.480626       1 batcher.go:146] Batch processing duration: 100.234924ms
+2026-01-28T09:42:09.480786705Z I0128 09:42:09.480757       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:42:09.480829228Z I0128 09:42:09.480786       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T09:42:09.649329253Z I0128 09:42:09.649274       1 batcher.go:146] Batch processing duration: 100.283907ms
+2026-01-28T09:42:09.649367875Z I0128 09:42:09.649321       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:42:09.649381386Z I0128 09:42:09.649348       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T09:42:09.806338396Z I0128 09:42:09.806289       1 batcher.go:146] Batch processing duration: 100.166991ms
+2026-01-28T09:42:09.806370678Z I0128 09:42:09.806346       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:42:09.806410590Z I0128 09:42:09.806358       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T09:42:14.984140357Z I0128 09:42:14.984092       1 batcher.go:146] Batch processing duration: 102.655371ms
+2026-01-28T09:42:14.984223741Z I0128 09:42:14.984209       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:42:14.984284244Z I0128 09:42:14.984248       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T09:42:15.147243464Z I0128 09:42:15.147177       1 batcher.go:146] Batch processing duration: 100.502435ms
+2026-01-28T09:42:15.147243464Z I0128 09:42:15.147234       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:42:15.147281686Z I0128 09:42:15.147243       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T09:42:15.310691017Z I0128 09:42:15.310633       1 batcher.go:146] Batch processing duration: 102.431629ms
+2026-01-28T09:42:15.310795222Z I0128 09:42:15.310765       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:42:15.310879836Z I0128 09:42:15.310831       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T09:42:15.483524164Z I0128 09:42:15.483471       1 batcher.go:146] Batch processing duration: 100.538617ms
+2026-01-28T09:42:15.483605038Z I0128 09:42:15.483591       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:42:15.483659321Z I0128 09:42:15.483629       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T09:42:19.307432234Z E0128 09:42:19.307375       1 leaderelection.go:429] Failed to update lock optimistically: Put "https://api-int.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-cloud-controller-manager/leases/cloud-controller-manager?timeout=53.5s": read tcp 10.0.108.54:39250->10.0.87.154:6443: read: connection reset by peer, falling back to slow path
+2026-01-28T09:42:20.651375337Z I0128 09:42:20.651316       1 batcher.go:146] Batch processing duration: 100.567517ms
+2026-01-28T09:42:20.651432240Z I0128 09:42:20.651402       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:42:20.651482503Z I0128 09:42:20.651414       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T09:42:20.822212856Z I0128 09:42:20.822164       1 batcher.go:146] Batch processing duration: 100.184879ms
+2026-01-28T09:42:20.822256068Z I0128 09:42:20.822214       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:42:20.822268639Z I0128 09:42:20.822235       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T09:42:20.976858364Z I0128 09:42:20.976804       1 batcher.go:146] Batch processing duration: 100.224831ms
+2026-01-28T09:42:20.976958309Z I0128 09:42:20.976943       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:42:20.977036113Z I0128 09:42:20.976985       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T09:42:21.139596943Z I0128 09:42:21.139548       1 batcher.go:146] Batch processing duration: 100.848271ms
+2026-01-28T09:42:21.139636055Z I0128 09:42:21.139609       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:42:21.139650875Z I0128 09:42:21.139621       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T09:42:26.309986082Z I0128 09:42:26.309936       1 batcher.go:146] Batch processing duration: 100.21383ms
+2026-01-28T09:42:26.310061256Z I0128 09:42:26.310001       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:42:26.310087357Z I0128 09:42:26.310014       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T09:42:26.471518731Z I0128 09:42:26.471437       1 batcher.go:146] Batch processing duration: 100.060093ms
+2026-01-28T09:42:26.471518731Z I0128 09:42:26.471511       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:42:26.471556543Z I0128 09:42:26.471526       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T09:42:26.637540361Z I0128 09:42:26.637484       1 batcher.go:146] Batch processing duration: 101.053642ms
+2026-01-28T09:42:26.637573233Z I0128 09:42:26.637549       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:42:26.637585884Z I0128 09:42:26.637560       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T09:42:26.799950413Z I0128 09:42:26.799887       1 batcher.go:146] Batch processing duration: 101.293504ms
+2026-01-28T09:42:26.800063019Z I0128 09:42:26.800047       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:42:26.800129082Z I0128 09:42:26.800093       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T09:43:28.730577884Z I0128 09:43:28.730518       1 batcher.go:146] Batch processing duration: 100.228665ms
+2026-01-28T09:43:28.730622376Z I0128 09:43:28.730573       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:43:28.730622376Z I0128 09:43:28.730585       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:43:28.845687351Z I0128 09:43:28.845648       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:43:28.947421582Z I0128 09:43:28.947037       1 batcher.go:146] Batch processing duration: 101.30012ms
+2026-01-28T09:43:28.947421582Z I0128 09:43:28.947094       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:43:28.947421582Z I0128 09:43:28.947105       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:43:29.043886190Z I0128 09:43:29.043845       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:43:29.144796150Z I0128 09:43:29.144738       1 batcher.go:146] Batch processing duration: 100.806444ms
+2026-01-28T09:43:29.144796150Z I0128 09:43:29.144782       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:43:29.144843252Z I0128 09:43:29.144800       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:43:29.249123910Z I0128 09:43:29.249077       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:43:29.349493993Z I0128 09:43:29.349394       1 batcher.go:146] Batch processing duration: 100.222586ms
+2026-01-28T09:43:29.349571937Z I0128 09:43:29.349541       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:43:29.349685923Z I0128 09:43:29.349567       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T09:43:29.462484265Z I0128 09:43:29.462438       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:43:29.562748762Z I0128 09:43:29.562702       1 batcher.go:146] Batch processing duration: 100.172493ms
+2026-01-28T09:43:29.562784694Z I0128 09:43:29.562770       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:43:29.562821146Z I0128 09:43:29.562783       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T09:43:29.674338684Z I0128 09:43:29.674302       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:43:29.774693886Z I0128 09:43:29.774638       1 batcher.go:146] Batch processing duration: 100.235047ms
+2026-01-28T09:43:29.774737198Z I0128 09:43:29.774702       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:43:29.774749549Z I0128 09:43:29.774714       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T09:43:29.902583371Z I0128 09:43:29.902515       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:43:29.902583371Z I0128 09:43:29.902563       1 node_controller.go:271] Update 6 nodes status took 1.272420511s.
+2026-01-28T09:48:30.003073689Z I0128 09:48:30.002985       1 batcher.go:146] Batch processing duration: 100.182181ms
+2026-01-28T09:48:30.003134742Z I0128 09:48:30.003069       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:48:30.003134742Z I0128 09:48:30.003081       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T09:48:30.145300937Z I0128 09:48:30.145237       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:48:30.245617364Z I0128 09:48:30.245551       1 batcher.go:146] Batch processing duration: 100.229513ms
+2026-01-28T09:48:30.245678238Z I0128 09:48:30.245615       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:48:30.245678238Z I0128 09:48:30.245629       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:48:30.349679508Z I0128 09:48:30.349618       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:48:30.450010977Z I0128 09:48:30.449944       1 batcher.go:146] Batch processing duration: 100.227924ms
+2026-01-28T09:48:30.450010977Z I0128 09:48:30.449994       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:48:30.450091861Z I0128 09:48:30.450011       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:48:30.560718130Z I0128 09:48:30.560672       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:48:30.661794896Z I0128 09:48:30.661732       1 batcher.go:146] Batch processing duration: 100.973051ms
+2026-01-28T09:48:30.661794896Z I0128 09:48:30.661780       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:48:30.661847489Z I0128 09:48:30.661790       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:48:30.759472203Z I0128 09:48:30.759422       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:48:30.859817822Z I0128 09:48:30.859741       1 batcher.go:146] Batch processing duration: 100.228444ms
+2026-01-28T09:48:30.859875975Z I0128 09:48:30.859823       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:48:30.859875975Z I0128 09:48:30.859836       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T09:48:30.977984746Z I0128 09:48:30.977935       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:48:31.078382528Z I0128 09:48:31.078308       1 batcher.go:146] Batch processing duration: 100.264695ms
+2026-01-28T09:48:31.078457482Z I0128 09:48:31.078385       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:48:31.078457482Z I0128 09:48:31.078398       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T09:48:31.178951829Z I0128 09:48:31.178885       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:48:31.178951829Z I0128 09:48:31.178925       1 node_controller.go:271] Update 6 nodes status took 1.276225719s.
+2026-01-28T09:48:49.463250769Z E0128 09:48:49.463167       1 leaderelection.go:429] Failed to update lock optimistically: Put "https://api-int.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-cloud-controller-manager/leases/cloud-controller-manager?timeout=53.5s": read tcp 10.0.108.54:35820->10.0.7.164:6443: read: connection reset by peer, falling back to slow path
+2026-01-28T09:53:31.281155130Z I0128 09:53:31.281082       1 batcher.go:146] Batch processing duration: 101.092885ms
+2026-01-28T09:53:31.281262185Z I0128 09:53:31.281245       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:53:31.281321568Z I0128 09:53:31.281286       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T09:53:31.417086393Z I0128 09:53:31.416995       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:53:31.517434702Z I0128 09:53:31.517367       1 batcher.go:146] Batch processing duration: 100.240573ms
+2026-01-28T09:53:31.517479294Z I0128 09:53:31.517435       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:53:31.517479294Z I0128 09:53:31.517447       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T09:53:31.617783241Z I0128 09:53:31.617732       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:53:31.718480146Z I0128 09:53:31.718401       1 batcher.go:146] Batch processing duration: 100.559749ms
+2026-01-28T09:53:31.718539169Z I0128 09:53:31.718477       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:53:31.718539169Z I0128 09:53:31.718489       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:53:31.871145650Z I0128 09:53:31.871087       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:53:31.971933320Z I0128 09:53:31.971860       1 batcher.go:146] Batch processing duration: 100.691435ms
+2026-01-28T09:53:31.971987183Z I0128 09:53:31.971931       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:53:31.971987183Z I0128 09:53:31.971940       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:53:32.082196409Z I0128 09:53:32.082148       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:53:32.183197989Z I0128 09:53:32.183141       1 batcher.go:146] Batch processing duration: 100.917156ms
+2026-01-28T09:53:32.183260812Z I0128 09:53:32.183194       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:53:32.183260812Z I0128 09:53:32.183206       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:53:32.290271210Z I0128 09:53:32.290224       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:53:32.390554644Z I0128 09:53:32.390486       1 batcher.go:146] Batch processing duration: 100.182759ms
+2026-01-28T09:53:32.390613017Z I0128 09:53:32.390557       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:53:32.390613017Z I0128 09:53:32.390569       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T09:53:32.503769240Z I0128 09:53:32.503712       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:53:32.503769240Z I0128 09:53:32.503752       1 node_controller.go:271] Update 6 nodes status took 1.323862434s.
+2026-01-28T09:58:32.604994473Z I0128 09:58:32.604930       1 batcher.go:146] Batch processing duration: 100.231383ms
+2026-01-28T09:58:32.605072717Z I0128 09:58:32.604989       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:58:32.605072717Z I0128 09:58:32.605003       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T09:58:32.754341332Z I0128 09:58:32.754291       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:58:32.854660479Z I0128 09:58:32.854588       1 batcher.go:146] Batch processing duration: 100.212792ms
+2026-01-28T09:58:32.854798356Z I0128 09:58:32.854756       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:58:32.854828747Z I0128 09:58:32.854772       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T09:58:33.052361487Z I0128 09:58:33.052313       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:58:33.153487534Z I0128 09:58:33.153421       1 batcher.go:146] Batch processing duration: 101.033233ms
+2026-01-28T09:58:33.153533146Z I0128 09:58:33.153494       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:58:33.153546346Z I0128 09:58:33.153515       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T09:58:33.302956879Z I0128 09:58:33.302910       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:58:33.403216083Z I0128 09:58:33.403160       1 batcher.go:146] Batch processing duration: 100.1731ms
+2026-01-28T09:58:33.403270135Z I0128 09:58:33.403211       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:58:33.403282666Z I0128 09:58:33.403231       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T09:58:33.519742333Z I0128 09:58:33.519677       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:58:33.620231979Z I0128 09:58:33.620157       1 batcher.go:146] Batch processing duration: 100.39337ms
+2026-01-28T09:58:33.620231979Z I0128 09:58:33.620216       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:58:33.620295662Z I0128 09:58:33.620247       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T09:58:33.719374487Z I0128 09:58:33.719320       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:58:33.819689004Z I0128 09:58:33.819606       1 batcher.go:146] Batch processing duration: 100.204731ms
+2026-01-28T09:58:33.819689004Z I0128 09:58:33.819672       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T09:58:33.819762037Z I0128 09:58:33.819683       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T09:58:33.923283353Z I0128 09:58:33.923231       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T09:58:33.923283353Z I0128 09:58:33.923260       1 node_controller.go:271] Update 6 nodes status took 1.41868018s.
+2026-01-28T10:03:34.024213389Z I0128 10:03:34.024155       1 batcher.go:146] Batch processing duration: 100.241713ms
+2026-01-28T10:03:34.024270602Z I0128 10:03:34.024210       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:03:34.024270602Z I0128 10:03:34.024221       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T10:03:34.156967111Z I0128 10:03:34.156914       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:03:34.258322370Z I0128 10:03:34.258259       1 batcher.go:146] Batch processing duration: 101.155008ms
+2026-01-28T10:03:34.258398563Z I0128 10:03:34.258378       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:03:34.258474757Z I0128 10:03:34.258439       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T10:03:34.373056584Z I0128 10:03:34.372972       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:03:34.473366870Z I0128 10:03:34.473304       1 batcher.go:146] Batch processing duration: 100.230623ms
+2026-01-28T10:03:34.473415583Z I0128 10:03:34.473365       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:03:34.473415583Z I0128 10:03:34.473379       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T10:03:34.580941329Z I0128 10:03:34.580897       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:03:34.682086246Z I0128 10:03:34.682006       1 batcher.go:146] Batch processing duration: 101.008051ms
+2026-01-28T10:03:34.682183141Z I0128 10:03:34.682168       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:03:34.682278596Z I0128 10:03:34.682233       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T10:03:34.796486395Z I0128 10:03:34.796437       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:03:34.896812022Z I0128 10:03:34.896756       1 batcher.go:146] Batch processing duration: 100.219452ms
+2026-01-28T10:03:34.896866254Z I0128 10:03:34.896809       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:03:34.896866254Z I0128 10:03:34.896820       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T10:03:35.006264504Z I0128 10:03:35.006201       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:03:35.106502966Z I0128 10:03:35.106447       1 batcher.go:146] Batch processing duration: 100.16863ms
+2026-01-28T10:03:35.106560579Z I0128 10:03:35.106501       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:03:35.106573190Z I0128 10:03:35.106524       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T10:03:35.217585699Z I0128 10:03:35.217526       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:03:35.217585699Z I0128 10:03:35.217568       1 node_controller.go:271] Update 6 nodes status took 1.293769521s.
+2026-01-28T10:08:35.318647138Z I0128 10:08:35.318586       1 batcher.go:146] Batch processing duration: 100.260075ms
+2026-01-28T10:08:35.318709292Z I0128 10:08:35.318642       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:08:35.318709292Z I0128 10:08:35.318652       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T10:08:35.445275227Z I0128 10:08:35.445228       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:08:35.545636558Z I0128 10:08:35.545564       1 batcher.go:146] Batch processing duration: 100.235614ms
+2026-01-28T10:08:35.545754444Z I0128 10:08:35.545737       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:08:35.545814727Z I0128 10:08:35.545767       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T10:08:35.654548094Z I0128 10:08:35.654496       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:08:35.754899274Z I0128 10:08:35.754830       1 batcher.go:146] Batch processing duration: 100.224004ms
+2026-01-28T10:08:35.754935106Z I0128 10:08:35.754901       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:08:35.754948767Z I0128 10:08:35.754913       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T10:08:35.860691846Z I0128 10:08:35.860640       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:08:35.960996753Z I0128 10:08:35.960921       1 batcher.go:146] Batch processing duration: 100.179082ms
+2026-01-28T10:08:35.960996753Z I0128 10:08:35.960977       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:08:35.961055346Z I0128 10:08:35.960990       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T10:08:36.073922480Z I0128 10:08:36.073867       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:08:36.174815036Z I0128 10:08:36.174764       1 batcher.go:146] Batch processing duration: 100.801742ms
+2026-01-28T10:08:36.174848878Z I0128 10:08:36.174818       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:08:36.174860519Z I0128 10:08:36.174829       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T10:08:36.308938569Z I0128 10:08:36.308902       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:08:36.409183934Z I0128 10:08:36.409141       1 batcher.go:146] Batch processing duration: 100.168411ms
+2026-01-28T10:08:36.409218706Z I0128 10:08:36.409192       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:08:36.409258888Z I0128 10:08:36.409203       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T10:08:36.514854399Z I0128 10:08:36.514807       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:08:36.514854399Z I0128 10:08:36.514845       1 node_controller.go:271] Update 6 nodes status took 1.296670966s.
+2026-01-28T10:13:36.615978515Z I0128 10:13:36.615902       1 batcher.go:146] Batch processing duration: 100.235501ms
+2026-01-28T10:13:36.615978515Z I0128 10:13:36.615958       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:13:36.616067660Z I0128 10:13:36.615989       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T10:13:36.747366165Z I0128 10:13:36.747307       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:13:36.847613516Z I0128 10:13:36.847563       1 batcher.go:146] Batch processing duration: 100.168087ms
+2026-01-28T10:13:36.847661129Z I0128 10:13:36.847618       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:13:36.847661129Z I0128 10:13:36.847629       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T10:13:36.960269120Z I0128 10:13:36.960224       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:13:37.060566974Z I0128 10:13:37.060498       1 batcher.go:146] Batch processing duration: 100.199069ms
+2026-01-28T10:13:37.060566974Z I0128 10:13:37.060552       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:13:37.060616876Z I0128 10:13:37.060563       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T10:13:37.166226823Z I0128 10:13:37.166179       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:13:37.266641562Z I0128 10:13:37.266583       1 batcher.go:146] Batch processing duration: 100.230041ms
+2026-01-28T10:13:37.266693445Z I0128 10:13:37.266639       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:13:37.266693445Z I0128 10:13:37.266652       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T10:13:37.396433722Z I0128 10:13:37.396384       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:13:37.496789659Z I0128 10:13:37.496718       1 batcher.go:146] Batch processing duration: 100.243311ms
+2026-01-28T10:13:37.496835421Z I0128 10:13:37.496783       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:13:37.496835421Z I0128 10:13:37.496796       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T10:13:37.613424410Z I0128 10:13:37.613385       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:13:37.714489281Z I0128 10:13:37.714434       1 batcher.go:146] Batch processing duration: 100.974416ms
+2026-01-28T10:13:37.714538723Z I0128 10:13:37.714498       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:13:37.714552184Z I0128 10:13:37.714520       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T10:13:37.837677095Z I0128 10:13:37.837610       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:13:37.837677095Z I0128 10:13:37.837640       1 node_controller.go:271] Update 6 nodes status took 1.322078577s.
+2026-01-28T10:18:37.938999133Z I0128 10:18:37.938929       1 batcher.go:146] Batch processing duration: 100.293432ms
+2026-01-28T10:18:37.939165401Z I0128 10:18:37.939146       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:18:37.939268186Z I0128 10:18:37.939214       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T10:18:38.190568238Z I0128 10:18:38.190502       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:18:38.290881610Z I0128 10:18:38.290817       1 batcher.go:146] Batch processing duration: 100.222367ms
+2026-01-28T10:18:38.290942674Z I0128 10:18:38.290891       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:18:38.290985946Z I0128 10:18:38.290906       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T10:18:38.402985511Z I0128 10:18:38.402921       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:18:38.503326114Z I0128 10:18:38.503264       1 batcher.go:146] Batch processing duration: 100.25048ms
+2026-01-28T10:18:38.503388347Z I0128 10:18:38.503350       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:18:38.503404048Z I0128 10:18:38.503364       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T10:18:38.630374530Z I0128 10:18:38.630321       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:18:38.730717253Z I0128 10:18:38.730658       1 batcher.go:146] Batch processing duration: 100.230548ms
+2026-01-28T10:18:38.730717253Z I0128 10:18:38.730707       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:18:38.730776456Z I0128 10:18:38.730716       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T10:18:38.833402974Z I0128 10:18:38.833358       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:18:38.933684815Z I0128 10:18:38.933626       1 batcher.go:146] Batch processing duration: 100.191616ms
+2026-01-28T10:18:38.933743118Z I0128 10:18:38.933688       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:18:38.933756618Z I0128 10:18:38.933718       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T10:18:39.041728543Z I0128 10:18:39.041676       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:18:39.142692768Z I0128 10:18:39.142626       1 batcher.go:146] Batch processing duration: 100.86284ms
+2026-01-28T10:18:39.142692768Z I0128 10:18:39.142681       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:18:39.142779102Z I0128 10:18:39.142715       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T10:18:39.262810427Z I0128 10:18:39.262759       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:18:39.262810427Z I0128 10:18:39.262797       1 node_controller.go:271] Update 6 nodes status took 1.424286225s.
+2026-01-28T10:23:39.363949539Z I0128 10:23:39.363880       1 batcher.go:146] Batch processing duration: 100.220694ms
+2026-01-28T10:23:39.364003052Z I0128 10:23:39.363944       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:23:39.364003052Z I0128 10:23:39.363956       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0ef0478c5528c9769] <nil> <nil> {}}
+2026-01-28T10:23:39.492638519Z I0128 10:23:39.492583       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:23:39.592927946Z I0128 10:23:39.592878       1 batcher.go:146] Batch processing duration: 100.205783ms
+2026-01-28T10:23:39.592970119Z I0128 10:23:39.592953       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:23:39.593001960Z I0128 10:23:39.592964       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-056ab182efb057c55] <nil> <nil> {}}
+2026-01-28T10:23:39.710004749Z I0128 10:23:39.709957       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:23:39.810255764Z I0128 10:23:39.810175       1 batcher.go:146] Batch processing duration: 100.103738ms
+2026-01-28T10:23:39.810255764Z I0128 10:23:39.810243       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:23:39.810304316Z I0128 10:23:39.810254       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-0b0dc084c90fc4dab] <nil> <nil> {}}
+2026-01-28T10:23:39.928553227Z I0128 10:23:39.928506       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:23:40.028880426Z I0128 10:23:40.028826       1 batcher.go:146] Batch processing duration: 100.232324ms
+2026-01-28T10:23:40.028943319Z I0128 10:23:40.028878       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:23:40.028943319Z I0128 10:23:40.028889       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-039c1b44e22269044] <nil> <nil> {}}
+2026-01-28T10:23:40.144758389Z I0128 10:23:40.144718       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:23:40.245125780Z I0128 10:23:40.245074       1 batcher.go:146] Batch processing duration: 100.198313ms
+2026-01-28T10:23:40.245237525Z I0128 10:23:40.245212       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:23:40.245282798Z I0128 10:23:40.245226       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-055b83ab99acf565e] <nil> <nil> {}}
+2026-01-28T10:23:40.344748104Z I0128 10:23:40.344694       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:23:40.445077734Z I0128 10:23:40.445001       1 batcher.go:146] Batch processing duration: 100.220544ms
+2026-01-28T10:23:40.445133836Z I0128 10:23:40.445076       1 batcher.go:187] Batch size for label describe_instance is 1
+2026-01-28T10:23:40.445133836Z I0128 10:23:40.445084       1 describe_instance_batch.go:85] Batched describe instances &{<nil> [] [i-010583ba086028d2a] <nil> <nil> {}}
+2026-01-28T10:23:40.560929325Z I0128 10:23:40.560887       1 instances_v2.go:106] No instance topolopy for instance type m6a.xlarge available.
+2026-01-28T10:23:40.560985698Z I0128 10:23:40.560923       1 node_controller.go:271] Update 6 nodes status took 1.297365937s.

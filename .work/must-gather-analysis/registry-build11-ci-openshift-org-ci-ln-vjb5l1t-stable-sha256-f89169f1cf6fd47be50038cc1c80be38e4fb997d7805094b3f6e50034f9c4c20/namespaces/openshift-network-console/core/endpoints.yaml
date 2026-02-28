@@ -1,0 +1,61 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:37:00Z"
+    creationTimestamp: "2026-01-28T09:29:33Z"
+    labels:
+      app.kubernetes.io/component: networking-console-plugin
+      app.kubernetes.io/managed-by: cluster-network-operator
+      app.kubernetes.io/name: networking-console-plugin
+      app.kubernetes.io/part-of: cluster-network-operator
+      endpoints.kubernetes.io/managed-by: endpoint-controller
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:endpoints.kubernetes.io/managed-by: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:37:00Z"
+    name: networking-console-plugin
+    namespace: openshift-network-console
+    resourceVersion: "15966"
+    uid: 4e4b5ae7-5131-40f3-a3ca-25cbacc48ecd
+  subsets:
+  - addresses:
+    - ip: 10.131.0.10
+      nodeName: ip-10-0-78-215.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: networking-console-plugin-5d69f676c4-8svvn
+        namespace: openshift-network-console
+        uid: 0cd101e9-dca9-4389-82cb-454c567f3a9c
+    - ip: 10.131.0.12
+      nodeName: ip-10-0-78-215.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: networking-console-plugin-5d69f676c4-fgz9n
+        namespace: openshift-network-console
+        uid: c2f4f8b5-13ac-4000-85a7-89ea4c174336
+    ports:
+    - name: https
+      port: 9443
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "35021"

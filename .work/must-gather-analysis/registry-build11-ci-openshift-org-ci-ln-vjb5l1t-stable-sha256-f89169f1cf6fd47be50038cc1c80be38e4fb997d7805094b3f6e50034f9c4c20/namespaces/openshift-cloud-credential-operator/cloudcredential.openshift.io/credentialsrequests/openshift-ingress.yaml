@@ -1,0 +1,114 @@
+---
+apiVersion: cloudcredential.openshift.io/v1
+kind: CredentialsRequest
+metadata:
+  annotations:
+    capability.openshift.io/name: CloudCredential+Ingress
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2026-01-28T09:25:51Z"
+  finalizers:
+  - cloudcredential.openshift.io/deprovision
+  generation: 1
+  labels:
+    controller-tools.k8s.io: "1.0"
+  managedFields:
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:labels:
+          .: {}
+          f:controller-tools.k8s.io: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec:
+        .: {}
+        f:providerSpec:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:statementEntries: {}
+        f:secretRef: {}
+        f:serviceAccountNames: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:25:51Z"
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"cloudcredential.openshift.io/deprovision": {}
+    manager: cloud-credential-operator
+    operation: Update
+    time: "2026-01-28T09:26:58Z"
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:lastSyncCloudCredsSecretResourceVersion: {}
+        f:lastSyncGeneration: {}
+        f:lastSyncInfrastructureResourceVersion: {}
+        f:lastSyncTimestamp: {}
+        f:providerStatus:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:policy: {}
+          f:user: {}
+        f:provisioned: {}
+    manager: cloud-credential-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:27:05Z"
+  name: openshift-ingress
+  namespace: openshift-cloud-credential-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "2939"
+  uid: d51f6727-9f54-4491-bd7b-7af3c5737542
+spec:
+  providerSpec:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: AWSProviderSpec
+    statementEntries:
+    - action:
+      - elasticloadbalancing:DescribeLoadBalancers
+      - route53:ListHostedZones
+      - route53:ListTagsForResources
+      - route53:ChangeResourceRecordSets
+      - tag:GetResources
+      - sts:AssumeRole
+      effect: Allow
+      resource: '*'
+  secretRef:
+    name: cloud-credentials
+    namespace: openshift-ingress-operator
+  serviceAccountNames:
+  - ingress-operator
+status:
+  lastSyncCloudCredsSecretResourceVersion: "2820"
+  lastSyncGeneration: 1
+  lastSyncInfrastructureResourceVersion: "547"
+  lastSyncTimestamp: "2026-01-28T09:27:05Z"
+  providerStatus:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: AWSProviderStatus
+    policy: ci-ln-vjb5l1t-76ef8--openshift-ingress-2vrd4-policy
+    user: ci-ln-vjb5l1t-76ef8--openshift-ingress-2vrd4
+  provisioned: true

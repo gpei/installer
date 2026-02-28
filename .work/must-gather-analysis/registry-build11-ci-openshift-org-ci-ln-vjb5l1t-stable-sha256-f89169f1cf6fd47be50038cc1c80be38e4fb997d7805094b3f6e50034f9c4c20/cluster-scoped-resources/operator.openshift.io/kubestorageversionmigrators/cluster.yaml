@@ -1,0 +1,161 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: KubeStorageVersionMigrator
+metadata:
+  annotations:
+    include.release.openshift.io/hypershift: "true"
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2026-01-28T09:25:56Z"
+  finalizers:
+  - cluster-kube-storage-version-migrator-operator.operator.openshift.io/KubeStorageVersionMigrator
+  generation: 1
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"KubeStorageVersionMigratorDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: KubeStorageVersionMigrator-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:32Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"KubeStorageVersionMigratorStaticResourcesDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: KubeStorageVersionMigratorStaticResources-StaticResources
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:32Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"KubeStorageVersionMigratorAvailable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"KubeStorageVersionMigratorProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:generations:
+          k:{"group":"apps","name":"migrator","namespace":"openshift-kube-storage-version-migrator","resource":"deployments"}:
+            .: {}
+            f:group: {}
+            f:lastGeneration: {}
+            f:name: {}
+            f:namespace: {}
+            f:resource: {}
+    manager: KubeStorageVersionMigrator-Deployment
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:30:35Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/hypershift: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:release.openshift.io/create-only: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec:
+        .: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:operatorLogLevel: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:25:56Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"cluster-kube-storage-version-migrator-operator.operator.openshift.io/KubeStorageVersionMigrator": {}
+    manager: cluster-kube-storage-version-migrator-operator
+    operation: Update
+    time: "2026-01-28T09:30:32Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions:
+          .: {}
+          k:{"type":"DefaultUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:readyReplicas: {}
+    manager: cluster-kube-storage-version-migrator-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:30:32Z"
+  name: cluster
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "6142"
+  uid: 4234205a-e67d-4a65-becd-ad55b4af9b1b
+spec:
+  logLevel: Normal
+  managementState: Managed
+  operatorLogLevel: Normal
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:30:32Z"
+    reason: Default
+    status: "True"
+    type: DefaultUpgradeable
+  - lastTransitionTime: "2026-01-28T09:30:35Z"
+    status: "True"
+    type: KubeStorageVersionMigratorAvailable
+  - lastTransitionTime: "2026-01-28T09:30:35Z"
+    status: "False"
+    type: KubeStorageVersionMigratorProgressing
+  - lastTransitionTime: "2026-01-28T09:30:32Z"
+    message: ""
+    reason: AsExpected
+    status: "False"
+    type: KubeStorageVersionMigratorStaticResourcesDegraded
+  - lastTransitionTime: "2026-01-28T09:30:32Z"
+    reason: AsExpected
+    status: "False"
+    type: KubeStorageVersionMigratorDegraded
+  generations:
+  - group: apps
+    lastGeneration: 1
+    name: migrator
+    namespace: openshift-kube-storage-version-migrator
+    resource: deployments
+  readyReplicas: 0

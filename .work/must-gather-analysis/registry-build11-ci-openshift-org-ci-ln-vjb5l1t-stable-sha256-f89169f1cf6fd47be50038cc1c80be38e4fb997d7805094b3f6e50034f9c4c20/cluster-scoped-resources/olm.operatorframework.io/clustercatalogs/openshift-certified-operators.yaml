@@ -1,0 +1,103 @@
+---
+apiVersion: olm.operatorframework.io/v1
+kind: ClusterCatalog
+metadata:
+  creationTimestamp: "2026-01-28T09:31:10Z"
+  finalizers:
+  - olm.operatorframework.io/delete-server-cache
+  generation: 1
+  labels:
+    olm.operatorframework.io/metadata.name: openshift-certified-operators
+  managedFields:
+  - apiVersion: olm.operatorframework.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:priority: {}
+        f:source:
+          f:image:
+            f:pollIntervalMinutes: {}
+            f:ref: {}
+          f:type: {}
+    manager: CatalogdClusterCatalogOpenshiftCertifiedOperators
+    operation: Apply
+    time: "2026-01-28T09:31:10Z"
+  - apiVersion: olm.operatorframework.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"olm.operatorframework.io/delete-server-cache": {}
+    manager: catalogd
+    operation: Update
+    time: "2026-01-28T09:43:09Z"
+  - apiVersion: olm.operatorframework.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions:
+          .: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:observedGeneration: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Serving"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:observedGeneration: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:lastUnpacked: {}
+        f:resolvedSource:
+          .: {}
+          f:image:
+            .: {}
+            f:ref: {}
+          f:type: {}
+        f:urls:
+          .: {}
+          f:base: {}
+    manager: catalogd
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:43:19Z"
+  name: openshift-certified-operators
+  resourceVersion: "23053"
+  uid: ec9b427d-07ee-4992-8af3-0003dfcb4ceb
+spec:
+  availabilityMode: Available
+  priority: -200
+  source:
+    image:
+      pollIntervalMinutes: 10
+      ref: registry.redhat.io/redhat/certified-operator-index:v4.20
+    type: Image
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:43:19Z"
+    message: Successfully unpacked and stored content from resolved source
+    observedGeneration: 1
+    reason: Succeeded
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2026-01-28T09:43:19Z"
+    message: Serving desired content from resolved source
+    observedGeneration: 1
+    reason: Available
+    status: "True"
+    type: Serving
+  lastUnpacked: "2026-01-28T09:43:18Z"
+  resolvedSource:
+    image:
+      ref: registry.redhat.io/redhat/certified-operator-index@sha256:034650bf0f5c3423cc3bafae8c4c41ee2ebc3e2452f05a08660ad59ecbc4029d
+    type: Image
+  urls:
+    base: https://catalogd-service.openshift-catalogd.svc/catalogs/openshift-certified-operators

@@ -1,0 +1,166 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    exclude.release.openshift.io/internal-openshift-hosted: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2026-01-28T09:25:40Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:exclude.release.openshift.io/internal-openshift-hosted: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:25:40Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:25:41Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"EvaluationConditionsDetected"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Upgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:extension:
+          f:master: {}
+          f:worker: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: machine-config-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:42:35Z"
+  name: machine-config
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "21408"
+  uid: 7fb3b117-cda2-4637-9e5e-efec08fdf04c
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:33:52Z"
+    message: Cluster version is 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2026-01-28T09:33:47Z"
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2026-01-28T09:33:47Z"
+    message: Cluster has deployed [{operator 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest}
+      {operator-image registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:f531950bc313d9e80aea72aa532209085d8c1d67017055da1fae01f7ad4ac98b}]
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2026-01-28T09:33:47Z"
+    reason: AsExpected
+    status: "True"
+    type: Upgradeable
+  - lastTransitionTime: "2026-01-28T09:33:47Z"
+    reason: AsExpected
+    status: "False"
+    type: EvaluationConditionsDetected
+  extension:
+    master: all 3 nodes are at latest configuration rendered-master-a75705d1cc7ffedd49f44241de5868d7
+    worker: all 3 nodes are at latest configuration rendered-worker-a2bb68b0b8221b5a131f2617a7ee033e
+  relatedObjects:
+  - group: ""
+    name: openshift-machine-config-operator
+    resource: namespaces
+  - group: machineconfiguration.openshift.io
+    name: ""
+    resource: machineconfigpools
+  - group: machineconfiguration.openshift.io
+    name: ""
+    resource: controllerconfigs
+  - group: machineconfiguration.openshift.io
+    name: ""
+    resource: kubeletconfigs
+  - group: machineconfiguration.openshift.io
+    name: ""
+    resource: containerruntimeconfigs
+  - group: machineconfiguration.openshift.io
+    name: ""
+    resource: machineconfigs
+  - group: operator.openshift.io
+    name: ""
+    resource: machineconfigurations
+  - group: ""
+    name: ""
+    resource: nodes
+  - group: ""
+    name: openshift-kni-infra
+    resource: namespaces
+  - group: ""
+    name: openshift-openstack-infra
+    resource: namespaces
+  - group: ""
+    name: openshift-ovirt-infra
+    resource: namespaces
+  - group: ""
+    name: openshift-vsphere-infra
+    resource: namespaces
+  - group: ""
+    name: openshift-nutanix-infra
+    resource: namespaces
+  - group: ""
+    name: openshift-cloud-platform-infra
+    resource: namespaces
+  versions:
+  - name: operator
+    version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+  - name: operator-image
+    version: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:f531950bc313d9e80aea72aa532209085d8c1d67017055da1fae01f7ad4ac98b

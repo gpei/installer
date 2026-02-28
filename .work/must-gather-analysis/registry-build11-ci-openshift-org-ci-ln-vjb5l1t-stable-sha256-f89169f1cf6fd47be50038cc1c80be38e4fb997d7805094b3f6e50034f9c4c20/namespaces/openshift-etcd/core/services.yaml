@@ -1,0 +1,131 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      operator.openshift.io/spec-hash: bf49727db96b81052331eec447cee637db3ee683bd8478b4ce68a33899ee2828
+      prometheus.io/scheme: https
+      prometheus.io/scrape: "true"
+      service.alpha.openshift.io/serving-cert-secret-name: serving-cert
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1769592635
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1769592635
+    creationTimestamp: "2026-01-28T09:25:28Z"
+    labels:
+      k8s-app: etcd
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:k8s-app: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":2379,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":9979,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: cluster-bootstrap
+      operation: Update
+      time: "2026-01-28T09:25:28Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:operator.openshift.io/spec-hash: {}
+            f:prometheus.io/scheme: {}
+            f:prometheus.io/scrape: {}
+            f:service.alpha.openshift.io/serving-cert-secret-name: {}
+        f:spec:
+          f:ports:
+            k:{"port":2380,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":9978,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":9980,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2026-01-28T09:30:42Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:30:46Z"
+    name: etcd
+    namespace: openshift-etcd
+    resourceVersion: "6980"
+    uid: 442553b4-857a-4d6f-a374-1b7eba286fd5
+  spec:
+    clusterIP: 172.30.109.158
+    clusterIPs:
+    - 172.30.109.158
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: etcd
+      port: 2379
+      protocol: TCP
+      targetPort: 2379
+    - name: etcd-peer
+      port: 2380
+      protocol: TCP
+      targetPort: 2380
+    - name: grpc-proxy
+      port: 9978
+      protocol: TCP
+      targetPort: 9978
+    - name: etcd-metrics
+      port: 9979
+      protocol: TCP
+      targetPort: 9979
+    - name: readyz-sidecar
+      port: 9980
+      protocol: TCP
+      targetPort: 9980
+    selector:
+      etcd: "true"
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: ServiceList
+metadata:
+  resourceVersion: "35039"

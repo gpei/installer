@@ -1,0 +1,50 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:31:55Z"
+    creationTimestamp: "2026-01-28T09:27:13Z"
+    labels:
+      app: cloud-manager-operator
+      endpoints.kubernetes.io/managed-by: endpoint-controller
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpoints.kubernetes.io/managed-by: {}
+            f:service.kubernetes.io/headless: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:55Z"
+    name: cloud-controller-manager-operator
+    namespace: openshift-cloud-controller-manager-operator
+    resourceVersion: "9835"
+    uid: d66bd2b5-f3e2-4caf-92cb-c9fdd2d8e586
+  subsets:
+  - addresses:
+    - ip: 10.0.108.54
+      nodeName: ip-10-0-108-54.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: cluster-cloud-controller-manager-operator-7c4545c799-2qzh9
+        namespace: openshift-cloud-controller-manager-operator
+        uid: 580d1d3e-7e7b-4f43-a88c-991fedb9047b
+    ports:
+    - name: https
+      port: 9258
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "34968"

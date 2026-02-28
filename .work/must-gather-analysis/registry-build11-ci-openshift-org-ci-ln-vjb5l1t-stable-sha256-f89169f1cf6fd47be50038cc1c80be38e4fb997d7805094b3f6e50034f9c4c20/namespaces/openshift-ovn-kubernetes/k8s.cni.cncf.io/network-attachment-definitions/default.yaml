@@ -1,0 +1,21 @@
+apiVersion: k8s.cni.cncf.io/v1
+kind: NetworkAttachmentDefinition
+metadata:
+  creationTimestamp: "2026-01-28T09:29:45Z"
+  generation: 1
+  managedFields:
+  - apiVersion: k8s.cni.cncf.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:config: {}
+    manager: ip-10-0-102-200
+    operation: Update
+    time: "2026-01-28T09:29:45Z"
+  name: default
+  namespace: openshift-ovn-kubernetes
+  resourceVersion: "4895"
+  uid: 72b1a394-db65-4489-b6ed-28a8fc17385f
+spec:
+  config: '{"cniVersion": "0.4.0", "name": "ovn-kubernetes", "type": "ovn-k8s-cni-overlay"}'

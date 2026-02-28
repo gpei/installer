@@ -1,0 +1,86 @@
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+    annotations:
+        machineconfiguration.openshift.io/generated-by-controller-version: 4593e456f3b51f4c6c458c00752e38f2687baedc
+    creationTimestamp: "2026-01-28T09:32:25Z"
+    generation: 1
+    labels:
+        machineconfiguration.openshift.io/role: master
+    managedFields:
+        - apiVersion: machineconfiguration.openshift.io/v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:metadata:
+                f:annotations:
+                    .: {}
+                    f:machineconfiguration.openshift.io/generated-by-controller-version: {}
+                f:labels:
+                    .: {}
+                    f:machineconfiguration.openshift.io/role: {}
+                f:ownerReferences:
+                    .: {}
+                    k:{"uid":"dc0c134b-26eb-4fe6-9312-d207cc20003f"}: {}
+            f:spec:
+                .: {}
+                f:baseOSExtensionsContainerImage: {}
+                f:config:
+                    .: {}
+                    f:ignition:
+                        .: {}
+                        f:version: {}
+                    f:storage:
+                        .: {}
+                        f:files: {}
+                f:fips: {}
+                f:kernelArguments: {}
+                f:kernelType: {}
+                f:osImageURL: {}
+          manager: machine-config-controller
+          operation: Update
+          time: "2026-01-28T09:32:25Z"
+    name: 01-master-container-runtime
+    ownerReferences:
+        - apiVersion: machineconfiguration.openshift.io/v1
+          blockOwnerDeletion: true
+          controller: true
+          kind: ControllerConfig
+          name: machine-config-controller
+          uid: dc0c134b-26eb-4fe6-9312-d207cc20003f
+    resourceVersion: "11725"
+    uid: 3a6dddda-45fc-4dec-90ff-ba84ebd80e0e
+spec:
+    baseOSExtensionsContainerImage: ""
+    config:
+        ignition:
+            version: 3.5.0
+        storage:
+            files:
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 107
+                  mode: 420
+                  overwrite: true
+                  path: /etc/containers/registries.conf
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 4758
+                  mode: 420
+                  overwrite: true
+                  path: /etc/crio/crio.conf.d/00-default
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 619
+                  mode: 420
+                  overwrite: true
+                  path: /etc/machine-config-daemon/policy-for-old-podman.json
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 616
+                  mode: 420
+                  overwrite: true
+                  path: /etc/containers/policy.json
+    fips: false
+    kernelArguments: null
+    kernelType: ""
+    osImageURL: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:56380161baf19863b676fb94aacaae253df853c437df18d00e447f36c895b794

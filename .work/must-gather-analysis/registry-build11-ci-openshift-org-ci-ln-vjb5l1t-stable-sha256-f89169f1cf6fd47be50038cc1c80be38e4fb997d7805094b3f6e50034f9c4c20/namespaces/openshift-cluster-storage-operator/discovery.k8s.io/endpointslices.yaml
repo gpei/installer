@@ -1,0 +1,136 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.130.0.37
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-108-54.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: cluster-storage-operator-97b755d8c-z5w4v
+      namespace: openshift-cluster-storage-operator
+      uid: 37e0cbec-5a00-426a-96c3-f5d2de84452a
+    zone: us-west-1c
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:31:04Z"
+    creationTimestamp: "2026-01-28T09:26:10Z"
+    generateName: cluster-storage-operator-metrics-
+    generation: 2
+    labels:
+      app: cluster-storage-operator-metrics
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: cluster-storage-operator-metrics
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"234204e6-da6b-446b-b8f7-6b33c41d7c27"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:04Z"
+    name: cluster-storage-operator-metrics-rm466
+    namespace: openshift-cluster-storage-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: cluster-storage-operator-metrics
+      uid: 234204e6-da6b-446b-b8f7-6b33c41d7c27
+    resourceVersion: "7867"
+    uid: dbd18d72-17e8-40ef-a511-973ba8083d66
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.130.0.18
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-108-54.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: csi-snapshot-controller-operator-694c5957bf-qjh54
+      namespace: openshift-cluster-storage-operator
+      uid: 8b74842b-bbd2-476b-b6bb-c9e2cf964c6c
+    zone: us-west-1c
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:31:55Z"
+    creationTimestamp: "2026-01-28T09:25:51Z"
+    generateName: csi-snapshot-controller-operator-metrics-
+    generation: 2
+    labels:
+      app: csi-snapshot-controller-operator
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: csi-snapshot-controller-operator-metrics
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0dd25715-3744-4944-bb49-f0fb93d91a19"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:55Z"
+    name: csi-snapshot-controller-operator-metrics-rg9vt
+    namespace: openshift-cluster-storage-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: csi-snapshot-controller-operator-metrics
+      uid: 0dd25715-3744-4944-bb49-f0fb93d91a19
+    resourceVersion: "9846"
+    uid: fc906cd7-7e25-47f6-b8ee-b30c974d4189
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "35033"

@@ -1,0 +1,46 @@
+2026-01-28T09:42:10.480476035Z I0128 09:42:10.480316    2875 controller.go:1668] starting in-cluster ocp-tuned 5f4d569c
+2026-01-28T09:42:10.646251047Z I0128 09:42:10.646212    2875 controller.go:672] writing /var/lib/ocp-tuned/image.env
+2026-01-28T09:42:10.648991988Z E0128 09:42:10.648965    2875 controller.go:1713] error repacking the profile: open /etc/tuned/recommend.d/50-openshift.conf: no such file or directory
+2026-01-28T09:42:10.649038941Z I0128 09:42:10.649028    2875 controller.go:1714] deferred updates likely broken
+2026-01-28T09:42:10.649074103Z I0128 09:42:10.649060    2875 controller.go:1730] starting: profile unpacked is "" fingerprint "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+2026-01-28T09:42:10.649119426Z I0128 09:42:10.649108    2875 controller.go:1426] recover: no pending deferred change
+2026-01-28T09:42:10.649146417Z I0128 09:42:10.649137    2875 controller.go:1736] starting: no pending deferred update
+2026-01-28T09:42:26.014005140Z I0128 09:42:26.013942    2875 controller.go:383] disabling system tuned...
+2026-01-28T09:42:26.050214968Z I0128 09:42:26.050165    2875 controller.go:1548] started events processors
+2026-01-28T09:42:26.050301113Z I0128 09:42:26.050265    2875 controller.go:1569] monitoring filesystem events on "/etc/tuned/bootcmdline"
+2026-01-28T09:42:26.050301113Z I0128 09:42:26.050288    2875 controller.go:1572] started controller
+2026-01-28T09:42:26.244785704Z I0128 09:42:26.244727    2875 controller.go:360] set log level 0
+2026-01-28T09:42:26.244946073Z I0128 09:42:26.244911    2875 controller.go:615] providerExtract(): extracting cloud provider name to /var/lib/ocp-tuned/provider
+2026-01-28T09:42:26.245179916Z I0128 09:42:26.245163    2875 controller.go:693] tunedRecommendFileWrite(): written "/etc/tuned/recommend.d/50-openshift.conf" to set TuneD profile openshift-node
+2026-01-28T09:42:26.245189287Z I0128 09:42:26.245177    2875 controller.go:418] profilesExtract(): extracting 1 TuneD profiles (recommended=openshift-node)
+2026-01-28T09:42:26.310913150Z I0128 09:42:26.310869    2875 controller.go:463] profilesExtract(): recommended TuneD profile openshift-node content changed [openshift]
+2026-01-28T09:42:26.310960373Z I0128 09:42:26.310950    2875 controller.go:479] profilesExtract(): fingerprint of extracted profiles: "caa493f132cc24114a421e5a3d0bc5b4874608c4f2897f3f55aac18a2f3513d6"
+2026-01-28T09:42:26.311007665Z I0128 09:42:26.310989    2875 controller.go:819] tunedReload()
+2026-01-28T09:42:26.311066969Z I0128 09:42:26.311048    2875 controller.go:746] starting tuned...
+2026-01-28T09:42:26.311066969Z I0128 09:42:26.311059    2875 run.go:127] running cmd...
+2026-01-28T09:42:27.640435883Z 2026-01-28 09:42:27,640 INFO     tuned.daemon.application: TuneD: 2.25.1, kernel: 5.14.0-570.82.1.el9_6.x86_64
+2026-01-28T09:42:27.640435883Z 2026-01-28 09:42:27,640 INFO     tuned.daemon.application: dynamic tuning is globally disabled
+2026-01-28T09:42:27.713751239Z 2026-01-28 09:42:27,713 INFO     tuned.daemon.daemon: using sleep interval of 1 second(s)
+2026-01-28T09:42:27.714026576Z 2026-01-28 09:42:27,713 INFO     tuned.daemon.daemon: Running in automatic mode, checking what profile is recommended for your configuration.
+2026-01-28T09:42:27.714682174Z 2026-01-28 09:42:27,714 INFO     tuned.daemon.daemon: Using 'openshift-node' profile
+2026-01-28T09:42:27.715540314Z 2026-01-28 09:42:27,715 INFO     tuned.profiles.loader: loading profile: openshift-node
+2026-01-28T09:42:27.768515872Z 2026-01-28 09:42:27,768 INFO     tuned.daemon.controller: starting controller
+2026-01-28T09:42:27.768515872Z 2026-01-28 09:42:27,768 INFO     tuned.daemon.controller: waiting for udev to settle
+2026-01-28T09:42:28.776433571Z 2026-01-28 09:42:28,776 INFO     tuned.daemon.controller: udev settled
+2026-01-28T09:42:28.776552888Z 2026-01-28 09:42:28,776 INFO     tuned.daemon.daemon: starting tuning
+2026-01-28T09:42:28.820059502Z 2026-01-28 09:42:28,819 INFO     tuned.plugins.base: instance cpu: assigning devices cpu2, cpu1, cpu0, cpu3
+2026-01-28T09:42:28.820529860Z 2026-01-28 09:42:28,820 INFO     tuned.plugins.plugin_cpu: We are running on an x86 AuthenticAMD platform
+2026-01-28T09:42:28.822785421Z 2026-01-28 09:42:28,822 INFO     tuned.plugins.base: instance disk: assigning devices nvme0n1, loop0
+2026-01-28T09:42:28.822998024Z 2026-01-28 09:42:28,822 WARNING  tuned.plugins.base: instance video: no matching devices available
+2026-01-28T09:42:28.824299160Z 2026-01-28 09:42:28,824 INFO     tuned.plugins.base: instance net: assigning devices ens5
+2026-01-28T09:42:28.826405993Z 2026-01-28 09:42:28,826 INFO     tuned.plugins.plugin_vm: Setting option 'dirty_ratio' to '30'.
+2026-01-28T09:42:28.826561712Z 2026-01-28 09:42:28,826 INFO     tuned.plugins.plugin_vm: Not setting option 'dirty_background_ratio' to '10', already set.
+2026-01-28T09:42:28.885939144Z 2026-01-28 09:42:28,885 INFO     tuned.plugins.plugin_sysctl: reapplying system sysctl
+2026-01-28T09:42:28.923918204Z 2026-01-28 09:42:28,923 INFO     tuned.daemon.daemon: static tuning from profile 'openshift-node' applied
+2026-01-28T09:42:28.924076103Z I0128 09:42:28.924021    2875 controller.go:703] tunedRecommendFileRead(): read "openshift-node" from "/etc/tuned/recommend.d/50-openshift.conf"
+2026-01-28T09:42:28.940660253Z I0128 09:42:28.940600    2875 controller.go:360] set log level 0
+2026-01-28T09:42:28.944499868Z I0128 09:42:28.944469    2875 controller.go:418] profilesExtract(): extracting 1 TuneD profiles (recommended=openshift-node)
+2026-01-28T09:42:28.988402295Z I0128 09:42:28.988365    2875 controller.go:463] profilesExtract(): recommended TuneD profile openshift-node content unchanged [openshift]
+2026-01-28T09:42:29.015639387Z I0128 09:42:29.015574    2875 controller.go:479] profilesExtract(): fingerprint of extracted profiles: "caa493f132cc24114a421e5a3d0bc5b4874608c4f2897f3f55aac18a2f3513d6"
+2026-01-28T09:42:54.020185906Z 2026-01-28 09:42:54,019 INFO     tuned.plugins.hotplug: device 'nvme1n1', add event
+2026-01-28T09:42:54.020250520Z 2026-01-28 09:42:54,020 INFO     tuned.plugins.hotplug: instance disk: adding new device nvme1n1

@@ -1,0 +1,89 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1769592635
+    service.beta.openshift.io/serving-cert-secret-name: ovn-node-metrics-cert
+    service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1769592635
+  creationTimestamp: "2026-01-28T09:29:24Z"
+  labels:
+    app: ovnkube-node
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.beta.openshift.io/serving-cert-secret-name: {}
+        f:labels:
+          f:app: {}
+        f:ownerReferences:
+          k:{"uid":"7763cebb-f1d7-4359-81b8-b55ef9916383"}: {}
+      f:spec:
+        f:clusterIP: {}
+        f:ports:
+          k:{"port":9103,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+          k:{"port":9105,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:publishNotReadyAddresses: {}
+        f:selector: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2026-01-28T09:29:24Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.alpha.openshift.io/serving-cert-signed-by: {}
+          f:service.beta.openshift.io/serving-cert-signed-by: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2026-01-28T09:30:58Z"
+  name: ovn-kubernetes-node
+  namespace: openshift-ovn-kubernetes
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: 7763cebb-f1d7-4359-81b8-b55ef9916383
+  resourceVersion: "7533"
+  uid: 93e62db6-8f2d-4ce5-b286-7cc18b49755b
+spec:
+  clusterIP: None
+  clusterIPs:
+  - None
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: metrics
+    port: 9103
+    protocol: TCP
+    targetPort: 9103
+  - name: ovn-metrics
+    port: 9105
+    protocol: TCP
+    targetPort: 9105
+  publishNotReadyAddresses: true
+  selector:
+    app: ovnkube-node
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

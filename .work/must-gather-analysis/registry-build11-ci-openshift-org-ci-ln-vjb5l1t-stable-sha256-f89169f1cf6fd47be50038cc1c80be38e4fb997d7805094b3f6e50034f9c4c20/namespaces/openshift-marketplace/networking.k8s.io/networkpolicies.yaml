@@ -1,0 +1,590 @@
+---
+apiVersion: networking.k8s.io/v1
+items:
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    generation: 1
+    labels:
+      olm.catalogSource: certified-operators
+      olm.managed: "true"
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:olm.catalogSource: {}
+            f:olm.managed: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"b09f5962-d4f8-4d37-9905-a876a18eb50b"}: {}
+        f:spec:
+          f:ingress: {}
+          f:podSelector: {}
+          f:policyTypes: {}
+      manager: catalog
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    name: certified-operators-grpc-server
+    namespace: openshift-marketplace
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: CatalogSource
+      name: certified-operators
+      uid: b09f5962-d4f8-4d37-9905-a876a18eb50b
+    resourceVersion: "10462"
+    uid: 918b47b2-29aa-4ade-8f08-c4add5ca7c98
+  spec:
+    ingress:
+    - ports:
+      - port: 50051
+        protocol: TCP
+    podSelector:
+      matchLabels:
+        olm.catalogSource: certified-operators
+        olm.managed: "true"
+    policyTypes:
+    - Ingress
+    - Egress
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    generation: 1
+    labels:
+      olm.catalogSource: certified-operators
+      olm.managed: "true"
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:olm.catalogSource: {}
+            f:olm.managed: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"b09f5962-d4f8-4d37-9905-a876a18eb50b"}: {}
+        f:spec:
+          f:egress: {}
+          f:podSelector: {}
+          f:policyTypes: {}
+      manager: catalog
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    name: certified-operators-unpack-bundles
+    namespace: openshift-marketplace
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: CatalogSource
+      name: certified-operators
+      uid: b09f5962-d4f8-4d37-9905-a876a18eb50b
+    resourceVersion: "10465"
+    uid: a478868c-a7a3-4093-bbd9-719dc0c11341
+  spec:
+    egress:
+    - ports:
+      - port: 6443
+        protocol: TCP
+    podSelector:
+      matchExpressions:
+      - key: operatorframework.io/bundle-unpack-ref
+        operator: Exists
+      - key: olm.managed
+        operator: In
+        values:
+        - "true"
+    policyTypes:
+    - Ingress
+    - Egress
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:00Z"
+    generation: 1
+    labels:
+      olm.catalogSource: community-operators
+      olm.managed: "true"
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:olm.catalogSource: {}
+            f:olm.managed: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"6b441694-fa07-48ea-a1eb-27fb328e4b72"}: {}
+        f:spec:
+          f:ingress: {}
+          f:podSelector: {}
+          f:policyTypes: {}
+      manager: catalog
+      operation: Update
+      time: "2026-01-28T09:32:00Z"
+    name: community-operators-grpc-server
+    namespace: openshift-marketplace
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: CatalogSource
+      name: community-operators
+      uid: 6b441694-fa07-48ea-a1eb-27fb328e4b72
+    resourceVersion: "10637"
+    uid: 637188fb-fc80-4125-b660-12a52cf207eb
+  spec:
+    ingress:
+    - ports:
+      - port: 50051
+        protocol: TCP
+    podSelector:
+      matchLabels:
+        olm.catalogSource: community-operators
+        olm.managed: "true"
+    policyTypes:
+    - Ingress
+    - Egress
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:00Z"
+    generation: 1
+    labels:
+      olm.catalogSource: community-operators
+      olm.managed: "true"
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:olm.catalogSource: {}
+            f:olm.managed: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"6b441694-fa07-48ea-a1eb-27fb328e4b72"}: {}
+        f:spec:
+          f:egress: {}
+          f:podSelector: {}
+          f:policyTypes: {}
+      manager: catalog
+      operation: Update
+      time: "2026-01-28T09:32:00Z"
+    name: community-operators-unpack-bundles
+    namespace: openshift-marketplace
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: CatalogSource
+      name: community-operators
+      uid: 6b441694-fa07-48ea-a1eb-27fb328e4b72
+    resourceVersion: "10647"
+    uid: 2c26680f-4319-422b-aa8e-8c9445b40618
+  spec:
+    egress:
+    - ports:
+      - port: 6443
+        protocol: TCP
+    podSelector:
+      matchExpressions:
+      - key: operatorframework.io/bundle-unpack-ref
+        operator: Exists
+      - key: olm.managed
+        operator: In
+        values:
+        - "true"
+    policyTypes:
+    - Ingress
+    - Egress
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    annotations:
+      capability.openshift.io/name: marketplace
+      include.release.openshift.io/hypershift: "true"
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+      include.release.openshift.io/single-node-developer: "true"
+    creationTimestamp: "2026-01-28T09:32:04Z"
+    generation: 1
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:include.release.openshift.io/hypershift: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+            f:include.release.openshift.io/single-node-developer: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+        f:spec:
+          f:policyTypes: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2026-01-28T09:32:04Z"
+    name: default-deny-all
+    namespace: openshift-marketplace
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      controller: true
+      kind: ClusterVersion
+      name: version
+      uid: 0370d296-6904-481d-ab90-157c7e5b835a
+    resourceVersion: "10998"
+    uid: 8644f435-48a3-4743-bcb2-c91839f46297
+  spec:
+    podSelector: {}
+    policyTypes:
+    - Ingress
+    - Egress
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    annotations:
+      capability.openshift.io/name: marketplace
+      include.release.openshift.io/hypershift: "true"
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+      include.release.openshift.io/single-node-developer: "true"
+    creationTimestamp: "2026-01-28T09:32:04Z"
+    generation: 1
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:include.release.openshift.io/hypershift: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+            f:include.release.openshift.io/single-node-developer: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+        f:spec:
+          f:egress: {}
+          f:ingress: {}
+          f:podSelector: {}
+          f:policyTypes: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2026-01-28T09:32:04Z"
+    name: marketplace-operator
+    namespace: openshift-marketplace
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      controller: true
+      kind: ClusterVersion
+      name: version
+      uid: 0370d296-6904-481d-ab90-157c7e5b835a
+    resourceVersion: "11050"
+    uid: 686025d6-f1d5-4c35-8232-82afd9ab75dd
+  spec:
+    egress:
+    - ports:
+      - port: 6443
+        protocol: TCP
+      - port: 53
+        protocol: TCP
+      - port: 53
+        protocol: UDP
+    ingress:
+    - ports:
+      - port: 8081
+        protocol: TCP
+    podSelector:
+      matchLabels:
+        name: marketplace-operator
+    policyTypes:
+    - Ingress
+    - Egress
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:00Z"
+    generation: 1
+    labels:
+      olm.catalogSource: redhat-marketplace
+      olm.managed: "true"
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:olm.catalogSource: {}
+            f:olm.managed: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"50b6dc35-21c8-4854-a510-afb85c08c73c"}: {}
+        f:spec:
+          f:ingress: {}
+          f:podSelector: {}
+          f:policyTypes: {}
+      manager: catalog
+      operation: Update
+      time: "2026-01-28T09:32:00Z"
+    name: redhat-marketplace-grpc-server
+    namespace: openshift-marketplace
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: CatalogSource
+      name: redhat-marketplace
+      uid: 50b6dc35-21c8-4854-a510-afb85c08c73c
+    resourceVersion: "10736"
+    uid: 28b9ef42-49d7-4d9f-b377-d2c3f5458737
+  spec:
+    ingress:
+    - ports:
+      - port: 50051
+        protocol: TCP
+    podSelector:
+      matchLabels:
+        olm.catalogSource: redhat-marketplace
+        olm.managed: "true"
+    policyTypes:
+    - Ingress
+    - Egress
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:00Z"
+    generation: 1
+    labels:
+      olm.catalogSource: redhat-marketplace
+      olm.managed: "true"
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:olm.catalogSource: {}
+            f:olm.managed: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"50b6dc35-21c8-4854-a510-afb85c08c73c"}: {}
+        f:spec:
+          f:egress: {}
+          f:podSelector: {}
+          f:policyTypes: {}
+      manager: catalog
+      operation: Update
+      time: "2026-01-28T09:32:00Z"
+    name: redhat-marketplace-unpack-bundles
+    namespace: openshift-marketplace
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: CatalogSource
+      name: redhat-marketplace
+      uid: 50b6dc35-21c8-4854-a510-afb85c08c73c
+    resourceVersion: "10739"
+    uid: 8a6b7ace-6dea-4f74-911e-c97dc07acc27
+  spec:
+    egress:
+    - ports:
+      - port: 6443
+        protocol: TCP
+    podSelector:
+      matchExpressions:
+      - key: operatorframework.io/bundle-unpack-ref
+        operator: Exists
+      - key: olm.managed
+        operator: In
+        values:
+        - "true"
+    policyTypes:
+    - Ingress
+    - Egress
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    generation: 1
+    labels:
+      olm.catalogSource: redhat-operators
+      olm.managed: "true"
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:olm.catalogSource: {}
+            f:olm.managed: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"28168737-f982-46d0-bd57-eae98968686c"}: {}
+        f:spec:
+          f:ingress: {}
+          f:podSelector: {}
+          f:policyTypes: {}
+      manager: catalog
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    name: redhat-operators-grpc-server
+    namespace: openshift-marketplace
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: CatalogSource
+      name: redhat-operators
+      uid: 28168737-f982-46d0-bd57-eae98968686c
+    resourceVersion: "10457"
+    uid: 1cd5dea4-7232-4aad-8a76-4ac2fdb97ac3
+  spec:
+    ingress:
+    - ports:
+      - port: 50051
+        protocol: TCP
+    podSelector:
+      matchLabels:
+        olm.catalogSource: redhat-operators
+        olm.managed: "true"
+    policyTypes:
+    - Ingress
+    - Egress
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    generation: 1
+    labels:
+      olm.catalogSource: redhat-operators
+      olm.managed: "true"
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:olm.catalogSource: {}
+            f:olm.managed: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"28168737-f982-46d0-bd57-eae98968686c"}: {}
+        f:spec:
+          f:egress: {}
+          f:podSelector: {}
+          f:policyTypes: {}
+      manager: catalog
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    name: redhat-operators-unpack-bundles
+    namespace: openshift-marketplace
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: CatalogSource
+      name: redhat-operators
+      uid: 28168737-f982-46d0-bd57-eae98968686c
+    resourceVersion: "10461"
+    uid: f73da821-aac9-4d24-b9c1-69fcb13fb86c
+  spec:
+    egress:
+    - ports:
+      - port: 6443
+        protocol: TCP
+    podSelector:
+      matchExpressions:
+      - key: operatorframework.io/bundle-unpack-ref
+        operator: Exists
+      - key: olm.managed
+        operator: In
+        values:
+        - "true"
+    policyTypes:
+    - Ingress
+    - Egress
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    annotations:
+      capability.openshift.io/name: marketplace
+      include.release.openshift.io/hypershift: "true"
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+      include.release.openshift.io/single-node-developer: "true"
+    creationTimestamp: "2026-01-28T09:32:05Z"
+    generation: 1
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:include.release.openshift.io/hypershift: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+            f:include.release.openshift.io/single-node-developer: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+        f:spec:
+          f:egress: {}
+          f:podSelector: {}
+          f:policyTypes: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2026-01-28T09:32:05Z"
+    name: unpack-bundles
+    namespace: openshift-marketplace
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      controller: true
+      kind: ClusterVersion
+      name: version
+      uid: 0370d296-6904-481d-ab90-157c7e5b835a
+    resourceVersion: "11068"
+    uid: 5fdb5b80-368f-4af5-8c92-56f687323d49
+  spec:
+    egress:
+    - ports:
+      - port: 6443
+        protocol: TCP
+    podSelector:
+      matchExpressions:
+      - key: operatorframework.io/bundle-unpack-ref
+        operator: Exists
+      - key: olm.managed
+        operator: In
+        values:
+        - "true"
+    policyTypes:
+    - Ingress
+    - Egress
+kind: NetworkPolicyList
+metadata:
+  resourceVersion: "35135"

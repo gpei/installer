@@ -1,0 +1,511 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2026-01-28T09:28:39Z"
+  generateName: network-operator-6596f47f7-
+  generation: 1
+  labels:
+    name: network-operator
+    pod-template-hash: 6596f47f7
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:name: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"ff4e3cfc-c0b3-4989-9afd-88513c59b6a1"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:podAntiAffinity:
+            .: {}
+            f:preferredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"network-operator"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"BOND_CNI_PLUGIN_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"CLI_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"CLOUD_NETWORK_CONFIG_CONTROLLER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"CNI_PLUGINS_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"EGRESS_ROUTER_CNI_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"FRR_K8S_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"KUBE_PROXY_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"KUBE_RBAC_PROXY_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"MULTUS_ADMISSION_CONTROLLER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"MULTUS_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"MULTUS_NETWORKPOLICY_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NETWORK_CHECK_SOURCE_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NETWORK_CHECK_TARGET_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NETWORK_METRICS_DAEMON_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NETWORK_OPERATOR_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NETWORKING_CONSOLE_PLUGIN_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OVN_CONTROLLER_INACTIVITY_PROBE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OVN_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OVN_NB_INACTIVITY_PROBE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OVN_NB_RAFT_ELECTION_TIMER"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OVN_NORTHD_PROBE_INTERVAL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OVN_SB_RAFT_ELECTION_TIMER"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"RELEASE_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ROUTE_OVERRRIDE_CNI_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"WHEREABOUTS_CNI_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9104,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kubernetes"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/var/run/secrets/serving-cert"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsNonRoot: {}
+          f:runAsUser: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"host-etc-kube"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"metrics-tls"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:optional: {}
+              f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2026-01-28T09:28:39Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.102.200"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:31:41Z"
+  name: network-operator-6596f47f7-sdg42
+  namespace: openshift-network-operator
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: network-operator-6596f47f7
+    uid: ff4e3cfc-c0b3-4989-9afd-88513c59b6a1
+  resourceVersion: "9448"
+  uid: 65b70738-1644-4944-bf06-124828dd8973
+spec:
+  affinity:
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - podAffinityTerm:
+          labelSelector:
+            matchLabels:
+              name: network-operator
+          topologyKey: kubernetes.io/hostname
+        weight: 100
+  containers:
+  - command:
+    - /bin/bash
+    - -c
+    - |
+      #!/bin/bash
+      set -o allexport
+      if [[ -f /etc/kubernetes/apiserver-url.env ]]; then
+        source /etc/kubernetes/apiserver-url.env
+      else
+        echo "Error: /etc/kubernetes/apiserver-url.env is missing"
+        exit 1
+      fi
+      exec /usr/bin/cluster-network-operator start --listen=0.0.0.0:9104
+    env:
+    - name: RELEASE_VERSION
+      value: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+    - name: KUBE_PROXY_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:2740aca26596483ce9333bedeb9805a90efc614a54c671ed7cdf25967c88645d
+    - name: KUBE_RBAC_PROXY_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+    - name: MULTUS_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:0cca4df2e32bbccd8d4fbb9dfa9e5da38cce49566dbfdd95bfb29622cba642cd
+    - name: MULTUS_ADMISSION_CONTROLLER_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:c745a7824df72a7a16acc1d384630cb7a5a317b2a4079ae053ecf4abce4785ea
+    - name: CNI_PLUGINS_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:7e0645fdd4a85c0bfda5083073b9fb5a0510dae53714eefeee2c6ba91826b831
+    - name: BOND_CNI_PLUGIN_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:454733fd181aace8613cae5f7cf9fcd2de5611445eeb0a78140e6ece467d123c
+    - name: WHEREABOUTS_CNI_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:b76ef910c8a1cb86aa50b11f659bb7dd777fb2f506ca92861d804f0234bcd832
+    - name: ROUTE_OVERRRIDE_CNI_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:5521bde2b6ea859e756b1e38fafd336461e31f852e9d702256343b5813bce97c
+    - name: MULTUS_NETWORKPOLICY_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:3d19c464e79f0b99c0779dbfbe07f99a88d011a0b3447b5ffe46d840c4b8a8c7
+    - name: OVN_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d732505bbda1adfc700e58ea8b52de16c3e511aaeedc03c6d1b932057b9b3f49
+    - name: OVN_NB_RAFT_ELECTION_TIMER
+      value: "10"
+    - name: OVN_SB_RAFT_ELECTION_TIMER
+      value: "16"
+    - name: OVN_NORTHD_PROBE_INTERVAL
+      value: "10000"
+    - name: OVN_CONTROLLER_INACTIVITY_PROBE
+      value: "180000"
+    - name: OVN_NB_INACTIVITY_PROBE
+      value: "60000"
+    - name: EGRESS_ROUTER_CNI_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a91e3de8081f371c9ff9f2f16619d915621264378f0c861e2ba1366f10053cb1
+    - name: NETWORK_METRICS_DAEMON_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d9bfae1f007c39d04a73292907669a1c0eb274202324001dd9363a0586bef1bc
+    - name: NETWORK_CHECK_SOURCE_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:96c9bdd179739c90f9361520b62eb77abd437b660682e9964960d59da029ea33
+    - name: NETWORK_CHECK_TARGET_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:96c9bdd179739c90f9361520b62eb77abd437b660682e9964960d59da029ea33
+    - name: NETWORK_OPERATOR_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:96c9bdd179739c90f9361520b62eb77abd437b660682e9964960d59da029ea33
+    - name: CLOUD_NETWORK_CONFIG_CONTROLLER_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:433e71999e326ef1d70ba325ed777289659ab8f2b1b659a6906aae5f4b511482
+    - name: CLI_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a
+    - name: FRR_K8S_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:56484d46497186d098432fa3b8ac9727f37f2a86373d8f784aef18dc88cf3cda
+    - name: NETWORKING_CONSOLE_PLUGIN_IMAGE
+      value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:144be6c7447f775d70368a593faa4a06558619097b5c9162579c7bc0e58af2d4
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:96c9bdd179739c90f9361520b62eb77abd437b660682e9964960d59da029ea33
+    imagePullPolicy: IfNotPresent
+    name: network-operator
+    ports:
+    - containerPort: 9104
+      hostPort: 9104
+      name: cno
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/kubernetes
+      name: host-etc-kube
+      readOnly: true
+    - mountPath: /var/run/secrets/serving-cert
+      name: metrics-tls
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-nlf5g
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  nodeName: ip-10-0-102-200.us-west-1.compute.internal
+  nodeSelector:
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 65534
+  serviceAccount: cluster-network-operator
+  serviceAccountName: cluster-network-operator
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/network-unavailable
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - hostPath:
+      path: /etc/kubernetes
+      type: Directory
+    name: host-etc-kube
+  - name: metrics-tls
+    secret:
+      defaultMode: 420
+      optional: true
+      secretName: metrics-tls
+  - name: kube-api-access-nlf5g
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:28:55Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:28:51Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:31:41Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:31:41Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:28:39Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - allocatedResources:
+      cpu: 10m
+      memory: 50Mi
+    containerID: cri-o://d11a52dc4aa014cf22db482d74f8a5eba57cf256fe6f0609edbadc3a8057e10d
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:96c9bdd179739c90f9361520b62eb77abd437b660682e9964960d59da029ea33
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:96c9bdd179739c90f9361520b62eb77abd437b660682e9964960d59da029ea33
+    lastState:
+      terminated:
+        containerID: cri-o://d2fc3a5a7cbb702b272beef61c75ad4f1fbeec2e34cbb4618bfeae87bcbfd5a5
+        exitCode: 0
+        finishedAt: "2026-01-28T09:31:30Z"
+        reason: Completed
+        startedAt: "2026-01-28T09:28:55Z"
+    name: network-operator
+    ready: true
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2026-01-28T09:31:40Z"
+    user:
+      linux:
+        gid: 65534
+        supplementalGroups:
+        - 65534
+        uid: 65534
+    volumeMounts:
+    - mountPath: /etc/kubernetes
+      name: host-etc-kube
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /var/run/secrets/serving-cert
+      name: metrics-tls
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-nlf5g
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 10.0.102.200
+  hostIPs:
+  - ip: 10.0.102.200
+  phase: Running
+  podIP: 10.0.102.200
+  podIPs:
+  - ip: 10.0.102.200
+  qosClass: Burstable
+  startTime: "2026-01-28T09:28:51Z"

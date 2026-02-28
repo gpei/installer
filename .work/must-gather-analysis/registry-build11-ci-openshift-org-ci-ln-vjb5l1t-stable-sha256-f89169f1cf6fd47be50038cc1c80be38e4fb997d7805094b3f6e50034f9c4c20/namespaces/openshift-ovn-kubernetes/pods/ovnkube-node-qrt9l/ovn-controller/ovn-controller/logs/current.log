@@ -1,0 +1,478 @@
+2026-01-28T09:29:58.464134129Z ++ K8S_NODE=ip-10-0-108-54.us-west-1.compute.internal
+2026-01-28T09:29:58.464241954Z ++ [[ -n ip-10-0-108-54.us-west-1.compute.internal ]]
+2026-01-28T09:29:58.464241954Z ++ [[ -f /env/ip-10-0-108-54.us-west-1.compute.internal ]]
+2026-01-28T09:29:58.464241954Z ++ northd_pidfile=/var/run/ovn/ovn-northd.pid
+2026-01-28T09:29:58.464241954Z ++ controller_pidfile=/var/run/ovn/ovn-controller.pid
+2026-01-28T09:29:58.464241954Z ++ controller_logfile=/var/log/ovn/acl-audit-log.log
+2026-01-28T09:29:58.464241954Z ++ vswitch_dbsock=/var/run/openvswitch/db.sock
+2026-01-28T09:29:58.464241954Z ++ nbdb_pidfile=/var/run/ovn/ovnnb_db.pid
+2026-01-28T09:29:58.464241954Z ++ nbdb_sock=/var/run/ovn/ovnnb_db.sock
+2026-01-28T09:29:58.464241954Z ++ nbdb_ctl=/var/run/ovn/ovnnb_db.ctl
+2026-01-28T09:29:58.464241954Z ++ sbdb_pidfile=/var/run/ovn/ovnsb_db.pid
+2026-01-28T09:29:58.464241954Z ++ sbdb_sock=/var/run/ovn/ovnsb_db.sock
+2026-01-28T09:29:58.464241954Z ++ sbdb_ctl=/var/run/ovn/ovnsb_db.ctl
+2026-01-28T09:29:58.465198941Z + start-ovn-controller info
+2026-01-28T09:29:58.465198941Z + local log_level=info
+2026-01-28T09:29:58.465218462Z + [[ 1 -ne 1 ]]
+2026-01-28T09:29:58.465510347Z ++ date -Iseconds
+2026-01-28T09:29:58.467293315Z + echo '2026-01-28T09:29:58+00:00 - starting ovn-controller'
+2026-01-28T09:29:58.467325696Z 2026-01-28T09:29:58+00:00 - starting ovn-controller
+2026-01-28T09:29:58.467356298Z + exec ovn-controller unix:/var/run/openvswitch/db.sock -vfile:off --no-chdir --pidfile=/var/run/ovn/ovn-controller.pid --syslog-method=null --log-file=/var/log/ovn/acl-audit-log.log -vFACILITY:local0 -vconsole:info -vconsole:acl_log:off '-vPATTERN:console:%D{%Y-%m-%dT%H:%M:%S.###Z}|%05N|%c%T|%p|%m' -vsyslog:acl_log:info -vfile:acl_log:info
+2026-01-28T09:29:58.470500993Z 2026-01-28T09:29:58Z|00001|vlog|INFO|opened log file /var/log/ovn/acl-audit-log.log
+2026-01-28T09:29:58.471830859Z 2026-01-28T09:29:58.471Z|00002|reconnect|INFO|unix:/var/run/openvswitch/db.sock: connecting...
+2026-01-28T09:29:58.471830859Z 2026-01-28T09:29:58.471Z|00003|reconnect|INFO|unix:/var/run/openvswitch/db.sock: connected
+2026-01-28T09:29:58.474107591Z 2026-01-28T09:29:58.474Z|00004|main|INFO|OVN internal version is : [25.03.2-20.41.0-78.8]
+2026-01-28T09:29:58.474107591Z 2026-01-28T09:29:58.474Z|00005|main|INFO|OVS IDL reconnected, force recompute.
+2026-01-28T09:29:58.474161994Z 2026-01-28T09:29:58.474Z|00006|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connecting...
+2026-01-28T09:29:58.474161994Z 2026-01-28T09:29:58.474Z|00007|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connection attempt failed (No such file or directory)
+2026-01-28T09:29:58.474161994Z 2026-01-28T09:29:58.474Z|00008|main|INFO|OVNSB IDL reconnected, force recompute.
+2026-01-28T09:29:58.474174994Z 2026-01-28T09:29:58.474Z|00009|ovn_util|INFO|statctrl: connecting to switch: "unix:/var/run/openvswitch/br-int.mgmt"
+2026-01-28T09:29:58.474174994Z 2026-01-28T09:29:58.474Z|00010|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2026-01-28T09:29:58.474218376Z 2026-01-28T09:29:58.474Z|00011|ovn_util|INFO|pinctrl: connecting to switch: "unix:/var/run/openvswitch/br-int.mgmt"
+2026-01-28T09:29:58.474261059Z 2026-01-28T09:29:58.474Z|00012|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2026-01-28T09:29:58.474496790Z 2026-01-28T09:29:58.474Z|00001|rconn(ovn_statctrl3)|INFO|unix:/var/run/openvswitch/br-int.mgmt: connected
+2026-01-28T09:29:58.474588595Z 2026-01-28T09:29:58.474Z|00001|rconn(ovn_pinctrl0)|INFO|unix:/var/run/openvswitch/br-int.mgmt: connected
+2026-01-28T09:29:59.475845116Z 2026-01-28T09:29:59.475Z|00013|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connecting...
+2026-01-28T09:29:59.475845116Z 2026-01-28T09:29:59.475Z|00014|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connection attempt failed (No such file or directory)
+2026-01-28T09:29:59.475845116Z 2026-01-28T09:29:59.475Z|00015|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: waiting 2 seconds before reconnect
+2026-01-28T09:30:01.478192271Z 2026-01-28T09:30:01.478Z|00016|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connecting...
+2026-01-28T09:30:01.478253004Z 2026-01-28T09:30:01.478Z|00017|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connected
+2026-01-28T09:30:01.480305045Z 2026-01-28T09:30:01.480Z|00018|ovn_util|INFO|features: connecting to switch: "unix:/var/run/openvswitch/br-int.mgmt"
+2026-01-28T09:30:01.480305045Z 2026-01-28T09:30:01.480Z|00019|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2026-01-28T09:30:01.480387929Z 2026-01-28T09:30:01.480Z|00020|features|INFO|OVS Feature: ct_zero_snat, state: supported
+2026-01-28T09:30:01.480387929Z 2026-01-28T09:30:01.480Z|00021|features|INFO|OVS Feature: ct_flush, state: supported
+2026-01-28T09:30:01.480387929Z 2026-01-28T09:30:01.480Z|00022|features|INFO|OVS Feature: dp_hash_l4_sym_support, state: supported
+2026-01-28T09:30:01.480437372Z 2026-01-28T09:30:01.480Z|00023|reconnect|INFO|unix:/var/run/openvswitch/db.sock: connecting...
+2026-01-28T09:30:01.480437372Z 2026-01-28T09:30:01.480Z|00024|main|INFO|OVS feature set changed, force recompute.
+2026-01-28T09:30:01.480437372Z 2026-01-28T09:30:01.480Z|00025|ovn_util|INFO|ofctrl: connecting to switch: "unix:/var/run/openvswitch/br-int.mgmt"
+2026-01-28T09:30:01.480437372Z 2026-01-28T09:30:01.480Z|00026|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2026-01-28T09:30:01.480864543Z 2026-01-28T09:30:01.480Z|00027|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connected
+2026-01-28T09:30:01.480864543Z 2026-01-28T09:30:01.480Z|00028|main|INFO|OVS OpenFlow connection reconnected,force recompute.
+2026-01-28T09:30:01.480919136Z 2026-01-28T09:30:01.480Z|00029|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connected
+2026-01-28T09:30:01.480995250Z 2026-01-28T09:30:01.480Z|00030|reconnect|INFO|unix:/var/run/openvswitch/db.sock: connected
+2026-01-28T09:30:01.481114916Z 2026-01-28T09:30:01.481Z|00031|features|INFO|OVS Feature: meter_support, state: supported
+2026-01-28T09:30:01.481131166Z 2026-01-28T09:30:01.481Z|00032|features|INFO|OVS Feature: group_support, state: supported
+2026-01-28T09:30:01.481131166Z 2026-01-28T09:30:01.481Z|00033|features|INFO|OVS Feature: sample_action_with_registers, state: supported
+2026-01-28T09:30:01.481175299Z 2026-01-28T09:30:01.481Z|00034|main|INFO|OVS feature set changed, force recompute.
+2026-01-28T09:30:01.481677593Z 2026-01-28T09:30:01.481Z|00035|features|INFO|OVS DB schema supports 4 flow table prefixes, our IDL supports: 4
+2026-01-28T09:30:01.487956543Z 2026-01-28T09:30:01.487Z|00036|features|INFO|OVS Feature: ct_label_flush, state: supported
+2026-01-28T09:30:01.487972844Z 2026-01-28T09:30:01.487Z|00037|main|INFO|OVS feature set changed, force recompute.
+2026-01-28T09:30:01.714652345Z 2026-01-28T09:30:01.714Z|00038|binding|INFO|Claiming lport rtoj-GR_ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:30:01.714652345Z 2026-01-28T09:30:01.714Z|00039|binding|INFO|rtoj-GR_ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:64:40:00:02 100.64.0.2/16
+2026-01-28T09:30:01.714685976Z 2026-01-28T09:30:01.714Z|00040|binding|INFO|Claiming lport jtor-GR_ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:30:01.714685976Z 2026-01-28T09:30:01.714Z|00041|binding|INFO|jtor-GR_ip-10-0-108-54.us-west-1.compute.internal: Claiming router
+2026-01-28T09:30:01.714685976Z 2026-01-28T09:30:01.714Z|00042|binding|INFO|Claiming lport etor-GR_ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:30:01.714685976Z 2026-01-28T09:30:01.714Z|00043|binding|INFO|etor-GR_ip-10-0-108-54.us-west-1.compute.internal: Claiming 06:74:b0:63:3b:53
+2026-01-28T09:30:01.714701617Z 2026-01-28T09:30:01.714Z|00044|binding|INFO|Claiming lport cr-stor-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:30:01.714701617Z 2026-01-28T09:30:01.714Z|00045|binding|INFO|cr-stor-ip-10-0-108-54.us-west-1.compute.internal: Claiming router
+2026-01-28T09:30:01.714708988Z 2026-01-28T09:30:01.714Z|00046|binding|INFO|Claiming lport rtoe-GR_ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:30:01.714708988Z 2026-01-28T09:30:01.714Z|00047|binding|INFO|rtoe-GR_ip-10-0-108-54.us-west-1.compute.internal: Claiming 06:74:b0:63:3b:53 10.0.108.54/18
+2026-01-28T09:30:01.714724709Z 2026-01-28T09:30:01.714Z|00048|binding|INFO|Claiming lport cr-rtos-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:30:01.714724709Z 2026-01-28T09:30:01.714Z|00049|binding|INFO|cr-rtos-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:01 10.130.0.1/23
+2026-01-28T09:30:01.731328658Z 2026-01-28T09:30:01.731Z|00050|binding|INFO|Setting lport cr-rtos-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:30:01.731385671Z 2026-01-28T09:30:01.731Z|00051|binding|INFO|Setting lport jtor-GR_ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:30:01.731385671Z 2026-01-28T09:30:01.731Z|00052|binding|INFO|Setting lport etor-GR_ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:30:01.731400412Z 2026-01-28T09:30:01.731Z|00053|binding|INFO|Setting lport cr-stor-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:30:01.731400412Z 2026-01-28T09:30:01.731Z|00054|binding|INFO|Setting lport rtoj-GR_ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:30:01.731410032Z 2026-01-28T09:30:01.731Z|00055|binding|INFO|Setting lport rtoe-GR_ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:30:05.890384349Z 2026-01-28T09:30:05.890Z|00056|binding|INFO|Claiming lport k8s-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:30:05.890384349Z 2026-01-28T09:30:05.890Z|00057|binding|INFO|k8s-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:02 10.130.0.2
+2026-01-28T09:30:05.899882230Z 2026-01-28T09:30:05.899Z|00058|binding|INFO|Setting lport k8s-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:30:05.899934302Z 2026-01-28T09:30:05.899Z|00059|binding|INFO|Setting lport k8s-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:30:08.930238720Z 2026-01-28T09:30:08.930Z|00060|memory|INFO|17920 kB peak resident set size after 10.5 seconds
+2026-01-28T09:30:08.930275712Z 2026-01-28T09:30:08.930Z|00061|memory|INFO|idl-cells-OVN_Southbound:10235 idl-cells-Open_vSwitch:528 if_status_mgr_ifaces_state_usage-KB:1 if_status_mgr_ifaces_usage-KB:2 lflow-cache-entries-cache-expr:181 lflow-cache-entries-cache-matches:491 lflow-cache-size-KB:715 local_datapath_usage-KB:1 ofctrl_desired_flow_usage-KB:407 ofctrl_installed_flow_usage-KB:304 ofctrl_sb_flow_ref_usage-KB:163
+2026-01-28T09:30:09.337437603Z 2026-01-28T09:30:09.337Z|00062|binding|INFO|Claiming lport openshift-kube-controller-manager-operator_kube-controller-manager-operator-644b4cd777-tgwmp for this chassis.
+2026-01-28T09:30:09.337496557Z 2026-01-28T09:30:09.337Z|00063|binding|INFO|openshift-kube-controller-manager-operator_kube-controller-manager-operator-644b4cd777-tgwmp: Claiming 0a:58:0a:82:00:20 10.130.0.32
+2026-01-28T09:30:09.346859980Z 2026-01-28T09:30:09.346Z|00064|binding|INFO|Setting lport openshift-kube-controller-manager-operator_kube-controller-manager-operator-644b4cd777-tgwmp ovn-installed in OVS
+2026-01-28T09:30:09.346924644Z 2026-01-28T09:30:09.346Z|00065|binding|INFO|Setting lport openshift-kube-controller-manager-operator_kube-controller-manager-operator-644b4cd777-tgwmp up in Southbound
+2026-01-28T09:30:09.353548442Z 2026-01-28T09:30:09.353Z|00066|binding|INFO|Claiming lport openshift-cluster-olm-operator_cluster-olm-operator-6b4797576b-g5m7z for this chassis.
+2026-01-28T09:30:09.353730591Z 2026-01-28T09:30:09.353Z|00067|binding|INFO|openshift-cluster-olm-operator_cluster-olm-operator-6b4797576b-g5m7z: Claiming 0a:58:0a:82:00:0c 10.130.0.12
+2026-01-28T09:30:09.365799639Z 2026-01-28T09:30:09.365Z|00068|binding|INFO|Setting lport openshift-cluster-olm-operator_cluster-olm-operator-6b4797576b-g5m7z ovn-installed in OVS
+2026-01-28T09:30:09.365850901Z 2026-01-28T09:30:09.365Z|00069|binding|INFO|Setting lport openshift-cluster-olm-operator_cluster-olm-operator-6b4797576b-g5m7z up in Southbound
+2026-01-28T09:30:09.658365753Z 2026-01-28T09:30:09.658Z|00070|binding|INFO|Claiming lport openshift-apiserver-operator_openshift-apiserver-operator-6dc4588658-dps9r for this chassis.
+2026-01-28T09:30:09.658414985Z 2026-01-28T09:30:09.658Z|00071|binding|INFO|openshift-apiserver-operator_openshift-apiserver-operator-6dc4588658-dps9r: Claiming 0a:58:0a:82:00:0d 10.130.0.13
+2026-01-28T09:30:09.659826935Z 2026-01-28T09:30:09.659Z|00072|if_status|INFO|Not updating pb chassis for openshift-kube-storage-version-migrator-operator_kube-storage-version-migrator-operator-fd7dc879c-k2xj9 now as sb is readonly
+2026-01-28T09:30:09.660866507Z 2026-01-28T09:30:09.660Z|00073|binding|INFO|Claiming lport openshift-kube-storage-version-migrator-operator_kube-storage-version-migrator-operator-fd7dc879c-k2xj9 for this chassis.
+2026-01-28T09:30:09.660866507Z 2026-01-28T09:30:09.660Z|00074|binding|INFO|openshift-kube-storage-version-migrator-operator_kube-storage-version-migrator-operator-fd7dc879c-k2xj9: Claiming 0a:58:0a:82:00:17 10.130.0.23
+2026-01-28T09:30:09.679955352Z 2026-01-28T09:30:09.679Z|00075|binding|INFO|Setting lport openshift-kube-storage-version-migrator-operator_kube-storage-version-migrator-operator-fd7dc879c-k2xj9 ovn-installed in OVS
+2026-01-28T09:30:09.680004005Z 2026-01-28T09:30:09.679Z|00076|binding|INFO|Setting lport openshift-kube-storage-version-migrator-operator_kube-storage-version-migrator-operator-fd7dc879c-k2xj9 up in Southbound
+2026-01-28T09:30:09.680067758Z 2026-01-28T09:30:09.680Z|00077|binding|INFO|Setting lport openshift-apiserver-operator_openshift-apiserver-operator-6dc4588658-dps9r ovn-installed in OVS
+2026-01-28T09:30:09.680099639Z 2026-01-28T09:30:09.680Z|00078|binding|INFO|Setting lport openshift-apiserver-operator_openshift-apiserver-operator-6dc4588658-dps9r up in Southbound
+2026-01-28T09:30:09.696804777Z 2026-01-28T09:30:09.696Z|00079|binding|INFO|Claiming lport openshift-authentication-operator_authentication-operator-7455db8cdd-mtphg for this chassis.
+2026-01-28T09:30:09.696852790Z 2026-01-28T09:30:09.696Z|00080|binding|INFO|openshift-authentication-operator_authentication-operator-7455db8cdd-mtphg: Claiming 0a:58:0a:82:00:0f 10.130.0.15
+2026-01-28T09:30:09.706747870Z 2026-01-28T09:30:09.706Z|00081|binding|INFO|Setting lport openshift-authentication-operator_authentication-operator-7455db8cdd-mtphg ovn-installed in OVS
+2026-01-28T09:30:09.706792352Z 2026-01-28T09:30:09.706Z|00082|binding|INFO|Setting lport openshift-authentication-operator_authentication-operator-7455db8cdd-mtphg up in Southbound
+2026-01-28T09:30:09.918944993Z 2026-01-28T09:30:09.917Z|00083|binding|INFO|Claiming lport openshift-kube-scheduler-operator_openshift-kube-scheduler-operator-658775bbff-4gb72 for this chassis.
+2026-01-28T09:30:09.918944993Z 2026-01-28T09:30:09.917Z|00084|binding|INFO|openshift-kube-scheduler-operator_openshift-kube-scheduler-operator-658775bbff-4gb72: Claiming 0a:58:0a:82:00:09 10.130.0.9
+2026-01-28T09:30:09.929617001Z 2026-01-28T09:30:09.929Z|00085|binding|INFO|Setting lport openshift-kube-scheduler-operator_openshift-kube-scheduler-operator-658775bbff-4gb72 ovn-installed in OVS
+2026-01-28T09:30:09.929674674Z 2026-01-28T09:30:09.929Z|00086|binding|INFO|Setting lport openshift-kube-scheduler-operator_openshift-kube-scheduler-operator-658775bbff-4gb72 up in Southbound
+2026-01-28T09:30:09.999123025Z 2026-01-28T09:30:09.998Z|00087|binding|INFO|Claiming lport openshift-controller-manager-operator_openshift-controller-manager-operator-67d5c6b9d6-wjn8f for this chassis.
+2026-01-28T09:30:09.999123025Z 2026-01-28T09:30:09.998Z|00088|binding|INFO|openshift-controller-manager-operator_openshift-controller-manager-operator-67d5c6b9d6-wjn8f: Claiming 0a:58:0a:82:00:0e 10.130.0.14
+2026-01-28T09:30:10.011622804Z 2026-01-28T09:30:10.011Z|00089|binding|INFO|Setting lport openshift-controller-manager-operator_openshift-controller-manager-operator-67d5c6b9d6-wjn8f ovn-installed in OVS
+2026-01-28T09:30:10.011622804Z 2026-01-28T09:30:10.011Z|00090|binding|INFO|Setting lport openshift-controller-manager-operator_openshift-controller-manager-operator-67d5c6b9d6-wjn8f up in Southbound
+2026-01-28T09:30:10.033931839Z 2026-01-28T09:30:10.033Z|00091|binding|INFO|Claiming lport openshift-service-ca-operator_service-ca-operator-7fc484fbbd-j2t4q for this chassis.
+2026-01-28T09:30:10.033979452Z 2026-01-28T09:30:10.033Z|00092|binding|INFO|openshift-service-ca-operator_service-ca-operator-7fc484fbbd-j2t4q: Claiming 0a:58:0a:82:00:11 10.130.0.17
+2026-01-28T09:30:10.043646971Z 2026-01-28T09:30:10.043Z|00093|binding|INFO|Setting lport openshift-service-ca-operator_service-ca-operator-7fc484fbbd-j2t4q up in Southbound
+2026-01-28T09:30:10.044206228Z 2026-01-28T09:30:10.044Z|00094|binding|INFO|Setting lport openshift-service-ca-operator_service-ca-operator-7fc484fbbd-j2t4q ovn-installed in OVS
+2026-01-28T09:30:10.142550961Z 2026-01-28T09:30:10.142Z|00095|binding|INFO|Claiming lport openshift-config-operator_openshift-config-operator-6ddf5984bb-xrwj6 for this chassis.
+2026-01-28T09:30:10.142598703Z 2026-01-28T09:30:10.142Z|00096|binding|INFO|openshift-config-operator_openshift-config-operator-6ddf5984bb-xrwj6: Claiming 0a:58:0a:82:00:1a 10.130.0.26
+2026-01-28T09:30:10.156274661Z 2026-01-28T09:30:10.156Z|00097|binding|INFO|Setting lport openshift-config-operator_openshift-config-operator-6ddf5984bb-xrwj6 ovn-installed in OVS
+2026-01-28T09:30:10.156321743Z 2026-01-28T09:30:10.156Z|00098|binding|INFO|Setting lport openshift-config-operator_openshift-config-operator-6ddf5984bb-xrwj6 up in Southbound
+2026-01-28T09:30:10.243522773Z 2026-01-28T09:30:10.243Z|00099|binding|INFO|Claiming lport openshift-console-operator_console-operator-5cfd85677c-vtxq2 for this chassis.
+2026-01-28T09:30:10.243570535Z 2026-01-28T09:30:10.243Z|00100|binding|INFO|openshift-console-operator_console-operator-5cfd85677c-vtxq2: Claiming 0a:58:0a:82:00:1d 10.130.0.29
+2026-01-28T09:30:10.255389411Z 2026-01-28T09:30:10.255Z|00101|binding|INFO|Setting lport openshift-console-operator_console-operator-5cfd85677c-vtxq2 ovn-installed in OVS
+2026-01-28T09:30:10.255389411Z 2026-01-28T09:30:10.255Z|00102|binding|INFO|Setting lport openshift-console-operator_console-operator-5cfd85677c-vtxq2 up in Southbound
+2026-01-28T09:30:10.345365178Z 2026-01-28T09:30:10.345Z|00103|binding|INFO|Claiming lport openshift-etcd-operator_etcd-operator-86dcff847c-dnhnc for this chassis.
+2026-01-28T09:30:10.345413561Z 2026-01-28T09:30:10.345Z|00104|binding|INFO|openshift-etcd-operator_etcd-operator-86dcff847c-dnhnc: Claiming 0a:58:0a:82:00:18 10.130.0.24
+2026-01-28T09:30:10.360390403Z 2026-01-28T09:30:10.360Z|00105|binding|INFO|Setting lport openshift-etcd-operator_etcd-operator-86dcff847c-dnhnc ovn-installed in OVS
+2026-01-28T09:30:10.360452986Z 2026-01-28T09:30:10.360Z|00106|binding|INFO|Setting lport openshift-etcd-operator_etcd-operator-86dcff847c-dnhnc up in Southbound
+2026-01-28T09:30:10.371391758Z 2026-01-28T09:30:10.371Z|00107|binding|INFO|Claiming lport openshift-kube-apiserver-operator_kube-apiserver-operator-766b8bd8b7-6fdbx for this chassis.
+2026-01-28T09:30:10.371435520Z 2026-01-28T09:30:10.371Z|00108|binding|INFO|openshift-kube-apiserver-operator_kube-apiserver-operator-766b8bd8b7-6fdbx: Claiming 0a:58:0a:82:00:19 10.130.0.25
+2026-01-28T09:30:10.384603202Z 2026-01-28T09:30:10.382Z|00109|binding|INFO|Setting lport openshift-kube-apiserver-operator_kube-apiserver-operator-766b8bd8b7-6fdbx ovn-installed in OVS
+2026-01-28T09:30:10.384603202Z 2026-01-28T09:30:10.382Z|00110|binding|INFO|Setting lport openshift-kube-apiserver-operator_kube-apiserver-operator-766b8bd8b7-6fdbx up in Southbound
+2026-01-28T09:30:10.513233735Z 2026-01-28T09:30:10.512Z|00111|binding|INFO|Claiming lport openshift-insights_insights-operator-c7975f6f-qbb65 for this chassis.
+2026-01-28T09:30:10.513233735Z 2026-01-28T09:30:10.512Z|00112|binding|INFO|openshift-insights_insights-operator-c7975f6f-qbb65: Claiming 0a:58:0a:82:00:27 10.130.0.39
+2026-01-28T09:30:10.526502582Z 2026-01-28T09:30:10.526Z|00113|binding|INFO|Setting lport openshift-insights_insights-operator-c7975f6f-qbb65 ovn-installed in OVS
+2026-01-28T09:30:10.526561505Z 2026-01-28T09:30:10.526Z|00114|binding|INFO|Setting lport openshift-insights_insights-operator-c7975f6f-qbb65 up in Southbound
+2026-01-28T09:30:10.529754793Z 2026-01-28T09:30:10.529Z|00115|binding|INFO|Claiming lport openshift-cloud-network-config-controller_cloud-network-config-controller-588c995bd4-l69fs for this chassis.
+2026-01-28T09:30:10.529795495Z 2026-01-28T09:30:10.529Z|00116|binding|INFO|openshift-cloud-network-config-controller_cloud-network-config-controller-588c995bd4-l69fs: Claiming 0a:58:0a:82:00:1b 10.130.0.27
+2026-01-28T09:30:10.543876133Z 2026-01-28T09:30:10.543Z|00117|binding|INFO|Setting lport openshift-cloud-network-config-controller_cloud-network-config-controller-588c995bd4-l69fs ovn-installed in OVS
+2026-01-28T09:30:10.544808559Z 2026-01-28T09:30:10.544Z|00118|binding|INFO|Setting lport openshift-cloud-network-config-controller_cloud-network-config-controller-588c995bd4-l69fs up in Southbound
+2026-01-28T09:30:10.552079179Z 2026-01-28T09:30:10.550Z|00119|binding|INFO|Claiming lport openshift-machine-config-operator_machine-config-nodes-crd-cleanup-29493207-hv2jm for this chassis.
+2026-01-28T09:30:10.552079179Z 2026-01-28T09:30:10.550Z|00120|binding|INFO|openshift-machine-config-operator_machine-config-nodes-crd-cleanup-29493207-hv2jm: Claiming 0a:58:0a:82:00:1c 10.130.0.28
+2026-01-28T09:30:10.563458863Z 2026-01-28T09:30:10.563Z|00121|binding|INFO|Setting lport openshift-machine-config-operator_machine-config-nodes-crd-cleanup-29493207-hv2jm ovn-installed in OVS
+2026-01-28T09:30:10.563458863Z 2026-01-28T09:30:10.563Z|00122|binding|INFO|Setting lport openshift-machine-config-operator_machine-config-nodes-crd-cleanup-29493207-hv2jm up in Southbound
+2026-01-28T09:30:31.532872742Z 2026-01-28T09:30:31.532Z|00123|binding|INFO|Claiming lport openshift-e2e-loki_event-exporter-867d8cd5d4-bh6zw for this chassis.
+2026-01-28T09:30:31.532926434Z 2026-01-28T09:30:31.532Z|00124|binding|INFO|openshift-e2e-loki_event-exporter-867d8cd5d4-bh6zw: Claiming 0a:58:0a:82:00:04 10.130.0.4
+2026-01-28T09:30:31.544372402Z 2026-01-28T09:30:31.544Z|00125|binding|INFO|Setting lport openshift-e2e-loki_event-exporter-867d8cd5d4-bh6zw ovn-installed in OVS
+2026-01-28T09:30:31.544420664Z 2026-01-28T09:30:31.544Z|00126|binding|INFO|Setting lport openshift-e2e-loki_event-exporter-867d8cd5d4-bh6zw up in Southbound
+2026-01-28T09:30:33.103352487Z 2026-01-28T09:30:33.103Z|00127|binding|INFO|Claiming lport openshift-network-diagnostics_network-check-target-dprgj for this chassis.
+2026-01-28T09:30:33.103396399Z 2026-01-28T09:30:33.103Z|00128|binding|INFO|openshift-network-diagnostics_network-check-target-dprgj: Claiming 0a:58:0a:82:00:06 10.130.0.6
+2026-01-28T09:30:33.123670083Z 2026-01-28T09:30:33.123Z|00129|binding|INFO|Setting lport openshift-network-diagnostics_network-check-target-dprgj ovn-installed in OVS
+2026-01-28T09:30:33.125845531Z 2026-01-28T09:30:33.125Z|00130|binding|INFO|Setting lport openshift-network-diagnostics_network-check-target-dprgj up in Southbound
+2026-01-28T09:30:44.105447355Z 2026-01-28T09:30:44.105Z|00131|binding|INFO|Claiming lport openshift-cluster-storage-operator_cluster-storage-operator-97b755d8c-z5w4v for this chassis.
+2026-01-28T09:30:44.105447355Z 2026-01-28T09:30:44.105Z|00132|binding|INFO|openshift-cluster-storage-operator_cluster-storage-operator-97b755d8c-z5w4v: Claiming 0a:58:0a:82:00:25 10.130.0.37
+2026-01-28T09:30:44.121675617Z 2026-01-28T09:30:44.121Z|00133|binding|INFO|Setting lport openshift-cluster-storage-operator_cluster-storage-operator-97b755d8c-z5w4v ovn-installed in OVS
+2026-01-28T09:30:44.121729949Z 2026-01-28T09:30:44.121Z|00134|binding|INFO|Setting lport openshift-cluster-storage-operator_cluster-storage-operator-97b755d8c-z5w4v up in Southbound
+2026-01-28T09:30:45.454503227Z 2026-01-28T09:30:45.454Z|00135|binding|INFO|Claiming lport openshift-cloud-credential-operator_cloud-credential-operator-68d5848f5d-22hx4 for this chassis.
+2026-01-28T09:30:45.454553410Z 2026-01-28T09:30:45.454Z|00136|binding|INFO|openshift-cloud-credential-operator_cloud-credential-operator-68d5848f5d-22hx4: Claiming 0a:58:0a:82:00:08 10.130.0.8
+2026-01-28T09:30:45.483269488Z 2026-01-28T09:30:45.483Z|00137|binding|INFO|Setting lport openshift-cloud-credential-operator_cloud-credential-operator-68d5848f5d-22hx4 ovn-installed in OVS
+2026-01-28T09:30:45.483320951Z 2026-01-28T09:30:45.483Z|00138|binding|INFO|Setting lport openshift-cloud-credential-operator_cloud-credential-operator-68d5848f5d-22hx4 up in Southbound
+2026-01-28T09:30:58.449545210Z 2026-01-28T09:30:58.449Z|00139|binding|INFO|Claiming lport openshift-apiserver_apiserver-bd64768ff-xqh89 for this chassis.
+2026-01-28T09:30:58.450107527Z 2026-01-28T09:30:58.450Z|00140|binding|INFO|openshift-apiserver_apiserver-bd64768ff-xqh89: Claiming 0a:58:0a:82:00:2a 10.130.0.42
+2026-01-28T09:30:58.464872518Z 2026-01-28T09:30:58.464Z|00141|binding|INFO|Setting lport openshift-apiserver_apiserver-bd64768ff-xqh89 ovn-installed in OVS
+2026-01-28T09:30:58.464919660Z 2026-01-28T09:30:58.464Z|00142|binding|INFO|Setting lport openshift-apiserver_apiserver-bd64768ff-xqh89 up in Southbound
+2026-01-28T09:31:05.165934996Z 2026-01-28T09:31:05.165Z|00143|binding|INFO|Claiming lport openshift-oauth-apiserver_apiserver-6b75d77bd5-jg7b5 for this chassis.
+2026-01-28T09:31:05.165986258Z 2026-01-28T09:31:05.165Z|00144|binding|INFO|openshift-oauth-apiserver_apiserver-6b75d77bd5-jg7b5: Claiming 0a:58:0a:82:00:2b 10.130.0.43
+2026-01-28T09:31:05.190655919Z 2026-01-28T09:31:05.190Z|00145|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-6b75d77bd5-jg7b5 ovn-installed in OVS
+2026-01-28T09:31:05.190714622Z 2026-01-28T09:31:05.190Z|00146|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-6b75d77bd5-jg7b5 up in Southbound
+2026-01-28T09:31:14.350203577Z 2026-01-28T09:31:14.350Z|00147|binding|INFO|Claiming lport openshift-machine-api_control-plane-machine-set-operator-6984f87f6d-bgmkr for this chassis.
+2026-01-28T09:31:14.350262430Z 2026-01-28T09:31:14.350Z|00148|binding|INFO|openshift-machine-api_control-plane-machine-set-operator-6984f87f6d-bgmkr: Claiming 0a:58:0a:82:00:0b 10.130.0.11
+2026-01-28T09:31:14.367971044Z 2026-01-28T09:31:14.367Z|00149|binding|INFO|Setting lport openshift-machine-api_control-plane-machine-set-operator-6984f87f6d-bgmkr ovn-installed in OVS
+2026-01-28T09:31:14.368124521Z 2026-01-28T09:31:14.368Z|00150|binding|INFO|Setting lport openshift-machine-api_control-plane-machine-set-operator-6984f87f6d-bgmkr up in Southbound
+2026-01-28T09:31:14.761979042Z 2026-01-28T09:31:14.761Z|00151|binding|INFO|Claiming lport openshift-multus_multus-admission-controller-6b8d9c4f54-97nl9 for this chassis.
+2026-01-28T09:31:14.761979042Z 2026-01-28T09:31:14.761Z|00152|binding|INFO|openshift-multus_multus-admission-controller-6b8d9c4f54-97nl9: Claiming 0a:58:0a:82:00:26 10.130.0.38
+2026-01-28T09:31:14.775539969Z 2026-01-28T09:31:14.775Z|00153|binding|INFO|Setting lport openshift-multus_multus-admission-controller-6b8d9c4f54-97nl9 up in Southbound
+2026-01-28T09:31:14.779064835Z 2026-01-28T09:31:14.778Z|00154|binding|INFO|Setting lport openshift-multus_multus-admission-controller-6b8d9c4f54-97nl9 ovn-installed in OVS
+2026-01-28T09:31:15.859765822Z 2026-01-28T09:31:15.859Z|00155|binding|INFO|Claiming lport openshift-machine-api_machine-api-operator-dbc848f6b-zd76d for this chassis.
+2026-01-28T09:31:15.863067677Z 2026-01-28T09:31:15.863Z|00156|binding|INFO|openshift-machine-api_machine-api-operator-dbc848f6b-zd76d: Claiming 0a:58:0a:82:00:15 10.130.0.21
+2026-01-28T09:31:15.937972186Z 2026-01-28T09:31:15.937Z|00157|binding|INFO|Setting lport openshift-machine-api_machine-api-operator-dbc848f6b-zd76d ovn-installed in OVS
+2026-01-28T09:31:15.938017169Z 2026-01-28T09:31:15.938Z|00158|binding|INFO|Setting lport openshift-machine-api_machine-api-operator-dbc848f6b-zd76d up in Southbound
+2026-01-28T09:31:16.017872415Z 2026-01-28T09:31:16.017Z|00159|binding|INFO|Claiming lport openshift-dns-operator_dns-operator-85d867fb6-m7hs7 for this chassis.
+2026-01-28T09:31:16.019173690Z 2026-01-28T09:31:16.019Z|00160|binding|INFO|openshift-dns-operator_dns-operator-85d867fb6-m7hs7: Claiming 0a:58:0a:82:00:16 10.130.0.22
+2026-01-28T09:31:16.083303321Z 2026-01-28T09:31:16.083Z|00161|binding|INFO|Setting lport openshift-dns-operator_dns-operator-85d867fb6-m7hs7 ovn-installed in OVS
+2026-01-28T09:31:16.083360554Z 2026-01-28T09:31:16.083Z|00162|binding|INFO|Setting lport openshift-dns-operator_dns-operator-85d867fb6-m7hs7 up in Southbound
+2026-01-28T09:31:16.109694269Z 2026-01-28T09:31:16.109Z|00163|binding|INFO|Claiming lport openshift-machine-api_cluster-autoscaler-operator-798d7b4d79-9pp48 for this chassis.
+2026-01-28T09:31:16.110065397Z 2026-01-28T09:31:16.110Z|00164|binding|INFO|openshift-machine-api_cluster-autoscaler-operator-798d7b4d79-9pp48: Claiming 0a:58:0a:82:00:0a 10.130.0.10
+2026-01-28T09:31:16.134390281Z 2026-01-28T09:31:16.134Z|00165|binding|INFO|Setting lport openshift-machine-api_cluster-autoscaler-operator-798d7b4d79-9pp48 ovn-installed in OVS
+2026-01-28T09:31:16.134435524Z 2026-01-28T09:31:16.134Z|00166|binding|INFO|Setting lport openshift-machine-api_cluster-autoscaler-operator-798d7b4d79-9pp48 up in Southbound
+2026-01-28T09:31:16.249898087Z 2026-01-28T09:31:16.249Z|00167|binding|INFO|Claiming lport openshift-cluster-csi-drivers_aws-ebs-csi-driver-controller-665c776b47-79zrq for this chassis.
+2026-01-28T09:31:16.249944150Z 2026-01-28T09:31:16.249Z|00168|binding|INFO|openshift-cluster-csi-drivers_aws-ebs-csi-driver-controller-665c776b47-79zrq: Claiming 0a:58:0a:82:00:2c 10.130.0.44
+2026-01-28T09:31:16.250002913Z 2026-01-28T09:31:16.249Z|00169|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_catalog-operator-56cd477f79-kvkgk for this chassis.
+2026-01-28T09:31:16.250063316Z 2026-01-28T09:31:16.250Z|00170|binding|INFO|openshift-operator-lifecycle-manager_catalog-operator-56cd477f79-kvkgk: Claiming 0a:58:0a:82:00:22 10.130.0.34
+2026-01-28T09:31:16.311175016Z 2026-01-28T09:31:16.310Z|00171|binding|INFO|Claiming lport openshift-monitoring_cluster-monitoring-operator-5f95799b88-rt4b7 for this chassis.
+2026-01-28T09:31:16.311175016Z 2026-01-28T09:31:16.310Z|00172|binding|INFO|openshift-monitoring_cluster-monitoring-operator-5f95799b88-rt4b7: Claiming 0a:58:0a:82:00:13 10.130.0.19
+2026-01-28T09:31:16.326067370Z 2026-01-28T09:31:16.322Z|00173|binding|INFO|Setting lport openshift-cluster-csi-drivers_aws-ebs-csi-driver-controller-665c776b47-79zrq ovn-installed in OVS
+2026-01-28T09:31:16.326067370Z 2026-01-28T09:31:16.322Z|00174|binding|INFO|Setting lport openshift-cluster-csi-drivers_aws-ebs-csi-driver-controller-665c776b47-79zrq up in Southbound
+2026-01-28T09:31:16.326067370Z 2026-01-28T09:31:16.322Z|00175|binding|INFO|Setting lport openshift-operator-lifecycle-manager_catalog-operator-56cd477f79-kvkgk ovn-installed in OVS
+2026-01-28T09:31:16.326067370Z 2026-01-28T09:31:16.322Z|00176|binding|INFO|Setting lport openshift-operator-lifecycle-manager_catalog-operator-56cd477f79-kvkgk up in Southbound
+2026-01-28T09:31:16.339385775Z 2026-01-28T09:31:16.339Z|00177|binding|INFO|Claiming lport openshift-cluster-storage-operator_csi-snapshot-controller-operator-694c5957bf-qjh54 for this chassis.
+2026-01-28T09:31:16.339385775Z 2026-01-28T09:31:16.339Z|00178|binding|INFO|openshift-cluster-storage-operator_csi-snapshot-controller-operator-694c5957bf-qjh54: Claiming 0a:58:0a:82:00:12 10.130.0.18
+2026-01-28T09:31:16.370575801Z 2026-01-28T09:31:16.370Z|00179|binding|INFO|Setting lport openshift-monitoring_cluster-monitoring-operator-5f95799b88-rt4b7 ovn-installed in OVS
+2026-01-28T09:31:16.370626794Z 2026-01-28T09:31:16.370Z|00180|binding|INFO|Setting lport openshift-monitoring_cluster-monitoring-operator-5f95799b88-rt4b7 up in Southbound
+2026-01-28T09:31:16.400694715Z 2026-01-28T09:31:16.400Z|00181|binding|INFO|Setting lport openshift-cluster-storage-operator_csi-snapshot-controller-operator-694c5957bf-qjh54 ovn-installed in OVS
+2026-01-28T09:31:16.400694715Z 2026-01-28T09:31:16.400Z|00182|binding|INFO|Setting lport openshift-cluster-storage-operator_csi-snapshot-controller-operator-694c5957bf-qjh54 up in Southbound
+2026-01-28T09:31:16.408946997Z 2026-01-28T09:31:16.403Z|00183|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_package-server-manager-86b5888bc9-h9m6s for this chassis.
+2026-01-28T09:31:16.408946997Z 2026-01-28T09:31:16.403Z|00184|binding|INFO|openshift-operator-lifecycle-manager_package-server-manager-86b5888bc9-h9m6s: Claiming 0a:58:0a:82:00:28 10.130.0.40
+2026-01-28T09:31:16.448653179Z 2026-01-28T09:31:16.448Z|00185|binding|INFO|Claiming lport openshift-marketplace_marketplace-operator-67d499c944-ncrv7 for this chassis.
+2026-01-28T09:31:16.448653179Z 2026-01-28T09:31:16.448Z|00186|binding|INFO|openshift-marketplace_marketplace-operator-67d499c944-ncrv7: Claiming 0a:58:0a:82:00:1f 10.130.0.31
+2026-01-28T09:31:16.449366274Z 2026-01-28T09:31:16.449Z|00187|binding|INFO|Setting lport openshift-operator-lifecycle-manager_package-server-manager-86b5888bc9-h9m6s ovn-installed in OVS
+2026-01-28T09:31:16.449366274Z 2026-01-28T09:31:16.449Z|00188|binding|INFO|Setting lport openshift-operator-lifecycle-manager_package-server-manager-86b5888bc9-h9m6s up in Southbound
+2026-01-28T09:31:16.466017156Z 2026-01-28T09:31:16.465Z|00189|binding|INFO|Setting lport openshift-marketplace_marketplace-operator-67d499c944-ncrv7 up in Southbound
+2026-01-28T09:31:16.471398814Z 2026-01-28T09:31:16.471Z|00190|binding|INFO|Claiming lport openshift-cluster-node-tuning-operator_cluster-node-tuning-operator-754dc6b9d-5ggbg for this chassis.
+2026-01-28T09:31:16.471449017Z 2026-01-28T09:31:16.471Z|00191|binding|INFO|openshift-cluster-node-tuning-operator_cluster-node-tuning-operator-754dc6b9d-5ggbg: Claiming 0a:58:0a:82:00:10 10.130.0.16
+2026-01-28T09:31:16.472349902Z 2026-01-28T09:31:16.472Z|00192|binding|INFO|Setting lport openshift-marketplace_marketplace-operator-67d499c944-ncrv7 ovn-installed in OVS
+2026-01-28T09:31:16.488514659Z 2026-01-28T09:31:16.488Z|00193|binding|INFO|Setting lport openshift-cluster-node-tuning-operator_cluster-node-tuning-operator-754dc6b9d-5ggbg ovn-installed in OVS
+2026-01-28T09:31:16.488514659Z 2026-01-28T09:31:16.488Z|00194|binding|INFO|Setting lport openshift-cluster-node-tuning-operator_cluster-node-tuning-operator-754dc6b9d-5ggbg up in Southbound
+2026-01-28T09:31:16.926539285Z 2026-01-28T09:31:16.926Z|00195|binding|INFO|Claiming lport openshift-machine-config-operator_machine-config-operator-84ddcf457d-wrwhn for this chassis.
+2026-01-28T09:31:16.926539285Z 2026-01-28T09:31:16.926Z|00196|binding|INFO|openshift-machine-config-operator_machine-config-operator-84ddcf457d-wrwhn: Claiming 0a:58:0a:82:00:24 10.130.0.36
+2026-01-28T09:31:16.974119049Z 2026-01-28T09:31:16.969Z|00197|binding|INFO|Setting lport openshift-machine-config-operator_machine-config-operator-84ddcf457d-wrwhn ovn-installed in OVS
+2026-01-28T09:31:16.974119049Z 2026-01-28T09:31:16.969Z|00198|binding|INFO|Setting lport openshift-machine-config-operator_machine-config-operator-84ddcf457d-wrwhn up in Southbound
+2026-01-28T09:31:17.058589156Z 2026-01-28T09:31:17.058Z|00199|binding|INFO|Claiming lport openshift-ingress-operator_ingress-operator-88b444456-2m8cz for this chassis.
+2026-01-28T09:31:17.058589156Z 2026-01-28T09:31:17.058Z|00200|binding|INFO|openshift-ingress-operator_ingress-operator-88b444456-2m8cz: Claiming 0a:58:0a:82:00:23 10.130.0.35
+2026-01-28T09:31:17.077592215Z 2026-01-28T09:31:17.077Z|00201|binding|INFO|Setting lport openshift-ingress-operator_ingress-operator-88b444456-2m8cz ovn-installed in OVS
+2026-01-28T09:31:17.078498520Z 2026-01-28T09:31:17.078Z|00202|binding|INFO|Setting lport openshift-ingress-operator_ingress-operator-88b444456-2m8cz up in Southbound
+2026-01-28T09:31:17.094809464Z 2026-01-28T09:31:17.094Z|00203|binding|INFO|Claiming lport openshift-multus_multus-admission-controller-6b8d9c4f54-btbbx for this chassis.
+2026-01-28T09:31:17.096177093Z 2026-01-28T09:31:17.096Z|00204|binding|INFO|openshift-multus_multus-admission-controller-6b8d9c4f54-btbbx: Claiming 0a:58:0a:82:00:1e 10.130.0.30
+2026-01-28T09:31:17.119073876Z 2026-01-28T09:31:17.119Z|00205|binding|INFO|Claiming lport openshift-image-registry_cluster-image-registry-operator-66fd95cf54-qq4b6 for this chassis.
+2026-01-28T09:31:17.119118398Z 2026-01-28T09:31:17.119Z|00206|binding|INFO|openshift-image-registry_cluster-image-registry-operator-66fd95cf54-qq4b6: Claiming 0a:58:0a:82:00:14 10.130.0.20
+2026-01-28T09:31:17.120473165Z 2026-01-28T09:31:17.120Z|00207|binding|INFO|Setting lport openshift-multus_multus-admission-controller-6b8d9c4f54-btbbx ovn-installed in OVS
+2026-01-28T09:31:17.120513468Z 2026-01-28T09:31:17.120Z|00208|binding|INFO|Setting lport openshift-multus_multus-admission-controller-6b8d9c4f54-btbbx up in Southbound
+2026-01-28T09:31:17.145626581Z 2026-01-28T09:31:17.145Z|00209|binding|INFO|Setting lport openshift-image-registry_cluster-image-registry-operator-66fd95cf54-qq4b6 ovn-installed in OVS
+2026-01-28T09:31:17.145669333Z 2026-01-28T09:31:17.145Z|00210|binding|INFO|Setting lport openshift-image-registry_cluster-image-registry-operator-66fd95cf54-qq4b6 up in Southbound
+2026-01-28T09:31:17.154216010Z 2026-01-28T09:31:17.154Z|00211|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_olm-operator-5d9c556fd5-rdwmw for this chassis.
+2026-01-28T09:31:17.154265492Z 2026-01-28T09:31:17.154Z|00212|binding|INFO|openshift-operator-lifecycle-manager_olm-operator-5d9c556fd5-rdwmw: Claiming 0a:58:0a:82:00:21 10.130.0.33
+2026-01-28T09:31:17.185483741Z 2026-01-28T09:31:17.185Z|00213|binding|INFO|Setting lport openshift-operator-lifecycle-manager_olm-operator-5d9c556fd5-rdwmw ovn-installed in OVS
+2026-01-28T09:31:17.185530513Z 2026-01-28T09:31:17.185Z|00214|binding|INFO|Setting lport openshift-operator-lifecycle-manager_olm-operator-5d9c556fd5-rdwmw up in Southbound
+2026-01-28T09:31:17.213802334Z 2026-01-28T09:31:17.213Z|00215|binding|INFO|Claiming lport openshift-machine-api_cluster-baremetal-operator-d6d4db7c7-jltnv for this chassis.
+2026-01-28T09:31:17.213845687Z 2026-01-28T09:31:17.213Z|00216|binding|INFO|openshift-machine-api_cluster-baremetal-operator-d6d4db7c7-jltnv: Claiming 0a:58:0a:82:00:07 10.130.0.7
+2026-01-28T09:31:17.249828533Z 2026-01-28T09:31:17.246Z|00217|binding|INFO|Setting lport openshift-machine-api_cluster-baremetal-operator-d6d4db7c7-jltnv ovn-installed in OVS
+2026-01-28T09:31:17.249828533Z 2026-01-28T09:31:17.246Z|00218|binding|INFO|Setting lport openshift-machine-api_cluster-baremetal-operator-d6d4db7c7-jltnv up in Southbound
+2026-01-28T09:31:52.207824571Z 2026-01-28T09:31:52.207Z|00219|binding|INFO|Claiming lport openshift-multus_network-metrics-daemon-wsgb8 for this chassis.
+2026-01-28T09:31:52.207874194Z 2026-01-28T09:31:52.207Z|00220|binding|INFO|openshift-multus_network-metrics-daemon-wsgb8: Claiming 0a:58:0a:82:00:03 10.130.0.3
+2026-01-28T09:31:52.227994869Z 2026-01-28T09:31:52.227Z|00221|binding|INFO|Setting lport openshift-multus_network-metrics-daemon-wsgb8 ovn-installed in OVS
+2026-01-28T09:31:52.228992989Z 2026-01-28T09:31:52.228Z|00222|binding|INFO|Setting lport openshift-multus_network-metrics-daemon-wsgb8 up in Southbound
+2026-01-28T09:31:56.306277524Z 2026-01-28T09:31:56.306Z|00223|binding|INFO|Releasing lport openshift-cluster-csi-drivers_aws-ebs-csi-driver-controller-665c776b47-79zrq from this chassis (sb_readonly=0)
+2026-01-28T09:31:56.306327807Z 2026-01-28T09:31:56.306Z|00224|binding|INFO|Setting lport openshift-cluster-csi-drivers_aws-ebs-csi-driver-controller-665c776b47-79zrq down in Southbound
+2026-01-28T09:32:01.157113579Z 2026-01-28T09:32:01.157Z|00225|binding|INFO|Releasing lport openshift-machine-config-operator_machine-config-nodes-crd-cleanup-29493207-hv2jm from this chassis (sb_readonly=0)
+2026-01-28T09:32:01.157179212Z 2026-01-28T09:32:01.157Z|00226|binding|INFO|Setting lport openshift-machine-config-operator_machine-config-nodes-crd-cleanup-29493207-hv2jm down in Southbound
+2026-01-28T09:32:02.282326515Z 2026-01-28T09:32:02.278Z|00227|binding|INFO|Claiming lport openshift-dns_dns-default-bmdsx for this chassis.
+2026-01-28T09:32:02.282326515Z 2026-01-28T09:32:02.278Z|00228|binding|INFO|openshift-dns_dns-default-bmdsx: Claiming 0a:58:0a:82:00:2d 10.130.0.45
+2026-01-28T09:32:02.330669157Z 2026-01-28T09:32:02.330Z|00229|binding|INFO|Setting lport openshift-dns_dns-default-bmdsx ovn-installed in OVS
+2026-01-28T09:32:02.330729550Z 2026-01-28T09:32:02.330Z|00230|binding|INFO|Setting lport openshift-dns_dns-default-bmdsx up in Southbound
+2026-01-28T09:32:02.469518377Z 2026-01-28T09:32:02.469Z|00231|binding|INFO|Claiming lport openshift-cluster-storage-operator_csi-snapshot-controller-5565fccc6c-gpxnz for this chassis.
+2026-01-28T09:32:02.469518377Z 2026-01-28T09:32:02.469Z|00232|binding|INFO|openshift-cluster-storage-operator_csi-snapshot-controller-5565fccc6c-gpxnz: Claiming 0a:58:0a:82:00:2e 10.130.0.46
+2026-01-28T09:32:02.519336552Z 2026-01-28T09:32:02.516Z|00233|binding|INFO|Setting lport openshift-cluster-storage-operator_csi-snapshot-controller-5565fccc6c-gpxnz ovn-installed in OVS
+2026-01-28T09:32:02.519336552Z 2026-01-28T09:32:02.516Z|00234|binding|INFO|Setting lport openshift-cluster-storage-operator_csi-snapshot-controller-5565fccc6c-gpxnz up in Southbound
+2026-01-28T09:32:02.591814878Z 2026-01-28T09:32:02.591Z|00235|binding|INFO|Claiming lport openshift-multus_multus-admission-controller-7d8778c98d-cxcq9 for this chassis.
+2026-01-28T09:32:02.591814878Z 2026-01-28T09:32:02.591Z|00236|binding|INFO|openshift-multus_multus-admission-controller-7d8778c98d-cxcq9: Claiming 0a:58:0a:82:00:30 10.130.0.48
+2026-01-28T09:32:02.613123273Z 2026-01-28T09:32:02.613Z|00237|binding|INFO|Setting lport openshift-multus_multus-admission-controller-7d8778c98d-cxcq9 ovn-installed in OVS
+2026-01-28T09:32:02.613123273Z 2026-01-28T09:32:02.613Z|00238|binding|INFO|Setting lport openshift-multus_multus-admission-controller-7d8778c98d-cxcq9 up in Southbound
+2026-01-28T09:32:02.669413578Z 2026-01-28T09:32:02.669Z|00239|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_packageserver-656f88d5c4-56qbd for this chassis.
+2026-01-28T09:32:02.669459480Z 2026-01-28T09:32:02.669Z|00240|binding|INFO|openshift-operator-lifecycle-manager_packageserver-656f88d5c4-56qbd: Claiming 0a:58:0a:82:00:2f 10.130.0.47
+2026-01-28T09:32:02.696906349Z 2026-01-28T09:32:02.696Z|00241|binding|INFO|Setting lport openshift-operator-lifecycle-manager_packageserver-656f88d5c4-56qbd ovn-installed in OVS
+2026-01-28T09:32:02.696956291Z 2026-01-28T09:32:02.696Z|00242|binding|INFO|Setting lport openshift-operator-lifecycle-manager_packageserver-656f88d5c4-56qbd up in Southbound
+2026-01-28T09:32:28.244445757Z 2026-01-28T09:32:28.244Z|00243|binding|INFO|Claiming lport openshift-e2e-loki_loki-promtail-nzxsc for this chassis.
+2026-01-28T09:32:28.245263058Z 2026-01-28T09:32:28.244Z|00244|binding|INFO|openshift-e2e-loki_loki-promtail-nzxsc: Claiming 0a:58:0a:82:00:05 10.130.0.5
+2026-01-28T09:32:28.286260939Z 2026-01-28T09:32:28.286Z|00245|binding|INFO|Setting lport openshift-e2e-loki_loki-promtail-nzxsc ovn-installed in OVS
+2026-01-28T09:32:28.286260939Z 2026-01-28T09:32:28.286Z|00246|binding|INFO|Setting lport openshift-e2e-loki_loki-promtail-nzxsc up in Southbound
+2026-01-28T09:32:33.696305418Z 2026-01-28T09:32:33.696Z|00247|binding|INFO|Releasing lport openshift-multus_multus-admission-controller-6b8d9c4f54-btbbx from this chassis (sb_readonly=0)
+2026-01-28T09:32:33.696357990Z 2026-01-28T09:32:33.696Z|00248|binding|INFO|Setting lport openshift-multus_multus-admission-controller-6b8d9c4f54-btbbx down in Southbound
+2026-01-28T09:32:35.503632688Z 2026-01-28T09:32:35.503Z|00249|binding|INFO|Releasing lport openshift-multus_multus-admission-controller-6b8d9c4f54-97nl9 from this chassis (sb_readonly=0)
+2026-01-28T09:32:35.503684891Z 2026-01-28T09:32:35.503Z|00250|binding|INFO|Setting lport openshift-multus_multus-admission-controller-6b8d9c4f54-97nl9 down in Southbound
+2026-01-28T09:32:50.169775347Z 2026-01-28T09:32:50.164Z|00251|binding|INFO|Claiming lport openshift-cluster-csi-drivers_aws-ebs-csi-driver-controller-5cbc97cfdb-cf4f6 for this chassis.
+2026-01-28T09:32:50.169775347Z 2026-01-28T09:32:50.164Z|00252|binding|INFO|openshift-cluster-csi-drivers_aws-ebs-csi-driver-controller-5cbc97cfdb-cf4f6: Claiming 0a:58:0a:82:00:31 10.130.0.49
+2026-01-28T09:32:50.227696971Z 2026-01-28T09:32:50.227Z|00253|binding|INFO|Setting lport openshift-cluster-csi-drivers_aws-ebs-csi-driver-controller-5cbc97cfdb-cf4f6 ovn-installed in OVS
+2026-01-28T09:32:50.227696971Z 2026-01-28T09:32:50.227Z|00254|binding|INFO|Setting lport openshift-cluster-csi-drivers_aws-ebs-csi-driver-controller-5cbc97cfdb-cf4f6 up in Southbound
+2026-01-28T09:33:05.893513887Z 2026-01-28T09:33:05.889Z|00255|binding|INFO|Claiming lport openshift-etcd_installer-1-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:33:05.893513887Z 2026-01-28T09:33:05.889Z|00256|binding|INFO|openshift-etcd_installer-1-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:32 10.130.0.50
+2026-01-28T09:33:05.933007694Z 2026-01-28T09:33:05.932Z|00257|binding|INFO|Setting lport openshift-etcd_installer-1-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:33:05.933007694Z 2026-01-28T09:33:05.932Z|00258|binding|INFO|Setting lport openshift-etcd_installer-1-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:33:21.349218421Z 2026-01-28T09:33:21.345Z|00259|binding|INFO|Claiming lport openshift-etcd_installer-2-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:33:21.349218421Z 2026-01-28T09:33:21.345Z|00260|binding|INFO|openshift-etcd_installer-2-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:33 10.130.0.51
+2026-01-28T09:33:21.396800743Z 2026-01-28T09:33:21.396Z|00261|binding|INFO|Setting lport openshift-etcd_installer-2-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:33:21.396863736Z 2026-01-28T09:33:21.396Z|00262|binding|INFO|Setting lport openshift-etcd_installer-2-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:33:28.726334129Z 2026-01-28T09:33:28.726Z|00263|binding|INFO|Releasing lport openshift-etcd_installer-2-ip-10-0-108-54.us-west-1.compute.internal from this chassis (sb_readonly=0)
+2026-01-28T09:33:28.726398832Z 2026-01-28T09:33:28.726Z|00264|binding|INFO|Setting lport openshift-etcd_installer-2-ip-10-0-108-54.us-west-1.compute.internal down in Southbound
+2026-01-28T09:33:32.349932441Z 2026-01-28T09:33:32.349Z|00265|binding|INFO|Claiming lport openshift-etcd_installer-3-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:33:32.349932441Z 2026-01-28T09:33:32.349Z|00266|binding|INFO|openshift-etcd_installer-3-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:34 10.130.0.52
+2026-01-28T09:33:32.390798736Z 2026-01-28T09:33:32.390Z|00267|binding|INFO|Setting lport openshift-etcd_installer-3-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:33:32.390798736Z 2026-01-28T09:33:32.390Z|00268|binding|INFO|Setting lport openshift-etcd_installer-3-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:33:36.918752017Z 2026-01-28T09:33:36.918Z|00269|binding|INFO|Releasing lport openshift-etcd_installer-1-ip-10-0-108-54.us-west-1.compute.internal from this chassis (sb_readonly=0)
+2026-01-28T09:33:36.918812850Z 2026-01-28T09:33:36.918Z|00270|binding|INFO|Setting lport openshift-etcd_installer-1-ip-10-0-108-54.us-west-1.compute.internal down in Southbound
+2026-01-28T09:33:53.680943722Z 2026-01-28T09:33:53.680Z|00271|binding|INFO|Releasing lport openshift-oauth-apiserver_apiserver-6b75d77bd5-jg7b5 from this chassis (sb_readonly=0)
+2026-01-28T09:33:53.681002595Z 2026-01-28T09:33:53.680Z|00272|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-6b75d77bd5-jg7b5 down in Southbound
+2026-01-28T09:33:54.250505627Z 2026-01-28T09:33:54.245Z|00273|binding|INFO|Claiming lport openshift-oauth-apiserver_apiserver-68468f9d85-q6v5m for this chassis.
+2026-01-28T09:33:54.250505627Z 2026-01-28T09:33:54.245Z|00274|binding|INFO|openshift-oauth-apiserver_apiserver-68468f9d85-q6v5m: Claiming 0a:58:0a:82:00:35 10.130.0.53
+2026-01-28T09:33:54.286360473Z 2026-01-28T09:33:54.286Z|00275|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-68468f9d85-q6v5m ovn-installed in OVS
+2026-01-28T09:33:54.286360473Z 2026-01-28T09:33:54.286Z|00276|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-68468f9d85-q6v5m up in Southbound
+2026-01-28T09:34:00.213919254Z 2026-01-28T09:34:00.213Z|00277|binding|INFO|Claiming lport openshift-kube-scheduler_installer-4-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:34:00.213972767Z 2026-01-28T09:34:00.213Z|00278|binding|INFO|openshift-kube-scheduler_installer-4-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:36 10.130.0.54
+2026-01-28T09:34:00.264695684Z 2026-01-28T09:34:00.264Z|00279|binding|INFO|Setting lport openshift-kube-scheduler_installer-4-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:34:00.264695684Z 2026-01-28T09:34:00.264Z|00280|binding|INFO|Setting lport openshift-kube-scheduler_installer-4-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:34:15.709409520Z 2026-01-28T09:34:15.709Z|00281|binding|INFO|Releasing lport openshift-etcd_installer-3-ip-10-0-108-54.us-west-1.compute.internal from this chassis (sb_readonly=0)
+2026-01-28T09:34:15.709751887Z 2026-01-28T09:34:15.709Z|00282|binding|INFO|Setting lport openshift-etcd_installer-3-ip-10-0-108-54.us-west-1.compute.internal down in Southbound
+2026-01-28T09:34:23.555102958Z 2026-01-28T09:34:23.547Z|00283|binding|INFO|Claiming lport openshift-etcd_etcd-guard-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:34:23.555102958Z 2026-01-28T09:34:23.547Z|00284|binding|INFO|openshift-etcd_etcd-guard-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:37 10.130.0.55
+2026-01-28T09:34:23.589704953Z 2026-01-28T09:34:23.589Z|00285|binding|INFO|Setting lport openshift-etcd_etcd-guard-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:34:23.589765386Z 2026-01-28T09:34:23.589Z|00286|binding|INFO|Setting lport openshift-etcd_etcd-guard-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:34:32.806112747Z 2026-01-28T09:34:32.806Z|00287|binding|INFO|Releasing lport openshift-kube-scheduler_installer-4-ip-10-0-108-54.us-west-1.compute.internal from this chassis (sb_readonly=0)
+2026-01-28T09:34:32.806600212Z 2026-01-28T09:34:32.806Z|00288|binding|INFO|Setting lport openshift-kube-scheduler_installer-4-ip-10-0-108-54.us-west-1.compute.internal down in Southbound
+2026-01-28T09:34:35.789934995Z 2026-01-28T09:34:35.789Z|00289|binding|INFO|Claiming lport openshift-kube-scheduler_openshift-kube-scheduler-guard-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:34:35.789934995Z 2026-01-28T09:34:35.789Z|00290|binding|INFO|openshift-kube-scheduler_openshift-kube-scheduler-guard-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:38 10.130.0.56
+2026-01-28T09:34:35.838200501Z 2026-01-28T09:34:35.838Z|00291|binding|INFO|Setting lport openshift-kube-scheduler_openshift-kube-scheduler-guard-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:34:35.838264595Z 2026-01-28T09:34:35.838Z|00292|binding|INFO|Setting lport openshift-kube-scheduler_openshift-kube-scheduler-guard-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:35:01.595134170Z 2026-01-28T09:35:01.595Z|00293|binding|INFO|Claiming lport openshift-kube-scheduler_installer-5-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:35:01.595203754Z 2026-01-28T09:35:01.595Z|00294|binding|INFO|openshift-kube-scheduler_installer-5-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:39 10.130.0.57
+2026-01-28T09:35:01.658428554Z 2026-01-28T09:35:01.658Z|00295|binding|INFO|Setting lport openshift-kube-scheduler_installer-5-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:35:01.658486957Z 2026-01-28T09:35:01.658Z|00296|binding|INFO|Setting lport openshift-kube-scheduler_installer-5-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:35:35.127879898Z 2026-01-28T09:35:35.127Z|00297|binding|INFO|Releasing lport openshift-kube-scheduler_installer-5-ip-10-0-108-54.us-west-1.compute.internal from this chassis (sb_readonly=0)
+2026-01-28T09:35:35.127939731Z 2026-01-28T09:35:35.127Z|00298|binding|INFO|Setting lport openshift-kube-scheduler_installer-5-ip-10-0-108-54.us-west-1.compute.internal down in Southbound
+2026-01-28T09:35:53.750900087Z 2026-01-28T09:35:53.750Z|00299|binding|INFO|Releasing lport openshift-apiserver_apiserver-bd64768ff-xqh89 from this chassis (sb_readonly=0)
+2026-01-28T09:35:53.750979441Z 2026-01-28T09:35:53.750Z|00300|binding|INFO|Setting lport openshift-apiserver_apiserver-bd64768ff-xqh89 down in Southbound
+2026-01-28T09:35:54.372467125Z 2026-01-28T09:35:54.372Z|00301|binding|INFO|Claiming lport openshift-apiserver_apiserver-78df49b6c5-xszw4 for this chassis.
+2026-01-28T09:35:54.372796161Z 2026-01-28T09:35:54.372Z|00302|binding|INFO|openshift-apiserver_apiserver-78df49b6c5-xszw4: Claiming 0a:58:0a:82:00:3a 10.130.0.58
+2026-01-28T09:35:54.412596362Z 2026-01-28T09:35:54.412Z|00303|binding|INFO|Setting lport openshift-apiserver_apiserver-78df49b6c5-xszw4 ovn-installed in OVS
+2026-01-28T09:35:54.412596362Z 2026-01-28T09:35:54.412Z|00304|binding|INFO|Setting lport openshift-apiserver_apiserver-78df49b6c5-xszw4 up in Southbound
+2026-01-28T09:36:08.581935985Z 2026-01-28T09:36:08.581Z|00305|binding|INFO|Claiming lport openshift-kube-controller-manager_installer-5-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:36:08.582005578Z 2026-01-28T09:36:08.581Z|00306|binding|INFO|openshift-kube-controller-manager_installer-5-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:3b 10.130.0.59
+2026-01-28T09:36:08.627072627Z 2026-01-28T09:36:08.627Z|00307|binding|INFO|Setting lport openshift-kube-controller-manager_installer-5-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:36:08.627144890Z 2026-01-28T09:36:08.627Z|00308|binding|INFO|Setting lport openshift-kube-controller-manager_installer-5-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:36:39.634500580Z 2026-01-28T09:36:39.634Z|00309|binding|INFO|Claiming lport openshift-kube-apiserver_installer-1-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:36:39.634565883Z 2026-01-28T09:36:39.634Z|00310|binding|INFO|openshift-kube-apiserver_installer-1-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:3c 10.130.0.60
+2026-01-28T09:36:39.677587232Z 2026-01-28T09:36:39.677Z|00311|binding|INFO|Setting lport openshift-kube-apiserver_installer-1-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:36:39.677587232Z 2026-01-28T09:36:39.677Z|00312|binding|INFO|Setting lport openshift-kube-apiserver_installer-1-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:36:43.359398565Z 2026-01-28T09:36:43.359Z|00313|physical|WARN|Failed to locate tunnel to reach main chassis b05dcdea-d287-4be2-9713-b19b15f2a77d for port tstor-ip-10-0-78-215.us-west-1.compute.internal.
+2026-01-28T09:36:43.487101955Z 2026-01-28T09:36:43.486Z|00314|binding|INFO|Releasing lport openshift-kube-controller-manager_installer-5-ip-10-0-108-54.us-west-1.compute.internal from this chassis (sb_readonly=0)
+2026-01-28T09:36:43.487101955Z 2026-01-28T09:36:43.486Z|00315|binding|INFO|Setting lport openshift-kube-controller-manager_installer-5-ip-10-0-108-54.us-west-1.compute.internal down in Southbound
+2026-01-28T09:36:45.551875037Z 2026-01-28T09:36:45.550Z|00316|binding|INFO|Releasing lport openshift-oauth-apiserver_apiserver-68468f9d85-q6v5m from this chassis (sb_readonly=0)
+2026-01-28T09:36:45.551875037Z 2026-01-28T09:36:45.550Z|00317|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-68468f9d85-q6v5m down in Southbound
+2026-01-28T09:36:46.123610064Z 2026-01-28T09:36:46.123Z|00318|binding|INFO|Claiming lport openshift-oauth-apiserver_apiserver-7b48d6dccd-mld8c for this chassis.
+2026-01-28T09:36:46.123668517Z 2026-01-28T09:36:46.123Z|00319|binding|INFO|openshift-oauth-apiserver_apiserver-7b48d6dccd-mld8c: Claiming 0a:58:0a:82:00:3e 10.130.0.62
+2026-01-28T09:36:46.171195969Z 2026-01-28T09:36:46.171Z|00320|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-7b48d6dccd-mld8c ovn-installed in OVS
+2026-01-28T09:36:46.171262272Z 2026-01-28T09:36:46.171Z|00321|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-7b48d6dccd-mld8c up in Southbound
+2026-01-28T09:36:50.085544121Z 2026-01-28T09:36:50.085Z|00322|binding|INFO|Claiming lport openshift-kube-controller-manager_kube-controller-manager-guard-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:36:50.085544121Z 2026-01-28T09:36:50.085Z|00323|binding|INFO|openshift-kube-controller-manager_kube-controller-manager-guard-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:3f 10.130.0.63
+2026-01-28T09:36:50.133976590Z 2026-01-28T09:36:50.133Z|00324|binding|INFO|Setting lport openshift-kube-controller-manager_kube-controller-manager-guard-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:36:50.133976590Z 2026-01-28T09:36:50.133Z|00325|binding|INFO|Setting lport openshift-kube-controller-manager_kube-controller-manager-guard-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:37:16.894758049Z 2026-01-28T09:37:16.894Z|00326|binding|INFO|Releasing lport openshift-kube-apiserver_installer-1-ip-10-0-108-54.us-west-1.compute.internal from this chassis (sb_readonly=0)
+2026-01-28T09:37:16.894822053Z 2026-01-28T09:37:16.894Z|00327|binding|INFO|Setting lport openshift-kube-apiserver_installer-1-ip-10-0-108-54.us-west-1.compute.internal down in Southbound
+2026-01-28T09:37:23.423971480Z 2026-01-28T09:37:23.423Z|00328|binding|INFO|Claiming lport openshift-kube-apiserver_installer-2-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:37:23.424049784Z 2026-01-28T09:37:23.424Z|00329|binding|INFO|openshift-kube-apiserver_installer-2-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:40 10.130.0.64
+2026-01-28T09:37:23.467090166Z 2026-01-28T09:37:23.467Z|00330|binding|INFO|Setting lport openshift-kube-apiserver_installer-2-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:37:23.467090166Z 2026-01-28T09:37:23.467Z|00331|binding|INFO|Setting lport openshift-kube-apiserver_installer-2-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:37:47.695754255Z 2026-01-28T09:37:47.695Z|00332|binding|INFO|Releasing lport openshift-oauth-apiserver_apiserver-7b48d6dccd-mld8c from this chassis (sb_readonly=0)
+2026-01-28T09:37:47.695817048Z 2026-01-28T09:37:47.695Z|00333|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-7b48d6dccd-mld8c down in Southbound
+2026-01-28T09:37:48.286926975Z 2026-01-28T09:37:48.286Z|00334|binding|INFO|Claiming lport openshift-oauth-apiserver_apiserver-775c9c7997-gzpw8 for this chassis.
+2026-01-28T09:37:48.286994559Z 2026-01-28T09:37:48.286Z|00335|binding|INFO|openshift-oauth-apiserver_apiserver-775c9c7997-gzpw8: Claiming 0a:58:0a:82:00:41 10.130.0.65
+2026-01-28T09:37:48.328995688Z 2026-01-28T09:37:48.328Z|00336|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-775c9c7997-gzpw8 ovn-installed in OVS
+2026-01-28T09:37:48.328995688Z 2026-01-28T09:37:48.328Z|00337|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-775c9c7997-gzpw8 up in Southbound
+2026-01-28T09:38:02.901409152Z 2026-01-28T09:38:02.901Z|00338|binding|INFO|Releasing lport openshift-kube-apiserver_installer-2-ip-10-0-108-54.us-west-1.compute.internal from this chassis (sb_readonly=0)
+2026-01-28T09:38:02.902206852Z 2026-01-28T09:38:02.902Z|00339|binding|INFO|Setting lport openshift-kube-apiserver_installer-2-ip-10-0-108-54.us-west-1.compute.internal down in Southbound
+2026-01-28T09:38:11.168908700Z 2026-01-28T09:38:11.168Z|00340|binding|INFO|Claiming lport openshift-kube-apiserver_kube-apiserver-guard-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:38:11.168975483Z 2026-01-28T09:38:11.168Z|00341|binding|INFO|openshift-kube-apiserver_kube-apiserver-guard-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:42 10.130.0.66
+2026-01-28T09:38:11.212638959Z 2026-01-28T09:38:11.212Z|00342|binding|INFO|Setting lport openshift-kube-apiserver_kube-apiserver-guard-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:38:11.212638959Z 2026-01-28T09:38:11.212Z|00343|binding|INFO|Setting lport openshift-kube-apiserver_kube-apiserver-guard-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:38:57.303176009Z 2026-01-28T09:38:57.303Z|00344|binding|INFO|Claiming lport openshift-etcd_installer-7-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:38:57.303233942Z 2026-01-28T09:38:57.303Z|00345|binding|INFO|openshift-etcd_installer-7-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:43 10.130.0.67
+2026-01-28T09:38:57.351936942Z 2026-01-28T09:38:57.351Z|00346|binding|INFO|Setting lport openshift-etcd_installer-7-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:38:57.352001865Z 2026-01-28T09:38:57.351Z|00347|binding|INFO|Setting lport openshift-etcd_installer-7-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:39:30.317893387Z 2026-01-28T09:39:30.317Z|00348|binding|INFO|Releasing lport openshift-etcd_installer-7-ip-10-0-108-54.us-west-1.compute.internal from this chassis (sb_readonly=0)
+2026-01-28T09:39:30.317954430Z 2026-01-28T09:39:30.317Z|00349|binding|INFO|Setting lport openshift-etcd_installer-7-ip-10-0-108-54.us-west-1.compute.internal down in Southbound
+2026-01-28T09:39:43.931790405Z 2026-01-28T09:39:43.931Z|00350|binding|INFO|Releasing lport openshift-apiserver_apiserver-78df49b6c5-xszw4 from this chassis (sb_readonly=0)
+2026-01-28T09:39:43.931873399Z 2026-01-28T09:39:43.931Z|00351|binding|INFO|Setting lport openshift-apiserver_apiserver-78df49b6c5-xszw4 down in Southbound
+2026-01-28T09:39:44.566964929Z 2026-01-28T09:39:44.566Z|00352|binding|INFO|Claiming lport openshift-apiserver_apiserver-7fd9cdccd4-6clrs for this chassis.
+2026-01-28T09:39:44.567090775Z 2026-01-28T09:39:44.567Z|00353|binding|INFO|openshift-apiserver_apiserver-7fd9cdccd4-6clrs: Claiming 0a:58:0a:82:00:44 10.130.0.68
+2026-01-28T09:39:44.605728608Z 2026-01-28T09:39:44.605Z|00354|binding|INFO|Setting lport openshift-apiserver_apiserver-7fd9cdccd4-6clrs ovn-installed in OVS
+2026-01-28T09:39:44.605728608Z 2026-01-28T09:39:44.605Z|00355|binding|INFO|Setting lport openshift-apiserver_apiserver-7fd9cdccd4-6clrs up in Southbound
+2026-01-28T09:40:21.729072987Z 2026-01-28T09:40:21.723Z|00356|binding|INFO|Claiming lport openshift-authentication_oauth-openshift-579b6b5f5-kx9q8 for this chassis.
+2026-01-28T09:40:21.729072987Z 2026-01-28T09:40:21.723Z|00357|binding|INFO|openshift-authentication_oauth-openshift-579b6b5f5-kx9q8: Claiming 0a:58:0a:82:00:45 10.130.0.69
+2026-01-28T09:40:21.775906485Z 2026-01-28T09:40:21.775Z|00358|binding|INFO|Setting lport openshift-authentication_oauth-openshift-579b6b5f5-kx9q8 ovn-installed in OVS
+2026-01-28T09:40:21.775906485Z 2026-01-28T09:40:21.775Z|00359|binding|INFO|Setting lport openshift-authentication_oauth-openshift-579b6b5f5-kx9q8 up in Southbound
+2026-01-28T09:41:18.956669086Z 2026-01-28T09:41:18.956Z|00360|binding|INFO|Releasing lport openshift-authentication_oauth-openshift-579b6b5f5-kx9q8 from this chassis (sb_readonly=0)
+2026-01-28T09:41:18.956736409Z 2026-01-28T09:41:18.956Z|00361|binding|INFO|Setting lport openshift-authentication_oauth-openshift-579b6b5f5-kx9q8 down in Southbound
+2026-01-28T09:41:19.540107630Z 2026-01-28T09:41:19.538Z|00362|binding|INFO|Claiming lport openshift-authentication_oauth-openshift-5b776594cb-lwbb4 for this chassis.
+2026-01-28T09:41:19.540107630Z 2026-01-28T09:41:19.538Z|00363|binding|INFO|openshift-authentication_oauth-openshift-5b776594cb-lwbb4: Claiming 0a:58:0a:82:00:46 10.130.0.70
+2026-01-28T09:41:19.586242552Z 2026-01-28T09:41:19.586Z|00364|binding|INFO|Setting lport openshift-authentication_oauth-openshift-5b776594cb-lwbb4 ovn-installed in OVS
+2026-01-28T09:41:19.586242552Z 2026-01-28T09:41:19.586Z|00365|binding|INFO|Setting lport openshift-authentication_oauth-openshift-5b776594cb-lwbb4 up in Southbound
+2026-01-28T09:41:51.746771071Z 2026-01-28T09:41:51.746Z|00366|binding|INFO|Claiming lport openshift-kube-scheduler_installer-6-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:41:51.746830204Z 2026-01-28T09:41:51.746Z|00367|binding|INFO|openshift-kube-scheduler_installer-6-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:47 10.130.0.71
+2026-01-28T09:41:51.808181720Z 2026-01-28T09:41:51.808Z|00368|binding|INFO|Setting lport openshift-kube-scheduler_installer-6-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:41:51.808237863Z 2026-01-28T09:41:51.808Z|00369|binding|INFO|Setting lport openshift-kube-scheduler_installer-6-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:42:22.502093843Z 2026-01-28T09:42:22.500Z|00370|physical|WARN|Failed to locate tunnel to reach main chassis b8e4d899-989a-4849-acf9-fc22060cdbdd for port tstor-ip-10-0-101-165.us-west-1.compute.internal.
+2026-01-28T09:42:23.859002397Z 2026-01-28T09:42:23.858Z|00371|binding|INFO|Claiming lport openshift-kube-controller-manager_installer-6-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:42:23.859086801Z 2026-01-28T09:42:23.859Z|00372|binding|INFO|openshift-kube-controller-manager_installer-6-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:48 10.130.0.72
+2026-01-28T09:42:23.933256524Z 2026-01-28T09:42:23.933Z|00373|binding|INFO|Setting lport openshift-kube-controller-manager_installer-6-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:42:23.933806992Z 2026-01-28T09:42:23.933Z|00374|binding|INFO|Setting lport openshift-kube-controller-manager_installer-6-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:42:25.350872317Z 2026-01-28T09:42:25.350Z|00375|binding|INFO|Releasing lport openshift-kube-scheduler_installer-6-ip-10-0-108-54.us-west-1.compute.internal from this chassis (sb_readonly=0)
+2026-01-28T09:42:25.350927830Z 2026-01-28T09:42:25.350Z|00376|binding|INFO|Setting lport openshift-kube-scheduler_installer-6-ip-10-0-108-54.us-west-1.compute.internal down in Southbound
+2026-01-28T09:42:58.479208697Z 2026-01-28T09:42:58.478Z|00377|binding|INFO|Releasing lport openshift-kube-controller-manager_installer-6-ip-10-0-108-54.us-west-1.compute.internal from this chassis (sb_readonly=0)
+2026-01-28T09:42:58.479208697Z 2026-01-28T09:42:58.478Z|00378|binding|INFO|Setting lport openshift-kube-controller-manager_installer-6-ip-10-0-108-54.us-west-1.compute.internal down in Southbound
+2026-01-28T09:43:06.931342495Z 2026-01-28T09:43:06.931Z|00379|binding|INFO|Claiming lport openshift-etcd_revision-pruner-7-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:43:06.931342495Z 2026-01-28T09:43:06.931Z|00380|binding|INFO|openshift-etcd_revision-pruner-7-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:49 10.130.0.73
+2026-01-28T09:43:06.998829157Z 2026-01-28T09:43:06.998Z|00381|binding|INFO|Setting lport openshift-etcd_revision-pruner-7-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:43:06.999437977Z 2026-01-28T09:43:06.999Z|00382|binding|INFO|Setting lport openshift-etcd_revision-pruner-7-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:43:09.561169714Z 2026-01-28T09:43:09.561Z|00383|binding|INFO|Releasing lport openshift-etcd_revision-pruner-7-ip-10-0-108-54.us-west-1.compute.internal from this chassis (sb_readonly=0)
+2026-01-28T09:43:09.561225386Z 2026-01-28T09:43:09.561Z|00384|binding|INFO|Setting lport openshift-etcd_revision-pruner-7-ip-10-0-108-54.us-west-1.compute.internal down in Southbound
+2026-01-28T09:43:30.116742935Z 2026-01-28T09:43:30.112Z|00385|binding|INFO|Claiming lport openshift-etcd_revision-pruner-8-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:43:30.116742935Z 2026-01-28T09:43:30.112Z|00386|binding|INFO|openshift-etcd_revision-pruner-8-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:4a 10.130.0.74
+2026-01-28T09:43:30.171618250Z 2026-01-28T09:43:30.171Z|00387|binding|INFO|Setting lport openshift-etcd_revision-pruner-8-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:43:30.171674833Z 2026-01-28T09:43:30.171Z|00388|binding|INFO|Setting lport openshift-etcd_revision-pruner-8-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:43:32.711956979Z 2026-01-28T09:43:32.711Z|00389|binding|INFO|Releasing lport openshift-etcd_revision-pruner-8-ip-10-0-108-54.us-west-1.compute.internal from this chassis (sb_readonly=0)
+2026-01-28T09:43:32.713798571Z 2026-01-28T09:43:32.712Z|00390|binding|INFO|Setting lport openshift-etcd_revision-pruner-8-ip-10-0-108-54.us-west-1.compute.internal down in Southbound
+2026-01-28T09:43:44.760048005Z 2026-01-28T09:43:44.759Z|00391|binding|INFO|Claiming lport openshift-console_console-77fcdcbd6-8d9vc for this chassis.
+2026-01-28T09:43:44.760048005Z 2026-01-28T09:43:44.760Z|00392|binding|INFO|openshift-console_console-77fcdcbd6-8d9vc: Claiming 0a:58:0a:82:00:4b 10.130.0.75
+2026-01-28T09:43:44.819061406Z 2026-01-28T09:43:44.818Z|00393|binding|INFO|Setting lport openshift-console_console-77fcdcbd6-8d9vc ovn-installed in OVS
+2026-01-28T09:43:44.819061406Z 2026-01-28T09:43:44.818Z|00394|binding|INFO|Setting lport openshift-console_console-77fcdcbd6-8d9vc up in Southbound
+2026-01-28T09:43:53.744937311Z 2026-01-28T09:43:53.744Z|00395|binding|INFO|Releasing lport openshift-apiserver_apiserver-7fd9cdccd4-6clrs from this chassis (sb_readonly=0)
+2026-01-28T09:43:53.744992354Z 2026-01-28T09:43:53.744Z|00396|binding|INFO|Setting lport openshift-apiserver_apiserver-7fd9cdccd4-6clrs down in Southbound
+2026-01-28T09:43:54.391803547Z 2026-01-28T09:43:54.391Z|00397|binding|INFO|Claiming lport openshift-apiserver_apiserver-846d86c975-nwl7h for this chassis.
+2026-01-28T09:43:54.391853629Z 2026-01-28T09:43:54.391Z|00398|binding|INFO|openshift-apiserver_apiserver-846d86c975-nwl7h: Claiming 0a:58:0a:82:00:4c 10.130.0.76
+2026-01-28T09:43:54.451118034Z 2026-01-28T09:43:54.451Z|00399|binding|INFO|Setting lport openshift-apiserver_apiserver-846d86c975-nwl7h ovn-installed in OVS
+2026-01-28T09:43:54.451175297Z 2026-01-28T09:43:54.451Z|00400|binding|INFO|Setting lport openshift-apiserver_apiserver-846d86c975-nwl7h up in Southbound
+2026-01-28T09:44:48.230393659Z 2026-01-28T09:44:48.230Z|00401|binding|INFO|Releasing lport openshift-authentication_oauth-openshift-5b776594cb-lwbb4 from this chassis (sb_readonly=0)
+2026-01-28T09:44:48.230497794Z 2026-01-28T09:44:48.230Z|00402|binding|INFO|Setting lport openshift-authentication_oauth-openshift-5b776594cb-lwbb4 down in Southbound
+2026-01-28T09:44:48.935434557Z 2026-01-28T09:44:48.935Z|00403|binding|INFO|Claiming lport openshift-authentication_oauth-openshift-85f8644668-g4p86 for this chassis.
+2026-01-28T09:44:48.935508671Z 2026-01-28T09:44:48.935Z|00404|binding|INFO|openshift-authentication_oauth-openshift-85f8644668-g4p86: Claiming 0a:58:0a:82:00:4d 10.130.0.77
+2026-01-28T09:44:48.985410228Z 2026-01-28T09:44:48.985Z|00405|binding|INFO|Setting lport openshift-authentication_oauth-openshift-85f8644668-g4p86 ovn-installed in OVS
+2026-01-28T09:44:48.985770626Z 2026-01-28T09:44:48.985Z|00406|binding|INFO|Setting lport openshift-authentication_oauth-openshift-85f8644668-g4p86 up in Southbound
+2026-01-28T09:45:15.172662482Z 2026-01-28T09:45:15.172Z|00407|binding|INFO|Releasing lport openshift-oauth-apiserver_apiserver-775c9c7997-gzpw8 from this chassis (sb_readonly=0)
+2026-01-28T09:45:15.172727696Z 2026-01-28T09:45:15.172Z|00408|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-775c9c7997-gzpw8 down in Southbound
+2026-01-28T09:45:15.821761505Z 2026-01-28T09:45:15.821Z|00409|binding|INFO|Claiming lport openshift-oauth-apiserver_apiserver-f485d7f4c-w49xf for this chassis.
+2026-01-28T09:45:15.821761505Z 2026-01-28T09:45:15.821Z|00410|binding|INFO|openshift-oauth-apiserver_apiserver-f485d7f4c-w49xf: Claiming 0a:58:0a:82:00:4e 10.130.0.78
+2026-01-28T09:45:15.876951268Z 2026-01-28T09:45:15.876Z|00411|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-f485d7f4c-w49xf ovn-installed in OVS
+2026-01-28T09:45:15.876951268Z 2026-01-28T09:45:15.876Z|00412|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-f485d7f4c-w49xf up in Southbound
+2026-01-28T09:45:51.545129169Z 2026-01-28T09:45:51.545Z|00413|binding|INFO|Claiming lport openshift-kube-scheduler_revision-pruner-6-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:45:51.545188592Z 2026-01-28T09:45:51.545Z|00414|binding|INFO|openshift-kube-scheduler_revision-pruner-6-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:4f 10.130.0.79
+2026-01-28T09:45:51.600815071Z 2026-01-28T09:45:51.600Z|00415|binding|INFO|Setting lport openshift-kube-scheduler_revision-pruner-6-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:45:51.600879414Z 2026-01-28T09:45:51.600Z|00416|binding|INFO|Setting lport openshift-kube-scheduler_revision-pruner-6-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:45:54.507427193Z 2026-01-28T09:45:54.506Z|00417|binding|INFO|Releasing lport openshift-kube-scheduler_revision-pruner-6-ip-10-0-108-54.us-west-1.compute.internal from this chassis (sb_readonly=0)
+2026-01-28T09:45:54.507427193Z 2026-01-28T09:45:54.506Z|00418|binding|INFO|Setting lport openshift-kube-scheduler_revision-pruner-6-ip-10-0-108-54.us-west-1.compute.internal down in Southbound
+2026-01-28T09:45:54.686458864Z 2026-01-28T09:45:54.686Z|00419|binding|INFO|Claiming lport openshift-etcd_installer-8-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:45:54.686458864Z 2026-01-28T09:45:54.686Z|00420|binding|INFO|openshift-etcd_installer-8-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:50 10.130.0.80
+2026-01-28T09:45:54.747445680Z 2026-01-28T09:45:54.747Z|00421|binding|INFO|Setting lport openshift-etcd_installer-8-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:45:54.747445680Z 2026-01-28T09:45:54.747Z|00422|binding|INFO|Setting lport openshift-etcd_installer-8-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:46:27.658740494Z 2026-01-28T09:46:27.658Z|00423|binding|INFO|Releasing lport openshift-etcd_installer-8-ip-10-0-108-54.us-west-1.compute.internal from this chassis (sb_readonly=0)
+2026-01-28T09:46:27.658740494Z 2026-01-28T09:46:27.658Z|00424|binding|INFO|Setting lport openshift-etcd_installer-8-ip-10-0-108-54.us-west-1.compute.internal down in Southbound
+2026-01-28T09:46:29.979459660Z 2026-01-28T09:46:29.978Z|00425|binding|INFO|Claiming lport openshift-kube-controller-manager_installer-7-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:46:29.979459660Z 2026-01-28T09:46:29.978Z|00426|binding|INFO|openshift-kube-controller-manager_installer-7-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:51 10.130.0.81
+2026-01-28T09:46:30.036901418Z 2026-01-28T09:46:30.036Z|00427|binding|INFO|Setting lport openshift-kube-controller-manager_installer-7-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:46:30.036901418Z 2026-01-28T09:46:30.036Z|00428|binding|INFO|Setting lport openshift-kube-controller-manager_installer-7-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:47:04.913635792Z 2026-01-28T09:47:04.913Z|00429|binding|INFO|Releasing lport openshift-kube-controller-manager_installer-7-ip-10-0-108-54.us-west-1.compute.internal from this chassis (sb_readonly=0)
+2026-01-28T09:47:04.913635792Z 2026-01-28T09:47:04.913Z|00430|binding|INFO|Setting lport openshift-kube-controller-manager_installer-7-ip-10-0-108-54.us-west-1.compute.internal down in Southbound
+2026-01-28T09:47:24.652188586Z 2026-01-28T09:47:24.652Z|00431|binding|INFO|Releasing lport openshift-console_console-77fcdcbd6-8d9vc from this chassis (sb_readonly=0)
+2026-01-28T09:47:24.652244779Z 2026-01-28T09:47:24.652Z|00432|binding|INFO|Setting lport openshift-console_console-77fcdcbd6-8d9vc down in Southbound
+2026-01-28T09:47:38.626766528Z 2026-01-28T09:47:38.626Z|00433|binding|INFO|Claiming lport openshift-kube-apiserver_installer-6-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:47:38.626766528Z 2026-01-28T09:47:38.626Z|00434|binding|INFO|openshift-kube-apiserver_installer-6-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:52 10.130.0.82
+2026-01-28T09:47:38.679285623Z 2026-01-28T09:47:38.679Z|00435|binding|INFO|Setting lport openshift-kube-apiserver_installer-6-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:47:38.679285623Z 2026-01-28T09:47:38.679Z|00436|binding|INFO|Setting lport openshift-kube-apiserver_installer-6-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:48:18.294260078Z 2026-01-28T09:48:18.293Z|00437|binding|INFO|Releasing lport openshift-kube-apiserver_installer-6-ip-10-0-108-54.us-west-1.compute.internal from this chassis (sb_readonly=0)
+2026-01-28T09:48:18.294260078Z 2026-01-28T09:48:18.294Z|00438|binding|INFO|Setting lport openshift-kube-apiserver_installer-6-ip-10-0-108-54.us-west-1.compute.internal down in Southbound
+2026-01-28T09:48:57.014067462Z 2026-01-28T09:48:57.013Z|00439|memory_trim|INFO|Detected inactivity (last active 30004 ms ago): trimming memory
+2026-01-28T09:50:07.826299104Z 2026-01-28T09:50:07.826Z|00440|memory_trim|INFO|Detected inactivity (last active 30006 ms ago): trimming memory
+2026-01-28T09:51:26.015855644Z 2026-01-28T09:51:26.015Z|00441|memory_trim|INFO|Detected inactivity (last active 30023 ms ago): trimming memory
+2026-01-28T09:52:41.287198446Z 2026-01-28T09:52:41.287Z|00442|memory_trim|INFO|Detected inactivity (last active 30010 ms ago): trimming memory
+2026-01-28T09:55:12.953788137Z 2026-01-28T09:55:12.953Z|00443|memory_trim|INFO|Detected inactivity (last active 30010 ms ago): trimming memory
+2026-01-28T09:55:16.427920595Z 2026-01-28T09:55:16.427Z|00444|binding|INFO|Claiming lport openshift-kube-apiserver_revision-pruner-6-ip-10-0-108-54.us-west-1.compute.internal for this chassis.
+2026-01-28T09:55:16.428114204Z 2026-01-28T09:55:16.428Z|00445|binding|INFO|openshift-kube-apiserver_revision-pruner-6-ip-10-0-108-54.us-west-1.compute.internal: Claiming 0a:58:0a:82:00:53 10.130.0.83
+2026-01-28T09:55:16.485760770Z 2026-01-28T09:55:16.485Z|00446|binding|INFO|Setting lport openshift-kube-apiserver_revision-pruner-6-ip-10-0-108-54.us-west-1.compute.internal ovn-installed in OVS
+2026-01-28T09:55:16.485838914Z 2026-01-28T09:55:16.485Z|00447|binding|INFO|Setting lport openshift-kube-apiserver_revision-pruner-6-ip-10-0-108-54.us-west-1.compute.internal up in Southbound
+2026-01-28T09:55:19.350335743Z 2026-01-28T09:55:19.350Z|00448|binding|INFO|Releasing lport openshift-kube-apiserver_revision-pruner-6-ip-10-0-108-54.us-west-1.compute.internal from this chassis (sb_readonly=0)
+2026-01-28T09:55:19.350400107Z 2026-01-28T09:55:19.350Z|00449|binding|INFO|Setting lport openshift-kube-apiserver_revision-pruner-6-ip-10-0-108-54.us-west-1.compute.internal down in Southbound
+2026-01-28T09:55:49.540775466Z 2026-01-28T09:55:49.540Z|00450|memory_trim|INFO|Detected inactivity (last active 30016 ms ago): trimming memory
+2026-01-28T10:24:45.469994433Z 2026-01-28T10:24:45.469Z|00451|binding|INFO|Claiming lport openshift-must-gather-5xcqk_perf-node-gather-daemonset-mvplv for this chassis.
+2026-01-28T10:24:45.469994433Z 2026-01-28T10:24:45.469Z|00452|binding|INFO|openshift-must-gather-5xcqk_perf-node-gather-daemonset-mvplv: Claiming 0a:58:0a:82:00:54 10.130.0.84
+2026-01-28T10:24:45.523432217Z 2026-01-28T10:24:45.523Z|00453|binding|INFO|Setting lport openshift-must-gather-5xcqk_perf-node-gather-daemonset-mvplv ovn-installed in OVS
+2026-01-28T10:24:45.523432217Z 2026-01-28T10:24:45.523Z|00454|binding|INFO|Setting lport openshift-must-gather-5xcqk_perf-node-gather-daemonset-mvplv up in Southbound
+2026-01-28T10:25:04.450124806Z 2026-01-28T10:25:04.450Z|00455|binding|INFO|Removing iface 8acb8f9a7a589a6 ovn-installed in OVS
+2026-01-28T10:25:04.450775949Z 2026-01-28T10:25:04.450Z|00456|binding|INFO|Removing lport openshift-must-gather-5xcqk_perf-node-gather-daemonset-mvplv ovn-installed in OVS

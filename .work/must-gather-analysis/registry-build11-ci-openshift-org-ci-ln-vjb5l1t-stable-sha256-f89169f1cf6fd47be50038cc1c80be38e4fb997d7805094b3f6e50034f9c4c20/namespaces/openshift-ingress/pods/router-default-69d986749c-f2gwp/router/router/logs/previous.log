@@ -1,0 +1,389 @@
+2026-01-28T09:36:59.193433403Z I0128 09:36:59.193300       1 template.go:560] "msg"="starting router" "logger"="router" "version"="majorFromGit: \nminorFromGit: \ncommitFromGit: db8d384266051ef06b67883aaa83674bc6c9f1ae\nversionFromGit: 4.0.0-583-gdb8d3842\ngitTreeState: clean\nbuildDate: 2026-01-16T19:55:57Z\n"
+2026-01-28T09:36:59.198622614Z I0128 09:36:59.198598       1 metrics.go:156] "msg"="router health and metrics port listening on HTTP and HTTPS" "address"="0.0.0.0:1936" "logger"="metrics"
+2026-01-28T09:36:59.205490920Z I0128 09:36:59.205467       1 router.go:214] "msg"="creating a new template router" "logger"="template" "writeDir"="/var/lib/haproxy"
+2026-01-28T09:36:59.205576741Z I0128 09:36:59.205563       1 router.go:298] "msg"="router will coalesce reloads within an interval of each other" "interval"="5s" "logger"="template"
+2026-01-28T09:36:59.206010521Z I0128 09:36:59.205992       1 router.go:368] "msg"="watching for changes" "logger"="template" "path"="/etc/pki/tls/private"
+2026-01-28T09:36:59.206184665Z I0128 09:36:59.206170       1 router.go:283] "msg"="router is including routes in all namespaces" "logger"="router"
+2026-01-28T09:36:59.208100815Z W0128 09:36:59.208074       1 reflector.go:547] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: failed to list *v1.Route: the server could not find the requested resource (get routes.route.openshift.io)
+2026-01-28T09:36:59.208167337Z E0128 09:36:59.208152       1 reflector.go:150] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: Failed to watch *v1.Route: failed to list *v1.Route: the server could not find the requested resource (get routes.route.openshift.io)
+2026-01-28T09:36:59.216338480Z I0128 09:36:59.216315       1 reflector.go:359] Caches populated for *v1.Service from github.com/openshift/router/pkg/router/template/service_lookup.go:33
+2026-01-28T09:36:59.229667434Z I0128 09:36:59.229638       1 reflector.go:359] Caches populated for *v1.EndpointSlice from github.com/openshift/router/pkg/router/controller/factory/factory.go:124
+2026-01-28T09:37:00.284865808Z W0128 09:37:00.284822       1 reflector.go:547] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: failed to list *v1.Route: the server could not find the requested resource (get routes.route.openshift.io)
+2026-01-28T09:37:00.284865808Z E0128 09:37:00.284854       1 reflector.go:150] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: Failed to watch *v1.Route: failed to list *v1.Route: the server could not find the requested resource (get routes.route.openshift.io)
+2026-01-28T09:37:00.382580676Z I0128 09:37:00.382537       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:00.382580676Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:00.382580676Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:01.380566704Z I0128 09:37:01.380533       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:01.380566704Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:01.380566704Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:02.380960513Z I0128 09:37:02.380924       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:02.380960513Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:02.380960513Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:02.393109641Z W0128 09:37:02.393080       1 reflector.go:547] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: failed to list *v1.Route: the server could not find the requested resource (get routes.route.openshift.io)
+2026-01-28T09:37:02.393140692Z E0128 09:37:02.393108       1 reflector.go:150] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: Failed to watch *v1.Route: failed to list *v1.Route: the server could not find the requested resource (get routes.route.openshift.io)
+2026-01-28T09:37:03.380649387Z I0128 09:37:03.380580       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:03.380649387Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:03.380649387Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:04.380563887Z I0128 09:37:04.380526       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:04.380563887Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:04.380563887Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:05.380639509Z I0128 09:37:05.380585       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:05.380639509Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:05.380639509Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:06.381001658Z I0128 09:37:06.380952       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:06.381001658Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:06.381001658Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:06.726092505Z W0128 09:37:06.726046       1 reflector.go:547] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: failed to list *v1.Route: the server could not find the requested resource (get routes.route.openshift.io)
+2026-01-28T09:37:06.726092505Z E0128 09:37:06.726075       1 reflector.go:150] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: Failed to watch *v1.Route: failed to list *v1.Route: the server could not find the requested resource (get routes.route.openshift.io)
+2026-01-28T09:37:07.380117290Z I0128 09:37:07.380072       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:07.380117290Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:07.380117290Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:08.380413268Z I0128 09:37:08.380370       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:08.380413268Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:08.380413268Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:09.380101693Z I0128 09:37:09.380067       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:09.380101693Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:09.380101693Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:10.380577385Z I0128 09:37:10.380537       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:10.380577385Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:10.380577385Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:11.380265920Z I0128 09:37:11.380218       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:11.380265920Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:11.380265920Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:12.380233411Z I0128 09:37:12.380183       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:12.380233411Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:12.380233411Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:13.380559529Z I0128 09:37:13.380523       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:13.380559529Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:13.380559529Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:14.380203072Z I0128 09:37:14.380157       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:14.380203072Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:14.380203072Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:15.380635183Z I0128 09:37:15.380596       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:15.380635183Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:15.380635183Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:16.380239224Z I0128 09:37:16.380199       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:16.380239224Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:16.380239224Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:17.380244676Z I0128 09:37:17.380207       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:17.380244676Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:17.380244676Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:18.380929661Z I0128 09:37:18.380890       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:18.380929661Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:18.380929661Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:19.380804120Z I0128 09:37:19.380768       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:19.380804120Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:19.380804120Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:19.484907830Z W0128 09:37:19.484867       1 reflector.go:547] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: failed to list *v1.Route: the server could not find the requested resource (get routes.route.openshift.io)
+2026-01-28T09:37:19.484907830Z E0128 09:37:19.484901       1 reflector.go:150] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: Failed to watch *v1.Route: failed to list *v1.Route: the server could not find the requested resource (get routes.route.openshift.io)
+2026-01-28T09:37:20.380150897Z I0128 09:37:20.380106       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:20.380150897Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:20.380150897Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:21.379988245Z I0128 09:37:21.379942       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:21.379988245Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:21.379988245Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:22.380697971Z I0128 09:37:22.380649       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:22.380697971Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:22.380697971Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:23.380193321Z I0128 09:37:23.380157       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:23.380193321Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:23.380193321Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:24.380499779Z I0128 09:37:24.380461       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:24.380499779Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:24.380499779Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:25.380246884Z I0128 09:37:25.380204       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:25.380246884Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:25.380246884Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:26.380205982Z I0128 09:37:26.380160       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:26.380205982Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:26.380205982Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:27.380522840Z I0128 09:37:27.380485       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:27.380522840Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:27.380522840Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:28.380771217Z I0128 09:37:28.380714       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:28.380771217Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:28.380771217Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:29.380620016Z I0128 09:37:29.380574       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:29.380620016Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:29.380620016Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:30.379887433Z I0128 09:37:30.379846       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:30.379887433Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:30.379887433Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:31.380647099Z I0128 09:37:31.380595       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:31.380647099Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:31.380647099Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:32.380254873Z I0128 09:37:32.380208       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:32.380254873Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:32.380254873Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:33.380142293Z I0128 09:37:33.380080       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:33.380142293Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:33.380142293Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:34.380413001Z I0128 09:37:34.380371       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:34.380413001Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:34.380413001Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:35.379904231Z I0128 09:37:35.379839       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:35.379904231Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:35.379904231Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:36.380492344Z I0128 09:37:36.380454       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:36.380492344Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:36.380492344Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:37.380709399Z I0128 09:37:37.380668       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:37.380709399Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:37.380709399Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:38.379865354Z I0128 09:37:38.379820       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:38.379865354Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:38.379865354Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:39.380836924Z I0128 09:37:39.380801       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:39.380836924Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:39.380836924Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:40.381060019Z I0128 09:37:40.381018       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:40.381060019Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:40.381060019Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:41.380148392Z I0128 09:37:41.380108       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:41.380148392Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:41.380148392Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:42.380264436Z I0128 09:37:42.380219       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:42.380264436Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:42.380264436Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:43.380470188Z I0128 09:37:43.380432       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:43.380470188Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:43.380470188Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:44.380603344Z I0128 09:37:44.380567       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:44.380603344Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:44.380603344Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:44.972089477Z W0128 09:37:44.972047       1 reflector.go:547] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: failed to list *v1.Route: the server could not find the requested resource (get routes.route.openshift.io)
+2026-01-28T09:37:44.972089477Z E0128 09:37:44.972079       1 reflector.go:150] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: Failed to watch *v1.Route: failed to list *v1.Route: the server could not find the requested resource (get routes.route.openshift.io)
+2026-01-28T09:37:45.380375221Z I0128 09:37:45.380342       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:45.380375221Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:45.380375221Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:46.380263042Z I0128 09:37:46.380223       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:46.380263042Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:46.380263042Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:47.380441749Z I0128 09:37:47.380379       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:47.380441749Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:47.380441749Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:48.380477805Z I0128 09:37:48.380435       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:48.380477805Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:48.380477805Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:49.380450869Z I0128 09:37:49.380413       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:49.380450869Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:49.380450869Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:50.380725649Z I0128 09:37:50.380685       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:50.380725649Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:50.380725649Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:51.380585121Z I0128 09:37:51.380539       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:51.380585121Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:51.380585121Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:52.380591886Z I0128 09:37:52.380545       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:52.380591886Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:52.380591886Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:53.380013168Z I0128 09:37:53.379972       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:53.380013168Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:53.380013168Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:54.380430911Z I0128 09:37:54.380388       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:54.380430911Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:54.380430911Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:55.380115560Z I0128 09:37:55.380072       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:55.380115560Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:55.380115560Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:56.379890590Z I0128 09:37:56.379853       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:56.379890590Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:56.379890590Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:57.380785543Z I0128 09:37:57.380726       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:57.380785543Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:57.380785543Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:58.380487372Z I0128 09:37:58.380442       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:58.380487372Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:58.380487372Z [-]has-synced failed: Router not synced
+2026-01-28T09:37:59.380411686Z I0128 09:37:59.380369       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:37:59.380411686Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:37:59.380411686Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:00.380036550Z I0128 09:38:00.379995       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:00.380036550Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:00.380036550Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:01.380362129Z I0128 09:38:01.380324       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:01.380362129Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:01.380362129Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:02.380732438Z I0128 09:38:02.380694       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:02.380732438Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:02.380732438Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:03.379979725Z I0128 09:38:03.379926       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:03.379979725Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:03.379979725Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:04.380067399Z I0128 09:38:04.380028       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:04.380067399Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:04.380067399Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:05.380819486Z I0128 09:38:05.380780       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:05.380819486Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:05.380819486Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:06.380947740Z I0128 09:38:06.380909       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:06.380947740Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:06.380947740Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:07.380608206Z I0128 09:38:07.380565       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:07.380608206Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:07.380608206Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:08.379972696Z I0128 09:38:08.379929       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:08.379972696Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:08.379972696Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:09.380828184Z I0128 09:38:09.380785       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:09.380828184Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:09.380828184Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:10.380701824Z I0128 09:38:10.380666       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:10.380701824Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:10.380701824Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:11.380067733Z I0128 09:38:11.380026       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:11.380067733Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:11.380067733Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:12.380336591Z I0128 09:38:12.380300       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:12.380336591Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:12.380336591Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:13.380216261Z I0128 09:38:13.380168       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:13.380216261Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:13.380216261Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:14.380294594Z I0128 09:38:14.380254       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:14.380294594Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:14.380294594Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:15.380307479Z I0128 09:38:15.380266       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:15.380307479Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:15.380307479Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:16.380176178Z I0128 09:38:16.380114       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:16.380176178Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:16.380176178Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:17.380206990Z I0128 09:38:17.380170       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:17.380206990Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:17.380206990Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:18.380610010Z I0128 09:38:18.380569       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:18.380610010Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:18.380610010Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:19.380384717Z I0128 09:38:19.380340       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:19.380384717Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:19.380384717Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:20.380633994Z I0128 09:38:20.380591       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:20.380633994Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:20.380633994Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:21.380733188Z I0128 09:38:21.380696       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:21.380733188Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:21.380733188Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:22.380426804Z I0128 09:38:22.380388       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:22.380426804Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:22.380426804Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:23.380784492Z I0128 09:38:23.380721       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:23.380784492Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:23.380784492Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:24.380473589Z I0128 09:38:24.380434       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:24.380473589Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:24.380473589Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:25.380468979Z I0128 09:38:25.380428       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:25.380468979Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:25.380468979Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:26.380723286Z I0128 09:38:26.380668       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:26.380723286Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:26.380723286Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:27.380477613Z I0128 09:38:27.380420       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:27.380477613Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:27.380477613Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:28.380281940Z I0128 09:38:28.380239       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:28.380281940Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:28.380281940Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:29.380241831Z I0128 09:38:29.380203       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:29.380241831Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:29.380241831Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:30.380711012Z I0128 09:38:30.380665       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:30.380711012Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:30.380711012Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:31.380357440Z I0128 09:38:31.380315       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:31.380357440Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:31.380357440Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:32.380452592Z I0128 09:38:32.380406       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:32.380452592Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:32.380452592Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:33.380599395Z I0128 09:38:33.380557       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:33.380599395Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:33.380599395Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:34.380644866Z I0128 09:38:34.380608       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:34.380644866Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:34.380644866Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:35.201424433Z W0128 09:38:35.201384       1 reflector.go:547] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: failed to list *v1.Route: the server could not find the requested resource (get routes.route.openshift.io)
+2026-01-28T09:38:35.201424433Z E0128 09:38:35.201410       1 reflector.go:150] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: Failed to watch *v1.Route: failed to list *v1.Route: the server could not find the requested resource (get routes.route.openshift.io)
+2026-01-28T09:38:35.379948903Z I0128 09:38:35.379916       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:35.379948903Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:35.379948903Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:36.380672726Z I0128 09:38:36.380635       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:36.380672726Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:36.380672726Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:37.380407993Z I0128 09:38:37.380364       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:37.380407993Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:37.380407993Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:38.380285990Z I0128 09:38:38.380246       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:38.380285990Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:38.380285990Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:39.380205830Z I0128 09:38:39.380167       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:39.380205830Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:39.380205830Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:40.380796651Z I0128 09:38:40.380744       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:40.380796651Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:40.380796651Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:41.380832182Z I0128 09:38:41.380777       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:41.380832182Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:41.380832182Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:42.380276661Z I0128 09:38:42.380235       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:42.380276661Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:42.380276661Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:43.381178589Z I0128 09:38:43.381130       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:43.381178589Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:43.381178589Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:44.380323392Z I0128 09:38:44.380283       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:44.380323392Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:44.380323392Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:45.380690369Z I0128 09:38:45.380631       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:45.380690369Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:45.380690369Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:46.380735100Z I0128 09:38:46.380700       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:46.380735100Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:46.380735100Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:47.379998709Z I0128 09:38:47.379958       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:47.379998709Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:47.379998709Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:48.380268446Z I0128 09:38:48.380229       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:48.380268446Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:48.380268446Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:49.380577273Z I0128 09:38:49.380541       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:49.380577273Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:49.380577273Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:50.380701736Z I0128 09:38:50.380664       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:50.380701736Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:50.380701736Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:51.380674767Z I0128 09:38:51.380620       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:51.380674767Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:51.380674767Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:52.380573285Z I0128 09:38:52.380530       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:52.380573285Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:52.380573285Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:53.380711069Z I0128 09:38:53.380673       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:53.380711069Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:53.380711069Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:54.379932024Z I0128 09:38:54.379884       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:54.379932024Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:54.379932024Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:55.381248241Z I0128 09:38:55.381205       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:55.381248241Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:55.381248241Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:56.380289473Z I0128 09:38:56.380252       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:56.380289473Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:56.380289473Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:57.380548439Z I0128 09:38:57.380508       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:57.380548439Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:57.380548439Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:58.380200302Z I0128 09:38:58.380160       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:58.380200302Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:58.380200302Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:59.380273905Z I0128 09:38:59.380230       1 healthz.go:255] backend-proxy-http,has-synced check failed: healthz
+2026-01-28T09:38:59.380273905Z [-]backend-proxy-http failed: dial tcp [::1]:80: connect: connection refused
+2026-01-28T09:38:59.380273905Z [-]has-synced failed: Router not synced
+2026-01-28T09:38:59.383579280Z E0128 09:38:59.383557       1 factory.go:130] failed to sync cache for *v1.Route shared informer
+2026-01-28T09:38:59.384831895Z I0128 09:38:59.384808       1 template.go:841] "msg"="Shutdown requested, waiting 45s for new connections to cease" "logger"="router"
+2026-01-28T09:38:59.386163461Z E0128 09:38:59.386144       1 haproxy.go:418] can't scrape HAProxy: dial unix /var/lib/haproxy/run/haproxy.sock: connect: no such file or directory
+2026-01-28T09:38:59.423425713Z I0128 09:38:59.423374       1 router.go:665] "msg"="router reloaded" "logger"="template" "output"=" - Checking http://localhost:80 using PROXY protocol ...\n - Health check ok : 0 retry attempt(s).\n"
+2026-01-28T09:39:44.386958756Z I0128 09:39:44.386877       1 template.go:843] "msg"="Instructing the template router to terminate" "logger"="router"
+2026-01-28T09:39:44.396100595Z I0128 09:39:44.396071       1 router.go:665] "msg"="router reloaded" "logger"="template" "output"=" - Shutting down\n"
+2026-01-28T09:39:44.396145836Z I0128 09:39:44.396100       1 template.go:847] "msg"="Shutdown complete, exiting" "logger"="router"

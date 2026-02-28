@@ -1,0 +1,80 @@
+2026-01-28T09:29:45.021022440Z + [[ -f /env/_master ]]
+2026-01-28T09:29:45.021473250Z ++ date '+%m%d %H:%M:%S.%N'
+2026-01-28T09:29:45.023874942Z + echo 'I0128 09:29:45.023496394 - network-node-identity - start approver'
+2026-01-28T09:29:45.023923143Z I0128 09:29:45.023496394 - network-node-identity - start approver
+2026-01-28T09:29:45.023992055Z + exec /usr/bin/ovnkube-identity --k8s-apiserver=https://api-int.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX:6443 --disable-webhook --csr-acceptance-conditions=/var/run/ovnkube-identity-config/additional-cert-acceptance-cond.json --loglevel=4
+2026-01-28T09:29:45.082324346Z I0128 09:29:45.082252       1 ovnkubeidentity.go:133] Config: {kubeconfig: apiServer:https://api-int.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX:6443 logLevel:4 port:9443 host:localhost certDir: metricsAddress:0 leaseNamespace: enableInterconnect:false enableHybridOverlay:false disableWebhook:true disableApprover:false waitForKAPIDuration:0 localKAPIPort:6443 extraAllowedUsers:{slice:[] separator:{sep: disabled:false customized:false} hasBeenSet:false keepSpace:false} csrAcceptanceConditionFile:/var/run/ovnkube-identity-config/additional-cert-acceptance-cond.json csrAcceptanceConditions:[] podAdmissionConditionFile: podAdmissionConditions:[]}
+2026-01-28T09:29:45.082324346Z W0128 09:29:45.082312       1 client_config.go:667] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+2026-01-28T09:29:45.082799117Z I0128 09:29:45.082780       1 envvar.go:172] "Feature gate default state" feature="ClientsAllowCBOR" enabled=false
+2026-01-28T09:29:45.082799117Z I0128 09:29:45.082794       1 envvar.go:172] "Feature gate default state" feature="ClientsPreferCBOR" enabled=false
+2026-01-28T09:29:45.082810257Z I0128 09:29:45.082799       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2026-01-28T09:29:45.082810257Z I0128 09:29:45.082802       1 envvar.go:172] "Feature gate default state" feature="InOrderInformers" enabled=true
+2026-01-28T09:29:45.082810257Z I0128 09:29:45.082805       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2026-01-28T09:29:45.083215496Z I0128 09:29:45.083194       1 ovnkubeidentity.go:472] Starting certificate signing request approver
+2026-01-28T09:29:45.083275877Z I0128 09:29:45.083261       1 leaderelection.go:257] attempting to acquire leader lease openshift-network-node-identity/ovnkube-identity...
+2026-01-28T09:29:45.093699564Z I0128 09:29:45.093680       1 leaderelection.go:271] successfully acquired lease openshift-network-node-identity/ovnkube-identity
+2026-01-28T09:29:45.093787876Z I0128 09:29:45.093767       1 recorder.go:104] "ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b became leader" logger="events" type="Normal" object={"kind":"Lease","namespace":"openshift-network-node-identity","name":"ovnkube-identity","uid":"444fb422-436f-4a69-af76-e0a920f40fe2","apiVersion":"coordination.k8s.io/v1","resourceVersion":"4883"} reason="LeaderElection"
+2026-01-28T09:29:45.093929049Z I0128 09:29:45.093906       1 controller.go:246] "Starting EventSource" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" source="kind source: *v1.CertificateSigningRequest"
+2026-01-28T09:29:45.099355478Z I0128 09:29:45.099325       1 reflector.go:357] "Starting reflector" logger="controller-runtime.cache" type="*v1.CertificateSigningRequest" resyncPeriod="10h3m27.239088713s" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:114"
+2026-01-28T09:29:45.099377988Z I0128 09:29:45.099365       1 reflector.go:403] "Listing and watching" logger="controller-runtime.cache" type="*v1.CertificateSigningRequest" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:114"
+2026-01-28T09:29:45.100507592Z I0128 09:29:45.100469       1 reflector.go:430] "Caches populated" logger="controller-runtime.cache" type="*v1.CertificateSigningRequest" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:114"
+2026-01-28T09:29:45.200430930Z I0128 09:29:45.200372       1 controller.go:186] "Starting Controller" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest"
+2026-01-28T09:29:45.200489482Z I0128 09:29:45.200459       1 controller.go:195] "Starting workers" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" worker count=1
+2026-01-28T09:29:50.645361367Z I0128 09:29:50.645307       1 recorder.go:104] "CSR \"csr-ztp7q\" has been approved" logger="events" type="Normal" object={"kind":"CertificateSigningRequest","name":"csr-ztp7q"} reason="CSRApproved"
+2026-01-28T09:29:50.650519024Z I0128 09:29:50.650493       1 approver.go:230] Finished syncing CSR csr-ztp7q for ip-10-0-102-200.us-west-1.compute.internal node in 5.654818ms
+2026-01-28T09:29:50.650677418Z I0128 09:29:50.650661       1 approver.go:230] Finished syncing CSR csr-ztp7q for unknown node in 68.762µs
+2026-01-28T09:29:50.656595192Z I0128 09:29:50.656571       1 approver.go:230] Finished syncing CSR csr-ztp7q for unknown node in 34.411µs
+2026-01-28T09:29:53.088295063Z I0128 09:29:53.088239       1 recorder.go:104] "CSR \"csr-l86gg\" has been approved" logger="events" type="Normal" object={"kind":"CertificateSigningRequest","name":"csr-l86gg"} reason="CSRApproved"
+2026-01-28T09:29:53.092566860Z I0128 09:29:53.092540       1 approver.go:230] Finished syncing CSR csr-l86gg for ip-10-0-108-54.us-west-1.compute.internal node in 4.523653ms
+2026-01-28T09:29:53.092621692Z I0128 09:29:53.092602       1 approver.go:230] Finished syncing CSR csr-l86gg for unknown node in 32.881µs
+2026-01-28T09:29:53.098398233Z I0128 09:29:53.098348       1 approver.go:230] Finished syncing CSR csr-l86gg for unknown node in 57.331µs
+2026-01-28T09:29:56.045984836Z I0128 09:29:56.045803       1 recorder.go:104] "CSR \"csr-ppxs6\" has been approved" logger="events" type="Normal" object={"kind":"CertificateSigningRequest","name":"csr-ppxs6"} reason="CSRApproved"
+2026-01-28T09:29:56.058030689Z I0128 09:29:56.058003       1 approver.go:230] Finished syncing CSR csr-ppxs6 for ip-10-0-3-203.us-west-1.compute.internal node in 12.401332ms
+2026-01-28T09:29:56.058160023Z I0128 09:29:56.058135       1 approver.go:230] Finished syncing CSR csr-ppxs6 for unknown node in 79.732µs
+2026-01-28T09:29:56.067827782Z I0128 09:29:56.067759       1 approver.go:230] Finished syncing CSR csr-ppxs6 for unknown node in 119.003µs
+2026-01-28T09:30:07.567597343Z I0128 09:30:07.567531       1 recorder.go:104] "CSR \"csr-gtpx8\" has been approved" logger="events" type="Normal" object={"kind":"CertificateSigningRequest","name":"csr-gtpx8"} reason="CSRApproved"
+2026-01-28T09:30:07.572032022Z I0128 09:30:07.572008       1 approver.go:230] Finished syncing CSR csr-gtpx8 for ip-10-0-108-54.us-west-1.compute.internal node in 4.983052ms
+2026-01-28T09:30:07.572080913Z I0128 09:30:07.572065       1 approver.go:230] Finished syncing CSR csr-gtpx8 for unknown node in 24.72µs
+2026-01-28T09:30:07.577864613Z I0128 09:30:07.577838       1 approver.go:230] Finished syncing CSR csr-gtpx8 for unknown node in 27.34µs
+2026-01-28T09:30:07.842868637Z I0128 09:30:07.842834       1 recorder.go:104] "CSR \"csr-sz9qq\" has been approved" logger="events" type="Normal" object={"kind":"CertificateSigningRequest","name":"csr-sz9qq"} reason="CSRApproved"
+2026-01-28T09:30:07.847741327Z I0128 09:30:07.847713       1 approver.go:230] Finished syncing CSR csr-sz9qq for ip-10-0-102-200.us-west-1.compute.internal node in 5.308649ms
+2026-01-28T09:30:07.847777117Z I0128 09:30:07.847766       1 approver.go:230] Finished syncing CSR csr-sz9qq for unknown node in 25.811µs
+2026-01-28T09:30:07.852308279Z I0128 09:30:07.852272       1 approver.go:230] Finished syncing CSR csr-sz9qq for unknown node in 22.081µs
+2026-01-28T09:30:07.981735196Z I0128 09:30:07.981687       1 recorder.go:104] "CSR \"csr-pbbrr\" has been approved" logger="events" type="Normal" object={"kind":"CertificateSigningRequest","name":"csr-pbbrr"} reason="CSRApproved"
+2026-01-28T09:30:07.985230834Z I0128 09:30:07.985197       1 approver.go:230] Finished syncing CSR csr-pbbrr for ip-10-0-3-203.us-west-1.compute.internal node in 3.755854ms
+2026-01-28T09:30:07.985302906Z I0128 09:30:07.985281       1 approver.go:230] Finished syncing CSR csr-pbbrr for unknown node in 31.08µs
+2026-01-28T09:30:07.990849651Z I0128 09:30:07.990806       1 approver.go:230] Finished syncing CSR csr-pbbrr for unknown node in 30.011µs
+2026-01-28T09:36:41.688754944Z I0128 09:36:41.688709       1 recorder.go:104] "CSR \"csr-zk87q\" has been approved" logger="events" type="Normal" object={"kind":"CertificateSigningRequest","name":"csr-zk87q"} reason="CSRApproved"
+2026-01-28T09:36:41.693885578Z I0128 09:36:41.693849       1 approver.go:230] Finished syncing CSR csr-zk87q for ip-10-0-78-215.us-west-1.compute.internal node in 5.345209ms
+2026-01-28T09:36:41.693952479Z I0128 09:36:41.693932       1 approver.go:230] Finished syncing CSR csr-zk87q for unknown node in 35.511µs
+2026-01-28T09:36:41.702086411Z I0128 09:36:41.702056       1 approver.go:230] Finished syncing CSR csr-zk87q for unknown node in 35.871µs
+2026-01-28T09:36:46.256212956Z I0128 09:36:46.256148       1 recorder.go:104] "CSR \"csr-lpr6w\" has been approved" logger="events" type="Normal" object={"kind":"CertificateSigningRequest","name":"csr-lpr6w"} reason="CSRApproved"
+2026-01-28T09:36:46.262395633Z I0128 09:36:46.262365       1 approver.go:230] Finished syncing CSR csr-lpr6w for ip-10-0-78-215.us-west-1.compute.internal node in 6.420012ms
+2026-01-28T09:36:46.262469355Z I0128 09:36:46.262443       1 approver.go:230] Finished syncing CSR csr-lpr6w for unknown node in 37.521µs
+2026-01-28T09:36:46.268704394Z I0128 09:36:46.268679       1 approver.go:230] Finished syncing CSR csr-lpr6w for unknown node in 26.481µs
+2026-01-28T09:38:01.101776689Z I0128 09:38:01.101731       1 reflector.go:946] "Watch close" logger="controller-runtime.cache" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:114" type="*v1.CertificateSigningRequest" totalItems=51
+2026-01-28T09:40:45.284257186Z I0128 09:40:45.284215       1 reflector.go:946] "Watch close" logger="controller-runtime.cache" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:114" type="*v1.CertificateSigningRequest" totalItems=2
+2026-01-28T09:40:45.284393129Z E0128 09:40:45.284231       1 leaderelection.go:429] Failed to update lock optimistically: Put "https://api-int.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity?timeout=15s": read tcp 10.0.102.200:53214->10.0.87.154:6443: read: connection reset by peer, falling back to slow path
+2026-01-28T09:42:20.852302816Z I0128 09:42:20.852254       1 recorder.go:104] "CSR \"csr-5bdsl\" has been approved" logger="events" type="Normal" object={"kind":"CertificateSigningRequest","name":"csr-5bdsl"} reason="CSRApproved"
+2026-01-28T09:42:20.861346690Z I0128 09:42:20.861313       1 approver.go:230] Finished syncing CSR csr-5bdsl for ip-10-0-101-165.us-west-1.compute.internal node in 9.29702ms
+2026-01-28T09:42:20.861412892Z I0128 09:42:20.861391       1 approver.go:230] Finished syncing CSR csr-5bdsl for unknown node in 35.89µs
+2026-01-28T09:42:20.869967686Z I0128 09:42:20.869943       1 approver.go:230] Finished syncing CSR csr-5bdsl for unknown node in 32.741µs
+2026-01-28T09:42:23.137037244Z I0128 09:42:23.136807       1 recorder.go:104] "CSR \"csr-j7xhg\" has been approved" logger="events" type="Normal" object={"kind":"CertificateSigningRequest","name":"csr-j7xhg"} reason="CSRApproved"
+2026-01-28T09:42:23.146392956Z I0128 09:42:23.146347       1 approver.go:230] Finished syncing CSR csr-j7xhg for ip-10-0-22-208.us-west-1.compute.internal node in 9.73543ms
+2026-01-28T09:42:23.146444237Z I0128 09:42:23.146420       1 approver.go:230] Finished syncing CSR csr-j7xhg for unknown node in 36.671µs
+2026-01-28T09:42:23.157983298Z I0128 09:42:23.157948       1 approver.go:230] Finished syncing CSR csr-j7xhg for unknown node in 36.371µs
+2026-01-28T09:42:28.158461244Z I0128 09:42:28.158396       1 recorder.go:104] "CSR \"csr-64mpx\" has been approved" logger="events" type="Normal" object={"kind":"CertificateSigningRequest","name":"csr-64mpx"} reason="CSRApproved"
+2026-01-28T09:42:28.166084077Z I0128 09:42:28.166037       1 approver.go:230] Finished syncing CSR csr-64mpx for ip-10-0-101-165.us-west-1.compute.internal node in 7.828078ms
+2026-01-28T09:42:28.166275151Z I0128 09:42:28.166238       1 approver.go:230] Finished syncing CSR csr-64mpx for unknown node in 37.561µs
+2026-01-28T09:42:28.181703891Z I0128 09:42:28.181667       1 approver.go:230] Finished syncing CSR csr-64mpx for unknown node in 32.901µs
+2026-01-28T09:42:28.223074309Z I0128 09:42:28.223046       1 recorder.go:104] "CSR \"csr-rwv25\" has been approved" logger="events" type="Normal" object={"kind":"CertificateSigningRequest","name":"csr-rwv25"} reason="CSRApproved"
+2026-01-28T09:42:28.230483287Z I0128 09:42:28.230459       1 approver.go:230] Finished syncing CSR csr-rwv25 for ip-10-0-22-208.us-west-1.compute.internal node in 7.577192ms
+2026-01-28T09:42:28.230585349Z I0128 09:42:28.230562       1 approver.go:230] Finished syncing CSR csr-rwv25 for unknown node in 35.821µs
+2026-01-28T09:42:28.238397266Z I0128 09:42:28.238373       1 approver.go:230] Finished syncing CSR csr-rwv25 for unknown node in 46.882µs
+2026-01-28T09:45:55.294333160Z I0128 09:45:55.294261       1 reflector.go:946] "Watch close" logger="controller-runtime.cache" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:114" type="*v1.CertificateSigningRequest" totalItems=30
+2026-01-28T09:48:54.979799210Z I0128 09:48:54.979746       1 reflector.go:946] "Watch close" logger="controller-runtime.cache" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:114" type="*v1.CertificateSigningRequest" totalItems=3
+2026-01-28T09:57:51.986818537Z I0128 09:57:51.986772       1 reflector.go:946] "Watch close" logger="controller-runtime.cache" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:114" type="*v1.CertificateSigningRequest" totalItems=10
+2026-01-28T10:04:00.989156058Z I0128 10:04:00.989084       1 reflector.go:946] "Watch close" logger="controller-runtime.cache" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:114" type="*v1.CertificateSigningRequest" totalItems=7
+2026-01-28T10:09:17.991799731Z I0128 10:09:17.991739       1 reflector.go:946] "Watch close" logger="controller-runtime.cache" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:114" type="*v1.CertificateSigningRequest" totalItems=6
+2026-01-28T10:17:15.994200184Z I0128 10:17:15.994136       1 reflector.go:946] "Watch close" logger="controller-runtime.cache" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:114" type="*v1.CertificateSigningRequest" totalItems=8
+2026-01-28T10:24:57.997011213Z I0128 10:24:57.996958       1 reflector.go:946] "Watch close" logger="controller-runtime.cache" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:114" type="*v1.CertificateSigningRequest" totalItems=8

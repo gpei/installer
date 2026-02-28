@@ -1,0 +1,28 @@
+---
+apiVersion: coordination.k8s.io/v1
+kind: Lease
+metadata:
+  creationTimestamp: "2026-01-28T09:28:56Z"
+  managedFields:
+  - apiVersion: coordination.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime: {}
+        f:holderIdentity: {}
+        f:leaseDurationSeconds: {}
+        f:leaseTransitions: {}
+        f:renewTime: {}
+    manager: cluster-network-operator
+    operation: Update
+    time: "2026-01-28T10:24:08Z"
+  name: network-operator-lock
+  namespace: openshift-network-operator
+  resourceVersion: "34741"
+  uid: 3b9479ae-4a06-416c-9c96-f3796e4ad7ff
+spec:
+  acquireTime: "2026-01-28T09:31:41.359905Z"
+  holderIdentity: ip-10-0-102-200_ed40fe23-a936-4de3-a118-1aa96a82b6b9
+  leaseDurationSeconds: 137
+  leaseTransitions: 1
+  renewTime: "2026-01-28T10:24:08.487359Z"

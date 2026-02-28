@@ -1,0 +1,38 @@
+---
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  creationTimestamp: "2026-01-28T09:25:53Z"
+  labels:
+    kube-aggregator.kubernetes.io/automanaged: "true"
+  managedFields:
+  - apiVersion: apiregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:kube-aggregator.kubernetes.io/automanaged: {}
+      f:spec:
+        f:group: {}
+        f:groupPriorityMinimum: {}
+        f:version: {}
+        f:versionPriority: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2026-01-28T09:25:53Z"
+  name: v1.operators.coreos.com
+  resourceVersion: "1376"
+  uid: 6db02161-e5fe-4cde-ad63-b00bbe353f2c
+spec:
+  group: operators.coreos.com
+  groupPriorityMinimum: 1000
+  version: v1
+  versionPriority: 100
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:25:53Z"
+    message: Local APIServices are always available
+    reason: Local
+    status: "True"
+    type: Available

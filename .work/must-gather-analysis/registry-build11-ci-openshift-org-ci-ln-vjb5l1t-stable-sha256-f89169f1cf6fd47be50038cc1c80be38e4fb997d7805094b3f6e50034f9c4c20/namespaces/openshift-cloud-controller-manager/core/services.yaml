@@ -1,0 +1,59 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:24Z"
+    labels:
+      k8s-app: aws-cloud-controller-manager
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:k8s-app: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":10258,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: cluster-controller-manager-operator
+      operation: Update
+      time: "2026-01-28T09:28:24Z"
+    name: aws-cloud-controller-manager
+    namespace: openshift-cloud-controller-manager
+    resourceVersion: "3407"
+    uid: 5f715a47-1804-4b28-a29a-26d1c313fdc3
+  spec:
+    clusterIP: 172.30.89.246
+    clusterIPs:
+    - 172.30.89.246
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 10258
+      protocol: TCP
+      targetPort: 10258
+    selector:
+      infrastructure.openshift.io/cloud-controller-manager: AWS
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: ServiceList
+metadata:
+  resourceVersion: "34969"

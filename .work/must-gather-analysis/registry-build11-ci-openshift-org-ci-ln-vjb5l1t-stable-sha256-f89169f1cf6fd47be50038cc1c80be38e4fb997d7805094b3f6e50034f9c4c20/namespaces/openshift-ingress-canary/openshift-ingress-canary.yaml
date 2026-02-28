@@ -1,0 +1,47 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c27,c4
+    openshift.io/sa.scc.supplemental-groups: 1000710000/10000
+    openshift.io/sa.scc.uid-range: 1000710000/10000
+    workload.openshift.io/allowed: management
+  creationTimestamp: "2026-01-28T09:38:14Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-ingress-canary
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2026-01-28T09:38:14Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/node-selector: {}
+          f:workload.openshift.io/allowed: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+    manager: ingress-operator
+    operation: Update
+    time: "2026-01-28T09:38:14Z"
+  name: openshift-ingress-canary
+  resourceVersion: "16942"
+  uid: fff6fcaf-313e-480a-a1ad-1936bbeb31f2
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

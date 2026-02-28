@@ -1,0 +1,75 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c10,c0
+    openshift.io/sa.scc.supplemental-groups: 1000090000/10000
+    openshift.io/sa.scc.uid-range: 1000090000/10000
+    workload.openshift.io/allowed: management
+  creationTimestamp: "2026-01-28T09:24:57Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-kube-controller-manager
+    olm.operatorgroup.uid/a826e922-9cff-46d9-ae7e-960dcbdbfd1b: ""
+    openshift.io/cluster-monitoring: "true"
+    openshift.io/run-level: "0"
+    pod-security.kubernetes.io/audit: privileged
+    pod-security.kubernetes.io/enforce: privileged
+    pod-security.kubernetes.io/warn: privileged
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/node-selector: {}
+          f:workload.openshift.io/allowed: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+          f:openshift.io/cluster-monitoring: {}
+          f:openshift.io/run-level: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2026-01-28T09:24:57Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2026-01-28T09:25:04Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:pod-security.kubernetes.io/audit: {}
+          f:pod-security.kubernetes.io/enforce: {}
+          f:pod-security.kubernetes.io/warn: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2026-01-28T09:30:38Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:olm.operatorgroup.uid/a826e922-9cff-46d9-ae7e-960dcbdbfd1b: {}
+    manager: olm
+    operation: Update
+    time: "2026-01-28T09:31:57Z"
+  name: openshift-kube-controller-manager
+  resourceVersion: "10215"
+  uid: 76fce498-d581-4494-b695-911f32489e0a
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

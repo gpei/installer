@@ -1,0 +1,62 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:49:37Z"
+    creationTimestamp: "2026-01-28T09:30:42Z"
+    labels:
+      endpoints.kubernetes.io/managed-by: endpoint-controller
+      prometheus: kube-controller-manager
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:endpoints.kubernetes.io/managed-by: {}
+            f:prometheus: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:49:37Z"
+    name: kube-controller-manager
+    namespace: openshift-kube-controller-manager
+    resourceVersion: "26709"
+    uid: 9accb94b-8292-45fb-92ba-52de4f76c954
+  subsets:
+  - addresses:
+    - ip: 10.0.102.200
+      nodeName: ip-10-0-102-200.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: kube-controller-manager-ip-10-0-102-200.us-west-1.compute.internal
+        namespace: openshift-kube-controller-manager
+        uid: f54fda70-2ab8-45ec-b9f8-a71d8bdd53f0
+    - ip: 10.0.108.54
+      nodeName: ip-10-0-108-54.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: kube-controller-manager-ip-10-0-108-54.us-west-1.compute.internal
+        namespace: openshift-kube-controller-manager
+        uid: 8c08f38e-1d03-461f-bf12-56cfca5636d7
+    - ip: 10.0.3.203
+      nodeName: ip-10-0-3-203.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: kube-controller-manager-ip-10-0-3-203.us-west-1.compute.internal
+        namespace: openshift-kube-controller-manager
+        uid: 66639111-8871-4a6e-92e9-a9f985a407d7
+    ports:
+    - name: https
+      port: 10257
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "35092"

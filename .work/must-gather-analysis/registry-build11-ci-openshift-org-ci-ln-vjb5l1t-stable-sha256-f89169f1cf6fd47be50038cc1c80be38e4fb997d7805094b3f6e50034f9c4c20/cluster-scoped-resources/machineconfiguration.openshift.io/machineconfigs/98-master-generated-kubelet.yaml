@@ -1,0 +1,58 @@
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+    annotations:
+        machineconfiguration.openshift.io/generated-by-controller-version: 4593e456f3b51f4c6c458c00752e38f2687baedc
+    creationTimestamp: "2026-01-28T09:32:24Z"
+    generation: 1
+    labels:
+        machineconfiguration.openshift.io/role: master
+    managedFields:
+        - apiVersion: machineconfiguration.openshift.io/v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:metadata:
+                f:annotations:
+                    .: {}
+                    f:machineconfiguration.openshift.io/generated-by-controller-version: {}
+                f:labels:
+                    .: {}
+                    f:machineconfiguration.openshift.io/role: {}
+            f:spec:
+                .: {}
+                f:baseOSExtensionsContainerImage: {}
+                f:config:
+                    .: {}
+                    f:ignition:
+                        .: {}
+                        f:version: {}
+                    f:storage:
+                        .: {}
+                        f:files: {}
+                f:fips: {}
+                f:kernelArguments: {}
+                f:kernelType: {}
+                f:osImageURL: {}
+          manager: machine-config-controller
+          operation: Update
+          time: "2026-01-28T09:32:24Z"
+    name: 98-master-generated-kubelet
+    resourceVersion: "11711"
+    uid: cb41aeb9-8343-40cf-b713-00f9ba937477
+spec:
+    baseOSExtensionsContainerImage: ""
+    config:
+        ignition:
+            version: 3.5.0
+        storage:
+            files:
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 6498
+                  mode: 420
+                  overwrite: true
+                  path: /etc/kubernetes/kubelet.conf
+    fips: false
+    kernelArguments: null
+    kernelType: ""
+    osImageURL: ""

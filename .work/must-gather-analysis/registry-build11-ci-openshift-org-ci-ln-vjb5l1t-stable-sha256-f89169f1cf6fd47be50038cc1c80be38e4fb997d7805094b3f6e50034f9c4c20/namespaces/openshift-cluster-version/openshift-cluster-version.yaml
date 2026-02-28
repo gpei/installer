@@ -1,0 +1,89 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    include.release.openshift.io/self-managed-high-availability: "true"
+    kubernetes.io/description: The cluster-version operator manages OpenShift updates
+      and reconciles core resources and cluster operators.
+    openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c6,c5
+    openshift.io/sa.scc.supplemental-groups: 1000040000/10000
+    openshift.io/sa.scc.uid-range: 1000040000/10000
+    workload.openshift.io/allowed: management
+  creationTimestamp: "2026-01-28T09:24:15Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-cluster-version
+    name: openshift-cluster-version
+    olm.operatorgroup.uid/a826e922-9cff-46d9-ae7e-960dcbdbfd1b: ""
+    openshift.io/cluster-monitoring: "true"
+    openshift.io/run-level: ""
+    pod-security.kubernetes.io/audit: privileged
+    pod-security.kubernetes.io/enforce: privileged
+    pod-security.kubernetes.io/warn: privileged
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:kubernetes.io/description: {}
+          f:openshift.io/node-selector: {}
+          f:workload.openshift.io/allowed: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+          f:name: {}
+          f:openshift.io/cluster-monitoring: {}
+          f:openshift.io/run-level: {}
+          f:pod-security.kubernetes.io/audit: {}
+          f:pod-security.kubernetes.io/enforce: {}
+          f:pod-security.kubernetes.io/warn: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2026-01-28T09:24:15Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2026-01-28T09:25:03Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:25:40Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:olm.operatorgroup.uid/a826e922-9cff-46d9-ae7e-960dcbdbfd1b: {}
+    manager: olm
+    operation: Update
+    time: "2026-01-28T09:31:57Z"
+  name: openshift-cluster-version
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "10189"
+  uid: 0fdd4331-b4ff-4dca-bb0d-6aa030aa7785
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

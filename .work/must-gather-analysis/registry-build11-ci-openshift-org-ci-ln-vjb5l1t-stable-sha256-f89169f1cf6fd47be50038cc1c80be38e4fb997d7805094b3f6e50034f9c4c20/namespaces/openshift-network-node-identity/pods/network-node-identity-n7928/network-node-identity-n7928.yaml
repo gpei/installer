@@ -1,0 +1,498 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    openshift.io/required-scc: hostnetwork-v2
+    openshift.io/scc: hostnetwork-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    security.openshift.io/validated-scc-subject-type: serviceaccount
+  creationTimestamp: "2026-01-28T09:29:31Z"
+  generateName: network-node-identity-
+  generation: 1
+  labels:
+    app: network-node-identity
+    component: network
+    controller-revision-hash: 6d4db87df8
+    kubernetes.io/os: linux
+    openshift.io/component: network
+    pod-template-generation: "1"
+    type: infra
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/required-scc: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:component: {}
+          f:controller-revision-hash: {}
+          f:kubernetes.io/os: {}
+          f:openshift.io/component: {}
+          f:pod-template-generation: {}
+          f:type: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"227570a1-1ab9-46c2-8fb3-861acb7df0d1"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:nodeAffinity:
+            .: {}
+            f:requiredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"approver"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"LOGLEVEL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/env"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/ovnkube-identity-config"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"webhook"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"KUBERNETES_NODE_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"LOGLEVEL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/env"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/webhook-cert/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/ovnkube-identity-config"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"env-overrides"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+              f:optional: {}
+            f:name: {}
+          k:{"name":"ovnkube-identity-cm"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"webhook-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2026-01-28T09:29:31Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.108.54"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:29:49Z"
+  name: network-node-identity-n7928
+  namespace: openshift-network-node-identity
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: DaemonSet
+    name: network-node-identity
+    uid: 227570a1-1ab9-46c2-8fb3-861acb7df0d1
+  resourceVersion: "4989"
+  uid: e8f798d4-e4e4-40af-b05f-668c09ccaeee
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchFields:
+          - key: metadata.name
+            operator: In
+            values:
+            - ip-10-0-108-54.us-west-1.compute.internal
+  containers:
+  - command:
+    - /bin/bash
+    - -c
+    - |
+      set -xe
+      if [[ -f "/env/_master" ]]; then
+        set -o allexport
+        source "/env/_master"
+        set +o allexport
+      fi
+      # OVN-K will try to remove hybrid overlay node annotations even when the hybrid overlay is not enabled.
+      # https://github.com/ovn-org/ovn-kubernetes/blob/ac6820df0b338a246f10f412cd5ec903bd234694/go-controller/pkg/ovn/master.go#L791
+      ho_enable="--enable-hybrid-overlay"
+      echo "I$(date "+%m%d %H:%M:%S.%N") - network-node-identity - start webhook"
+      # extra-allowed-user: service account `ovn-kubernetes-control-plane`
+      # sets pod annotations in multi-homing layer3 network controller (cluster-manager)
+      exec /usr/bin/ovnkube-identity  --k8s-apiserver=https://api-int.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX:6443 \
+          --webhook-cert-dir="/etc/webhook-cert" \
+          --webhook-host=127.0.0.1 \
+          --webhook-port=9743 \
+          ${ho_enable} \
+          --enable-interconnect \
+          --disable-approver \
+          --extra-allowed-user="system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-control-plane" \
+          --wait-for-kubernetes-api=200s \
+          --pod-admission-conditions="/var/run/ovnkube-identity-config/additional-pod-admission-cond.json" \
+          --loglevel="${LOGLEVEL}"
+    env:
+    - name: LOGLEVEL
+      value: "2"
+    - name: KUBERNETES_NODE_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: spec.nodeName
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d732505bbda1adfc700e58ea8b52de16c3e511aaeedc03c6d1b932057b9b3f49
+    imagePullPolicy: IfNotPresent
+    name: webhook
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000580000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/webhook-cert/
+      name: webhook-cert
+    - mountPath: /env
+      name: env-overrides
+    - mountPath: /var/run/ovnkube-identity-config
+      name: ovnkube-identity-cm
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8vm2s
+      readOnly: true
+  - command:
+    - /bin/bash
+    - -c
+    - |
+      set -xe
+      if [[ -f "/env/_master" ]]; then
+        set -o allexport
+        source "/env/_master"
+        set +o allexport
+      fi
+
+      echo "I$(date "+%m%d %H:%M:%S.%N") - network-node-identity - start approver"
+      exec /usr/bin/ovnkube-identity  --k8s-apiserver=https://api-int.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX:6443 \
+          --disable-webhook \
+          --csr-acceptance-conditions="/var/run/ovnkube-identity-config/additional-cert-acceptance-cond.json" \
+          --loglevel="${LOGLEVEL}"
+    env:
+    - name: LOGLEVEL
+      value: "4"
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d732505bbda1adfc700e58ea8b52de16c3e511aaeedc03c6d1b932057b9b3f49
+    imagePullPolicy: IfNotPresent
+    name: approver
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000580000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /env
+      name: env-overrides
+    - mountPath: /var/run/ovnkube-identity-config
+      name: ovnkube-identity-cm
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8vm2s
+      readOnly: true
+  dnsPolicy: Default
+  enableServiceLinks: true
+  hostNetwork: true
+  nodeName: ip-10-0-108-54.us-west-1.compute.internal
+  nodeSelector:
+    beta.kubernetes.io/os: linux
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000580000
+    seLinuxOptions:
+      level: s0:c24,c14
+    seccompProfile:
+      type: RuntimeDefault
+    supplementalGroups:
+    - 1000580000
+  serviceAccount: network-node-identity
+  serviceAccountName: network-node-identity
+  terminationGracePeriodSeconds: 200
+  tolerations:
+  - operator: Exists
+  volumes:
+  - name: webhook-cert
+    secret:
+      defaultMode: 420
+      secretName: network-node-identity-cert
+  - configMap:
+      defaultMode: 420
+      name: env-overrides
+      optional: true
+    name: env-overrides
+  - configMap:
+      defaultMode: 420
+      items:
+      - key: additional-cert-acceptance-cond.json
+        path: additional-cert-acceptance-cond.json
+      - key: additional-pod-admission-cond.json
+        path: additional-pod-admission-cond.json
+      name: ovnkube-identity-cm
+    name: ovnkube-identity-cm
+  - name: kube-api-access-8vm2s
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:29:49Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:29:31Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:29:49Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:29:49Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-28T09:29:31Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - allocatedResources:
+      cpu: 10m
+      memory: 50Mi
+    containerID: cri-o://90235f80bd2fd70cb3b46f8bfcea603fb32c701442f6947a61b55b72730463f0
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d732505bbda1adfc700e58ea8b52de16c3e511aaeedc03c6d1b932057b9b3f49
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d732505bbda1adfc700e58ea8b52de16c3e511aaeedc03c6d1b932057b9b3f49
+    lastState: {}
+    name: approver
+    ready: true
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2026-01-28T09:29:48Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        - 1000580000
+        uid: 1000580000
+    volumeMounts:
+    - mountPath: /env
+      name: env-overrides
+    - mountPath: /var/run/ovnkube-identity-config
+      name: ovnkube-identity-cm
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8vm2s
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - allocatedResources:
+      cpu: 10m
+      memory: 50Mi
+    containerID: cri-o://49098509b1dbb3e68b69f84758db3dea8b5b16ece7a68530e521562d98e9c084
+    image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d732505bbda1adfc700e58ea8b52de16c3e511aaeedc03c6d1b932057b9b3f49
+    imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d732505bbda1adfc700e58ea8b52de16c3e511aaeedc03c6d1b932057b9b3f49
+    lastState: {}
+    name: webhook
+    ready: true
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2026-01-28T09:29:48Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        - 1000580000
+        uid: 1000580000
+    volumeMounts:
+    - mountPath: /etc/webhook-cert/
+      name: webhook-cert
+    - mountPath: /env
+      name: env-overrides
+    - mountPath: /var/run/ovnkube-identity-config
+      name: ovnkube-identity-cm
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8vm2s
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 10.0.108.54
+  hostIPs:
+  - ip: 10.0.108.54
+  phase: Running
+  podIP: 10.0.108.54
+  podIPs:
+  - ip: 10.0.108.54
+  qosClass: Burstable
+  startTime: "2026-01-28T09:29:31Z"

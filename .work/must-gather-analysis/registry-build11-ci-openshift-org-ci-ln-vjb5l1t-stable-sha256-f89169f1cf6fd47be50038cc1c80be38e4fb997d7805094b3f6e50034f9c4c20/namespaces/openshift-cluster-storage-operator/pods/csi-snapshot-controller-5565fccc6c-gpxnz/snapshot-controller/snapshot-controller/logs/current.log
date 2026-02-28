@@ -1,0 +1,21 @@
+2026-01-28T09:32:08.335803915Z I0128 09:32:08.335145       1 feature_gate.go:385] feature gates: {map[]}
+2026-01-28T09:32:08.335803915Z I0128 09:32:08.335360       1 main.go:181] "Version" version="8d3c30ed2bc058a9d390edd010c27181f2c31ec4"
+2026-01-28T09:32:08.335803915Z I0128 09:32:08.335677       1 envvar.go:172] "Feature gate default state" feature="InOrderInformers" enabled=true
+2026-01-28T09:32:08.335803915Z I0128 09:32:08.335701       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2026-01-28T09:32:08.335803915Z I0128 09:32:08.335707       1 envvar.go:172] "Feature gate default state" feature="ClientsAllowCBOR" enabled=false
+2026-01-28T09:32:08.335803915Z I0128 09:32:08.335711       1 envvar.go:172] "Feature gate default state" feature="ClientsPreferCBOR" enabled=false
+2026-01-28T09:32:08.335803915Z I0128 09:32:08.335716       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2026-01-28T09:32:08.336887749Z I0128 09:32:08.336733       1 main.go:232] Start NewCSISnapshotController with kubeconfig [] resyncPeriod [15m0s]
+2026-01-28T09:32:08.466057720Z I0128 09:32:08.465999       1 leaderelection.go:257] attempting to acquire leader lease openshift-cluster-storage-operator/snapshot-controller-leader...
+2026-01-28T09:32:08.481209550Z I0128 09:32:08.481156       1 leaderelection.go:271] successfully acquired lease openshift-cluster-storage-operator/snapshot-controller-leader
+2026-01-28T09:32:08.481528776Z I0128 09:32:08.481507       1 leader_election.go:194] "became leader, starting"
+2026-01-28T09:32:08.482327765Z I0128 09:32:08.482308       1 snapshot_controller_base.go:255] Starting snapshot controller
+2026-01-28T09:32:08.484277082Z I0128 09:32:08.484218       1 reflector.go:430] "Caches populated" type="*v1.PersistentVolumeClaim" reflector="k8s.io/client-go/informers/factory.go:160"
+2026-01-28T09:32:08.484496073Z I0128 09:32:08.484465       1 reflector.go:430] "Caches populated" type="*v1.VolumeSnapshot" reflector="github.com/kubernetes-csi/external-snapshotter/client/v8/informers/externalversions/factory.go:142"
+2026-01-28T09:32:08.484778037Z I0128 09:32:08.484718       1 reflector.go:430] "Caches populated" type="*v1.VolumeSnapshotClass" reflector="github.com/kubernetes-csi/external-snapshotter/client/v8/informers/externalversions/factory.go:142"
+2026-01-28T09:32:08.485164916Z I0128 09:32:08.485137       1 reflector.go:430] "Caches populated" type="*v1.PersistentVolume" reflector="k8s.io/client-go/informers/factory.go:160"
+2026-01-28T09:32:08.485493672Z I0128 09:32:08.485474       1 reflector.go:430] "Caches populated" type="*v1.VolumeSnapshotContent" reflector="github.com/kubernetes-csi/external-snapshotter/client/v8/informers/externalversions/factory.go:142"
+2026-01-28T09:41:05.565824217Z I0128 09:41:05.565771       1 reflector.go:430] "Caches populated" type="*v1.VolumeSnapshotContent" reflector="github.com/kubernetes-csi/external-snapshotter/client/v8/informers/externalversions/factory.go:142"
+2026-01-28T09:41:06.000356524Z I0128 09:41:06.000315       1 reflector.go:430] "Caches populated" type="*v1.VolumeSnapshotClass" reflector="github.com/kubernetes-csi/external-snapshotter/client/v8/informers/externalversions/factory.go:142"
+2026-01-28T09:43:59.574051181Z I0128 09:43:59.573984       1 reflector.go:430] "Caches populated" type="*v1.VolumeSnapshotContent" reflector="github.com/kubernetes-csi/external-snapshotter/client/v8/informers/externalversions/factory.go:142"
+2026-01-28T09:44:01.036897865Z I0128 09:44:01.036832       1 reflector.go:430] "Caches populated" type="*v1.VolumeSnapshot" reflector="github.com/kubernetes-csi/external-snapshotter/client/v8/informers/externalversions/factory.go:142"

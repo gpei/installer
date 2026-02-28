@@ -1,0 +1,58 @@
+---
+apiVersion: monitoring.coreos.com/v1
+items:
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    annotations:
+      include.release.openshift.io/self-managed-high-availability: "true"
+    creationTimestamp: "2026-01-28T09:29:27Z"
+    generation: 1
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:include.release.openshift.io/self-managed-high-availability: {}
+          f:ownerReferences:
+            k:{"uid":"7763cebb-f1d7-4359-81b8-b55ef9916383"}: {}
+        f:spec:
+          f:endpoints: {}
+          f:jobLabel: {}
+          f:namespaceSelector:
+            f:matchNames: {}
+          f:selector: {}
+      manager: cluster-network-operator/operconfig
+      operation: Apply
+      time: "2026-01-28T09:29:27Z"
+    name: network-check-source
+    namespace: openshift-network-diagnostics
+    ownerReferences:
+    - apiVersion: operator.openshift.io/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Network
+      name: cluster
+      uid: 7763cebb-f1d7-4359-81b8-b55ef9916383
+    resourceVersion: "4585"
+    uid: 7d9afadc-15cc-4e48-b4fd-4c160de5f463
+  spec:
+    endpoints:
+    - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+      interval: 30s
+      port: check-endpoints
+      scheme: https
+      tlsConfig:
+        insecureSkipVerify: true
+    jobLabel: component
+    namespaceSelector:
+      matchNames:
+      - openshift-network-diagnostics
+    selector:
+      matchLabels:
+        app: network-check-source
+kind: ServiceMonitorList
+metadata:
+  continue: ""
+  resourceVersion: "35151"

@@ -1,0 +1,2656 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:11Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: iptables-alerter-kf9bz
+    namespace: openshift-network-operator
+    resourceVersion: "14828"
+    uid: d1caee6f-a1a0-4cde-abbb-35510282a0b4
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:11Z"
+  message: Successfully assigned openshift-network-operator/iptables-alerter-kf9bz
+    to ip-10-0-78-215.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:36:11Z"
+    name: iptables-alerter-kf9bz.188edb6e72c34089
+    namespace: openshift-network-operator
+    resourceVersion: "14839"
+    uid: 6d7371bf-87b9-4b8b-873c-d6e12c425a0a
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2026-01-28T09:36:11.042612Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: iptables-alerter-kf9bz
+    namespace: openshift-network-operator
+    resourceVersion: "14828"
+    uid: d1caee6f-a1a0-4cde-abbb-35510282a0b4
+  kind: Event
+  lastTimestamp: null
+  message: 'running Bind plugin "DefaultBinder": Operation cannot be fulfilled on
+    pods/binding "iptables-alerter-kf9bz": pod iptables-alerter-kf9bz is already assigned
+    to node "ip-10-0-78-215.us-west-1.compute.internal"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:11Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:36:11Z"
+    name: iptables-alerter-kf9bz.188edb6e74065aa2
+    namespace: openshift-network-operator
+    resourceVersion: "14848"
+    uid: 8570a54a-4783-4c10-b4c9-494f7bf2ef4e
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-108-54
+  source: {}
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:13Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-kf9bz
+    namespace: openshift-network-operator
+    resourceVersion: "14849"
+    uid: d1caee6f-a1a0-4cde-abbb-35510282a0b4
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:13Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a"
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:13Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:13Z"
+    name: iptables-alerter-kf9bz.188edb6eebdca11b
+    namespace: openshift-network-operator
+    resourceVersion: "14968"
+    uid: 212d663b-8b38-40f5-91fe-8340f96c97bf
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:34Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-kf9bz
+    namespace: openshift-network-operator
+    resourceVersion: "14849"
+    uid: d1caee6f-a1a0-4cde-abbb-35510282a0b4
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:34Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a"
+    in 21.35s (21.35s including waiting). Image size: 585075370 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:34Z"
+    name: iptables-alerter-kf9bz.188edb73e46fa9a0
+    namespace: openshift-network-operator
+    resourceVersion: "15247"
+    uid: 4fd706af-8ed7-4bfe-b5ed-a8c9bb6efb85
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-kf9bz
+    namespace: openshift-network-operator
+    resourceVersion: "14849"
+    uid: d1caee6f-a1a0-4cde-abbb-35510282a0b4
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:36Z"
+  message: 'Created container: iptables-alerter'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:36Z"
+    name: iptables-alerter-kf9bz.188edb74508753a9
+    namespace: openshift-network-operator
+    resourceVersion: "15315"
+    uid: 12ec8cae-f362-4b11-abe5-c8eff91549a6
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-kf9bz
+    namespace: openshift-network-operator
+    resourceVersion: "14849"
+    uid: d1caee6f-a1a0-4cde-abbb-35510282a0b4
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:36Z"
+  message: Started container iptables-alerter
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:36Z"
+    name: iptables-alerter-kf9bz.188edb745403e0df
+    namespace: openshift-network-operator
+    resourceVersion: "15316"
+    uid: 03945045-6bc9-4c6f-b440-404b120ffed1
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:32Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: iptables-alerter-lt4k7
+    namespace: openshift-network-operator
+    resourceVersion: "4739"
+    uid: d35e4cdb-9325-41d2-87f6-ade85b832e0c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:32Z"
+  message: Successfully assigned openshift-network-operator/iptables-alerter-lt4k7
+    to ip-10-0-3-203.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:29:32Z"
+    name: iptables-alerter-lt4k7.188edb11b890f10c
+    namespace: openshift-network-operator
+    resourceVersion: "4748"
+    uid: 24e8d464-0969-41b1-8cb5-8214f241389c
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:33Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-lt4k7
+    namespace: openshift-network-operator
+    resourceVersion: "4742"
+    uid: d35e4cdb-9325-41d2-87f6-ade85b832e0c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:33Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a"
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:33Z"
+    name: iptables-alerter-lt4k7.188edb11d0be618e
+    namespace: openshift-network-operator
+    resourceVersion: "4766"
+    uid: 278e8692-c24c-4f5b-85ac-38acbfa78992
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:50Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-lt4k7
+    namespace: openshift-network-operator
+    resourceVersion: "4742"
+    uid: d35e4cdb-9325-41d2-87f6-ade85b832e0c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:50Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a"
+    in 17.266s (17.266s including waiting). Image size: 585075370 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:50Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:50Z"
+    name: iptables-alerter-lt4k7.188edb15d5ef2c3f
+    namespace: openshift-network-operator
+    resourceVersion: "5009"
+    uid: b7683bc8-806e-44af-a7e2-e8ebf3417477
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-lt4k7
+    namespace: openshift-network-operator
+    resourceVersion: "4742"
+    uid: d35e4cdb-9325-41d2-87f6-ade85b832e0c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:52Z"
+  message: 'Created container: iptables-alerter'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:52Z"
+    name: iptables-alerter-lt4k7.188edb16387f14d2
+    namespace: openshift-network-operator
+    resourceVersion: "5086"
+    uid: 5f472762-84cf-4d01-90c2-6144b25c1494
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-lt4k7
+    namespace: openshift-network-operator
+    resourceVersion: "4742"
+    uid: d35e4cdb-9325-41d2-87f6-ade85b832e0c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:52Z"
+  message: Started container iptables-alerter
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:52Z"
+    name: iptables-alerter-lt4k7.188edb16391bef62
+    namespace: openshift-network-operator
+    resourceVersion: "5087"
+    uid: 32a926e7-ddd2-4c9f-9e20-c9e41dcb5969
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2026-01-28T09:41:46.576007Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: iptables-alerter-nr7xv
+    namespace: openshift-network-operator
+    resourceVersion: "19593"
+    uid: 2dd3ef4d-3816-494c-832d-5d75c5900854
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-network-operator/iptables-alerter-nr7xv
+    to ip-10-0-101-165.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:41:46Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:41:46Z"
+    name: iptables-alerter-nr7xv.188edbbc935f46de
+    namespace: openshift-network-operator
+    resourceVersion: "19606"
+    uid: 6405e720-e81a-4925-90c8-f1648b29d644
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-108-54
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:41:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-nr7xv
+    namespace: openshift-network-operator
+    resourceVersion: "19599"
+    uid: 2dd3ef4d-3816-494c-832d-5d75c5900854
+  kind: Event
+  lastTimestamp: "2026-01-28T09:41:48Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a"
+  metadata:
+    creationTimestamp: "2026-01-28T09:41:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:41:48Z"
+    name: iptables-alerter-nr7xv.188edbbd0d9a256c
+    namespace: openshift-network-operator
+    resourceVersion: "19757"
+    uid: 08c84091-1f60-411a-9989-c80c43c0ae1d
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-nr7xv
+    namespace: openshift-network-operator
+    resourceVersion: "19599"
+    uid: 2dd3ef4d-3816-494c-832d-5d75c5900854
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:10Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a"
+    in 21.413s (21.413s including waiting). Image size: 585075370 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:10Z"
+    name: iptables-alerter-nr7xv.188edbc209f1903a
+    namespace: openshift-network-operator
+    resourceVersion: "20624"
+    uid: 72ab5e27-4de8-4b83-8050-79231fe222c6
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:11Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-nr7xv
+    namespace: openshift-network-operator
+    resourceVersion: "19599"
+    uid: 2dd3ef4d-3816-494c-832d-5d75c5900854
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:11Z"
+  message: 'Created container: iptables-alerter'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:11Z"
+    name: iptables-alerter-nr7xv.188edbc26e3f888f
+    namespace: openshift-network-operator
+    resourceVersion: "20759"
+    uid: 6ac398db-c2dd-499a-a457-e6c071640c89
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:11Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-nr7xv
+    namespace: openshift-network-operator
+    resourceVersion: "19599"
+    uid: 2dd3ef4d-3816-494c-832d-5d75c5900854
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:11Z"
+  message: Started container iptables-alerter
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:11Z"
+    name: iptables-alerter-nr7xv.188edbc270a31cf9
+    namespace: openshift-network-operator
+    resourceVersion: "20762"
+    uid: b3381295-73fd-44f5-aec8-9dc157b95235
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-101-165.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-101-165.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:32Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: iptables-alerter-t9nff
+    namespace: openshift-network-operator
+    resourceVersion: "4738"
+    uid: 528fd88a-b725-4521-ac55-5c79909f0035
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:32Z"
+  message: Successfully assigned openshift-network-operator/iptables-alerter-t9nff
+    to ip-10-0-108-54.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:29:32Z"
+    name: iptables-alerter-t9nff.188edb11b88ce1cd
+    namespace: openshift-network-operator
+    resourceVersion: "4745"
+    uid: cd22f80d-b04b-4c4c-8694-8c054cebc108
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:33Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-t9nff
+    namespace: openshift-network-operator
+    resourceVersion: "4743"
+    uid: 528fd88a-b725-4521-ac55-5c79909f0035
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:33Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a"
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:33Z"
+    name: iptables-alerter-t9nff.188edb11cee76b0f
+    namespace: openshift-network-operator
+    resourceVersion: "4764"
+    uid: 419978ca-52ef-46c2-8ecb-4c47b6932a6c
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-t9nff
+    namespace: openshift-network-operator
+    resourceVersion: "4743"
+    uid: 528fd88a-b725-4521-ac55-5c79909f0035
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:48Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a"
+    in 14.948s (14.948s including waiting). Image size: 585075370 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:48Z"
+    name: iptables-alerter-t9nff.188edb1549ef2da7
+    namespace: openshift-network-operator
+    resourceVersion: "4952"
+    uid: 6387e874-60a9-415f-9d3c-9ece6e54ea9a
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:49Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-t9nff
+    namespace: openshift-network-operator
+    resourceVersion: "4743"
+    uid: 528fd88a-b725-4521-ac55-5c79909f0035
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:49Z"
+  message: 'Created container: iptables-alerter'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:49Z"
+    name: iptables-alerter-t9nff.188edb15b636756b
+    namespace: openshift-network-operator
+    resourceVersion: "4998"
+    uid: e6afa9a7-b3f1-4bae-b88d-3852e9476486
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:49Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-t9nff
+    namespace: openshift-network-operator
+    resourceVersion: "4743"
+    uid: 528fd88a-b725-4521-ac55-5c79909f0035
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:49Z"
+  message: Started container iptables-alerter
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:49Z"
+    name: iptables-alerter-t9nff.188edb15b6acc4d9
+    namespace: openshift-network-operator
+    resourceVersion: "4999"
+    uid: 5adda53f-d0f0-4812-82d2-764698ea7cdb
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2026-01-28T09:41:49.309492Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: iptables-alerter-tg7rg
+    namespace: openshift-network-operator
+    resourceVersion: "19810"
+    uid: c9191e59-2a8d-4303-8cea-f5e5c5fb7d18
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-network-operator/iptables-alerter-tg7rg
+    to ip-10-0-22-208.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:41:49Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:41:49Z"
+    name: iptables-alerter-tg7rg.188edbbd364ced4e
+    namespace: openshift-network-operator
+    resourceVersion: "19828"
+    uid: c077d5d5-d90d-4620-a9fa-a49fc61b8fe6
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-108-54
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:41:51Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-tg7rg
+    namespace: openshift-network-operator
+    resourceVersion: "19822"
+    uid: c9191e59-2a8d-4303-8cea-f5e5c5fb7d18
+  kind: Event
+  lastTimestamp: "2026-01-28T09:41:51Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a"
+  metadata:
+    creationTimestamp: "2026-01-28T09:41:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:41:51Z"
+    name: iptables-alerter-tg7rg.188edbbdb25760cc
+    namespace: openshift-network-operator
+    resourceVersion: "19963"
+    uid: 17fcfd90-34c4-4dae-bb64-4160835f2a16
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-tg7rg
+    namespace: openshift-network-operator
+    resourceVersion: "19822"
+    uid: c9191e59-2a8d-4303-8cea-f5e5c5fb7d18
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:14Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a"
+    in 22.889s (22.89s including waiting). Image size: 585075370 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:14Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:14Z"
+    name: iptables-alerter-tg7rg.188edbc306b14b39
+    namespace: openshift-network-operator
+    resourceVersion: "20817"
+    uid: 9bd991bd-cc57-44ad-89e6-5d09ab18ff30
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:16Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-tg7rg
+    namespace: openshift-network-operator
+    resourceVersion: "19822"
+    uid: c9191e59-2a8d-4303-8cea-f5e5c5fb7d18
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:16Z"
+  message: 'Created container: iptables-alerter'
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:16Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:16Z"
+    name: iptables-alerter-tg7rg.188edbc3769483fd
+    namespace: openshift-network-operator
+    resourceVersion: "20896"
+    uid: 9124b5f0-d3f3-443e-a703-9c4ea3ab5dfd
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:42:16Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-tg7rg
+    namespace: openshift-network-operator
+    resourceVersion: "19822"
+    uid: c9191e59-2a8d-4303-8cea-f5e5c5fb7d18
+  kind: Event
+  lastTimestamp: "2026-01-28T09:42:16Z"
+  message: Started container iptables-alerter
+  metadata:
+    creationTimestamp: "2026-01-28T09:42:16Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:42:16Z"
+    name: iptables-alerter-tg7rg.188edbc37d025821
+    namespace: openshift-network-operator
+    resourceVersion: "20897"
+    uid: dbf74043-43a2-4efe-a84a-1206a4e915f8
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-22-208.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-22-208.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:32Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: iptables-alerter-twqzv
+    namespace: openshift-network-operator
+    resourceVersion: "4735"
+    uid: 3ad64d73-9b70-47c8-b08c-ce10b4bd218e
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:32Z"
+  message: Successfully assigned openshift-network-operator/iptables-alerter-twqzv
+    to ip-10-0-102-200.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:29:32Z"
+    name: iptables-alerter-twqzv.188edb11b7fa0411
+    namespace: openshift-network-operator
+    resourceVersion: "4740"
+    uid: eb81f710-46c8-4f15-a940-6d6bed24341c
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:33Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-twqzv
+    namespace: openshift-network-operator
+    resourceVersion: "4736"
+    uid: 3ad64d73-9b70-47c8-b08c-ce10b4bd218e
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:33Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a"
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:33Z"
+    name: iptables-alerter-twqzv.188edb11d9e69f80
+    namespace: openshift-network-operator
+    resourceVersion: "4768"
+    uid: ee9b05b3-f54d-410b-9bad-4b17e0ddeba5
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-twqzv
+    namespace: openshift-network-operator
+    resourceVersion: "4736"
+    uid: 3ad64d73-9b70-47c8-b08c-ce10b4bd218e
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:44Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:e577dce25a9f06468c866700c8ff6d4122516ddbbd9995e5cf4ea1156d61988a"
+    in 11.34s (11.34s including waiting). Image size: 585075370 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:44Z"
+    name: iptables-alerter-twqzv.188edb147ddf475f
+    namespace: openshift-network-operator
+    resourceVersion: "4868"
+    uid: ae03dd84-d465-42e0-9505-564e83f0d7cd
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:46Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-twqzv
+    namespace: openshift-network-operator
+    resourceVersion: "4736"
+    uid: 3ad64d73-9b70-47c8-b08c-ce10b4bd218e
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:46Z"
+  message: 'Created container: iptables-alerter'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:46Z"
+    name: iptables-alerter-twqzv.188edb14e722b8c3
+    namespace: openshift-network-operator
+    resourceVersion: "4935"
+    uid: 4a530add-2400-476f-a483-4aa7b95a1c85
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:46Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{iptables-alerter}
+    kind: Pod
+    name: iptables-alerter-twqzv
+    namespace: openshift-network-operator
+    resourceVersion: "4736"
+    uid: 3ad64d73-9b70-47c8-b08c-ce10b4bd218e
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:46Z"
+  message: Started container iptables-alerter
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:46Z"
+    name: iptables-alerter-twqzv.188edb14e79e19c9
+    namespace: openshift-network-operator
+    resourceVersion: "4936"
+    uid: 0476c229-4803-4454-a231-e56f6477617f
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:32Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: iptables-alerter
+    namespace: openshift-network-operator
+    resourceVersion: "4733"
+    uid: 5aab6615-2a9c-415e-999f-d89889f6fdb0
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:32Z"
+  message: 'Created pod: iptables-alerter-twqzv'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:29:32Z"
+    name: iptables-alerter.188edb11b7afa522
+    namespace: openshift-network-operator
+    resourceVersion: "4737"
+    uid: a8658ea5-371f-499a-a819-64cbbfc951c6
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:32Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: iptables-alerter
+    namespace: openshift-network-operator
+    resourceVersion: "4733"
+    uid: 5aab6615-2a9c-415e-999f-d89889f6fdb0
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:32Z"
+  message: 'Created pod: iptables-alerter-t9nff'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:29:32Z"
+    name: iptables-alerter.188edb11b8219910
+    namespace: openshift-network-operator
+    resourceVersion: "4741"
+    uid: ad1f1d7f-fb1c-4293-af64-bc8243b9979d
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:32Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: iptables-alerter
+    namespace: openshift-network-operator
+    resourceVersion: "4733"
+    uid: 5aab6615-2a9c-415e-999f-d89889f6fdb0
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:32Z"
+  message: 'Created pod: iptables-alerter-lt4k7'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:29:32Z"
+    name: iptables-alerter.188edb11b825354f
+    namespace: openshift-network-operator
+    resourceVersion: "4746"
+    uid: 2f49fbdd-5273-4551-9f00-2e0acac65c9b
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:11Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: iptables-alerter
+    namespace: openshift-network-operator
+    resourceVersion: "5093"
+    uid: 5aab6615-2a9c-415e-999f-d89889f6fdb0
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:11Z"
+  message: 'Created pod: iptables-alerter-kf9bz'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:36:11Z"
+    name: iptables-alerter.188edb6e72227910
+    namespace: openshift-network-operator
+    resourceVersion: "14834"
+    uid: a33b4765-6b37-4b93-bc91-5176429c99e7
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:41:46Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: iptables-alerter
+    namespace: openshift-network-operator
+    resourceVersion: "15320"
+    uid: 5aab6615-2a9c-415e-999f-d89889f6fdb0
+  kind: Event
+  lastTimestamp: "2026-01-28T09:41:46Z"
+  message: 'Created pod: iptables-alerter-nr7xv'
+  metadata:
+    creationTimestamp: "2026-01-28T09:41:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:41:46Z"
+    name: iptables-alerter.188edbbc924c93c1
+    namespace: openshift-network-operator
+    resourceVersion: "19598"
+    uid: be40e6c7-1014-4ca2-8441-d210d327d6c2
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:41:49Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: iptables-alerter
+    namespace: openshift-network-operator
+    resourceVersion: "19666"
+    uid: 5aab6615-2a9c-415e-999f-d89889f6fdb0
+  kind: Event
+  lastTimestamp: "2026-01-28T09:41:49Z"
+  message: 'Created pod: iptables-alerter-tg7rg'
+  metadata:
+    creationTimestamp: "2026-01-28T09:41:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:41:49Z"
+    name: iptables-alerter.188edbbd34d27bac
+    namespace: openshift-network-operator
+    resourceVersion: "19823"
+    uid: c32cb115-01ba-422c-8d31-524525442e58
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:59Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: mtu-prober-k2t7h
+    namespace: openshift-network-operator
+    resourceVersion: "3923"
+    uid: ce7b8f46-a7ca-46a2-9f39-caba6142a928
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:59Z"
+  message: Successfully assigned openshift-network-operator/mtu-prober-k2t7h to ip-10-0-3-203.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:28:59Z"
+    name: mtu-prober-k2t7h.188edb09e13507f4
+    namespace: openshift-network-operator
+    resourceVersion: "3927"
+    uid: 81ab1928-95a3-48fa-9dd9-dfe39274ffea
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{prober}
+    kind: Pod
+    name: mtu-prober-k2t7h
+    namespace: openshift-network-operator
+    resourceVersion: "3925"
+    uid: ce7b8f46-a7ca-46a2-9f39-caba6142a928
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:59Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:96c9bdd179739c90f9361520b62eb77abd437b660682e9964960d59da029ea33"
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:28:59Z"
+    name: mtu-prober-k2t7h.188edb09f4c98972
+    namespace: openshift-network-operator
+    resourceVersion: "3942"
+    uid: f4eec8cf-8905-4cd0-a3a2-e9258b21e746
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{prober}
+    kind: Pod
+    name: mtu-prober-k2t7h
+    namespace: openshift-network-operator
+    resourceVersion: "3925"
+    uid: ce7b8f46-a7ca-46a2-9f39-caba6142a928
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:02Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:96c9bdd179739c90f9361520b62eb77abd437b660682e9964960d59da029ea33"
+    in 3.388s (3.388s including waiting). Image size: 639260010 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:02Z"
+    name: mtu-prober-k2t7h.188edb0abebaeaf1
+    namespace: openshift-network-operator
+    resourceVersion: "3992"
+    uid: edc59cb4-7b62-49f0-a24f-9eb7b0d847cb
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{prober}
+    kind: Pod
+    name: mtu-prober-k2t7h
+    namespace: openshift-network-operator
+    resourceVersion: "3925"
+    uid: ce7b8f46-a7ca-46a2-9f39-caba6142a928
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:02Z"
+  message: 'Created container: prober'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:02Z"
+    name: mtu-prober-k2t7h.188edb0ac615e02b
+    namespace: openshift-network-operator
+    resourceVersion: "3994"
+    uid: 28b28e77-0386-4f9f-a88e-5df38143c081
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{prober}
+    kind: Pod
+    name: mtu-prober-k2t7h
+    namespace: openshift-network-operator
+    resourceVersion: "3925"
+    uid: ce7b8f46-a7ca-46a2-9f39-caba6142a928
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:02Z"
+  message: Started container prober
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:02Z"
+    name: mtu-prober-k2t7h.188edb0ac671ac98
+    namespace: openshift-network-operator
+    resourceVersion: "3995"
+    uid: eee5e729-1635-499f-a9a6-f1b80494666c
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:59Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: mtu-prober
+    namespace: openshift-network-operator
+    resourceVersion: "3922"
+    uid: 2d8ac833-e5b4-4f38-8163-4653c8f3aa8c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:59Z"
+  message: 'Created pod: mtu-prober-k2t7h'
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:28:59Z"
+    name: mtu-prober.188edb09e0d20a5b
+    namespace: openshift-network-operator
+    resourceVersion: "3924"
+    uid: 6c224b84-dbe6-4688-adc5-49cf52152ec4
+  reason: SuccessfulCreate
+  reportingComponent: job-controller
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:39Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: network-operator-6596f47f7-sdg42
+    namespace: openshift-network-operator
+    resourceVersion: "3569"
+    uid: 65b70738-1644-4944-bf06-124828dd8973
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:39Z"
+  message: Successfully assigned openshift-network-operator/network-operator-6596f47f7-sdg42
+    to ip-10-0-102-200.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:28:39Z"
+    name: network-operator-6596f47f7-sdg42.188edb05528dc054
+    namespace: openshift-network-operator
+    resourceVersion: "3573"
+    uid: e4c121e8-eb70-4aeb-8bff-a4a385036f52
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:51Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{network-operator}
+    kind: Pod
+    name: network-operator-6596f47f7-sdg42
+    namespace: openshift-network-operator
+    resourceVersion: "3571"
+    uid: 65b70738-1644-4944-bf06-124828dd8973
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:51Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:96c9bdd179739c90f9361520b62eb77abd437b660682e9964960d59da029ea33"
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:28:51Z"
+    name: network-operator-6596f47f7-sdg42.188edb081ee2a5a2
+    namespace: openshift-network-operator
+    resourceVersion: "3774"
+    uid: 12e5c62f-15c1-49ee-92a3-a00904b7fda3
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:55Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{network-operator}
+    kind: Pod
+    name: network-operator-6596f47f7-sdg42
+    namespace: openshift-network-operator
+    resourceVersion: "3571"
+    uid: 65b70738-1644-4944-bf06-124828dd8973
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:55Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:96c9bdd179739c90f9361520b62eb77abd437b660682e9964960d59da029ea33"
+    in 3.596s (3.596s including waiting). Image size: 639260010 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:55Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:28:55Z"
+    name: network-operator-6596f47f7-sdg42.188edb08f53afa8b
+    namespace: openshift-network-operator
+    resourceVersion: "3835"
+    uid: d7e42508-01ce-4a5b-845a-8489dae7d510
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:55Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{network-operator}
+    kind: Pod
+    name: network-operator-6596f47f7-sdg42
+    namespace: openshift-network-operator
+    resourceVersion: "3571"
+    uid: 65b70738-1644-4944-bf06-124828dd8973
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:40Z"
+  message: 'Created container: network-operator'
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:55Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:31:40Z"
+    name: network-operator-6596f47f7-sdg42.188edb08fc4b5395
+    namespace: openshift-network-operator
+    resourceVersion: "9410"
+    uid: 3dd9c942-f257-4950-886b-90cd6a2bdd47
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:55Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{network-operator}
+    kind: Pod
+    name: network-operator-6596f47f7-sdg42
+    namespace: openshift-network-operator
+    resourceVersion: "3571"
+    uid: 65b70738-1644-4944-bf06-124828dd8973
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:40Z"
+  message: Started container network-operator
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:55Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:31:40Z"
+    name: network-operator-6596f47f7-sdg42.188edb08fca0a7a5
+    namespace: openshift-network-operator
+    resourceVersion: "9411"
+    uid: 91797258-e048-4594-9b42-f105a5303c2e
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:39Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{network-operator}
+    kind: Pod
+    name: network-operator-6596f47f7-sdg42
+    namespace: openshift-network-operator
+    resourceVersion: "3571"
+    uid: 65b70738-1644-4944-bf06-124828dd8973
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:39Z"
+  message: Container image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:96c9bdd179739c90f9361520b62eb77abd437b660682e9964960d59da029ea33"
+    already present on machine
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:31:39Z"
+    name: network-operator-6596f47f7-sdg42.188edb2f466f677d
+    namespace: openshift-network-operator
+    resourceVersion: "9385"
+    uid: 30481f66-31d5-4f89-986c-dbbcfc332f26
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 15
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:25:55Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: network-operator-6596f47f7
+    namespace: openshift-network-operator
+    resourceVersion: "1470"
+    uid: ff4e3cfc-c0b3-4989-9afd-88513c59b6a1
+  kind: Event
+  lastTimestamp: "2026-01-28T09:27:17Z"
+  message: 'Error creating: pods "network-operator-6596f47f7-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
+    the cluster does not have any nodes'
+  metadata:
+    creationTimestamp: "2026-01-28T09:25:55Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:27:17Z"
+    name: network-operator-6596f47f7.188edadf27ab4ddd
+    namespace: openshift-network-operator
+    resourceVersion: "3117"
+    uid: 7dab23a9-edcb-4a1f-8618-50950205ae82
+  reason: FailedCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:39Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: network-operator-6596f47f7
+    namespace: openshift-network-operator
+    resourceVersion: "1475"
+    uid: ff4e3cfc-c0b3-4989-9afd-88513c59b6a1
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:39Z"
+  message: 'Created pod: network-operator-6596f47f7-sdg42'
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:28:39Z"
+    name: network-operator-6596f47f7.188edb0551ef50bd
+    namespace: openshift-network-operator
+    resourceVersion: "3570"
+    uid: 267ecf19-06c8-48cd-97ce-29a717926526
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:56Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: network-operator-lock
+    namespace: openshift-network-operator
+    resourceVersion: "3845"
+    uid: 3b9479ae-4a06-416c-9c96-f3796e4ad7ff
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:56Z"
+  message: ip-10-0-102-200_eb4c076e-2373-4645-a805-484b89050c1a became leader
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-network-operator
+      operation: Update
+      time: "2026-01-28T09:28:56Z"
+    name: network-operator-lock.188edb092b845f84
+    namespace: openshift-network-operator
+    resourceVersion: "3846"
+    uid: aef99b2e-d6c0-4c4f-92ad-6e8ae63fbac1
+  reason: LeaderElection
+  reportingComponent: network-operator
+  reportingInstance: ""
+  source:
+    component: network-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:41Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: network-operator-lock
+    namespace: openshift-network-operator
+    resourceVersion: "9435"
+    uid: 3b9479ae-4a06-416c-9c96-f3796e4ad7ff
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:41Z"
+  message: ip-10-0-102-200_ed40fe23-a936-4de3-a118-1aa96a82b6b9 became leader
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:41Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-network-operator
+      operation: Update
+      time: "2026-01-28T09:31:41Z"
+    name: network-operator-lock.188edb2faa2e168e
+    namespace: openshift-network-operator
+    resourceVersion: "9437"
+    uid: 7a58cf23-7438-4ca4-845d-24f2246ad092
+  reason: LeaderElection
+  reportingComponent: network-operator
+  reportingInstance: ""
+  source:
+    component: network-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:25:55Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: network-operator
+    namespace: openshift-network-operator
+    resourceVersion: "1468"
+    uid: 6c6c4b09-2539-4cd6-9000-e22f0b6fc631
+  kind: Event
+  lastTimestamp: "2026-01-28T09:25:55Z"
+  message: Scaled up replica set network-operator-6596f47f7 from 0 to 1
+  metadata:
+    creationTimestamp: "2026-01-28T09:25:55Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:25:55Z"
+    name: network-operator.188edadf27001501
+    namespace: openshift-network-operator
+    resourceVersion: "1471"
+    uid: ddbe6b25-2e69-4233-8f55-63ca7ffb9e5d
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:56Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: network-operator
+    namespace: openshift-network-operator
+    uid: 6c6c4b09-2539-4cd6-9000-e22f0b6fc631
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:56Z"
+  message: FeatureGates updated to featuregates.Features{Enabled:[]v1.FeatureGateName{"AdditionalRoutingCapabilities",
+    "AdminNetworkPolicy", "AlibabaPlatform", "AzureWorkloadIdentity", "BuildCSIVolumes",
+    "CPMSMachineNamePrefix", "ConsolePluginContentSecurityPolicy", "ExternalOIDC",
+    "ExternalOIDCWithUIDAndExtraClaimMappings", "GatewayAPI", "GatewayAPIController",
+    "HighlyAvailableArbiter", "ImageVolume", "IngressControllerLBSubnetsAWS", "KMSv1",
+    "MachineConfigNodes", "ManagedBootImages", "ManagedBootImagesAWS", "MetricsCollectionProfiles",
+    "NetworkDiagnosticsConfig", "NetworkLiveMigration", "NetworkSegmentation", "NewOLM",
+    "PinnedImages", "PreconfiguredUDNAddresses", "ProcMountType", "RouteAdvertisements",
+    "RouteExternalCertificate", "ServiceAccountTokenNodeBinding", "SetEIPForNLBIngressController",
+    "SigstoreImageVerification", "StoragePerformantSecurityPolicy", "UpgradeStatus",
+    "UserNamespacesPodSecurityStandards", "UserNamespacesSupport", "VSphereMultiDisk",
+    "VSphereMultiNetworks"}, Disabled:[]v1.FeatureGateName{"AWSClusterHostedDNS",
+    "AWSClusterHostedDNSInstall", "AWSDedicatedHosts", "AWSServiceLBNetworkSecurityGroup",
+    "AutomatedEtcdBackup", "AzureClusterHostedDNSInstall", "AzureDedicatedHosts",
+    "AzureMultiDisk", "BootImageSkewEnforcement", "BootcNodeManagement", "ClusterAPIInstall",
+    "ClusterAPIInstallIBMCloud", "ClusterMonitoringConfig", "ClusterVersionOperatorConfiguration",
+    "DNSNameResolver", "DualReplica", "DyanmicServiceEndpointIBMCloud", "DynamicResourceAllocation",
+    "EtcdBackendQuota", "EventedPLEG", "Example", "Example2", "ExternalSnapshotMetadata",
+    "GCPClusterHostedDNS", "GCPClusterHostedDNSInstall", "GCPCustomAPIEndpoints",
+    "GCPCustomAPIEndpointsInstall", "ImageModeStatusReporting", "ImageStreamImportMode",
+    "IngressControllerDynamicConfigurationManager", "InsightsConfig", "InsightsConfigAPI",
+    "InsightsOnDemandDataGather", "IrreconcilableMachineConfig", "KMSEncryptionProvider",
+    "MachineAPIMigration", "MachineAPIOperatorDisableMachineHealthCheckController",
+    "ManagedBootImagesAzure", "ManagedBootImagesvSphere", "MaxUnavailableStatefulSet",
+    "MinimumKubeletVersion", "MixedCPUsAllocation", "MultiArchInstallAzure", "MultiDiskSetup",
+    "MutatingAdmissionPolicy", "NewOLMCatalogdAPIV1Metas", "NewOLMOwnSingleNamespace",
+    "NewOLMPreflightPermissionChecks", "NewOLMWebhookProviderOpenshiftServiceCA",
+    "NoRegistryClusterOperations", "NodeSwap", "NutanixMultiSubnets", "OVNObservability",
+    "OpenShiftPodSecurityAdmission", "SELinuxMount", "ShortCertRotation", "SignatureStores",
+    "SigstoreImageVerificationPKI", "TranslateStreamCloseWebsocketRequests", "VSphereConfigurableMaxAllowedBlockVolumesPerNode",
+    "VSphereHostVMGroupZonal", "VSphereMixedNodeEnv", "VolumeAttributesClass", "VolumeGroupSnapshot"}}
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-network-operator
+      operation: Update
+      time: "2026-01-28T09:28:56Z"
+    name: network-operator.188edb092c5ae1f8
+    namespace: openshift-network-operator
+    resourceVersion: "3848"
+    uid: e04d2a46-f707-4fdc-b3b2-a7cd33d92397
+  reason: FeatureGatesInitialized
+  reportingComponent: network-operator
+  reportingInstance: ""
+  source:
+    component: network-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:56Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: network-operator
+    namespace: openshift-network-operator
+    uid: 6c6c4b09-2539-4cd6-9000-e22f0b6fc631
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:56Z"
+  message: Unable to determine current operator status for cluster-network-operator
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-network-operator
+      operation: Update
+      time: "2026-01-28T09:28:56Z"
+    name: network-operator.188edb0932a10ebf
+    namespace: openshift-network-operator
+    resourceVersion: "3850"
+    uid: bbbb8baf-8d2a-47e4-8f9b-98bf07387fc9
+  reason: StatusNotFound
+  reportingComponent: network-operator-management-state-recorder-cluster-network-operator-managementstate
+  reportingInstance: ""
+  source:
+    component: network-operator-management-state-recorder-cluster-network-operator-managementstate
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:41Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: network-operator
+    namespace: openshift-network-operator
+    uid: 6c6c4b09-2539-4cd6-9000-e22f0b6fc631
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:41Z"
+  message: FeatureGates updated to featuregates.Features{Enabled:[]v1.FeatureGateName{"AdditionalRoutingCapabilities",
+    "AdminNetworkPolicy", "AlibabaPlatform", "AzureWorkloadIdentity", "BuildCSIVolumes",
+    "CPMSMachineNamePrefix", "ConsolePluginContentSecurityPolicy", "ExternalOIDC",
+    "ExternalOIDCWithUIDAndExtraClaimMappings", "GatewayAPI", "GatewayAPIController",
+    "HighlyAvailableArbiter", "ImageVolume", "IngressControllerLBSubnetsAWS", "KMSv1",
+    "MachineConfigNodes", "ManagedBootImages", "ManagedBootImagesAWS", "MetricsCollectionProfiles",
+    "NetworkDiagnosticsConfig", "NetworkLiveMigration", "NetworkSegmentation", "NewOLM",
+    "PinnedImages", "PreconfiguredUDNAddresses", "ProcMountType", "RouteAdvertisements",
+    "RouteExternalCertificate", "ServiceAccountTokenNodeBinding", "SetEIPForNLBIngressController",
+    "SigstoreImageVerification", "StoragePerformantSecurityPolicy", "UpgradeStatus",
+    "UserNamespacesPodSecurityStandards", "UserNamespacesSupport", "VSphereMultiDisk",
+    "VSphereMultiNetworks"}, Disabled:[]v1.FeatureGateName{"AWSClusterHostedDNS",
+    "AWSClusterHostedDNSInstall", "AWSDedicatedHosts", "AWSServiceLBNetworkSecurityGroup",
+    "AutomatedEtcdBackup", "AzureClusterHostedDNSInstall", "AzureDedicatedHosts",
+    "AzureMultiDisk", "BootImageSkewEnforcement", "BootcNodeManagement", "ClusterAPIInstall",
+    "ClusterAPIInstallIBMCloud", "ClusterMonitoringConfig", "ClusterVersionOperatorConfiguration",
+    "DNSNameResolver", "DualReplica", "DyanmicServiceEndpointIBMCloud", "DynamicResourceAllocation",
+    "EtcdBackendQuota", "EventedPLEG", "Example", "Example2", "ExternalSnapshotMetadata",
+    "GCPClusterHostedDNS", "GCPClusterHostedDNSInstall", "GCPCustomAPIEndpoints",
+    "GCPCustomAPIEndpointsInstall", "ImageModeStatusReporting", "ImageStreamImportMode",
+    "IngressControllerDynamicConfigurationManager", "InsightsConfig", "InsightsConfigAPI",
+    "InsightsOnDemandDataGather", "IrreconcilableMachineConfig", "KMSEncryptionProvider",
+    "MachineAPIMigration", "MachineAPIOperatorDisableMachineHealthCheckController",
+    "ManagedBootImagesAzure", "ManagedBootImagesvSphere", "MaxUnavailableStatefulSet",
+    "MinimumKubeletVersion", "MixedCPUsAllocation", "MultiArchInstallAzure", "MultiDiskSetup",
+    "MutatingAdmissionPolicy", "NewOLMCatalogdAPIV1Metas", "NewOLMOwnSingleNamespace",
+    "NewOLMPreflightPermissionChecks", "NewOLMWebhookProviderOpenshiftServiceCA",
+    "NoRegistryClusterOperations", "NodeSwap", "NutanixMultiSubnets", "OVNObservability",
+    "OpenShiftPodSecurityAdmission", "SELinuxMount", "ShortCertRotation", "SignatureStores",
+    "SigstoreImageVerificationPKI", "TranslateStreamCloseWebsocketRequests", "VSphereConfigurableMaxAllowedBlockVolumesPerNode",
+    "VSphereHostVMGroupZonal", "VSphereMixedNodeEnv", "VolumeAttributesClass", "VolumeGroupSnapshot"}}
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:41Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-network-operator
+      operation: Update
+      time: "2026-01-28T09:31:41Z"
+    name: network-operator.188edb2fab4f3c5f
+    namespace: openshift-network-operator
+    resourceVersion: "9439"
+    uid: 28160721-78cf-478a-b36b-ff50f4358e47
+  reason: FeatureGatesInitialized
+  reportingComponent: network-operator
+  reportingInstance: ""
+  source:
+    component: network-operator
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "35155"

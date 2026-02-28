@@ -1,0 +1,1444 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:31Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: network-node-identity-8blnr
+    namespace: openshift-network-node-identity
+    resourceVersion: "4676"
+    uid: 576bf985-5849-47c3-b8e9-4774d5147d6d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:31Z"
+  message: Successfully assigned openshift-network-node-identity/network-node-identity-8blnr
+    to ip-10-0-3-203.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:29:31Z"
+    name: network-node-identity-8blnr.188edb1159964625
+    namespace: openshift-network-node-identity
+    resourceVersion: "4686"
+    uid: 80d1ba57-6c5e-4f04-b987-8e9fccb98d97
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:31Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: network-node-identity-8blnr
+    namespace: openshift-network-node-identity
+    resourceVersion: "4684"
+    uid: 576bf985-5849-47c3-b8e9-4774d5147d6d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:31Z"
+  message: 'MountVolume.SetUp failed for volume "webhook-cert" : secret "network-node-identity-cert"
+    not found'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:31Z"
+    name: network-node-identity-8blnr.188edb1167e21432
+    namespace: openshift-network-node-identity
+    resourceVersion: "4702"
+    uid: 6b88622b-88df-44c8-bf6f-2b703cf60df5
+  reason: FailedMount
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{webhook}
+    kind: Pod
+    name: network-node-identity-8blnr
+    namespace: openshift-network-node-identity
+    resourceVersion: "4684"
+    uid: 576bf985-5849-47c3-b8e9-4774d5147d6d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:32Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d732505bbda1adfc700e58ea8b52de16c3e511aaeedc03c6d1b932057b9b3f49"
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:32Z"
+    name: network-node-identity-8blnr.188edb11946f5af8
+    namespace: openshift-network-node-identity
+    resourceVersion: "4724"
+    uid: c4ec666e-2421-4326-a005-8de52fa3bcc1
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:50Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{webhook}
+    kind: Pod
+    name: network-node-identity-8blnr
+    namespace: openshift-network-node-identity
+    resourceVersion: "4684"
+    uid: 576bf985-5849-47c3-b8e9-4774d5147d6d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:50Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d732505bbda1adfc700e58ea8b52de16c3e511aaeedc03c6d1b932057b9b3f49"
+    in 18.34s (18.34s including waiting). Image size: 1642062435 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:50Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:50Z"
+    name: network-node-identity-8blnr.188edb15d99ebbe7
+    namespace: openshift-network-node-identity
+    resourceVersion: "5015"
+    uid: 7c57c7e3-026b-4635-b273-6ff45ef54388
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:50Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{webhook}
+    kind: Pod
+    name: network-node-identity-8blnr
+    namespace: openshift-network-node-identity
+    resourceVersion: "4684"
+    uid: 576bf985-5849-47c3-b8e9-4774d5147d6d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:50Z"
+  message: 'Created container: webhook'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:50Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:50Z"
+    name: network-node-identity-8blnr.188edb15ec0dde4f
+    namespace: openshift-network-node-identity
+    resourceVersion: "5031"
+    uid: 3a71006f-ab22-40f2-96a0-cfe476a037d5
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:50Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{webhook}
+    kind: Pod
+    name: network-node-identity-8blnr
+    namespace: openshift-network-node-identity
+    resourceVersion: "4684"
+    uid: 576bf985-5849-47c3-b8e9-4774d5147d6d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:50Z"
+  message: Started container webhook
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:50Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:50Z"
+    name: network-node-identity-8blnr.188edb15ecd43c5d
+    namespace: openshift-network-node-identity
+    resourceVersion: "5032"
+    uid: 35ce5fe8-71cb-4b6a-afda-c5372f87e8b9
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:50Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{approver}
+    kind: Pod
+    name: network-node-identity-8blnr
+    namespace: openshift-network-node-identity
+    resourceVersion: "4684"
+    uid: 576bf985-5849-47c3-b8e9-4774d5147d6d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:50Z"
+  message: Container image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d732505bbda1adfc700e58ea8b52de16c3e511aaeedc03c6d1b932057b9b3f49"
+    already present on machine
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:50Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:50Z"
+    name: network-node-identity-8blnr.188edb15ed003368
+    namespace: openshift-network-node-identity
+    resourceVersion: "5033"
+    uid: 0f82f7dc-287c-4ef6-81d8-c5cec059dbfd
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:50Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{approver}
+    kind: Pod
+    name: network-node-identity-8blnr
+    namespace: openshift-network-node-identity
+    resourceVersion: "4684"
+    uid: 576bf985-5849-47c3-b8e9-4774d5147d6d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:50Z"
+  message: 'Created container: approver'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:50Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:50Z"
+    name: network-node-identity-8blnr.188edb15f0f7c372
+    namespace: openshift-network-node-identity
+    resourceVersion: "5036"
+    uid: d1b35dbc-ef1b-4da8-85e9-490abded4091
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:50Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{approver}
+    kind: Pod
+    name: network-node-identity-8blnr
+    namespace: openshift-network-node-identity
+    resourceVersion: "4684"
+    uid: 576bf985-5849-47c3-b8e9-4774d5147d6d
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:50Z"
+  message: Started container approver
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:50Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:50Z"
+    name: network-node-identity-8blnr.188edb15f16ff8a4
+    namespace: openshift-network-node-identity
+    resourceVersion: "5037"
+    uid: f2c4a1eb-f687-4838-9bb7-5ed23117b236
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-3-203.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-3-203.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:31Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: network-node-identity-kqk2q
+    namespace: openshift-network-node-identity
+    resourceVersion: "4677"
+    uid: 804bb192-2b65-4ec7-921a-1128f549ded7
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:31Z"
+  message: Successfully assigned openshift-network-node-identity/network-node-identity-kqk2q
+    to ip-10-0-102-200.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:29:31Z"
+    name: network-node-identity-kqk2q.188edb115996493b
+    namespace: openshift-network-node-identity
+    resourceVersion: "4687"
+    uid: 0c5e9d70-0926-46cb-a63b-71fb4b22b312
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:31Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: network-node-identity-kqk2q
+    namespace: openshift-network-node-identity
+    resourceVersion: "4683"
+    uid: 804bb192-2b65-4ec7-921a-1128f549ded7
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:31Z"
+  message: 'MountVolume.SetUp failed for volume "webhook-cert" : secret "network-node-identity-cert"
+    not found'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:31Z"
+    name: network-node-identity-kqk2q.188edb11653c03fa
+    namespace: openshift-network-node-identity
+    resourceVersion: "4700"
+    uid: fb03de4a-f836-4d6e-acc3-81dd5a936c9a
+  reason: FailedMount
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{webhook}
+    kind: Pod
+    name: network-node-identity-kqk2q
+    namespace: openshift-network-node-identity
+    resourceVersion: "4683"
+    uid: 804bb192-2b65-4ec7-921a-1128f549ded7
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:32Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d732505bbda1adfc700e58ea8b52de16c3e511aaeedc03c6d1b932057b9b3f49"
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:32Z"
+    name: network-node-identity-kqk2q.188edb1197636da0
+    namespace: openshift-network-node-identity
+    resourceVersion: "4725"
+    uid: 293fd6ac-b0fe-465a-8259-9a59e8bf6a57
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{webhook}
+    kind: Pod
+    name: network-node-identity-kqk2q
+    namespace: openshift-network-node-identity
+    resourceVersion: "4683"
+    uid: 804bb192-2b65-4ec7-921a-1128f549ded7
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:44Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d732505bbda1adfc700e58ea8b52de16c3e511aaeedc03c6d1b932057b9b3f49"
+    in 12.526s (12.526s including waiting). Image size: 1642062435 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:44Z"
+    name: network-node-identity-kqk2q.188edb1482054c8c
+    namespace: openshift-network-node-identity
+    resourceVersion: "4869"
+    uid: dfe65902-d439-4be9-9f48-d1b30a5cb3d0
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{webhook}
+    kind: Pod
+    name: network-node-identity-kqk2q
+    namespace: openshift-network-node-identity
+    resourceVersion: "4683"
+    uid: 804bb192-2b65-4ec7-921a-1128f549ded7
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:44Z"
+  message: 'Created container: webhook'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:44Z"
+    name: network-node-identity-kqk2q.188edb148cfe8f25
+    namespace: openshift-network-node-identity
+    resourceVersion: "4874"
+    uid: 4d460a76-9726-4a35-b5ea-c0d26cd3e813
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{webhook}
+    kind: Pod
+    name: network-node-identity-kqk2q
+    namespace: openshift-network-node-identity
+    resourceVersion: "4683"
+    uid: 804bb192-2b65-4ec7-921a-1128f549ded7
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:44Z"
+  message: Started container webhook
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:44Z"
+    name: network-node-identity-kqk2q.188edb148dc6a1a5
+    namespace: openshift-network-node-identity
+    resourceVersion: "4875"
+    uid: 07487413-da45-4f1b-8e40-049a0d679d1f
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{approver}
+    kind: Pod
+    name: network-node-identity-kqk2q
+    namespace: openshift-network-node-identity
+    resourceVersion: "4683"
+    uid: 804bb192-2b65-4ec7-921a-1128f549ded7
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:44Z"
+  message: Container image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d732505bbda1adfc700e58ea8b52de16c3e511aaeedc03c6d1b932057b9b3f49"
+    already present on machine
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:44Z"
+    name: network-node-identity-kqk2q.188edb148df483d6
+    namespace: openshift-network-node-identity
+    resourceVersion: "4876"
+    uid: cedefbe5-03bf-427e-8d89-934f2a13ca45
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:45Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{approver}
+    kind: Pod
+    name: network-node-identity-kqk2q
+    namespace: openshift-network-node-identity
+    resourceVersion: "4683"
+    uid: 804bb192-2b65-4ec7-921a-1128f549ded7
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:45Z"
+  message: 'Created container: approver'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:45Z"
+    name: network-node-identity-kqk2q.188edb149272e22f
+    namespace: openshift-network-node-identity
+    resourceVersion: "4881"
+    uid: bb6db386-449f-4b0b-9b5d-cf8d88c24eb3
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:45Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{approver}
+    kind: Pod
+    name: network-node-identity-kqk2q
+    namespace: openshift-network-node-identity
+    resourceVersion: "4683"
+    uid: 804bb192-2b65-4ec7-921a-1128f549ded7
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:45Z"
+  message: Started container approver
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:45Z"
+    name: network-node-identity-kqk2q.188edb1493088225
+    namespace: openshift-network-node-identity
+    resourceVersion: "4882"
+    uid: a6e2e66d-2de0-4542-99bb-b0dc5ec479d8
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-102-200.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-102-200.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:31Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: network-node-identity-n7928
+    namespace: openshift-network-node-identity
+    resourceVersion: "4672"
+    uid: e8f798d4-e4e4-40af-b05f-668c09ccaeee
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:31Z"
+  message: Successfully assigned openshift-network-node-identity/network-node-identity-n7928
+    to ip-10-0-108-54.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:29:31Z"
+    name: network-node-identity-n7928.188edb1158d258c0
+    namespace: openshift-network-node-identity
+    resourceVersion: "4679"
+    uid: 4e089b53-85f7-406c-b3c7-1a82639feeed
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:31Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: network-node-identity-n7928
+    namespace: openshift-network-node-identity
+    resourceVersion: "4674"
+    uid: e8f798d4-e4e4-40af-b05f-668c09ccaeee
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:31Z"
+  message: 'MountVolume.SetUp failed for volume "webhook-cert" : secret "network-node-identity-cert"
+    not found'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:31Z"
+    name: network-node-identity-n7928.188edb11677c2ab5
+    namespace: openshift-network-node-identity
+    resourceVersion: "4701"
+    uid: fd04b8f2-332f-4011-9c58-2ffdda1bb296
+  reason: FailedMount
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{webhook}
+    kind: Pod
+    name: network-node-identity-n7928
+    namespace: openshift-network-node-identity
+    resourceVersion: "4674"
+    uid: e8f798d4-e4e4-40af-b05f-668c09ccaeee
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:32Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d732505bbda1adfc700e58ea8b52de16c3e511aaeedc03c6d1b932057b9b3f49"
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:32Z"
+    name: network-node-identity-n7928.188edb1191ea3190
+    namespace: openshift-network-node-identity
+    resourceVersion: "4721"
+    uid: 91420119-d7fb-40f6-83fd-4851ffc2107d
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{webhook}
+    kind: Pod
+    name: network-node-identity-n7928
+    namespace: openshift-network-node-identity
+    resourceVersion: "4674"
+    uid: e8f798d4-e4e4-40af-b05f-668c09ccaeee
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:48Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d732505bbda1adfc700e58ea8b52de16c3e511aaeedc03c6d1b932057b9b3f49"
+    in 16.028s (16.028s including waiting). Image size: 1642062435 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:48Z"
+    name: network-node-identity-n7928.188edb154d4d3e70
+    namespace: openshift-network-node-identity
+    resourceVersion: "4953"
+    uid: 21305007-7693-4c23-a6e0-976b0fb74ccf
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{webhook}
+    kind: Pod
+    name: network-node-identity-n7928
+    namespace: openshift-network-node-identity
+    resourceVersion: "4674"
+    uid: e8f798d4-e4e4-40af-b05f-668c09ccaeee
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:48Z"
+  message: 'Created container: webhook'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:48Z"
+    name: network-node-identity-n7928.188edb15574ed936
+    namespace: openshift-network-node-identity
+    resourceVersion: "4959"
+    uid: ebd44c94-34f6-4da0-a82b-179676f35d9a
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{webhook}
+    kind: Pod
+    name: network-node-identity-n7928
+    namespace: openshift-network-node-identity
+    resourceVersion: "4674"
+    uid: e8f798d4-e4e4-40af-b05f-668c09ccaeee
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:48Z"
+  message: Started container webhook
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:48Z"
+    name: network-node-identity-n7928.188edb15581727f4
+    namespace: openshift-network-node-identity
+    resourceVersion: "4960"
+    uid: d8bf1051-ca1e-4801-890c-2271a9bda9f5
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{approver}
+    kind: Pod
+    name: network-node-identity-n7928
+    namespace: openshift-network-node-identity
+    resourceVersion: "4674"
+    uid: e8f798d4-e4e4-40af-b05f-668c09ccaeee
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:48Z"
+  message: Container image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d732505bbda1adfc700e58ea8b52de16c3e511aaeedc03c6d1b932057b9b3f49"
+    already present on machine
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:48Z"
+    name: network-node-identity-n7928.188edb1558219e68
+    namespace: openshift-network-node-identity
+    resourceVersion: "4961"
+    uid: 7751e91e-e8d0-4448-a6b8-772531561830
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{approver}
+    kind: Pod
+    name: network-node-identity-n7928
+    namespace: openshift-network-node-identity
+    resourceVersion: "4674"
+    uid: e8f798d4-e4e4-40af-b05f-668c09ccaeee
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:48Z"
+  message: 'Created container: approver'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:48Z"
+    name: network-node-identity-n7928.188edb155b57b306
+    namespace: openshift-network-node-identity
+    resourceVersion: "4966"
+    uid: fa7959be-d081-4163-8db0-98483ff9e892
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{approver}
+    kind: Pod
+    name: network-node-identity-n7928
+    namespace: openshift-network-node-identity
+    resourceVersion: "4674"
+    uid: e8f798d4-e4e4-40af-b05f-668c09ccaeee
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:48Z"
+  message: Started container approver
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:29:48Z"
+    name: network-node-identity-n7928.188edb155be253cf
+    namespace: openshift-network-node-identity
+    resourceVersion: "4967"
+    uid: 32363eaa-27fb-42c8-855c-0e6e800501c8
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:31Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: network-node-identity
+    namespace: openshift-network-node-identity
+    resourceVersion: "4670"
+    uid: 227570a1-1ab9-46c2-8fb3-861acb7df0d1
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:31Z"
+  message: 'Created pod: network-node-identity-n7928'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:29:31Z"
+    name: network-node-identity.188edb11587dcb58
+    namespace: openshift-network-node-identity
+    resourceVersion: "4675"
+    uid: cbbfcc71-6ca0-4fc2-899e-0588ff1d80a6
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:31Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: network-node-identity
+    namespace: openshift-network-node-identity
+    resourceVersion: "4670"
+    uid: 227570a1-1ab9-46c2-8fb3-861acb7df0d1
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:31Z"
+  message: 'Created pod: network-node-identity-8blnr'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:29:31Z"
+    name: network-node-identity.188edb1158fbde0c
+    namespace: openshift-network-node-identity
+    resourceVersion: "4680"
+    uid: eb4809e6-7fd5-4362-b701-46a1bbbdd2af
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:31Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: network-node-identity
+    namespace: openshift-network-node-identity
+    resourceVersion: "4670"
+    uid: 227570a1-1ab9-46c2-8fb3-861acb7df0d1
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:31Z"
+  message: 'Created pod: network-node-identity-kqk2q'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:29:31Z"
+    name: network-node-identity.188edb1158ff77c1
+    namespace: openshift-network-node-identity
+    resourceVersion: "4685"
+    uid: 9227d623-2cd8-4d12-b2f4-03a9005bdd6b
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:45Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: ovnkube-identity
+    namespace: openshift-network-node-identity
+    resourceVersion: "4883"
+    uid: 444fb422-436f-4a69-af76-e0a920f40fe2
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:45Z"
+  message: ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b became leader
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: ovnkube-identity
+      operation: Update
+      time: "2026-01-28T09:29:45Z"
+    name: ovnkube-identity.188edb1497ac53b2
+    namespace: openshift-network-node-identity
+    resourceVersion: "4885"
+    uid: d9cde437-4675-4be6-915f-b355e5cb752b
+  reason: LeaderElection
+  reportingComponent: ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b
+  reportingInstance: ""
+  source:
+    component: ip-10-0-102-200_7978caa9-983f-4714-a0d8-7a4f36fdfc9b
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "35152"

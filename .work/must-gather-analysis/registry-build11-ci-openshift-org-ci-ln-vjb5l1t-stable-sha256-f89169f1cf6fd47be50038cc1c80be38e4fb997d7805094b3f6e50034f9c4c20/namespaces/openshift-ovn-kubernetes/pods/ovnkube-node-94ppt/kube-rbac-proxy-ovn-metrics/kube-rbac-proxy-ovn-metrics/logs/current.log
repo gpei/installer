@@ -1,0 +1,155 @@
+2026-01-28T09:29:58.883994588Z ++ K8S_NODE=
+2026-01-28T09:29:58.883994588Z ++ [[ -n '' ]]
+2026-01-28T09:29:58.884080800Z ++ northd_pidfile=/var/run/ovn/ovn-northd.pid
+2026-01-28T09:29:58.884080800Z ++ controller_pidfile=/var/run/ovn/ovn-controller.pid
+2026-01-28T09:29:58.884080800Z ++ controller_logfile=/var/log/ovn/acl-audit-log.log
+2026-01-28T09:29:58.884080800Z ++ vswitch_dbsock=/var/run/openvswitch/db.sock
+2026-01-28T09:29:58.884080800Z ++ nbdb_pidfile=/var/run/ovn/ovnnb_db.pid
+2026-01-28T09:29:58.884080800Z ++ nbdb_sock=/var/run/ovn/ovnnb_db.sock
+2026-01-28T09:29:58.884080800Z ++ nbdb_ctl=/var/run/ovn/ovnnb_db.ctl
+2026-01-28T09:29:58.884080800Z ++ sbdb_pidfile=/var/run/ovn/ovnsb_db.pid
+2026-01-28T09:29:58.884080800Z ++ sbdb_sock=/var/run/ovn/ovnsb_db.sock
+2026-01-28T09:29:58.884080800Z ++ sbdb_ctl=/var/run/ovn/ovnsb_db.ctl
+2026-01-28T09:29:58.885247285Z + start-rbac-proxy-node ovn-metrics 9105 29105 /etc/pki/tls/metrics-cert/tls.key /etc/pki/tls/metrics-cert/tls.crt
+2026-01-28T09:29:58.885247285Z + local detail=ovn-metrics
+2026-01-28T09:29:58.885267475Z + local listen_port=9105
+2026-01-28T09:29:58.885267475Z + local upstream_port=29105
+2026-01-28T09:29:58.885267475Z + local privkey=/etc/pki/tls/metrics-cert/tls.key
+2026-01-28T09:29:58.885267475Z + local clientcert=/etc/pki/tls/metrics-cert/tls.crt
+2026-01-28T09:29:58.885267475Z + [[ 5 -ne 5 ]]
+2026-01-28T09:29:58.885574982Z ++ date -Iseconds
+2026-01-28T09:29:58.887124315Z + echo '2026-01-28T09:29:58+00:00 INFO: waiting for ovn-metrics certs to be mounted'
+2026-01-28T09:29:58.887141155Z 2026-01-28T09:29:58+00:00 INFO: waiting for ovn-metrics certs to be mounted
+2026-01-28T09:29:58.887149655Z + wait-for-certs ovn-metrics /etc/pki/tls/metrics-cert/tls.key /etc/pki/tls/metrics-cert/tls.crt
+2026-01-28T09:29:58.887177036Z + local detail=ovn-metrics
+2026-01-28T09:29:58.887177036Z + local privkey=/etc/pki/tls/metrics-cert/tls.key
+2026-01-28T09:29:58.887185106Z + local clientcert=/etc/pki/tls/metrics-cert/tls.crt
+2026-01-28T09:29:58.887192526Z + [[ 3 -ne 3 ]]
+2026-01-28T09:29:58.887192526Z + retries=0
+2026-01-28T09:29:58.887469402Z ++ date +%s
+2026-01-28T09:29:58.888747739Z + TS=1769592598
+2026-01-28T09:29:58.888764160Z + WARN_TS=1769593798
+2026-01-28T09:29:58.888764160Z + HAS_LOGGED_INFO=0
+2026-01-28T09:29:58.888764160Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2026-01-28T09:29:58.889055356Z ++ date +%s
+2026-01-28T09:29:58.890326393Z + CUR_TS=1769592598
+2026-01-28T09:29:58.890326393Z + [[ 1769592598 -gt WARN_TS ]]
+2026-01-28T09:29:58.890342973Z + [[ 0 -eq 0 ]]
+2026-01-28T09:29:58.890591259Z ++ date -Iseconds
+2026-01-28T09:29:58.891821525Z 2026-01-28T09:29:58+00:00 INFO: ovn-metrics certs not mounted. Waiting one hour.
+2026-01-28T09:29:58.891834555Z + echo '2026-01-28T09:29:58+00:00 INFO: ovn-metrics certs not mounted. Waiting one hour.'
+2026-01-28T09:29:58.891834555Z + HAS_LOGGED_INFO=1
+2026-01-28T09:29:58.891834555Z + sleep 5
+2026-01-28T09:30:03.893409895Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2026-01-28T09:30:03.893730632Z ++ date +%s
+2026-01-28T09:30:03.895234724Z + CUR_TS=1769592603
+2026-01-28T09:30:03.895234724Z + [[ 1769592603 -gt WARN_TS ]]
+2026-01-28T09:30:03.895252514Z + [[ 1 -eq 0 ]]
+2026-01-28T09:30:03.895252514Z + sleep 5
+2026-01-28T09:30:08.896831063Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2026-01-28T09:30:08.897325003Z ++ date +%s
+2026-01-28T09:30:08.899202573Z + CUR_TS=1769592608
+2026-01-28T09:30:08.899202573Z + [[ 1769592608 -gt WARN_TS ]]
+2026-01-28T09:30:08.899229073Z + [[ 1 -eq 0 ]]
+2026-01-28T09:30:08.899229073Z + sleep 5
+2026-01-28T09:30:13.900771357Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2026-01-28T09:30:13.901155214Z ++ date +%s
+2026-01-28T09:30:13.902618735Z + CUR_TS=1769592613
+2026-01-28T09:30:13.902636276Z + [[ 1769592613 -gt WARN_TS ]]
+2026-01-28T09:30:13.902636276Z + [[ 1 -eq 0 ]]
+2026-01-28T09:30:13.902646686Z + sleep 5
+2026-01-28T09:30:18.904330463Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2026-01-28T09:30:18.904652230Z ++ date +%s
+2026-01-28T09:30:18.906025199Z + CUR_TS=1769592618
+2026-01-28T09:30:18.906025199Z + [[ 1769592618 -gt WARN_TS ]]
+2026-01-28T09:30:18.906043359Z + [[ 1 -eq 0 ]]
+2026-01-28T09:30:18.906043359Z + sleep 5
+2026-01-28T09:30:23.907617118Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2026-01-28T09:30:23.908070277Z ++ date +%s
+2026-01-28T09:30:23.909589400Z + CUR_TS=1769592623
+2026-01-28T09:30:23.909589400Z + [[ 1769592623 -gt WARN_TS ]]
+2026-01-28T09:30:23.909610470Z + [[ 1 -eq 0 ]]
+2026-01-28T09:30:23.909610470Z + sleep 5
+2026-01-28T09:30:28.911221707Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2026-01-28T09:30:28.911598455Z ++ date +%s
+2026-01-28T09:30:28.913095847Z + CUR_TS=1769592628
+2026-01-28T09:30:28.913095847Z + [[ 1769592628 -gt WARN_TS ]]
+2026-01-28T09:30:28.913117077Z + [[ 1 -eq 0 ]]
+2026-01-28T09:30:28.913117077Z + sleep 5
+2026-01-28T09:30:33.914639113Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2026-01-28T09:30:33.914988391Z ++ date +%s
+2026-01-28T09:30:33.916518844Z + CUR_TS=1769592633
+2026-01-28T09:30:33.916518844Z + [[ 1769592633 -gt WARN_TS ]]
+2026-01-28T09:30:33.916539164Z + [[ 1 -eq 0 ]]
+2026-01-28T09:30:33.916539164Z + sleep 5
+2026-01-28T09:30:38.918060946Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2026-01-28T09:30:38.918379613Z ++ date +%s
+2026-01-28T09:30:38.919772083Z + CUR_TS=1769592638
+2026-01-28T09:30:38.919772083Z + [[ 1769592638 -gt WARN_TS ]]
+2026-01-28T09:30:38.919794393Z + [[ 1 -eq 0 ]]
+2026-01-28T09:30:38.919794393Z + sleep 5
+2026-01-28T09:30:43.921412934Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2026-01-28T09:30:43.921798272Z ++ date +%s
+2026-01-28T09:30:43.923324635Z + CUR_TS=1769592643
+2026-01-28T09:30:43.923324635Z + [[ 1769592643 -gt WARN_TS ]]
+2026-01-28T09:30:43.923342505Z + [[ 1 -eq 0 ]]
+2026-01-28T09:30:43.923352935Z + sleep 5
+2026-01-28T09:30:48.924878384Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2026-01-28T09:30:48.925300113Z ++ date +%s
+2026-01-28T09:30:48.926666702Z + CUR_TS=1769592648
+2026-01-28T09:30:48.926684623Z + [[ 1769592648 -gt WARN_TS ]]
+2026-01-28T09:30:48.926684623Z + [[ 1 -eq 0 ]]
+2026-01-28T09:30:48.926694973Z + sleep 5
+2026-01-28T09:30:53.928303309Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2026-01-28T09:30:53.928776949Z ++ date +%s
+2026-01-28T09:30:53.930826194Z + CUR_TS=1769592653
+2026-01-28T09:30:53.930879615Z + [[ 1769592653 -gt WARN_TS ]]
+2026-01-28T09:30:53.930944137Z + [[ 1 -eq 0 ]]
+2026-01-28T09:30:53.930976217Z + sleep 5
+2026-01-28T09:30:58.932973987Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2026-01-28T09:30:58.933632731Z ++ date +%s
+2026-01-28T09:30:58.935698167Z + CUR_TS=1769592658
+2026-01-28T09:30:58.935726027Z + [[ 1769592658 -gt WARN_TS ]]
+2026-01-28T09:30:58.935726027Z + [[ 1 -eq 0 ]]
+2026-01-28T09:30:58.935726027Z + sleep 5
+2026-01-28T09:31:03.937731358Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2026-01-28T09:31:03.938097476Z ++ date +%s
+2026-01-28T09:31:03.939632929Z + CUR_TS=1769592663
+2026-01-28T09:31:03.939657960Z + [[ 1769592663 -gt WARN_TS ]]
+2026-01-28T09:31:03.939657960Z + [[ 1 -eq 0 ]]
+2026-01-28T09:31:03.939657960Z + sleep 5
+2026-01-28T09:31:08.941254621Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2026-01-28T09:31:08.941657940Z ++ date +%s
+2026-01-28T09:31:08.943742325Z + CUR_TS=1769592668
+2026-01-28T09:31:08.943805307Z + [[ 1769592668 -gt WARN_TS ]]
+2026-01-28T09:31:08.943845978Z + [[ 1 -eq 0 ]]
+2026-01-28T09:31:08.943873718Z + sleep 5
+2026-01-28T09:31:13.946441512Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2026-01-28T09:31:13.946625316Z ++ date +%s
+2026-01-28T09:31:13.948443357Z + CUR_TS=1769592673
+2026-01-28T09:31:13.948469127Z + [[ 1769592673 -gt WARN_TS ]]
+2026-01-28T09:31:13.948469127Z + [[ 1 -eq 0 ]]
+2026-01-28T09:31:13.948491707Z + sleep 5
+2026-01-28T09:31:18.950596988Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2026-01-28T09:31:18.951033398Z ++ date +%s
+2026-01-28T09:31:18.952814368Z + CUR_TS=1769592678
+2026-01-28T09:31:18.952839819Z + [[ 1769592678 -gt WARN_TS ]]
+2026-01-28T09:31:18.952839819Z + [[ 1 -eq 0 ]]
+2026-01-28T09:31:18.952839819Z + sleep 5
+2026-01-28T09:31:23.954391576Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2026-01-28T09:31:23.954391576Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.crt ]]
+2026-01-28T09:31:23.954876517Z ++ date -Iseconds
+2026-01-28T09:31:23.956759219Z + echo '2026-01-28T09:31:23+00:00 INFO: ovn-metrics certs mounted, starting kube-rbac-proxy'
+2026-01-28T09:31:23.956798640Z 2026-01-28T09:31:23+00:00 INFO: ovn-metrics certs mounted, starting kube-rbac-proxy
+2026-01-28T09:31:23.956854292Z + exec /usr/bin/kube-rbac-proxy --logtostderr --secure-listen-address=:9105 --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 --upstream=http://127.0.0.1:29105/ --tls-private-key-file=/etc/pki/tls/metrics-cert/tls.key --tls-cert-file=/etc/pki/tls/metrics-cert/tls.crt
+2026-01-28T09:31:23.982622721Z W0128 09:31:23.982497    3544 deprecated.go:66] 
+2026-01-28T09:31:23.982622721Z ==== Removed Flag Warning ======================
+2026-01-28T09:31:23.982622721Z 
+2026-01-28T09:31:23.982622721Z logtostderr is removed in the k8s upstream and has no effect any more.
+2026-01-28T09:31:23.982622721Z 
+2026-01-28T09:31:23.982622721Z ===============================================
+2026-01-28T09:31:23.982622721Z 		
+2026-01-28T09:31:23.983007990Z I0128 09:31:23.982991    3544 kube-rbac-proxy.go:235] Valid token audiences: 
+2026-01-28T09:31:23.983817598Z I0128 09:31:23.983793    3544 kube-rbac-proxy.go:349] Reading certificate files
+2026-01-28T09:31:23.984127715Z I0128 09:31:23.984100    3544 kube-rbac-proxy.go:397] Starting TCP socket on :9105
+2026-01-28T09:31:23.984523834Z I0128 09:31:23.984478    3544 kube-rbac-proxy.go:404] Listening securely on :9105

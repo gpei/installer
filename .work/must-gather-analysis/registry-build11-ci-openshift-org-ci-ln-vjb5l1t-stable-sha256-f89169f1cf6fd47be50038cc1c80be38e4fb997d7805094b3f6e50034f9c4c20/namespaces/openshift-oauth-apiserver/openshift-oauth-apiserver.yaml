@@ -1,0 +1,65 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c25,c15
+    openshift.io/sa.scc.supplemental-groups: 1000630000/10000
+    openshift.io/sa.scc.uid-range: 1000630000/10000
+    workload.openshift.io/allowed: management
+  creationTimestamp: "2026-01-28T09:30:40Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-oauth-apiserver
+    olm.operatorgroup.uid/a826e922-9cff-46d9-ae7e-960dcbdbfd1b: ""
+    openshift.io/cluster-monitoring: "true"
+    pod-security.kubernetes.io/audit: privileged
+    pod-security.kubernetes.io/enforce: privileged
+    pod-security.kubernetes.io/warn: privileged
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/node-selector: {}
+          f:workload.openshift.io/allowed: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+          f:openshift.io/cluster-monitoring: {}
+          f:pod-security.kubernetes.io/audit: {}
+          f:pod-security.kubernetes.io/enforce: {}
+          f:pod-security.kubernetes.io/warn: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2026-01-28T09:30:40Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2026-01-28T09:30:40Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:olm.operatorgroup.uid/a826e922-9cff-46d9-ae7e-960dcbdbfd1b: {}
+    manager: olm
+    operation: Update
+    time: "2026-01-28T09:31:57Z"
+  name: openshift-oauth-apiserver
+  resourceVersion: "10241"
+  uid: 97c429be-fcf2-460e-8c75-50d47c8a6436
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

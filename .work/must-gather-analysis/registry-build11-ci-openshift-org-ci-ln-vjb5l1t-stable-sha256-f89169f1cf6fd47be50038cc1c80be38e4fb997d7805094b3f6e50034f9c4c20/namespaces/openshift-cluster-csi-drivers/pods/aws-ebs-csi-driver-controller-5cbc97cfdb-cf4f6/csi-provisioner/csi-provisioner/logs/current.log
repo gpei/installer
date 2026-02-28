@@ -1,0 +1,35 @@
+2026-01-28T09:32:53.637086720Z W0128 09:32:53.635830       1 feature_gate.go:352] Setting GA feature gate Topology=true. It will be removed in a future release.
+2026-01-28T09:32:53.637086720Z I0128 09:32:53.635944       1 feature_gate.go:385] feature gates: {map[Topology:true]}
+2026-01-28T09:32:53.637086720Z I0128 09:32:53.635972       1 csi-provisioner.go:168] "Version" version="0c80bb3ec03c1ccd712a5e51de7839b85da72eb6"
+2026-01-28T09:32:53.637086720Z I0128 09:32:53.635983       1 csi-provisioner.go:191] Building kube configs for running in cluster...
+2026-01-28T09:32:53.637086720Z I0128 09:32:53.636358       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2026-01-28T09:32:53.637086720Z I0128 09:32:53.636373       1 envvar.go:172] "Feature gate default state" feature="InOrderInformers" enabled=true
+2026-01-28T09:32:53.637086720Z I0128 09:32:53.636380       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2026-01-28T09:32:53.637086720Z I0128 09:32:53.636386       1 envvar.go:172] "Feature gate default state" feature="ClientsAllowCBOR" enabled=false
+2026-01-28T09:32:53.637086720Z I0128 09:32:53.636391       1 envvar.go:172] "Feature gate default state" feature="ClientsPreferCBOR" enabled=false
+2026-01-28T09:32:53.644250927Z I0128 09:32:53.643948       1 common.go:143] "Probing CSI driver for readiness"
+2026-01-28T09:32:53.645787086Z I0128 09:32:53.645766       1 csi-provisioner.go:246] Detected CSI driver ebs.csi.aws.com
+2026-01-28T09:32:53.645833958Z I0128 09:32:53.645821       1 csi-provisioner.go:256] Supports migration from in-tree plugin: kubernetes.io/aws-ebs
+2026-01-28T09:32:53.646709783Z I0128 09:32:53.646690       1 common.go:143] "Probing CSI driver for readiness"
+2026-01-28T09:32:53.649252803Z I0128 09:32:53.649231       1 csi-provisioner.go:315] CSI driver supports PUBLISH_UNPUBLISH_VOLUME, watching VolumeAttachments
+2026-01-28T09:32:53.649820702Z I0128 09:32:53.649788       1 csi-provisioner.go:608] ServeMux listening at "localhost:8202"
+2026-01-28T09:32:53.649914437Z I0128 09:32:53.649884       1 controller.go:758] "Using saving PVs to API server in background"
+2026-01-28T09:32:53.650604652Z I0128 09:32:53.650583       1 leaderelection.go:257] attempting to acquire leader lease openshift-cluster-csi-drivers/ebs-csi-aws-com...
+2026-01-28T09:35:36.335522519Z I0128 09:35:36.335475       1 leaderelection.go:271] successfully acquired lease openshift-cluster-csi-drivers/ebs-csi-aws-com
+2026-01-28T09:35:36.336045525Z I0128 09:35:36.335623       1 leader_election.go:194] "became leader, starting"
+2026-01-28T09:35:36.337716719Z I0128 09:35:36.337680       1 reflector.go:430] "Caches populated" type="*v1.PersistentVolumeClaim" reflector="k8s.io/client-go/informers/factory.go:160"
+2026-01-28T09:35:36.337716719Z I0128 09:35:36.337697       1 reflector.go:430] "Caches populated" type="*v1.StorageClass" reflector="k8s.io/client-go/informers/factory.go:160"
+2026-01-28T09:35:36.337746500Z I0128 09:35:36.337728       1 reflector.go:430] "Caches populated" type="*v1.VolumeAttachment" reflector="k8s.io/client-go/informers/factory.go:160"
+2026-01-28T09:35:36.337821704Z I0128 09:35:36.337786       1 reflector.go:430] "Caches populated" type="*v1.CSINode" reflector="k8s.io/client-go/informers/factory.go:160"
+2026-01-28T09:35:36.338579682Z I0128 09:35:36.338520       1 reflector.go:430] "Caches populated" type="*v1.Node" reflector="k8s.io/client-go/informers/factory.go:160"
+2026-01-28T09:35:36.435968369Z I0128 09:35:36.435868       1 controller.go:838] "Starting provisioner controller" component="ebs.csi.aws.com_aws-ebs-csi-driver-controller-5cbc97cfdb-cf4f6_452dbfe2-b942-4a93-9678-b8c2c59bfe9f"
+2026-01-28T09:35:36.435968369Z I0128 09:35:36.435917       1 volume_store.go:98] "Starting save volume queue"
+2026-01-28T09:35:36.437540467Z I0128 09:35:36.437508       1 reflector.go:430] "Caches populated" type="*v1.PersistentVolume" reflector="sigs.k8s.io/sig-storage-lib-external-provisioner/v11/controller/controller.go:872"
+2026-01-28T09:35:36.437540467Z I0128 09:35:36.437515       1 reflector.go:430] "Caches populated" type="*v1.StorageClass" reflector="sigs.k8s.io/sig-storage-lib-external-provisioner/v11/controller/controller.go:875"
+2026-01-28T09:35:36.536800038Z I0128 09:35:36.536743       1 controller.go:887] "Started provisioner controller" component="ebs.csi.aws.com_aws-ebs-csi-driver-controller-5cbc97cfdb-cf4f6_452dbfe2-b942-4a93-9678-b8c2c59bfe9f"
+2026-01-28T09:42:49.523138689Z I0128 09:42:49.523065       1 event.go:389] "Event occurred" object="openshift-monitoring/prometheus-data-prometheus-k8s-0" fieldPath="" kind="PersistentVolumeClaim" apiVersion="v1" type="Normal" reason="Provisioning" message="External provisioner is provisioning volume for claim \"openshift-monitoring/prometheus-data-prometheus-k8s-0\""
+2026-01-28T09:42:49.558335180Z I0128 09:42:49.558286       1 event.go:389] "Event occurred" object="openshift-monitoring/prometheus-data-prometheus-k8s-1" fieldPath="" kind="PersistentVolumeClaim" apiVersion="v1" type="Normal" reason="Provisioning" message="External provisioner is provisioning volume for claim \"openshift-monitoring/prometheus-data-prometheus-k8s-1\""
+2026-01-28T09:42:51.696339600Z I0128 09:42:51.696283       1 controller.go:959] successfully created PV pvc-372b97d7-f214-4c1c-8dc5-a7a6b06fbc47 for PVC prometheus-data-prometheus-k8s-1 and csi volume name vol-012408495446a20ce
+2026-01-28T09:42:51.696421434Z I0128 09:42:51.696283       1 controller.go:959] successfully created PV pvc-5b37d4ec-3b0e-4094-9182-c90e5914b45b for PVC prometheus-data-prometheus-k8s-0 and csi volume name vol-0e1fe3e3d866e78dd
+2026-01-28T09:42:51.702007110Z I0128 09:42:51.701972       1 event.go:389] "Event occurred" object="openshift-monitoring/prometheus-data-prometheus-k8s-1" fieldPath="" kind="PersistentVolumeClaim" apiVersion="v1" type="Normal" reason="ProvisioningSucceeded" message="Successfully provisioned volume pvc-372b97d7-f214-4c1c-8dc5-a7a6b06fbc47"
+2026-01-28T09:42:51.703514585Z I0128 09:42:51.703490       1 event.go:389] "Event occurred" object="openshift-monitoring/prometheus-data-prometheus-k8s-0" fieldPath="" kind="PersistentVolumeClaim" apiVersion="v1" type="Normal" reason="ProvisioningSucceeded" message="Successfully provisioned volume pvc-5b37d4ec-3b0e-4094-9182-c90e5914b45b"

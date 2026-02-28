@@ -1,0 +1,28 @@
+---
+apiVersion: coordination.k8s.io/v1
+kind: Lease
+metadata:
+  creationTimestamp: "2026-01-28T09:35:43Z"
+  managedFields:
+  - apiVersion: coordination.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime: {}
+        f:holderIdentity: {}
+        f:leaseDurationSeconds: {}
+        f:leaseTransitions: {}
+        f:renewTime: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2026-01-28T10:24:24Z"
+  name: cluster-policy-controller-lock
+  namespace: openshift-kube-controller-manager
+  resourceVersion: "34802"
+  uid: dcea4e53-343e-44b5-afa3-e71e558a0936
+spec:
+  acquireTime: "2026-01-28T09:48:26.144206Z"
+  holderIdentity: ip-10-0-102-200_c2f15b7e-7b58-47fc-b711-34e63afcbfcb
+  leaseDurationSeconds: 137
+  leaseTransitions: 3
+  renewTime: "2026-01-28T10:24:24.661587Z"

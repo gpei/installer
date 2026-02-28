@@ -1,0 +1,140 @@
+2026-01-28T09:32:23.285960748Z I0128 09:32:23.285792       1 leaderelection.go:121] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2026-01-28T09:32:23.286219884Z 2026/01/28 09:32:23 Watching cluster-api objects only in namespace "openshift-machine-api" for reconciliation.
+2026-01-28T09:32:23.286247354Z 2026/01/28 09:32:23 Registering Components.
+2026-01-28T09:32:23.300957567Z I0128 09:32:23.300917       1 leaderelection.go:121] The leader election gives 4 retries and allows for 13s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m26s. Worst graceful lease acquisition is {26s}.
+2026-01-28T09:32:23.301779435Z I0128 09:32:23.301759       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2026-01-28T09:32:23.301827066Z I0128 09:32:23.301810       1 envvar.go:172] "Feature gate default state" feature="InOrderInformers" enabled=true
+2026-01-28T09:32:23.301854576Z I0128 09:32:23.301845       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2026-01-28T09:32:23.301878547Z I0128 09:32:23.301869       1 envvar.go:172] "Feature gate default state" feature="ClientsAllowCBOR" enabled=false
+2026-01-28T09:32:23.301924048Z I0128 09:32:23.301912       1 envvar.go:172] "Feature gate default state" feature="ClientsPreferCBOR" enabled=false
+2026-01-28T09:32:23.303110714Z I0128 09:32:23.303091       1 main.go:174] Initializing feature gates: AllAlpha=true|false (ALPHA - default=false), AllBeta=true|false (BETA - default=false), MachineAPIMigration=true|false (ALPHA - default=false), VSphereHostVMGroupZonal=true|false (ALPHA - default=false)
+2026-01-28T09:32:23.303165115Z W0128 09:32:23.303152       1 feature_gate.go:352] Setting GA feature gate VSphereMultiDisk=true. It will be removed in a future release.
+2026-01-28T09:32:23.303203406Z I0128 09:32:23.303185       1 feature_gate.go:385] feature gates: {map[MachineAPIMigration:false VSphereHostVMGroupZonal:false VSphereMultiDisk:true]}
+2026-01-28T09:32:23.303239847Z I0128 09:32:23.303225       1 main.go:180] Warnings setting feature gates from flags: [Ignoring unknown FeatureGate "AzureWorkloadIdentity"]
+2026-01-28T09:32:23.303273118Z I0128 09:32:23.303262       1 main.go:183] FeatureGateMachineAPIMigration initialised: false
+2026-01-28T09:32:23.354709906Z I0128 09:32:23.354665       1 server.go:183] "Registering webhook" logger="controller-runtime.webhook" path="/mutate-machine-openshift-io-v1beta1-machine"
+2026-01-28T09:32:23.354838349Z I0128 09:32:23.354806       1 server.go:183] "Registering webhook" logger="controller-runtime.webhook" path="/validate-machine-openshift-io-v1beta1-machine"
+2026-01-28T09:32:23.354944101Z I0128 09:32:23.354928       1 server.go:183] "Registering webhook" logger="controller-runtime.webhook" path="/mutate-machine-openshift-io-v1beta1-machineset"
+2026-01-28T09:32:23.355037093Z I0128 09:32:23.355023       1 server.go:183] "Registering webhook" logger="controller-runtime.webhook" path="/validate-machine-openshift-io-v1beta1-machineset"
+2026-01-28T09:32:23.355090974Z 2026/01/28 09:32:23 Registering Components.
+2026-01-28T09:32:23.355250847Z 2026/01/28 09:32:23 Starting the Cmd.
+2026-01-28T09:32:23.355439442Z I0128 09:32:23.355411       1 server.go:208] "Starting metrics server" logger="controller-runtime.metrics"
+2026-01-28T09:32:23.355645156Z I0128 09:32:23.355629       1 server.go:247] "Serving metrics server" logger="controller-runtime.metrics" bindAddress=":8082" secure=false
+2026-01-28T09:32:23.355780699Z I0128 09:32:23.355746       1 server.go:83] "starting server" name="health probe" addr="[::]:9441"
+2026-01-28T09:32:23.355876401Z I0128 09:32:23.355861       1 server.go:191] "Starting webhook server" logger="controller-runtime.webhook"
+2026-01-28T09:32:23.356337951Z I0128 09:32:23.356309       1 certwatcher.go:211] "Updated current TLS certificate" logger="controller-runtime.certwatcher"
+2026-01-28T09:32:23.356474624Z I0128 09:32:23.356460       1 server.go:242] "Serving webhook server" logger="controller-runtime.webhook" host="" port=8443
+2026-01-28T09:32:23.356660458Z I0128 09:32:23.356645       1 certwatcher.go:133] "Starting certificate poll+watcher" logger="controller-runtime.certwatcher" interval="10s"
+2026-01-28T09:32:23.356758931Z I0128 09:32:23.356745       1 leaderelection.go:257] attempting to acquire leader lease openshift-machine-api/cluster-api-provider-machineset-leader...
+2026-01-28T09:32:23.365295998Z I0128 09:32:23.365277       1 leaderelection.go:271] successfully acquired lease openshift-machine-api/cluster-api-provider-machineset-leader
+2026-01-28T09:32:23.366345211Z I0128 09:32:23.366327       1 controller.go:198] "Starting EventSource" controller="machineset_controller" source="kind source: *v1beta1.Machine"
+2026-01-28T09:32:23.366578456Z I0128 09:32:23.366560       1 recorder.go:104] "machine-api-controllers-67dcb4566c-m4pg8_e62ab3bd-31c8-4064-8de2-75c47e05a1d8 became leader" logger="events" type="Normal" object={"kind":"Lease","namespace":"openshift-machine-api","name":"cluster-api-provider-machineset-leader","uid":"8bacff74-d66a-439e-83eb-090cdcc3b56a","apiVersion":"coordination.k8s.io/v1","resourceVersion":"11590"} reason="LeaderElection"
+2026-01-28T09:32:23.366668308Z I0128 09:32:23.366653       1 controller.go:198] "Starting EventSource" controller="machineset_controller" source="kind source: *v1beta1.MachineSet"
+2026-01-28T09:32:23.366778460Z I0128 09:32:23.366738       1 controller.go:198] "Starting EventSource" controller="machineset_controller" source="kind source: *v1beta1.Machine"
+2026-01-28T09:32:23.383025737Z I0128 09:32:23.382750       1 reflector.go:357] "Starting reflector" type="*v1beta1.MachineSet" resyncPeriod="9m24.597222669s" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:108"
+2026-01-28T09:32:23.383091778Z I0128 09:32:23.383076       1 reflector.go:403] "Listing and watching" type="*v1beta1.MachineSet" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:108"
+2026-01-28T09:32:23.383373594Z I0128 09:32:23.383352       1 reflector.go:357] "Starting reflector" type="*v1beta1.Machine" resyncPeriod="10m27.754827281s" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:108"
+2026-01-28T09:32:23.383412925Z I0128 09:32:23.383402       1 reflector.go:403] "Listing and watching" type="*v1beta1.Machine" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:108"
+2026-01-28T09:32:23.386755698Z I0128 09:32:23.386733       1 reflector.go:430] "Caches populated" type="*v1beta1.Machine" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:108"
+2026-01-28T09:32:23.387352931Z I0128 09:32:23.387192       1 reflector.go:430] "Caches populated" type="*v1beta1.MachineSet" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:108"
+2026-01-28T09:32:23.484571754Z I0128 09:32:23.484535       1 controller.go:233] "Starting Controller" controller="machineset_controller"
+2026-01-28T09:32:23.484629565Z I0128 09:32:23.484617       1 controller.go:242] "Starting workers" controller="machineset_controller" worker count=1
+2026-01-28T09:32:23.484910831Z I0128 09:32:23.484872       1 controller.go:361] Too few replicas for machine.openshift.io/v1beta1, Kind=MachineSet openshift-machine-api/ci-ln-vjb5l1t-76ef8-snmcd-worker-us-west-1a, need 1, creating 1
+2026-01-28T09:32:23.484949532Z I0128 09:32:23.484939       1 controller.go:367] Creating machine 1 of 1, ( spec.replicas(1) > currentMachineCount(0) )
+2026-01-28T09:32:23.606977298Z I0128 09:32:23.606937       1 controller.go:361] Too few replicas for machine.openshift.io/v1beta1, Kind=MachineSet openshift-machine-api/ci-ln-vjb5l1t-76ef8-snmcd-worker-us-west-1c, need 2, creating 2
+2026-01-28T09:32:23.607033989Z I0128 09:32:23.607019       1 controller.go:367] Creating machine 1 of 2, ( spec.replicas(2) > currentMachineCount(0) )
+2026-01-28T09:32:23.617122460Z I0128 09:32:23.617103       1 controller.go:367] Creating machine 2 of 2, ( spec.replicas(2) > currentMachineCount(0) )
+2026-01-28T09:36:10.912938452Z I0128 09:36:10.912564       1 reflector.go:357] "Starting reflector" type="*v1.Node" resyncPeriod="9m53.123127132s" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:108"
+2026-01-28T09:36:10.912938452Z I0128 09:36:10.912588       1 reflector.go:403] "Listing and watching" type="*v1.Node" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:108"
+2026-01-28T09:36:10.915591819Z I0128 09:36:10.915567       1 reflector.go:430] "Caches populated" type="*v1.Node" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:108"
+2026-01-28T09:41:05.725610712Z I0128 09:41:05.725563       1 machine_webhook.go:566] Mutate webhook called for Machine: 
+2026-01-28T09:41:05.725610712Z I0128 09:41:05.725582       1 machine_webhook.go:592] Defaulting AWS providerSpec
+2026-01-28T09:41:05.731325395Z I0128 09:41:05.731066       1 machine_webhook.go:510] Validate webhook called for Machine: tmp-machine-dry-runj7mh6
+2026-01-28T09:41:05.731325395Z I0128 09:41:05.731081       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T09:41:05.732047221Z I0128 09:41:05.732020       1 reflector.go:357] "Starting reflector" type="*v1.Secret" resyncPeriod="10m47.259388736s" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:108"
+2026-01-28T09:41:05.732047221Z I0128 09:41:05.732042       1 reflector.go:403] "Listing and watching" type="*v1.Secret" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:108"
+2026-01-28T09:41:05.733839239Z I0128 09:41:05.733786       1 reflector.go:430] "Caches populated" type="*v1.Secret" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:108"
+2026-01-28T09:41:05.743101099Z I0128 09:41:05.743078       1 machineset_webhook.go:120] Validate webhook called for MachineSet: ci-ln-vjb5l1t-76ef8-snmcd-worker-us-west-1a
+2026-01-28T09:41:05.743130259Z I0128 09:41:05.743117       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T09:41:05.752629264Z I0128 09:41:05.752593       1 machineset_webhook.go:120] Validate webhook called for MachineSet: ci-ln-vjb5l1t-76ef8-snmcd-worker-us-west-1c
+2026-01-28T09:41:05.752676905Z I0128 09:41:05.752647       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T09:41:05.839829242Z I0128 09:41:05.839791       1 machine_webhook.go:566] Mutate webhook called for Machine: 
+2026-01-28T09:41:05.839829242Z I0128 09:41:05.839812       1 machine_webhook.go:592] Defaulting AWS providerSpec
+2026-01-28T09:41:05.842370197Z I0128 09:41:05.842347       1 machine_webhook.go:510] Validate webhook called for Machine: tmp-machine-dry-runrrp6z
+2026-01-28T09:41:05.842370197Z I0128 09:41:05.842360       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T09:41:05.850547373Z I0128 09:41:05.850511       1 machine_webhook.go:566] Mutate webhook called for Machine: 
+2026-01-28T09:41:05.850547373Z I0128 09:41:05.850532       1 machine_webhook.go:592] Defaulting AWS providerSpec
+2026-01-28T09:41:05.853272942Z I0128 09:41:05.853240       1 machine_webhook.go:510] Validate webhook called for Machine: tmp-machine-dry-run85gvh
+2026-01-28T09:41:05.853272942Z I0128 09:41:05.853256       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T09:41:05.873349234Z I0128 09:41:05.873314       1 machine_webhook.go:566] Mutate webhook called for Machine: 
+2026-01-28T09:41:05.873349234Z I0128 09:41:05.873331       1 machine_webhook.go:592] Defaulting AWS providerSpec
+2026-01-28T09:41:05.875630683Z I0128 09:41:05.875605       1 machine_webhook.go:510] Validate webhook called for Machine: tmp-machine-dry-runlsns6
+2026-01-28T09:41:05.875630683Z I0128 09:41:05.875619       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T09:41:05.882223405Z I0128 09:41:05.882198       1 machine_webhook.go:566] Mutate webhook called for Machine: 
+2026-01-28T09:41:05.882223405Z I0128 09:41:05.882212       1 machine_webhook.go:592] Defaulting AWS providerSpec
+2026-01-28T09:41:05.884451973Z I0128 09:41:05.884431       1 machine_webhook.go:510] Validate webhook called for Machine: tmp-machine-dry-runjk9sx
+2026-01-28T09:41:05.884451973Z I0128 09:41:05.884442       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T09:41:05.893768584Z I0128 09:41:05.893743       1 machine_webhook.go:566] Mutate webhook called for Machine: 
+2026-01-28T09:41:05.893804445Z I0128 09:41:05.893785       1 machine_webhook.go:592] Defaulting AWS providerSpec
+2026-01-28T09:41:05.896206927Z I0128 09:41:05.896184       1 machine_webhook.go:510] Validate webhook called for Machine: tmp-machine-dry-runrf9n6
+2026-01-28T09:41:05.896206927Z I0128 09:41:05.896198       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T09:41:06.099329212Z I0128 09:41:06.099252       1 reflector.go:403] "Listing and watching" type="*v1beta1.Machine" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:108"
+2026-01-28T09:41:06.103068773Z I0128 09:41:06.103029       1 reflector.go:430] "Caches populated" type="*v1beta1.Machine" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:108"
+2026-01-28T09:41:06.256160580Z I0128 09:41:06.256112       1 reflector.go:403] "Listing and watching" type="*v1beta1.MachineSet" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:108"
+2026-01-28T09:41:06.257868877Z I0128 09:41:06.257841       1 reflector.go:430] "Caches populated" type="*v1beta1.MachineSet" reflector="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:108"
+2026-01-28T09:41:06.867759265Z I0128 09:41:06.867722       1 machine_webhook.go:566] Mutate webhook called for Machine: 
+2026-01-28T09:41:06.867759265Z I0128 09:41:06.867739       1 machine_webhook.go:592] Defaulting AWS providerSpec
+2026-01-28T09:41:06.872095588Z I0128 09:41:06.872064       1 machine_webhook.go:510] Validate webhook called for Machine: tmp-machine-dry-runqf6fc
+2026-01-28T09:41:06.872095588Z I0128 09:41:06.872080       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T09:41:06.879812204Z I0128 09:41:06.879773       1 machine_webhook.go:566] Mutate webhook called for Machine: 
+2026-01-28T09:41:06.879812204Z I0128 09:41:06.879788       1 machine_webhook.go:592] Defaulting AWS providerSpec
+2026-01-28T09:41:06.882426441Z I0128 09:41:06.882383       1 machine_webhook.go:510] Validate webhook called for Machine: tmp-machine-dry-runtcdkp
+2026-01-28T09:41:06.882426441Z I0128 09:41:06.882399       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T09:41:06.889506773Z I0128 09:41:06.889477       1 machine_webhook.go:566] Mutate webhook called for Machine: 
+2026-01-28T09:41:06.889506773Z I0128 09:41:06.889491       1 machine_webhook.go:592] Defaulting AWS providerSpec
+2026-01-28T09:41:06.891783352Z I0128 09:41:06.891759       1 machine_webhook.go:510] Validate webhook called for Machine: tmp-machine-dry-run7ngd8
+2026-01-28T09:41:06.891783352Z I0128 09:41:06.891774       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T09:42:29.630938631Z I0128 09:42:29.630868       1 machineset_webhook.go:120] Validate webhook called for MachineSet: ci-ln-vjb5l1t-76ef8-snmcd-worker-us-west-1c
+2026-01-28T09:42:29.630984972Z I0128 09:42:29.630941       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T09:42:29.901693595Z I0128 09:42:29.901649       1 machineset_webhook.go:120] Validate webhook called for MachineSet: ci-ln-vjb5l1t-76ef8-snmcd-worker-us-west-1a
+2026-01-28T09:42:29.901729366Z I0128 09:42:29.901693       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T09:50:42.915393628Z I0128 09:50:42.915353       1 machineset_webhook.go:120] Validate webhook called for MachineSet: ci-ln-vjb5l1t-76ef8-snmcd-worker-us-west-1a
+2026-01-28T09:50:42.915437119Z I0128 09:50:42.915397       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T09:50:42.924115076Z I0128 09:50:42.924089       1 machineset_webhook.go:120] Validate webhook called for MachineSet: ci-ln-vjb5l1t-76ef8-snmcd-worker-us-west-1c
+2026-01-28T09:50:42.924141757Z I0128 09:50:42.924119       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T10:00:20.092852182Z I0128 10:00:20.092805       1 machineset_webhook.go:120] Validate webhook called for MachineSet: ci-ln-vjb5l1t-76ef8-snmcd-worker-us-west-1a
+2026-01-28T10:00:20.092921544Z I0128 10:00:20.092852       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T10:00:20.102470038Z I0128 10:00:20.102443       1 machineset_webhook.go:120] Validate webhook called for MachineSet: ci-ln-vjb5l1t-76ef8-snmcd-worker-us-west-1c
+2026-01-28T10:00:20.102498969Z I0128 10:00:20.102472       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T10:09:57.266132446Z I0128 10:09:57.266088       1 machineset_webhook.go:120] Validate webhook called for MachineSet: ci-ln-vjb5l1t-76ef8-snmcd-worker-us-west-1a
+2026-01-28T10:09:57.266168777Z I0128 10:09:57.266128       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T10:09:57.275831164Z I0128 10:09:57.275807       1 machineset_webhook.go:120] Validate webhook called for MachineSet: ci-ln-vjb5l1t-76ef8-snmcd-worker-us-west-1c
+2026-01-28T10:09:57.275932866Z I0128 10:09:57.275918       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T10:11:57.889422049Z I0128 10:11:57.889379       1 machine_webhook.go:566] Mutate webhook called for Machine: 
+2026-01-28T10:11:57.889422049Z I0128 10:11:57.889400       1 machine_webhook.go:592] Defaulting AWS providerSpec
+2026-01-28T10:11:57.896720076Z I0128 10:11:57.896691       1 machine_webhook.go:510] Validate webhook called for Machine: tmp-machine-dry-run69m42
+2026-01-28T10:11:57.896720076Z I0128 10:11:57.896706       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T10:11:57.904315099Z I0128 10:11:57.904283       1 machine_webhook.go:566] Mutate webhook called for Machine: 
+2026-01-28T10:11:57.904315099Z I0128 10:11:57.904299       1 machine_webhook.go:592] Defaulting AWS providerSpec
+2026-01-28T10:11:57.907355144Z I0128 10:11:57.907320       1 machine_webhook.go:510] Validate webhook called for Machine: tmp-machine-dry-runmkkmx
+2026-01-28T10:11:57.907355144Z I0128 10:11:57.907340       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T10:11:57.913360713Z I0128 10:11:57.913334       1 machine_webhook.go:566] Mutate webhook called for Machine: 
+2026-01-28T10:11:57.913360713Z I0128 10:11:57.913346       1 machine_webhook.go:592] Defaulting AWS providerSpec
+2026-01-28T10:11:57.916443339Z I0128 10:11:57.916410       1 machine_webhook.go:510] Validate webhook called for Machine: tmp-machine-dry-runkmrzk
+2026-01-28T10:11:57.916443339Z I0128 10:11:57.916426       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T10:12:21.512549493Z I0128 10:12:21.512479       1 machine_webhook.go:566] Mutate webhook called for Machine: 
+2026-01-28T10:12:21.512549493Z I0128 10:12:21.512501       1 machine_webhook.go:592] Defaulting AWS providerSpec
+2026-01-28T10:12:21.516172701Z I0128 10:12:21.516143       1 machine_webhook.go:510] Validate webhook called for Machine: tmp-machine-dry-runxf4cw
+2026-01-28T10:12:21.516172701Z I0128 10:12:21.516157       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T10:12:21.523303054Z I0128 10:12:21.523280       1 machine_webhook.go:566] Mutate webhook called for Machine: 
+2026-01-28T10:12:21.523332324Z I0128 10:12:21.523305       1 machine_webhook.go:592] Defaulting AWS providerSpec
+2026-01-28T10:12:21.533731327Z I0128 10:12:21.533684       1 machine_webhook.go:510] Validate webhook called for Machine: tmp-machine-dry-run4w8gl
+2026-01-28T10:12:21.533803039Z I0128 10:12:21.533788       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T10:12:21.540758208Z I0128 10:12:21.540716       1 machine_webhook.go:566] Mutate webhook called for Machine: 
+2026-01-28T10:12:21.540758208Z I0128 10:12:21.540733       1 machine_webhook.go:592] Defaulting AWS providerSpec
+2026-01-28T10:12:21.543962797Z I0128 10:12:21.543938       1 machine_webhook.go:510] Validate webhook called for Machine: tmp-machine-dry-runtxsfw
+2026-01-28T10:12:21.543962797Z I0128 10:12:21.543951       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T10:19:34.437858438Z I0128 10:19:34.437819       1 machineset_webhook.go:120] Validate webhook called for MachineSet: ci-ln-vjb5l1t-76ef8-snmcd-worker-us-west-1a
+2026-01-28T10:19:34.437927180Z I0128 10:19:34.437880       1 machine_webhook.go:666] Validating AWS providerSpec
+2026-01-28T10:19:34.446913092Z I0128 10:19:34.446867       1 machineset_webhook.go:120] Validate webhook called for MachineSet: ci-ln-vjb5l1t-76ef8-snmcd-worker-us-west-1c
+2026-01-28T10:19:34.446942753Z I0128 10:19:34.446931       1 machine_webhook.go:666] Validating AWS providerSpec

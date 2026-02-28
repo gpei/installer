@@ -1,0 +1,48 @@
+2026-01-28T09:37:01.415336303Z [2026-01-28T09:37:01Z INFO  extractor_server] Gather runtime information from containers on OpenShift
+2026-01-28T09:37:01.415336303Z [2026-01-28T09:37:01Z INFO  insights_runtime_extractor::insights_runtime_extractor::perms] 🔏  Checking permissions required to scan the containers and their processes
+2026-01-28T09:37:01.415421795Z [2026-01-28T09:37:01Z INFO  extractor_server] Configuration:
+2026-01-28T09:37:01.415421795Z     ----
+2026-01-28T09:37:01.415421795Z     # Configuration file for the insights-runtime-extractor
+2026-01-28T09:37:01.415421795Z     
+2026-01-28T09:37:01.415421795Z     [[fingerprints.version-executables]]
+2026-01-28T09:37:01.415421795Z     process-names = ["node", "MainThread"]
+2026-01-28T09:37:01.415421795Z     runtime-kind-name = "Node.js"
+2026-01-28T09:37:01.415421795Z     
+2026-01-28T09:37:01.415421795Z     [[fingerprints.version-executables]]
+2026-01-28T09:37:01.415421795Z     process-names = ["python", "python3"]
+2026-01-28T09:37:01.415421795Z     runtime-kind-name = "Python"
+2026-01-28T09:37:01.415421795Z     
+2026-01-28T09:37:01.415421795Z     [[fingerprints.java]]
+2026-01-28T09:37:01.415421795Z     runtime-name = "Quarkus"
+2026-01-28T09:37:01.415421795Z     main-class = "io.quarkus.bootstrap.runner.QuarkusEntryPoint"
+2026-01-28T09:37:01.415421795Z     main-jar = "io.quarkus.quarkus-core"
+2026-01-28T09:37:01.415421795Z     read-manifest-of-executable-jar = false
+2026-01-28T09:37:01.415421795Z     jar-version-manifest-entry = "Implementation-Version"
+2026-01-28T09:37:01.415421795Z     
+2026-01-28T09:37:01.415421795Z     [[fingerprints.java]]
+2026-01-28T09:37:01.415421795Z     runtime-name = "Spring Boot"
+2026-01-28T09:37:01.415421795Z     main-class = "org.springframework.boot.loader.JarLauncher"
+2026-01-28T09:37:01.415421795Z     read-manifest-of-executable-jar = true
+2026-01-28T09:37:01.415421795Z     jar-version-manifest-entry = "Spring-Boot-Version"
+2026-01-28T09:37:01.415421795Z     
+2026-01-28T09:37:01.415421795Z     [[fingerprints.java]]
+2026-01-28T09:37:01.415421795Z     runtime-name = "Spring Boot"
+2026-01-28T09:37:01.415421795Z     main-class = "org.springframework.boot.loader.launch.JarLauncher"
+2026-01-28T09:37:01.415421795Z     read-manifest-of-executable-jar = true
+2026-01-28T09:37:01.415421795Z     jar-version-manifest-entry = "Spring-Boot-Version"
+2026-01-28T09:37:01.415421795Z     
+2026-01-28T09:37:01.415421795Z     [[fingerprints.java]]
+2026-01-28T09:37:01.415421795Z     runtime-name = "Spring Boot"
+2026-01-28T09:37:01.415421795Z     main-class = "org.springframework.boot.loader.launch.WarLauncher"
+2026-01-28T09:37:01.415421795Z     read-manifest-of-executable-jar = true
+2026-01-28T09:37:01.415421795Z     jar-version-manifest-entry = "Spring-Boot-Version"
+2026-01-28T09:37:01.415421795Z     
+2026-01-28T09:37:01.415421795Z     [[fingerprints.java]]
+2026-01-28T09:37:01.415421795Z     runtime-name = "Apache Tomcat"
+2026-01-28T09:37:01.415421795Z     main-class = "org.apache.catalina.startup.Bootstrap"
+2026-01-28T09:37:01.415421795Z     main-jar = "bootstrap.jar"
+2026-01-28T09:37:01.415421795Z     read-manifest-of-executable-jar = true
+2026-01-28T09:37:01.415421795Z     jar-version-manifest-entry = "Implementation-Version"
+2026-01-28T09:37:01.415421795Z     
+2026-01-28T09:37:01.415421795Z     ----
+2026-01-28T09:37:01.415618199Z [2026-01-28T09:37:01Z INFO  extractor_server] Listening on 127.0.0.1:3000

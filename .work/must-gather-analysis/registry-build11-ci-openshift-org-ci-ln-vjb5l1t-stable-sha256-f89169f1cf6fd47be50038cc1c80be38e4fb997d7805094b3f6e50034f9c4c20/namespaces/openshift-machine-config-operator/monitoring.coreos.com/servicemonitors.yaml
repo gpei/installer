@@ -1,0 +1,217 @@
+---
+apiVersion: monitoring.coreos.com/v1
+items:
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    annotations:
+      include.release.openshift.io/self-managed-high-availability: "true"
+      include.release.openshift.io/single-node-developer: "true"
+    creationTimestamp: "2026-01-28T09:26:00Z"
+    generation: 1
+    labels:
+      k8s-app: machine-config-controller
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+            f:include.release.openshift.io/single-node-developer: {}
+          f:labels:
+            .: {}
+            f:k8s-app: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector:
+            .: {}
+            f:matchNames: {}
+          f:selector: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2026-01-28T09:26:00Z"
+    name: machine-config-controller
+    namespace: openshift-machine-config-operator
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      controller: true
+      kind: ClusterVersion
+      name: version
+      uid: 0370d296-6904-481d-ab90-157c7e5b835a
+    resourceVersion: "1705"
+    uid: 6fbfde57-d1f4-48e4-a3c1-213fac7a8913
+  spec:
+    endpoints:
+    - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+      interval: 30s
+      path: /metrics
+      port: metrics
+      relabelings:
+      - action: replace
+        regex: ;(.*)
+        replacement: $1
+        separator: ;
+        sourceLabels:
+        - node
+        - __meta_kubernetes_pod_node_name
+        targetLabel: node
+      scheme: https
+      tlsConfig:
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        serverName: machine-config-controller.openshift-machine-config-operator.svc
+    namespaceSelector:
+      matchNames:
+      - openshift-machine-config-operator
+    selector:
+      matchLabels:
+        k8s-app: machine-config-controller
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    annotations:
+      include.release.openshift.io/self-managed-high-availability: "true"
+      include.release.openshift.io/single-node-developer: "true"
+    creationTimestamp: "2026-01-28T09:26:01Z"
+    generation: 1
+    labels:
+      k8s-app: machine-config-daemon
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+            f:include.release.openshift.io/single-node-developer: {}
+          f:labels:
+            .: {}
+            f:k8s-app: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector:
+            .: {}
+            f:matchNames: {}
+          f:selector: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2026-01-28T09:26:01Z"
+    name: machine-config-daemon
+    namespace: openshift-machine-config-operator
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      controller: true
+      kind: ClusterVersion
+      name: version
+      uid: 0370d296-6904-481d-ab90-157c7e5b835a
+    resourceVersion: "1779"
+    uid: e4796573-e4ad-4899-ac10-b5d1f2b78ae8
+  spec:
+    endpoints:
+    - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+      interval: 30s
+      path: /metrics
+      port: metrics
+      relabelings:
+      - action: replace
+        regex: ;(.*)
+        replacement: $1
+        separator: ;
+        sourceLabels:
+        - node
+        - __meta_kubernetes_pod_node_name
+        targetLabel: node
+      scheme: https
+      tlsConfig:
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        serverName: machine-config-daemon.openshift-machine-config-operator.svc
+    namespaceSelector:
+      matchNames:
+      - openshift-machine-config-operator
+    selector:
+      matchLabels:
+        k8s-app: machine-config-daemon
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    annotations:
+      include.release.openshift.io/self-managed-high-availability: "true"
+      include.release.openshift.io/single-node-developer: "true"
+    creationTimestamp: "2026-01-28T09:25:58Z"
+    generation: 1
+    labels:
+      k8s-app: machine-config-operator
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+            f:include.release.openshift.io/single-node-developer: {}
+          f:labels:
+            .: {}
+            f:k8s-app: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector:
+            .: {}
+            f:matchNames: {}
+          f:selector: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2026-01-28T09:25:58Z"
+    name: machine-config-operator
+    namespace: openshift-machine-config-operator
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      controller: true
+      kind: ClusterVersion
+      name: version
+      uid: 0370d296-6904-481d-ab90-157c7e5b835a
+    resourceVersion: "1618"
+    uid: edf11957-086d-4d09-a6e0-388fd30b99a7
+  spec:
+    endpoints:
+    - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+      interval: 30s
+      path: /metrics
+      port: metrics
+      relabelings:
+      - action: replace
+        regex: ;(.*)
+        replacement: $1
+        separator: ;
+        sourceLabels:
+        - node
+        - __meta_kubernetes_pod_node_name
+        targetLabel: node
+      scheme: https
+      tlsConfig:
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        serverName: machine-config-operator.openshift-machine-config-operator.svc
+    namespaceSelector:
+      matchNames:
+      - openshift-machine-config-operator
+    selector:
+      matchLabels:
+        k8s-app: machine-config-operator
+kind: ServiceMonitorList
+metadata:
+  continue: ""
+  resourceVersion: "35119"

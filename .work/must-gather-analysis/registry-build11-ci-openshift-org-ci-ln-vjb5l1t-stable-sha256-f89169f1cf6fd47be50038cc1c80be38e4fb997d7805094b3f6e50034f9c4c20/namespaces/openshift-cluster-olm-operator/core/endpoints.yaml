@@ -1,0 +1,46 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:31:00Z"
+    creationTimestamp: "2026-01-28T09:25:54Z"
+    labels:
+      endpoints.kubernetes.io/managed-by: endpoint-controller
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:endpoints.kubernetes.io/managed-by: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:00Z"
+    name: cluster-olm-operator-metrics
+    namespace: openshift-cluster-olm-operator
+    resourceVersion: "7667"
+    uid: 508e861c-0048-454a-8d65-4704fba44e0a
+  subsets:
+  - addresses:
+    - ip: 10.130.0.12
+      nodeName: ip-10-0-108-54.us-west-1.compute.internal
+      targetRef:
+        kind: Pod
+        name: cluster-olm-operator-6b4797576b-g5m7z
+        namespace: openshift-cluster-olm-operator
+        uid: 03e90898-2155-4f76-b896-b84f87513f9d
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "35159"

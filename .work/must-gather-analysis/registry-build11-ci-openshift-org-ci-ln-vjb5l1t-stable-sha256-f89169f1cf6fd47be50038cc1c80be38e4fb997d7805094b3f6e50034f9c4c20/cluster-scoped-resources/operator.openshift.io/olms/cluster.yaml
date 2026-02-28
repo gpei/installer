@@ -1,0 +1,459 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: OLM
+metadata:
+  annotations:
+    capability.openshift.io/name: OperatorLifecycleManagerV1
+    include.release.openshift.io/self-managed-high-availability: "true"
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2026-01-28T09:25:47Z"
+  finalizers:
+  - cluster-olm-operator.operator.openshift.io/CatalogdDeploymentCatalogdControllerManager
+  - cluster-olm-operator.operator.openshift.io/OperatorcontrollerDeploymentOperatorControllerControllerManager
+  generation: 1
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"OLMProxyControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: OLMProxyController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:00Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"OLMStaticUpgradeableConditionControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: OLMStaticUpgradeableConditionController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:00Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"OLMIncompatibleOperatorControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: OLMIncompatibleOperatorController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:02Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"CatalogdClusterCatalogOpenshiftCertifiedOperatorsUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CatalogdClusterCatalogOpenshiftCommunityOperatorsUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CatalogdClusterCatalogOpenshiftRedhatMarketplaceUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CatalogdClusterCatalogOpenshiftRedhatOperatorsUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CatalogdDeploymentCatalogdControllerManagerUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CatalogdStaticResourcesUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"InstalledOLMOperatorsUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"OLMProxyControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"OLMStaticUpgradeableConditionControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"OperatorControllerStaticResourcesUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"OperatorcontrollerDeploymentOperatorControllerControllerManagerUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:readyReplicas: {}
+    manager: cluster-olm-operator
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:02Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"OperatorControllerStaticResourcesDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: OperatorControllerStaticResources-StaticResources
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:08Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"CatalogdClusterCatalogOpenshiftCertifiedOperatorsDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: CatalogdClusterCatalogOpenshiftCertifiedOperators-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:10Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"CatalogdClusterCatalogOpenshiftCommunityOperatorsDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: CatalogdClusterCatalogOpenshiftCommunityOperators-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:10Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"CatalogdClusterCatalogOpenshiftRedhatMarketplaceDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: CatalogdClusterCatalogOpenshiftRedhatMarketplace-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:10Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"CatalogdClusterCatalogOpenshiftRedhatOperatorsDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: CatalogdClusterCatalogOpenshiftRedhatOperators-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:10Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"CatalogdDeploymentCatalogdControllerManagerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: CatalogdDeploymentCatalogdControllerManager-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:11Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"CatalogdStaticResourcesDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: CatalogdStaticResources-StaticResources
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:11Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"OperatorcontrollerDeploymentOperatorControllerControllerManagerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: OperatorcontrollerDeploymentOperatorControllerControllerManager-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:11Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"OperatorcontrollerDeploymentOperatorControllerControllerManagerAvailable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"OperatorcontrollerDeploymentOperatorControllerControllerManagerProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:generations:
+          ? k:{"group":"apps","name":"operator-controller-controller-manager","namespace":"openshift-operator-controller","resource":"deployments"}
+          : .: {}
+            f:group: {}
+            f:lastGeneration: {}
+            f:name: {}
+            f:namespace: {}
+            f:resource: {}
+    manager: OperatorcontrollerDeploymentOperatorControllerControllerManager-Deployment
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:28Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          v:"cluster-olm-operator.operator.openshift.io/CatalogdDeploymentCatalogdControllerManager": {}
+          v:"cluster-olm-operator.operator.openshift.io/OperatorcontrollerDeploymentOperatorControllerControllerManager": {}
+    manager: cluster-olm-operator
+    operation: Apply
+    time: "2026-01-28T09:31:29Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"CatalogdDeploymentCatalogdControllerManagerAvailable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CatalogdDeploymentCatalogdControllerManagerProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:generations:
+          k:{"group":"apps","name":"catalogd-controller-manager","namespace":"openshift-catalogd","resource":"deployments"}:
+            .: {}
+            f:group: {}
+            f:lastGeneration: {}
+            f:name: {}
+            f:namespace: {}
+            f:resource: {}
+    manager: CatalogdDeploymentCatalogdControllerManager-Deployment
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:31:32Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:release.openshift.io/create-only: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec:
+        .: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:operatorLogLevel: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:25:47Z"
+  name: cluster
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "9310"
+  uid: e86fd828-b659-48ac-aca1-46b55213d98f
+spec:
+  logLevel: Debug
+  managementState: Managed
+  operatorLogLevel: Normal
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:31:00Z"
+    status: "True"
+    type: CatalogdStaticResourcesUpgradeable
+  - lastTransitionTime: "2026-01-28T09:31:00Z"
+    status: "True"
+    type: OperatorControllerStaticResourcesUpgradeable
+  - lastTransitionTime: "2026-01-28T09:31:00Z"
+    status: "True"
+    type: CatalogdDeploymentCatalogdControllerManagerUpgradeable
+  - lastTransitionTime: "2026-01-28T09:31:00Z"
+    status: "True"
+    type: OperatorcontrollerDeploymentOperatorControllerControllerManagerUpgradeable
+  - lastTransitionTime: "2026-01-28T09:31:00Z"
+    status: "True"
+    type: CatalogdClusterCatalogOpenshiftRedhatMarketplaceUpgradeable
+  - lastTransitionTime: "2026-01-28T09:31:00Z"
+    status: "True"
+    type: CatalogdClusterCatalogOpenshiftRedhatOperatorsUpgradeable
+  - lastTransitionTime: "2026-01-28T09:31:00Z"
+    status: "True"
+    type: CatalogdClusterCatalogOpenshiftCertifiedOperatorsUpgradeable
+  - lastTransitionTime: "2026-01-28T09:31:00Z"
+    status: "True"
+    type: CatalogdClusterCatalogOpenshiftCommunityOperatorsUpgradeable
+  - lastTransitionTime: "2026-01-28T09:31:00Z"
+    reason: AsExpected
+    status: "False"
+    type: OLMStaticUpgradeableConditionControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:31:00Z"
+    reason: AsExpected
+    status: "False"
+    type: OLMProxyControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:31:02Z"
+    status: "True"
+    type: InstalledOLMOperatorsUpgradeable
+  - lastTransitionTime: "2026-01-28T09:31:02Z"
+    reason: AsExpected
+    status: "False"
+    type: OLMIncompatibleOperatorControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:31:08Z"
+    message: ""
+    reason: AsExpected
+    status: "False"
+    type: OperatorControllerStaticResourcesDegraded
+  - lastTransitionTime: "2026-01-28T09:31:10Z"
+    reason: AsExpected
+    status: "False"
+    type: CatalogdClusterCatalogOpenshiftRedhatMarketplaceDegraded
+  - lastTransitionTime: "2026-01-28T09:31:10Z"
+    reason: AsExpected
+    status: "False"
+    type: CatalogdClusterCatalogOpenshiftCertifiedOperatorsDegraded
+  - lastTransitionTime: "2026-01-28T09:31:10Z"
+    reason: AsExpected
+    status: "False"
+    type: CatalogdClusterCatalogOpenshiftRedhatOperatorsDegraded
+  - lastTransitionTime: "2026-01-28T09:31:28Z"
+    message: Deployment is available
+    reason: AsExpected
+    status: "True"
+    type: OperatorcontrollerDeploymentOperatorControllerControllerManagerAvailable
+  - lastTransitionTime: "2026-01-28T09:31:28Z"
+    message: Deployment is not progressing
+    reason: AsExpected
+    status: "False"
+    type: OperatorcontrollerDeploymentOperatorControllerControllerManagerProgressing
+  - lastTransitionTime: "2026-01-28T09:31:10Z"
+    reason: AsExpected
+    status: "False"
+    type: CatalogdClusterCatalogOpenshiftCommunityOperatorsDegraded
+  - lastTransitionTime: "2026-01-28T09:31:31Z"
+    message: Deployment is available
+    reason: AsExpected
+    status: "True"
+    type: CatalogdDeploymentCatalogdControllerManagerAvailable
+  - lastTransitionTime: "2026-01-28T09:31:31Z"
+    message: Deployment is not progressing
+    reason: AsExpected
+    status: "False"
+    type: CatalogdDeploymentCatalogdControllerManagerProgressing
+  - lastTransitionTime: "2026-01-28T09:31:10Z"
+    reason: AsExpected
+    status: "False"
+    type: OperatorcontrollerDeploymentOperatorControllerControllerManagerDegraded
+  - lastTransitionTime: "2026-01-28T09:31:10Z"
+    reason: AsExpected
+    status: "False"
+    type: CatalogdDeploymentCatalogdControllerManagerDegraded
+  - lastTransitionTime: "2026-01-28T09:31:11Z"
+    message: ""
+    reason: AsExpected
+    status: "False"
+    type: CatalogdStaticResourcesDegraded
+  generations:
+  - group: apps
+    lastGeneration: 1
+    name: operator-controller-controller-manager
+    namespace: openshift-operator-controller
+    resource: deployments
+  - group: apps
+    lastGeneration: 1
+    name: catalogd-controller-manager
+    namespace: openshift-catalogd
+    resource: deployments
+  readyReplicas: 0

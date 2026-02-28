@@ -1,0 +1,113 @@
+2026-01-28T09:34:20.623529080Z I0128 09:34:20.623352       1 cmd.go:95] &{<nil> true {false} installer true map[cert-configmaps:0xc00094c820 cert-dir:0xc00094ca00 cert-secrets:0xc00094c780 configmaps:0xc00094c320 namespace:0xc00094c140 optional-cert-configmaps:0xc00094c960 optional-configmaps:0xc00094c460 optional-secrets:0xc00094c3c0 pod:0xc00094c1e0 pod-manifest-dir:0xc00094c5a0 resource-dir:0xc00094c500 revision:0xc00094c0a0 secrets:0xc00094c280 v:0xc00094d400] [0xc00094d400 0xc00094c0a0 0xc00094c140 0xc00094c1e0 0xc00094c500 0xc00094c5a0 0xc00094c320 0xc00094c460 0xc00094c280 0xc00094c3c0 0xc00094ca00 0xc00094c820 0xc00094c960 0xc00094c780] [] map[cert-configmaps:0xc00094c820 cert-dir:0xc00094ca00 cert-secrets:0xc00094c780 configmaps:0xc00094c320 help:0xc00094d7c0 kubeconfig:0xc00094c000 log-flush-frequency:0xc00094d360 namespace:0xc00094c140 optional-cert-configmaps:0xc00094c960 optional-cert-secrets:0xc00094c8c0 optional-configmaps:0xc00094c460 optional-secrets:0xc00094c3c0 pod:0xc00094c1e0 pod-manifest-dir:0xc00094c5a0 pod-manifests-lock-file:0xc00094c6e0 resource-dir:0xc00094c500 revision:0xc00094c0a0 secrets:0xc00094c280 timeout-duration:0xc00094c640 v:0xc00094d400 vmodule:0xc00094d4a0] [0xc00094c000 0xc00094c0a0 0xc00094c140 0xc00094c1e0 0xc00094c280 0xc00094c320 0xc00094c3c0 0xc00094c460 0xc00094c500 0xc00094c5a0 0xc00094c640 0xc00094c6e0 0xc00094c780 0xc00094c820 0xc00094c8c0 0xc00094c960 0xc00094ca00 0xc00094d360 0xc00094d400 0xc00094d4a0 0xc00094d7c0] [0xc00094c820 0xc00094ca00 0xc00094c780 0xc00094c320 0xc00094d7c0 0xc00094c000 0xc00094d360 0xc00094c140 0xc00094c960 0xc00094c8c0 0xc00094c460 0xc00094c3c0 0xc00094c1e0 0xc00094c5a0 0xc00094c6e0 0xc00094c500 0xc00094c0a0 0xc00094c280 0xc00094c640 0xc00094d400 0xc00094d4a0] map[104:0xc00094d7c0 118:0xc00094d400] [] -1 0 0xc0008ff830 true 0x77f6c0 []}
+2026-01-28T09:34:20.623663033Z I0128 09:34:20.623522       1 cmd.go:96] (*installerpod.InstallOptions)(0xc0004864e0)({
+2026-01-28T09:34:20.623663033Z  KubeConfig: (string) "",
+2026-01-28T09:34:20.623663033Z  KubeClient: (kubernetes.Interface) <nil>,
+2026-01-28T09:34:20.623663033Z  Revision: (string) (len=1) "4",
+2026-01-28T09:34:20.623663033Z  NodeName: (string) "",
+2026-01-28T09:34:20.623663033Z  Namespace: (string) (len=33) "openshift-kube-controller-manager",
+2026-01-28T09:34:20.623663033Z  Clock: (clock.RealClock) {
+2026-01-28T09:34:20.623663033Z  },
+2026-01-28T09:34:20.623663033Z  PodConfigMapNamePrefix: (string) (len=27) "kube-controller-manager-pod",
+2026-01-28T09:34:20.623663033Z  SecretNamePrefixes: ([]string) (len=2 cap=2) {
+2026-01-28T09:34:20.623663033Z   (string) (len=27) "service-account-private-key",
+2026-01-28T09:34:20.623663033Z   (string) (len=31) "localhost-recovery-client-token"
+2026-01-28T09:34:20.623663033Z  },
+2026-01-28T09:34:20.623663033Z  OptionalSecretNamePrefixes: ([]string) (len=1 cap=1) {
+2026-01-28T09:34:20.623663033Z   (string) (len=12) "serving-cert"
+2026-01-28T09:34:20.623663033Z  },
+2026-01-28T09:34:20.623663033Z  ConfigMapNamePrefixes: ([]string) (len=8 cap=8) {
+2026-01-28T09:34:20.623663033Z   (string) (len=27) "kube-controller-manager-pod",
+2026-01-28T09:34:20.623663033Z   (string) (len=6) "config",
+2026-01-28T09:34:20.623663033Z   (string) (len=32) "cluster-policy-controller-config",
+2026-01-28T09:34:20.623663033Z   (string) (len=29) "controller-manager-kubeconfig",
+2026-01-28T09:34:20.623663033Z   (string) (len=38) "kube-controller-cert-syncer-kubeconfig",
+2026-01-28T09:34:20.623663033Z   (string) (len=17) "serviceaccount-ca",
+2026-01-28T09:34:20.623663033Z   (string) (len=10) "service-ca",
+2026-01-28T09:34:20.623663033Z   (string) (len=15) "recycler-config"
+2026-01-28T09:34:20.623663033Z  },
+2026-01-28T09:34:20.623663033Z  OptionalConfigMapNamePrefixes: ([]string) (len=1 cap=1) {
+2026-01-28T09:34:20.623663033Z   (string) (len=12) "cloud-config"
+2026-01-28T09:34:20.623663033Z  },
+2026-01-28T09:34:20.623663033Z  CertSecretNames: ([]string) (len=2 cap=2) {
+2026-01-28T09:34:20.623663033Z   (string) (len=39) "kube-controller-manager-client-cert-key",
+2026-01-28T09:34:20.623663033Z   (string) (len=10) "csr-signer"
+2026-01-28T09:34:20.623663033Z  },
+2026-01-28T09:34:20.623663033Z  OptionalCertSecretNamePrefixes: ([]string) <nil>,
+2026-01-28T09:34:20.623663033Z  CertConfigMapNamePrefixes: ([]string) (len=2 cap=2) {
+2026-01-28T09:34:20.623663033Z   (string) (len=20) "aggregator-client-ca",
+2026-01-28T09:34:20.623663033Z   (string) (len=9) "client-ca"
+2026-01-28T09:34:20.623663033Z  },
+2026-01-28T09:34:20.623663033Z  OptionalCertConfigMapNamePrefixes: ([]string) (len=1 cap=1) {
+2026-01-28T09:34:20.623663033Z   (string) (len=17) "trusted-ca-bundle"
+2026-01-28T09:34:20.623663033Z  },
+2026-01-28T09:34:20.623663033Z  CertDir: (string) (len=66) "/etc/kubernetes/static-pod-resources/kube-controller-manager-certs",
+2026-01-28T09:34:20.623663033Z  ResourceDir: (string) (len=36) "/etc/kubernetes/static-pod-resources",
+2026-01-28T09:34:20.623663033Z  PodManifestDir: (string) (len=25) "/etc/kubernetes/manifests",
+2026-01-28T09:34:20.623663033Z  Timeout: (time.Duration) 2m0s,
+2026-01-28T09:34:20.623663033Z  StaticPodManifestsLockFile: (string) "",
+2026-01-28T09:34:20.623663033Z  PodMutationFns: ([]installerpod.PodMutationFunc) <nil>,
+2026-01-28T09:34:20.623663033Z  KubeletVersion: (string) ""
+2026-01-28T09:34:20.623663033Z })
+2026-01-28T09:34:20.623896668Z I0128 09:34:20.623868       1 envvar.go:172] "Feature gate default state" feature="ClientsPreferCBOR" enabled=false
+2026-01-28T09:34:20.623896668Z I0128 09:34:20.623886       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2026-01-28T09:34:20.623912179Z I0128 09:34:20.623894       1 envvar.go:172] "Feature gate default state" feature="InOrderInformers" enabled=true
+2026-01-28T09:34:20.623912179Z I0128 09:34:20.623900       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2026-01-28T09:34:20.623912179Z I0128 09:34:20.623905       1 envvar.go:172] "Feature gate default state" feature="ClientsAllowCBOR" enabled=false
+2026-01-28T09:34:20.624379419Z I0128 09:34:20.624346       1 cmd.go:413] Getting controller reference for node ip-10-0-102-200.us-west-1.compute.internal
+2026-01-28T09:34:20.633315559Z I0128 09:34:20.633292       1 cmd.go:426] Waiting for installer revisions to settle for node ip-10-0-102-200.us-west-1.compute.internal
+2026-01-28T09:34:20.721148827Z I0128 09:34:20.721122       1 cmd.go:518] Waiting additional period after revisions have settled for node ip-10-0-102-200.us-west-1.compute.internal
+2026-01-28T09:34:50.721576768Z I0128 09:34:50.721516       1 cmd.go:524] Getting installer pods for node ip-10-0-102-200.us-west-1.compute.internal
+2026-01-28T09:34:50.724991312Z I0128 09:34:50.724967       1 cmd.go:542] Latest installer revision for node ip-10-0-102-200.us-west-1.compute.internal is: 4
+2026-01-28T09:34:50.724991312Z I0128 09:34:50.724982       1 cmd.go:431] Querying kubelet version for node ip-10-0-102-200.us-west-1.compute.internal
+2026-01-28T09:34:50.726760071Z I0128 09:34:50.726739       1 cmd.go:444] Got kubelet version 1.33.6 on target node ip-10-0-102-200.us-west-1.compute.internal
+2026-01-28T09:34:50.726760071Z I0128 09:34:50.726755       1 cmd.go:293] Creating target resource directory "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4" ...
+2026-01-28T09:34:50.726791832Z I0128 09:34:50.726782       1 cmd.go:221] Creating target resource directory "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4" ...
+2026-01-28T09:34:50.726791832Z I0128 09:34:50.726789       1 cmd.go:229] Getting secrets ...
+2026-01-28T09:34:50.728481769Z I0128 09:34:50.728438       1 copy.go:32] Got secret openshift-kube-controller-manager/localhost-recovery-client-token-4
+2026-01-28T09:34:50.731841202Z I0128 09:34:50.731820       1 copy.go:32] Got secret openshift-kube-controller-manager/service-account-private-key-4
+2026-01-28T09:34:50.733692703Z I0128 09:34:50.733669       1 copy.go:32] Got secret openshift-kube-controller-manager/serving-cert-4
+2026-01-28T09:34:50.733717644Z I0128 09:34:50.733704       1 cmd.go:242] Getting config maps ...
+2026-01-28T09:34:50.735259528Z I0128 09:34:50.735240       1 copy.go:60] Got configMap openshift-kube-controller-manager/cluster-policy-controller-config-4
+2026-01-28T09:34:50.737003146Z I0128 09:34:50.736981       1 copy.go:60] Got configMap openshift-kube-controller-manager/config-4
+2026-01-28T09:34:50.738492528Z I0128 09:34:50.738470       1 copy.go:60] Got configMap openshift-kube-controller-manager/controller-manager-kubeconfig-4
+2026-01-28T09:34:50.739811157Z I0128 09:34:50.739785       1 copy.go:60] Got configMap openshift-kube-controller-manager/kube-controller-cert-syncer-kubeconfig-4
+2026-01-28T09:34:50.741290929Z I0128 09:34:50.741273       1 copy.go:60] Got configMap openshift-kube-controller-manager/kube-controller-manager-pod-4
+2026-01-28T09:34:50.924485322Z I0128 09:34:50.924450       1 copy.go:60] Got configMap openshift-kube-controller-manager/recycler-config-4
+2026-01-28T09:34:51.123505580Z I0128 09:34:51.123456       1 copy.go:60] Got configMap openshift-kube-controller-manager/service-ca-4
+2026-01-28T09:34:51.324228806Z I0128 09:34:51.324188       1 copy.go:60] Got configMap openshift-kube-controller-manager/serviceaccount-ca-4
+2026-01-28T09:34:51.524423611Z I0128 09:34:51.524380       1 copy.go:52] Failed to get config map openshift-kube-controller-manager/cloud-config-4: configmaps "cloud-config-4" not found
+2026-01-28T09:34:51.524471152Z I0128 09:34:51.524439       1 cmd.go:261] Creating directory "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/secrets/localhost-recovery-client-token" ...
+2026-01-28T09:34:51.524535633Z I0128 09:34:51.524486       1 cmd.go:639] Writing secret manifest "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/secrets/localhost-recovery-client-token/ca.crt" ...
+2026-01-28T09:34:51.524727077Z I0128 09:34:51.524708       1 cmd.go:639] Writing secret manifest "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/secrets/localhost-recovery-client-token/namespace" ...
+2026-01-28T09:34:51.524838709Z I0128 09:34:51.524820       1 cmd.go:639] Writing secret manifest "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/secrets/localhost-recovery-client-token/token" ...
+2026-01-28T09:34:51.524952552Z I0128 09:34:51.524935       1 cmd.go:261] Creating directory "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/secrets/service-account-private-key" ...
+2026-01-28T09:34:51.524969923Z I0128 09:34:51.524953       1 cmd.go:639] Writing secret manifest "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/secrets/service-account-private-key/service-account.key" ...
+2026-01-28T09:34:51.525085685Z I0128 09:34:51.525066       1 cmd.go:261] Creating directory "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/secrets/serving-cert" ...
+2026-01-28T09:34:51.525130366Z I0128 09:34:51.525084       1 cmd.go:639] Writing secret manifest "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/secrets/serving-cert/tls.crt" ...
+2026-01-28T09:34:51.525250429Z I0128 09:34:51.525233       1 cmd.go:639] Writing secret manifest "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/secrets/serving-cert/tls.key" ...
+2026-01-28T09:34:51.525372231Z I0128 09:34:51.525342       1 cmd.go:277] Creating directory "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/cluster-policy-controller-config" ...
+2026-01-28T09:34:51.525372231Z I0128 09:34:51.525363       1 cmd.go:629] Writing config file "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/cluster-policy-controller-config/config.yaml" ...
+2026-01-28T09:34:51.525486474Z I0128 09:34:51.525470       1 cmd.go:277] Creating directory "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/config" ...
+2026-01-28T09:34:51.525503924Z I0128 09:34:51.525494       1 cmd.go:629] Writing config file "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/config/config.yaml" ...
+2026-01-28T09:34:51.525631697Z I0128 09:34:51.525609       1 cmd.go:277] Creating directory "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/controller-manager-kubeconfig" ...
+2026-01-28T09:34:51.525654797Z I0128 09:34:51.525637       1 cmd.go:629] Writing config file "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/controller-manager-kubeconfig/kubeconfig" ...
+2026-01-28T09:34:51.525795490Z I0128 09:34:51.525775       1 cmd.go:277] Creating directory "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/kube-controller-cert-syncer-kubeconfig" ...
+2026-01-28T09:34:51.525857252Z I0128 09:34:51.525841       1 cmd.go:629] Writing config file "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/kube-controller-cert-syncer-kubeconfig/kubeconfig" ...
+2026-01-28T09:34:51.526033216Z I0128 09:34:51.526008       1 cmd.go:277] Creating directory "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/kube-controller-manager-pod" ...
+2026-01-28T09:34:51.526054446Z I0128 09:34:51.526028       1 cmd.go:629] Writing config file "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/kube-controller-manager-pod/forceRedeploymentReason" ...
+2026-01-28T09:34:51.526192359Z I0128 09:34:51.526167       1 cmd.go:629] Writing config file "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/kube-controller-manager-pod/pod.yaml" ...
+2026-01-28T09:34:51.526319332Z I0128 09:34:51.526292       1 cmd.go:629] Writing config file "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/kube-controller-manager-pod/version" ...
+2026-01-28T09:34:51.526428704Z I0128 09:34:51.526406       1 cmd.go:277] Creating directory "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/recycler-config" ...
+2026-01-28T09:34:51.526449625Z I0128 09:34:51.526427       1 cmd.go:629] Writing config file "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/recycler-config/recycler-pod.yaml" ...
+2026-01-28T09:34:51.526555097Z I0128 09:34:51.526530       1 cmd.go:277] Creating directory "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/service-ca" ...
+2026-01-28T09:34:51.526576578Z I0128 09:34:51.526559       1 cmd.go:629] Writing config file "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/service-ca/ca-bundle.crt" ...
+2026-01-28T09:34:51.526696030Z I0128 09:34:51.526671       1 cmd.go:277] Creating directory "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/serviceaccount-ca" ...
+2026-01-28T09:34:51.526723941Z I0128 09:34:51.526702       1 cmd.go:629] Writing config file "/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/serviceaccount-ca/ca-bundle.crt" ...
+2026-01-28T09:34:51.526842573Z I0128 09:34:51.526817       1 cmd.go:221] Creating target resource directory "/etc/kubernetes/static-pod-resources/kube-controller-manager-certs" ...
+2026-01-28T09:34:51.526842573Z I0128 09:34:51.526837       1 cmd.go:229] Getting secrets ...
+2026-01-28T09:34:51.724108544Z I0128 09:34:51.724051       1 copy.go:32] Got secret openshift-kube-controller-manager/csr-signer
+2026-01-28T09:34:51.924568503Z I0128 09:34:51.924516       1 copy.go:32] Got secret openshift-kube-controller-manager/kube-controller-manager-client-cert-key
+2026-01-28T09:34:51.924636465Z I0128 09:34:51.924589       1 cmd.go:242] Getting config maps ...
+2026-01-28T09:34:52.123854518Z I0128 09:34:52.123811       1 copy.go:60] Got configMap openshift-kube-controller-manager/aggregator-client-ca
+2026-01-28T09:34:52.324067453Z I0128 09:34:52.324017       1 copy.go:52] Failed to get config map openshift-kube-controller-manager/client-ca: configmaps "client-ca" not found
+2026-01-28T09:34:52.527701812Z F0128 09:34:52.527664       1 cmd.go:109] failed to copy: configmaps "client-ca" not found

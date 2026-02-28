@@ -1,0 +1,1513 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: service-ca-operator-7fc484fbbd-j2t4q
+    namespace: openshift-service-ca-operator
+    resourceVersion: "3696"
+    uid: a1e000bf-eb40-4a07-998b-480187d7db57
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:44Z"
+  message: '0/3 nodes are available: 3 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+    }. preemption: 0/3 nodes are available: 3 Preemption is not helpful for scheduling.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:28:44Z"
+    name: service-ca-operator-7fc484fbbd-j2t4q.188edb066f6c822d
+    namespace: openshift-service-ca-operator
+    resourceVersion: "3697"
+    uid: 5b8ffe7d-046a-4714-a565-a7b3272fec81
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:08Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: service-ca-operator-7fc484fbbd-j2t4q
+    namespace: openshift-service-ca-operator
+    resourceVersion: "3700"
+    uid: a1e000bf-eb40-4a07-998b-480187d7db57
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:08Z"
+  message: Successfully assigned openshift-service-ca-operator/service-ca-operator-7fc484fbbd-j2t4q
+    to ip-10-0-108-54.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:30:09Z"
+    name: service-ca-operator-7fc484fbbd-j2t4q.188edb1a21ed363f
+    namespace: openshift-service-ca-operator
+    resourceVersion: "5464"
+    uid: 832e4320-0156-4f72-b0dd-3f7844ca68fc
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:10Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: service-ca-operator-7fc484fbbd-j2t4q
+    namespace: openshift-service-ca-operator
+    resourceVersion: "5419"
+    uid: a1e000bf-eb40-4a07-998b-480187d7db57
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:10Z"
+  message: Add eth0 [10.130.0.17/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2026-01-28T09:30:10Z"
+    name: service-ca-operator-7fc484fbbd-j2t4q.188edb1a683c171c
+    namespace: openshift-service-ca-operator
+    resourceVersion: "5547"
+    uid: e432620b-b856-4624-999f-e9eea8a2efe3
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{service-ca-operator}
+    kind: Pod
+    name: service-ca-operator-7fc484fbbd-j2t4q
+    namespace: openshift-service-ca-operator
+    resourceVersion: "5385"
+    uid: a1e000bf-eb40-4a07-998b-480187d7db57
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:10Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:c38fdb4e629c6abe3ec3202c84381d0d383cb706b82d485867e518bf96d2ae1e"
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:10Z"
+    name: service-ca-operator-7fc484fbbd-j2t4q.188edb1a69243654
+    namespace: openshift-service-ca-operator
+    resourceVersion: "5549"
+    uid: 470a9237-a0c1-46a0-a36b-4911815608ee
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:27Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{service-ca-operator}
+    kind: Pod
+    name: service-ca-operator-7fc484fbbd-j2t4q
+    namespace: openshift-service-ca-operator
+    resourceVersion: "5385"
+    uid: a1e000bf-eb40-4a07-998b-480187d7db57
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:27Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:c38fdb4e629c6abe3ec3202c84381d0d383cb706b82d485867e518bf96d2ae1e"
+    in 17.845s (17.845s including waiting). Image size: 520154559 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:27Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:27Z"
+    name: service-ca-operator-7fc484fbbd-j2t4q.188edb1e90d40544
+    namespace: openshift-service-ca-operator
+    resourceVersion: "5756"
+    uid: 4a5f6abf-0d48-4776-8fdf-22abf87f6491
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{service-ca-operator}
+    kind: Pod
+    name: service-ca-operator-7fc484fbbd-j2t4q
+    namespace: openshift-service-ca-operator
+    resourceVersion: "5385"
+    uid: a1e000bf-eb40-4a07-998b-480187d7db57
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:52Z"
+  message: 'Created container: service-ca-operator'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:31:52Z"
+    name: service-ca-operator-7fc484fbbd-j2t4q.188edb1ec30f7d92
+    namespace: openshift-service-ca-operator
+    resourceVersion: "9708"
+    uid: 7e1ff850-88e3-493c-b8b8-e12fd5e9614a
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{service-ca-operator}
+    kind: Pod
+    name: service-ca-operator-7fc484fbbd-j2t4q
+    namespace: openshift-service-ca-operator
+    resourceVersion: "5385"
+    uid: a1e000bf-eb40-4a07-998b-480187d7db57
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:53Z"
+  message: Started container service-ca-operator
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:31:53Z"
+    name: service-ca-operator-7fc484fbbd-j2t4q.188edb1ec9f9c0b6
+    namespace: openshift-service-ca-operator
+    resourceVersion: "9735"
+    uid: 90fb7959-dc10-412b-b886-5ea3a2edf1a1
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:51Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{service-ca-operator}
+    kind: Pod
+    name: service-ca-operator-7fc484fbbd-j2t4q
+    namespace: openshift-service-ca-operator
+    resourceVersion: "5385"
+    uid: a1e000bf-eb40-4a07-998b-480187d7db57
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:51Z"
+  message: Container image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:c38fdb4e629c6abe3ec3202c84381d0d383cb706b82d485867e518bf96d2ae1e"
+    already present on machine
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:31:51Z"
+    name: service-ca-operator-7fc484fbbd-j2t4q.188edb321b3ba049
+    namespace: openshift-service-ca-operator
+    resourceVersion: "9658"
+    uid: f65c64b3-8296-4c52-918d-a02c0a26b55a
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 15
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:26:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: service-ca-operator-7fc484fbbd
+    namespace: openshift-service-ca-operator
+    resourceVersion: "1728"
+    uid: d29578c1-d30c-4e53-91d9-a82e45f80b6c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:27:22Z"
+  message: 'Error creating: pods "service-ca-operator-7fc484fbbd-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
+    the cluster does not have any nodes'
+  metadata:
+    creationTimestamp: "2026-01-28T09:26:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:27:22Z"
+    name: service-ca-operator-7fc484fbbd.188edae0469f3aa4
+    namespace: openshift-service-ca-operator
+    resourceVersion: "3134"
+    uid: 960f8b12-36a3-4002-b925-bad458586287
+  reason: FailedCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:28:44Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: service-ca-operator-7fc484fbbd
+    namespace: openshift-service-ca-operator
+    resourceVersion: "1732"
+    uid: d29578c1-d30c-4e53-91d9-a82e45f80b6c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:28:44Z"
+  message: 'Created pod: service-ca-operator-7fc484fbbd-j2t4q'
+  metadata:
+    creationTimestamp: "2026-01-28T09:28:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:28:44Z"
+    name: service-ca-operator-7fc484fbbd.188edb066f6e9c8c
+    namespace: openshift-service-ca-operator
+    resourceVersion: "3698"
+    uid: c15d634b-387b-463c-9af9-5a5fd81039ae
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:33Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: service-ca-operator-lock
+    namespace: openshift-service-ca-operator
+    resourceVersion: "5982"
+    uid: ec517ec5-c32a-4e59-814e-7931508e87d8
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:33Z"
+  message: service-ca-operator-7fc484fbbd-j2t4q_8c36ccea-52ad-42d7-b3f5-272c59a29a3a
+    became leader
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:30:33Z"
+    name: service-ca-operator-lock.188edb1ff5872881
+    namespace: openshift-service-ca-operator
+    resourceVersion: "5984"
+    uid: c23e3603-a36c-439c-ba03-e71ac58e8c59
+  reason: LeaderElection
+  reportingComponent: service-ca-operator
+  reportingInstance: ""
+  source:
+    component: service-ca-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:46Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: service-ca-operator-lock
+    namespace: openshift-service-ca-operator
+    resourceVersion: "9597"
+    uid: ec517ec5-c32a-4e59-814e-7931508e87d8
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:46Z"
+  message: service-ca-operator-7fc484fbbd-j2t4q_8c36ccea-52ad-42d7-b3f5-272c59a29a3a
+    stopped leading
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:31:46Z"
+    name: service-ca-operator-lock.188edb30f6478a19
+    namespace: openshift-service-ca-operator
+    resourceVersion: "9598"
+    uid: 1dfe87c9-2e66-416c-a082-14fb02861d0a
+  reason: LeaderElection
+  reportingComponent: service-ca-operator
+  reportingInstance: ""
+  source:
+    component: service-ca-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:54Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: service-ca-operator-lock
+    namespace: openshift-service-ca-operator
+    resourceVersion: "9793"
+    uid: ec517ec5-c32a-4e59-814e-7931508e87d8
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:54Z"
+  message: service-ca-operator-7fc484fbbd-j2t4q_213028be-2328-4465-8431-4c551d75f22d
+    became leader
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:54Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:31:54Z"
+    name: service-ca-operator-lock.188edb32b4a4516a
+    namespace: openshift-service-ca-operator
+    resourceVersion: "9797"
+    uid: 9d233a87-b8dc-432d-a75b-a63b3505c845
+  reason: LeaderElection
+  reportingComponent: service-ca-operator
+  reportingInstance: ""
+  source:
+    component: service-ca-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:26:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca-operator
+    namespace: openshift-service-ca-operator
+    resourceVersion: "1727"
+    uid: 99140957-f043-43bf-8f89-66ea37f84018
+  kind: Event
+  lastTimestamp: "2026-01-28T09:26:00Z"
+  message: Scaled up replica set service-ca-operator-7fc484fbbd from 0 to 1
+  metadata:
+    creationTimestamp: "2026-01-28T09:26:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:26:00Z"
+    name: service-ca-operator.188edae046695b80
+    namespace: openshift-service-ca-operator
+    resourceVersion: "1729"
+    uid: bfcb67e4-9b81-40e9-8bd5-f0880e206c1a
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:33Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca-operator
+    namespace: openshift-service-ca-operator
+    uid: 99140957-f043-43bf-8f89-66ea37f84018
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:33Z"
+  message: FeatureGates updated to featuregates.Features{Enabled:[]v1.FeatureGateName{"AdditionalRoutingCapabilities",
+    "AdminNetworkPolicy", "AlibabaPlatform", "AzureWorkloadIdentity", "BuildCSIVolumes",
+    "CPMSMachineNamePrefix", "ConsolePluginContentSecurityPolicy", "ExternalOIDC",
+    "ExternalOIDCWithUIDAndExtraClaimMappings", "GatewayAPI", "GatewayAPIController",
+    "HighlyAvailableArbiter", "ImageVolume", "IngressControllerLBSubnetsAWS", "KMSv1",
+    "MachineConfigNodes", "ManagedBootImages", "ManagedBootImagesAWS", "MetricsCollectionProfiles",
+    "NetworkDiagnosticsConfig", "NetworkLiveMigration", "NetworkSegmentation", "NewOLM",
+    "PinnedImages", "PreconfiguredUDNAddresses", "ProcMountType", "RouteAdvertisements",
+    "RouteExternalCertificate", "ServiceAccountTokenNodeBinding", "SetEIPForNLBIngressController",
+    "SigstoreImageVerification", "StoragePerformantSecurityPolicy", "UpgradeStatus",
+    "UserNamespacesPodSecurityStandards", "UserNamespacesSupport", "VSphereMultiDisk",
+    "VSphereMultiNetworks"}, Disabled:[]v1.FeatureGateName{"AWSClusterHostedDNS",
+    "AWSClusterHostedDNSInstall", "AWSDedicatedHosts", "AWSServiceLBNetworkSecurityGroup",
+    "AutomatedEtcdBackup", "AzureClusterHostedDNSInstall", "AzureDedicatedHosts",
+    "AzureMultiDisk", "BootImageSkewEnforcement", "BootcNodeManagement", "ClusterAPIInstall",
+    "ClusterAPIInstallIBMCloud", "ClusterMonitoringConfig", "ClusterVersionOperatorConfiguration",
+    "DNSNameResolver", "DualReplica", "DyanmicServiceEndpointIBMCloud", "DynamicResourceAllocation",
+    "EtcdBackendQuota", "EventedPLEG", "Example", "Example2", "ExternalSnapshotMetadata",
+    "GCPClusterHostedDNS", "GCPClusterHostedDNSInstall", "GCPCustomAPIEndpoints",
+    "GCPCustomAPIEndpointsInstall", "ImageModeStatusReporting", "ImageStreamImportMode",
+    "IngressControllerDynamicConfigurationManager", "InsightsConfig", "InsightsConfigAPI",
+    "InsightsOnDemandDataGather", "IrreconcilableMachineConfig", "KMSEncryptionProvider",
+    "MachineAPIMigration", "MachineAPIOperatorDisableMachineHealthCheckController",
+    "ManagedBootImagesAzure", "ManagedBootImagesvSphere", "MaxUnavailableStatefulSet",
+    "MinimumKubeletVersion", "MixedCPUsAllocation", "MultiArchInstallAzure", "MultiDiskSetup",
+    "MutatingAdmissionPolicy", "NewOLMCatalogdAPIV1Metas", "NewOLMOwnSingleNamespace",
+    "NewOLMPreflightPermissionChecks", "NewOLMWebhookProviderOpenshiftServiceCA",
+    "NoRegistryClusterOperations", "NodeSwap", "NutanixMultiSubnets", "OVNObservability",
+    "OpenShiftPodSecurityAdmission", "SELinuxMount", "ShortCertRotation", "SignatureStores",
+    "SigstoreImageVerificationPKI", "TranslateStreamCloseWebsocketRequests", "VSphereConfigurableMaxAllowedBlockVolumesPerNode",
+    "VSphereHostVMGroupZonal", "VSphereMixedNodeEnv", "VolumeAttributesClass", "VolumeGroupSnapshot"}}
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:30:33Z"
+    name: service-ca-operator.188edb1ff88b318b
+    namespace: openshift-service-ca-operator
+    resourceVersion: "5988"
+    uid: 1bfd675b-5d7c-41ab-b553-00397cf7385b
+  reason: FeatureGatesInitialized
+  reportingComponent: service-ca-operator
+  reportingInstance: ""
+  source:
+    component: service-ca-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:34Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca-operator
+    namespace: openshift-service-ca-operator
+    uid: 99140957-f043-43bf-8f89-66ea37f84018
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:34Z"
+  message: 'Status for clusteroperator/service-ca changed: Degraded set to Unknown
+    (""),Progressing set to Unknown (""),Available set to Unknown (""),Upgradeable
+    set to Unknown (""),EvaluationConditionsDetected set to Unknown (""),status.relatedObjects
+    changed from [] to [{"operator.openshift.io" "servicecas" "" "cluster"} {"" "namespaces"
+    "" "openshift-config"} {"" "namespaces" "" "openshift-config-managed"} {"" "namespaces"
+    "" "openshift-service-ca-operator"} {"" "namespaces" "" "openshift-service-ca"}]'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:30:34Z"
+    name: service-ca-operator.188edb2004211db7
+    namespace: openshift-service-ca-operator
+    resourceVersion: "5992"
+    uid: e6111f59-b9b2-4577-9d58-5b1382b0f095
+  reason: OperatorStatusChanged
+  reportingComponent: service-ca-operator-status-controller-statussyncer_service-ca
+  reportingInstance: ""
+  source:
+    component: service-ca-operator-status-controller-statussyncer_service-ca
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:34Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca-operator
+    namespace: openshift-service-ca-operator
+    uid: 99140957-f043-43bf-8f89-66ea37f84018
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:34Z"
+  message: 'Status for clusteroperator/service-ca changed: Degraded changed from Unknown
+    to False ("All is well")'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:30:34Z"
+    name: service-ca-operator.188edb201da447aa
+    namespace: openshift-service-ca-operator
+    resourceVersion: "6015"
+    uid: 08cac047-478f-415c-a337-96f6ea990833
+  reason: OperatorStatusChanged
+  reportingComponent: service-ca-operator-status-controller-statussyncer_service-ca
+  reportingInstance: ""
+  source:
+    component: service-ca-operator-status-controller-statussyncer_service-ca
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:34Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca-operator
+    namespace: openshift-service-ca-operator
+    uid: 99140957-f043-43bf-8f89-66ea37f84018
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:34Z"
+  message: Created Namespace/openshift-service-ca because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:30:34Z"
+    name: service-ca-operator.188edb202965264a
+    namespace: openshift-service-ca-operator
+    resourceVersion: "6048"
+    uid: 6817f7a9-a8f8-4ce3-97a6-33adefb4e443
+  reason: NamespaceCreated
+  reportingComponent: service-ca-operator
+  reportingInstance: ""
+  source:
+    component: service-ca-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:34Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca-operator
+    namespace: openshift-service-ca-operator
+    uid: 99140957-f043-43bf-8f89-66ea37f84018
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:34Z"
+  message: Created ClusterRole.rbac.authorization.k8s.io/system:openshift:controller:service-ca
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:30:34Z"
+    name: service-ca-operator.188edb202a07a89f
+    namespace: openshift-service-ca-operator
+    resourceVersion: "6053"
+    uid: e8012fff-d421-408c-b88f-52eb92a8ef7f
+  reason: ClusterRoleCreated
+  reportingComponent: service-ca-operator
+  reportingInstance: ""
+  source:
+    component: service-ca-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:34Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca-operator
+    namespace: openshift-service-ca-operator
+    uid: 99140957-f043-43bf-8f89-66ea37f84018
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:34Z"
+  message: Created ClusterRoleBinding.rbac.authorization.k8s.io/system:openshift:controller:service-ca
+    because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:30:34Z"
+    name: service-ca-operator.188edb202a702dbb
+    namespace: openshift-service-ca-operator
+    resourceVersion: "6056"
+    uid: e95c8306-f552-43e6-bdb9-b489205e8563
+  reason: ClusterRoleBindingCreated
+  reportingComponent: service-ca-operator
+  reportingInstance: ""
+  source:
+    component: service-ca-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:34Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca-operator
+    namespace: openshift-service-ca-operator
+    uid: 99140957-f043-43bf-8f89-66ea37f84018
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:34Z"
+  message: Created Role.rbac.authorization.k8s.io/system:openshift:controller:service-ca
+    -n openshift-service-ca because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:30:34Z"
+    name: service-ca-operator.188edb202b593fb1
+    namespace: openshift-service-ca-operator
+    resourceVersion: "6058"
+    uid: 6d292f0a-9798-4b51-88ed-fc26e4c45ce4
+  reason: RoleCreated
+  reportingComponent: service-ca-operator
+  reportingInstance: ""
+  source:
+    component: service-ca-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:34Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca-operator
+    namespace: openshift-service-ca-operator
+    uid: 99140957-f043-43bf-8f89-66ea37f84018
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:34Z"
+  message: Created RoleBinding.rbac.authorization.k8s.io/system:openshift:controller:service-ca
+    -n openshift-service-ca because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:30:34Z"
+    name: service-ca-operator.188edb202c3ce469
+    namespace: openshift-service-ca-operator
+    resourceVersion: "6063"
+    uid: af29b4af-bcf8-4129-999d-6ec9d6a70b03
+  reason: RoleBindingCreated
+  reportingComponent: service-ca-operator
+  reportingInstance: ""
+  source:
+    component: service-ca-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:35Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca-operator
+    namespace: openshift-service-ca-operator
+    uid: 99140957-f043-43bf-8f89-66ea37f84018
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:35Z"
+  message: Created ServiceAccount/service-ca -n openshift-service-ca because it was
+    missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:30:35Z"
+    name: service-ca-operator.188edb204098b1b4
+    namespace: openshift-service-ca-operator
+    resourceVersion: "6118"
+    uid: 932acc0c-c89a-4394-8519-cb2ea8106eaf
+  reason: ServiceAccountCreated
+  reportingComponent: service-ca-operator
+  reportingInstance: ""
+  source:
+    component: service-ca-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:35Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca-operator
+    namespace: openshift-service-ca-operator
+    uid: 99140957-f043-43bf-8f89-66ea37f84018
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:35Z"
+  message: Created Secret/signing-key -n openshift-service-ca because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:30:35Z"
+    name: service-ca-operator.188edb2064ad911e
+    namespace: openshift-service-ca-operator
+    resourceVersion: "6182"
+    uid: b6803bba-a991-4a4d-b73d-d32df2cf8b8d
+  reason: SecretCreated
+  reportingComponent: service-ca-operator
+  reportingInstance: ""
+  source:
+    component: service-ca-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:36Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca-operator
+    namespace: openshift-service-ca-operator
+    uid: 99140957-f043-43bf-8f89-66ea37f84018
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:36Z"
+  message: Created ConfigMap/signing-cabundle -n openshift-service-ca because it was
+    missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:30:36Z"
+    name: service-ca-operator.188edb2088095863
+    namespace: openshift-service-ca-operator
+    resourceVersion: "6216"
+    uid: 97407aae-8218-4a55-a3b9-6ff0311d8fb3
+  reason: ConfigMapCreated
+  reportingComponent: service-ca-operator
+  reportingInstance: ""
+  source:
+    component: service-ca-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:36Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca-operator
+    namespace: openshift-service-ca-operator
+    uid: 99140957-f043-43bf-8f89-66ea37f84018
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:36Z"
+  message: Created Deployment.apps/service-ca -n openshift-service-ca because it was
+    missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:30:36Z"
+    name: service-ca-operator.188edb20889dba0f
+    namespace: openshift-service-ca-operator
+    resourceVersion: "6218"
+    uid: 4e17670c-c824-4dcd-be97-2f82cef0ade2
+  reason: DeploymentCreated
+  reportingComponent: service-ca-operator
+  reportingInstance: ""
+  source:
+    component: service-ca-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:36Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca-operator
+    namespace: openshift-service-ca-operator
+    uid: 99140957-f043-43bf-8f89-66ea37f84018
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:36Z"
+  message: 'Status for clusteroperator/service-ca changed: Progressing changed from
+    Unknown to True ("Progressing: \nProgressing: service-ca does not have available
+    replicas"),Available changed from Unknown to True ("All is well"),Upgradeable
+    changed from Unknown to True ("All is well")'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:30:36Z"
+    name: service-ca-operator.188edb2089c5050e
+    namespace: openshift-service-ca-operator
+    resourceVersion: "6230"
+    uid: 57e225e0-589d-4d3e-8f04-4ec716365b77
+  reason: OperatorStatusChanged
+  reportingComponent: service-ca-operator-status-controller-statussyncer_service-ca
+  reportingInstance: ""
+  source:
+    component: service-ca-operator-status-controller-statussyncer_service-ca
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:36Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca-operator
+    namespace: openshift-service-ca-operator
+    uid: 99140957-f043-43bf-8f89-66ea37f84018
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:36Z"
+  message: Created ConfigMap/service-ca -n openshift-config-managed because it was
+    missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:30:36Z"
+    name: service-ca-operator.188edb2093eb4e5e
+    namespace: openshift-service-ca-operator
+    resourceVersion: "6245"
+    uid: d88621fc-7769-4b0a-88cd-cfd14e87fe37
+  reason: ConfigMapCreated
+  reportingComponent: service-ca-operator-resource-sync-controller-resourcesynccontroller
+  reportingInstance: ""
+  source:
+    component: service-ca-operator-resource-sync-controller-resourcesynccontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:37Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca-operator
+    namespace: openshift-service-ca-operator
+    uid: 99140957-f043-43bf-8f89-66ea37f84018
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:37Z"
+  message: Updated Deployment.apps/service-ca -n openshift-service-ca because it changed
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:37Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:30:37Z"
+    name: service-ca-operator.188edb20c3f6e6fc
+    namespace: openshift-service-ca-operator
+    resourceVersion: "6282"
+    uid: 2d278adb-629e-4f2c-acea-7fd26809ea7f
+  reason: DeploymentUpdated
+  reportingComponent: service-ca-operator
+  reportingInstance: ""
+  source:
+    component: service-ca-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:39Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca-operator
+    namespace: openshift-service-ca-operator
+    uid: 99140957-f043-43bf-8f89-66ea37f84018
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:39Z"
+  message: clusteroperator/service-ca version "operator" changed from "" to "4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest"
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:30:39Z"
+    name: service-ca-operator.188edb2152ecdfe8
+    namespace: openshift-service-ca-operator
+    resourceVersion: "6437"
+    uid: 8489eace-c4b2-4990-8873-180bd924509e
+  reason: OperatorVersionChanged
+  reportingComponent: service-ca-operator-status-controller-statussyncer_service-ca
+  reportingInstance: ""
+  source:
+    component: service-ca-operator-status-controller-statussyncer_service-ca
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:39Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca-operator
+    namespace: openshift-service-ca-operator
+    uid: 99140957-f043-43bf-8f89-66ea37f84018
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:39Z"
+  message: 'Status for clusteroperator/service-ca changed: status.versions changed
+    from [] to [{"operator" "4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest"}]'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:30:39Z"
+    name: service-ca-operator.188edb215379fd9a
+    namespace: openshift-service-ca-operator
+    resourceVersion: "6440"
+    uid: 42bbb0bd-0ef6-47a0-a091-92b19d1d17dd
+  reason: OperatorStatusChanged
+  reportingComponent: service-ca-operator-status-controller-statussyncer_service-ca
+  reportingInstance: ""
+  source:
+    component: service-ca-operator-status-controller-statussyncer_service-ca
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:39Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca-operator
+    namespace: openshift-service-ca-operator
+    uid: 99140957-f043-43bf-8f89-66ea37f84018
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:39Z"
+  message: 'Status for clusteroperator/service-ca changed: Progressing changed from
+    True to False ("Progressing: All service-ca-operator deployments updated")'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:30:39Z"
+    name: service-ca-operator.188edb2153f60d75
+    namespace: openshift-service-ca-operator
+    resourceVersion: "6442"
+    uid: 1ee17c1d-285e-4136-96de-daab8ec322ba
+  reason: OperatorStatusChanged
+  reportingComponent: service-ca-operator-status-controller-statussyncer_service-ca
+  reportingInstance: ""
+  source:
+    component: service-ca-operator-status-controller-statussyncer_service-ca
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:54Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca-operator
+    namespace: openshift-service-ca-operator
+    uid: 99140957-f043-43bf-8f89-66ea37f84018
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:54Z"
+  message: FeatureGates updated to featuregates.Features{Enabled:[]v1.FeatureGateName{"AdditionalRoutingCapabilities",
+    "AdminNetworkPolicy", "AlibabaPlatform", "AzureWorkloadIdentity", "BuildCSIVolumes",
+    "CPMSMachineNamePrefix", "ConsolePluginContentSecurityPolicy", "ExternalOIDC",
+    "ExternalOIDCWithUIDAndExtraClaimMappings", "GatewayAPI", "GatewayAPIController",
+    "HighlyAvailableArbiter", "ImageVolume", "IngressControllerLBSubnetsAWS", "KMSv1",
+    "MachineConfigNodes", "ManagedBootImages", "ManagedBootImagesAWS", "MetricsCollectionProfiles",
+    "NetworkDiagnosticsConfig", "NetworkLiveMigration", "NetworkSegmentation", "NewOLM",
+    "PinnedImages", "PreconfiguredUDNAddresses", "ProcMountType", "RouteAdvertisements",
+    "RouteExternalCertificate", "ServiceAccountTokenNodeBinding", "SetEIPForNLBIngressController",
+    "SigstoreImageVerification", "StoragePerformantSecurityPolicy", "UpgradeStatus",
+    "UserNamespacesPodSecurityStandards", "UserNamespacesSupport", "VSphereMultiDisk",
+    "VSphereMultiNetworks"}, Disabled:[]v1.FeatureGateName{"AWSClusterHostedDNS",
+    "AWSClusterHostedDNSInstall", "AWSDedicatedHosts", "AWSServiceLBNetworkSecurityGroup",
+    "AutomatedEtcdBackup", "AzureClusterHostedDNSInstall", "AzureDedicatedHosts",
+    "AzureMultiDisk", "BootImageSkewEnforcement", "BootcNodeManagement", "ClusterAPIInstall",
+    "ClusterAPIInstallIBMCloud", "ClusterMonitoringConfig", "ClusterVersionOperatorConfiguration",
+    "DNSNameResolver", "DualReplica", "DyanmicServiceEndpointIBMCloud", "DynamicResourceAllocation",
+    "EtcdBackendQuota", "EventedPLEG", "Example", "Example2", "ExternalSnapshotMetadata",
+    "GCPClusterHostedDNS", "GCPClusterHostedDNSInstall", "GCPCustomAPIEndpoints",
+    "GCPCustomAPIEndpointsInstall", "ImageModeStatusReporting", "ImageStreamImportMode",
+    "IngressControllerDynamicConfigurationManager", "InsightsConfig", "InsightsConfigAPI",
+    "InsightsOnDemandDataGather", "IrreconcilableMachineConfig", "KMSEncryptionProvider",
+    "MachineAPIMigration", "MachineAPIOperatorDisableMachineHealthCheckController",
+    "ManagedBootImagesAzure", "ManagedBootImagesvSphere", "MaxUnavailableStatefulSet",
+    "MinimumKubeletVersion", "MixedCPUsAllocation", "MultiArchInstallAzure", "MultiDiskSetup",
+    "MutatingAdmissionPolicy", "NewOLMCatalogdAPIV1Metas", "NewOLMOwnSingleNamespace",
+    "NewOLMPreflightPermissionChecks", "NewOLMWebhookProviderOpenshiftServiceCA",
+    "NoRegistryClusterOperations", "NodeSwap", "NutanixMultiSubnets", "OVNObservability",
+    "OpenShiftPodSecurityAdmission", "SELinuxMount", "ShortCertRotation", "SignatureStores",
+    "SigstoreImageVerificationPKI", "TranslateStreamCloseWebsocketRequests", "VSphereConfigurableMaxAllowedBlockVolumesPerNode",
+    "VSphereHostVMGroupZonal", "VSphereMixedNodeEnv", "VolumeAttributesClass", "VolumeGroupSnapshot"}}
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:54Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2026-01-28T09:31:54Z"
+    name: service-ca-operator.188edb32bd6b25eb
+    namespace: openshift-service-ca-operator
+    resourceVersion: "9806"
+    uid: b3c923b1-e726-4b00-bff7-79ae3639774f
+  reason: FeatureGatesInitialized
+  reportingComponent: service-ca-operator
+  reportingInstance: ""
+  source:
+    component: service-ca-operator
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "35168"

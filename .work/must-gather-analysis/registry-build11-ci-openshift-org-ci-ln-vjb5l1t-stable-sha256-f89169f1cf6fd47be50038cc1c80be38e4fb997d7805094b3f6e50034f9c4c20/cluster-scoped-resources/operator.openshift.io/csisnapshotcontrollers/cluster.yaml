@@ -1,0 +1,214 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: CSISnapshotController
+metadata:
+  annotations:
+    capability.openshift.io/name: CSISnapshot
+    include.release.openshift.io/hypershift: "true"
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2026-01-28T09:25:47Z"
+  generation: 1
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"CSISnapshotControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: CSISnapshotController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:32:00Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"CSISnapshotGuestStaticResourceControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: CSISnapshotGuestStaticResourceController-StaticResources
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:32:00Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"CSISnapshotStaticResourceControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: CSISnapshotStaticResourceController-StaticResources
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:32:00Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"WebhookRemovalControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: WebhookRemovalController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:32:00Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ManagementStateDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: csi-snapshot-controller-ManagementState
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:32:00Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"CSISnapshotControllerAvailable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CSISnapshotControllerProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:generations:
+          k:{"group":"apps","name":"csi-snapshot-controller","namespace":"openshift-cluster-storage-operator","resource":"deployments"}:
+            .: {}
+            f:group: {}
+            f:lastGeneration: {}
+            f:name: {}
+            f:namespace: {}
+            f:resource: {}
+    manager: CSISnapshotController-Deployment
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:32:23Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/hypershift: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:release.openshift.io/create-only: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:spec:
+        .: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:operatorLogLevel: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:25:47Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"CSISnapshotControllerUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:readyReplicas: {}
+    manager: csi-snapshot-controller-operator
+    operation: Update
+    subresource: status
+    time: "2026-01-28T09:31:59Z"
+  name: cluster
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "11653"
+  uid: 00e25fff-107b-4037-95fb-d0f247b6d025
+spec:
+  logLevel: Normal
+  managementState: Managed
+  operatorLogLevel: Normal
+status:
+  conditions:
+  - lastTransitionTime: "2026-01-28T09:32:00Z"
+    reason: AsExpected
+    status: "False"
+    type: WebhookRemovalControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:31:59Z"
+    status: "True"
+    type: CSISnapshotControllerUpgradeable
+  - lastTransitionTime: "2026-01-28T09:32:00Z"
+    message: ""
+    reason: AsExpected
+    status: "False"
+    type: CSISnapshotStaticResourceControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:32:00Z"
+    status: "False"
+    type: ManagementStateDegraded
+  - lastTransitionTime: "2026-01-28T09:32:09Z"
+    message: Deployment is available
+    reason: AsExpected
+    status: "True"
+    type: CSISnapshotControllerAvailable
+  - lastTransitionTime: "2026-01-28T09:32:23Z"
+    message: Deployment is not progressing
+    reason: AsExpected
+    status: "False"
+    type: CSISnapshotControllerProgressing
+  - lastTransitionTime: "2026-01-28T09:32:00Z"
+    message: ""
+    reason: AsExpected
+    status: "False"
+    type: CSISnapshotGuestStaticResourceControllerDegraded
+  - lastTransitionTime: "2026-01-28T09:32:00Z"
+    reason: AsExpected
+    status: "False"
+    type: CSISnapshotControllerDegraded
+  generations:
+  - group: apps
+    lastGeneration: 1
+    name: csi-snapshot-controller
+    namespace: openshift-cluster-storage-operator
+    resource: deployments
+  readyReplicas: 0

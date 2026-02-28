@@ -1,0 +1,493 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.0.108.54
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-108-54.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: kube-rbac-proxy-crio-ip-10-0-108-54.us-west-1.compute.internal
+      namespace: openshift-machine-config-operator
+      uid: 204cd860-764a-4171-ae43-ddc23a51d7a2
+    zone: us-west-1c
+  - addresses:
+    - 10.0.3.203
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-3-203.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: kube-rbac-proxy-crio-ip-10-0-3-203.us-west-1.compute.internal
+      namespace: openshift-machine-config-operator
+      uid: a2b99556-c586-4845-8d90-9318dc7db950
+    zone: us-west-1a
+  - addresses:
+    - 10.0.102.200
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-102-200.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: kube-rbac-proxy-crio-ip-10-0-102-200.us-west-1.compute.internal
+      namespace: openshift-machine-config-operator
+      uid: 2c791061-454d-4e4c-836f-6a1edebf15f0
+    zone: us-west-1c
+  - addresses:
+    - 10.0.78.215
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-78-215.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: kube-rbac-proxy-crio-ip-10-0-78-215.us-west-1.compute.internal
+      namespace: openshift-machine-config-operator
+      uid: 7d3aac80-dd14-4e87-a6fa-22c3583017a5
+    zone: us-west-1c
+  - addresses:
+    - 10.0.101.165
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-101-165.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: kube-rbac-proxy-crio-ip-10-0-101-165.us-west-1.compute.internal
+      namespace: openshift-machine-config-operator
+      uid: e94894f3-6eed-4fa6-84af-0b82b3f9dfe7
+    zone: us-west-1c
+  - addresses:
+    - 10.0.22.208
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-22-208.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: kube-rbac-proxy-crio-ip-10-0-22-208.us-west-1.compute.internal
+      namespace: openshift-machine-config-operator
+      uid: 73389fce-f43a-445d-b566-b85c84bd4fb7
+    zone: us-west-1a
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:42:15Z"
+    creationTimestamp: "2026-01-28T09:26:11Z"
+    generateName: kube-rbac-proxy-crio-
+    generation: 15
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      k8s-app: kube-rbac-proxy-crio
+      kubernetes.io/service-name: kube-rbac-proxy-crio
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"fbca9299-454a-4a0e-b476-5fbe11c30ae5"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:42:15Z"
+    name: kube-rbac-proxy-crio-4cd42
+    namespace: openshift-machine-config-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: kube-rbac-proxy-crio
+      uid: fbca9299-454a-4a0e-b476-5fbe11c30ae5
+    resourceVersion: "20865"
+    uid: d3b5fd56-66a4-45c6-8ea0-06a29327712d
+  ports:
+  - name: metrics
+    port: 9637
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.0.26
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-3-203.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: machine-config-controller-684d9b9c86-l4lpq
+      namespace: openshift-machine-config-operator
+      uid: 0b87ee4a-4977-4279-af7e-08099d08d7b3
+    zone: us-west-1a
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:32:23Z"
+    creationTimestamp: "2026-01-28T09:26:09Z"
+    generateName: machine-config-controller-
+    generation: 2
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      k8s-app: machine-config-controller
+      kubernetes.io/service-name: machine-config-controller
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"6366d8a1-b9ef-4a43-aa1b-ff6eb5f47a92"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:32:23Z"
+    name: machine-config-controller-dtrs4
+    namespace: openshift-machine-config-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: machine-config-controller
+      uid: 6366d8a1-b9ef-4a43-aa1b-ff6eb5f47a92
+    resourceVersion: "11661"
+    uid: 1a5615fa-63e5-40c1-b4ca-5453a639bafd
+  ports:
+  - name: metrics
+    port: 9001
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.0.3.203
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-3-203.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: machine-config-daemon-7ddbq
+      namespace: openshift-machine-config-operator
+      uid: 2f896487-edc6-4544-8765-eded51871519
+    zone: us-west-1a
+  - addresses:
+    - 10.0.108.54
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-108-54.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: machine-config-daemon-qhq7x
+      namespace: openshift-machine-config-operator
+      uid: b8bf1d6e-af25-4524-8ea5-b058d378a7ff
+    zone: us-west-1c
+  - addresses:
+    - 10.0.102.200
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-102-200.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: machine-config-daemon-4tjc6
+      namespace: openshift-machine-config-operator
+      uid: 4ee1c05d-1237-480f-aeef-086b9a8fd013
+    zone: us-west-1c
+  - addresses:
+    - 10.0.78.215
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-78-215.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: machine-config-daemon-w7kk4
+      namespace: openshift-machine-config-operator
+      uid: ea051c1b-e02f-4765-8852-79ea834d1997
+    zone: us-west-1c
+  - addresses:
+    - 10.0.101.165
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-101-165.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: machine-config-daemon-jjdw6
+      namespace: openshift-machine-config-operator
+      uid: 46262c23-f994-47c6-ae13-cfe2d3ace1e1
+    zone: us-west-1c
+  - addresses:
+    - 10.0.22.208
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-22-208.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: machine-config-daemon-bkv6x
+      namespace: openshift-machine-config-operator
+      uid: 1360b1ee-c8c0-4165-8d6b-d7adf97dc419
+    zone: us-west-1a
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:41:55Z"
+    creationTimestamp: "2026-01-28T09:26:10Z"
+    generateName: machine-config-daemon-
+    generation: 13
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      k8s-app: machine-config-daemon
+      kubernetes.io/service-name: machine-config-daemon
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f287fc95-68f9-4555-bc2a-9e6b97578bec"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:41:55Z"
+    name: machine-config-daemon-kg9hv
+    namespace: openshift-machine-config-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: machine-config-daemon
+      uid: f287fc95-68f9-4555-bc2a-9e6b97578bec
+    resourceVersion: "20065"
+    uid: f58a6036-f0d3-4f2d-b6a8-cc437daafbe0
+  ports:
+  - name: health
+    port: 8798
+    protocol: TCP
+  - name: metrics
+    port: 9001
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.130.0.36
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-108-54.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: machine-config-operator-84ddcf457d-wrwhn
+      namespace: openshift-machine-config-operator
+      uid: 89e78dd4-ea8d-4f5e-8672-d000fbcdfaca
+    zone: us-west-1c
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:31:53Z"
+    creationTimestamp: "2026-01-28T09:26:09Z"
+    generateName: machine-config-operator-
+    generation: 2
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      k8s-app: machine-config-operator
+      kubernetes.io/service-name: machine-config-operator
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"cfc075bb-dd52-4ef5-a3c0-74e0fc69c771"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:31:53Z"
+    name: machine-config-operator-jljrc
+    namespace: openshift-machine-config-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: machine-config-operator
+      uid: cfc075bb-dd52-4ef5-a3c0-74e0fc69c771
+    resourceVersion: "9756"
+    uid: b2706ae0-837e-47ec-984f-6342cc262e1d
+  ports:
+  - name: metrics
+    port: 9001
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.0.108.54
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-108-54.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: machine-config-server-6mw62
+      namespace: openshift-machine-config-operator
+      uid: 2511186f-e8f7-4188-8a1c-0a009c3ac19c
+    zone: us-west-1c
+  - addresses:
+    - 10.0.102.200
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-102-200.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: machine-config-server-qlftk
+      namespace: openshift-machine-config-operator
+      uid: 15136cdc-b805-4645-935e-c13390189bfe
+    zone: us-west-1c
+  - addresses:
+    - 10.0.3.203
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-3-203.us-west-1.compute.internal
+    targetRef:
+      kind: Pod
+      name: machine-config-server-759xv
+      namespace: openshift-machine-config-operator
+      uid: 936d95e1-0689-4cb5-9439-83a2e28b1575
+    zone: us-west-1a
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2026-01-28T09:32:27Z"
+    creationTimestamp: "2026-01-28T09:26:11Z"
+    generateName: machine-config-server-
+    generation: 6
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      k8s-app: machine-config-server
+      kubernetes.io/service-name: machine-config-server
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0a3434a9-4b22-4c2c-a31c-37563810fab0"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:32:27Z"
+    name: machine-config-server-cm8r2
+    namespace: openshift-machine-config-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: machine-config-server
+      uid: 0a3434a9-4b22-4c2c-a31c-37563810fab0
+    resourceVersion: "11823"
+    uid: a81f545f-ebb4-48c1-b926-77f9aa58f3f5
+  ports:
+  - name: http
+    port: 22624
+    protocol: TCP
+  - name: https
+    port: 22623
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "35117"

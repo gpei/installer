@@ -1,0 +1,2273 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:03Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-operator-5cfd85677c-vtxq2
+    namespace: openshift-console-operator
+    resourceVersion: "4021"
+    uid: c5459a4b-bf52-4ff7-990e-3574633725ee
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:03Z"
+  message: '0/3 nodes are available: 3 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+    }. preemption: 0/3 nodes are available: 3 Preemption is not helpful for scheduling.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:03Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:29:03Z"
+    name: console-operator-5cfd85677c-vtxq2.188edb0aea316bb4
+    namespace: openshift-console-operator
+    resourceVersion: "4022"
+    uid: f360968a-8f18-419a-b975-96e394ddaab8
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:08Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-operator-5cfd85677c-vtxq2
+    namespace: openshift-console-operator
+    resourceVersion: "4025"
+    uid: c5459a4b-bf52-4ff7-990e-3574633725ee
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:08Z"
+  message: Successfully assigned openshift-console-operator/console-operator-5cfd85677c-vtxq2
+    to ip-10-0-108-54.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:30:09Z"
+    name: console-operator-5cfd85677c-vtxq2.188edb1a22d6c827
+    namespace: openshift-console-operator
+    resourceVersion: "5476"
+    uid: e0929036-ff27-42f4-a904-3f7c84c55ad9
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:10Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-operator-5cfd85677c-vtxq2
+    namespace: openshift-console-operator
+    resourceVersion: "5437"
+    uid: c5459a4b-bf52-4ff7-990e-3574633725ee
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:10Z"
+  message: Add eth0 [10.130.0.29/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2026-01-28T09:30:10Z"
+    name: console-operator-5cfd85677c-vtxq2.188edb1a74af4210
+    namespace: openshift-console-operator
+    resourceVersion: "5553"
+    uid: 19dff5af-93bf-4456-9c81-d92202f2bd1e
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console-operator}
+    kind: Pod
+    name: console-operator-5cfd85677c-vtxq2
+    namespace: openshift-console-operator
+    resourceVersion: "5399"
+    uid: c5459a4b-bf52-4ff7-990e-3574633725ee
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:10Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d0ad732112def4c292306e2b7caa8712d1d5ae274b12330fa33d3f4cd447f70d"
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:10Z"
+    name: console-operator-5cfd85677c-vtxq2.188edb1a75d81512
+    namespace: openshift-console-operator
+    resourceVersion: "5555"
+    uid: 8d686790-5453-4c63-91cb-a9b7ad7a7eca
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:27Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console-operator}
+    kind: Pod
+    name: console-operator-5cfd85677c-vtxq2
+    namespace: openshift-console-operator
+    resourceVersion: "5399"
+    uid: c5459a4b-bf52-4ff7-990e-3574633725ee
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:27Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d0ad732112def4c292306e2b7caa8712d1d5ae274b12330fa33d3f4cd447f70d"
+    in 17.633s (17.633s including waiting). Image size: 518645532 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:27Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:27Z"
+    name: console-operator-5cfd85677c-vtxq2.188edb1e90df793f
+    namespace: openshift-console-operator
+    resourceVersion: "5757"
+    uid: fabb6054-ba1a-49de-8278-b7f8742e832b
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 4
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console-operator}
+    kind: Pod
+    name: console-operator-5cfd85677c-vtxq2
+    namespace: openshift-console-operator
+    resourceVersion: "5399"
+    uid: c5459a4b-bf52-4ff7-990e-3574633725ee
+  kind: Event
+  lastTimestamp: "2026-01-28T09:41:07Z"
+  message: 'Created container: console-operator'
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:41:07Z"
+    name: console-operator-5cfd85677c-vtxq2.188edb1eb816ea2f
+    namespace: openshift-console-operator
+    resourceVersion: "19352"
+    uid: ea26c0d5-9439-47c4-97dd-b5fbd87a5aff
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 4
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console-operator}
+    kind: Pod
+    name: console-operator-5cfd85677c-vtxq2
+    namespace: openshift-console-operator
+    resourceVersion: "5399"
+    uid: c5459a4b-bf52-4ff7-990e-3574633725ee
+  kind: Event
+  lastTimestamp: "2026-01-28T09:41:07Z"
+  message: Started container console-operator
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:41:07Z"
+    name: console-operator-5cfd85677c-vtxq2.188edb1eebfdb91c
+    namespace: openshift-console-operator
+    resourceVersion: "19353"
+    uid: 0212b064-4662-44cb-9c8b-c13aa13d770f
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 3
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console-operator}
+    kind: Pod
+    name: console-operator-5cfd85677c-vtxq2
+    namespace: openshift-console-operator
+    resourceVersion: "5399"
+    uid: c5459a4b-bf52-4ff7-990e-3574633725ee
+  kind: Event
+  lastTimestamp: "2026-01-28T09:41:07Z"
+  message: Container image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:d0ad732112def4c292306e2b7caa8712d1d5ae274b12330fa33d3f4cd447f70d"
+    already present on machine
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:41:07Z"
+    name: console-operator-5cfd85677c-vtxq2.188edb1f02c81e16
+    namespace: openshift-console-operator
+    resourceVersion: "19346"
+    uid: 794d64d5-b6fc-47e1-a3bb-6438bc917a6e
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 3
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:30:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console-operator}
+    kind: Pod
+    name: console-operator-5cfd85677c-vtxq2
+    namespace: openshift-console-operator
+    resourceVersion: "5399"
+    uid: c5459a4b-bf52-4ff7-990e-3574633725ee
+  kind: Event
+  lastTimestamp: "2026-01-28T09:30:40Z"
+  message: Back-off restarting failed container console-operator in pod console-operator-5cfd85677c-vtxq2_openshift-console-operator(c5459a4b-bf52-4ff7-990e-3574633725ee)
+  metadata:
+    creationTimestamp: "2026-01-28T09:30:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:30:40Z"
+    name: console-operator-5cfd85677c-vtxq2.188edb1f4552e642
+    namespace: openshift-console-operator
+    resourceVersion: "6468"
+    uid: 463aa18e-1448-4724-b9c3-86046419cc15
+  reason: BackOff
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-108-54.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-108-54.us-west-1.compute.internal
+  type: Warning
+- apiVersion: v1
+  count: 15
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:26:19Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: console-operator-5cfd85677c
+    namespace: openshift-console-operator
+    resourceVersion: "2622"
+    uid: 45d518f1-bd77-41e4-9ecb-24f3c1aea623
+  kind: Event
+  lastTimestamp: "2026-01-28T09:27:41Z"
+  message: 'Error creating: pods "console-operator-5cfd85677c-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
+    the cluster does not have any nodes'
+  metadata:
+    creationTimestamp: "2026-01-28T09:26:19Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:27:41Z"
+    name: console-operator-5cfd85677c.188edae4c0a6b8c8
+    namespace: openshift-console-operator
+    resourceVersion: "3223"
+    uid: f2e880fb-f1d6-4e48-b98b-1bef4a1f5015
+  reason: FailedCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:03Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: console-operator-5cfd85677c
+    namespace: openshift-console-operator
+    resourceVersion: "2626"
+    uid: 45d518f1-bd77-41e4-9ecb-24f3c1aea623
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:03Z"
+  message: 'Created pod: console-operator-5cfd85677c-vtxq2'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:03Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:29:03Z"
+    name: console-operator-5cfd85677c.188edb0aea2919f6
+    namespace: openshift-console-operator
+    resourceVersion: "4023"
+    uid: 04a786c5-b5e3-4336-b691-fd87dd38ace7
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:07Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: console-operator-lock
+    namespace: openshift-console-operator
+    resourceVersion: "8105"
+    uid: 209ba803-102b-4e47-8ee1-818b1199dc8c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:07Z"
+  message: console-operator-5cfd85677c-vtxq2_48eabace-b058-4ac8-974a-1ef17880eef6
+    became leader
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:31:07Z"
+    name: console-operator-lock.188edb27ac85b3d7
+    namespace: openshift-console-operator
+    resourceVersion: "8108"
+    uid: eb17f154-581e-4eaf-8e9b-da4a21e32ae9
+  reason: LeaderElection
+  reportingComponent: console-operator
+  reportingInstance: ""
+  source:
+    component: console-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:37Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: console-operator-lock
+    namespace: openshift-console-operator
+    resourceVersion: "23247"
+    uid: 209ba803-102b-4e47-8ee1-818b1199dc8c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:37Z"
+  message: console-operator-5cfd85677c-vtxq2_2f5099a2-bce4-40ad-af87-7c49b8858d3b
+    became leader
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:37Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:43:37Z"
+    name: console-operator-lock.188edbd683ebd342
+    namespace: openshift-console-operator
+    resourceVersion: "23248"
+    uid: abb725f5-a13d-4098-91c3-51394be8c655
+  reason: LeaderElection
+  reportingComponent: console-operator
+  reportingInstance: ""
+  source:
+    component: console-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:26:19Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    resourceVersion: "2621"
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:26:19Z"
+  message: Scaled up replica set console-operator-5cfd85677c from 0 to 1
+  metadata:
+    creationTimestamp: "2026-01-28T09:26:19Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:26:19Z"
+    name: console-operator.188edae4c0675af4
+    namespace: openshift-console-operator
+    resourceVersion: "2623"
+    uid: b9a4e2df-3f2d-47be-84c2-e71c1a807a28
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:07Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:07Z"
+  message: FeatureGates updated to featuregates.Features{Enabled:[]v1.FeatureGateName{"AdditionalRoutingCapabilities",
+    "AdminNetworkPolicy", "AlibabaPlatform", "AzureWorkloadIdentity", "BuildCSIVolumes",
+    "CPMSMachineNamePrefix", "ConsolePluginContentSecurityPolicy", "ExternalOIDC",
+    "ExternalOIDCWithUIDAndExtraClaimMappings", "GatewayAPI", "GatewayAPIController",
+    "HighlyAvailableArbiter", "ImageVolume", "IngressControllerLBSubnetsAWS", "KMSv1",
+    "MachineConfigNodes", "ManagedBootImages", "ManagedBootImagesAWS", "MetricsCollectionProfiles",
+    "NetworkDiagnosticsConfig", "NetworkLiveMigration", "NetworkSegmentation", "NewOLM",
+    "PinnedImages", "PreconfiguredUDNAddresses", "ProcMountType", "RouteAdvertisements",
+    "RouteExternalCertificate", "ServiceAccountTokenNodeBinding", "SetEIPForNLBIngressController",
+    "SigstoreImageVerification", "StoragePerformantSecurityPolicy", "UpgradeStatus",
+    "UserNamespacesPodSecurityStandards", "UserNamespacesSupport", "VSphereMultiDisk",
+    "VSphereMultiNetworks"}, Disabled:[]v1.FeatureGateName{"AWSClusterHostedDNS",
+    "AWSClusterHostedDNSInstall", "AWSDedicatedHosts", "AWSServiceLBNetworkSecurityGroup",
+    "AutomatedEtcdBackup", "AzureClusterHostedDNSInstall", "AzureDedicatedHosts",
+    "AzureMultiDisk", "BootImageSkewEnforcement", "BootcNodeManagement", "ClusterAPIInstall",
+    "ClusterAPIInstallIBMCloud", "ClusterMonitoringConfig", "ClusterVersionOperatorConfiguration",
+    "DNSNameResolver", "DualReplica", "DyanmicServiceEndpointIBMCloud", "DynamicResourceAllocation",
+    "EtcdBackendQuota", "EventedPLEG", "Example", "Example2", "ExternalSnapshotMetadata",
+    "GCPClusterHostedDNS", "GCPClusterHostedDNSInstall", "GCPCustomAPIEndpoints",
+    "GCPCustomAPIEndpointsInstall", "ImageModeStatusReporting", "ImageStreamImportMode",
+    "IngressControllerDynamicConfigurationManager", "InsightsConfig", "InsightsConfigAPI",
+    "InsightsOnDemandDataGather", "IrreconcilableMachineConfig", "KMSEncryptionProvider",
+    "MachineAPIMigration", "MachineAPIOperatorDisableMachineHealthCheckController",
+    "ManagedBootImagesAzure", "ManagedBootImagesvSphere", "MaxUnavailableStatefulSet",
+    "MinimumKubeletVersion", "MixedCPUsAllocation", "MultiArchInstallAzure", "MultiDiskSetup",
+    "MutatingAdmissionPolicy", "NewOLMCatalogdAPIV1Metas", "NewOLMOwnSingleNamespace",
+    "NewOLMPreflightPermissionChecks", "NewOLMWebhookProviderOpenshiftServiceCA",
+    "NoRegistryClusterOperations", "NodeSwap", "NutanixMultiSubnets", "OVNObservability",
+    "OpenShiftPodSecurityAdmission", "SELinuxMount", "ShortCertRotation", "SignatureStores",
+    "SigstoreImageVerificationPKI", "TranslateStreamCloseWebsocketRequests", "VSphereConfigurableMaxAllowedBlockVolumesPerNode",
+    "VSphereHostVMGroupZonal", "VSphereMixedNodeEnv", "VolumeAttributesClass", "VolumeGroupSnapshot"}}
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:31:07Z"
+    name: console-operator.188edb27acc8368a
+    namespace: openshift-console-operator
+    resourceVersion: "8109"
+    uid: ecad81e3-e366-4433-b4f0-0eeb0ff3c1b7
+  reason: FeatureGatesInitialized
+  reportingComponent: console-operator
+  reportingInstance: ""
+  source:
+    component: console-operator
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:07Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:07Z"
+  message: clusteroperator/console version "operator" changed from "" to "4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest"
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:31:07Z"
+    name: console-operator.188edb27b5421ad3
+    namespace: openshift-console-operator
+    resourceVersion: "8169"
+    uid: eefd0841-3859-448f-8a18-543aa42b978c
+  reason: OperatorVersionChanged
+  reportingComponent: console-operator-status-controller-statussyncer_console
+  reportingInstance: ""
+  source:
+    component: console-operator-status-controller-statussyncer_console
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:07Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:07Z"
+  message: Created PodDisruptionBudget.policy/downloads -n openshift-console because
+    it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:31:07Z"
+    name: console-operator.188edb27b58cf11e
+    namespace: openshift-console-operator
+    resourceVersion: "8131"
+    uid: 7cffd382-1b53-47ad-b96a-71b47630b2c9
+  reason: PodDisruptionBudgetCreated
+  reportingComponent: console-operator-downloads-pdb-controller-poddisruptionbudgetcontroller
+  reportingInstance: ""
+  source:
+    component: console-operator-downloads-pdb-controller-poddisruptionbudgetcontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:07Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:07Z"
+  message: Created PodDisruptionBudget.policy/console -n openshift-console because
+    it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:31:07Z"
+    name: console-operator.188edb27b5c0366a
+    namespace: openshift-console-operator
+    resourceVersion: "8134"
+    uid: ecd7f968-9803-4a3c-afe0-4dad975666ba
+  reason: PodDisruptionBudgetCreated
+  reportingComponent: console-operator-console-pdb-controller-poddisruptionbudgetcontroller
+  reportingInstance: ""
+  source:
+    component: console-operator-console-pdb-controller-poddisruptionbudgetcontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:07Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:07Z"
+  message: Created Deployment.apps/downloads -n openshift-console because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:31:07Z"
+    name: console-operator.188edb27b5d5b81e
+    namespace: openshift-console-operator
+    resourceVersion: "8136"
+    uid: c6cbbd73-0880-4249-ac8f-ae7674c7e777
+  reason: DeploymentCreated
+  reportingComponent: console-operator-console-downloads-deployment-controller-consoledownloadsdeploymentsynccontroller
+  reportingInstance: ""
+  source:
+    component: console-operator-console-downloads-deployment-controller-consoledownloadsdeploymentsynccontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:07Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:07Z"
+  message: 'Status for clusteroperator/console changed: Degraded set to False ("All
+    is well"),Progressing set to False ("All is well"),Available set to Unknown (""),Upgradeable
+    set to Unknown (""),EvaluationConditionsDetected set to Unknown (""),status.relatedObjects
+    changed from [] to [{"console.openshift.io" "consoleplugins" "" "networking-console-plugin"}
+    {"" "namespaces" "" "openshift-network-console"} {"operator.openshift.io" "consoles"
+    "" "cluster"} {"config.openshift.io" "consoles" "" "cluster"} {"config.openshift.io"
+    "infrastructures" "" "cluster"} {"config.openshift.io" "proxies" "" "cluster"}
+    {"config.openshift.io" "oauths" "" "cluster"} {"oauth.openshift.io" "oauthclients"
+    "" "console"} {"" "namespaces" "" "openshift-console-operator"} {"" "namespaces"
+    "" "openshift-console"} {"" "configmaps" "openshift-config-managed" "console-public"}],status.versions
+    changed from [] to [{"operator" "4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest"}]'
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:31:07Z"
+    name: console-operator.188edb27b5e12561
+    namespace: openshift-console-operator
+    resourceVersion: "8137"
+    uid: a3b2970e-e504-41eb-941a-01c26682b307
+  reason: OperatorStatusChanged
+  reportingComponent: console-operator-status-controller-statussyncer_console
+  reportingInstance: ""
+  source:
+    component: console-operator-status-controller-statussyncer_console
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:08Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:08Z"
+  message: 'Status for clusteroperator/console changed: Upgradeable changed from Unknown
+    to True ("All is well")'
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:31:08Z"
+    name: console-operator.188edb27e8e6c0f7
+    namespace: openshift-console-operator
+    resourceVersion: "8206"
+    uid: 827a634e-c91e-44a5-84ff-cc8d269da808
+  reason: OperatorStatusChanged
+  reportingComponent: console-operator-status-controller-statussyncer_console
+  reportingInstance: ""
+  source:
+    component: console-operator-status-controller-statussyncer_console
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:08Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:08Z"
+  message: Created Service/console -n openshift-console because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:31:08Z"
+    name: console-operator.188edb27e9b87043
+    namespace: openshift-console-operator
+    resourceVersion: "8213"
+    uid: 378de869-a35b-45ae-ad70-0b0cdd88faf3
+  reason: ServiceCreated
+  reportingComponent: console-operator-console-service-controller-consoleservicecontroller
+  reportingInstance: ""
+  source:
+    component: console-operator-console-service-controller-consoleservicecontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:08Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:08Z"
+  message: Created Service/downloads -n openshift-console because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:31:08Z"
+    name: console-operator.188edb27f5c00680
+    namespace: openshift-console-operator
+    resourceVersion: "8227"
+    uid: 738ab338-2bee-4877-84d8-4fc80d81147e
+  reason: ServiceCreated
+  reportingComponent: console-operator-console-service-controller-consoleservicecontroller
+  reportingInstance: ""
+  source:
+    component: console-operator-console-service-controller-consoleservicecontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:08Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:08Z"
+  message: Created Secret/console-oauth-config -n openshift-console because it was
+    missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:31:08Z"
+    name: console-operator.188edb28012b8b6a
+    namespace: openshift-console-operator
+    resourceVersion: "8237"
+    uid: 2d72387c-0bba-4afe-a228-e9cc61d8d1d5
+  reason: SecretCreated
+  reportingComponent: console-operator-oauthclient-secret-controller-oauthclientsecretcontroller
+  reportingInstance: ""
+  source:
+    component: console-operator-oauthclient-secret-controller-oauthclientsecretcontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:31:08Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:31:08Z"
+  message: Updated Deployment.apps/downloads -n openshift-console because it changed
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:31:08Z"
+    name: console-operator.188edb2802f8d8d9
+    namespace: openshift-console-operator
+    resourceVersion: "8248"
+    uid: dab68993-159c-484c-bb65-ae14ed559c47
+  reason: DeploymentUpdated
+  reportingComponent: console-operator-console-downloads-deployment-controller-consoledownloadsdeploymentsynccontroller
+  reportingInstance: ""
+  source:
+    component: console-operator-console-downloads-deployment-controller-consoledownloadsdeploymentsynccontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:00Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:00Z"
+  message: Created ConfigMap/default-ingress-cert -n openshift-console because it
+    was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:32:00Z"
+    name: console-operator.188edb341120a407
+    namespace: openshift-console-operator
+    resourceVersion: "10660"
+    uid: eb377105-881d-4e0d-bdc1-a8386971df37
+  reason: ConfigMapCreated
+  reportingComponent: console-operator-resource-sync-controller-resourcesynccontroller
+  reportingInstance: ""
+  source:
+    component: console-operator-resource-sync-controller-resourcesynccontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:32:15Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:32:15Z"
+  message: Created ConfigMap/oauth-serving-cert -n openshift-console because it was
+    missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:32:15Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:32:15Z"
+    name: console-operator.188edb37a4d51c76
+    namespace: openshift-console-operator
+    resourceVersion: "11410"
+    uid: 2e02cfed-6fe3-43cb-98d0-47a22abfc1c6
+  reason: ConfigMapCreated
+  reportingComponent: console-operator-resource-sync-controller-resourcesynccontroller
+  reportingInstance: ""
+  source:
+    component: console-operator-resource-sync-controller-resourcesynccontroller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:37Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:37Z"
+  message: FeatureGates updated to featuregates.Features{Enabled:[]v1.FeatureGateName{"AdditionalRoutingCapabilities",
+    "AdminNetworkPolicy", "AlibabaPlatform", "AzureWorkloadIdentity", "BuildCSIVolumes",
+    "CPMSMachineNamePrefix", "ConsolePluginContentSecurityPolicy", "ExternalOIDC",
+    "ExternalOIDCWithUIDAndExtraClaimMappings", "GatewayAPI", "GatewayAPIController",
+    "HighlyAvailableArbiter", "ImageVolume", "IngressControllerLBSubnetsAWS", "KMSv1",
+    "MachineConfigNodes", "ManagedBootImages", "ManagedBootImagesAWS", "MetricsCollectionProfiles",
+    "NetworkDiagnosticsConfig", "NetworkLiveMigration", "NetworkSegmentation", "NewOLM",
+    "PinnedImages", "PreconfiguredUDNAddresses", "ProcMountType", "RouteAdvertisements",
+    "RouteExternalCertificate", "ServiceAccountTokenNodeBinding", "SetEIPForNLBIngressController",
+    "SigstoreImageVerification", "StoragePerformantSecurityPolicy", "UpgradeStatus",
+    "UserNamespacesPodSecurityStandards", "UserNamespacesSupport", "VSphereMultiDisk",
+    "VSphereMultiNetworks"}, Disabled:[]v1.FeatureGateName{"AWSClusterHostedDNS",
+    "AWSClusterHostedDNSInstall", "AWSDedicatedHosts", "AWSServiceLBNetworkSecurityGroup",
+    "AutomatedEtcdBackup", "AzureClusterHostedDNSInstall", "AzureDedicatedHosts",
+    "AzureMultiDisk", "BootImageSkewEnforcement", "BootcNodeManagement", "ClusterAPIInstall",
+    "ClusterAPIInstallIBMCloud", "ClusterMonitoringConfig", "ClusterVersionOperatorConfiguration",
+    "DNSNameResolver", "DualReplica", "DyanmicServiceEndpointIBMCloud", "DynamicResourceAllocation",
+    "EtcdBackendQuota", "EventedPLEG", "Example", "Example2", "ExternalSnapshotMetadata",
+    "GCPClusterHostedDNS", "GCPClusterHostedDNSInstall", "GCPCustomAPIEndpoints",
+    "GCPCustomAPIEndpointsInstall", "ImageModeStatusReporting", "ImageStreamImportMode",
+    "IngressControllerDynamicConfigurationManager", "InsightsConfig", "InsightsConfigAPI",
+    "InsightsOnDemandDataGather", "IrreconcilableMachineConfig", "KMSEncryptionProvider",
+    "MachineAPIMigration", "MachineAPIOperatorDisableMachineHealthCheckController",
+    "ManagedBootImagesAzure", "ManagedBootImagesvSphere", "MaxUnavailableStatefulSet",
+    "MinimumKubeletVersion", "MixedCPUsAllocation", "MultiArchInstallAzure", "MultiDiskSetup",
+    "MutatingAdmissionPolicy", "NewOLMCatalogdAPIV1Metas", "NewOLMOwnSingleNamespace",
+    "NewOLMPreflightPermissionChecks", "NewOLMWebhookProviderOpenshiftServiceCA",
+    "NoRegistryClusterOperations", "NodeSwap", "NutanixMultiSubnets", "OVNObservability",
+    "OpenShiftPodSecurityAdmission", "SELinuxMount", "ShortCertRotation", "SignatureStores",
+    "SigstoreImageVerificationPKI", "TranslateStreamCloseWebsocketRequests", "VSphereConfigurableMaxAllowedBlockVolumesPerNode",
+    "VSphereHostVMGroupZonal", "VSphereMixedNodeEnv", "VolumeAttributesClass", "VolumeGroupSnapshot"}}
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:37Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:43:37Z"
+    name: console-operator.188edbd684213662
+    namespace: openshift-console-operator
+    resourceVersion: "23250"
+    uid: 1cb145b9-0c8e-4387-b4b9-af641f6f0739
+  reason: FeatureGatesInitialized
+  reportingComponent: console-operator
+  reportingInstance: ""
+  source:
+    component: console-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:38Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:38Z"
+  message: Controller "HealthCheckController" resync interval is set to 30s which
+    might lead to client request throttling
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:43:38Z"
+    name: console-operator.188edbd68ac9c93c
+    namespace: openshift-console-operator
+    resourceVersion: "23251"
+    uid: 0e440155-b527-4639-97a0-7c592c11d125
+  reason: FastControllerResync
+  reportingComponent: console-operator-health-check-controller-healthcheckcontroller
+  reportingInstance: ""
+  source:
+    component: console-operator-health-check-controller-healthcheckcontroller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:38Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:38Z"
+  message: 'Status for clusteroperator/console changed: status.relatedObjects changed
+    from [{"console.openshift.io" "consoleplugins" "" "networking-console-plugin"}
+    {"" "namespaces" "" "openshift-network-console"} {"operator.openshift.io" "consoles"
+    "" "cluster"} {"config.openshift.io" "consoles" "" "cluster"} {"config.openshift.io"
+    "infrastructures" "" "cluster"} {"config.openshift.io" "proxies" "" "cluster"}
+    {"config.openshift.io" "oauths" "" "cluster"} {"oauth.openshift.io" "oauthclients"
+    "" "console"} {"" "namespaces" "" "openshift-console-operator"} {"" "namespaces"
+    "" "openshift-console"} {"" "configmaps" "openshift-config-managed" "console-public"}]
+    to [{"console.openshift.io" "consoleplugins" "" "monitoring-plugin"} {"" "namespaces"
+    "" "openshift-monitoring"} {"console.openshift.io" "consoleplugins" "" "networking-console-plugin"}
+    {"" "namespaces" "" "openshift-network-console"} {"operator.openshift.io" "consoles"
+    "" "cluster"} {"config.openshift.io" "consoles" "" "cluster"} {"config.openshift.io"
+    "infrastructures" "" "cluster"} {"config.openshift.io" "proxies" "" "cluster"}
+    {"config.openshift.io" "oauths" "" "cluster"} {"oauth.openshift.io" "oauthclients"
+    "" "console"} {"" "namespaces" "" "openshift-console-operator"} {"" "namespaces"
+    "" "openshift-console"} {"" "configmaps" "openshift-config-managed" "console-public"}]'
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:43:38Z"
+    name: console-operator.188edbd68c7f487d
+    namespace: openshift-console-operator
+    resourceVersion: "23255"
+    uid: 9451eb37-dd12-444a-86ab-351315aae2c9
+  reason: OperatorStatusChanged
+  reportingComponent: console-operator-status-controller-statussyncer_console
+  reportingInstance: ""
+  source:
+    component: console-operator-status-controller-statussyncer_console
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:38Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:38Z"
+  message: 'Status for clusteroperator/console changed: Degraded message changed from
+    "All is well" to "SyncLoopRefreshDegraded: route.route.openshift.io \"console\"
+    not found\nDownloadsDefaultRouteSyncDegraded: no ingress for host downloads-openshift-console.apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    in route downloads in namespace openshift-console",Upgradeable changed from True
+    to False ("DownloadsDefaultRouteSyncUpgradeable: no ingress for host downloads-openshift-console.apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    in route downloads in namespace openshift-console")'
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:43:38Z"
+    name: console-operator.188edbd6b464bab0
+    namespace: openshift-console-operator
+    resourceVersion: "23270"
+    uid: 92fd3c12-378e-479a-8d11-e60255e33235
+  reason: OperatorStatusChanged
+  reportingComponent: console-operator-status-controller-statussyncer_console
+  reportingInstance: ""
+  source:
+    component: console-operator-status-controller-statussyncer_console
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:39Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:39Z"
+  message: 'Status for clusteroperator/console changed: Degraded message changed from
+    "SyncLoopRefreshDegraded: route.route.openshift.io \"console\" not found\nDownloadsDefaultRouteSyncDegraded:
+    no ingress for host downloads-openshift-console.apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    in route downloads in namespace openshift-console" to "SyncLoopRefreshDegraded:
+    no ingress for host console-openshift-console.apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    in route console in namespace openshift-console\nDownloadsDefaultRouteSyncDegraded:
+    no ingress for host downloads-openshift-console.apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    in route downloads in namespace openshift-console"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:43:39Z"
+    name: console-operator.188edbd6d81ef872
+    namespace: openshift-console-operator
+    resourceVersion: "23280"
+    uid: c6a9bca9-3d8d-4227-a16b-c0bfaffbe9db
+  reason: OperatorStatusChanged
+  reportingComponent: console-operator-status-controller-statussyncer_console
+  reportingInstance: ""
+  source:
+    component: console-operator-status-controller-statussyncer_console
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:39Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:39Z"
+  message: 'Status for clusteroperator/console changed: Degraded message changed from
+    "SyncLoopRefreshDegraded: no ingress for host console-openshift-console.apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    in route console in namespace openshift-console\nDownloadsDefaultRouteSyncDegraded:
+    no ingress for host downloads-openshift-console.apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    in route downloads in namespace openshift-console" to "SyncLoopRefreshDegraded:
+    no ingress for host console-openshift-console.apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    in route console in namespace openshift-console\nDownloadsDefaultRouteSyncDegraded:
+    no ingress for host downloads-openshift-console.apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    in route downloads in namespace openshift-console\nOAuthClientsControllerDegraded:
+    route.route.openshift.io \"console\" not found"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:43:40Z"
+    name: console-operator.188edbd6fbb20b92
+    namespace: openshift-console-operator
+    resourceVersion: "23288"
+    uid: 9144b729-1bfb-4f6f-ab57-fde3ca8d24a0
+  reason: OperatorStatusChanged
+  reportingComponent: console-operator-status-controller-statussyncer_console
+  reportingInstance: ""
+  source:
+    component: console-operator-status-controller-statussyncer_console
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:41Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:41Z"
+  message: 'Status for clusteroperator/console changed: Degraded message changed from
+    "SyncLoopRefreshDegraded: no ingress for host console-openshift-console.apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    in route console in namespace openshift-console\nDownloadsDefaultRouteSyncDegraded:
+    no ingress for host downloads-openshift-console.apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    in route downloads in namespace openshift-console\nOAuthClientsControllerDegraded:
+    route.route.openshift.io \"console\" not found" to "SyncLoopRefreshDegraded: no
+    ingress for host console-openshift-console.apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    in route console in namespace openshift-console\nDownloadsDefaultRouteSyncDegraded:
+    no ingress for host downloads-openshift-console.apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    in route downloads in namespace openshift-console"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:41Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:43:41Z"
+    name: console-operator.188edbd7515ba1d8
+    namespace: openshift-console-operator
+    resourceVersion: "23313"
+    uid: d95ec620-5729-4b1b-acd3-0a781d205c36
+  reason: OperatorStatusChanged
+  reportingComponent: console-operator-status-controller-statussyncer_console
+  reportingInstance: ""
+  source:
+    component: console-operator-status-controller-statussyncer_console
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:42Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:42Z"
+  message: 'Status for clusteroperator/console changed: Degraded message changed from
+    "SyncLoopRefreshDegraded: no ingress for host console-openshift-console.apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    in route console in namespace openshift-console\nDownloadsDefaultRouteSyncDegraded:
+    no ingress for host downloads-openshift-console.apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    in route downloads in namespace openshift-console" to "SyncLoopRefreshDegraded:
+    no ingress for host console-openshift-console.apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    in route console in namespace openshift-console",Upgradeable changed from False
+    to True ("All is well")'
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:43:42Z"
+    name: console-operator.188edbd781410b92
+    namespace: openshift-console-operator
+    resourceVersion: "23320"
+    uid: 4f463150-9cbc-4be2-9e49-93b8fd8425bb
+  reason: OperatorStatusChanged
+  reportingComponent: console-operator-status-controller-statussyncer_console
+  reportingInstance: ""
+  source:
+    component: console-operator-status-controller-statussyncer_console
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:42Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:42Z"
+  message: Created ConfigMap/console-config -n openshift-console because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:43:42Z"
+    name: console-operator.188edbd7987add76
+    namespace: openshift-console-operator
+    resourceVersion: "23323"
+    uid: 7c173901-beb4-41cc-9b1f-756e01dafcc4
+  reason: ConfigMapCreated
+  reportingComponent: console-operator-console-operator-consoleoperator
+  reportingInstance: ""
+  source:
+    component: console-operator-console-operator-consoleoperator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:42Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:42Z"
+  message: Created Deployment.apps/console -n openshift-console because it was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:43:42Z"
+    name: console-operator.188edbd799fa65c5
+    namespace: openshift-console-operator
+    resourceVersion: "23328"
+    uid: c6a3781a-ab8b-4cab-9fe0-020ce77972a8
+  reason: DeploymentCreated
+  reportingComponent: console-operator-console-operator-consoleoperator
+  reportingInstance: ""
+  source:
+    component: console-operator-console-operator-consoleoperator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:43Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:43Z"
+  message: Created ConfigMap/console-public -n openshift-config-managed because it
+    was missing
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:43Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:43:43Z"
+    name: console-operator.188edbd7af7d18a5
+    namespace: openshift-console-operator
+    resourceVersion: "23345"
+    uid: 64c6cce0-1f54-4dab-8d21-9cc1e7c3466b
+  reason: ConfigMapCreated
+  reportingComponent: console-operator-console-operator-consoleoperator
+  reportingInstance: ""
+  source:
+    component: console-operator-console-operator-consoleoperator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:43Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:43Z"
+  message: 'Status for clusteroperator/console changed: Degraded message changed from
+    "SyncLoopRefreshDegraded: no ingress for host console-openshift-console.apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    in route console in namespace openshift-console" to "All is well",Progressing
+    changed from False to True ("SyncLoopRefreshProgressing: changes made during sync
+    updates, additional sync expected"),Available changed from Unknown to False ("DeploymentAvailable:
+    0 replicas available for console deployment")'
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:43Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:43:43Z"
+    name: console-operator.188edbd7ea214938
+    namespace: openshift-console-operator
+    resourceVersion: "23365"
+    uid: 512562de-da70-404c-b1d7-ad7c6bea7706
+  reason: OperatorStatusChanged
+  reportingComponent: console-operator-status-controller-statussyncer_console
+  reportingInstance: ""
+  source:
+    component: console-operator-status-controller-statussyncer_console
+  type: Normal
+- apiVersion: v1
+  count: 4
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:44Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:44:12Z"
+  message: Updated Deployment.apps/console -n openshift-console because it changed
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:44:12Z"
+    name: console-operator.188edbd7f755987c
+    namespace: openshift-console-operator
+    resourceVersion: "23771"
+    uid: acf581e7-d48d-463f-bed9-d4bbc97cfdb5
+  reason: DeploymentUpdated
+  reportingComponent: console-operator-console-operator-consoleoperator
+  reportingInstance: ""
+  source:
+    component: console-operator-console-operator-consoleoperator
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:46Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:44:12Z"
+  message: 'Status for clusteroperator/console changed: Progressing message changed
+    from "SyncLoopRefreshProgressing: changes made during sync updates, additional
+    sync expected" to "SyncLoopRefreshProgressing: working toward version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest,
+    0 replicas available"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:44:12Z"
+    name: console-operator.188edbd88894ffbd
+    namespace: openshift-console-operator
+    resourceVersion: "23779"
+    uid: a8bc0254-0c8c-48ac-ad81-e43d95aede89
+  reason: OperatorStatusChanged
+  reportingComponent: console-operator-status-controller-statussyncer_console
+  reportingInstance: ""
+  source:
+    component: console-operator-status-controller-statussyncer_console
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:43:50Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:43:50Z"
+  message: 'Status for clusteroperator/console changed: Degraded message changed from
+    "All is well" to "RouteHealthDegraded: route not yet available, https://console-openshift-console.apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    returns ''503 Service Unavailable''",Available message changed from "DeploymentAvailable:
+    0 replicas available for console deployment" to "DeploymentAvailable: 0 replicas
+    available for console deployment\nRouteHealthAvailable: route not yet available,
+    https://console-openshift-console.apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    returns ''503 Service Unavailable''"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:43:50Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:43:50Z"
+    name: console-operator.188edbd966e2ece4
+    namespace: openshift-console-operator
+    resourceVersion: "23484"
+    uid: 096cd8a0-3e36-43b3-a472-2f32a23692e3
+  reason: OperatorStatusChanged
+  reportingComponent: console-operator-status-controller-statussyncer_console
+  reportingInstance: ""
+  source:
+    component: console-operator-status-controller-statussyncer_console
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:44:12Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:44:12Z"
+  message: |-
+    Updated ConfigMap/console-config -n openshift-console:
+    cause by changes in data.console-config.yaml
+  metadata:
+    creationTimestamp: "2026-01-28T09:44:12Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:44:12Z"
+    name: console-operator.188edbde8d386c22
+    namespace: openshift-console-operator
+    resourceVersion: "23764"
+    uid: 3364e611-1836-4263-a211-27b911ded0fe
+  reason: ConfigMapUpdated
+  reportingComponent: console-operator-console-operator-consoleoperator
+  reportingInstance: ""
+  source:
+    component: console-operator-console-operator-consoleoperator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:44:12Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:44:12Z"
+  message: 'Status for clusteroperator/console changed: Progressing message changed
+    from "SyncLoopRefreshProgressing: working toward version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest,
+    0 replicas available" to "SyncLoopRefreshProgressing: changes made during sync
+    updates, additional sync expected"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:44:12Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:44:12Z"
+    name: console-operator.188edbde935c2a40
+    namespace: openshift-console-operator
+    resourceVersion: "23770"
+    uid: 36e07a90-0657-4a0a-9782-fb5f328e45ba
+  reason: OperatorStatusChanged
+  reportingComponent: console-operator-status-controller-statussyncer_console
+  reportingInstance: ""
+  source:
+    component: console-operator-status-controller-statussyncer_console
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:45:56Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:45:56Z"
+  message: 'Status for clusteroperator/console changed: Degraded changed from False
+    to True ("RouteHealthDegraded: route not yet available, https://console-openshift-console.apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    returns ''503 Service Unavailable''")'
+  metadata:
+    creationTimestamp: "2026-01-28T09:45:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:45:56Z"
+    name: console-operator.188edbf6d14b765d
+    namespace: openshift-console-operator
+    resourceVersion: "25188"
+    uid: 7a4e4a32-f60b-4c00-92af-8bbf6f95b742
+  reason: OperatorStatusChanged
+  reportingComponent: console-operator-status-controller-statussyncer_console
+  reportingInstance: ""
+  source:
+    component: console-operator-status-controller-statussyncer_console
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:46:54Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:46:54Z"
+  message: 'Status for clusteroperator/console changed: Progressing message changed
+    from "SyncLoopRefreshProgressing: working toward version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest,
+    0 replicas available" to "SyncLoopRefreshProgressing: working toward version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest,
+    1 replicas available",Available message changed from "DeploymentAvailable: 0 replicas
+    available for console deployment\nRouteHealthAvailable: route not yet available,
+    https://console-openshift-console.apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    returns ''503 Service Unavailable''" to "RouteHealthAvailable: route not yet available,
+    https://console-openshift-console.apps.ci-ln-vjb5l1t-76ef8.XXXXXXXXXXXXXXXXXXXXXX
+    returns ''503 Service Unavailable''"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:46:54Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:46:54Z"
+    name: console-operator.188edc04571c7a1e
+    namespace: openshift-console-operator
+    resourceVersion: "25633"
+    uid: 8fc41e51-dd83-44f4-b6b1-9d34803b01f3
+  reason: OperatorStatusChanged
+  reportingComponent: console-operator-status-controller-statussyncer_console
+  reportingInstance: ""
+  source:
+    component: console-operator-status-controller-statussyncer_console
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:46:54Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:46:54Z"
+  message: 'Status for clusteroperator/console changed: Degraded changed from True
+    to False ("All is well"),Available changed from False to True ("All is well")'
+  metadata:
+    creationTimestamp: "2026-01-28T09:46:54Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:46:54Z"
+    name: console-operator.188edc045ce73d34
+    namespace: openshift-console-operator
+    resourceVersion: "25636"
+    uid: ff641266-e344-4cb1-9909-f651dc30d0a1
+  reason: OperatorStatusChanged
+  reportingComponent: console-operator-status-controller-statussyncer_console
+  reportingInstance: ""
+  source:
+    component: console-operator-status-controller-statussyncer_console
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:46:59Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:46:59Z"
+  message: 'Status for clusteroperator/console changed: Progressing message changed
+    from "SyncLoopRefreshProgressing: working toward version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest,
+    1 replicas available" to "SyncLoopRefreshProgressing: working toward version 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest,
+    2 replicas available"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:46:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:46:59Z"
+    name: console-operator.188edc05731e1d8f
+    namespace: openshift-console-operator
+    resourceVersion: "25687"
+    uid: c04e358e-0703-4f17-a3be-74b7876d6aa4
+  reason: OperatorStatusChanged
+  reportingComponent: console-operator-status-controller-statussyncer_console
+  reportingInstance: ""
+  source:
+    component: console-operator-status-controller-statussyncer_console
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:46:59Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console-operator
+    namespace: openshift-console-operator
+    uid: 9d9d156a-b987-429c-b8de-b5c3311a284b
+  kind: Event
+  lastTimestamp: "2026-01-28T09:46:59Z"
+  message: 'Status for clusteroperator/console changed: Progressing changed from True
+    to False ("All is well")'
+  metadata:
+    creationTimestamp: "2026-01-28T09:46:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: console
+      operation: Update
+      time: "2026-01-28T09:46:59Z"
+    name: console-operator.188edc05788af593
+    namespace: openshift-console-operator
+    resourceVersion: "25691"
+    uid: 9bd7d4ed-edf6-400a-9e0d-ace1eb4fa23c
+  reason: OperatorStatusChanged
+  reportingComponent: console-operator-status-controller-statussyncer_console
+  reportingInstance: ""
+  source:
+    component: console-operator-status-controller-statussyncer_console
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "35023"

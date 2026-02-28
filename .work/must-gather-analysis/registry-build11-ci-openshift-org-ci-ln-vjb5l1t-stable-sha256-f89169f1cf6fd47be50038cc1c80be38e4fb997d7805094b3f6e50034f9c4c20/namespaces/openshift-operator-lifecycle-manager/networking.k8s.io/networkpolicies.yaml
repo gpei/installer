@@ -1,0 +1,394 @@
+---
+apiVersion: networking.k8s.io/v1
+items:
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    annotations:
+      capability.openshift.io/name: OperatorLifecycleManager
+      include.release.openshift.io/hypershift: "true"
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+    creationTimestamp: "2026-01-28T09:26:08Z"
+    generation: 1
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:include.release.openshift.io/hypershift: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+        f:spec:
+          f:egress: {}
+          f:ingress: {}
+          f:podSelector: {}
+          f:policyTypes: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2026-01-28T09:26:08Z"
+    name: catalog-operator
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      controller: true
+      kind: ClusterVersion
+      name: version
+      uid: 0370d296-6904-481d-ab90-157c7e5b835a
+    resourceVersion: "2016"
+    uid: 128f7d23-0719-46f7-bc6f-333479a5729d
+  spec:
+    egress:
+    - ports:
+      - port: 6443
+        protocol: TCP
+    - ports:
+      - port: dns-tcp
+        protocol: TCP
+      - port: dns
+        protocol: UDP
+      to:
+      - namespaceSelector:
+          matchLabels:
+            kubernetes.io/metadata.name: openshift-dns
+    - ports:
+      - port: 50051
+        protocol: TCP
+    ingress:
+    - ports:
+      - port: metrics
+        protocol: TCP
+    podSelector:
+      matchLabels:
+        app: catalog-operator
+    policyTypes:
+    - Ingress
+    - Egress
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    annotations:
+      capability.openshift.io/name: OperatorLifecycleManager
+      include.release.openshift.io/hypershift: "true"
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+    creationTimestamp: "2026-01-28T09:26:16Z"
+    generation: 1
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:include.release.openshift.io/hypershift: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+        f:spec:
+          f:egress: {}
+          f:podSelector: {}
+          f:policyTypes: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2026-01-28T09:26:16Z"
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      controller: true
+      kind: ClusterVersion
+      name: version
+      uid: 0370d296-6904-481d-ab90-157c7e5b835a
+    resourceVersion: "2430"
+    uid: 1a1c05ad-a440-49fb-ba26-06d3ed1804b2
+  spec:
+    egress:
+    - ports:
+      - port: 8443
+        protocol: TCP
+      to:
+      - namespaceSelector:
+          matchLabels:
+            name: openshift-operator-lifecycle-manager
+      - podSelector:
+          matchLabels:
+            app: olm-operator
+      - podSelector:
+          matchLabels:
+            app: catalog-operator
+    - ports:
+      - port: 6443
+        protocol: TCP
+    - ports:
+      - port: dns-tcp
+        protocol: TCP
+      - port: dns
+        protocol: UDP
+      to:
+      - namespaceSelector:
+          matchLabels:
+            kubernetes.io/metadata.name: openshift-dns
+    podSelector:
+      matchLabels:
+        app: olm-collect-profiles
+    policyTypes:
+    - Egress
+    - Ingress
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    annotations:
+      capability.openshift.io/name: OperatorLifecycleManager
+      include.release.openshift.io/hypershift: "true"
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+    creationTimestamp: "2026-01-28T09:26:07Z"
+    generation: 1
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:include.release.openshift.io/hypershift: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+        f:spec:
+          f:policyTypes: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2026-01-28T09:26:07Z"
+    name: default-deny-all-traffic
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      controller: true
+      kind: ClusterVersion
+      name: version
+      uid: 0370d296-6904-481d-ab90-157c7e5b835a
+    resourceVersion: "1957"
+    uid: 59b6f72d-6e42-49a8-a25c-c92fd06848ac
+  spec:
+    podSelector: {}
+    policyTypes:
+    - Ingress
+    - Egress
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    annotations:
+      capability.openshift.io/name: OperatorLifecycleManager
+      include.release.openshift.io/hypershift: "true"
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+    creationTimestamp: "2026-01-28T09:26:07Z"
+    generation: 1
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:include.release.openshift.io/hypershift: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+        f:spec:
+          f:egress: {}
+          f:ingress: {}
+          f:podSelector: {}
+          f:policyTypes: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2026-01-28T09:26:07Z"
+    name: olm-operator
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      controller: true
+      kind: ClusterVersion
+      name: version
+      uid: 0370d296-6904-481d-ab90-157c7e5b835a
+    resourceVersion: "1982"
+    uid: 0a13e089-edd8-4fc6-9c3c-74413a9997bc
+  spec:
+    egress:
+    - ports:
+      - port: 6443
+        protocol: TCP
+    - ports:
+      - port: dns-tcp
+        protocol: TCP
+      - port: dns
+        protocol: UDP
+      to:
+      - namespaceSelector:
+          matchLabels:
+            kubernetes.io/metadata.name: openshift-dns
+    ingress:
+    - ports:
+      - port: metrics
+        protocol: TCP
+    podSelector:
+      matchLabels:
+        app: olm-operator
+    policyTypes:
+    - Ingress
+    - Egress
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    annotations:
+      capability.openshift.io/name: OperatorLifecycleManager
+      include.release.openshift.io/hypershift: "true"
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+    creationTimestamp: "2026-01-28T09:26:14Z"
+    generation: 1
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:include.release.openshift.io/hypershift: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+        f:spec:
+          f:egress: {}
+          f:ingress: {}
+          f:podSelector: {}
+          f:policyTypes: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2026-01-28T09:26:14Z"
+    name: package-server-manager
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      controller: true
+      kind: ClusterVersion
+      name: version
+      uid: 0370d296-6904-481d-ab90-157c7e5b835a
+    resourceVersion: "2332"
+    uid: c7b241ea-9a39-46a3-b4f2-cf5503f9edab
+  spec:
+    egress:
+    - ports:
+      - port: 6443
+        protocol: TCP
+    - ports:
+      - port: dns-tcp
+        protocol: TCP
+      - port: dns
+        protocol: UDP
+      to:
+      - namespaceSelector:
+          matchLabels:
+            kubernetes.io/metadata.name: openshift-dns
+    ingress:
+    - ports:
+      - port: 8443
+        protocol: TCP
+    podSelector:
+      matchLabels:
+        app: package-server-manager
+    policyTypes:
+    - Ingress
+    - Egress
+- apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    annotations:
+      capability.openshift.io/name: OperatorLifecycleManager
+      include.release.openshift.io/hypershift: "true"
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+    creationTimestamp: "2026-01-28T09:26:09Z"
+    generation: 1
+    managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:include.release.openshift.io/hypershift: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+        f:spec:
+          f:egress: {}
+          f:ingress: {}
+          f:podSelector: {}
+          f:policyTypes: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2026-01-28T09:26:09Z"
+    name: packageserver
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      controller: true
+      kind: ClusterVersion
+      name: version
+      uid: 0370d296-6904-481d-ab90-157c7e5b835a
+    resourceVersion: "2047"
+    uid: b307f58d-3048-4234-aaba-bc5e175a2b9e
+  spec:
+    egress:
+    - ports:
+      - port: 6443
+        protocol: TCP
+    - ports:
+      - port: dns-tcp
+        protocol: TCP
+      - port: dns
+        protocol: UDP
+      to:
+      - namespaceSelector:
+          matchLabels:
+            kubernetes.io/metadata.name: openshift-dns
+    - ports:
+      - port: 50051
+        protocol: TCP
+    ingress:
+    - ports:
+      - port: 5443
+        protocol: TCP
+    podSelector:
+      matchLabels:
+        app: packageserver
+    policyTypes:
+    - Ingress
+    - Egress
+kind: NetworkPolicyList
+metadata:
+  resourceVersion: "35167"

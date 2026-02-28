@@ -1,0 +1,153 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  creationTimestamp: "2026-01-28T09:42:42Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/managed-by: cluster-monitoring-operator
+    app.kubernetes.io/name: kubelet
+    app.kubernetes.io/part-of: openshift-monitoring
+    k8s-app: kubelet
+    monitoring.openshift.io/collection-profile: minimal
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:k8s-app: {}
+          f:monitoring.openshift.io/collection-profile: {}
+      f:spec:
+        .: {}
+        f:attachMetadata:
+          .: {}
+          f:node: {}
+        f:endpoints: {}
+        f:jobLabel: {}
+        f:namespaceSelector:
+          .: {}
+          f:matchNames: {}
+        f:scrapeClass: {}
+        f:selector: {}
+    manager: operator
+    operation: Update
+    time: "2026-01-28T09:42:42Z"
+  name: kubelet-minimal
+  namespace: openshift-monitoring
+  resourceVersion: "21621"
+  uid: f7d43cce-d56c-41db-ba31-c44834eaabd8
+spec:
+  attachMetadata:
+    node: true
+  endpoints:
+  - honorLabels: true
+    interval: 30s
+    metricRelabelings:
+    - action: keep
+      regex: (apiserver_audit_event_total|container_cpu_cfs_periods_total|container_cpu_cfs_throttled_periods_total|container_cpu_usage_seconds_total|container_fs_reads_bytes_total|container_fs_reads_total|container_fs_usage_bytes|container_fs_writes_bytes_total|container_fs_writes_total|container_memory_cache|container_memory_rss|container_memory_swap|container_memory_usage_bytes|container_memory_working_set_bytes|container_network_receive_bytes_total|container_network_receive_packets_dropped_total|container_network_receive_packets_total|container_network_transmit_bytes_total|container_network_transmit_packets_dropped_total|container_network_transmit_packets_total|container_spec_cpu_shares|kubelet_certificate_manager_client_expiration_renew_errors|kubelet_containers_per_pod_count_sum|kubelet_node_name|kubelet_pleg_relist_duration_seconds_bucket|kubelet_pod_worker_duration_seconds_bucket|kubelet_server_expiration_renew_errors|kubelet_volume_stats_available_bytes|kubelet_volume_stats_capacity_bytes|kubelet_volume_stats_inodes|kubelet_volume_stats_inodes_free|kubelet_volume_stats_inodes_used|kubelet_volume_stats_used_bytes|machine_cpu_cores|machine_memory_bytes|process_start_time_seconds|rest_client_requests_total|storage_operation_duration_seconds_count)
+      sourceLabels:
+      - __name__
+    port: https-metrics
+    relabelings:
+    - action: replace
+      sourceLabels:
+      - __metrics_path__
+      targetLabel: metrics_path
+    scheme: https
+    scrapeTimeout: 30s
+    tlsConfig:
+      ca: {}
+      caFile: /etc/prometheus/configmaps/kubelet-serving-ca-bundle/ca-bundle.crt
+      cert: {}
+      insecureSkipVerify: false
+  - honorLabels: true
+    honorTimestamps: true
+    interval: 30s
+    metricRelabelings:
+    - action: labeldrop
+      regex: __tmp_keep_metric
+    - action: keep
+      regex: (apiserver_audit_event_total|container_cpu_cfs_periods_total|container_cpu_cfs_throttled_periods_total|container_cpu_usage_seconds_total|container_fs_reads_bytes_total|container_fs_reads_total|container_fs_usage_bytes|container_fs_writes_bytes_total|container_fs_writes_total|container_memory_cache|container_memory_rss|container_memory_swap|container_memory_usage_bytes|container_memory_working_set_bytes|container_network_receive_bytes_total|container_network_receive_packets_dropped_total|container_network_receive_packets_total|container_network_transmit_bytes_total|container_network_transmit_packets_dropped_total|container_network_transmit_packets_total|container_spec_cpu_shares|kubelet_certificate_manager_client_expiration_renew_errors|kubelet_containers_per_pod_count_sum|kubelet_node_name|kubelet_pleg_relist_duration_seconds_bucket|kubelet_pod_worker_duration_seconds_bucket|kubelet_server_expiration_renew_errors|kubelet_volume_stats_available_bytes|kubelet_volume_stats_capacity_bytes|kubelet_volume_stats_inodes|kubelet_volume_stats_inodes_free|kubelet_volume_stats_inodes_used|kubelet_volume_stats_used_bytes|machine_cpu_cores|machine_memory_bytes|process_start_time_seconds|rest_client_requests_total|storage_operation_duration_seconds_count)
+      sourceLabels:
+      - __name__
+    path: /metrics/cadvisor
+    port: https-metrics
+    relabelings:
+    - action: replace
+      sourceLabels:
+      - __metrics_path__
+      targetLabel: metrics_path
+    scheme: https
+    scrapeTimeout: 30s
+    tlsConfig:
+      ca: {}
+      caFile: /etc/prometheus/configmaps/kubelet-serving-ca-bundle/ca-bundle.crt
+      cert: {}
+      insecureSkipVerify: false
+    trackTimestampsStaleness: true
+  - honorLabels: true
+    interval: 30s
+    metricRelabelings:
+    - action: keep
+      regex: (apiserver_audit_event_total|container_cpu_cfs_periods_total|container_cpu_cfs_throttled_periods_total|container_cpu_usage_seconds_total|container_fs_reads_bytes_total|container_fs_reads_total|container_fs_usage_bytes|container_fs_writes_bytes_total|container_fs_writes_total|container_memory_cache|container_memory_rss|container_memory_swap|container_memory_usage_bytes|container_memory_working_set_bytes|container_network_receive_bytes_total|container_network_receive_packets_dropped_total|container_network_receive_packets_total|container_network_transmit_bytes_total|container_network_transmit_packets_dropped_total|container_network_transmit_packets_total|container_spec_cpu_shares|kubelet_certificate_manager_client_expiration_renew_errors|kubelet_containers_per_pod_count_sum|kubelet_node_name|kubelet_pleg_relist_duration_seconds_bucket|kubelet_pod_worker_duration_seconds_bucket|kubelet_server_expiration_renew_errors|kubelet_volume_stats_available_bytes|kubelet_volume_stats_capacity_bytes|kubelet_volume_stats_inodes|kubelet_volume_stats_inodes_free|kubelet_volume_stats_inodes_used|kubelet_volume_stats_used_bytes|machine_cpu_cores|machine_memory_bytes|process_start_time_seconds|rest_client_requests_total|storage_operation_duration_seconds_count)
+      sourceLabels:
+      - __name__
+    path: /metrics/probes
+    port: https-metrics
+    relabelings:
+    - action: replace
+      sourceLabels:
+      - __metrics_path__
+      targetLabel: metrics_path
+    scheme: https
+    scrapeTimeout: 30s
+    tlsConfig:
+      ca: {}
+      caFile: /etc/prometheus/configmaps/kubelet-serving-ca-bundle/ca-bundle.crt
+      cert: {}
+      insecureSkipVerify: false
+  - interval: 30s
+    metricRelabelings:
+    - action: keep
+      regex: (apiserver_audit_event_total|container_cpu_cfs_periods_total|container_cpu_cfs_throttled_periods_total|container_cpu_usage_seconds_total|container_fs_reads_bytes_total|container_fs_reads_total|container_fs_usage_bytes|container_fs_writes_bytes_total|container_fs_writes_total|container_memory_cache|container_memory_rss|container_memory_swap|container_memory_usage_bytes|container_memory_working_set_bytes|container_network_receive_bytes_total|container_network_receive_packets_dropped_total|container_network_receive_packets_total|container_network_transmit_bytes_total|container_network_transmit_packets_dropped_total|container_network_transmit_packets_total|container_spec_cpu_shares|kubelet_certificate_manager_client_expiration_renew_errors|kubelet_containers_per_pod_count_sum|kubelet_node_name|kubelet_pleg_relist_duration_seconds_bucket|kubelet_pod_worker_duration_seconds_bucket|kubelet_server_expiration_renew_errors|kubelet_volume_stats_available_bytes|kubelet_volume_stats_capacity_bytes|kubelet_volume_stats_inodes|kubelet_volume_stats_inodes_free|kubelet_volume_stats_inodes_used|kubelet_volume_stats_used_bytes|machine_cpu_cores|machine_memory_bytes|process_start_time_seconds|rest_client_requests_total|storage_operation_duration_seconds_count)
+      sourceLabels:
+      - __name__
+    port: https-metrics
+    relabelings:
+    - action: keep
+      regex: (linux|)
+      sourceLabels:
+      - __meta_kubernetes_node_label_kubernetes_io_os
+    - action: replace
+      regex: (.+)(?::\d+)
+      replacement: $1:9637
+      sourceLabels:
+      - __address__
+      targetLabel: __address__
+    - action: replace
+      replacement: crio
+      sourceLabels:
+      - endpoint
+      targetLabel: endpoint
+    - action: replace
+      replacement: crio
+      targetLabel: job
+    scheme: https
+    tlsConfig:
+      ca: {}
+      caFile: /etc/prometheus/configmaps/kubelet-serving-ca-bundle/ca-bundle.crt
+      cert: {}
+      insecureSkipVerify: false
+  jobLabel: k8s-app
+  namespaceSelector:
+    matchNames:
+    - kube-system
+  scrapeClass: tls-client-certificate-auth
+  selector:
+    matchLabels:
+      k8s-app: kubelet

@@ -1,0 +1,64 @@
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingAdmissionPolicy
+metadata:
+  creationTimestamp: "2026-01-28T09:29:23Z"
+  generation: 1
+  managedFields:
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:observedGeneration: {}
+        f:typeChecking: {}
+    manager: validatingadmissionpolicy-status
+    operation: Apply
+    subresource: status
+    time: "2026-01-28T09:29:23Z"
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          k:{"uid":"7763cebb-f1d7-4359-81b8-b55ef9916383"}: {}
+      f:spec:
+        f:failurePolicy: {}
+        f:matchConstraints: {}
+        f:validations: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2026-01-28T09:29:52Z"
+  name: default-network-annotation
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: 7763cebb-f1d7-4359-81b8-b55ef9916383
+  resourceVersion: "5103"
+  uid: ac5f776f-3bed-4fe8-9a02-6489d8ed2b30
+spec:
+  failurePolicy: Fail
+  matchConstraints:
+    matchPolicy: Equivalent
+    namespaceSelector: {}
+    objectSelector: {}
+    resourceRules:
+    - apiGroups:
+      - ""
+      apiVersions:
+      - v1
+      operations:
+      - UPDATE
+      resources:
+      - pods
+      scope: '*'
+  validations:
+  - expression: |
+      !has(object.metadata.annotations) || !has(oldObject.metadata.annotations) || (('v1.multus-cni.io/default-network' in oldObject.metadata.annotations) ? ('v1.multus-cni.io/default-network' in object.metadata.annotations) && oldObject.metadata.annotations['v1.multus-cni.io/default-network'] == object.metadata.annotations['v1.multus-cni.io/default-network'] : !('v1.multus-cni.io/default-network' in object.metadata.annotations))
+    message: The 'v1.multus-cni.io/default-network' annotation cannot be changed after
+      the pod was created
+status:
+  observedGeneration: 1
+  typeChecking: {}

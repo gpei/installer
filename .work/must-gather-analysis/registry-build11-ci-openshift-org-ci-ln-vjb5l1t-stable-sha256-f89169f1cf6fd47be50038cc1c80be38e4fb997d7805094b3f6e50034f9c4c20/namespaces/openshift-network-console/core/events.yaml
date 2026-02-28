@@ -1,0 +1,988 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:33Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5d69f676c4-8svvn
+    namespace: openshift-network-console
+    resourceVersion: "4773"
+    uid: 0cd101e9-dca9-4389-82cb-454c567f3a9c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:34:45Z"
+  message: '0/3 nodes are available: 3 node(s) had untolerated taint {node-role.kubernetes.io/master:
+    }. preemption: 0/3 nodes are available: 3 Preemption is not helpful for scheduling.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:34:45Z"
+    name: networking-console-plugin-5d69f676c4-8svvn.188edb11dba7caca
+    namespace: openshift-network-console
+    resourceVersion: "13589"
+    uid: 026d9f75-a2b8-4c32-ab12-5607cc671a57
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Warning
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2026-01-28T09:35:50.078336Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5d69f676c4-8svvn
+    namespace: openshift-network-console
+    resourceVersion: "4776"
+    uid: 0cd101e9-dca9-4389-82cb-454c567f3a9c
+  kind: Event
+  lastTimestamp: null
+  message: '0/3 nodes are available: 3 node(s) had untolerated taint {node-role.kubernetes.io/master:
+    }. preemption: 0/3 nodes are available: 3 Preemption is not helpful for scheduling.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:35:50Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:35:50Z"
+    name: networking-console-plugin-5d69f676c4-8svvn.188edb69927475c9
+    namespace: openshift-network-console
+    resourceVersion: "14444"
+    uid: 51ae865e-e26b-4d57-8f7e-b2b4e048ac12
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-108-54
+  source: {}
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:47Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5d69f676c4-8svvn
+    namespace: openshift-network-console
+    resourceVersion: "4776"
+    uid: 0cd101e9-dca9-4389-82cb-454c567f3a9c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:47Z"
+  message: 'running Bind plugin "DefaultBinder": Operation cannot be fulfilled on
+    pods/binding "networking-console-plugin-5d69f676c4-8svvn": pod networking-console-plugin-5d69f676c4-8svvn
+    is already assigned to node "ip-10-0-78-215.us-west-1.compute.internal"'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:47Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:36:47Z"
+    name: networking-console-plugin-5d69f676c4-8svvn.188edb7700dff81c
+    namespace: openshift-network-console
+    resourceVersion: "15602"
+    uid: 2b8b387b-9e25-4860-93b1-eb23e4fd8c70
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Warning
+- action: Binding
+  apiVersion: v1
+  eventTime: "2026-01-28T09:36:47.774528Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5d69f676c4-8svvn
+    namespace: openshift-network-console
+    resourceVersion: "4776"
+    uid: 0cd101e9-dca9-4389-82cb-454c567f3a9c
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-network-console/networking-console-plugin-5d69f676c4-8svvn
+    to ip-10-0-78-215.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:47Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:36:47Z"
+    name: networking-console-plugin-5d69f676c4-8svvn.188edb77016a8347
+    namespace: openshift-network-console
+    resourceVersion: "15587"
+    uid: 051bfc9a-8cb7-4814-91d7-bb6a61f5d3dc
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-108-54
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:48Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5d69f676c4-8svvn
+    namespace: openshift-network-console
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:48Z"
+  message: Cancelling deletion of Pod openshift-network-console/networking-console-plugin-5d69f676c4-8svvn
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:36:48Z"
+    name: networking-console-plugin-5d69f676c4-8svvn.188edb772d5291fc
+    namespace: openshift-network-console
+    resourceVersion: "15633"
+    uid: 86a4d7b8-a6f3-4b30-8d8f-4abb6251c0cb
+  reason: TaintManagerEviction
+  reportingComponent: taint-eviction-controller
+  reportingInstance: ""
+  source:
+    component: taint-eviction-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:48Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5d69f676c4-8svvn
+    namespace: openshift-network-console
+    resourceVersion: "15615"
+    uid: 0cd101e9-dca9-4389-82cb-454c567f3a9c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:48Z"
+  message: Add eth0 [10.131.0.10/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2026-01-28T09:36:48Z"
+    name: networking-console-plugin-5d69f676c4-8svvn.188edb7741c875df
+    namespace: openshift-network-console
+    resourceVersion: "15649"
+    uid: d40a076c-6e20-4815-bed3-a4cdb66c31fc
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{networking-console-plugin}
+    kind: Pod
+    name: networking-console-plugin-5d69f676c4-8svvn
+    namespace: openshift-network-console
+    resourceVersion: "15576"
+    uid: 0cd101e9-dca9-4389-82cb-454c567f3a9c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:48Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:144be6c7447f775d70368a593faa4a06558619097b5c9162579c7bc0e58af2d4"
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:48Z"
+    name: networking-console-plugin-5d69f676c4-8svvn.188edb7743e9e3dc
+    namespace: openshift-network-console
+    resourceVersion: "15653"
+    uid: 3e7e985e-7730-43dd-803d-1ad4238e9b09
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{networking-console-plugin}
+    kind: Pod
+    name: networking-console-plugin-5d69f676c4-8svvn
+    namespace: openshift-network-console
+    resourceVersion: "15576"
+    uid: 0cd101e9-dca9-4389-82cb-454c567f3a9c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:58Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:144be6c7447f775d70368a593faa4a06558619097b5c9162579c7bc0e58af2d4"
+    in 9.99s (9.99s including waiting). Image size: 439768936 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:58Z"
+    name: networking-console-plugin-5d69f676c4-8svvn.188edb799767bcbe
+    namespace: openshift-network-console
+    resourceVersion: "15917"
+    uid: 1f5b2a53-d080-486d-a1f3-0674b5e66ae4
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{networking-console-plugin}
+    kind: Pod
+    name: networking-console-plugin-5d69f676c4-8svvn
+    namespace: openshift-network-console
+    resourceVersion: "15576"
+    uid: 0cd101e9-dca9-4389-82cb-454c567f3a9c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:59Z"
+  message: 'Created container: networking-console-plugin'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:59Z"
+    name: networking-console-plugin-5d69f676c4-8svvn.188edb79a4a1aeb0
+    namespace: openshift-network-console
+    resourceVersion: "15933"
+    uid: 393872fc-6d8a-45ed-aa29-b5151a7af36e
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{networking-console-plugin}
+    kind: Pod
+    name: networking-console-plugin-5d69f676c4-8svvn
+    namespace: openshift-network-console
+    resourceVersion: "15576"
+    uid: 0cd101e9-dca9-4389-82cb-454c567f3a9c
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:59Z"
+  message: Started container networking-console-plugin
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:59Z"
+    name: networking-console-plugin-5d69f676c4-8svvn.188edb79a9606d80
+    namespace: openshift-network-console
+    resourceVersion: "15938"
+    uid: c403b6ff-e5ec-4440-9ec8-7d7b35f375a3
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:33Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5d69f676c4-fgz9n
+    namespace: openshift-network-console
+    resourceVersion: "4777"
+    uid: c2f4f8b5-13ac-4000-85a7-89ea4c174336
+  kind: Event
+  lastTimestamp: "2026-01-28T09:34:45Z"
+  message: '0/3 nodes are available: 3 node(s) had untolerated taint {node-role.kubernetes.io/master:
+    }. preemption: 0/3 nodes are available: 3 Preemption is not helpful for scheduling.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:34:45Z"
+    name: networking-console-plugin-5d69f676c4-fgz9n.188edb11dc245a24
+    namespace: openshift-network-console
+    resourceVersion: "13593"
+    uid: 144c211c-312f-4045-acb6-17903cf0c359
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Warning
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2026-01-28T09:35:50.078938Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5d69f676c4-fgz9n
+    namespace: openshift-network-console
+    resourceVersion: "4780"
+    uid: c2f4f8b5-13ac-4000-85a7-89ea4c174336
+  kind: Event
+  lastTimestamp: null
+  message: '0/3 nodes are available: 3 node(s) had untolerated taint {node-role.kubernetes.io/master:
+    }. preemption: 0/3 nodes are available: 3 Preemption is not helpful for scheduling.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:35:50Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:series:
+          .: {}
+          f:count: {}
+          f:lastObservedTime: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:36:47Z"
+    name: networking-console-plugin-5d69f676c4-fgz9n.188edb69927da865
+    namespace: openshift-network-console
+    resourceVersion: "15594"
+    uid: c24751dc-07ef-4c73-bac6-494f18bc8fc2
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-108-54
+  series:
+    count: 2
+    lastObservedTime: "2026-01-28T09:36:47.779044Z"
+  source: {}
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:47Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5d69f676c4-fgz9n
+    namespace: openshift-network-console
+    resourceVersion: "4780"
+    uid: c2f4f8b5-13ac-4000-85a7-89ea4c174336
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:47Z"
+  message: Successfully assigned openshift-network-console/networking-console-plugin-5d69f676c4-fgz9n
+    to ip-10-0-78-215.us-west-1.compute.internal
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:47Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2026-01-28T09:36:47Z"
+    name: networking-console-plugin-5d69f676c4-fgz9n.188edb77022f99ec
+    namespace: openshift-network-console
+    resourceVersion: "15606"
+    uid: 32de68d0-709e-41cd-b6ce-e65c34a73556
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:48Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5d69f676c4-fgz9n
+    namespace: openshift-network-console
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:48Z"
+  message: Cancelling deletion of Pod openshift-network-console/networking-console-plugin-5d69f676c4-fgz9n
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:36:48Z"
+    name: networking-console-plugin-5d69f676c4-fgz9n.188edb772d52ac3c
+    namespace: openshift-network-console
+    resourceVersion: "15635"
+    uid: 8f0a9427-20fe-4701-b1ab-1124c48516f7
+  reason: TaintManagerEviction
+  reportingComponent: taint-eviction-controller
+  reportingInstance: ""
+  source:
+    component: taint-eviction-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:49Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5d69f676c4-fgz9n
+    namespace: openshift-network-console
+    resourceVersion: "15621"
+    uid: c2f4f8b5-13ac-4000-85a7-89ea4c174336
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:49Z"
+  message: Add eth0 [10.131.0.12/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2026-01-28T09:36:49Z"
+    name: networking-console-plugin-5d69f676c4-fgz9n.188edb774b69a2d5
+    namespace: openshift-network-console
+    resourceVersion: "15662"
+    uid: c217bab2-b1ad-426b-a30c-d807134eefad
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:49Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{networking-console-plugin}
+    kind: Pod
+    name: networking-console-plugin-5d69f676c4-fgz9n
+    namespace: openshift-network-console
+    resourceVersion: "15578"
+    uid: c2f4f8b5-13ac-4000-85a7-89ea4c174336
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:49Z"
+  message: Pulling image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:144be6c7447f775d70368a593faa4a06558619097b5c9162579c7bc0e58af2d4"
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:49Z"
+    name: networking-console-plugin-5d69f676c4-fgz9n.188edb774d062309
+    namespace: openshift-network-console
+    resourceVersion: "15665"
+    uid: b8f06b8a-57f4-4fc2-86b8-9dc30d98ad7e
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{networking-console-plugin}
+    kind: Pod
+    name: networking-console-plugin-5d69f676c4-fgz9n
+    namespace: openshift-network-console
+    resourceVersion: "15578"
+    uid: c2f4f8b5-13ac-4000-85a7-89ea4c174336
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:58Z"
+  message: 'Successfully pulled image "registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:144be6c7447f775d70368a593faa4a06558619097b5c9162579c7bc0e58af2d4"
+    in 9.802s (9.802s including waiting). Image size: 439768936 bytes.'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:58Z"
+    name: networking-console-plugin-5d69f676c4-fgz9n.188edb799548fb68
+    namespace: openshift-network-console
+    resourceVersion: "15910"
+    uid: 49599d36-2a67-49e8-bc6f-46a9b2e46608
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{networking-console-plugin}
+    kind: Pod
+    name: networking-console-plugin-5d69f676c4-fgz9n
+    namespace: openshift-network-console
+    resourceVersion: "15578"
+    uid: c2f4f8b5-13ac-4000-85a7-89ea4c174336
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:59Z"
+  message: 'Created container: networking-console-plugin'
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:59Z"
+    name: networking-console-plugin-5d69f676c4-fgz9n.188edb799eeef975
+    namespace: openshift-network-console
+    resourceVersion: "15922"
+    uid: 8b3a2fda-546f-42cf-9cc1-0027b2ec30b5
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:36:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{networking-console-plugin}
+    kind: Pod
+    name: networking-console-plugin-5d69f676c4-fgz9n
+    namespace: openshift-network-console
+    resourceVersion: "15578"
+    uid: c2f4f8b5-13ac-4000-85a7-89ea4c174336
+  kind: Event
+  lastTimestamp: "2026-01-28T09:36:59Z"
+  message: Started container networking-console-plugin
+  metadata:
+    creationTimestamp: "2026-01-28T09:36:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2026-01-28T09:36:59Z"
+    name: networking-console-plugin-5d69f676c4-fgz9n.188edb79a3139d8d
+    namespace: openshift-network-console
+    resourceVersion: "15926"
+    uid: 3a9a0fbe-9e2f-41ae-bafb-64c454fcd260
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-78-215.us-west-1.compute.internal
+  source:
+    component: kubelet
+    host: ip-10-0-78-215.us-west-1.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:33Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: networking-console-plugin-5d69f676c4
+    namespace: openshift-network-console
+    resourceVersion: "4770"
+    uid: 4f2a12df-37cc-4cbb-914e-c7b3e5fc5de1
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:33Z"
+  message: 'Created pod: networking-console-plugin-5d69f676c4-8svvn'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:29:33Z"
+    name: networking-console-plugin-5d69f676c4.188edb11dba714f2
+    namespace: openshift-network-console
+    resourceVersion: "4774"
+    uid: 1769ebe7-4cc6-4e29-a6ef-5d22bbb975e9
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:33Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: networking-console-plugin-5d69f676c4
+    namespace: openshift-network-console
+    resourceVersion: "4770"
+    uid: 4f2a12df-37cc-4cbb-914e-c7b3e5fc5de1
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:33Z"
+  message: 'Created pod: networking-console-plugin-5d69f676c4-fgz9n'
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:29:33Z"
+    name: networking-console-plugin-5d69f676c4.188edb11dc19f0e0
+    namespace: openshift-network-console
+    resourceVersion: "4779"
+    uid: 21eba942-9548-4249-9d72-10a77b3f857d
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2026-01-28T09:29:33Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: networking-console-plugin
+    namespace: openshift-network-console
+    resourceVersion: "4769"
+    uid: baa5052c-82e8-4026-b55c-78fb0727b82a
+  kind: Event
+  lastTimestamp: "2026-01-28T09:29:33Z"
+  message: Scaled up replica set networking-console-plugin-5d69f676c4 from 0 to 2
+  metadata:
+    creationTimestamp: "2026-01-28T09:29:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:29:33Z"
+    name: networking-console-plugin.188edb11db17d825
+    namespace: openshift-network-console
+    resourceVersion: "4771"
+    uid: 78f642f1-a3fb-412f-b779-bcdc242ceb8f
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "35021"

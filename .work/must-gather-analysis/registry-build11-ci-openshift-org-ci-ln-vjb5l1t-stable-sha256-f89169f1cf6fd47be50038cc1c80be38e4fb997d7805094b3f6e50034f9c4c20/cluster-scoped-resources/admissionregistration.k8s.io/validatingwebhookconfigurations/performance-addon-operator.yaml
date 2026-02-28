@@ -1,0 +1,100 @@
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  annotations:
+    capability.openshift.io/name: NodeTuning
+    include.release.openshift.io/hypershift: "true"
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    service.beta.openshift.io/inject-cabundle: "true"
+  creationTimestamp: "2026-01-28T09:26:07Z"
+  generation: 2
+  managedFields:
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/hypershift: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:service.beta.openshift.io/inject-cabundle: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0370d296-6904-481d-ab90-157c7e5b835a"}: {}
+      f:webhooks:
+        .: {}
+        k:{"name":"vwb.performance.openshift.io"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2026-01-28T09:26:07Z"
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:webhooks:
+        k:{"name":"vwb.performance.openshift.io"}:
+          f:clientConfig:
+            f:caBundle: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2026-01-28T09:30:40Z"
+  name: performance-addon-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 0370d296-6904-481d-ab90-157c7e5b835a
+  resourceVersion: "6478"
+  uid: 94d13990-9d42-4461-95ee-cf41ec45b666
+webhooks:
+- admissionReviewVersions:
+  - v1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJRXcwTy9pcFdJYVl3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRjMk9UVTVNall6TlRBZQpGdzB5TmpBeE1qZ3dPVE13TXpSYUZ3MHlPREF6TWpnd09UTXdNelZhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTNOamsxT1RJMk16VXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRQzZEZ0llNFg4czRKa0JKSnJSWDMzNlBpUHh5dkxGOGtLOApsWE1ISGZCbHRzQldsUEpMZ0thM0JJbDdUUTVKYktibzF3T0lwL2hJaFRRbTkvQ1ZaNndUSUh5WFNmRkFLQjZFCnZvdDJWdGxxOTZYcDZOVkxOd3BySG50cXlEbTV2OVdWZG5wY1NqNDFYZmhiYUsxOXlJR3lyRGxQSzhiUFVYSHAKdDlVbFF2c3l4bEFuK2djNVJJR2hPNUtNazdNWm0zZlVyNEJ4TjJKeWhYZW9zblpEV1EyTFY4cDZoQVphZnRTTwpGQk53ZzlvNktJM09LUDdFSWJFcEZONUFHcTVacFpqWnQ0OUlZQzRSeWcyYjBJOHRjV1c4amJsd0ZBTFlxcVJaCk1VK2VYb2V2ZlVsK2VSMC9aNHBrN0ZnQTRIMnU1U1NoYzQzeHFwbXFoVFN5NFhiVlQvU1JBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlNZd1g1WQpWVnZpb1I5OCtqbzkycVhBclR6MTZ6QWZCZ05WSFNNRUdEQVdnQlNZd1g1WVZWdmlvUjk4K2pvOTJxWEFyVHoxCjZ6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFSNlVYd0gwcmlYejRCa2lzNkNCRnZPRi9jNUxLbnFXdlR3UEYKemJqY1ZBUy9Nb0tRdVhqZVVIZXZ0dEMyR0NRSTEwbkJyYUpYUklOSGtVTzVMYVUyVWxBMVh6LzZmaGxGMkJKSwplSmtkaHF3QnFDcjlqa0hKVk1kYW5wZ25TTUNUcitDYVNUM0d3ai80TU1hSHcvRkY4bTQ3VkFkWlJnajNlY0h0CkhGeVBiR0gxb1ZiZklKa2huYmFCcEZMVnllMnVjKzdreGR1MDN4bmo0T1RRbkM3NWpuZzErY21Lc1lnVWd4Q2QKQzAzdFRZOFU5QTlkTVJrTUhpclR1VGpxSXJJQjBoWmFENHhZU01WSFlrZEh4OHNiV3JoOGwvNEM5SUIwalFQRQpXSjJvTU1PaU1qZHlIZmtIZ0tvTDh1QVV6dHpqVGZ3dlg0RUlweFBrNWx5SWdGM3k2dz09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    service:
+      name: performance-addon-operator-service
+      namespace: openshift-cluster-node-tuning-operator
+      path: /validate-performance-openshift-io-v2-performanceprofile
+      port: 443
+  failurePolicy: Ignore
+  matchPolicy: Equivalent
+  name: vwb.performance.openshift.io
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - performance.openshift.io
+    apiVersions:
+    - v2
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - performanceprofiles
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10

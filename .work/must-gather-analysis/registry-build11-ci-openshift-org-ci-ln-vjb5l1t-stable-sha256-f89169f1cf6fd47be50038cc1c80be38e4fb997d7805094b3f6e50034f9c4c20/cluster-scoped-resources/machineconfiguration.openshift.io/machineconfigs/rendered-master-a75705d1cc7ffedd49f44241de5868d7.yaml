@@ -1,0 +1,548 @@
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+    annotations:
+        machineconfiguration.openshift.io/generated-by-controller-version: 4593e456f3b51f4c6c458c00752e38f2687baedc
+        machineconfiguration.openshift.io/release-image-version: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+    creationTimestamp: "2026-01-28T09:32:29Z"
+    generation: 1
+    managedFields:
+        - apiVersion: machineconfiguration.openshift.io/v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:metadata:
+                f:annotations:
+                    .: {}
+                    f:machineconfiguration.openshift.io/generated-by-controller-version: {}
+                    f:machineconfiguration.openshift.io/release-image-version: {}
+                f:ownerReferences:
+                    .: {}
+                    k:{"uid":"a9993797-6b47-474c-a02e-6d9fd7fe3d02"}: {}
+            f:spec:
+                .: {}
+                f:baseOSExtensionsContainerImage: {}
+                f:config:
+                    .: {}
+                    f:ignition:
+                        .: {}
+                        f:version: {}
+                    f:passwd:
+                        .: {}
+                        f:users: {}
+                    f:storage:
+                        .: {}
+                        f:files: {}
+                    f:systemd:
+                        .: {}
+                        f:units: {}
+                f:extensions: {}
+                f:fips: {}
+                f:kernelArguments: {}
+                f:kernelType: {}
+                f:osImageURL: {}
+          manager: machine-config-controller
+          operation: Update
+          time: "2026-01-28T09:32:29Z"
+    name: rendered-master-a75705d1cc7ffedd49f44241de5868d7
+    ownerReferences:
+        - apiVersion: machineconfiguration.openshift.io/v1
+          blockOwnerDeletion: true
+          controller: true
+          kind: MachineConfigPool
+          name: master
+          uid: a9993797-6b47-474c-a02e-6d9fd7fe3d02
+    resourceVersion: "11881"
+    uid: df6066cd-e07a-4d26-8b38-2bad68a1b8c6
+spec:
+    baseOSExtensionsContainerImage: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:48f0516df39672a56a64cd4b2eef8402658376668980b42b1824eb93fbce1fa9
+    config:
+        ignition:
+            version: 3.5.0
+        passwd:
+            users:
+                - name: core
+                  sshAuthorizedKeys:
+                    - |
+                      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+        storage:
+            files:
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 8812
+                  mode: 493
+                  overwrite: true
+                  path: /usr/local/bin/nm-clean-initrd-state.sh
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 79
+                  mode: 420
+                  overwrite: true
+                  path: /etc/NetworkManager/conf.d/01-ipv6.conf
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 129
+                  mode: 420
+                  overwrite: true
+                  path: /etc/NetworkManager/conf.d/20-keyfiles.conf
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 15
+                  mode: 384
+                  overwrite: true
+                  path: /etc/pki/ca-trust/source/anchors/openshift-config-user-ca-bundle.crt
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 131
+                  mode: 420
+                  overwrite: true
+                  path: /etc/kubernetes/apiserver-url.env
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 793
+                  mode: 420
+                  overwrite: true
+                  path: /etc/audit/rules.d/mco-audit-quiet-containers.rules
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 1468
+                  mode: 484
+                  overwrite: true
+                  path: /etc/NetworkManager/dispatcher.d/99-esp-offload
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 300
+                  mode: 420
+                  overwrite: true
+                  path: /etc/tmpfiles.d/cleanup-cni.conf
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 69782
+                  mode: 493
+                  overwrite: true
+                  path: /usr/local/bin/configure-ovs.sh
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 4200
+                  mode: 420
+                  overwrite: true
+                  path: /etc/containers/storage.conf
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 36
+                  mode: 384
+                  overwrite: true
+                  path: /etc/docker/certs.d/.create
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 616
+                  mode: 420
+                  overwrite: true
+                  path: /etc/kubernetes/credential-providers/ecr-credential-provider.yaml
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 591
+                  mode: 420
+                  overwrite: true
+                  path: /etc/mco/proxy.env
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 81
+                  mode: 420
+                  overwrite: true
+                  path: /etc/systemd/system.conf.d/10-default-env-godebug.conf
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 427
+                  mode: 484
+                  overwrite: true
+                  path: /etc/NetworkManager/dispatcher.d/99-gcp-disable-idpf-tx-checksum-off
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 126
+                  mode: 420
+                  overwrite: true
+                  path: /etc/modules-load.d/iptables.conf
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 182
+                  mode: 420
+                  overwrite: true
+                  path: /etc/node-sizing-enabled.env
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 10675
+                  mode: 493
+                  overwrite: true
+                  path: /usr/local/sbin/dynamic-system-reserved-calc.sh
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 206
+                  mode: 420
+                  overwrite: true
+                  path: /etc/systemd/system.conf.d/kubelet-cgroups.conf
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 75
+                  mode: 420
+                  overwrite: true
+                  path: /etc/systemd/system/kubelet.service.d/20-logging.conf
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 500
+                  mode: 420
+                  overwrite: true
+                  path: /etc/NetworkManager/conf.d/sdn.conf
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 1783
+                  mode: 493
+                  overwrite: true
+                  path: /usr/local/bin/nmstate-configuration.sh
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 74
+                  mode: 420
+                  overwrite: true
+                  path: /etc/nmstate/nmstate.conf
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 8173
+                  mode: 493
+                  overwrite: true
+                  path: /etc/NetworkManager/dispatcher.d/pre-up.d/10-ofport-request.sh
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 1026
+                  mode: 493
+                  overwrite: true
+                  path: /etc/machine-config-daemon/generate_podman_policy_args.sh
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 4851
+                  mode: 384
+                  overwrite: true
+                  path: /var/lib/kubelet/config.json
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 181
+                  mode: 420
+                  overwrite: true
+                  path: /etc/sysctl.d/arp.conf
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 328
+                  mode: 420
+                  overwrite: true
+                  path: /etc/sysctl.d/gc-thresh.conf
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 107
+                  mode: 420
+                  overwrite: true
+                  path: /etc/sysctl.d/inotify.conf
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 52
+                  mode: 420
+                  overwrite: true
+                  path: /etc/sysctl.d/enable-userfaultfd.conf
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 189
+                  mode: 420
+                  overwrite: true
+                  path: /etc/sysctl.d/vm-max-map.conf
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 3417
+                  mode: 493
+                  overwrite: true
+                  path: /usr/local/bin/aws-kubelet-nodename
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 2878
+                  mode: 493
+                  overwrite: true
+                  path: /usr/local/bin/aws-kubelet-providerid
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 5260
+                  mode: 493
+                  overwrite: true
+                  path: /usr/local/bin/mco-hostname
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 1713
+                  mode: 493
+                  overwrite: true
+                  path: /usr/local/bin/recover-kubeconfig.sh
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 15
+                  mode: 493
+                  overwrite: true
+                  path: /etc/kubernetes/kubelet-plugins/volume/exec/.dummy
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 877
+                  mode: 484
+                  overwrite: true
+                  path: /etc/NetworkManager/dispatcher.d/99-vsphere-disable-tx-udp-tnl
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 2634
+                  mode: 493
+                  overwrite: true
+                  path: /usr/local/bin/ipsec-connect-wait.sh
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 1141
+                  mode: 493
+                  overwrite: true
+                  path: /usr/local/bin/wait-for-primary-ip.sh
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 134
+                  mode: 420
+                  overwrite: true
+                  path: /etc/crio/crio.conf.d/01-ctrcfg-defaultUlimits
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 107
+                  mode: 420
+                  overwrite: true
+                  path: /etc/containers/registries.conf
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 4758
+                  mode: 420
+                  overwrite: true
+                  path: /etc/crio/crio.conf.d/00-default
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 619
+                  mode: 420
+                  overwrite: true
+                  path: /etc/machine-config-daemon/policy-for-old-podman.json
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 616
+                  mode: 420
+                  overwrite: true
+                  path: /etc/containers/policy.json
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 27
+                  mode: 420
+                  overwrite: true
+                  path: /etc/kubernetes/cloud.conf
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 297
+                  mode: 420
+                  overwrite: true
+                  path: /etc/kubernetes/crio-metrics-proxy.cfg
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 4297
+                  mode: 420
+                  overwrite: true
+                  path: /etc/kubernetes/manifests/criometricsproxy.yaml
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 6482
+                  mode: 420
+                  overwrite: true
+                  path: /etc/kubernetes/kubelet.conf
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 191
+                  mode: 493
+                  overwrite: true
+                  path: /usr/local/bin/kubenswrapper
+        systemd:
+            units:
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 772
+                  enabled: true
+                  name: NetworkManager-clean-initrd-state.service
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 766
+                  enabled: true
+                  name: aws-kubelet-nodename.service
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 770
+                  enabled: true
+                  name: aws-kubelet-providerid.service
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 421
+                  enabled: false
+                  name: aws-update-dns.service
+                - dropins:
+                    - contents:
+                        _REDACTED: This field has been redacted
+                        length: 262
+                      name: 01-kubens.conf
+                    - contents:
+                        _REDACTED: This field has been redacted
+                        length: 0
+                      name: 10-mco-default-env.conf
+                    - contents:
+                        _REDACTED: This field has been redacted
+                        length: 56
+                      name: 10-mco-profile-unix-socket.conf
+                    - contents:
+                        _REDACTED: This field has been redacted
+                        length: 78
+                      name: 05-mco-ordering.conf
+                    - contents:
+                        _REDACTED: This field has been redacted
+                        length: 62
+                      name: 10-mco-default-madv.conf
+                  name: crio.service
+                - dropins:
+                    - contents:
+                        _REDACTED: This field has been redacted
+                        length: 35
+                      name: mco-disabled.conf
+                  name: docker.socket
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 182
+                  enabled: true
+                  name: firstboot-osupdate.target
+                - dropins:
+                    - contents:
+                        _REDACTED: This field has been redacted
+                        length: 59
+                      name: 01-after-configure-ovs.conf
+                  name: ipsec.service
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 521
+                  enabled: true
+                  name: kubelet-auto-node-size.service
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 272
+                  name: kubelet-dependencies.target
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 1988
+                  dropins:
+                    - contents:
+                        _REDACTED: This field has been redacted
+                        length: 51
+                      name: 20-node-env.conf
+                    - contents:
+                        _REDACTED: This field has been redacted
+                        length: 262
+                      name: 01-kubens.conf
+                    - contents:
+                        _REDACTED: This field has been redacted
+                        length: 0
+                      name: 10-mco-default-env.conf
+                    - contents:
+                        _REDACTED: This field has been redacted
+                        length: 62
+                      name: 10-mco-default-madv.conf
+                  enabled: true
+                  name: kubelet.service
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 985
+                  enabled: false
+                  name: kubens.service
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 1247
+                  enabled: true
+                  name: machine-config-daemon-firstboot.service
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 983
+                  enabled: true
+                  name: machine-config-daemon-pull.service
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 717
+                  enabled: true
+                  name: nmstate-configuration.service
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 375
+                  enabled: true
+                  name: nmstate.service
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 444
+                  enabled: true
+                  name: node-valid-hostname.service
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 1375
+                  enabled: false
+                  name: nodeip-configuration.service
+                - enabled: true
+                  name: openvswitch.service
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 968
+                  enabled: true
+                  name: ovs-configuration.service
+                - dropins:
+                    - contents:
+                        _REDACTED: This field has been redacted
+                        length: 387
+                      name: 10-ovs-vswitchd-restart.conf
+                  name: ovs-vswitchd.service
+                - dropins:
+                    - contents:
+                        _REDACTED: This field has been redacted
+                        length: 25
+                      name: 10-ovsdb-restart.conf
+                  enabled: true
+                  name: ovsdb-server.service
+                - dropins:
+                    - contents:
+                        _REDACTED: This field has been redacted
+                        length: 0
+                      name: 10-mco-default-env.conf
+                    - contents:
+                        _REDACTED: This field has been redacted
+                        length: 142
+                      name: mco-controlplane-nice.conf
+                  name: rpm-ostreed.service
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 326
+                  enabled: true
+                  name: wait-for-ipsec-connect.service
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 571
+                  enabled: true
+                  name: wait-for-primary-ip.service
+                - dropins:
+                    - contents:
+                        _REDACTED: This field has been redacted
+                        length: 35
+                      name: mco-disabled.conf
+                  name: zincati.service
+                - contents:
+                    _REDACTED: This field has been redacted
+                    length: 316
+                  enabled: true
+                  name: kubelet-cleanup.service
+    extensions: []
+    fips: false
+    kernelArguments:
+        - systemd.unified_cgroup_hierarchy=1
+        - cgroup_no_v1="all"
+        - psi=0
+    kernelType: default
+    osImageURL: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:56380161baf19863b676fb94aacaae253df853c437df18d00e447f36c895b794

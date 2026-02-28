@@ -1,0 +1,583 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.130.0.12/23"],"mac_address":"0a:58:0a:82:00:0c","gateway_ips":["10.130.0.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.130.0.1"},{"dest":"172.30.0.0/16","nextHop":"10.130.0.1"},{"dest":"169.254.0.5/32","nextHop":"10.130.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.130.0.1"}],"ip_address":"10.130.0.12/23","gateway_ip":"10.130.0.1","role":"primary"}}'
+      k8s.v1.cni.cncf.io/network-status: |-
+        [{
+            "name": "ovn-kubernetes",
+            "interface": "eth0",
+            "ips": [
+                "10.130.0.12"
+            ],
+            "mac": "0a:58:0a:82:00:0c",
+            "default": true,
+            "dns": {}
+        }]
+      openshift.io/required-scc: restricted-v2
+      openshift.io/scc: restricted-v2
+      seccomp.security.alpha.kubernetes.io/pod: runtime/default
+      security.openshift.io/validated-scc-subject-type: user
+    creationTimestamp: "2026-01-28T09:28:40Z"
+    generateName: cluster-olm-operator-6b4797576b-
+    generation: 1
+    labels:
+      name: cluster-olm-operator
+      pod-template-hash: 6b4797576b
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:openshift.io/required-scc: {}
+            f:target.workload.openshift.io/management: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:name: {}
+            f:pod-template-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"8443f810-790e-4b20-b42f-17744d2840fe"}: {}
+        f:spec:
+          f:containers:
+            k:{"name":"cluster-olm-operator"}:
+              .: {}
+              f:args: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"CATALOGD_IMAGE"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"KUBE_RBAC_PROXY_IMAGE"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"OPERATOR_CONTROLLER_IMAGE"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"OPERATOR_IMAGE_VERSION"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"OPERATOR_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":8443,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:allowPrivilegeEscalation: {}
+                f:capabilities:
+                  .: {}
+                  f:drop: {}
+                f:readOnlyRootFilesystem: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/operand-assets"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/tmp"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/var/run/secrets/serving-cert"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:initContainers:
+            .: {}
+            k:{"name":"copy-catalogd-manifests"}:
+              .: {}
+              f:args: {}
+              f:command: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:resources: {}
+              f:securityContext:
+                .: {}
+                f:readOnlyRootFilesystem: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/operand-assets"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+            k:{"name":"copy-operator-controller-manifests"}:
+              .: {}
+              f:args: {}
+              f:command: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:resources: {}
+              f:securityContext:
+                .: {}
+                f:readOnlyRootFilesystem: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/operand-assets"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext:
+            .: {}
+            f:runAsNonRoot: {}
+            f:seccompProfile:
+              .: {}
+              f:type: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"cluster-olm-operator-serving-cert"}:
+              .: {}
+              f:name: {}
+              f:secret:
+                .: {}
+                f:defaultMode: {}
+                f:optional: {}
+                f:secretName: {}
+            k:{"name":"operand-assets"}:
+              .: {}
+              f:emptyDir: {}
+              f:name: {}
+            k:{"name":"tmp"}:
+              .: {}
+              f:emptyDir: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2026-01-28T09:28:40Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            .: {}
+            k:{"type":"PodScheduled"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:28:40Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.ovn.org/pod-networks: {}
+      manager: ip-10-0-108-54
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:30:08Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.v1.cni.cncf.io/network-status: {}
+      manager: multus-daemon
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:30:09Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"PodReadyToStartContainers"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:hostIPs: {}
+          f:initContainerStatuses: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.130.0.12"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2026-01-28T09:31:00Z"
+    name: cluster-olm-operator-6b4797576b-g5m7z
+    namespace: openshift-cluster-olm-operator
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: cluster-olm-operator-6b4797576b
+      uid: 8443f810-790e-4b20-b42f-17744d2840fe
+    resourceVersion: "7664"
+    uid: 03e90898-2155-4f76-b896-b84f87513f9d
+  spec:
+    containers:
+    - args:
+      - start
+      command:
+      - /cluster-olm-operator
+      env:
+      - name: OPERATOR_NAME
+        value: cluster-olm-operator
+      - name: OPERATOR_IMAGE_VERSION
+        value: 4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest
+      - name: KUBE_RBAC_PROXY_IMAGE
+        value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:a0de83cf18d336c19ea214987e67e382cffab05022e12fce60349cc89644374b
+      - name: CATALOGD_IMAGE
+        value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:f7d0d3af8ca46727b17eae293799af55706dedd1ff2e9ef0fa73f804fd7a93fa
+      - name: OPERATOR_CONTROLLER_IMAGE
+        value: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:3f0a8a5999709f6e5fd01bc9c73c9aae75ea34e4eb919693b17ac272a2903b59
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:1ce75bb705ce22107366132679b7b435eb0d2e5ca6096f5669ea5c4eba39da1a
+      imagePullPolicy: IfNotPresent
+      name: cluster-olm-operator
+      ports:
+      - containerPort: 8443
+        name: metrics
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 10m
+          memory: 20Mi
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+        readOnlyRootFilesystem: true
+        runAsUser: 1000390000
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /var/run/secrets/serving-cert
+        name: cluster-olm-operator-serving-cert
+      - mountPath: /operand-assets
+        name: operand-assets
+      - mountPath: /tmp
+        name: tmp
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-wtsfc
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    initContainers:
+    - args:
+      - -c
+      - if [ -e /cp-manifests ]; then /cp-manifests /operand-assets; else cp -a /openshift/manifests
+        /operand-assets/catalogd; fi
+      command:
+      - /bin/sh
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:f7d0d3af8ca46727b17eae293799af55706dedd1ff2e9ef0fa73f804fd7a93fa
+      imagePullPolicy: IfNotPresent
+      name: copy-catalogd-manifests
+      resources: {}
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+        readOnlyRootFilesystem: true
+        runAsUser: 1000390000
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /operand-assets
+        name: operand-assets
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-wtsfc
+        readOnly: true
+    - args:
+      - -c
+      - if [ -e /cp-manifests ]; then /cp-manifests /operand-assets; else cp -a /openshift/manifests
+        /operand-assets/operator-controller; fi
+      command:
+      - /bin/sh
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:3f0a8a5999709f6e5fd01bc9c73c9aae75ea34e4eb919693b17ac272a2903b59
+      imagePullPolicy: IfNotPresent
+      name: copy-operator-controller-manifests
+      resources: {}
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+        readOnlyRootFilesystem: true
+        runAsUser: 1000390000
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /operand-assets
+        name: operand-assets
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-wtsfc
+        readOnly: true
+    nodeName: ip-10-0-108-54.us-west-1.compute.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+      node-role.kubernetes.io/master: ""
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000000000
+    priorityClassName: system-cluster-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext:
+      fsGroup: 1000390000
+      runAsNonRoot: true
+      seLinuxOptions:
+        level: s0:c20,c5
+      seccompProfile:
+        type: RuntimeDefault
+    serviceAccount: cluster-olm-operator
+    serviceAccountName: cluster-olm-operator
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/master
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 120
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 120
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+    volumes:
+    - name: cluster-olm-operator-serving-cert
+      secret:
+        defaultMode: 420
+        optional: true
+        secretName: cluster-olm-operator-serving-cert
+    - emptyDir: {}
+      name: operand-assets
+    - emptyDir: {}
+      name: tmp
+    - name: kube-api-access-wtsfc
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:30:29Z"
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:30:47Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:31:00Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:31:00Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-28T09:30:08Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - allocatedResources:
+        cpu: 10m
+        memory: 20Mi
+      containerID: cri-o://4f557e9c53ad8d925be7fdf8be4aa57c3189c23d811612c7f07054f5199e5bc8
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:1ce75bb705ce22107366132679b7b435eb0d2e5ca6096f5669ea5c4eba39da1a
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:1ce75bb705ce22107366132679b7b435eb0d2e5ca6096f5669ea5c4eba39da1a
+      lastState: {}
+      name: cluster-olm-operator
+      ready: true
+      resources:
+        requests:
+          cpu: 10m
+          memory: 20Mi
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-28T09:30:59Z"
+      user:
+        linux:
+          gid: 0
+          supplementalGroups:
+          - 0
+          - 1000390000
+          uid: 1000390000
+      volumeMounts:
+      - mountPath: /var/run/secrets/serving-cert
+        name: cluster-olm-operator-serving-cert
+      - mountPath: /operand-assets
+        name: operand-assets
+      - mountPath: /tmp
+        name: tmp
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-wtsfc
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 10.0.108.54
+    hostIPs:
+    - ip: 10.0.108.54
+    initContainerStatuses:
+    - containerID: cri-o://9bd46fe9ff765714fa431401f0ea1dc77706aca46c64e137d8f1216c5adb4542
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:f7d0d3af8ca46727b17eae293799af55706dedd1ff2e9ef0fa73f804fd7a93fa
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:f7d0d3af8ca46727b17eae293799af55706dedd1ff2e9ef0fa73f804fd7a93fa
+      lastState: {}
+      name: copy-catalogd-manifests
+      ready: true
+      resources: {}
+      restartCount: 0
+      started: false
+      state:
+        terminated:
+          containerID: cri-o://9bd46fe9ff765714fa431401f0ea1dc77706aca46c64e137d8f1216c5adb4542
+          exitCode: 0
+          finishedAt: "2026-01-28T09:30:28Z"
+          reason: Completed
+          startedAt: "2026-01-28T09:30:28Z"
+      user:
+        linux:
+          gid: 0
+          supplementalGroups:
+          - 0
+          - 1000390000
+          uid: 1000390000
+      volumeMounts:
+      - mountPath: /operand-assets
+        name: operand-assets
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-wtsfc
+        readOnly: true
+        recursiveReadOnly: Disabled
+    - containerID: cri-o://5f21482c8896aebd8130117c9c10fd78f6dbf0c0d9f4d96dbcd415c5ea92a4d6
+      image: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:3f0a8a5999709f6e5fd01bc9c73c9aae75ea34e4eb919693b17ac272a2903b59
+      imageID: registry.build11.ci.openshift.org/ci-ln-vjb5l1t/stable@sha256:3f0a8a5999709f6e5fd01bc9c73c9aae75ea34e4eb919693b17ac272a2903b59
+      lastState: {}
+      name: copy-operator-controller-manifests
+      ready: true
+      resources: {}
+      restartCount: 0
+      started: false
+      state:
+        terminated:
+          containerID: cri-o://5f21482c8896aebd8130117c9c10fd78f6dbf0c0d9f4d96dbcd415c5ea92a4d6
+          exitCode: 0
+          finishedAt: "2026-01-28T09:30:46Z"
+          reason: Completed
+          startedAt: "2026-01-28T09:30:46Z"
+      user:
+        linux:
+          gid: 0
+          supplementalGroups:
+          - 0
+          - 1000390000
+          uid: 1000390000
+      volumeMounts:
+      - mountPath: /operand-assets
+        name: operand-assets
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-wtsfc
+        readOnly: true
+        recursiveReadOnly: Disabled
+    phase: Running
+    podIP: 10.130.0.12
+    podIPs:
+    - ip: 10.130.0.12
+    qosClass: Burstable
+    startTime: "2026-01-28T09:30:08Z"
+kind: PodList
+metadata:
+  resourceVersion: "35159"

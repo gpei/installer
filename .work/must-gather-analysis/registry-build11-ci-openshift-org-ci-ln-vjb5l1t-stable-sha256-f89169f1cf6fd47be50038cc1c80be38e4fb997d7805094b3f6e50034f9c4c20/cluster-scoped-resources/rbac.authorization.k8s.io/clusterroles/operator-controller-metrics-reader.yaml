@@ -1,0 +1,21 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: "2026-01-28T09:31:02Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:rules: {}
+    manager: cluster-olm-operator
+    operation: Update
+    time: "2026-01-28T09:31:02Z"
+  name: operator-controller-metrics-reader
+  resourceVersion: "7811"
+  uid: 4feae017-ff40-4719-a18c-595d63c7954c
+rules:
+- nonResourceURLs:
+  - /metrics
+  verbs:
+  - get

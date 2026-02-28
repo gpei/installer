@@ -1,0 +1,56 @@
+---
+apiVersion: monitoring.coreos.com/v1
+items:
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    creationTimestamp: "2026-01-28T09:31:59Z"
+    generation: 1
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"070a94b7-0519-4651-8478-7a236f9e7b73"}: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector:
+            .: {}
+            f:matchNames: {}
+          f:selector: {}
+      manager: ingress-operator
+      operation: Update
+      time: "2026-01-28T09:31:59Z"
+    name: router-default
+    namespace: openshift-ingress
+    ownerReferences:
+    - apiVersion: apps/v1
+      controller: true
+      kind: Deployment
+      name: router-default
+      uid: 070a94b7-0519-4651-8478-7a236f9e7b73
+    resourceVersion: "10551"
+    uid: 80d9460f-8089-4d08-ba59-38c2d5e7ab3f
+  spec:
+    endpoints:
+    - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+      interval: 30s
+      path: /metrics
+      port: metrics
+      scheme: https
+      tlsConfig:
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        serverName: router-internal-default.openshift-ingress.svc
+    namespaceSelector:
+      matchNames:
+      - openshift-ingress
+    selector:
+      matchLabels:
+        ingresscontroller.operator.openshift.io/owning-ingresscontroller: default
+kind: ServiceMonitorList
+metadata:
+  continue: ""
+  resourceVersion: "34886"

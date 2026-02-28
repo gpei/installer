@@ -1,0 +1,118 @@
+2026-01-28T09:30:46.492722195Z W0128 09:30:46.491180       1 cmd.go:257] Using insecure, self-signed certificates
+2026-01-28T09:30:46.492994348Z Validity period of the certificate for "config-operator-signer@1769592646" is unset, resetting to 43800h0m0s!
+2026-01-28T09:30:47.126137885Z I0128 09:30:47.119006       1 leaderelection.go:121] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2026-01-28T09:30:47.126996667Z I0128 09:30:47.126975       1 observer_polling.go:159] Starting file observer
+2026-01-28T09:30:47.151477377Z I0128 09:30:47.151436       1 builder.go:304] config-operator version 4.20.0-202601161812.p2.g657754e.assembly.stream.el9-657754e-657754e2beaed6295ff28bb0f7813cb1c9ce35b2
+2026-01-28T09:30:48.293416238Z I0128 09:30:48.293382       1 secure_serving.go:57] Forcing use of http/1.1 only
+2026-01-28T09:30:48.293506202Z W0128 09:30:48.293494       1 secure_serving.go:69] Use of insecure cipher 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256' detected.
+2026-01-28T09:30:48.293544854Z W0128 09:30:48.293523       1 secure_serving.go:69] Use of insecure cipher 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256' detected.
+2026-01-28T09:30:48.293570595Z W0128 09:30:48.293560       1 secure_serving.go:69] Use of insecure cipher 'TLS_RSA_WITH_AES_128_GCM_SHA256' detected.
+2026-01-28T09:30:48.293593656Z W0128 09:30:48.293585       1 secure_serving.go:69] Use of insecure cipher 'TLS_RSA_WITH_AES_256_GCM_SHA384' detected.
+2026-01-28T09:30:48.293614377Z W0128 09:30:48.293606       1 secure_serving.go:69] Use of insecure cipher 'TLS_RSA_WITH_AES_128_CBC_SHA' detected.
+2026-01-28T09:30:48.293635649Z W0128 09:30:48.293627       1 secure_serving.go:69] Use of insecure cipher 'TLS_RSA_WITH_AES_256_CBC_SHA' detected.
+2026-01-28T09:30:48.295547003Z I0128 09:30:48.295526       1 leaderelection.go:257] attempting to acquire leader lease openshift-config-operator/config-operator-lock...
+2026-01-28T09:30:48.296045097Z I0128 09:30:48.295985       1 requestheader_controller.go:180] Starting RequestHeaderAuthRequestController
+2026-01-28T09:30:48.296181474Z I0128 09:30:48.296133       1 shared_informer.go:350] "Waiting for caches to sync" controller="RequestHeaderAuthRequestController"
+2026-01-28T09:30:48.296293630Z I0128 09:30:48.296245       1 configmap_cafile_content.go:205] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+2026-01-28T09:30:48.296377594Z I0128 09:30:48.296363       1 shared_informer.go:350] "Waiting for caches to sync" controller="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+2026-01-28T09:30:48.296473359Z I0128 09:30:48.296452       1 configmap_cafile_content.go:205] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+2026-01-28T09:30:48.296506630Z I0128 09:30:48.296496       1 shared_informer.go:350] "Waiting for caches to sync" controller="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+2026-01-28T09:30:48.296604795Z I0128 09:30:48.296585       1 secure_serving.go:211] Serving securely on [::]:8443
+2026-01-28T09:30:48.296695500Z I0128 09:30:48.296620       1 dynamic_serving_content.go:135] "Starting controller" name="serving-cert::/tmp/serving-cert-1303917703/tls.crt::/tmp/serving-cert-1303917703/tls.key"
+2026-01-28T09:30:48.296728041Z I0128 09:30:48.296700       1 tlsconfig.go:243] "Starting DynamicServingCertificateController"
+2026-01-28T09:30:48.300267136Z I0128 09:30:48.300244       1 leaderelection.go:271] successfully acquired lease openshift-config-operator/config-operator-lock
+2026-01-28T09:30:48.300722508Z I0128 09:30:48.300656       1 event.go:377] Event(v1.ObjectReference{Kind:"Lease", Namespace:"openshift-config-operator", Name:"config-operator-lock", UID:"8f69d117-3ac4-46fc-9099-67a7926c2d07", APIVersion:"coordination.k8s.io/v1", ResourceVersion:"7090", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' openshift-config-operator-6ddf5984bb-xrwj6_96bdb4ed-8a75-410d-839b-1c3c56690d5e became leader
+2026-01-28T09:30:48.314881628Z I0128 09:30:48.314856       1 base_controller.go:76] Waiting for caches to sync for FeatureUpgradeableController
+2026-01-28T09:30:48.315137991Z I0128 09:30:48.315121       1 base_controller.go:76] Waiting for caches to sync for LoggingSyncer
+2026-01-28T09:30:48.315248926Z I0128 09:30:48.315233       1 base_controller.go:76] Waiting for caches to sync for StatusSyncer_config-operator
+2026-01-28T09:30:48.315290948Z I0128 09:30:48.315278       1 base_controller.go:76] Waiting for caches to sync for ConfigOperatorController
+2026-01-28T09:30:48.315335850Z I0128 09:30:48.315310       1 base_controller.go:82] Caches are synced for ConfigOperatorController 
+2026-01-28T09:30:48.315365302Z I0128 09:30:48.315354       1 base_controller.go:119] Starting #1 worker of ConfigOperatorController controller ...
+2026-01-28T09:30:48.315441496Z I0128 09:30:48.315426       1 base_controller.go:76] Waiting for caches to sync for MigrationPlatformStatusController
+2026-01-28T09:30:48.315497118Z I0128 09:30:48.315483       1 base_controller.go:76] Waiting for caches to sync for StaleConditionController-RemoveStaleConditions
+2026-01-28T09:30:48.315547121Z I0128 09:30:48.315534       1 base_controller.go:76] Waiting for caches to sync for FeatureGateController
+2026-01-28T09:30:48.315587733Z I0128 09:30:48.315576       1 base_controller.go:76] Waiting for caches to sync for LatencySensitiveRemovalController
+2026-01-28T09:30:48.315616704Z I0128 09:30:48.315605       1 base_controller.go:82] Caches are synced for LatencySensitiveRemovalController 
+2026-01-28T09:30:48.315656986Z I0128 09:30:48.315645       1 base_controller.go:119] Starting #1 worker of LatencySensitiveRemovalController controller ...
+2026-01-28T09:30:48.315694318Z I0128 09:30:48.315085       1 base_controller.go:76] Waiting for caches to sync for KubeCloudConfigController
+2026-01-28T09:30:48.315813424Z E0128 09:30:48.315796       1 base_controller.go:279] "Unhandled Error" err="ConfigOperatorController reconciliation failed: configs.operator.openshift.io \"cluster\" not found"
+2026-01-28T09:30:48.316151731Z I0128 09:30:48.315635       1 base_controller.go:76] Waiting for caches to sync for AWSPlatformServiceLocationController
+2026-01-28T09:30:48.316521779Z I0128 09:30:48.316493       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-config-operator", Name:"openshift-config-operator", UID:"6565ce92-6951-4e9d-a44b-d4b3fe9e80b6", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Warning' reason: 'FastControllerResync' Controller "ConfigOperatorController" resync interval is set to 10s which might lead to client request throttling
+2026-01-28T09:30:48.339872022Z I0128 09:30:48.339824       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-config-operator", Name:"openshift-config-operator", UID:"6565ce92-6951-4e9d-a44b-d4b3fe9e80b6", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ConfigOperatorStatusChanged' Operator conditions defaulted: [{LatencySensitiveRemovalControllerDegraded False 2026-01-28 09:30:48 +0000 UTC AsExpected } {OperatorAvailable True 2026-01-28 09:30:48 +0000 UTC AsExpected } {OperatorProgressing False 2026-01-28 09:30:48 +0000 UTC AsExpected } {OperatorUpgradeable True 2026-01-28 09:30:48 +0000 UTC AsExpected }]
+2026-01-28T09:30:48.398120100Z I0128 09:30:48.397110       1 shared_informer.go:357] "Caches are synced" controller="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+2026-01-28T09:30:48.398120100Z I0128 09:30:48.397170       1 shared_informer.go:357] "Caches are synced" controller="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+2026-01-28T09:30:48.398812584Z I0128 09:30:48.398603       1 shared_informer.go:357] "Caches are synced" controller="RequestHeaderAuthRequestController"
+2026-01-28T09:30:48.416063736Z I0128 09:30:48.415887       1 base_controller.go:82] Caches are synced for KubeCloudConfigController 
+2026-01-28T09:30:48.416063736Z I0128 09:30:48.415904       1 base_controller.go:82] Caches are synced for FeatureUpgradeableController 
+2026-01-28T09:30:48.416063736Z I0128 09:30:48.415915       1 base_controller.go:119] Starting #1 worker of KubeCloudConfigController controller ...
+2026-01-28T09:30:48.416063736Z I0128 09:30:48.415925       1 base_controller.go:82] Caches are synced for LoggingSyncer 
+2026-01-28T09:30:48.416063736Z I0128 09:30:48.415931       1 base_controller.go:119] Starting #1 worker of LoggingSyncer controller ...
+2026-01-28T09:30:48.416063736Z I0128 09:30:48.415947       1 base_controller.go:82] Caches are synced for MigrationPlatformStatusController 
+2026-01-28T09:30:48.416063736Z I0128 09:30:48.415953       1 base_controller.go:119] Starting #1 worker of MigrationPlatformStatusController controller ...
+2026-01-28T09:30:48.416063736Z I0128 09:30:48.415964       1 base_controller.go:82] Caches are synced for StaleConditionController-RemoveStaleConditions 
+2026-01-28T09:30:48.416063736Z I0128 09:30:48.415969       1 base_controller.go:119] Starting #1 worker of StaleConditionController-RemoveStaleConditions controller ...
+2026-01-28T09:30:48.416063736Z I0128 09:30:48.415980       1 base_controller.go:82] Caches are synced for FeatureGateController 
+2026-01-28T09:30:48.416063736Z I0128 09:30:48.415985       1 base_controller.go:119] Starting #1 worker of FeatureGateController controller ...
+2026-01-28T09:30:48.416063736Z I0128 09:30:48.415887       1 base_controller.go:82] Caches are synced for StatusSyncer_config-operator 
+2026-01-28T09:30:48.416063736Z I0128 09:30:48.415998       1 base_controller.go:119] Starting #1 worker of StatusSyncer_config-operator controller ...
+2026-01-28T09:30:48.416063736Z I0128 09:30:48.415918       1 base_controller.go:119] Starting #1 worker of FeatureUpgradeableController controller ...
+2026-01-28T09:30:48.416404993Z I0128 09:30:48.416356       1 base_controller.go:82] Caches are synced for AWSPlatformServiceLocationController 
+2026-01-28T09:30:48.416404993Z I0128 09:30:48.416373       1 base_controller.go:119] Starting #1 worker of AWSPlatformServiceLocationController controller ...
+2026-01-28T09:30:48.416968931Z I0128 09:30:48.416947       1 status_controller.go:229] clusteroperator/config-operator diff {"status":{"conditions":[{"lastTransitionTime":"2026-01-28T09:30:48Z","message":"All is well","reason":"AsExpected","status":"False","type":"Degraded"},{"lastTransitionTime":"2026-01-28T09:30:48Z","message":"All is well","reason":"AsExpected","status":"False","type":"Progressing"},{"lastTransitionTime":"2026-01-28T09:30:48Z","message":"All is well","reason":"AsExpected","status":"True","type":"Available"},{"lastTransitionTime":"2026-01-28T09:30:48Z","message":"All is well","reason":"AsExpected","status":"True","type":"Upgradeable"},{"lastTransitionTime":"2026-01-28T09:30:48Z","reason":"NoData","status":"Unknown","type":"EvaluationConditionsDetected"}],"versions":[{"name":"feature-gates","version":"4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest"},{"name":"operator","version":"4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest"}]}}
+2026-01-28T09:30:48.417421193Z I0128 09:30:48.417391       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-config-operator", Name:"openshift-config-operator", UID:"6565ce92-6951-4e9d-a44b-d4b3fe9e80b6", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'OperatorVersionChanged' clusteroperator/config-operator version "feature-gates" changed from "" to "4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest"
+2026-01-28T09:30:48.417482916Z I0128 09:30:48.417465       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-config-operator", Name:"openshift-config-operator", UID:"6565ce92-6951-4e9d-a44b-d4b3fe9e80b6", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'OperatorVersionChanged' clusteroperator/config-operator version "operator" changed from "" to "4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest"
+2026-01-28T09:30:48.429585424Z I0128 09:30:48.428012       1 status_controller.go:229] clusteroperator/config-operator diff {"status":{"conditions":[{"lastTransitionTime":"2026-01-28T09:30:48Z","message":"All is well","reason":"AsExpected","status":"False","type":"Degraded"},{"lastTransitionTime":"2026-01-28T09:30:48Z","message":"All is well","reason":"AsExpected","status":"False","type":"Progressing"},{"lastTransitionTime":"2026-01-28T09:30:48Z","message":"All is well","reason":"AsExpected","status":"True","type":"Available"},{"lastTransitionTime":"2026-01-28T09:30:48Z","message":"All is well","reason":"AsExpected","status":"True","type":"Upgradeable"},{"lastTransitionTime":"2026-01-28T09:30:48Z","reason":"NoData","status":"Unknown","type":"EvaluationConditionsDetected"}],"versions":[{"name":"operator","version":"4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest"},{"name":"feature-gates","version":"4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest"}]}}
+2026-01-28T09:30:48.429585424Z I0128 09:30:48.428684       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-config-operator", Name:"openshift-config-operator", UID:"6565ce92-6951-4e9d-a44b-d4b3fe9e80b6", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'OperatorStatusChanged' Status for clusteroperator/config-operator changed: Degraded set to False ("All is well"),Progressing set to False ("All is well"),Available set to True ("All is well"),Upgradeable set to True ("All is well"),EvaluationConditionsDetected set to Unknown (""),status.versions changed from [] to [{"feature-gates" "4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest"} {"operator" "4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest"}]
+2026-01-28T09:30:48.429585424Z I0128 09:30:48.428700       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-config-operator", Name:"openshift-config-operator", UID:"6565ce92-6951-4e9d-a44b-d4b3fe9e80b6", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'OperatorVersionChanged' clusteroperator/config-operator version "operator" changed from "" to "4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest"
+2026-01-28T09:30:48.429585424Z I0128 09:30:48.428709       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-config-operator", Name:"openshift-config-operator", UID:"6565ce92-6951-4e9d-a44b-d4b3fe9e80b6", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'OperatorVersionChanged' clusteroperator/config-operator version "feature-gates" changed from "" to "4.20.0-0-2026-01-28-090915-test-ci-ln-vjb5l1t-latest"
+2026-01-28T09:30:48.440282193Z E0128 09:30:48.440238       1 base_controller.go:279] "Unhandled Error" err="StatusSyncer_config-operator reconciliation failed: Operation cannot be fulfilled on clusteroperators.config.openshift.io \"config-operator\": the object has been modified; please apply your changes to the latest version and try again"
+2026-01-28T09:30:48.444288681Z I0128 09:30:48.440824       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-config-operator", Name:"openshift-config-operator", UID:"6565ce92-6951-4e9d-a44b-d4b3fe9e80b6", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ConfigMapCreated' Created ConfigMap/kube-cloud-config -n openshift-config-managed because it was missing
+2026-01-28T09:30:48.444718702Z I0128 09:30:48.444694       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-config-operator", Name:"openshift-config-operator", UID:"6565ce92-6951-4e9d-a44b-d4b3fe9e80b6", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'KubeCloudConfigController' openshift-config-managed/kube-cloud-config ConfigMap was updated
+2026-01-28T09:30:52.128404106Z I0128 09:30:52.128314       1 observer_polling.go:111] Observed file "/var/run/secrets/serving-cert/tls.crt" has been created (hash="931a48545ca863c4a2227599c69f927969f2a742c40aabddcece3978744b40c2")
+2026-01-28T09:30:52.128404106Z W0128 09:30:52.128378       1 builder.go:160] Restart triggered because of file /var/run/secrets/serving-cert/tls.crt was created
+2026-01-28T09:30:52.128446378Z I0128 09:30:52.128436       1 observer_polling.go:111] Observed file "/var/run/secrets/serving-cert/tls.key" has been created (hash="f47ef826dc83d5080f667c099a486526bdc8723b98f7b7f8b3e98960c070c707")
+2026-01-28T09:30:52.128860249Z I0128 09:30:52.128767       1 genericapiserver.go:704] "[graceful-termination] pre-shutdown hooks completed" name="PreShutdownHooksStopped"
+2026-01-28T09:30:52.128860249Z I0128 09:30:52.128797       1 genericapiserver.go:559] "[graceful-termination] shutdown event" name="ShutdownInitiated"
+2026-01-28T09:30:52.128916501Z I0128 09:30:52.128887       1 base_controller.go:181] Shutting down AWSPlatformServiceLocationController ...
+2026-01-28T09:30:52.128916501Z I0128 09:30:52.128908       1 base_controller.go:181] Shutting down FeatureUpgradeableController ...
+2026-01-28T09:30:52.128929102Z I0128 09:30:52.128920       1 base_controller.go:181] Shutting down StatusSyncer_config-operator ...
+2026-01-28T09:30:52.128929102Z I0128 09:30:52.128925       1 base_controller.go:159] All StatusSyncer_config-operator post start hooks have been terminated
+2026-01-28T09:30:52.128956293Z I0128 09:30:52.128938       1 base_controller.go:181] Shutting down FeatureGateController ...
+2026-01-28T09:30:52.128975104Z I0128 09:30:52.128957       1 base_controller.go:181] Shutting down StaleConditionController-RemoveStaleConditions ...
+2026-01-28T09:30:52.128975104Z I0128 09:30:52.128970       1 base_controller.go:181] Shutting down MigrationPlatformStatusController ...
+2026-01-28T09:30:52.128987105Z I0128 09:30:52.128981       1 base_controller.go:181] Shutting down LoggingSyncer ...
+2026-01-28T09:30:52.128998516Z I0128 09:30:52.128992       1 base_controller.go:181] Shutting down KubeCloudConfigController ...
+2026-01-28T09:30:52.129129052Z I0128 09:30:52.129108       1 tlsconfig.go:258] "Shutting down DynamicServingCertificateController"
+2026-01-28T09:30:52.129587535Z I0128 09:30:52.129151       1 requestheader_controller.go:194] Shutting down RequestHeaderAuthRequestController
+2026-01-28T09:30:52.129651868Z I0128 09:30:52.129158       1 secure_serving.go:259] Stopped listening on [::]:8443
+2026-01-28T09:30:52.129702620Z I0128 09:30:52.129679       1 genericapiserver.go:611] "[graceful-termination] shutdown event" name="HTTPServerStoppedListening"
+2026-01-28T09:30:52.129702620Z I0128 09:30:52.129173       1 configmap_cafile_content.go:226] "Shutting down controller" name="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+2026-01-28T09:30:52.129702620Z I0128 09:30:52.129185       1 configmap_cafile_content.go:226] "Shutting down controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+2026-01-28T09:30:52.129727392Z I0128 09:30:52.129208       1 base_controller.go:181] Shutting down LatencySensitiveRemovalController ...
+2026-01-28T09:30:52.129727392Z I0128 09:30:52.129229       1 base_controller.go:181] Shutting down ConfigOperatorController ...
+2026-01-28T09:30:52.129727392Z I0128 09:30:52.129276       1 base_controller.go:123] Shutting down worker of StatusSyncer_config-operator controller ...
+2026-01-28T09:30:52.129753223Z I0128 09:30:52.129724       1 base_controller.go:113] All StatusSyncer_config-operator workers have been terminated
+2026-01-28T09:30:52.129753223Z I0128 09:30:52.129416       1 dynamic_serving_content.go:149] "Shutting down controller" name="serving-cert::/tmp/serving-cert-1303917703/tls.crt::/tmp/serving-cert-1303917703/tls.key"
+2026-01-28T09:30:52.129753223Z I0128 09:30:52.129431       1 base_controller.go:123] Shutting down worker of AWSPlatformServiceLocationController controller ...
+2026-01-28T09:30:52.129753223Z I0128 09:30:52.129743       1 base_controller.go:113] All AWSPlatformServiceLocationController workers have been terminated
+2026-01-28T09:30:52.129753223Z I0128 09:30:52.129442       1 base_controller.go:123] Shutting down worker of LoggingSyncer controller ...
+2026-01-28T09:30:52.129766274Z I0128 09:30:52.129446       1 base_controller.go:123] Shutting down worker of FeatureGateController controller ...
+2026-01-28T09:30:52.129766274Z I0128 09:30:52.129753       1 base_controller.go:113] All LoggingSyncer workers have been terminated
+2026-01-28T09:30:52.129766274Z I0128 09:30:52.129451       1 base_controller.go:123] Shutting down worker of StaleConditionController-RemoveStaleConditions controller ...
+2026-01-28T09:30:52.129766274Z I0128 09:30:52.129759       1 base_controller.go:113] All FeatureGateController workers have been terminated
+2026-01-28T09:30:52.129766274Z I0128 09:30:52.129455       1 base_controller.go:123] Shutting down worker of MigrationPlatformStatusController controller ...
+2026-01-28T09:30:52.129777424Z I0128 09:30:52.129761       1 base_controller.go:113] All StaleConditionController-RemoveStaleConditions workers have been terminated
+2026-01-28T09:30:52.129777424Z I0128 09:30:52.129768       1 base_controller.go:113] All MigrationPlatformStatusController workers have been terminated
+2026-01-28T09:30:52.129777424Z I0128 09:30:52.129457       1 base_controller.go:123] Shutting down worker of FeatureUpgradeableController controller ...
+2026-01-28T09:30:52.129788225Z I0128 09:30:52.129776       1 base_controller.go:113] All FeatureUpgradeableController workers have been terminated
+2026-01-28T09:30:52.129788225Z I0128 09:30:52.129467       1 base_controller.go:123] Shutting down worker of KubeCloudConfigController controller ...
+2026-01-28T09:30:52.129788225Z I0128 09:30:52.129785       1 base_controller.go:113] All KubeCloudConfigController workers have been terminated
+2026-01-28T09:30:52.129798705Z I0128 09:30:52.129482       1 genericapiserver.go:662] "[graceful-termination] not going to wait for active watch request(s) to drain"
+2026-01-28T09:30:52.129808766Z I0128 09:30:52.129799       1 genericapiserver.go:724] [graceful-termination] apiserver is exiting
+2026-01-28T09:30:52.129808766Z I0128 09:30:52.129806       1 builder.go:335] server exited
+2026-01-28T09:30:52.129818416Z I0128 09:30:52.129496       1 base_controller.go:123] Shutting down worker of LatencySensitiveRemovalController controller ...
+2026-01-28T09:30:52.129818416Z I0128 09:30:52.129813       1 base_controller.go:113] All LatencySensitiveRemovalController workers have been terminated
+2026-01-28T09:30:52.129828657Z I0128 09:30:52.129501       1 object_count_tracker.go:151] "StorageObjectCountTracker pruner is exiting"
+2026-01-28T09:30:52.129828657Z I0128 09:30:52.129511       1 base_controller.go:123] Shutting down worker of ConfigOperatorController controller ...
+2026-01-28T09:30:52.129828657Z I0128 09:30:52.129824       1 base_controller.go:113] All ConfigOperatorController workers have been terminated
+2026-01-28T09:30:52.133757051Z W0128 09:30:52.133738       1 leaderelection.go:84] leader election lost
